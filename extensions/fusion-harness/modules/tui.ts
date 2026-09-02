@@ -175,6 +175,22 @@ export const cellStr = (theme: any, role: Role, model: string, thinking: string 
 	return roleLabelStr(theme, role, model, false, " | ") + theme.fg(ROLE_COLOR[role], thinkingTag(thinking)) + sep + theme.fg(ROLE_COLOR[role], barStr) + (perfStr ? sep + theme.fg(ROLE_COLOR[role], perfStr) : "");
 };
 
+/** A lane row's one-word outcome for a builder that never got to a commit. */
+const runErrorLabel = (status: string): string => (status === "aborted" ? "stopped" : status === "timeout" ? "timed out" : status === "failed" ? "failed" : status);
+
+/**
+ * One lane-board row: `● BUILDER | flux | model · fh/lane/flux · 3 files +42 −7 · working 12s`.
+ * Slot-colored like a model-bar cell so the row reads as one lane at a glance.
+ */
+export const laneRowStr = (theme: any, r: AgentRun, branch: string, churn: { files: number; insertions: number; deletions: number } | undefined): string => {
+	const sep = theme.fg("dim", " · ");
+	const elapsed = r.startedAt ? (r.endedAt ?? Date.now()) - r.startedAt : 0;
+	const state = r.status === "pending" ? "waiting" : r.status === "working" ? `working ${Math.floor(elapsed / 1000)}s` : `${r.status} ${fmtSecs(elapsed)}`;
+	const churnStr = churn ? `${churn.files} file${churn.files === 1 ? "" : "s"} +${churn.insertions} −${churn.deletions}` : "…";
+	const color = r.slot?.color ?? "#FFFFFF";
+	return roleLabelStr(theme, r.role, r.model, false, " | ", r.slot) + sep + fgHex(color, branch) + sep + fgHex(color, churnStr) + sep + theme.fg(r.status === "done" ? "success" : r.status === "working" ? "text" : r.status === "pending" ? "dim" : "error", `${STATUS_GLYPH[r.status]} ${state}`);
+};
+
 /** One agent's live column: label, state line, then its flow tail (tools + streaming text). */
 export const liveColumn = (theme: any, r: AgentRun | undefined, colW: number): string[] => {
 	if (!r) return [];
@@ -411,6 +427,30 @@ export function renderFhPanel(message: any, theme: any): any {
 					0,
 				),
 			);
+			blank();
+			md(content);
+			break;
+		}
+		case "lanes": {
+			// One row per lane, in slot color: branch, churn, path. Then the integrator's
+			// report (or, with --no-merge, the note that the lanes are waiting for the user).
+			const lanes = d.lanes ?? [];
+			const laneLabel = lanes.map((lane) => fgHex(lane.color ?? "#FFFFFF", lane.slotName)).join(theme.fg("dim", " ⫽ "));
+			add(
+				new Text(
+					theme.fg(d.ok ? "success" : "warning", theme.bold(d.agent ? "⫽ LANES INTEGRATED" : "⫽ LANES READY")) +
+						theme.fg("dim", " ← ") +
+						laneLabel +
+						(d.agent ? theme.fg("dim", `   ${STATUS_GLYPH[d.agent.status]} ${statLine(d.agent)}`) : ""),
+					1,
+					0,
+				),
+			);
+			if (d.agent) add(new Text(`  ${theme.fg("dim", "integrated by")} ${statLabelStr(theme, d.agent)}`, 1, 0));
+			for (const lane of lanes) {
+				const churn = lane.committed ? `${lane.files} file${lane.files === 1 ? "" : "s"} +${lane.insertions} −${lane.deletions}` : lane.status === "done" ? "no changes" : runErrorLabel(lane.status);
+				add(new Text(`  ${fgHex(lane.color ?? "#FFFFFF", `${STATUS_GLYPH[lane.status]} ${lane.slotName}`)}${theme.fg("dim", ` · ${lane.branch} · ${churn} · ${lane.path}`)}`, 1, 0));
+			}
 			blank();
 			md(content);
 			break;

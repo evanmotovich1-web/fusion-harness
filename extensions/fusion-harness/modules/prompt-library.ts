@@ -289,6 +289,79 @@ export function collabCoordinatePrompt(prompt: string, reportsDir: string, planP
 	return fill("USER_PROMPT_COLLAB_COORDINATE.md", { REPORTS_DIR: reportsDir, PLAN_PATH: planPath, PROMPT: prompt });
 }
 
+// ═══ Lanes ═══════════════════════════════════════════════════════════════════
+
+/**
+ * /fh-lanes argument parsing. Subcommands (`status`, `diff <slot>`, `clean`) manage lanes
+ * without running models; anything else is a prompt, optionally prefixed by `--no-merge`
+ * (leave the lanes for the user instead of an architect integration).
+ */
+export function parseLanesArgs(input: string): { action: "status" | "diff" | "clean" | "run"; slot?: string; prompt: string; merge: boolean } {
+	const trimmed = input.trim();
+	const words = trimmed.split(/\s+/).filter(Boolean);
+	const head = (words[0] ?? "").toLowerCase();
+	if (head === "status" && words.length === 1) return { action: "status", prompt: "", merge: false };
+	if (head === "clean" && words.length === 1) return { action: "clean", prompt: "", merge: false };
+	if (head === "diff" && words.length <= 2) return { action: "diff", slot: words[1], prompt: "", merge: false };
+	let merge = true;
+	const prompt = trimmed
+		.replace(/(^|\s)--no-merge(?=\s|$)/g, () => {
+			merge = false;
+			return " ";
+		})
+		.trim();
+	return { action: "run", prompt, merge };
+}
+
+/** One builder, one lane: the same request as everyone else, in its own worktree. */
+export function laneWorkerPrompt(slot: ModelSlot, stack: ModelStack, prompt: string, lane: { path: string; branch: string }, mainCwd: string): string {
+	return fill("USER_PROMPT_LANE_WORKER.md", { SLOT_NAME: slot.name, MODEL: slot.model, ROSTER: rosterText(stack), LANE_PATH: lane.path, LANE_BRANCH: lane.branch, MAIN_CWD: mainCwd, PROMPT: prompt });
+}
+
+/** The architect's integration envelope: every lane's branch, path, churn, report and patch excerpts. */
+export function laneMergePrompt(
+	architect: ModelSlot,
+	prompt: string,
+	lanes: Array<{ run: AgentRun; branch: string; path: string; base: string; sha?: string; committed: boolean; files: string[]; stat: string; patch: string; reportPath: string; patchPath: string }>,
+	mainCwd: string,
+	artifactsDir: string,
+): string {
+	const perLane = Math.max(2_000, Math.floor(HANDOFF_MAX / Math.max(1, lanes.length)));
+	const manifest = lanes
+		.map((lane) => {
+			const slot = lane.run.slot!;
+			const ok = runOk(lane.run);
+			return [
+				`## [${slot.name.toUpperCase()}] ${slot.model}`,
+				`status: ${lane.run.status}${ok ? "" : ` (${runError(lane.run)})`}`,
+				`branch: ${lane.branch}`,
+				`worktree: ${lane.path}`,
+				`base: ${lane.base}`,
+				lane.committed ? `work commit: ${lane.sha}` : "work commit: none — this lane changed nothing",
+				`changed files (${lane.files.length}): ${lane.files.join(", ") || "—"}`,
+				`full report: ${lane.reportPath}`,
+				`full patch: ${lane.patchPath}`,
+				lane.stat ? `diffstat:\n${truncateChars(lane.stat, 2_000)}` : "",
+				ok ? `report excerpt:\n${truncateChars(lane.run.text, Math.floor(perLane / 2))}` : "report excerpt: unavailable",
+				lane.patch ? `patch excerpt:\n${truncateChars(lane.patch, Math.floor(perLane / 2))}` : "patch excerpt: (empty)",
+			]
+				.filter(Boolean)
+				.join("\n");
+		})
+		.join("\n\n");
+	return fill("USER_PROMPT_LANE_MERGE.md", {
+		SLOT_NAME: architect.name,
+		MODEL: shortModel(architect.model),
+		THINKING: architect.thinking,
+		LANE_COUNT: String(lanes.length),
+		MAIN_CWD: mainCwd,
+		PROMPT: prompt,
+		ARTIFACTS_DIR: artifactsDir,
+		MANIFEST_PATH: path.join(artifactsDir, "lane-manifest.json"),
+		LANE_MANIFEST: manifest,
+	});
+}
+
 // ═══ Strict-output parsing ═══════════════════════════════════════════════════
 
 export function parseStrictJsonObject(text: string, label: string): Record<string, unknown> {

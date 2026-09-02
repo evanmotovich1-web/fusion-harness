@@ -40,7 +40,7 @@ npm install -g @earendil-works/pi-coding-agent   # the pi coding agent
 brew install just jq uv                          # command runner + gate tooling
 npm install                                      # repo deps (yaml parser)
 cp .env.example .env                             # then fill ANTHROPIC/GEMINI/FIREWORKS/OPENAI/OPENROUTER_API_KEY
-npm test                                         # 34 deterministic tests, zero paid calls
+npm test                                         # 49 deterministic tests, zero paid calls
 ```
 
 Note: pi reads `GEMINI_API_KEY` for the google provider (not `GOOGLE_GENERATIVE_AI_API_KEY`).
@@ -127,6 +127,7 @@ No config auto-discovery occurs; `--fh-config` is explicit.
 | `/fh-fusion "<prompt>" "<instruction>"` | Every slot researches read-only; one fresh temporary FUSION agent is the sole CWD writer; then the complete fused result is synchronized to every model with exact ACK evidence. |
 | `/fh-debate [--rounds N] <prompt>` | N-way read-only debate. Each round every surviving agent receives every other agent's clearly labeled prior opinion, may pick/change sides, and closes without a judge. |
 | `/fh-collaborate <prompt>` | Every agent plans read-only, the architect merges the plans into one validated delegation DAG, then tasks execute the moment their dependencies clear — parallel where the DAG allows, sequential paths where it doesn't, exactly one shared-CWD writer at a time — closed by a final architect integration turn. Proposals, the task breakdown, and every task report render as panels; a live task board runs below the editor. |
+| `/fh-lanes [--no-merge] <prompt>` | **Every builder works at once, each in its own lane** — a private git worktree on `fh/lane/<slot>`, seeded from the main checkout (HEAD plus uncommitted work). Builders get full tools inside their lane; the harness commits each lane when its builder finishes; then the architect, alone and under the writer lease, integrates the best result into the main checkout as uncommitted changes. `--no-merge` skips the integration and leaves the lanes for you. A live lane board below the editor shows each lane's branch and file churn while the models work. `status` · `diff <slot>` · `clean` manage the lanes afterwards. |
 | `/fh-only [slot] [prompt]` | Address one slot directly. Without a prompt it arms the next plain input as a one-send route; selecting the armed slot again disarms it. |
 | `/fh-model` | Three-step picker: slot → model → thinking. Session-only; never rewrites YAML. Main applies both `pi.setModel()` and `pi.setThinkingLevel()` to raw chat. |
 | `/fh-auto-validate <prompt>` | Existing gate-first ARCHITECT + Main build loop. |
@@ -148,6 +149,23 @@ Agents must never overwrite each other's work.
 - `/fh-opinion` and `/fh-debate`: all agents are read-only (`read,grep,find,ls`).
 - `/fh-fusion`: all source workers are read-only. Their answers are captured under the run's `/tmp/fusion-harness-*` directory. Only the temporary FUSION agent gets full tools and may modify the CWD.
 - `/fh-collaborate`: planning and delegation are tool-enforced read-only; the harness persists the architect's plan JSON. Execution is dependency-driven — read tasks overlap freely, but every write-enabled task waits for the single global writer token, so `maxConcurrentWriteEnabledChildren` is always 1. Worktree commands are observed and fail the run.
+- `/fh-lanes`: the one command where several models write at the same time — and they still never share a checkout. The **harness** creates one git worktree per builder (models are still forbidden from creating their own), each builder's cwd is its lane, and the main checkout keeps exactly one writer: the architect's integration turn, which holds the writer lease. Lanes live under `/tmp/fusion-harness-lanes/<project>/<slot>` on branches `fh/lane/<slot>` and are kept after the run until `/fh-lanes clean`. Ignored files (`node_modules`, `.env`) are not carried into a lane; builders install what they need inside their lane.
+
+## Lanes
+
+<p align="center"><em>Same request, N builders, N worktrees, one integrator.</em></p>
+
+```
+/fh-lanes add a /healthz endpoint with a test
+```
+
+1. **Seed.** For every non-architect slot the harness runs `git worktree add -b fh/lane/<slot>` from HEAD and carries the main checkout's uncommitted work in as the lane's base commit — so each builder starts from exactly what you see, and its own delta stays cleanly separable.
+2. **Work, in parallel.** Every builder runs with full tools, its cwd pinned to its lane, told exactly who it is and where its lane is. The streaming grid shows each model's flow; the lane board shows each lane's branch and live `+/−` churn.
+3. **Commit.** When a builder finishes (or fails — partial work is evidence too) the harness commits its lane. Reports, diffstats, and full patches land in the run's artifacts.
+4. **Integrate.** The architect reads every lane's report and patch, may run the project's checks against a lane read-only, and integrates the best result into the main checkout with `git cherry-pick -n` (or a hand-port), leaving **uncommitted working-tree changes** — the same state every other harness command leaves. It never commits on your branch and never deletes a lane.
+5. **Review.** `/fh-lanes status` lists the lanes, `/fh-lanes diff <slot>` shows one lane's full patch, `/fh-lanes clean` removes them all. Prefer a lane the architect rejected? `git cherry-pick -n <sha> && git reset -q`.
+
+`--no-merge` stops after step 3.
 - `/fh-only` and `/fh-auto-validate` have one active writer by design.
 
 A CWD-scoped atomic writer lease prevents separate harness processes from mutating the same checkout simultaneously. Child agents run in their own process groups so Escape, timeout, or session shutdown reaches Pi plus tool/bash descendants. Tool allowlists enforce planning safety; prompt contracts also prohibit detached background jobs.

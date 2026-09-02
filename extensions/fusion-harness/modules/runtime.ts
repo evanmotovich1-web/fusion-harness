@@ -125,6 +125,21 @@ export interface AgentStat {
 	error?: string;
 }
 
+/** What one lane came to after its builder finished: where it is, and how much it changed. */
+export interface LaneOutcome {
+	slotId: string;
+	slotName: string;
+	color?: HexColor;
+	branch: string;
+	path: string;
+	status: ChildStatus;
+	committed: boolean; // false when the builder changed nothing (or failed before changing anything)
+	sha?: string;
+	files: number;
+	insertions: number;
+	deletions: number;
+}
+
 /** The renderer's discriminated payload — one shape per panel `kind`, carried on every custom message. */
 export interface FhDetails {
 	kind:
@@ -143,7 +158,8 @@ export interface FhDetails {
 		| "system-prompt"
 		| "solo" // /fh-only — one selected agent, one full-width answer
 		| "closing" // /fh-debate — the final round: two closing statements, side by side
-		| "collab"; // /fh-collaborate — the shared deliverable after the last turn
+		| "collab" // /fh-collaborate — the shared deliverable after the last turn
+		| "lanes"; // /fh-lanes — every lane's outcome, plus the architect's integration when one ran
 	command?: string; // the slash command that produced this panel ("fh-fusion", …)
 	title?: string; // duo panels: what THIS pair of columns is (e.g. "round 2 — rebuttals")
 	ok: boolean;
@@ -160,6 +176,7 @@ export interface FhDetails {
 	gateOutput?: string;
 	gateExitCode?: number;
 	scriptPath?: string;
+	lanes?: LaneOutcome[]; // /fh-lanes: one row per lane, in slot order
 	artifactsDir?: string;
 	totalMs?: number;
 	totalCostUsd?: number;

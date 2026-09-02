@@ -10,6 +10,7 @@
  *   /fh-debate       N-way all-to-all debate, no judge           (modules/cmd-readonly.ts)
  *   /fh-fusion       N sources → sole-writer FUSION → ACKs       (modules/cmd-fusion.ts)
  *   /fh-collaborate  plans → architect DAG → readiness execution (modules/cmd-build.ts)
+ *   /fh-lanes        every builder in its own worktree lane → architect integrates (modules/cmd-lanes.ts)
  *   /fh-auto-validate architect + Main gate-first build loop     (modules/cmd-build.ts)
  *   /fh-only         direct one slot or arm the next plain prompt
  *   /fh-model        slot → model → thinking picker (session-only)
@@ -27,7 +28,10 @@
  * Safety invariant: parallel agents never mutate the same checkout. Opinion, debate,
  * fusion sources, and collaboration planning are tool-enforced read-only. The temporary
  * FUSION agent is the only /fh-fusion writer. Collaboration serializes every write-enabled
- * task through one shared-CWD writer token; no worktrees.
+ * task through one shared-CWD writer token; models never create worktrees themselves.
+ * /fh-lanes is the one place several models write at once — each in a HARNESS-created
+ * git worktree of its own (modules/lanes.ts), so the shared checkout still has exactly
+ * one writer: the architect's integration turn, under the writer lease.
  *
  * UI: responsive AgentGrid (columns when >=34 cells each, otherwise vertical stack) and
  * an opt-in one-row-per-slot belowEditor model bar. Pi's default footer is REMOVED at
@@ -47,6 +51,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Container, Text, matchesKey, truncateToWidth, visibleWidth } from "@earendil-works/pi-tui";
 import { registerAutoValidateCommand, registerCollaborateCommand } from "./modules/cmd-build.ts";
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
+import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
 import { piInvocation, runChild } from "./modules/child-runner.ts";
 import {
@@ -1026,6 +1031,7 @@ export default function (pi: ExtensionAPI) {
 		['/fh-fusion "<prompt>" "<fusion>"', "parallel research, one writer, all ACK"],
 		["/fh-debate [--rounds N] <prompt>", "all-to-all debate, no judge"],
 		["/fh-collaborate <prompt>", "agents plan, architect delegates, parallel build"],
+		["/fh-lanes [--no-merge] <prompt>", "each builder its own worktree, architect merges"],
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
 		["/fh-model", "pick slot, model, thinking"],
 		["/fh-auto-validate [--max-validations N] <prompt>", "gate written first, build until green"],
@@ -1286,5 +1292,6 @@ export default function (pi: ExtensionAPI) {
 	registerReadonlyCommands(pi, deps); // /fh-opinion + /fh-debate
 	registerFusionCommand(pi, deps); // /fh-fusion
 	registerCollaborateCommand(pi, deps); // /fh-collaborate
+	registerLanesCommand(pi, deps); // /fh-lanes
 	registerAutoValidateCommand(pi, deps); // /fh-auto-validate
 }

@@ -25,7 +25,7 @@ describe("orchestration contracts", () => {
   });
 
   test("registers target commands and deletes unsafe/obsolete commands", () => {
-    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-auto-validate", "fh-system-prompt", "fh-reset"]) {
+    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-lanes", "fh-auto-validate", "fh-system-prompt", "fh-reset"]) {
       expect(source).toContain(`registerCommand("${command}"`);
     }
     expect(source).not.toContain('registerCommand("fh-both"');
@@ -69,6 +69,25 @@ describe("orchestration contracts", () => {
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("at most one write-enabled child");
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("Never launch detached/background processes");
     expect(source).toContain("await ensureSummary(artifactsDir");
+  });
+
+  test("lanes: builders write in parallel worktrees, only the architect writes the checkout", () => {
+    // Every builder child runs with FULL tools but its cwd is its own lane, never ctx.cwd.
+    expect(source).toContain("cwd: lane.path");
+    expect(source).toContain("prompt: laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd)");
+    // The harness creates and commits lanes itself; the writer lease guards the one integration turn.
+    expect(source).toContain('["worktree", "add", "-q", "-b", laneBranch(slotId), dir, head]');
+    expect(source).toContain("acquireWriterLease(ctx.cwd, `/fh-lanes");
+    expect(source).toContain('SYSTEM_PROMPT_LANE_MERGE.md');
+    expect(source).toContain("filter((slot) => !slot.architect)");
+    // The lane board is a belowEditor widget torn down with the command.
+    expect(source).toContain("LANE_BOARD_WIDGET, undefined");
+    expect(source).toContain("await h.ensureSummary(artifactsDir");
+    expect(prompt("USER_PROMPT_LANE_WORKER.md")).toContain("Work only inside {{LANE_PATH}}");
+    expect(prompt("USER_PROMPT_LANE_WORKER.md")).toContain("never adopt another slot's name");
+    expect(prompt("USER_PROMPT_LANE_MERGE.md")).toContain("ONLY process permitted to modify the main checkout");
+    expect(prompt("USER_PROMPT_LANE_MERGE.md")).toContain("Do NOT create commits on the user's branch");
+    expect(prompt("SYSTEM_PROMPT_LANE_MERGE.md")).toContain("Never launch detached/background processes");
   });
 
   test("per-row TPS is provider-response throughput, tools excluded", () => {
