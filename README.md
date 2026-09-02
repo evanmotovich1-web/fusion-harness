@@ -40,7 +40,7 @@ npm install -g @earendil-works/pi-coding-agent   # the pi coding agent
 brew install just jq uv                          # command runner + gate tooling
 npm install                                      # repo deps (yaml parser)
 cp .env.example .env                             # then fill ANTHROPIC/GEMINI/FIREWORKS/OPENAI/OPENROUTER_API_KEY
-npm test                                         # 49 deterministic tests, zero paid calls
+npm test                                         # 50 deterministic tests, zero paid calls
 ```
 
 Note: pi reads `GEMINI_API_KEY` for the google provider (not `GOOGLE_GENERATIVE_AI_API_KEY`).
@@ -153,7 +153,13 @@ Agents must never overwrite each other's work.
 
 ## Lanes
 
-<p align="center"><em>Same request, N builders, N worktrees, one integrator.</em></p>
+<p align="center"><em>Every model in its own lane, as it works.</em></p>
+
+**Lane mode is on by default.** Whenever a fan-out command runs in a git repository — `/fh-opinion`, `/fh-debate`, the `/fh-fusion` research phase, `/fh-lanes` — the harness first seeds one lane per slot (a private git worktree on `fh/lane/<slot>`, carrying the main checkout's HEAD plus its uncommitted work), then pins each slot's child to its lane as its working directory. No two models ever read or write the same checkout at the same time; each one works from a consistent private snapshot, and a lane board below the editor shows every lane's branch and live churn next to the streaming grid. The single-writer stages — the FUSION merge, the `/fh-lanes` integration — still run in the main checkout under the writer lease. Outside a git repository lanes fall back to the shared cwd with one warning per session. `/fh-collaborate` and `/fh-auto-validate` stay on the shared checkout because their tasks must see each other's writes.
+
+Toggle: `--fh-lanes off` at launch, or `/fh-lanes off` / `/fh-lanes on` in the session.
+
+### `/fh-lanes` — parallel builders, one integrator
 
 ```
 /fh-lanes add a /healthz endpoint with a test
@@ -165,7 +171,7 @@ Agents must never overwrite each other's work.
 4. **Integrate.** The architect reads every lane's report and patch, may run the project's checks against a lane read-only, and integrates the best result into the main checkout with `git cherry-pick -n` (or a hand-port), leaving **uncommitted working-tree changes** — the same state every other harness command leaves. It never commits on your branch and never deletes a lane.
 5. **Review.** `/fh-lanes status` lists the lanes, `/fh-lanes diff <slot>` shows one lane's full patch, `/fh-lanes clean` removes them all. Prefer a lane the architect rejected? `git cherry-pick -n <sha> && git reset -q`.
 
-`--no-merge` stops after step 3.
+`--no-merge` stops after step 3. `/fh-lanes <prompt>` always uses lanes, even with lane mode off.
 - `/fh-only` and `/fh-auto-validate` have one active writer by design.
 
 A CWD-scoped atomic writer lease prevents separate harness processes from mutating the same checkout simultaneously. Child agents run in their own process groups so Escape, timeout, or session shutdown reaches Pi plus tool/bash descendants. Tool allowlists enforce planning safety; prompt contracts also prohibit detached background jobs.

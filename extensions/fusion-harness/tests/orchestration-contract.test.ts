@@ -82,6 +82,15 @@ describe("orchestration contracts", () => {
     expect(source).toContain("filter((slot) => !slot.architect)");
     // The lane board is a belowEditor widget torn down with the command.
     expect(source).toContain("LANE_BOARD_WIDGET, undefined");
+    // LANE MODE: the read-only fan-outs seat every slot in its own lane too, falling back
+    // to the shared cwd only when lanes could not be seeded. Collaborate never does —
+    // its tasks must see each other's writes.
+    expect((source.match(/cwd: lane\?\.path \?\? ctx\.cwd/g) ?? []).length).toBe(3); // opinion, debate, fusion sources
+    expect(source).toContain("const lanes = await h.seedLanes(ctx, slots);");
+    expect(source).toContain('flagStr("fh-lanes").toLowerCase() !== "off"');
+    expect(readFileSync(join(root, "modules", "cmd-build.ts"), "utf8")).not.toContain("seedLanes");
+    // The FUSION writer and the lane integrator still work in the shared checkout.
+    expect(source).toContain('sessionDir: path.join(artifactsDir, "fusion"), cwd: ctx.cwd');
     expect(source).toContain("await h.ensureSummary(artifactsDir");
     expect(prompt("USER_PROMPT_LANE_WORKER.md")).toContain("Work only inside {{LANE_PATH}}");
     expect(prompt("USER_PROMPT_LANE_WORKER.md")).toContain("never adopt another slot's name");

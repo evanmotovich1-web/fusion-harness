@@ -17,6 +17,9 @@ describe("/fh-lanes arguments", () => {
 		expect(parseLanesArgs("CLEAN")).toEqual({ action: "clean", prompt: "", merge: false });
 		expect(parseLanesArgs("diff flux")).toEqual({ action: "diff", slot: "flux", prompt: "", merge: false });
 		expect(parseLanesArgs("diff")).toEqual({ action: "diff", slot: undefined, prompt: "", merge: false });
+		expect(parseLanesArgs("on")).toEqual({ action: "on", prompt: "", merge: false });
+		expect(parseLanesArgs("OFF")).toEqual({ action: "off", prompt: "", merge: false });
+		expect(parseLanesArgs("off the record, refactor auth")).toEqual({ action: "run", prompt: "off the record, refactor auth", merge: true });
 		// More words than a subcommand takes → it is a prompt after all.
 		expect(parseLanesArgs("status of the migration")).toEqual({ action: "run", prompt: "status of the migration", merge: true });
 		expect(parseLanesArgs("")).toEqual({ action: "run", prompt: "", merge: true });

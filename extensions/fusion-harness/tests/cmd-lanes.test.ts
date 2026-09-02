@@ -12,7 +12,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { acquireWriterLease } from "../modules/writer-lease.ts";
 import { loadModelStack } from "../modules/model-stack.ts";
-import { cleanLanes, laneRootFor } from "../modules/lanes.ts";
+import { cleanLanes, createLane, laneRootFor, type Lane } from "../modules/lanes.ts";
 import { newRun, type AgentRun, type FhDetails, type HarnessDeps } from "../modules/runtime.ts";
 
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
@@ -92,6 +92,7 @@ function harness(cwd: string) {
 	const panels: Array<{ details: FhDetails; content: string }> = [];
 	const notices: string[] = [];
 	const widgets = new Map<string, unknown>();
+	let laneModeOn = true;
 	let handler: ((args: string, ctx: any) => Promise<void>) | undefined;
 	const pi = { registerCommand: (_name: string, spec: any) => (handler = spec.handler), sendMessage: () => {} } as any;
 	const artifacts = mkdtempSync(join(tmpdir(), "fh-cmd-lanes-art-"));
@@ -103,6 +104,19 @@ function harness(cwd: string) {
 		startStoppable: () => ({ signal: new AbortController().signal, stopped: () => false, release: () => {} }),
 		startWidget: () => () => {},
 		startGridWidget: () => () => {},
+		laneMode: () => laneModeOn,
+		setLaneMode: (on) => (laneModeOn = on),
+		// The factory's seedLanes, minus the UI: real worktrees, sequentially, forced or not.
+		seedLanes: async (c, slots, opts) => {
+			if (!opts?.force && !laneModeOn) return undefined;
+			const lanes = new Map<string, Lane>();
+			for (const slot of slots) lanes.set(slot.id, await createLane(c.cwd, slot.id));
+			return lanes;
+		},
+		startLaneBoard: (c) => {
+			widgets.set("board", true);
+			return () => widgets.delete("board");
+		},
 		noteHost: () => {},
 		modelStack: () => stack,
 		architectModel: () => stack.architect.model,
@@ -227,7 +241,19 @@ describe("/fh-lanes end to end (child runner mocked)", () => {
 		const fh = harness(cwd);
 		await fh.run("do it");
 		expect(calls.length).toBe(0);
-		expect(fh.panels.length).toBe(0);
-		expect(fh.notices[0]).toContain("lanes need a git repository");
+		expect(fh.panels[fh.panels.length - 1].details.kind).toBe("error");
+		expect(fh.panels[fh.panels.length - 1].content).toContain("lanes need a git repository");
+	});
+
+	test("/fh-lanes off|on flips lane mode for the other commands; /fh-lanes <prompt> always uses lanes", async () => {
+		const cwd = repo();
+		const fh = harness(cwd);
+		await fh.run("off");
+		expect(fh.notices[fh.notices.length - 1]).toContain("LANE MODE off");
+		await fh.run("--no-merge do it");
+		// Even with lane mode off, /fh-lanes itself seeded lanes: builders ran outside the repo.
+		expect(calls.every((call) => call.role !== "BUILDER" || !call.cwd.startsWith(cwd))).toBe(true);
+		await fh.run("on");
+		expect(fh.notices[fh.notices.length - 1]).toContain("LANE MODE on");
 	});
 });

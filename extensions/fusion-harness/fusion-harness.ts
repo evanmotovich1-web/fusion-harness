@@ -85,7 +85,8 @@ import {
 	type Role,
 	type SpawnIdentity,
 } from "./modules/runtime.ts";
-import { AgentGrid, cellStr, FullWidth, liveColumn, renderFhPanel, TwoCol } from "./modules/tui.ts";
+import { createLane, gitTopLevel, laneStatus, type Lane, type LaneStatus } from "./modules/lanes.ts";
+import { AgentGrid, cellStr, FullWidth, laneRowStr, liveColumn, renderFhPanel, TwoCol } from "./modules/tui.ts";
 import { acquireWriterLease, type WriterLease } from "./modules/writer-lease.ts";
 
 // ═══ 1. Defaults ═════════════════════════════════════════════════════════════
@@ -143,6 +144,11 @@ export default function (pi: ExtensionAPI) {
 		type: "string",
 		description:
 			"Round count for /fh-debate (clamp 1-10; default 3, minimum 2). Inline-overridable: /fh-debate --rounds 2 <prompt>.",
+	});
+	pi.registerFlag("fh-lanes", {
+		type: "string",
+		description:
+			"LANE MODE: on|off (default on). Every fan-out command (/fh-opinion, /fh-debate, /fh-fusion sources, /fh-lanes) seats each slot in its OWN git worktree lane, seeded from the main checkout; falls back to the shared cwd outside a git repo. Toggle live with /fh-lanes on|off.",
 	});
 	pi.registerFlag("child-timeout", {
 		type: "string",
@@ -869,6 +875,99 @@ export default function (pi: ExtensionAPI) {
 		};
 	};
 
+	// ── 2.7b LANE MODE — each slot in its own git worktree while it works ──
+	// Default ON: a fan-out command recreates one lane per slot from the main checkout
+	// (HEAD + uncommitted work) before any child spawns, and every child's cwd is its
+	// lane. The shared checkout is touched only by the single-writer stages (FUSION,
+	// /fh-lanes integration) — so parallel models can never collide, and each model's
+	// reads are a consistent private snapshot. Outside a git repo, lanes fall back to
+	// the shared cwd with one notice per session. /fh-collaborate and /fh-auto-validate
+	// stay on the shared checkout: their tasks must see each other's writes.
+	const LANE_BOARD_WIDGET = `${CUSTOM_TYPE}-lanes`;
+	const LANE_POLL_MS = 2_000;
+	let laneModeOverride: boolean | undefined; // /fh-lanes on|off, session-only
+	const laneMode = (): boolean => laneModeOverride ?? flagStr("fh-lanes").toLowerCase() !== "off";
+	const setLaneMode = (on: boolean) => {
+		laneModeOverride = on;
+	};
+	let laneFallbackNoticed = false;
+	const seedLanes = async (ctx: any, slots: ModelSlot[], opts?: { force?: boolean }): Promise<Map<string, Lane> | undefined> => {
+		if (!opts?.force && !laneMode()) return undefined;
+		try {
+			await gitTopLevel(ctx.cwd);
+		} catch (error) {
+			if (opts?.force) throw error;
+			if (!laneFallbackNoticed) {
+				laneFallbackNoticed = true;
+				try {
+					ctx.ui.notify(`fusion-harness: lane mode is on but ${ctx.cwd} is not a git repository — agents share the cwd this session`, "warning");
+				} catch {}
+			}
+			return undefined;
+		}
+		const lanes = new Map<string, Lane>();
+		try {
+			ctx.ui.setStatus(CUSTOM_TYPE, `lanes: seeding ${slots.length} worktree${slots.length === 1 ? "" : "s"}…`);
+		} catch {}
+		// One at a time: git serializes worktree operations on the repo lock anyway.
+		for (const slot of slots) {
+			try {
+				lanes.set(slot.id, await createLane(ctx.cwd, slot.id));
+			} catch (error) {
+				if (opts?.force) throw error;
+				try {
+					ctx.ui.notify(`fusion-harness: could not seed a lane for ${slot.name} (${error instanceof Error ? error.message : String(error)}) — agents share the cwd for this command`, "warning");
+				} catch {}
+				return undefined;
+			}
+		}
+		return lanes;
+	};
+	const startLaneBoard = (ctx: any, runs: AgentRun[], lanes: Map<string, Lane>, note: string): (() => void) => {
+		const churn = new Map<string, LaneStatus>();
+		let polling = false;
+		const pollChurn = async () => {
+			if (polling) return;
+			polling = true;
+			try {
+				await Promise.all(runs.map(async (run) => {
+					const lane = run.slot ? lanes.get(run.slot.id) : undefined;
+					if (!lane || run.status === "pending") return;
+					try {
+						churn.set(run.slot!.id, await laneStatus(lane));
+					} catch {}
+				}));
+			} finally {
+				polling = false;
+			}
+		};
+		const render = () => {
+			try {
+				ctx.ui.setWidget(
+					LANE_BOARD_WIDGET,
+					(_tui: any, theme: any) => ({
+						invalidate() {},
+						render(width: number): string[] {
+							const header = theme.fg("customMessageLabel", theme.bold("⫽ LANES")) + theme.fg("dim", ` · ${runs.length} slot${runs.length === 1 ? "" : "s"}, each in its own worktree · ${note}`);
+							return [header, ...runs.filter((run) => run.slot && lanes.has(run.slot.id)).map((run) => laneRowStr(theme, run, lanes.get(run.slot!.id)!.branch, churn.get(run.slot!.id)))].map((line) => truncateToWidth(line, width));
+						},
+					}),
+					{ placement: "belowEditor" },
+				);
+			} catch {}
+		};
+		render();
+		const boardTicker = setInterval(render, WIDGET_TICK_MS);
+		const churnTicker = setInterval(() => void pollChurn(), LANE_POLL_MS);
+		return () => {
+			clearInterval(boardTicker);
+			clearInterval(churnTicker);
+			try {
+				ctx.ui.setWidget(LANE_BOARD_WIDGET, undefined);
+			} catch {}
+		};
+	};
+
 	/**
 	 * ESCAPE = stop. Pi's own escape only aborts ITS agent loop; a slash command's children
 	 * are our subprocesses, so nothing cancels them unless we listen ourselves. While
@@ -1032,6 +1131,7 @@ export default function (pi: ExtensionAPI) {
 		["/fh-debate [--rounds N] <prompt>", "all-to-all debate, no judge"],
 		["/fh-collaborate <prompt>", "agents plan, architect delegates, parallel build"],
 		["/fh-lanes [--no-merge] <prompt>", "each builder its own worktree, architect merges"],
+		["/fh-lanes on|off|status|clean", "lane mode toggle, lane list, lane cleanup"],
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
 		["/fh-model", "pick slot, model, thinking"],
 		["/fh-auto-validate [--max-validations N] <prompt>", "gate written first, build until green"],
@@ -1268,6 +1368,10 @@ export default function (pi: ExtensionAPI) {
 		startStoppable,
 		startWidget,
 		startGridWidget,
+		laneMode,
+		setLaneMode,
+		seedLanes,
+		startLaneBoard,
 		noteHost,
 		modelStack,
 		architectModel,

@@ -296,12 +296,13 @@ export function collabCoordinatePrompt(prompt: string, reportsDir: string, planP
  * without running models; anything else is a prompt, optionally prefixed by `--no-merge`
  * (leave the lanes for the user instead of an architect integration).
  */
-export function parseLanesArgs(input: string): { action: "status" | "diff" | "clean" | "run"; slot?: string; prompt: string; merge: boolean } {
+export function parseLanesArgs(input: string): { action: "status" | "diff" | "clean" | "on" | "off" | "run"; slot?: string; prompt: string; merge: boolean } {
 	const trimmed = input.trim();
 	const words = trimmed.split(/\s+/).filter(Boolean);
 	const head = (words[0] ?? "").toLowerCase();
 	if (head === "status" && words.length === 1) return { action: "status", prompt: "", merge: false };
 	if (head === "clean" && words.length === 1) return { action: "clean", prompt: "", merge: false };
+	if ((head === "on" || head === "off") && words.length === 1) return { action: head, prompt: "", merge: false };
 	if (head === "diff" && words.length <= 2) return { action: "diff", slot: words[1], prompt: "", merge: false };
 	let merge = true;
 	const prompt = trimmed
@@ -311,6 +312,19 @@ export function parseLanesArgs(input: string): { action: "status" | "diff" | "cl
 		})
 		.trim();
 	return { action: "run", prompt, merge };
+}
+
+/**
+ * Appended to any fan-out prompt when LANE MODE seated the slot in its own worktree: the
+ * child's cwd is the lane, so it must know that the project it sees is a private copy.
+ */
+export function laneNote(slot: ModelSlot, lane: { path: string; branch: string }, mainCwd: string): string {
+	return [
+		"",
+		"# YOUR LANE",
+		`You are ${slot.name}, and your current working directory is YOUR OWN LANE: a private git worktree of the project at ${lane.path} (branch ${lane.branch}), seeded from the main checkout at ${mainCwd} — its HEAD plus its uncommitted work. Every other slot has its own lane; nobody shares yours.`,
+		"Refer to files by their project-relative paths. Ignored files (node_modules, .env) were not carried in. Never touch the main checkout or another lane; do not run git checkout/switch/branch/worktree/merge/rebase/reset/stash/push.",
+	].join("\n");
 }
 
 /** One builder, one lane: the same request as everyone else, in its own worktree. */

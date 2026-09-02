@@ -17,6 +17,7 @@ import {
 	defaultFusionPrompt,
 	fuserPrompt,
 	fusionContextAckPrompt,
+	laneNote,
 	parseFusionArgs,
 	workerPrompt,
 } from "./prompt-library.ts";
@@ -64,8 +65,11 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			const runs = slots.map(h.newSlotRun);
 			const initialSpawns = new Map(slots.map((slot) => [slot.id, h.slotInitialSpawn(slot, ctx, path.join(artifactsDir, "agents", slot.id))]));
 			const fuser = newRun("FUSION", stack.architect.model);
+			// LANE MODE: every source researches its own worktree snapshot; the FUSION writer alone works in the shared checkout.
+			const lanes = await h.seedLanes(ctx, slots);
 			const stopper = h.startStoppable(ctx, "fh-fusion");
 			const stopWidget = h.startGridWidget(ctx, "fh-fusion", runs, fuser, startedAt);
+			const stopBoard = lanes ? h.startLaneBoard(ctx, runs, lanes, "read-only sources · FUSION writes the main checkout") : () => {};
 			let writerLease: WriterLease | undefined;
 			let hostContextChunks = 0;
 			const ackRuns: AgentRun[] = []; // every ACK attempt — absorbed into the model bar after the widget stops
@@ -76,7 +80,8 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					const slot = run.slot!;
 					const agentDir = path.join(artifactsDir, "agents", slot.id);
 					await fs.promises.mkdir(agentDir, { recursive: true });
-					await runChild({ run, prompt: workerPrompt(slot, stack, prompt), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					const lane = lanes?.get(slot.id);
+					await runChild({ run, prompt: workerPrompt(slot, stack, prompt) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(agentDir, "answer.md", runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -166,6 +171,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 				writerLease?.release();
 				stopper.release();
 				stopWidget();
+				stopBoard();
 				// AFTER stopWidget: the widget absorbs the runs it was started with (workers +
 				// fuser) — folding the ACK turns in last leaves each slot's remembered context
 				// bar on its post-sync session, not the smaller read-only research turn.

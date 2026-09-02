@@ -13,7 +13,7 @@ import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { runChild } from "./child-runner.ts";
 import { orderedSlots } from "./model-stack.ts";
-import { debateClosingPrompt, debateOpeningPrompt, debateRebuttalPrompt, opinionPrompt } from "./prompt-library.ts";
+import { debateClosingPrompt, debateOpeningPrompt, debateRebuttalPrompt, laneNote, opinionPrompt } from "./prompt-library.ts";
 import { clampCount, CUSTOM_TYPE, READONLY_TOOLS, runError, runOk, toStat, type AgentRun, type HarnessDeps } from "./runtime.ts";
 
 const ROUNDS_DEFAULT = 3;
@@ -49,15 +49,19 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
 			h.panel({ kind: "prompt", command: "fh-opinion", ok: true }, `/fh-opinion ${prompt}`);
+			// LANE MODE: each slot reads its own worktree snapshot of the project (or the shared cwd when off / not a repo).
+			const lanes = await h.seedLanes(ctx, slots);
 			const stopper = h.startStoppable(ctx, "fh-opinion");
 			const stopWidget = h.startGridWidget(ctx, "fh-opinion", runs, undefined, startedAt);
+			const stopBoard = lanes ? h.startLaneBoard(ctx, runs, lanes, "read-only") : () => {};
 			ctx.ui.setStatus(CUSTOM_TYPE, `opinion: ${runs.length} agents answering read-only…`);
 			try {
 				await Promise.all(runs.map(async (run) => {
 					const slot = run.slot!;
 					const agentDir = path.join(artifactsDir, "agents", slot.id);
 					await fs.promises.mkdir(agentDir, { recursive: true });
-					await runChild({ run, prompt: opinionPrompt(slot, stack, prompt), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					const lane = lanes?.get(slot.id);
+					await runChild({ run, prompt: opinionPrompt(slot, stack, prompt) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(agentDir, "answer.md", runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -71,6 +75,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 				await h.ensureSummary(artifactsDir, { command: "fh-opinion", ok: false, stopped: stopper.stopped(), agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
 				stopper.release();
 				stopWidget();
+				stopBoard();
 				ctx.ui.setStatus(CUSTOM_TYPE, undefined);
 			}
 		},
@@ -102,8 +107,10 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
 			h.panel({ kind: "prompt", command: "fh-debate", ok: true }, `/fh-debate ${(raw ?? "").trim()}`);
 			h.panel({ kind: "banner", command: "fh-debate", ok: true, prompt, roles: slots.map((slot) => ({ role: (slot.architect ? "ARCHITECT" : "BUILDER") as AgentRun["role"], model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: slot.architect })), maxRounds: rounds, artifactsDir }, "");
+			const lanes = await h.seedLanes(ctx, slots);
 			const stopper = h.startStoppable(ctx, "fh-debate");
 			const stopWidget = h.startGridWidget(ctx, "fh-debate", runs, undefined, startedAt);
+			const stopBoard = lanes ? h.startLaneBoard(ctx, runs, lanes, `read-only · ${rounds} rounds`) : () => {};
 			let previous: AgentRun[] = [];
 			try {
 				for (let round = 1; round <= rounds; round++) {
@@ -130,7 +137,8 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 						const roundDir = path.join(artifactsDir, "debate", `round-${round}`);
 						await fs.promises.mkdir(roundDir, { recursive: true });
 						const identity = round === 1 ? initialSpawns.get(slot.id)! : h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx);
-						await runChild({ run, prompt: prompts.get(slot.id)!, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...identity, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+						const lane = lanes?.get(slot.id);
+						await runChild({ run, prompt: prompts.get(slot.id)! + (lane && round === 1 ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...identity, cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 						await h.save(roundDir, `${slot.id}.md`, runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 					}));
 					if (stopper.stopped()) {
@@ -158,6 +166,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 				await h.ensureSummary(artifactsDir, { command: "fh-debate", ok: false, stopped: stopper.stopped(), rounds, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
 				stopper.release();
 				stopWidget();
+				stopBoard();
 				ctx.ui.setStatus(CUSTOM_TYPE, undefined);
 			}
 		},

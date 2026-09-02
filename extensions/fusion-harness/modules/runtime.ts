@@ -7,6 +7,7 @@
  * every other module leans on. No pi APIs, no processes, no filesystem.
  */
 
+import type { Lane } from "./lanes.ts";
 import type { HexColor, ModelSlot, ModelStack, Thinking } from "./model-stack.ts";
 
 // ═══ Tool allowlists ═════════════════════════════════════════════════════════
@@ -411,6 +412,18 @@ export interface HarnessDeps {
 	startStoppable(ctx: any, command: string): { signal: AbortSignal; stopped: () => boolean; release: () => void };
 	startWidget(ctx: any, command: string, cols: [AgentRun, AgentRun], span: AgentRun | undefined, startedAt: number): () => void;
 	startGridWidget(ctx: any, command: string, runs: AgentRun[], span: AgentRun | undefined, startedAt: number): () => void;
+	// lanes — LANE MODE seats every slot in its own git worktree for the fan-out commands
+	/** Whether fan-out commands seat each slot in its own lane (default on; `--fh-lanes off` / `/fh-lanes off`). */
+	laneMode(): boolean;
+	setLaneMode(on: boolean): void;
+	/**
+	 * Recreate one lane per slot from the main checkout (HEAD + uncommitted work), or return
+	 * undefined — lane mode off, not a git repo, or git refused — so the caller falls back to
+	 * the shared cwd. `force` seeds even with lane mode off (/fh-lanes itself).
+	 */
+	seedLanes(ctx: any, slots: ModelSlot[], opts?: { force?: boolean }): Promise<Map<string, Lane> | undefined>;
+	/** The belowEditor lane board: one slot-colored row per run with its branch and live churn. Returns the teardown. */
+	startLaneBoard(ctx: any, runs: AgentRun[], lanes: Map<string, Lane>, note: string): () => void;
 	// stack + host
 	noteHost(ctx: any): void;
 	modelStack(): ModelStack;

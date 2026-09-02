@@ -1,37 +1,29 @@
 /**
- * cmd-lanes.ts — /fh-lanes: every builder works at once, each in its OWN LANE.
+ * cmd-lanes.ts — /fh-lanes: every builder WRITES at once, each in its OWN LANE.
  *
- * A lane is a private git worktree on a private branch (modules/lanes.ts), seeded from
- * the main checkout. Builders get FULL tools inside their lane and run concurrently —
- * the first harness command where more than one model writes at the same time — and
- * the single-writer invariant still holds where it matters: only the ARCHITECT's
- * integration turn, holding the writer lease, ever touches the user's checkout.
+ * LANE MODE (factory, default on) already seats every slot in its own git worktree for
+ * the read-only fan-out commands. /fh-lanes is the write-enabled form: builders get FULL
+ * tools inside their lane and run concurrently — several models writing at the same
+ * time — and the single-writer invariant still holds where it matters: only the
+ * ARCHITECT's integration turn, holding the writer lease, touches the user's checkout.
  *
  *   /fh-lanes <prompt>              lanes → parallel builders → architect integrates
  *   /fh-lanes --no-merge <prompt>   lanes → parallel builders → lanes left for you
+ *   /fh-lanes on|off                lane mode for every fan-out command (session-only)
  *   /fh-lanes status                every lane's branch, churn, path
  *   /fh-lanes diff <slot>           one lane's full patch
  *   /fh-lanes clean                 remove every lane worktree and branch
- *
- * While the builders run, a belowEditor lane board shows each lane's branch and live
- * file churn next to the usual streaming grid.
  */
 
 import * as fs from "node:fs";
 import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import { truncateToWidth } from "@earendil-works/pi-tui";
 import { runChild } from "./child-runner.ts";
-import { cleanLanes, commitLane, createLane, gitTopLevel, laneDiff, laneRootFor, laneStatus, listLanes, type Lane, type LaneStatus } from "./lanes.ts";
+import { cleanLanes, commitLane, laneDiff, laneRootFor, laneStatus, listLanes, type LaneStatus } from "./lanes.ts";
 import { orderedSlots } from "./model-stack.ts";
 import { contractSystemPrompt, laneMergePrompt, laneWorkerPrompt, parseLanesArgs } from "./prompt-library.ts";
 import { CUSTOM_TYPE, FULL_TOOLS, runError, runOk, toStat, type AgentRun, type HarnessDeps, type LaneOutcome, type Role } from "./runtime.ts";
-import { laneRowStr } from "./tui.ts";
 import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
-
-const LANE_BOARD_WIDGET = `${CUSTOM_TYPE}-lanes`;
-const LANE_POLL_MS = 2_000; // git status per lane — cheap, but not every render tick
-const LANE_BOARD_TICK_MS = 1_000;
 
 /** What /fh-lanes remembers about the last run, so `status` and `diff` work after the command ends. */
 interface LaneRecord {
@@ -58,13 +50,18 @@ const readLaneRecords = async (cwd: string): Promise<LaneRecord[]> => {
 
 export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 	pi.registerCommand("fh-lanes", {
-		description: "Every builder implements the request at once, each in its own git worktree lane; the architect integrates the best result. Also: status · diff <slot> · clean",
+		description: "Every builder implements the request at once, each in its own git worktree lane; the architect integrates the best result. Also: on · off · status · diff <slot> · clean",
 		handler: async (raw, ctx) => {
 			h.noteHost(ctx);
 			const args = parseLanesArgs(raw ?? "");
 			const stack = h.modelStack();
 
 			// ── Lane management subcommands: no models run ──
+			if (args.action === "on" || args.action === "off") {
+				h.setLaneMode(args.action === "on");
+				ctx.ui.notify(args.action === "on" ? "fusion-harness: LANE MODE on — every fan-out command seats each slot in its own worktree" : "fusion-harness: LANE MODE off — fan-out commands share the cwd (/fh-lanes <prompt> still uses lanes)", "info");
+				return;
+			}
 			if (args.action === "clean") {
 				try {
 					const removed = await cleanLanes(ctx.cwd);
@@ -84,7 +81,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					return;
 				}
 				if (!live.length) {
-					ctx.ui.notify("fusion-harness: no lanes exist for this project — run /fh-lanes <prompt> to create them", "info");
+					ctx.ui.notify(`fusion-harness: no lanes exist for this project (lane mode ${h.laneMode() ? "on" : "off"}) — any fan-out command seeds them`, "info");
 					return;
 				}
 				const outcomes: LaneOutcome[] = [];
@@ -100,7 +97,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					rows.push(`| ${record?.slotName ?? lane.slotId} | ${lane.branch} | ${churn.files} files +${churn.insertions} −${churn.deletions} | ${record?.committed ? record.sha?.slice(0, 10) : "none"} | ${lane.path} |`);
 				}
 				const last = records[0];
-				h.panel({ kind: "lanes", command: "fh-lanes", ok: true, lanes: outcomes }, [last ? `Last run: ${new Date(last.finishedAt).toISOString()} — "${last.prompt.replace(/\s+/g, " ").slice(0, 100)}"\nArtifacts: ${last.artifactsDir}\n` : "", ...rows, "", "Inspect a lane: `/fh-lanes diff <slot>` · remove all: `/fh-lanes clean`"].join("\n"));
+				h.panel({ kind: "lanes", command: "fh-lanes", ok: true, lanes: outcomes }, [`Lane mode: ${h.laneMode() ? "on" : "off"}`, last ? `Last /fh-lanes run: ${new Date(last.finishedAt).toISOString()} — "${last.prompt.replace(/\s+/g, " ").slice(0, 100)}"\nArtifacts: ${last.artifactsDir}` : "", "", ...rows, "", "Inspect a lane: `/fh-lanes diff <slot>` · remove all: `/fh-lanes clean` · toggle: `/fh-lanes on|off`"].join("\n"));
 				return;
 			}
 			if (args.action === "diff") {
@@ -126,13 +123,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			// ── The run: lanes → parallel builders → (architect integration) ──
 			const prompt = args.prompt;
 			if (!prompt) {
-				ctx.ui.notify("Usage: /fh-lanes [--no-merge] <prompt>  ·  /fh-lanes status  ·  /fh-lanes diff <slot>  ·  /fh-lanes clean", "warning");
-				return;
-			}
-			try {
-				await gitTopLevel(ctx.cwd);
-			} catch (error) {
-				ctx.ui.notify(`fusion-harness: ${error instanceof Error ? error.message : String(error)}`, "error");
+				ctx.ui.notify("Usage: /fh-lanes [--no-merge] <prompt>  ·  /fh-lanes on|off  ·  status  ·  diff <slot>  ·  clean", "warning");
 				return;
 			}
 			const builders = orderedSlots(stack).filter((slot) => !slot.architect);
@@ -145,59 +136,20 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			h.panel({ kind: "prompt", command: "fh-lanes", ok: true }, `/fh-lanes ${(raw ?? "").trim()}`);
 			h.panel({ kind: "banner", command: "fh-lanes", ok: true, prompt, roles: [...builders.map((slot) => ({ role: "BUILDER" as Role, model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: false })), ...(args.merge ? [{ role: "ARCHITECT" as Role, model: architect.model, slotId: architect.id, slotName: architect.name, color: architect.color, primary: false, architect: true }] : [])], artifactsDir }, "");
 
-			// Lanes are created one at a time: git serializes worktree operations on the repo lock anyway.
-			const lanes = new Map<string, Lane>();
-			ctx.ui.setStatus(CUSTOM_TYPE, `lanes: creating ${builders.length} worktree${builders.length === 1 ? "" : "s"}…`);
-			for (const slot of builders) {
-				try {
-					lanes.set(slot.id, await createLane(ctx.cwd, slot.id));
-				} catch (error) {
-					h.panel({ kind: "error", command: "fh-lanes", ok: false, artifactsDir }, `Could not create the lane for ${slot.name}: ${error instanceof Error ? error.message : String(error)}`);
-					return;
-				}
+			// /fh-lanes IS lanes: seed even with lane mode off, and fail loudly instead of falling back.
+			let lanes: Map<string, import("./lanes.ts").Lane>;
+			try {
+				lanes = (await h.seedLanes(ctx, builders, { force: true }))!;
+			} catch (error) {
+				h.panel({ kind: "error", command: "fh-lanes", ok: false, artifactsDir }, `Could not create the lanes: ${error instanceof Error ? error.message : String(error)}`);
+				return;
 			}
 
 			const runs = builders.map(h.newSlotRun);
 			const architectRun = h.newSlotRun(architect);
 			const stopper = h.startStoppable(ctx, "fh-lanes");
 			const stopWidget = h.startGridWidget(ctx, "fh-lanes", runs, args.merge ? architectRun : undefined, startedAt);
-
-			// The lane board: one slot-colored row per lane with its branch and live churn.
-			const churn = new Map<string, LaneStatus>();
-			let polling = false;
-			const pollChurn = async () => {
-				if (polling) return;
-				polling = true;
-				try {
-					await Promise.all(runs.map(async (run) => {
-						const lane = lanes.get(run.slot!.id);
-						if (!lane || run.status === "pending") return;
-						try {
-							churn.set(run.slot!.id, await laneStatus(lane));
-						} catch {}
-					}));
-				} finally {
-					polling = false;
-				}
-			};
-			const renderBoard = () => {
-				try {
-					ctx.ui.setWidget(
-						LANE_BOARD_WIDGET,
-						(_tui: any, theme: any) => ({
-							invalidate() {},
-							render(width: number): string[] {
-								const header = theme.fg("customMessageLabel", theme.bold("⫽ LANES")) + theme.fg("dim", ` · ${runs.length} builder${runs.length === 1 ? "" : "s"}, each in its own worktree · ${args.merge ? "architect integrates when all finish" : "--no-merge: lanes stay for you"}`);
-								return [header, ...runs.map((run) => laneRowStr(theme, run, lanes.get(run.slot!.id)?.branch ?? "?", churn.get(run.slot!.id)))].map((line) => truncateToWidth(line, width));
-							},
-						}),
-						{ placement: "belowEditor" },
-					);
-				} catch {}
-			};
-			renderBoard();
-			const boardTicker = setInterval(renderBoard, LANE_BOARD_TICK_MS);
-			const churnTicker = setInterval(() => void pollChurn(), LANE_POLL_MS);
+			const stopBoard = h.startLaneBoard(ctx, runs, lanes, args.merge ? "full tools · architect integrates when all finish" : "full tools · --no-merge: lanes stay for you");
 
 			let writerLease: WriterLease | undefined;
 			const outcomes: LaneOutcome[] = [];
@@ -232,9 +184,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					const patchPath = path.join(agentDir, "lane.patch");
 					await h.save(agentDir, "lane.patch", patch);
 					await h.save(agentDir, "diffstat.txt", stat);
-					const live = await laneStatus(lane).catch(() => ({ files: 0, insertions: 0, deletions: 0 }));
 					const churnNow = { files: commit.files.length, insertions: Number(/(\d+) insertion/.exec(stat)?.[1] ?? 0), deletions: Number(/(\d+) deletion/.exec(stat)?.[1] ?? 0) };
-					churn.set(slot.id, commit.committed ? churnNow : live);
 					outcomes.push({ slotId: slot.id, slotName: slot.name, color: slot.color, branch: lane.branch, path: lane.path, status: run.status, committed: commit.committed, sha: commit.sha, ...churnNow });
 					laneResults.push({ run, branch: lane.branch, path: lane.path, base: lane.base, sha: commit.sha, committed: commit.committed, files: commit.files, stat, patch, reportPath, patchPath });
 				}));
@@ -245,9 +195,6 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 				// Keep slot order for every roster the user sees.
 				outcomes.sort((a, b) => builders.findIndex((slot) => slot.id === a.slotId) - builders.findIndex((slot) => slot.id === b.slotId));
 				laneResults.sort((a, b) => builders.findIndex((slot) => slot.id === a.run.slot!.id) - builders.findIndex((slot) => slot.id === b.run.slot!.id));
-				churn.clear();
-				for (const outcome of outcomes) churn.set(outcome.slotId, { files: outcome.files, insertions: outcome.insertions, deletions: outcome.deletions });
-				renderBoard();
 
 				const records: LaneRecord[] = laneResults.map((lane) => ({ slotId: lane.run.slot!.id, slotName: lane.run.slot!.name, branch: lane.branch, path: lane.path, base: lane.base, sha: lane.sha, committed: lane.committed, prompt, artifactsDir, finishedAt: Date.now() }));
 				await fs.promises.mkdir(laneRootFor(ctx.cwd), { recursive: true });
@@ -289,15 +236,11 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 				h.panel({ kind: "lanes", command: "fh-lanes", ok, prompt, agent: toStat(architectRun), sources: runs.map(toStat), lanes: outcomes, artifactsDir, ...h.totals([...runs, architectRun], startedAt) }, ok ? `${architectRun.text}\n\n---\nLanes kept for review:\n${reviewHints}` : `The architect's integration failed: ${runError(architectRun)}\n\nEvery lane branch is intact:\n${reviewHints}`);
 				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok, merge: true, integrated: ok, lanes: outcomes, writerLeasePath: writerLease?.path, agents: [...runs, architectRun].map(toStat), sessions: summarySessions(), ...h.totals([...runs, architectRun], startedAt) }, null, 2));
 			} finally {
-				clearInterval(boardTicker);
-				clearInterval(churnTicker);
 				await h.ensureSummary(artifactsDir, { command: "fh-lanes", ok: false, stopped: stopper.stopped(), merge: args.merge, lanes: outcomes, writerLeasePath: writerLease?.path, agents: (args.merge ? [...runs, architectRun] : runs).map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) });
 				writerLease?.release();
 				stopper.release();
 				stopWidget();
-				try {
-					ctx.ui.setWidget(LANE_BOARD_WIDGET, undefined);
-				} catch {}
+				stopBoard();
 				ctx.ui.setStatus(CUSTOM_TYPE, undefined);
 			}
 		},
