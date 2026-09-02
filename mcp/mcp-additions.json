@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hermes MCP additions — approval-gated manifest",
+  "governing_decision": "mcp/DECISION.md",
+  "rule": "No entry is installed or run until Evan approves its phase. Credential-bearing values are entered at approval time only, never stored here.",
+  "entries": [
+    {
+      "name": "obsidian",
+      "repo": "https://github.com/cyanheads/obsidian-mcp-server",
+      "status": "add-pending-approval",
+      "phase": 1,
+      "risk": "MED",
+      "posture": "Read-only. Reads scoped to approved folders. Never expose the entire synced vault.",
+      "prerequisites": [
+        "Obsidian Local REST API plugin (separate approval)",
+        "Environment configuration (separate approval; no credential stored here)"
+      ],
+      "command": "hermes mcp add obsidian --command 'npx -y obsidian-mcp-server@latest'"
+    },
+    {
+      "name": "n8n",
+      "repo": "https://github.com/czlonkowski/n8n-mcp",
+      "status": "add-pending-approval",
+      "phase": 2,
+      "risk": "MED",
+      "posture": "Documentation tools only. No n8n instance URL, no API credential. Management mode stays off.",
+      "prerequisites": [],
+      "command": "hermes mcp add n8n --command 'env MCP_MODE=stdio LOG_LEVEL=error DISABLE_CONSOLE_OUTPUT=true npx n8n-mcp'"
+    },
+    {
+      "name": "yahoo-finance",
+      "repo": "https://github.com/Alex2Yang97/yahoo-finance-mcp",
+      "status": "add-pending-approval",
+      "phase": 3,
+      "risk": "MED",
+      "posture": "Research and idea generation only. Verify prices, timestamps, adjustments, and options fields before relying on outputs. Never execution-grade.",
+      "prerequisites": [
+        "uv/uvx available"
+      ],
+      "command": "hermes mcp add yahoo-finance --command 'uvx --from git+https://github.com/Alex2Yang97/yahoo-finance-mcp yahoo-finance-mcp'"
+    },
+    {
+      "name": "openbb",
+      "repo": "https://github.com/OpenBB-finance/OpenBB",
+      "status": "deferred",
+      "risk": "MED",
+      "posture": "Evaluate in a separate environment as research-only data. Not a one-command Hermes MCP.",
+      "prerequisites": [],
+      "command": "uv venv .venv-openbb && . .venv-openbb/bin/activate && uv pip install openbb"
+    },
+    {
+      "name": "composio",
+      "repo": "https://github.com/ComposioHQ/composio",
+      "status": "rejected-for-now",
+      "risk": "HIGH",
+      "posture": "Revisit only with a named connector use case and a least-privilege plan. One low-impact app, read-only scopes, never a broad account bundle.",
+      "prerequisites": [],
+      "command": "npm install -g @composio/cli"
+    },
+    {
+      "name": "activepieces",
+      "repo": "https://github.com/activepieces/activepieces",
+      "status": "rejected-for-now",
+      "risk": "HIGH",
+      "posture": "Compare against existing n8n needs before adding a second automation platform. If tested: sandbox workspace, one low-risk connector.",
+      "prerequisites": [],
+      "command": "hermes mcp add activepieces --url '<REMOTE_MCP_URL_CREATED_AFTER_APPROVAL>'"
+    },
+    {
+      "name": "memory-reference",
+      "repo": "https://github.com/modelcontextprotocol/servers",
+      "status": "deferred",
+      "risk": "MED",
+      "posture": "Isolated experiment with non-sensitive data only. Not canonical memory. Duplicates Hermes/Obsidian memory.",
+      "prerequisites": [],
+      "command": "hermes mcp add memory-reference --command 'npx -y @modelcontextprotocol/server-memory'"
+    }
+  ]
+}
