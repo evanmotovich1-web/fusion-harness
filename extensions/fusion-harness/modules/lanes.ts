@@ -27,7 +27,7 @@ const GIT_TIMEOUT_MS = 60_000;
 export interface Lane {
 	slotId: string;
 	path: string; // the worktree directory the slot works in
-	branch: string; // fh/lane/<slotId>
+	branch: string; // fh/lane/<checkout key>/<slotId> — keyed per checkout so several worktrees of one repo can lane at once
 	base: string; // commit the slot's work is diffed against (HEAD, or the carried working-tree commit)
 	carried: boolean; // true when the main checkout's uncommitted changes were committed into the lane base
 }
@@ -74,14 +74,18 @@ function canonical(cwd: string): string {
 }
 
 /** Where every lane for a project lives — outside the repo, so lanes never show up in its status. */
+/** Short stable id of one checkout. Git branches are shared by every worktree of a repo, so lane branches carry it. */
+export const laneKey = (cwd: string): string => createHash("sha256").update(canonical(cwd)).digest("hex").slice(0, 12);
+
 export function laneRootFor(cwd: string): string {
 	const root = fs.existsSync("/tmp") ? "/tmp" : os.tmpdir();
 	const readable = canonical(cwd).replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(-40) || "root";
-	const hash = createHash("sha256").update(canonical(cwd)).digest("hex").slice(0, 12);
-	return path.join(root, "fusion-harness-lanes", `${readable}-${hash}`);
+	return path.join(root, "fusion-harness-lanes", `${readable}-${laneKey(cwd)}`);
 }
 
-export const laneBranch = (slotId: string): string => `${LANE_BRANCH_PREFIX}${slotId}`;
+/** The branch prefix owned by ONE checkout: `fh/lane/<key>/`. Cleanup never reaches past it. */
+export const laneBranchPrefixFor = (cwd: string): string => `${LANE_BRANCH_PREFIX}${laneKey(cwd)}/`;
+export const laneBranch = (cwd: string, slotId: string): string => `${laneBranchPrefixFor(cwd)}${slotId}`;
 export const lanePath = (cwd: string, slotId: string): string => path.join(laneRootFor(cwd), slotId);
 
 /** The repository root for `cwd`, or a clear error when lanes are impossible here. */
@@ -114,11 +118,11 @@ export async function removeLane(cwd: string, slotId: string): Promise<void> {
 	try {
 		await git(cwd, ["worktree", "prune"]);
 	} catch {}
-	if (await branchExists(cwd, laneBranch(slotId))) await git(cwd, ["branch", "-D", laneBranch(slotId)]);
+	if (await branchExists(cwd, laneBranch(cwd, slotId))) await git(cwd, ["branch", "-D", laneBranch(cwd, slotId)]);
 }
 
 /**
- * Create (or recreate) the lane for one slot: a fresh worktree on `fh/lane/<slotId>` at
+ * Create (or recreate) the lane for one slot: a fresh worktree on `fh/lane/<key>/<slotId>` at
  * HEAD, with the main checkout's uncommitted work carried in and committed as the lane's
  * BASE commit — so the slot starts from exactly what the user sees, and the slot's own
  * delta is cleanly `base..branch` afterwards (never contaminated by the carried hunks).
@@ -134,7 +138,7 @@ export async function createLane(cwd: string, slotId: string): Promise<Lane> {
 	await removeLane(cwd, slotId);
 	const dir = lanePath(cwd, slotId);
 	await fs.promises.mkdir(path.dirname(dir), { recursive: true });
-	await git(cwd, ["worktree", "add", "-q", "-b", laneBranch(slotId), dir, head]);
+	await git(cwd, ["worktree", "add", "-q", "-b", laneBranch(cwd, slotId), dir, head]);
 
 	// Carry the working tree: tracked modifications as one binary patch, untracked
 	// (non-ignored) files copied byte for byte. Ignored files (node_modules, .env) are
@@ -159,7 +163,7 @@ export async function createLane(cwd: string, slotId: string): Promise<Lane> {
 			carried = true;
 		}
 	}
-	return { slotId, path: dir, branch: laneBranch(slotId), base, carried };
+	return { slotId, path: dir, branch: laneBranch(cwd, slotId), base, carried };
 }
 
 /** Live churn in a lane: how many paths differ from its last commit, and by how much. */
@@ -206,7 +210,7 @@ export async function listLanes(cwd: string): Promise<Array<{ slotId: string; pa
 	const flush = () => {
 		if (current.path && canonical(current.path).startsWith(root + path.sep)) {
 			const slotId = path.basename(current.path);
-			lanes.push({ slotId, path: current.path, branch: current.branch?.replace(/^refs\/heads\//, "") ?? laneBranch(slotId) });
+			lanes.push({ slotId, path: current.path, branch: current.branch?.replace(/^refs\/heads\//, "") ?? laneBranch(cwd, slotId) });
 		}
 		current = {};
 	};
@@ -229,9 +233,11 @@ export async function cleanLanes(cwd: string): Promise<string[]> {
 		removed.push(lane.slotId);
 	}
 	// Branches whose worktree already vanished (a crashed run, a manual rm -rf) still need deleting.
-	const branches = (await git(cwd, ["for-each-ref", "--format=%(refname:short)", `refs/heads/${LANE_BRANCH_PREFIX}`])).split("\n").filter(Boolean);
+	// Only THIS checkout's lane branches: another worktree of the same repo may be mid-run on its own.
+	const prefix = laneBranchPrefixFor(cwd);
+	const branches = (await git(cwd, ["for-each-ref", "--format=%(refname:short)", `refs/heads/${prefix}`])).split("\n").filter(Boolean);
 	for (const branch of branches) {
-		const slotId = branch.slice(LANE_BRANCH_PREFIX.length);
+		const slotId = branch.slice(prefix.length);
 		if (!removed.includes(slotId)) {
 			await removeLane(cwd, slotId);
 			removed.push(slotId);

@@ -13,6 +13,7 @@ import { join } from "node:path";
 import { acquireWriterLease } from "../modules/writer-lease.ts";
 import { loadModelStack } from "../modules/model-stack.ts";
 import { cleanLanes, createLane, laneRootFor, type Lane } from "../modules/lanes.ts";
+import { laneBranch } from "../modules/lanes.ts";
 import { newRun, type AgentRun, type FhDetails, type HarnessDeps } from "../modules/runtime.ts";
 
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
@@ -139,6 +140,11 @@ function harness(cwd: string) {
 			if (!existsSync(join(dir, "summary.json"))) writeFileSync(join(dir, "summary.json"), JSON.stringify(payload));
 		},
 		totals: (runs, startedAt) => ({ totalMs: Date.now() - startedAt, totalCostUsd: runs.reduce((s, r) => s + r.costUsd, 0) }),
+		knowledgeConfig: () => ({ enabled: false, roots: [], requestedRoots: [], projectFallback: join(cwd, "ai_docs"), allowedExtensions: [".md"], deniedDirNames: [], topK: 6, packetBytes: 8000, fileBytes: 512000, chunkBytes: 1800, maxFiles: 2000, captureOptIn: false, captureRelative: "wiki/agent-learnings.md", reasons: [] }),
+		prepareKnowledge: async () => ({ query: "", hash: "test", status: "disabled" as const, enabled: false, captureEnabled: false, roots: [], hits: [], skipped: [], errors: [], indexedFiles: 0, indexedChunks: 0, retrievedAt: "", reasons: [], promptBlock: "", packetMarkdown: "" }),
+		captureKnowledge: async () => ({ status: "disabled" as const, reason: "test", runId: "test" }),
+		knowledgeCaptureEnabled: () => false,
+		setKnowledgeCapture: () => {},
 	};
 	registerLanesCommand(pi, h);
 	const ctx = { cwd, ui: { notify: (m: string) => notices.push(m), setStatus: () => {}, setWidget: (id: string, w: unknown) => (w === undefined ? widgets.delete(id) : widgets.set(id, w)) } };
@@ -159,13 +165,13 @@ describe("/fh-lanes end to end (child runner mocked)", () => {
 		for (const call of builders) {
 			expect(call.cwd.startsWith(cwd)).toBe(false);
 			expect(call.tools).toBe("read,grep,find,ls,bash,edit,write");
-			expect(call.prompt).toContain(`Branch: fh/lane/${call.slot}`);
+			expect(call.prompt).toContain(`Branch: ${laneBranch(cwd, call.slot)}`);
 			expect(call.prompt).toContain(`You are ${call.slot} (`);
 		}
 		// Each lane holds ONLY its own builder's file, committed on its own branch.
-		expect(sh(cwd, ["show", "--stat", "--format=", "fh/lane/sol"])).toContain("sol.txt");
-		expect(sh(cwd, ["show", "--stat", "--format=", "fh/lane/sol"])).not.toContain("terra.txt");
-		expect(sh(cwd, ["show", "--stat", "--format=", "fh/lane/terra"])).toContain("terra.txt");
+		expect(sh(cwd, ["show", "--stat", "--format=", laneBranch(cwd, "sol")])).toContain("sol.txt");
+		expect(sh(cwd, ["show", "--stat", "--format=", laneBranch(cwd, "sol")])).not.toContain("terra.txt");
+		expect(sh(cwd, ["show", "--stat", "--format=", laneBranch(cwd, "terra")])).toContain("terra.txt");
 
 		// The architect ran ONCE, last, in the main checkout, with the lane contract and every lane's commit.
 		const architect = calls.filter((call) => call.role === "ARCHITECT");
@@ -188,7 +194,7 @@ describe("/fh-lanes end to end (child runner mocked)", () => {
 		const final = fh.panels[fh.panels.length - 1].details;
 		expect(final.ok).toBe(true);
 		expect(final.agent?.role).toBe("ARCHITECT");
-		expect(final.lanes?.map((lane) => [lane.slotId, lane.branch, lane.committed, lane.files])).toEqual([["sol", "fh/lane/sol", true, 1], ["terra", "fh/lane/terra", true, 1]]);
+		expect(final.lanes?.map((lane) => [lane.slotId, lane.branch, lane.committed, lane.files])).toEqual([["sol", laneBranch(cwd, "sol"), true, 1], ["terra", laneBranch(cwd, "terra"), true, 1]]);
 
 		// Artifacts + the writer lease released + the lane board torn down.
 		expect(existsSync(join(fh.artifacts, "lane-manifest.json"))).toBe(true);

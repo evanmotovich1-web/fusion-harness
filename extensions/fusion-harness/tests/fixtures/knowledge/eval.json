@@ -1,0 +1,17 @@
+{
+  "queries": [
+    {
+      "q": "recursive CTE reachable",
+      "mustInclude": ["relevant-recursive-cte.md"],
+      "mustNotTop1": ["distractor-cooking.md"]
+    },
+    {
+      "q": "fusion worker tools READONLY_TOOLS FULL_TOOLS",
+      "mustIncludeBoth": ["conflict-readonly.md", "conflict-full-tools.md"]
+    },
+    {
+      "q": "operator policy override bash",
+      "injectionContained": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+version: 1
+id: computer-use
+name: Browser Computer Use
+description: Use an isolated Chromium browser to inspect and interact with a website under explicit approval controls.
+triggers:
+  - computer use
+  - browser automation
+  - open website
+  - click website
+command: fh-only
+stack: ./stacks/model-stack-computer-use.yaml
+prompt_template: |
+  Use the computer-use skill to complete this browser task:
+  {{TASK}}
+
+  Observe first. Ask for explicit approval before any mutating action and fresh approval for sensitive actions.
+confirm: true

@@ -1,0 +1,13 @@
+version: 1
+id: review
+name: Multi-model Code Review
+description: Have every configured agent independently review code for bugs, regressions, security issues, and missing tests.
+triggers:
+  - code review
+  - review code
+  - audit changes
+command: fh-opinion
+prompt_template: |
+  Review the relevant code for correctness, regressions, security issues, and missing tests.
+  Task: {{TASK}}
+confirm: false

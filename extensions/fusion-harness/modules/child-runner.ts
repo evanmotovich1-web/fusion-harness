@@ -52,8 +52,8 @@ export function runChild(opts: {
 }): Promise<AgentRun> {
 	const run = opts.run;
 	run.thinking = opts.thinking;
-	// Clean-room spawn: children never load skills, extensions (recursion guard), or
-	// context files — their entire contract comes from the harness's prompt files.
+	// Clean-room spawn: children never auto-discover skills, extensions (recursion guard),
+	// or context files. Only stack-declared skills are added explicitly below.
 	const args: string[] = [
 		"--mode",
 		"json",
@@ -63,11 +63,16 @@ export function runChild(opts: {
 		"--no-skills",
 		"--no-extensions",
 		"--no-context-files",
+	];
+	// --skill is explicitly additive even with --no-skills: only stack-declared,
+	// YAML-resolved skills enter this clean-room child.
+	for (const skill of opts.run.slot?.skills ?? []) args.push("--skill", skill);
+	args.push(
 		"--thinking",
 		opts.thinking,
 		"--model",
 		run.model,
-	];
+	);
 	// Session identity, in precedence order: fork the host > resume an earlier fork > pinned per-role id.
 	if (opts.fork) args.push("--fork", opts.fork);
 	else if (opts.resume) args.push("--session", opts.resume);

@@ -85,6 +85,15 @@ describe("model stack", () => {
     expect(() => loadModelStack(file)).toThrow("append_system_prompt[0]");
   });
 
+  test("skills resolve relative to YAML and require SKILL.md", () => {
+    const { dir, file } = fixture(valid.replace("  thinking: high", "  thinking: high\n  skills: [./skills/browser]"));
+    mkdirSync(join(dir, "skills", "browser"), { recursive: true });
+    writeFileSync(join(dir, "skills", "browser", "SKILL.md"), "---\nname: browser\n---\n");
+    expect(loadModelStack(file).architect.skills).toEqual([join(dir, "skills", "browser")]);
+    rmSync(join(dir, "skills", "browser", "SKILL.md"));
+    expect(() => loadModelStack(file)).toThrow("skills path is not a skill");
+  });
+
   test("legacy stack preserves architect and host builder", () => {
     const stack = synthesizeLegacyStack({ architectModel: "a/model", builderModel: "b/model", architectThinking: "high", builderThinking: "medium" });
     expect(stack.slots).toHaveLength(2);

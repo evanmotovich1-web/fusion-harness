@@ -14,6 +14,7 @@
  *   /fh-auto-validate architect + Main gate-first build loop     (modules/cmd-build.ts)
  *   /fh-only         direct one slot or arm the next plain prompt
  *   /fh-model        slot → model → thinking picker (session-only)
+ *   /fh-knowledge    status | search | refresh | capture     (modules/cmd-knowledge.ts)
  *   /fh-system-prompt · /fh-reset · /fh model-bar front door
  *
  * This file is the extension FACTORY: flags/config and stack resolution, host-model
@@ -51,8 +52,15 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { Container, Text, matchesKey, truncateToWidth, visibleWidth } from "@earendil-works/pi-tui";
 import { registerAutoValidateCommand, registerCollaborateCommand } from "./modules/cmd-build.ts";
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
+import { registerKnowledgeCommand } from "./modules/cmd-knowledge.ts";
 import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
+import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
+import { registerXResearchCommand } from "./modules/x-research.ts";
+import { knowledgeArtifactBodies, retrieveKnowledge } from "./modules/knowledge-base.ts";
+import { resolveKnowledgeConfig, type KnowledgeConfig } from "./modules/knowledge-config.ts";
+import { captureVaultNote } from "./modules/knowledge-ingest.ts";
+import { withKnowledge } from "./modules/prompt-library.ts";
 import { piInvocation, runChild } from "./modules/child-runner.ts";
 import {
 	cloneStack,
@@ -154,6 +162,15 @@ export default function (pi: ExtensionAPI) {
 		type: "string",
 		description:
 			"Timeout in SECONDS for every spawned child agent (/fh-opinion + /fh-fusion workers, the FUSION merge, /fh-auto-validate builder rounds and validator). Default 28800 (8h), clamp 10-86400 (24h); the /fh-auto-validate builder never drops below the 8h floor. Real work runs for hours — don't starve it.",
+	});
+	pi.registerFlag("fh-knowledge", {
+		type: "string",
+		description:
+			"Knowledge roots: comma-separated paths, or `off`. Default auto-detects this machine's second-brain wiki/+me/ plus project ai_docs/. Never trains a model; injects bounded retrieved evidence. Env: FH_KNOWLEDGE=off, SECOND_BRAIN_VAULT.",
+	});
+	pi.registerFlag("fh-knowledge-capture", {
+		type: "string",
+		description: "Vault write-back after write-capable runs: on|off (default off). Files ## Vault note into wiki/agent-learnings.md only.",
 	});
 
 	// ── 2.2 Flag readers + configured stack ────────────────────
@@ -1040,6 +1057,46 @@ export default function (pi: ExtensionAPI) {
 		totalCostUsd: runs.reduce((s, r) => s + r.costUsd, 0),
 	});
 
+	let knowledgeCaptureOverride: boolean | undefined;
+	const knowledgeConfig = (cwd: string): KnowledgeConfig => {
+		const cfg = resolveKnowledgeConfig({
+			cwd,
+			flag: flagStr("fh-knowledge"),
+			captureFlag: flagStr("fh-knowledge-capture"),
+			env: process.env,
+		});
+		if (knowledgeCaptureOverride !== undefined) return { ...cfg, captureOptIn: knowledgeCaptureOverride };
+		return cfg;
+	};
+	const knowledgeCaptureEnabled = () => knowledgeCaptureOverride ?? resolveKnowledgeConfig({ cwd: process.cwd(), flag: flagStr("fh-knowledge"), captureFlag: flagStr("fh-knowledge-capture") }).captureOptIn;
+	const setKnowledgeCapture = (on: boolean) => {
+		knowledgeCaptureOverride = on;
+	};
+	const prepareKnowledge = async (query: string, cwd: string, artifactsDir: string) => {
+		const packet = retrieveKnowledge({ query, cwd, config: knowledgeConfig(cwd) });
+		for (const [name, body] of Object.entries(knowledgeArtifactBodies(packet))) await save(artifactsDir, name, body);
+		return packet;
+	};
+	const captureKnowledge = async (opts: { cwd: string; runId: string; texts: string[]; command: string; artifactsDir?: string }) => {
+		const cfg = knowledgeConfig(opts.cwd);
+		const result = captureVaultNote({
+			enabled: cfg.captureOptIn,
+			vaultRoot: cfg.vaultRoot,
+			runId: opts.runId,
+			texts: opts.texts,
+			destRelative: cfg.captureRelative,
+			ownerLabel: `${opts.command} ${opts.runId}`,
+		});
+		if (opts.artifactsDir) {
+			try {
+				await save(opts.artifactsDir, "knowledge-ingest.json", `${JSON.stringify(result, null, 2)}\n`);
+			} catch {
+				/* best-effort ingest record */
+			}
+		}
+		return result;
+	};
+
 	// ── 2.8 Boot banner — big centered "FUSION HARNESS" when the harness starts ──
 	// An ENTRY, not a custom message. Pi turns every custom *message* into a `user` turn in
 	// the LLM context (convertToLlm), so sending the banner through panel() put a literal
@@ -1136,6 +1193,10 @@ export default function (pi: ExtensionAPI) {
 		["/fh-model", "pick slot, model, thinking"],
 		["/fh-auto-validate [--max-validations N] <prompt>", "gate written first, build until green"],
 		["/fh-system-prompt", "every slot's effective system prompt"],
+		["/find-workflow <task>", "route to a saved task harness"],
+		["/create-workflow [id]", "create a validated workflow"],
+		["/research-x <query>", "Grok live X research with citations"],
+		["/fh-knowledge status|search|refresh", "inspect retrieved evidence packet"],
 		["/fh-reset", "full reset, host and slots"],
 		["/fh [on|off]", "this list, toggle model bar"],
 	];
@@ -1288,7 +1349,8 @@ export default function (pi: ExtensionAPI) {
 				panel({ kind: "error", command: "fh-only", ok: false, agent: toStat(run), artifactsDir }, error instanceof Error ? error.message : String(error));
 				return;
 			}
-			await runChild({ run, prompt, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: FULL_TOOLS, thinking: slot.thinking, ...slotInitialSpawn(slot, ctx, path.join(artifactsDir, slot.id)), cwd: ctx.cwd, timeoutMs: childTimeoutMs(), signal: stopper.signal });
+			const packet = await prepareKnowledge(prompt, ctx.cwd, artifactsDir);
+			await runChild({ run, prompt: withKnowledge(prompt, packet, { writeCapable: true }), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: FULL_TOOLS, thinking: slot.thinking, ...slotInitialSpawn(slot, ctx, path.join(artifactsDir, slot.id)), cwd: ctx.cwd, timeoutMs: childTimeoutMs(), signal: stopper.signal });
 			if (stopper.stopped()) {
 				stoppedPanel("fh-only", [run], artifactsDir, startedAt, `${slot.name} was stopped mid-answer.`);
 				return;
@@ -1297,7 +1359,8 @@ export default function (pi: ExtensionAPI) {
 			const t = totals([run], startedAt);
 			if (runOk(run)) panel({ kind: "solo", command: "fh-only", ok: true, agent: toStat(run), artifactsDir, ...t }, run.text);
 			else panel({ kind: "error", command: "fh-only", ok: false, agent: toStat(run), artifactsDir, ...t }, `${slot.name} produced no usable answer: ${runError(run)}`);
-			await save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-only", source, ok: runOk(run), targetSlot: slot.id, writerLeasePath: writerLease?.path, agents: [toStat(run)], sessions: { [slot.id]: run.sessionRef ?? cachedSlotId(slot) }, ...t }, null, 2));
+			await captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: runOk(run) ? [run.text] : [], command: "fh-only", artifactsDir });
+			await save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-only", source, ok: runOk(run), targetSlot: slot.id, knowledgeHash: packet.hash, writerLeasePath: writerLease?.path, agents: [toStat(run)], sessions: { [slot.id]: run.sessionRef ?? cachedSlotId(slot) }, ...t }, null, 2));
 		} finally {
 			await ensureSummary(artifactsDir, { command: "fh-only", source, ok: false, stopped: stopper.stopped(), targetSlot: slot.id, writerLeasePath: writerLease?.path, agents: [toStat(run)], sessions: { [slot.id]: run.sessionRef ?? cachedSlotId(slot) }, ...totals([run], startedAt) });
 			writerLease?.release();
@@ -1392,10 +1455,56 @@ export default function (pi: ExtensionAPI) {
 		save,
 		ensureSummary,
 		totals,
+		knowledgeConfig,
+		prepareKnowledge,
+		captureKnowledge,
+		knowledgeCaptureEnabled,
+		setKnowledgeCapture,
 	};
-	registerReadonlyCommands(pi, deps); // /fh-opinion + /fh-debate
-	registerFusionCommand(pi, deps); // /fh-fusion
-	registerCollaborateCommand(pi, deps); // /fh-collaborate
-	registerLanesCommand(pi, deps); // /fh-lanes
-	registerAutoValidateCommand(pi, deps); // /fh-auto-validate
+	const readonlyHandlers = registerReadonlyCommands(pi, deps); // /fh-opinion + /fh-debate
+	const fusionHandler = registerFusionCommand(pi, deps); // /fh-fusion
+	const collaborateHandler = registerCollaborateCommand(pi, deps); // /fh-collaborate
+	const lanesHandler = registerLanesCommand(pi, deps); // /fh-lanes
+	const autoValidateHandler = registerAutoValidateCommand(pi, deps); // /fh-auto-validate
+	registerKnowledgeCommand(pi, deps); // /fh-knowledge
+	const researchXHandler = registerXResearchCommand(pi);
+
+	const applyWorkflowStack = async (stackPath: string, ctx: any): Promise<void> => {
+		const next = cloneStack(loadModelStack(stackPath));
+		const errors: string[] = [];
+		let childCatalogue = new Set<string>();
+		try { childCatalogue = await childVisibleModels(); } catch (error) { errors.push(error instanceof Error ? error.message : String(error)); }
+		const resolved = new Map<string, any>();
+		for (const slot of orderedSlots(next)) {
+			const slash = slot.model.indexOf("/");
+			const model = slash > 0 ? ctx.modelRegistry.find(slot.model.slice(0, slash), slot.model.slice(slash + 1)) : undefined;
+			if (!model) errors.push(`${slot.name}: model is not registered: ${slot.model}`);
+			else if (!ctx.modelRegistry.hasConfiguredAuth(model)) errors.push(`${slot.name}: no configured authentication for ${slot.model}`);
+			else if (!childCatalogue.has(slot.model)) errors.push(`${slot.name}: ${slot.model} is not visible to clean-room children`);
+			else resolved.set(slot.id, model);
+		}
+		if (errors.length) throw new Error(`workflow stack is not runnable:\n${errors.map((error) => `- ${error}`).join("\n")}`);
+		const current = ctx.model ? `${ctx.model.provider}/${ctx.model.id}` : "";
+		if (current !== next.primaryBuilder.model && !(await pi.setModel(resolved.get(next.primaryBuilder.id)))) throw new Error(`could not switch Main host model to ${next.primaryBuilder.model}`);
+		pi.setThinkingLevel(next.primaryBuilder.thinking);
+		configuredStack = next;
+		stackReadyError = undefined;
+		hostModel = next.primaryBuilder.model;
+		renderFooterWidget();
+		ctx.ui.notify(`fusion-harness: workflow stack → ${next.codename} (session-only)`, "info");
+	};
+
+	registerWorkflowCommands(pi, {
+		handlers: {
+			"fh-opinion": readonlyHandlers.opinion,
+			"fh-debate": readonlyHandlers.debate,
+			"fh-fusion": fusionHandler,
+			"fh-collaborate": collaborateHandler,
+			"fh-lanes": lanesHandler,
+			"fh-auto-validate": autoValidateHandler,
+			"fh-only": async (raw, ctx) => executeOnly(modelStack().primaryBuilder, raw, ctx, "command"),
+		},
+		researchX: researchXHandler,
+		applyStack: applyWorkflowStack,
+	});
 }

@@ -1,0 +1,1 @@
+End with a short `## Vault note` only if you produced a durable, non-secret learning worth filing. If nothing durable: omit the heading (do not write `None — no durable learning`). Never put credentials, tokens, or trading/sessions evidence in the note. The harness — not you — files the note.

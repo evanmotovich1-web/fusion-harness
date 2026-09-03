@@ -25,7 +25,7 @@ describe("orchestration contracts", () => {
   });
 
   test("registers target commands and deletes unsafe/obsolete commands", () => {
-    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-lanes", "fh-auto-validate", "fh-system-prompt", "fh-reset"]) {
+    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-lanes", "fh-auto-validate", "fh-system-prompt", "find-workflow", "create-workflow", "research-x", "fh-reset", "fh-knowledge"]) {
       expect(source).toContain(`registerCommand("${command}"`);
     }
     expect(source).not.toContain('registerCommand("fh-both"');
@@ -34,7 +34,7 @@ describe("orchestration contracts", () => {
   });
 
   test("fusion has read-only sources, one full-tool fuser, and no-tools ACKs", () => {
-    expect(source).toContain("prompt: workerPrompt(slot, stack, prompt)");
+    expect(source).toContain("withKnowledge(workerPrompt(slot, stack, prompt), packet)");
     expect(source).toContain("tools: READONLY_TOOLS");
     expect(source).toContain('SYSTEM_PROMPT_FUSION.md');
     expect(source).toContain('tools: "none"');
@@ -74,9 +74,9 @@ describe("orchestration contracts", () => {
   test("lanes: builders write in parallel worktrees, only the architect writes the checkout", () => {
     // Every builder child runs with FULL tools but its cwd is its own lane, never ctx.cwd.
     expect(source).toContain("cwd: lane.path");
-    expect(source).toContain("prompt: laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd)");
+    expect(source).toContain("withKnowledge(laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd), packet, { writeCapable: true })");
     // The harness creates and commits lanes itself; the writer lease guards the one integration turn.
-    expect(source).toContain('["worktree", "add", "-q", "-b", laneBranch(slotId), dir, head]');
+    expect(source).toContain('["worktree", "add", "-q", "-b", laneBranch(cwd, slotId), dir, head]');
     expect(source).toContain("acquireWriterLease(ctx.cwd, `/fh-lanes");
     expect(source).toContain('SYSTEM_PROMPT_LANE_MERGE.md');
     expect(source).toContain("filter((slot) => !slot.architect)");
@@ -112,7 +112,8 @@ describe("orchestration contracts", () => {
     expect(source).toContain("tps");
   });
 
-  test("append system prompts ride pi's repeatable flag on every slot execution", () => {
+  test("stack-declared skills and append system prompts ride Pi's repeatable flags", () => {
+    expect(source).toContain('args.push("--skill", skill)');
     expect(source).toContain('args.push("--append-system-prompt", append)');
     expect(source).toContain("appendSystemPrompts: slot.appendSystemPrompts");
     expect(source).toContain("appendSystemPrompts: stack.architect.appendSystemPrompts");

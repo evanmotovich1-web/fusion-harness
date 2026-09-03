@@ -30,6 +30,7 @@ import {
 	triageSystem,
 	validatorPrompt,
 	validatorSystem,
+	withKnowledge,
 } from "./prompt-library.ts";
 import {
 	clampCount,
@@ -53,7 +54,8 @@ import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
 
 // ═══ /fh-collaborate ═════════════════════════════════════════════════════════
 
-export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): void {
+export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
+	let handler: (raw: string, ctx: any) => Promise<void>;
 	// No fixed deliberation choreography: each slot proposes how the work should be done,
 	// the ARCHITECT turns those proposals into one delegation DAG, and the executor runs
 	// on dependency READINESS — a task starts the moment its dependencies are done.
@@ -67,7 +69,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 	pi.registerCommand("fh-collaborate", {
 		description:
 			"Every agent plans read-only, the architect merges one delegation DAG, then tasks execute as dependencies clear — parallel where possible, exactly one shared-CWD writer at a time.",
-		handler: async (raw, ctx) => {
+		handler: handler = async (raw, ctx) => {
 			h.noteHost(ctx);
 			const prompt = (raw ?? "").trim();
 			if (!prompt) {
@@ -84,6 +86,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 			await fs.promises.mkdir(collabDir, { recursive: true });
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			const initialSpawns = new Map(slots.map((slot) => [slot.id, h.slotInitialSpawn(slot, ctx, path.join(collabDir, "sessions", slot.id))]));
 			h.panel({ kind: "prompt", command: "fh-collaborate", ok: true }, `/fh-collaborate ${prompt}`);
 			h.panel({ kind: "banner", command: "fh-collaborate", ok: true, prompt, roles: slots.map((slot) => ({ role: (slot.architect ? "ARCHITECT" : "BUILDER") as Role, model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: slot.architect })), artifactsDir }, "");
@@ -103,7 +106,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 				await fs.promises.mkdir(proposalsDir, { recursive: true });
 				await Promise.all(runs.map(async (run) => {
 					const slot = run.slot!;
-					await runChild({ run, prompt: collabProposePrompt(slot, stack, prompt), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run, prompt: withKnowledge(collabProposePrompt(slot, stack, prompt), packet), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(proposalsDir, `${slot.id}.md`, runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -215,7 +218,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 						maxConcurrentWriteEnabledChildren = Math.max(maxConcurrentWriteEnabledChildren, activeWriters);
 					}
 					try {
-						await runChild({ run, prompt: collabExecutePrompt(slot, prompt, task, taskHandoff(task)), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run, prompt: write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task)), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					} finally {
 						if (write) activeWriters--;
 					}
@@ -286,7 +289,8 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 				const worktreeCommandsObserved = runs.flatMap((run) => run.toolEvents).filter((event) => event.name === "bash" && /\bgit\s+worktree\b/.test(event.argument));
 				const ok = runOk(architectRun) && maxConcurrentWriteEnabledChildren === 1 && worktreeCommandsObserved.length === 0;
 				h.panel({ kind: "collab", command: "fh-collaborate", ok, round: plan.tasks.length, prompt, agent: toStat(architectRun), sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, runOk(architectRun) ? architectRun.text : `Final coordination failed: ${runError(architectRun)}`);
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok, plan, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
+				await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: [architectRun.text, ...runs.map((run) => run.text)], command: "fh-collaborate", artifactsDir });
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok, plan, knowledgeHash: packet.hash, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
 			} finally {
 				const observedWorktrees = runs.flatMap((run) => run.toolEvents).filter((event) => event.name === "bash" && /\bgit\s+worktree\b/.test(event.argument));
 				await h.ensureSummary(artifactsDir, { command: "fh-collaborate", ok: false, stopped: stopper.stopped(), plan, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved: observedWorktrees, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
@@ -298,6 +302,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): vo
 			}
 		},
 	});
+	return handler;
 }
 
 // ═══ /fh-auto-validate ═══════════════════════════════════════════════════════
@@ -320,11 +325,12 @@ const gateHarnessError = (g: { code: number; output: string }): string | undefin
 	return undefined;
 };
 
-export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): void {
+export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
+	let handler: (raw: string, ctx: any) => Promise<void>;
 	pi.registerCommand("fh-auto-validate", {
 		description:
 			"Auto-validation loop: VALIDATOR designs a uv acceptance gate FIRST, BUILDER builds, the gate runs, failures feed back to the builder — until pass or --max-validations (default 5)",
-		handler: async (raw, ctx) => {
+		handler: handler = async (raw, ctx) => {
 			h.noteHost(ctx); // an unset --builder follows the host session's live model
 			let input = (raw ?? "").trim();
 			// Inline overrides of the startup flags: /fh-auto-validate --max-validations 3 --escalate-to-validator-count 2 <prompt>
@@ -350,6 +356,7 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): v
 			const startedAt = Date.now();
 			const artifactsDir = await h.mkArtifacts();
 			await h.save(artifactsDir, "prompt.md", prompt);
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 
 			h.panel({ kind: "prompt", command: "fh-auto-validate", ok: true }, `/fh-auto-validate ${(raw ?? "").trim()}`);
 			h.panel(
@@ -397,7 +404,7 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): v
 				ctx.ui.setStatus(CUSTOM_TYPE, "auto-validate: validator designing the gate…");
 				await runChild({
 					run: validator,
-					prompt: validatorPrompt(prompt, ctx.cwd, scriptPath),
+					prompt: withKnowledge(validatorPrompt(prompt, ctx.cwd, scriptPath), packet),
 					systemPrompt: validatorSystem(scriptPath),
 					tools: VALIDATOR_TOOLS,
 					thinking: h.roleThinking("architect"),
@@ -505,7 +512,7 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): v
 					ctx.ui.setStatus(CUSTOM_TYPE, `auto-validate: builder — round ${round}/${maxV}…`);
 					await runChild({
 						run: builder,
-						prompt: round === 1 ? builderPrompt(prompt, script) : correctionPrompt(round, maxV, lastGate!.code, lastGate!.output, triageBrief, gateUpdate),
+						prompt: round === 1 ? withKnowledge(builderPrompt(prompt, script), packet, { writeCapable: true }) : correctionPrompt(round, maxV, lastGate!.code, lastGate!.output, triageBrief, gateUpdate),
 						systemPrompt: h.roleSystemPrompt("builder"),
 						appendSystemPrompts: h.modelStack().primaryBuilder.appendSystemPrompts,
 						tools: FULL_TOOLS,
@@ -579,11 +586,12 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): v
 						`${builderBody}\n\n${gateBody}`,
 					);
 					if (ok) {
+						await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: [builder.text], command: "fh-auto-validate", artifactsDir });
 						await h.save(
 							artifactsDir,
 							"summary.json",
 							JSON.stringify(
-								{ command: "fh-auto-validate", ok: true, rounds: round, maxValidations: maxV, escalateAt, gateExitCode: 0, agents: [toStat(validator), toStat(builder)], sessions: { architect: validator.sessionRef ?? h.cachedRoleId("architect"), builder: builder.sessionRef ?? h.cachedRoleId("builder") }, ...t },
+								{ command: "fh-auto-validate", ok: true, rounds: round, maxValidations: maxV, escalateAt, gateExitCode: 0, knowledgeHash: packet.hash, agents: [toStat(validator), toStat(builder)], sessions: { architect: validator.sessionRef ?? h.cachedRoleId("architect"), builder: builder.sessionRef ?? h.cachedRoleId("builder") }, ...t },
 								null,
 								2,
 							),
@@ -777,4 +785,5 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): v
 			}
 		},
 	});
+	return handler;
 }

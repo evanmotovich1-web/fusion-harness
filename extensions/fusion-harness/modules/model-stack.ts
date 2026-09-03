@@ -23,6 +23,8 @@ export interface ModelSlot {
 	 * inline text or a file path relative to the YAML.
 	 */
 	appendSystemPrompts: string[];
+	/** Explicit Pi skills granted to this clean-room slot. Paths are resolved relative to the stack YAML. */
+	skills: string[];
 }
 
 export interface ModelStack {
@@ -144,7 +146,7 @@ export function loadModelStack(configPathInput: string): ModelStack {
 			continue;
 		}
 		const value = raw as Record<string, unknown>;
-		const allowedKeys = new Set(["name", "model", "thinking", "color", "architect", "primary", "system_prompt", "append_system_prompt"]);
+		const allowedKeys = new Set(["name", "model", "thinking", "color", "architect", "primary", "system_prompt", "append_system_prompt", "skills"]);
 		for (const key of Object.keys(value)) if (!allowedKeys.has(key)) errors.push(`${label} contains unknown key ${JSON.stringify(key)}`);
 		const name = typeof value.name === "string" ? value.name.trim() : "";
 		if (!SLOT_NAME_RE.test(name)) errors.push(`${label}.name must match [A-Za-z0-9_-]+ and be 1-16 characters; found ${JSON.stringify(value.name)}`);
@@ -185,6 +187,19 @@ export function loadModelStack(configPathInput: string): ModelStack {
 				if (resolved.text?.trim()) appendSystemPrompts.push(resolved.text);
 			}
 		}
+		const skills: string[] = [];
+		if (value.skills !== undefined) {
+			if (!Array.isArray(value.skills) || value.skills.some((item) => typeof item !== "string" || !item.trim())) {
+				errors.push(`${label}.skills must be a list of non-empty paths`);
+			} else {
+				for (const skill of value.skills as string[]) {
+					const resolved = path.resolve(configDir, skill);
+					const skillFile = fs.existsSync(resolved) && fs.statSync(resolved).isDirectory() ? path.join(resolved, "SKILL.md") : resolved;
+					if (!fs.existsSync(skillFile) || !fs.statSync(skillFile).isFile()) errors.push(`${label}.skills path is not a skill: ${resolved}`);
+					else skills.push(resolved);
+				}
+			}
+		}
 		drafts.push({
 			id,
 			name: name || `slot-${index + 1}`,
@@ -195,6 +210,7 @@ export function loadModelStack(configPathInput: string): ModelStack {
 			systemPrompt: prompt.text,
 			systemPromptSource: prompt.source,
 			appendSystemPrompts,
+			skills,
 			color,
 		});
 	}
@@ -246,6 +262,7 @@ export function synthesizeLegacyStack(options: LegacyStackOptions): ModelStack {
 		primary: false,
 		systemPrompt: options.architectSystemPrompt,
 		appendSystemPrompts: [],
+		skills: [],
 	};
 	const primaryBuilder: ModelSlot = {
 		id: "main",
@@ -257,6 +274,7 @@ export function synthesizeLegacyStack(options: LegacyStackOptions): ModelStack {
 		primary: true,
 		systemPrompt: options.builderSystemPrompt,
 		appendSystemPrompts: [],
+		skills: [],
 	};
 	return { codename: "legacy", slots: [architect, primaryBuilder], architect, primaryBuilder, builders: [primaryBuilder] };
 }
@@ -266,7 +284,7 @@ export function orderedSlots(stack: ModelStack): ModelSlot[] {
 }
 
 export function cloneStack(stack: ModelStack): ModelStack {
-	const slots = stack.slots.map((slot) => ({ ...slot, appendSystemPrompts: [...slot.appendSystemPrompts] }));
+	const slots = stack.slots.map((slot) => ({ ...slot, appendSystemPrompts: [...slot.appendSystemPrompts], skills: [...slot.skills] }));
 	const architect = slots.find((slot) => slot.id === stack.architect.id)!;
 	const primaryBuilder = slots.find((slot) => slot.id === stack.primaryBuilder.id)!;
 	return { ...stack, slots, architect, primaryBuilder, builders: slots.filter((slot) => !slot.architect) };

@@ -38,9 +38,10 @@ The `/install` command lives at `.claude/commands/install.md` and handles toolch
 ```bash
 npm install -g @earendil-works/pi-coding-agent   # the pi coding agent
 brew install just jq uv                          # command runner + gate tooling
-npm install                                      # repo deps (yaml parser)
-cp .env.example .env                             # then fill ANTHROPIC/GEMINI/FIREWORKS/OPENAI/OPENROUTER_API_KEY
-npm test                                         # 50 deterministic tests, zero paid calls
+npm install                                      # YAML parser + Playwright library
+npx playwright install chromium                  # browser computer-use runtime
+cp .env.example .env                             # then fill the provider keys you use; X research needs XAI_API_KEY
+npm test                                         # deterministic tests, zero paid calls
 ```
 
 Note: pi reads `GEMINI_API_KEY` for the google provider (not `GOOGLE_GENERATIVE_AI_API_KEY`).
@@ -114,6 +115,7 @@ Rules:
 - Colors are actual quoted `#RRGGBB` values. Omitted colors use a stable per-stack hash.
 - `system_prompt` may be inline or a path relative to the YAML file (full override of pi's default).
 - `append_system_prompt` takes one entry or a list — each inline text or a YAML-relative file path — appended in order AFTER the slot's base prompt (the `system_prompt` override, or pi's own default when unset; harness contract prompts come before user appends). Children receive them via pi's repeatable `--append-system-prompt`, so the default prompt is never rebuilt. `/fh-system-prompt` shows the effective result.
+- `skills` takes a list of YAML-relative Pi skill directories or files. Every path is validated and only explicitly listed skills enter the clean-room child.
 - `--fh-config` cannot be mixed with legacy architect/builder model, thinking, or system-prompt flags.
 
 No config auto-discovery occurs; `--fh-config` is explicit.
@@ -132,7 +134,31 @@ No config auto-discovery occurs; `--fh-config` is explicit.
 | `/fh-model` | Three-step picker: slot → model → thinking. Session-only; never rewrites YAML. Main applies both `pi.setModel()` and `pi.setThinkingLevel()` to raw chat. |
 | `/fh-auto-validate <prompt>` | Existing gate-first ARCHITECT + Main build loop. |
 | `/fh-system-prompt` | Responsive grid of every slot's effective system prompt. |
+| `/find-workflow <task>` | Deterministically route a task to a saved workflow. Confident matches run automatically; weak or tied matches open a selector. |
+| `/create-workflow [--global] [id]` | Open a YAML skeleton, validate it, then save it to the project or global workflow directory. |
+| `/research-x <query>` | Call Grok's live `x_search` through the xAI Responses API and return cited results. Requires `XAI_API_KEY`; requests are billed by xAI. |
+| `/fh-knowledge status\|search\|refresh\|capture` | Inspect harness knowledge: roots, the same retriever fan-out uses, cache refresh, or opt-in vault write-back. Retrieved evidence, not model training. |
 | `/fh-reset` | Full reset: fresh host session and fresh slot sessions — equivalent to `/new` plus a slot wipe. |
+
+### Saved workflows
+
+Workflows are strict YAML recipes, not executable config. They select an existing harness command, supply a prompt template, and may name a model-stack YAML. Discovery checks shipped workflows under `extensions/fusion-harness/workflows/`, global workflows under `~/.pi/agent/fusion-harness/workflows/`, and project workflows under `.pi/fusion-harness/workflows/`. Duplicate IDs are rejected instead of silently overriding another recipe.
+
+```yaml
+version: 1
+id: review
+name: Multi-model Code Review
+description: Independent review for bugs and missing tests.
+triggers: [code review, audit changes]
+command: fh-opinion
+prompt_template: |
+  Review this task: {{TASK}}
+confirm: false
+```
+
+`command` is restricted to the shipped harness commands plus `research-x`; arbitrary shell fields and unknown keys are rejected. Write-enabled workflows require confirmation by default. A workflow stack is validated for registration, authentication, and clean-room visibility before a session-only switch. Shipped recipes include `review`, `fuse-build`, `x-research`, and `computer-use`.
+
+The computer-use recipe runs one primary agent with an explicit Playwright skill. It provides controlled Chromium automation, not native desktop control. It accepts only HTTP(S), blocks downloads and uploads, runs in an isolated foreground browser, and requires explicit approval for mutations plus fresh approval for purchases, messages, publishing, deletion, login submission, or sensitive-data exposure.
 
 <p align="center">
   <img src="images/svg-07-opinion-grid-animated.svg" alt="/fh-opinion — every configured model answers read-only, rendered side by side" width="750">
@@ -236,6 +262,21 @@ After the sole-writer FUSION agent finishes:
 `/fh-auto-validate` inverts the usual order: the VALIDATOR writes a `uv` acceptance gate to disk BEFORE any building happens, a baseline run proves the gate starts red, then Main builds until the gate passes (default cap 5 validations). Failures feed back verbatim; from the third failure the validator adds a read-only triage brief, with a one-shot gate repair if the gate itself is the defect.
 
 
+## Knowledge (retrieved evidence, not training)
+
+Agents used to be told to “use the second brain.” Clean-room children spawn with `--no-skills --no-extensions --no-context-files` and read-only workers have no bash, so that instruction was inert. Retrieval is now a **harness stage**:
+
+1. Before the first spawn of a request, the harness searches configured roots (explicit `--fh-knowledge path[,path...]`, else this machine's second-brain `wiki/` + `me/` when `SECOND_BRAIN_VAULT` or `~/code/second-brain` exists, else project `ai_docs/`).
+2. Markdown is split into heading-aware chunks, ranked with deterministic lexical scoring, diversified, and capped by a byte budget.
+3. The same immutable packet (hashed) is injected into applicable **first turns** of opinion, debate opening, fusion research + FUSION writer, collaboration planning, lanes, auto-validate, and `/fh-only`. Later debate/correction rounds reuse that snapshot. Fusion ACK turns do not get a new packet.
+4. Retrieved text is delimited as **untrusted evidence**. Citations (`file:start-end`) are required only for claims that use it. Conflicts and `wiki miss` must be reported. Embedded document instructions are not policy.
+5. Each run writes `knowledge-query.json`, `knowledge-packet.md`, and `knowledge.json` under `/tmp/fusion-harness-*`.
+6. Optional capture (`--fh-knowledge-capture on` or `/fh-knowledge capture on`) extracts a `## Vault note` from write-capable completions, secret-scans it, and appends to `wiki/agent-learnings.md` only — never `trading/` or `sessions/`, never git commit/push.
+
+`--fh-knowledge off` or `FH_KNOWLEDGE=off` disables injection. This improves **task context**, not model weights. Pi has no built-in MCP; children do not load the host skill at `.pi/skills/knowledge-base/SKILL.md`.
+
+Inspect: `/fh-knowledge status` · `/fh-knowledge search recursive CTE` · `/fh-knowledge refresh`.
+
 ## Sessions and UI
 
 - Sessions are keyed by slot plus a hash of the complete `provider/model` and live under a per-process run dir, so concurrent harness launches and model swaps can never share or replay each other's transcripts.
@@ -278,9 +319,13 @@ extensions/fusion-harness/
 │   ├── model-stack.ts         # YAML parsing, validation, colors, legacy synthesis
 │   ├── agent-layout.ts        # responsive 1-5 agent layout math
 │   ├── collaboration-graph.ts # DAG validation, cycle detection, dependency levels
-│   └── writer-lease.ts        # atomic canonical-CWD writer exclusion
+│   ├── writer-lease.ts        # atomic canonical-CWD writer exclusion
+│   ├── knowledge-config.ts    # roots, budgets, capture opt-in (never /Users/moto)
+│   ├── knowledge-base.ts      # discover, chunk, rank, hash immutable packets
+│   ├── knowledge-ingest.ts    # opt-in vault note write-back + vault lock
+│   └── cmd-knowledge.ts       # /fh-knowledge status|search|refresh|capture
 ├── prompts/                   # SYSTEM_PROMPT_*.md / USER_PROMPT_*.md — edit files, not code
-└── tests/                     # parser, graph, and orchestration-invariant tests
+└── tests/                     # parser, graph, knowledge, and orchestration-invariant tests
 ```
 
 - `fusion-harness.ts` — the extension factory: flags/config, stack resolution, host selection, persistent slot sessions, widgets/model bar, panel plumbing, and the small in-place commands (`/fh`, `/fh-model`, `/fh-only`, `/fh-system-prompt`, `/fh-reset`).
@@ -295,14 +340,18 @@ extensions/fusion-harness/
 - `modules/agent-layout.ts` — responsive 1–5 agent layout calculations.
 - `modules/collaboration-graph.ts` — DAG validation, cycle detection, and dependency levels.
 - `modules/writer-lease.ts` — atomic canonical-CWD writer exclusion.
-- `tests/` — parser, graph, and orchestration-invariant tests.
+- `modules/knowledge-config.ts` — knowledge roots, budgets, and capture opt-in. Never follows `/Users/moto`.
+- `modules/knowledge-base.ts` — discovery, heading-aware chunking, deterministic ranking, immutable packet hashing.
+- `modules/knowledge-ingest.ts` — opt-in `## Vault note` write-back with secret scan, idempotency, and a vault lock.
+- `modules/cmd-knowledge.ts` — `/fh-knowledge status|search|refresh|capture`.
+- `tests/` — parser, graph, knowledge retrieval, and orchestration-invariant tests.
 
-Every run writes an inspectable `/tmp/fusion-harness-*` directory with `stack.json`, prompt, per-slot artifacts, summaries, and protocol-specific evidence.
+Every run writes an inspectable `/tmp/fusion-harness-*` directory with `stack.json`, prompt, per-slot artifacts, summaries, protocol-specific evidence, and when knowledge is enabled `knowledge-query.json` / `knowledge-packet.md` / `knowledge.json`.
 
 ## Validation
 
 ```bash
-npm run test:fusion-harness     # deterministic unit/contract tests
+npm run test:fusion-harness     # deterministic unit/contract tests, including knowledge retrieval
 ```
 
 Live validation prompts are checked in under `prompts/duckdb/`, ordered simple to complex and centered on the [DuckDB v2.0 preview](https://duckdb.org/2026/08/17/duckdb-20-highlights).

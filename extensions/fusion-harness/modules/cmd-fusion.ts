@@ -19,6 +19,7 @@ import {
 	fusionContextAckPrompt,
 	laneNote,
 	parseFusionArgs,
+	withKnowledge,
 	workerPrompt,
 } from "./prompt-library.ts";
 import {
@@ -38,10 +39,11 @@ import {
 } from "./runtime.ts";
 import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
 
-export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
+export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
+	let handler: (raw: string, ctx: any) => Promise<void>;
 	pi.registerCommand("fh-fusion", {
 		description: 'All configured agents research in parallel read-only; one fresh FUSION agent merges/builds, then every slot acknowledges the fused context.',
-		handler: async (raw, ctx) => {
+		handler: handler = async (raw, ctx) => {
 			h.noteHost(ctx);
 			const input = (raw ?? "").trim();
 			if (!input) {
@@ -57,6 +59,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			const artifactsDir = await h.mkArtifacts();
 			await h.save(artifactsDir, "prompt.md", `${prompt}\n\nFUSION INSTRUCTION:\n${fusionInstruction}`);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			await fs.promises.mkdir(path.join(artifactsDir, "agents"), { recursive: true });
 
 			h.panel({ kind: "prompt", command: "fh-fusion", ok: true }, `/fh-fusion ${input}`);
@@ -64,7 +67,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 
 			const runs = slots.map(h.newSlotRun);
 			const initialSpawns = new Map(slots.map((slot) => [slot.id, h.slotInitialSpawn(slot, ctx, path.join(artifactsDir, "agents", slot.id))]));
-			const fuser = newRun("FUSION", stack.architect.model);
+			const fuser = newRun("FUSION", stack.architect.model, stack.architect);
 			// LANE MODE: every source researches its own worktree snapshot; the FUSION writer alone works in the shared checkout.
 			const lanes = await h.seedLanes(ctx, slots);
 			const stopper = h.startStoppable(ctx, "fh-fusion");
@@ -81,7 +84,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					const agentDir = path.join(artifactsDir, "agents", slot.id);
 					await fs.promises.mkdir(agentDir, { recursive: true });
 					const lane = lanes?.get(slot.id);
-					await runChild({ run, prompt: workerPrompt(slot, stack, prompt) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run, prompt: withKnowledge(workerPrompt(slot, stack, prompt), packet) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(agentDir, "answer.md", runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -106,7 +109,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					return;
 				}
 				ctx.ui.setStatus(CUSTOM_TYPE, "fusion: temporary sole-writer agent merging and implementing…");
-				await runChild({ run: fuser, prompt: fuserPrompt(fusionInstruction, prompt, runs, fuser.model, stack.architect.thinking, artifactsDir), systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_FUSION.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: stack.architect.thinking, sessionDir: path.join(artifactsDir, "fusion"), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+				await runChild({ run: fuser, prompt: withKnowledge(fuserPrompt(fusionInstruction, prompt, runs, fuser.model, stack.architect.thinking, artifactsDir), packet, { writeCapable: true }), systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_FUSION.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: stack.architect.thinking, sessionDir: path.join(artifactsDir, "fusion"), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 				if (stopper.stopped()) {
 					h.stoppedPanel("fh-fusion", [...runs, fuser], artifactsDir, startedAt, "The temporary FUSION writer was stopped; source work remains on disk.");
 					return;
@@ -165,7 +168,8 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 
 				const syncOk = acknowledgements.length === slots.length && acknowledgements.every((ack) => ack.status === "acknowledged");
 				h.panel({ kind: "sync", command: "fh-fusion", ok: syncOk, sources: runs.map(toStat), artifactsDir, ...h.totals([...runs, fuser], startedAt) }, [`fused sha256: ${ackSpec.hash}`, ...orderedSlots(stack).map((slot) => { const ack = acknowledgements.find((item) => item.slot === slot.id); return `${ack?.status === "acknowledged" ? "✓" : "✗"} ${slot.name} · ${slot.model} · ${ack?.status ?? "missing"} · ${ack?.route ?? "no-route"}`; })].join("\n"));
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-fusion", ok: syncOk, fusionOk: true, contextSync: acknowledgements, fusedHash: ackSpec.hash, hostContextChunks, writerLeasePath: writerLease?.path, agents: [...runs, fuser].map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals([...runs, fuser], startedAt) }, null, 2));
+				await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: runOk(fuser) ? [fuser.text] : [], command: "fh-fusion", artifactsDir });
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-fusion", ok: syncOk, fusionOk: true, contextSync: acknowledgements, fusedHash: ackSpec.hash, knowledgeHash: packet.hash, hostContextChunks, writerLeasePath: writerLease?.path, agents: [...runs, fuser].map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals([...runs, fuser], startedAt) }, null, 2));
 			} finally {
 				await h.ensureSummary(artifactsDir, { command: "fh-fusion", ok: false, stopped: stopper.stopped(), hostContextChunks, agents: [...runs, fuser].map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals([...runs, fuser], startedAt) });
 				writerLease?.release();
@@ -180,4 +184,5 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			}
 		},
 	});
+	return handler;
 }

@@ -21,7 +21,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { runChild } from "./child-runner.ts";
 import { cleanLanes, commitLane, laneDiff, laneRootFor, laneStatus, listLanes, type LaneStatus } from "./lanes.ts";
 import { orderedSlots } from "./model-stack.ts";
-import { contractSystemPrompt, laneMergePrompt, laneWorkerPrompt, parseLanesArgs } from "./prompt-library.ts";
+import { contractSystemPrompt, laneMergePrompt, laneWorkerPrompt, parseLanesArgs, withKnowledge } from "./prompt-library.ts";
 import { CUSTOM_TYPE, FULL_TOOLS, runError, runOk, toStat, type AgentRun, type HarnessDeps, type LaneOutcome, type Role } from "./runtime.ts";
 import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
 
@@ -48,10 +48,11 @@ const readLaneRecords = async (cwd: string): Promise<LaneRecord[]> => {
 	}
 };
 
-export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
+export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
+	let handler: (raw: string, ctx: any) => Promise<void>;
 	pi.registerCommand("fh-lanes", {
 		description: "Every builder implements the request at once, each in its own git worktree lane; the architect integrates the best result. Also: on · off · status · diff <slot> · clean",
-		handler: async (raw, ctx) => {
+		handler: handler = async (raw, ctx) => {
 			h.noteHost(ctx);
 			const args = parseLanesArgs(raw ?? "");
 			const stack = h.modelStack();
@@ -132,6 +133,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			const artifactsDir = await h.mkArtifacts();
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			await fs.promises.mkdir(path.join(artifactsDir, "agents"), { recursive: true });
 			h.panel({ kind: "prompt", command: "fh-lanes", ok: true }, `/fh-lanes ${(raw ?? "").trim()}`);
 			h.panel({ kind: "banner", command: "fh-lanes", ok: true, prompt, roles: [...builders.map((slot) => ({ role: "BUILDER" as Role, model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: false })), ...(args.merge ? [{ role: "ARCHITECT" as Role, model: architect.model, slotId: architect.id, slotName: architect.name, color: architect.color, primary: false, architect: true }] : [])], artifactsDir }, "");
@@ -164,7 +166,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					const agentDir = path.join(artifactsDir, "agents", slot.id);
 					await fs.promises.mkdir(agentDir, { recursive: true });
 					// The child's cwd IS the lane: every tool call it makes lands in its own worktree.
-					await runChild({ run, prompt: laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: FULL_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: lane.path, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run, prompt: withKnowledge(laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd), packet, { writeCapable: true }), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: FULL_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: lane.path, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					const reportPath = path.join(agentDir, "report.md");
 					await h.save(agentDir, "report.md", runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 					if (stopper.stopped()) return; // partial work stays uncommitted in the lane for inspection
@@ -209,12 +211,13 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 				const reviewHints = laneResults.map((lane) => `- **${lane.run.slot!.name}** → \`${lane.branch}\` at \`${lane.path}\`${lane.committed ? ` · \`git diff ${lane.base.slice(0, 10)}..${lane.branch}\`` : " · no changes"}`).join("\n");
 				if (!args.merge) {
 					h.panel({ kind: "lanes", command: "fh-lanes", ok: committed.length > 0, prompt, sources: runs.map(toStat), lanes: outcomes, artifactsDir, ...h.totals(runs, startedAt) }, `${committed.length} of ${laneResults.length} lane${laneResults.length === 1 ? "" : "s"} produced changes. Nothing was integrated (--no-merge) — the main checkout is untouched.\n\n${reviewHints}\n\nIntegrate one yourself with \`git cherry-pick -n <sha>\` (then \`git reset -q\`), or run \`/fh-lanes status\` · \`/fh-lanes diff <slot>\` · \`/fh-lanes clean\`.`);
-					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok: committed.length > 0, merge: false, lanes: outcomes, agents: runs.map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) }, null, 2));
+					await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: runs.map((run) => run.text), command: "fh-lanes", artifactsDir });
+					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok: committed.length > 0, merge: false, knowledgeHash: packet.hash, lanes: outcomes, agents: runs.map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) }, null, 2));
 					return;
 				}
 				if (!committed.length) {
 					h.panel({ kind: "lanes", command: "fh-lanes", ok: false, prompt, sources: runs.map(toStat), lanes: outcomes, artifactsDir, ...h.totals(runs, startedAt) }, `No lane produced any change, so there is nothing for the architect to integrate.\n\n${reviewHints}`);
-					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok: false, merge: true, integrated: false, lanes: outcomes, agents: runs.map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) }, null, 2));
+					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok: false, merge: true, integrated: false, knowledgeHash: packet.hash, lanes: outcomes, agents: runs.map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) }, null, 2));
 					return;
 				}
 
@@ -226,7 +229,7 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 					return;
 				}
 				ctx.ui.setStatus(CUSTOM_TYPE, `lanes: architect integrating ${committed.length} lane${committed.length === 1 ? "" : "s"} into the main checkout…`);
-				await runChild({ run: architectRun, prompt: laneMergePrompt(architect, prompt, laneResults, ctx.cwd, artifactsDir), systemPrompt: contractSystemPrompt(architect.systemPrompt, "SYSTEM_PROMPT_LANE_MERGE.md"), appendSystemPrompts: architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: architect.thinking, ...h.slotInitialSpawn(architect, ctx, path.join(artifactsDir, "agents", architect.id)), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+				await runChild({ run: architectRun, prompt: withKnowledge(laneMergePrompt(architect, prompt, laneResults, ctx.cwd, artifactsDir), packet, { writeCapable: true }), systemPrompt: contractSystemPrompt(architect.systemPrompt, "SYSTEM_PROMPT_LANE_MERGE.md"), appendSystemPrompts: architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: architect.thinking, ...h.slotInitialSpawn(architect, ctx, path.join(artifactsDir, "agents", architect.id)), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 				if (stopper.stopped()) {
 					h.stoppedPanel("fh-lanes", [...runs, architectRun], artifactsDir, startedAt, "The architect's integration was stopped; every lane branch is intact, and the main checkout may hold a partial integration — check `git status`.");
 					return;
@@ -234,7 +237,8 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 				await h.save(artifactsDir, "integration.md", runOk(architectRun) ? architectRun.text : `FAILED: ${runError(architectRun)}`);
 				const ok = runOk(architectRun);
 				h.panel({ kind: "lanes", command: "fh-lanes", ok, prompt, agent: toStat(architectRun), sources: runs.map(toStat), lanes: outcomes, artifactsDir, ...h.totals([...runs, architectRun], startedAt) }, ok ? `${architectRun.text}\n\n---\nLanes kept for review:\n${reviewHints}` : `The architect's integration failed: ${runError(architectRun)}\n\nEvery lane branch is intact:\n${reviewHints}`);
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok, merge: true, integrated: ok, lanes: outcomes, writerLeasePath: writerLease?.path, agents: [...runs, architectRun].map(toStat), sessions: summarySessions(), ...h.totals([...runs, architectRun], startedAt) }, null, 2));
+				await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: [architectRun.text, ...runs.map((run) => run.text)], command: "fh-lanes", artifactsDir });
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-lanes", ok, merge: true, integrated: ok, knowledgeHash: packet.hash, lanes: outcomes, writerLeasePath: writerLease?.path, agents: [...runs, architectRun].map(toStat), sessions: summarySessions(), ...h.totals([...runs, architectRun], startedAt) }, null, 2));
 			} finally {
 				await h.ensureSummary(artifactsDir, { command: "fh-lanes", ok: false, stopped: stopper.stopped(), merge: args.merge, lanes: outcomes, writerLeasePath: writerLease?.path, agents: (args.merge ? [...runs, architectRun] : runs).map(toStat), sessions: summarySessions(), ...h.totals(runs, startedAt) });
 				writerLease?.release();
@@ -245,4 +249,5 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 			}
 		},
 	});
+	return handler;
 }

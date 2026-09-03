@@ -1,0 +1,13 @@
+version: 1
+id: x-research
+name: Research X with Grok
+description: Search live X posts with Grok and return current findings with source URLs.
+triggers:
+  - research x
+  - search x
+  - twitter research
+  - tweets
+command: research-x
+prompt_template: |
+  {{TASK}}
+confirm: false

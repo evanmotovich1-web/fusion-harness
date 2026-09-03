@@ -8,6 +8,7 @@
     "test:fusion-harness": "bun test extensions/fusion-harness/tests"
   },
   "dependencies": {
+    "playwright": "^1.62.1",
     "yaml": "^2.9.0"
   }
 }

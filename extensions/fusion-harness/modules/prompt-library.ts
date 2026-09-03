@@ -12,10 +12,20 @@ import { createHash } from "node:crypto";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import type { CollaborationTask } from "./collaboration-graph.ts";
+import type { KnowledgePacket } from "./knowledge-base.ts";
 import { orderedSlots, type ModelSlot, type ModelStack } from "./model-stack.ts";
 import { runOk, runError, shortModel, truncateChars, type AgentRun } from "./runtime.ts";
 
 export const HANDOFF_MAX = 60_000; // chars of one agent's answer injected into another's prompt
+
+/** Prepend the immutable retrieved-evidence packet. ACK-only turns must not call this. */
+export function withKnowledge(prompt: string, packet: KnowledgePacket, opts?: { writeCapable?: boolean }): string {
+	const parts: string[] = [];
+	if (packet.promptBlock) parts.push(packet.promptBlock);
+	if (opts?.writeCapable && packet.captureEnabled) parts.push(promptTemplate("KNOWLEDGE_VAULT_NOTE.md"));
+	parts.push(prompt);
+	return parts.join("\n\n");
+}
 
 // This module lives in modules/; the prompt files live in the extension's prompts/
 // sibling directory — __dirname under CJS transpilation, import.meta.url under ESM.

@@ -42,13 +42,13 @@ describe("lanes — one worktree per slot", () => {
 	test("creates an isolated worktree on its own branch, outside the repo", async () => {
 		const dir = repo();
 		const lane = await createLane(dir, "flux");
-		expect(lane.branch).toBe("fh/lane/flux");
+		expect(lane.branch).toBe(laneBranch(dir, "flux"));
 		expect(lane.path).toBe(lanePath(dir, "flux"));
 		expect(lane.path.startsWith(dir)).toBe(false);
 		expect(lane.carried).toBe(false);
 		expect(lane.base).toBe(sh(dir, ["rev-parse", "HEAD"]));
 		expect(readFileSync(join(lane.path, "a.txt"), "utf8")).toBe("one\n");
-		expect(sh(lane.path, ["rev-parse", "--abbrev-ref", "HEAD"])).toBe("fh/lane/flux");
+		expect(sh(lane.path, ["rev-parse", "--abbrev-ref", "HEAD"])).toBe(laneBranch(dir, "flux"));
 		// The main checkout is untouched: still on main, still clean.
 		expect(sh(dir, ["rev-parse", "--abbrev-ref", "HEAD"])).toBe("main");
 		expect(sh(dir, ["status", "--porcelain"])).toBe("");
@@ -104,7 +104,7 @@ describe("lanes — one worktree per slot", () => {
 		const second = await createLane(dir, "flux");
 		expect(existsSync(join(second.path, "stale.txt"))).toBe(false);
 		expect((await laneDiff(dir, second)).files).toEqual([]);
-		expect(sh(dir, ["for-each-ref", "--format=%(refname:short)", "refs/heads/fh/lane/"])).toBe("fh/lane/flux");
+		expect(sh(dir, ["for-each-ref", "--format=%(refname:short)", "refs/heads/fh/lane/"])).toBe(laneBranch(dir, "flux"));
 	});
 
 	test("lists and cleans every lane, including a branch whose worktree vanished", async () => {
@@ -119,6 +119,7 @@ describe("lanes — one worktree per slot", () => {
 		expect(await listLanes(dir)).toEqual([]);
 		expect(sh(dir, ["for-each-ref", "--format=%(refname:short)", "refs/heads/fh/lane/"])).toBe("");
 		expect(existsSync(laneRootFor(dir))).toBe(false);
-		expect(laneBranch("x")).toBe("fh/lane/x");
+		expect(laneBranch("/repo", "x")).toMatch(/^fh\/lane\/[0-9a-f]{12}\/x$/);
+		expect(laneBranch("/repo", "x")).not.toBe(laneBranch("/repo2", "x"));
 	});
 });

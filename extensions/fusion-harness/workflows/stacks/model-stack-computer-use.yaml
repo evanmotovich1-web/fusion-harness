@@ -1,0 +1,13 @@
+- name: fable
+  model: anthropic/claude-fable-5
+  thinking: high
+  architect: true
+  color: "#A78BFA"
+
+- name: sol
+  model: openai/gpt-5.6-sol
+  thinking: high
+  primary: true
+  color: "#F59E0B"
+  skills:
+    - ../../skills/computer-use

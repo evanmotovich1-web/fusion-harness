@@ -7,6 +7,9 @@
  * every other module leans on. No pi APIs, no processes, no filesystem.
  */
 
+import type { KnowledgeCaptureResult } from "./knowledge-ingest.ts";
+import type { KnowledgeConfig } from "./knowledge-config.ts";
+import type { KnowledgePacket } from "./knowledge-base.ts";
 import type { Lane } from "./lanes.ts";
 import type { HexColor, ModelSlot, ModelStack, Thinking } from "./model-stack.ts";
 
@@ -448,4 +451,10 @@ export interface HarnessDeps {
 	save(dir: string, name: string, body: string): Promise<void>;
 	ensureSummary(dir: string, payload: Record<string, unknown>): Promise<void>;
 	totals(runs: AgentRun[], startedAt: number): { totalMs: number; totalCostUsd: number };
+	// knowledge — retrieve once per request from the canonical checkout, inject the same packet
+	knowledgeConfig(cwd: string): KnowledgeConfig;
+	prepareKnowledge(query: string, cwd: string, artifactsDir: string): Promise<KnowledgePacket>;
+	captureKnowledge(opts: { cwd: string; runId: string; texts: string[]; command: string; artifactsDir?: string }): Promise<KnowledgeCaptureResult>;
+	knowledgeCaptureEnabled(): boolean;
+	setKnowledgeCapture(on: boolean): void;
 }

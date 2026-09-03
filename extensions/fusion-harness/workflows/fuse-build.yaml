@@ -1,0 +1,15 @@
+version: 1
+id: fuse-build
+name: Fused Implementation
+description: Gather independent model analyses, then let one temporary Fusion agent implement the merged result.
+triggers:
+  - fuse build
+  - implement with fusion
+  - multi model build
+command: fh-fusion
+prompt_template: |
+  Implement this request:
+  {{TASK}}
+fusion_instruction: |
+  Critically merge the successful sources, implement the canonical result as the sole writer, run available checks, and report evidence.
+confirm: true

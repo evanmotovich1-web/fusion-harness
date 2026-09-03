@@ -13,7 +13,7 @@ import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { runChild } from "./child-runner.ts";
 import { orderedSlots } from "./model-stack.ts";
-import { debateClosingPrompt, debateOpeningPrompt, debateRebuttalPrompt, laneNote, opinionPrompt } from "./prompt-library.ts";
+import { debateClosingPrompt, debateOpeningPrompt, debateRebuttalPrompt, laneNote, opinionPrompt, withKnowledge } from "./prompt-library.ts";
 import { clampCount, CUSTOM_TYPE, READONLY_TOOLS, runError, runOk, toStat, type AgentRun, type HarnessDeps } from "./runtime.ts";
 
 const ROUNDS_DEFAULT = 3;
@@ -30,11 +30,13 @@ function parseRounds(h: HarnessDeps, input: string, fallback = ROUNDS_DEFAULT): 
 	return { rounds: Math.min(rounds, 10), prompt };
 }
 
-export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void {
+export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): { opinion: (raw: string, ctx: any) => Promise<void>; debate: (raw: string, ctx: any) => Promise<void> } {
+	let opinion: (raw: string, ctx: any) => Promise<void>;
+	let debate: (raw: string, ctx: any) => Promise<void>;
 	// ── /fh-opinion — N independent read-only opinions ─────
 	pi.registerCommand("fh-opinion", {
 		description: "Every configured agent answers independently with strict read-only tools; compare all concrete opinions.",
-		handler: async (raw, ctx) => {
+		handler: opinion = async (raw, ctx) => {
 			h.noteHost(ctx);
 			const prompt = (raw ?? "").trim();
 			if (!prompt) {
@@ -48,6 +50,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 			const artifactsDir = await h.mkArtifacts();
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			h.panel({ kind: "prompt", command: "fh-opinion", ok: true }, `/fh-opinion ${prompt}`);
 			// LANE MODE: each slot reads its own worktree snapshot of the project (or the shared cwd when off / not a repo).
 			const lanes = await h.seedLanes(ctx, slots);
@@ -61,7 +64,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 					const agentDir = path.join(artifactsDir, "agents", slot.id);
 					await fs.promises.mkdir(agentDir, { recursive: true });
 					const lane = lanes?.get(slot.id);
-					await runChild({ run, prompt: opinionPrompt(slot, stack, prompt) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run, prompt: withKnowledge(opinionPrompt(slot, stack, prompt), packet) + (lane ? laneNote(slot, lane, ctx.cwd) : ""), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotInitialSpawn(slot, ctx, agentDir), cwd: lane?.path ?? ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(agentDir, "answer.md", runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -70,7 +73,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 				}
 				const ok = runs.every(runOk);
 				h.panel({ kind: "multi", command: "fh-opinion", title: "◆ OPINIONS — ALL CONFIGURED AGENTS", ok, prompt, sources: runs.map(toStat), answers: runs.map((run) => ({ role: run.role, model: run.model, text: runOk(run) ? run.text : `FAILED: ${runError(run)}`, slotId: run.slot!.id, slotName: run.slot!.name, color: run.slot!.color, primary: run.slot!.primary })), artifactsDir, ...h.totals(runs, startedAt) }, runs.map((run) => `## ${run.slot!.name} · ${run.model}\n${runOk(run) ? run.text : `FAILED: ${runError(run)}`}`).join("\n\n"));
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-opinion", ok, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-opinion", ok, knowledgeHash: packet.hash, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
 			} finally {
 				await h.ensureSummary(artifactsDir, { command: "fh-opinion", ok: false, stopped: stopper.stopped(), agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
 				stopper.release();
@@ -84,7 +87,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 	// ── /fh-debate — N-way concrete opinions, all-to-all between rounds ──
 	pi.registerCommand("fh-debate", {
 		description: "All configured agents debate read-only. Every round each survivor receives every other agent's clearly labeled prior opinion; no judge.",
-		handler: async (raw, ctx) => {
+		handler: debate = async (raw, ctx) => {
 			h.noteHost(ctx);
 			const parsed = parseRounds(h, (raw ?? "").trim());
 			const rounds = parsed.rounds;
@@ -105,6 +108,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 			const initialSpawns = new Map(slots.map((slot) => [slot.id, h.slotInitialSpawn(slot, ctx, path.join(artifactsDir, "debate", slot.id))]));
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			h.panel({ kind: "prompt", command: "fh-debate", ok: true }, `/fh-debate ${(raw ?? "").trim()}`);
 			h.panel({ kind: "banner", command: "fh-debate", ok: true, prompt, roles: slots.map((slot) => ({ role: (slot.architect ? "ARCHITECT" : "BUILDER") as AgentRun["role"], model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: slot.architect })), maxRounds: rounds, artifactsDir }, "");
 			const lanes = await h.seedLanes(ctx, slots);
@@ -124,7 +128,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 					try {
 						prompts = new Map(active.map((run) => {
 							const slot = run.slot!;
-							const text = round === 1 ? debateOpeningPrompt(slot, stack, prompt, rounds) : round === rounds ? debateClosingPrompt(slot, prompt, round, rounds, priorSnapshot) : debateRebuttalPrompt(slot, prompt, round, rounds, priorSnapshot);
+							const text = round === 1 ? withKnowledge(debateOpeningPrompt(slot, stack, prompt, rounds), packet) : round === rounds ? debateClosingPrompt(slot, prompt, round, rounds, priorSnapshot) : debateRebuttalPrompt(slot, prompt, round, rounds, priorSnapshot);
 							return [slot.id, text];
 						}));
 					} catch (error) {
@@ -161,7 +165,7 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 				const survivors = runs.filter(runOk);
 				const ok = survivors.length >= 2;
 				h.panel({ kind: "closing", command: "fh-debate", ok, round: rounds, maxRounds: rounds, prompt, sources: runs.map(toStat), answers: runs.map((run) => ({ role: run.role, model: run.model, text: runOk(run) ? run.text : `FAILED: ${runError(run)}`, slotId: run.slot!.id, slotName: run.slot!.name, color: run.slot!.color, primary: run.slot!.primary })), artifactsDir, ...h.totals(runs, startedAt) }, runs.map((run) => `## [${run.slot!.name.toUpperCase()}] FINAL OPINION\n${runOk(run) ? run.text : `FAILED: ${runError(run)}`}`).join("\n\n"));
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-debate", ok, rounds, survivors: survivors.map((run) => run.slot!.id), agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-debate", ok, rounds, knowledgeHash: packet.hash, survivors: survivors.map((run) => run.slot!.id), agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
 			} finally {
 				await h.ensureSummary(artifactsDir, { command: "fh-debate", ok: false, stopped: stopper.stopped(), rounds, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
 				stopper.release();
@@ -171,4 +175,5 @@ export function registerReadonlyCommands(pi: ExtensionAPI, h: HarnessDeps): void
 			}
 		},
 	});
+	return { opinion, debate };
 }
