@@ -147,13 +147,19 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: s
 					const ackRun = h.newSlotRun(slot);
 					const sourceInitial = initialSpawns.get(slot.id)!;
 					const identity = slot.primary ? h.slotInitialSpawn(slot, ctx, path.join(artifactsDir, "acks", slot.id)) : h.slotNextSpawn(slot, sourceRun, sourceInitial, ctx);
-					await runChild({ run: ackRun, prompt: ackSpec.prompt, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: "none", thinking: slot.thinking, ...identity, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					// A resumed session re-enters the cwd it was created in. In LANE MODE the research
+					// turn ran inside the slot's worktree; resuming it from the main checkout makes pi
+					// treat the session as another project's and block on an interactive fork prompt
+					// that a stdin-less child can never answer. The retry resumes THIS turn, so it
+					// inherits the same cwd.
+					const ackCwd = identity.resume ? (lanes?.get(slot.id)?.path ?? ctx.cwd) : ctx.cwd;
+					await runChild({ run: ackRun, prompt: ackSpec.prompt, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: "none", thinking: slot.thinking, ...identity, cwd: ackCwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					let finalRun = ackRun;
 					const expected = `ACK FUSION ${runId}`;
 					if (!runOk(finalRun) || finalRun.text.trim() !== expected) {
 						const retry = h.newSlotRun(slot);
 						const retryIdentity: SpawnIdentity = finalRun.sessionRef ? { sessionDir: identity.sessionDir, resume: finalRun.sessionRef } : identity;
-						await runChild({ run: retry, prompt: ackSpec.prompt, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: "none", thinking: slot.thinking, ...retryIdentity, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run: retry, prompt: ackSpec.prompt, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: "none", thinking: slot.thinking, ...retryIdentity, cwd: ackCwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 						finalRun = retry;
 					}
 					// Both attempts spent real tokens; the FINAL one carries the slot's post-sync
