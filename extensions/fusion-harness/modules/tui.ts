@@ -455,6 +455,22 @@ export function renderFhPanel(message: any, theme: any): any {
 			md(content);
 			break;
 		}
+		case "repo-state": {
+			const verdict = d.repoVerdict ?? "unknown";
+			const blocked = verdict.startsWith("blocked_");
+			const ambiguous = verdict === "needs_decision";
+			add(
+				new Text(
+					theme.fg(blocked ? "error" : ambiguous ? "warning" : "success", theme.bold(`⎇ REPOSITORY STATE · ${verdict}`)) +
+						theme.fg("dim", d.repoRefreshed ? " · explicit refresh" : " · local refs"),
+					1,
+					0,
+				),
+			);
+			blank();
+			md(content);
+			break;
+		}
 		case "gate": {
 			add(
 				new Text(

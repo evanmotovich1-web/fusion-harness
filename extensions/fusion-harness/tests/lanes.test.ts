@@ -3,7 +3,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { cleanLanes, commitLane, createLane, laneBranch, laneDiff, lanePath, laneRootFor, laneStatus, listLanes } from "../modules/lanes.ts";
+import { captureLaneRemovalEvidence, cleanLanes, commitLane, createLane, laneBranch, laneDiff, lanePath, laneRootFor, laneStatus, listLanes, removeLane } from "../modules/lanes.ts";
 
 const repos: string[] = [];
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
@@ -105,6 +105,26 @@ describe("lanes — one worktree per slot", () => {
 		expect(existsSync(join(second.path, "stale.txt"))).toBe(false);
 		expect((await laneDiff(dir, second)).files).toEqual([]);
 		expect(sh(dir, ["for-each-ref", "--format=%(refname:short)", "refs/heads/fh/lane/"])).toBe(laneBranch(dir, "flux"));
+	});
+
+	test("refuses destructive removal when the lane moved after exact evidence capture", async () => {
+		const dir = repo();
+		const lane = await createLane(dir, "flux");
+		const evidence = await captureLaneRemovalEvidence(dir, "flux");
+		writeFileSync(join(lane.path, "moved.txt"), "moved\n");
+		await commitLane(lane, "move after evidence");
+		await expect(removeLane(dir, evidence)).rejects.toThrow("changed after removal evidence was captured");
+		expect(existsSync(lane.path)).toBe(true);
+	});
+
+	test("refuses removal when dirty content changes without changing porcelain status", async () => {
+		const dir = repo();
+		const lane = await createLane(dir, "flux");
+		writeFileSync(join(lane.path, "dirty.txt"), "first\n");
+		const evidence = await captureLaneRemovalEvidence(dir, "flux");
+		writeFileSync(join(lane.path, "dirty.txt"), "second\n");
+		await expect(removeLane(dir, evidence)).rejects.toThrow("changed after removal evidence was captured");
+		expect(readFileSync(join(lane.path, "dirty.txt"), "utf8")).toBe("second\n");
 	});
 
 	test("lists and cleans every lane, including a branch whose worktree vanished", async () => {

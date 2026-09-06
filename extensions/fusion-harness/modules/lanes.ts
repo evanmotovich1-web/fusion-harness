@@ -50,6 +50,17 @@ export interface LaneDiff {
 	files: string[];
 }
 
+/** Exact lane state captured before a forced worktree/branch removal. */
+export interface LaneRemovalEvidence {
+	slotId: string;
+	branch: string;
+	path: string;
+	branchSha: string | null;
+	worktreeHeadSha: string | null;
+	statusHash: string | null;
+	dirtyPaths: number;
+}
+
 /** Run git in `cwd`; stdout trimmed. Errors carry git's stderr so callers can surface it verbatim. */
 export async function git(cwd: string, args: string[], input?: string): Promise<string> {
 	try {
@@ -106,19 +117,91 @@ async function branchExists(cwd: string, branch: string): Promise<boolean> {
 	}
 }
 
-/** Force-remove a slot's worktree and branch if either exists. Safe to call when neither does. */
-export async function removeLane(cwd: string, slotId: string): Promise<void> {
-	const dir = lanePath(cwd, slotId);
+async function laneStatusDigest(laneDir: string, status: string): Promise<string> {
+	const digest = createHash("sha256");
+	digest.update(status).update("\0");
+	digest.update(await git(laneDir, ["diff", "--binary", "HEAD"])).update("\0");
+	digest.update(await git(laneDir, ["diff", "--cached", "--binary", "HEAD"])).update("\0");
+	const untracked = (await git(laneDir, ["ls-files", "--others", "--exclude-standard", "-z"])).split("\0").filter(Boolean).sort();
+	for (const rel of untracked) {
+		const file = path.join(laneDir, rel);
+		digest.update(rel).update("\0");
+		try {
+			const stat = await fs.promises.lstat(file);
+			if (stat.isSymbolicLink()) digest.update(`symlink:${await fs.promises.readlink(file)}`);
+			else if (stat.isFile()) digest.update(await fs.promises.readFile(file));
+			else digest.update(`mode:${stat.mode}:size:${stat.size}`);
+		} catch {
+			digest.update("missing");
+		}
+		digest.update("\0");
+	}
+	return digest.digest("hex");
+}
+
+/** Capture exact branch/worktree state before a destructive lane removal. */
+export async function captureLaneRemovalEvidence(cwd: string, slotId: string): Promise<LaneRemovalEvidence> {
+	const branch = laneBranch(cwd, slotId);
+	const rawPath = lanePath(cwd, slotId);
+	const laneDir = fs.existsSync(rawPath) ? canonical(rawPath) : rawPath;
+	let branchSha: string | null = null;
+	let worktreeHeadSha: string | null = null;
+	let statusHash: string | null = null;
+	let dirtyPaths = 0;
+	if (await branchExists(cwd, branch)) branchSha = await git(cwd, ["rev-parse", "--verify", `refs/heads/${branch}^{commit}`]);
+	if (fs.existsSync(laneDir)) {
+		try {
+			worktreeHeadSha = await git(laneDir, ["rev-parse", "--verify", "HEAD"]);
+			const status = await git(laneDir, ["status", "--porcelain=v1", "--untracked-files=all"]);
+			statusHash = await laneStatusDigest(laneDir, status);
+			dirtyPaths = status ? status.split("\n").filter(Boolean).length : 0;
+		} catch {
+			// A vanished or invalid worktree still has explicit null evidence.
+		}
+	}
+	return { slotId, branch, path: laneDir, branchSha, worktreeHeadSha, statusHash, dirtyPaths };
+}
+
+function sameRemovalEvidence(expected: LaneRemovalEvidence, live: LaneRemovalEvidence): boolean {
+	return expected.slotId === live.slotId &&
+		expected.branch === live.branch &&
+		expected.path === live.path &&
+		expected.branchSha === live.branchSha &&
+		expected.worktreeHeadSha === live.worktreeHeadSha &&
+		expected.statusHash === live.statusHash &&
+		expected.dirtyPaths === live.dirtyPaths;
+}
+
+/** Every lane removal candidate, including orphaned lane branches. */
+export async function listLaneRemovalEvidence(cwd: string): Promise<LaneRemovalEvidence[]> {
+	const slotIds = new Set((await listLanes(cwd)).map((lane) => lane.slotId));
+	const prefix = laneBranchPrefixFor(cwd);
+	const branches = (await git(cwd, ["for-each-ref", "--format=%(refname:short)", `refs/heads/${prefix}`])).split("\n").filter(Boolean);
+	for (const branch of branches) slotIds.add(branch.slice(prefix.length));
+	const evidence = await Promise.all([...slotIds].sort().map((slotId) => captureLaneRemovalEvidence(cwd, slotId)));
+	return evidence;
+}
+
+/** Force-remove one lane only when its exact pre-removal evidence is still current. */
+export async function removeLane(cwd: string, evidence: LaneRemovalEvidence): Promise<void> {
+	const live = await captureLaneRemovalEvidence(cwd, evidence.slotId);
+	if (!sameRemovalEvidence(evidence, live)) {
+		throw new Error(`lane ${evidence.slotId} changed after removal evidence was captured; refresh and retry`);
+	}
 	try {
-		await git(cwd, ["worktree", "remove", "--force", dir]);
+		await git(cwd, ["worktree", "remove", "--force", evidence.path]);
 	} catch {
 		/* not registered as a worktree (or already gone) — fall through to the directory */
 	}
-	await fs.promises.rm(dir, { recursive: true, force: true }).catch(() => {});
+	await fs.promises.rm(evidence.path, { recursive: true, force: true }).catch(() => {});
 	try {
 		await git(cwd, ["worktree", "prune"]);
 	} catch {}
-	if (await branchExists(cwd, laneBranch(cwd, slotId))) await git(cwd, ["branch", "-D", laneBranch(cwd, slotId)]);
+	if (await branchExists(cwd, evidence.branch)) {
+		const branchSha = await git(cwd, ["rev-parse", "--verify", `refs/heads/${evidence.branch}^{commit}`]);
+		if (branchSha !== evidence.branchSha) throw new Error(`lane ${evidence.slotId} branch moved before deletion; refusing`);
+		await git(cwd, ["branch", "-D", evidence.branch]);
+	}
 }
 
 /**
@@ -135,7 +218,8 @@ export async function createLane(cwd: string, slotId: string): Promise<Lane> {
 	} catch {
 		throw new Error(`lanes need at least one commit: ${canonical(cwd)} has no HEAD yet`);
 	}
-	await removeLane(cwd, slotId);
+	const removalEvidence = await captureLaneRemovalEvidence(cwd, slotId);
+	await removeLane(cwd, removalEvidence);
 	const dir = lanePath(cwd, slotId);
 	await fs.promises.mkdir(path.dirname(dir), { recursive: true });
 	await git(cwd, ["worktree", "add", "-q", "-b", laneBranch(cwd, slotId), dir, head]);
@@ -225,23 +309,13 @@ export async function listLanes(cwd: string): Promise<Array<{ slotId: string; pa
 	return lanes;
 }
 
-/** Remove every lane (worktree + branch) for this project. Returns the slot ids removed. */
-export async function cleanLanes(cwd: string): Promise<string[]> {
+/** Remove every lane using exact evidence captured before the first destructive action. */
+export async function cleanLanes(cwd: string, expected?: readonly LaneRemovalEvidence[]): Promise<string[]> {
+	const evidence = expected ? [...expected] : await listLaneRemovalEvidence(cwd);
 	const removed: string[] = [];
-	for (const lane of await listLanes(cwd)) {
-		await removeLane(cwd, lane.slotId);
+	for (const lane of evidence) {
+		await removeLane(cwd, lane);
 		removed.push(lane.slotId);
-	}
-	// Branches whose worktree already vanished (a crashed run, a manual rm -rf) still need deleting.
-	// Only THIS checkout's lane branches: another worktree of the same repo may be mid-run on its own.
-	const prefix = laneBranchPrefixFor(cwd);
-	const branches = (await git(cwd, ["for-each-ref", "--format=%(refname:short)", `refs/heads/${prefix}`])).split("\n").filter(Boolean);
-	for (const branch of branches) {
-		const slotId = branch.slice(prefix.length);
-		if (!removed.includes(slotId)) {
-			await removeLane(cwd, slotId);
-			removed.push(slotId);
-		}
 	}
 	await fs.promises.rm(laneRootFor(cwd), { recursive: true, force: true }).catch(() => {});
 	return removed;

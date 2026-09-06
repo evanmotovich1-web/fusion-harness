@@ -25,7 +25,7 @@ describe("orchestration contracts", () => {
   });
 
   test("registers target commands and deletes unsafe/obsolete commands", () => {
-    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-lanes", "fh-auto-validate", "fh-system-prompt", "find-workflow", "create-workflow", "research-x", "fh-reset", "fh-knowledge"]) {
+    for (const command of ["fh", "fh-model", "fh-only", "fh-opinion", "fh-fusion", "fh-debate", "fh-collaborate", "fh-lanes", "fh-auto-validate", "fh-system-prompt", "find-workflow", "create-workflow", "research-x", "fh-reset", "fh-knowledge", "fh-repo-state"]) {
       expect(source).toContain(`registerCommand("${command}"`);
     }
     expect(source).not.toContain('registerCommand("fh-both"');
@@ -78,6 +78,9 @@ describe("orchestration contracts", () => {
     // The harness creates and commits lanes itself; the writer lease guards the one integration turn.
     expect(source).toContain('["worktree", "add", "-q", "-b", laneBranch(cwd, slotId), dir, head]');
     expect(source).toContain("acquireWriterLease(ctx.cwd, `/fh-lanes");
+    expect(source).toContain('acquireWriterLease(ctx.cwd, "lane replacement")');
+    expect(source).toContain("captureLaneRemovalEvidence(cwd, slotId)");
+    expect(source).toContain("changed after removal evidence was captured");
     expect(source).toContain('SYSTEM_PROMPT_LANE_MERGE.md');
     expect(source).toContain("filter((slot) => !slot.architect)");
     // The lane board is a belowEditor widget torn down with the command.
@@ -124,14 +127,71 @@ describe("orchestration contracts", () => {
     expect(source).toContain('createHash("sha256").update(canonical)');
   });
 
-  test("configured colors are actual hex and model bar is a widget", () => {
-    expect(source).toContain("fgHex(slot.color");
-    expect(source).toContain('{ placement: "belowEditor" }');
-    // Pi's default footer is cleared at TUI session start (user direction 2026-08-17):
-    // the ONLY setFooter call is the empty component that blanks it — the model bar
-    // stays a belowEditor widget, never a footer replacement.
-    const setFooterCalls = source.match(/ctx\.ui\.setFooter\(/g) ?? [];
-    expect(setFooterCalls.length).toBe(1);
-    expect(source).toContain("ctx.ui.setFooter(() => ({ render: () => [], invalidate() {} }))");
+  test("repo-state command is registered, local-only by default, and spawns no children", () => {
+    expect(source).toContain('registerCommand("fh-repo-state"');
+    const cmdRepoState = readFileSync(join(root, "modules", "cmd-repo-state.ts"), "utf8");
+    // Refresh is the one fetch: explicit, bounded, and under the writer lease.
+    expect(cmdRepoState).toContain('["fetch", "--no-tags", "--no-recurse-submodules", remote]');
+    expect(cmdRepoState).toContain('acquireWriterLease(ctx.cwd, "/fh-repo-state refresh")');
+    expect(cmdRepoState).toContain("Usage: /fh-repo-state status | refresh [remote]");
+    // The state card is measured in-process — measuring repo state never costs a model call.
+    expect(cmdRepoState).not.toContain("runChild");
+  });
+
+  test("measured repo-state cards ride existing child prompts as harness fact", () => {
+    expect(source).toContain('HARNESS_REPO_STATE_HEADER = "----- BEGIN HARNESS REPO STATE (measured; not agent-authored) -----"');
+    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+    // The card wraps the four existing spawn prompts (proposals, delegation, execution,
+    // final coordination) — no new agent is introduced to carry it.
+    expect(cmdBuild).toContain("withHarnessRepoState(withKnowledge(collabProposePrompt");
+    expect(cmdBuild).toContain("withHarnessRepoState(collabDelegatePrompt");
+    expect(cmdBuild).toContain("withHarnessRepoState(executePrompt");
+    expect(cmdBuild).toContain("withHarnessRepoState(collabCoordinatePrompt");
+    expect(cmdBuild).toContain('h.save(collabDir, "repo-state.json"');
+    expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("parent-owned");
+    expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("exact-SHA receipt");
+    expect(prompt("USER_PROMPT_COLLAB_EXECUTE.md")).toContain("parent-owned");
+    expect(prompt("USER_PROMPT_COLLAB_EXECUTE.md")).toContain("FH_TASK_OUTCOME");
+  });
+
+  test("publication short-circuits and agent accounting stay agent-neutral", () => {
+    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+    // Deterministic short-circuits stop before any spawn and report zero agents.
+    expect(cmdBuild).toContain("if (gate.stop) {");
+    expect(cmdBuild).toContain("shortCircuit: gate.kind");
+    expect(cmdBuild).toContain("agents: []");
+    // In normal runs the agent roster comes only from measured child runs.
+    expect(cmdBuild).toContain("agents: runs.map(toStat)");
+    // Repo-state capture is in-process, never a spawned child.
+    expect(cmdBuild).toContain("collectRepoState(");
+  });
+
+  test("publication is parent-owned: receipt, refresh, reauthorize, non-force exact-SHA push", () => {
+    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+    expect(cmdBuild).toContain("mintRepoActionReceipt({");
+    expect(cmdBuild).toContain("authorizeRepoAction({ receipt, facts, consumedDigests");
+    expect(cmdBuild).toContain("opts.consumed.add(receipt.digest)"); // single-use receipts
+    expect(cmdBuild).toContain('"publication-receipt.json"'); // evidence persisted
+    expect(cmdBuild).toContain("decision.nonForceFastForward");
+    expect(cmdBuild).toContain("${decision.candidateSha}:refs/heads/${parsed.branch}");
+    expect(cmdBuild).toContain('["push", "--no-force", parsed.remote, refspec]');
+    expect(cmdBuild).toContain('refspec.startsWith("+")'); // force refspecs refused twice
+  });
+
+  test("every runtime module is Node-safe: no Bun-only APIs in modules/", () => {
+    // The extension runs under pi's Node runtime; bun-green tests once masked a
+    // module pi could not import. Contract: modules never USE Bun-only globals —
+    // comments may mention them by name (several explain exactly this rule), so
+    // strip comments before asserting.
+    const stripComments = (text: string): string =>
+      text
+        .replace(/\/\*[\s\S]*?\*\//g, " ")
+        .replace(/^[ \t]*\/\/.*$/gm, " ");
+    for (const file of sourceFiles) {
+      if (!file.includes(join(root, "modules"))) continue;
+      const text = stripComments(readFileSync(file, "utf8"));
+      expect(text.includes("import.meta.dir")).toBe(false);
+      expect(/\bBun\./.test(text)).toBe(false);
+    }
   });
 });

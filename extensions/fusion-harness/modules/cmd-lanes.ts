@@ -19,7 +19,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { runChild } from "./child-runner.ts";
-import { cleanLanes, commitLane, laneDiff, laneRootFor, laneStatus, listLanes, type LaneStatus } from "./lanes.ts";
+import { cleanLanes, commitLane, git, laneDiff, laneRootFor, laneStatus, listLaneRemovalEvidence, listLanes, type LaneStatus } from "./lanes.ts";
 import { orderedSlots } from "./model-stack.ts";
 import { contractSystemPrompt, laneMergePrompt, laneWorkerPrompt, parseLanesArgs, withKnowledge } from "./prompt-library.ts";
 import { CUSTOM_TYPE, FULL_TOOLS, runError, runOk, toStat, type AgentRun, type HarnessDeps, type LaneOutcome, type Role } from "./runtime.ts";
@@ -64,11 +64,29 @@ export function registerLanesCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: st
 				return;
 			}
 			if (args.action === "clean") {
+				let lease: WriterLease | undefined;
 				try {
-					const removed = await cleanLanes(ctx.cwd);
+					lease = acquireWriterLease(ctx.cwd, "/fh-lanes clean");
+					let headSha = "(unborn)";
+					try { headSha = await git(ctx.cwd, ["rev-parse", "HEAD"]); } catch { /* unborn or not a repo */ }
+					const evidence = await listLaneRemovalEvidence(ctx.cwd);
+					const evidenceLines = evidence.length
+						? evidence.map((lane) => `- ${lane.slotId}: branch ${lane.branchSha ?? "absent"}; worktree HEAD ${lane.worktreeHeadSha ?? "absent"}; status ${lane.statusHash ?? "absent"}; dirty paths ${lane.dirtyPaths}`).join("\n")
+						: "- no lane worktrees or branches";
+					h.panel(
+						{ kind: "lanes", command: "fh-lanes", ok: true, lanes: [] },
+						`Lane cleanup evidence captured under writer lease before removal. Checkout HEAD: \`${headSha}\`.\n${evidenceLines}`,
+					);
+					const removed = await cleanLanes(ctx.cwd, evidence);
 					ctx.ui.notify(removed.length ? `fusion-harness: removed ${removed.length} lane${removed.length === 1 ? "" : "s"} (${removed.join(", ")})` : "fusion-harness: no lanes to remove", "info");
+					h.panel(
+						{ kind: "lanes", command: "fh-lanes", ok: true, lanes: [] },
+						`Lane cleanup completed after exact evidence revalidation. Removed: ${removed.length ? removed.join(", ") : "none"}. This is an explicit destructive command, not publication.`,
+					);
 				} catch (error) {
 					ctx.ui.notify(`fusion-harness: lane cleanup failed — ${error instanceof Error ? error.message : String(error)}`, "error");
+				} finally {
+					lease?.release();
 				}
 				return;
 			}

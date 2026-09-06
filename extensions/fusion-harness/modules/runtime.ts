@@ -33,6 +33,15 @@ export const DETAIL_SNIPPET_MAX = 4_000; // chars of script/output kept in messa
 export const GATE_TIMEOUT_MS = 120_000; // `uv run` of the validation gate
 
 export const CUSTOM_TYPE = "fusion-harness"; // customType tag on every panel/widget/status this extension emits
+
+/** Harness-measured Git facts. Not wiki evidence and not agent-authored. */
+export const HARNESS_REPO_STATE_HEADER = "----- BEGIN HARNESS REPO STATE (measured; not agent-authored) -----";
+export const HARNESS_REPO_STATE_FOOTER = "----- END HARNESS REPO STATE -----";
+
+export function withHarnessRepoState(prompt: string, cardMarkdown: string): string {
+	if (!cardMarkdown.trim()) return prompt;
+	return `${HARNESS_REPO_STATE_HEADER}\n${cardMarkdown.trim()}\n${HARNESS_REPO_STATE_FOOTER}\n\n${prompt}`;
+}
 export const BOOT_TYPE = "fusion-harness-boot"; // the boot banner's own tag — a session ENTRY, never an LLM-context message
 
 // ═══ Roles ═══════════════════════════════════════════════════════════════════
@@ -105,6 +114,7 @@ export interface AgentRun {
 	stopReason?: string;
 	errorMessage?: string;
 	stderr: string;
+	stderrPath?: string; // full failure diagnostics; kept out of AgentStat/UI serialization
 }
 
 /** Serializable per-agent stats for message details / artifacts. */
@@ -163,7 +173,8 @@ export interface FhDetails {
 		| "solo" // /fh-only — one selected agent, one full-width answer
 		| "closing" // /fh-debate — the final round: two closing statements, side by side
 		| "collab" // /fh-collaborate — the shared deliverable after the last turn
-		| "lanes"; // /fh-lanes — every lane's outcome, plus the architect's integration when one ran
+		| "lanes" // /fh-lanes — every lane's outcome, plus the architect's integration when one ran
+		| "repo-state"; // /fh-repo-state — deterministic Git facts; no agent ran
 	command?: string; // the slash command that produced this panel ("fh-fusion", …)
 	title?: string; // duo panels: what THIS pair of columns is (e.g. "round 2 — rebuttals")
 	ok: boolean;
@@ -181,6 +192,8 @@ export interface FhDetails {
 	gateExitCode?: number;
 	scriptPath?: string;
 	lanes?: LaneOutcome[]; // /fh-lanes: one row per lane, in slot order
+	repoVerdict?: string; // /fh-repo-state: stable classifier verdict
+	repoRefreshed?: boolean; // /fh-repo-state: an explicit fetch preceded this card
 	artifactsDir?: string;
 	totalMs?: number;
 	totalCostUsd?: number;
@@ -325,7 +338,9 @@ export function runError(r: AgentRun): string {
 		(r.status === "aborted" ? "stopped by user (escape)" : "") ||
 		r.errorMessage ||
 		(r.status === "timeout" || r.exitCode === 124 ? "timed out" : "") ||
-		r.stderr.trim().slice(-300) ||
+		(r.stderr.trim()
+			? `child process failed (exit ${r.exitCode}); ${r.stderrPath ? `full stderr saved to ${r.stderrPath}` : "diagnostic stderr was not persisted"}`
+			: "") ||
 		(r.text.trim() ? "" : "no output") ||
 		`exit ${r.exitCode}`
 	);

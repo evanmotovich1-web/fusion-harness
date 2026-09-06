@@ -53,6 +53,7 @@ import { Container, Text, matchesKey, truncateToWidth, visibleWidth } from "@ear
 import { registerAutoValidateCommand, registerCollaborateCommand } from "./modules/cmd-build.ts";
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
 import { registerKnowledgeCommand } from "./modules/cmd-knowledge.ts";
+import { registerRepoStateCommand } from "./modules/cmd-repo-state.ts";
 import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
 import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
@@ -926,19 +927,33 @@ export default function (pi: ExtensionAPI) {
 		try {
 			ctx.ui.setStatus(CUSTOM_TYPE, `lanes: seeding ${slots.length} worktree${slots.length === 1 ? "" : "s"}…`);
 		} catch {}
-		// One at a time: git serializes worktree operations on the repo lock anyway.
-		for (const slot of slots) {
+		let laneLease: WriterLease | undefined;
+		try {
+			laneLease = acquireWriterLease(ctx.cwd, "lane replacement");
+		} catch (error) {
+			if (opts?.force) throw error;
 			try {
-				lanes.set(slot.id, await createLane(ctx.cwd, slot.id));
-			} catch (error) {
-				if (opts?.force) throw error;
-				try {
-					ctx.ui.notify(`fusion-harness: could not seed a lane for ${slot.name} (${error instanceof Error ? error.message : String(error)}) — agents share the cwd for this command`, "warning");
-				} catch {}
-				return undefined;
-			}
+				ctx.ui.notify(`fusion-harness: could not acquire the writer lease for lane replacement (${error instanceof Error ? error.message : String(error)}) — agents share the cwd for this command`, "warning");
+			} catch {}
+			return undefined;
 		}
-		return lanes;
+		try {
+			// One at a time under the writer lease: lane removal and shared Git refs never race another harness writer.
+			for (const slot of slots) {
+				try {
+					lanes.set(slot.id, await createLane(ctx.cwd, slot.id));
+				} catch (error) {
+					if (opts?.force) throw error;
+					try {
+						ctx.ui.notify(`fusion-harness: could not seed a lane for ${slot.name} (${error instanceof Error ? error.message : String(error)}) — agents share the cwd for this command`, "warning");
+					} catch {}
+					return undefined;
+				}
+			}
+			return lanes;
+		} finally {
+			laneLease.release();
+		}
 	};
 	const startLaneBoard = (ctx: any, runs: AgentRun[], lanes: Map<string, Lane>, note: string): (() => void) => {
 		const churn = new Map<string, LaneStatus>();
@@ -1197,6 +1212,7 @@ export default function (pi: ExtensionAPI) {
 		["/create-workflow [id]", "create a validated workflow"],
 		["/research-x <query>", "Grok live X research with citations"],
 		["/fh-knowledge status|search|refresh", "inspect retrieved evidence packet"],
+		["/fh-repo-state status|refresh", "deterministic git facts, optional fetch"],
 		["/fh-reset", "full reset, host and slots"],
 		["/fh [on|off]", "this list, toggle model bar"],
 	];
@@ -1467,6 +1483,7 @@ export default function (pi: ExtensionAPI) {
 	const lanesHandler = registerLanesCommand(pi, deps); // /fh-lanes
 	const autoValidateHandler = registerAutoValidateCommand(pi, deps); // /fh-auto-validate
 	registerKnowledgeCommand(pi, deps); // /fh-knowledge
+	registerRepoStateCommand(pi, deps); // /fh-repo-state
 	const researchXHandler = registerXResearchCommand(pi);
 
 	const applyWorkflowStack = async (stackPath: string, ctx: any): Promise<void> => {

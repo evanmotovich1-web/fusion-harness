@@ -10,11 +10,27 @@
  */
 
 import * as fs from "node:fs";
+import * as os from "node:os";
 import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { runChild, runProc } from "./child-runner.ts";
 import { validateCollaborationPlan, type CollaborationTask, type ValidatedCollaborationPlan } from "./collaboration-graph.ts";
+import {
+	applyCollaborationTaskOutcome,
+	COLLABORATION_OUTCOME_INSTRUCTION,
+	initializeCollaborationTaskStates,
+	parseCollaborationTaskOutcome,
+	selectCollaborationDecisionRequest,
+	selectStartableCollaborationTasks,
+	type CollaborationTaskOutcome,
+	type CollaborationTaskStates,
+} from "./collaboration-outcome.ts";
+import { formatRepoStatePanel, refreshRepoStateRemote } from "./cmd-repo-state.ts";
 import { orderedSlots, slotId } from "./model-stack.ts";
+import { authorizeRepoAction, mintRepoActionReceipt, type RepoActionReceipt } from "./repo-action-policy.ts";
+import { collectRepoState, type RepoStateCard } from "./repo-state.ts";
 import {
 	builderPrompt,
 	collabCoordinatePrompt,
@@ -45,12 +61,187 @@ import {
 	toStat,
 	truncateChars,
 	VALIDATOR_TOOLS,
+	withHarnessRepoState,
 	type AgentStat,
 	type FhDetails,
 	type HarnessDeps,
 	type Role,
 } from "./runtime.ts";
 import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
+
+const execFileAsync = promisify(execFile);
+const PUBLISH_TIMEOUT_MS = 30_000;
+const SHA40_RE = /^[0-9a-f]{40}$/i;
+
+export function parseCollaborateArgs(raw: string): { prompt: string; publishTo: string | null } {
+	const words = (raw ?? "").trim().split(/\s+/).filter(Boolean);
+	let publishTo: string | null = null;
+	const rest: string[] = [];
+	for (let i = 0; i < words.length; i++) {
+		if (words[i] === "--publish-to") {
+			const value = words[i + 1];
+			if (!value || value.startsWith("-")) throw new Error("Usage: /fh-collaborate [--publish-to <remote/branch>] <prompt>");
+			publishTo = value;
+			i++;
+			continue;
+		}
+		rest.push(words[i]!);
+	}
+	return { prompt: rest.join(" "), publishTo };
+}
+
+const REMOTE_NAME_RE = /^[A-Za-z0-9._-]+$/;
+const BRANCH_NAME_RE = /^[A-Za-z0-9._/-]+$/;
+
+export function parsePublishTo(publishTo: string): { remote: string; branch: string; targetRef: string } {
+	const trimmed = publishTo.trim();
+	const slash = trimmed.indexOf("/");
+	const remote = slash > 0 ? trimmed.slice(0, slash) : "origin";
+	const branch = slash > 0 ? trimmed.slice(slash + 1) : trimmed;
+	const branchParts = branch.split("/");
+	if (
+		trimmed.includes("..") ||
+		!REMOTE_NAME_RE.test(remote) ||
+		!BRANCH_NAME_RE.test(branch) ||
+		branch.startsWith("-") ||
+		branch.startsWith(".") ||
+		branch.endsWith("/") ||
+		branch.endsWith(".") ||
+		branch.includes("//") ||
+		branchParts.some((part) => !part || part.startsWith(".") || part.toLowerCase().endsWith(".lock")) ||
+		remote.startsWith("-")
+	) {
+		throw new Error(`invalid --publish-to ${JSON.stringify(publishTo)}; expected <remote>/<branch>`);
+	}
+	// Always bind evidence to the remote-tracking ref the push will update — never local refs/heads/*.
+	return { remote, branch, targetRef: `refs/remotes/${remote}/${branch}` };
+}
+
+function consumedReceiptPath(repositoryId: string): string {
+	const root = path.join(fs.existsSync("/tmp") ? "/tmp" : os.tmpdir(), "fusion-harness-consumed-receipts");
+	return path.join(root, `${repositoryId}.json`);
+}
+
+function loadConsumedDigests(repositoryId: string): Set<string> {
+	try {
+		const raw = JSON.parse(fs.readFileSync(consumedReceiptPath(repositoryId), "utf8"));
+		return new Set(Array.isArray(raw) ? raw.filter((item): item is string => typeof item === "string") : []);
+	} catch {
+		return new Set();
+	}
+}
+
+function saveConsumedDigests(repositoryId: string, consumed: Set<string>): void {
+	const file = consumedReceiptPath(repositoryId);
+	fs.mkdirSync(path.dirname(file), { recursive: true });
+	fs.writeFileSync(file, `${JSON.stringify([...consumed].sort())}\n`);
+}
+
+async function escalateOnce(ctx: any, question: string, options: string[]): Promise<string | undefined> {
+	if (typeof ctx?.ui?.select !== "function") return undefined;
+	try {
+		const choice = await ctx.ui.select(question, options);
+		return typeof choice === "string" && options.includes(choice) ? choice : undefined;
+	} catch {
+		return undefined;
+	}
+}
+
+async function gitCwd(cwd: string, args: string[]): Promise<{ code: number; stdout: string; stderr: string }> {
+	try {
+		const result = await execFileAsync("git", args, {
+			cwd,
+			timeout: PUBLISH_TIMEOUT_MS,
+			maxBuffer: 8 * 1024 * 1024,
+			env: { ...process.env, GIT_TERMINAL_PROMPT: "0", GIT_OPTIONAL_LOCKS: "0" },
+		});
+		return { code: 0, stdout: String(result.stdout ?? "").trim(), stderr: String(result.stderr ?? "").trim() };
+	} catch (error: any) {
+		if (error?.code === "ENOENT") throw new Error("git executable not found");
+		const status = typeof error?.status === "number" ? error.status : 1;
+		return { code: status, stdout: String(error?.stdout ?? "").trim(), stderr: String(error?.stderr ?? "").trim() };
+	}
+}
+
+function publicationShortCircuit(card: RepoStateCard): { stop: boolean; kind: "noop" | "blocked" | "decision" | "continue"; message: string } {
+	switch (card.verdict) {
+		case "already_integrated":
+			return { stop: true, kind: "noop", message: `Publication no-op: ${card.verdict} (${card.reasonCodes.join(", ") || "equal"}). Source ${card.source.sha} is already on target ${card.target.sha}.` };
+		case "blocked_dirty":
+		case "blocked_diverged":
+		case "blocked_stale":
+			return { stop: true, kind: "blocked", message: `Publication blocked: ${card.verdict} (${card.reasonCodes.join(", ")}). No spawn, no merge, no push.` };
+		case "needs_decision":
+			return { stop: true, kind: "decision", message: `Publication needs a decision: ${card.reasonCodes.join(", ") || card.verdict}.` };
+		default:
+			return { stop: false, kind: "continue", message: "" };
+	}
+}
+
+async function parentOwnedPublish(opts: {
+	cwd: string;
+	publishTo: string;
+	artifactsDir: string;
+	runId: string;
+	consumed: Set<string>;
+}): Promise<{ ok: boolean; message: string; receipt?: RepoActionReceipt }> {
+	const parsed = parsePublishTo(opts.publishTo);
+	const headBefore = (await gitCwd(opts.cwd, ["rev-parse", "HEAD"])).stdout.toLowerCase();
+	if (!SHA40_RE.test(headBefore)) return { ok: false, message: "Publication refused: HEAD is not a 40-hex SHA." };
+	const started = Date.now();
+	const check = await gitCwd(opts.cwd, ["diff", "--check"]);
+	const porcelain = await gitCwd(opts.cwd, ["status", "--porcelain=v1", "--untracked-files=all"]);
+	const headAfter = (await gitCwd(opts.cwd, ["rev-parse", "HEAD"])).stdout.toLowerCase();
+	const durationMs = Date.now() - started;
+	const failed = (check.code === 0 && !porcelain.stdout ? 0 : 1);
+	const preFacts = await collectRepoState(opts.cwd, { sourceRef: "HEAD", targetRef: parsed.targetRef });
+	const observedTarget = preFacts.target.sha;
+	if (!observedTarget) return { ok: false, message: `Publication refused: target ${parsed.targetRef} does not resolve.` };
+	const receipt = mintRepoActionReceipt({
+		repositoryId: preFacts.identity.repositoryId,
+		gitCommonDir: preFacts.identity.gitCommonDir,
+		worktreeId: preFacts.identity.worktreeId,
+		runId: opts.runId,
+		candidateSha: headBefore,
+		observedTargetSha: observedTarget,
+		headBefore,
+		headAfter,
+		issuedAt: Date.now(),
+		validation: {
+			command: ["git", "diff", "--check"],
+			exitCode: failed === 0 ? 0 : 1,
+			passed: failed === 0 ? 1 : 0,
+			failed,
+			durationMs,
+		},
+	});
+	const consumed = new Set([...opts.consumed, ...loadConsumedDigests(preFacts.identity.repositoryId)]);
+	await refreshRepoStateRemote(opts.cwd, parsed.remote);
+	const facts = await collectRepoState(opts.cwd, { sourceRef: "HEAD", targetRef: parsed.targetRef });
+	const decision = authorizeRepoAction({ receipt, facts, consumedDigests: consumed });
+	consumed.add(receipt.digest);
+	opts.consumed.add(receipt.digest);
+	for (const digest of consumed) opts.consumed.add(digest);
+	saveConsumedDigests(preFacts.identity.repositoryId, consumed);
+	await fs.promises.writeFile(path.join(opts.artifactsDir, "publication-receipt.json"), `${JSON.stringify({ receipt, decision }, null, 2)}\n`, "utf8");
+	await fs.promises.writeFile(path.join(opts.artifactsDir, "consumed-receipts.json"), `${JSON.stringify([...consumed].sort())}\n`, "utf8");
+	if (!decision.authorize) {
+		return { ok: false, message: `Publication refused: ${decision.verdict} (${decision.reasons.join(", ")}).`, receipt };
+	}
+	if (decision.verdict === "authorize_noop") {
+		return { ok: true, message: `Publication no-op: ${decision.reasons.join(", ")}. Nothing pushed.`, receipt };
+	}
+	if (!decision.nonForceFastForward || !decision.candidateSha) {
+		return { ok: false, message: `Publication refused: authorization was not a non-force fast-forward.`, receipt };
+	}
+	const refspec = `${decision.candidateSha}:refs/heads/${parsed.branch}`;
+	if (refspec.startsWith("+")) return { ok: false, message: "Publication refused: force refspec.", receipt };
+	const pushed = await gitCwd(opts.cwd, ["push", "--no-force", parsed.remote, refspec]);
+	if (pushed.code !== 0) {
+		return { ok: false, message: `git push --no-force failed: ${pushed.stderr || pushed.stdout || `exit ${pushed.code}`}`, receipt };
+	}
+	return { ok: true, message: `Pushed ${refspec} to ${parsed.remote} (non-force).`, receipt };
+}
 
 // ═══ /fh-collaborate ═════════════════════════════════════════════════════════
 
@@ -68,12 +259,20 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 	const TASKBOARD_WIDGET = `${CUSTOM_TYPE}-taskboard`;
 	pi.registerCommand("fh-collaborate", {
 		description:
-			"Every agent plans read-only, the architect merges one delegation DAG, then tasks execute as dependencies clear — parallel where possible, exactly one shared-CWD writer at a time.",
+			"Every agent plans read-only, the architect merges one delegation DAG, then tasks execute as dependencies clear — parallel where possible, exactly one shared-CWD writer at a time. Optional --publish-to <remote/branch> is parent-owned non-force fast-forward only.",
 		handler: handler = async (raw, ctx) => {
 			h.noteHost(ctx);
-			const prompt = (raw ?? "").trim();
+			let parsedArgs: { prompt: string; publishTo: string | null };
+			try {
+				parsedArgs = parseCollaborateArgs(raw ?? "");
+			} catch (error) {
+				ctx.ui.notify(error instanceof Error ? error.message : String(error), "warning");
+				return;
+			}
+			const prompt = parsedArgs.prompt;
+			let publishTo = parsedArgs.publishTo;
 			if (!prompt) {
-				ctx.ui.notify("Usage: /fh-collaborate <prompt>", "warning");
+				ctx.ui.notify("Usage: /fh-collaborate [--publish-to <remote/branch>] <prompt>", "warning");
 				return;
 			}
 			const stack = h.modelStack();
@@ -86,15 +285,59 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 			await fs.promises.mkdir(collabDir, { recursive: true });
 			await h.save(artifactsDir, "prompt.md", prompt);
 			await h.save(artifactsDir, "stack.json", JSON.stringify(stack, null, 2));
+			let repoCard: RepoStateCard | undefined;
+			let repoCardMarkdown = "";
+			let repoRefreshed = false;
+			let writerLease: WriterLease | undefined;
+			try {
+				let targetRef: string | undefined;
+				if (publishTo) {
+					const parsedTarget = parsePublishTo(publishTo);
+					targetRef = parsedTarget.targetRef;
+					writerLease = acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
+					await refreshRepoStateRemote(ctx.cwd, parsedTarget.remote);
+					repoRefreshed = true;
+				}
+				repoCard = await collectRepoState(ctx.cwd, targetRef ? { sourceRef: "HEAD", targetRef } : undefined);
+				repoCardMarkdown = formatRepoStatePanel(repoCard);
+				await h.save(collabDir, "repo-state.json", JSON.stringify(repoCard, null, 2));
+				h.panel({ kind: "repo-state", command: "fh-collaborate", ok: true, repoVerdict: repoCard.verdict, repoRefreshed, artifactsDir }, repoCardMarkdown);
+			} catch (error) {
+				const message = error instanceof Error ? error.message : String(error);
+				if (publishTo) {
+					h.panel({ kind: "error", command: "fh-collaborate", ok: false, artifactsDir }, `Publication fail-closed: cannot measure repository state.\n${message}`);
+					writerLease?.release();
+					return;
+				}
+			}
+			if (publishTo && repoCard) {
+				const gate = publicationShortCircuit(repoCard);
+				if (gate.stop && gate.kind === "decision") {
+					const choice = await escalateOnce(ctx, `${gate.message} Publish, abort, or continue without publishing?`, ["abort", "continue without publishing"]);
+					if (choice === "continue without publishing") {
+						publishTo = null;
+					} else {
+						h.panel({ kind: "error", command: "fh-collaborate", ok: false, artifactsDir }, `${gate.message} Fail closed${choice ? ` (${choice})` : " without UI"}.`);
+						await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok: false, shortCircuit: gate.kind, publishTo, repoHash: repoCard.hash, repoVerdict: repoCard.verdict, agents: [] }, null, 2));
+						writerLease?.release();
+						return;
+					}
+				} else if (gate.stop) {
+					const ok = gate.kind === "noop";
+					h.panel({ kind: ok ? "collab" : "error", command: "fh-collaborate", ok, artifactsDir }, gate.message);
+					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok, shortCircuit: gate.kind, publishTo, repoHash: repoCard.hash, repoVerdict: repoCard.verdict, agents: [] }, null, 2));
+					writerLease?.release();
+					return;
+				}
+			}
 			const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir);
 			const initialSpawns = new Map(slots.map((slot) => [slot.id, h.slotInitialSpawn(slot, ctx, path.join(collabDir, "sessions", slot.id))]));
-			h.panel({ kind: "prompt", command: "fh-collaborate", ok: true }, `/fh-collaborate ${prompt}`);
+			h.panel({ kind: "prompt", command: "fh-collaborate", ok: true }, `/fh-collaborate ${publishTo ? `--publish-to ${publishTo} ` : ""}${prompt}`);
 			h.panel({ kind: "banner", command: "fh-collaborate", ok: true, prompt, roles: slots.map((slot) => ({ role: (slot.architect ? "ARCHITECT" : "BUILDER") as Role, model: slot.model, slotId: slot.id, slotName: slot.name, color: slot.color, primary: slot.primary, architect: slot.architect })), artifactsDir }, "");
 			const stopper = h.startStoppable(ctx, "fh-collaborate");
 			// The streaming grid stays alive for the WHOLE command — planning, delegation,
 			// and execution all show each model's live flow, exactly like the other commands.
 			const stopWidget = h.startGridWidget(ctx, "fh-collaborate", runs, undefined, startedAt);
-			let writerLease: WriterLease | undefined;
 			let maxConcurrentWriteEnabledChildren = 0;
 			let activeWriters = 0;
 			const taskExecutions: Array<{ taskId: string; slot: string; mode: "read" | "write"; startedAt: number; endedAt: number; ok: boolean }> = [];
@@ -106,7 +349,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				await fs.promises.mkdir(proposalsDir, { recursive: true });
 				await Promise.all(runs.map(async (run) => {
 					const slot = run.slot!;
-					await runChild({ run, prompt: withKnowledge(collabProposePrompt(slot, stack, prompt), packet), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run, prompt: withHarnessRepoState(withKnowledge(collabProposePrompt(slot, stack, prompt), packet), repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					await h.save(proposalsDir, `${slot.id}.md`, runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
 				if (stopper.stopped()) {
@@ -126,7 +369,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				let planError = "";
 				for (let attempt = 1; attempt <= 3; attempt++) {
 					ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: architect merging plans into a delegation graph${attempt > 1 ? ` (repair ${attempt - 1})` : ""}…`);
-					const delegatePrompt = collabDelegatePrompt(stack, prompt, collabDir, planPath) + (planError ? `\n\nPREVIOUS PLAN VALIDATION FAILED:\n${planError}\nRewrite the complete corrected plan.` : "");
+					const delegatePrompt = withHarnessRepoState(collabDelegatePrompt(stack, prompt, collabDir, planPath) + (planError ? `\n\nPREVIOUS PLAN VALIDATION FAILED:\n${planError}\nRewrite the complete corrected plan.` : ""), repoCardMarkdown);
 					await runChild({ run: architectRun, prompt: delegatePrompt, systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: READONLY_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					if (stopper.stopped()) {
 						h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped while the architect was producing the delegation graph.");
@@ -173,7 +416,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				h.panel({ kind: "solo", command: "fh-collaborate", ok: true, agent: toStat(architectRun), artifactsDir }, planBody);
 
 				try {
-					writerLease = acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
+					writerLease ??= acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
 				} catch (error) {
 					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir }, error instanceof Error ? error.message : String(error));
 					return;
@@ -186,22 +429,22 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				// write-enabled child ever runs). Plan order is the FIFO tiebreak.
 				const reportsDir = path.join(collabDir, "reports");
 				await fs.promises.mkdir(reportsDir, { recursive: true });
-				type TaskState = "blocked" | "queued" | "reading" | "writing" | "done" | "failed";
-				const taskState = new Map<string, TaskState>(plan.tasks.map((task) => [task.id, "blocked"]));
+				let taskStates: CollaborationTaskStates = initializeCollaborationTaskStates(plan.tasks);
+				const taskOutcomes = new Map<string, CollaborationTaskOutcome>();
 				const taskReports = new Map<string, string>();
 				const busySlots = new Set<string>();
 				const inFlight = new Map<string, Promise<void>>();
 				let executionFailure: string | undefined;
-				const TASK_GLYPH: Record<TaskState, string> = { blocked: "○", queued: "◌", reading: "◐", writing: "●", done: "✓", failed: "✗" };
+				const TASK_GLYPH: Record<string, string> = { pending: "○", queued: "◌", reading: "◐", writing: "●", completed: "✓", no_op: "–", blocked: "■", needs_decision: "?", failed: "✗", skipped: "·" };
 				const renderBoard = () => {
 					try {
+						const done = Object.values(taskStates).filter((state) => state === "completed" || state === "no_op").length;
 						ctx.ui.setWidget(TASKBOARD_WIDGET, [
-							`⇄ TASKS · ${[...taskState.values()].filter((state) => state === "done").length}/${plan!.tasks.length} done · reads overlap · ONE writer at a time`,
-							...plan!.tasks.map((task) => `  ${TASK_GLYPH[taskState.get(task.id)!]} ${task.id} · ${task.assignee} · ${task.mode} · ${taskState.get(task.id)} · ${task.description.replace(/\s+/g, " ").slice(0, 60)}${task.description.length > 60 ? "…" : ""}`),
+							`⇄ TASKS · ${done}/${plan!.tasks.length} settled · reads overlap · ONE writer at a time`,
+							...plan!.tasks.map((task) => `  ${TASK_GLYPH[taskStates[task.id]!] ?? "○"} ${task.id} · ${task.assignee} · ${task.mode} · ${taskStates[task.id]} · ${task.description.replace(/\s+/g, " ").slice(0, 60)}${task.description.length > 60 ? "…" : ""}`),
 						], { placement: "belowEditor" });
 					} catch {}
 				};
-				const depsDone = (task: CollaborationTask): boolean => task.depends_on.every((dep) => taskState.get(dep) === "done");
 				const taskHandoff = (task: CollaborationTask): string => {
 					const parts = [`Collaboration artifacts: ${collabDir}`, `Delegation plan: ${planPath}`, `All finished task reports: ${reportsDir}`];
 					for (const dep of task.depends_on) parts.push(`\n## COMPLETED DEPENDENCY ${dep}\n${taskReports.get(dep) ?? "(report on disk)"}`);
@@ -217,37 +460,61 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 						activeWriters++;
 						maxConcurrentWriteEnabledChildren = Math.max(maxConcurrentWriteEnabledChildren, activeWriters);
 					}
+					const executePrompt = `${write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task))}\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`;
 					try {
-						await runChild({ run, prompt: write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task)), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run, prompt: withHarnessRepoState(executePrompt, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					} finally {
 						if (write) activeWriters--;
 					}
-					const ok = runOk(run) && !stopper.stopped();
+					const childOk = runOk(run) && !stopper.stopped();
+					const rawReport = childOk ? run.text : `FAILED: ${runError(run)}`;
+					let outcome: CollaborationTaskOutcome | undefined;
+					if (childOk) {
+						try {
+							const parsedOutcome = parseCollaborationTaskOutcome(run.text);
+							outcome = parsedOutcome.outcome;
+						} catch (error) {
+							executionFailure ??= `task ${task.id} (${slot.id}) failed closed: ${error instanceof Error ? error.message : String(error)}`;
+						}
+					} else {
+						executionFailure ??= `task ${task.id} (${slot.id}) failed: ${runError(run)}`;
+					}
+					if (outcome) {
+						const applied = applyCollaborationTaskOutcome(plan!.tasks, taskStates, task.id, outcome);
+						taskStates = applied.states;
+						taskOutcomes.set(task.id, outcome);
+						for (const skippedId of applied.skippedTaskIds) {
+							taskReports.set(skippedId, `SKIPPED after ${task.id} ${outcome.status}`);
+							await h.save(reportsDir, `${skippedId}-skipped.md`, taskReports.get(skippedId)!);
+						}
+						if (outcome.status === "needs_decision") {
+							const decision = selectCollaborationDecisionRequest(plan!.tasks, taskOutcomes);
+							const choice = decision ? await escalateOnce(ctx, decision.question, decision.options) : undefined;
+							if (choice) await h.save(reportsDir, `${task.id}-decision.json`, JSON.stringify({ taskId: task.id, choice, ...decision }, null, 2));
+							executionFailure ??= decision
+								? `needs_decision from ${decision.taskId}: ${decision.question} [${decision.options.join(" | ")}]${choice ? ` → ${choice}` : " (fail closed without UI)"}`
+								: `needs_decision from ${task.id}`;
+						}
+					} else {
+						taskStates = { ...taskStates, [task.id]: "failed" };
+					}
+					const ok = Boolean(outcome) && (outcome!.status === "completed" || outcome!.status === "no_op") && !executionFailure?.startsWith(`task ${task.id}`);
 					taskExecutions.push({ taskId: task.id, slot: slot.id, mode: task.mode, startedAt: taskStartedAt, endedAt: Date.now(), ok });
-					const report = runOk(run) ? run.text : `FAILED: ${runError(run)}`;
-					taskReports.set(task.id, report);
-					await h.save(reportsDir, `${task.id}-${slot.id}.md`, report);
-					taskState.set(task.id, ok ? "done" : "failed");
+					taskReports.set(task.id, rawReport);
+					await h.save(reportsDir, `${task.id}-${slot.id}.md`, rawReport);
 					if (!stopper.stopped()) {
-						// Every finished task renders its report — the intermediate work IS the output.
-						h.panel({ kind: "solo", command: "fh-collaborate", ok, agent: toStat(run), artifactsDir }, `### Task ${task.id} (${task.mode}) — ${slot.name}\n${task.description}\n\n${report}`);
-						if (!ok) executionFailure ??= `task ${task.id} (${slot.id}) failed: ${runError(run)}`;
+						h.panel({ kind: "solo", command: "fh-collaborate", ok, agent: toStat(run), artifactsDir }, `### Task ${task.id} (${task.mode}) — ${slot.name}\n${task.description}\n\n${rawReport}`);
 					}
 				};
 				ctx.ui.setStatus(CUSTOM_TYPE, "collaborate: executing the delegation graph…");
 				renderBoard();
 				while (!stopper.stopped()) {
 					if (!executionFailure) {
-						for (const task of plan.tasks) {
-							const current = taskState.get(task.id)!;
-							if (current !== "blocked" && current !== "queued") continue;
-							if (!depsDone(task)) continue;
-							if (busySlots.has(task.assignee) || (task.mode === "write" && activeWriters > 0)) {
-								taskState.set(task.id, "queued");
-								continue;
-							}
+						const startable = selectStartableCollaborationTasks(plan.tasks, taskStates, busySlots, activeWriters > 0);
+						for (const taskId of startable) {
+							const task = plan.tasks.find((candidate) => candidate.id === taskId)!;
 							busySlots.add(task.assignee);
-							taskState.set(task.id, task.mode === "read" ? "reading" : "writing");
+							taskStates = { ...taskStates, [task.id]: task.mode === "read" ? "reading" : "writing" };
 							const running = executeTask(task).finally(() => {
 								busySlots.delete(task.assignee);
 								inFlight.delete(task.id);
@@ -269,6 +536,11 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, `Delegated execution halted: ${executionFailure}. Downstream tasks were not started.`);
 					return;
 				}
+				const graphBlocked = Object.values(taskStates).some((state) => state === "blocked" || state === "failed" || state === "needs_decision");
+				if (graphBlocked) {
+					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, "Final write integration skipped: a task is blocked, failed, or awaiting a decision.");
+					return;
+				}
 
 				// ── Phase 4: one final architect integration turn, still under the single-writer invariant ──
 				ctx.ui.setStatus(CUSTOM_TYPE, "collaborate: final architect integration…");
@@ -276,7 +548,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				activeWriters++;
 				maxConcurrentWriteEnabledChildren = Math.max(maxConcurrentWriteEnabledChildren, activeWriters);
 				try {
-					await runChild({ run: architectRun, prompt: collabCoordinatePrompt(prompt, reportsDir, planPath), systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run: architectRun, prompt: withHarnessRepoState(collabCoordinatePrompt(prompt, reportsDir, planPath), repoCardMarkdown), systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 				} finally {
 					activeWriters--;
 				}
@@ -287,10 +559,23 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				}
 				await h.save(collabDir, "final.md", runOk(architectRun) ? architectRun.text : `FAILED: ${runError(architectRun)}`);
 				const worktreeCommandsObserved = runs.flatMap((run) => run.toolEvents).filter((event) => event.name === "bash" && /\bgit\s+worktree\b/.test(event.argument));
-				const ok = runOk(architectRun) && maxConcurrentWriteEnabledChildren === 1 && worktreeCommandsObserved.length === 0;
+				let ok = runOk(architectRun) && maxConcurrentWriteEnabledChildren === 1 && worktreeCommandsObserved.length === 0;
+				let publishResult: { ok: boolean; message: string } | undefined;
+				if (ok && publishTo) {
+					const consumed = new Set<string>();
+					publishResult = await parentOwnedPublish({
+						cwd: ctx.cwd,
+						publishTo,
+						artifactsDir,
+						runId: path.basename(artifactsDir),
+						consumed,
+					});
+					ok = ok && publishResult.ok;
+					h.panel({ kind: publishResult.ok ? "collab" : "error", command: "fh-collaborate", ok: publishResult.ok, artifactsDir }, publishResult.message);
+				}
 				h.panel({ kind: "collab", command: "fh-collaborate", ok, round: plan.tasks.length, prompt, agent: toStat(architectRun), sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, runOk(architectRun) ? architectRun.text : `Final coordination failed: ${runError(architectRun)}`);
 				await h.captureKnowledge({ cwd: ctx.cwd, runId: path.basename(artifactsDir), texts: [architectRun.text, ...runs.map((run) => run.text)], command: "fh-collaborate", artifactsDir });
-				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok, plan, knowledgeHash: packet.hash, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
+				await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok, plan, knowledgeHash: packet.hash, publishTo, publishResult, repoHash: repoCard?.hash, repoVerdict: repoCard?.verdict, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) }, null, 2));
 			} finally {
 				const observedWorktrees = runs.flatMap((run) => run.toolEvents).filter((event) => event.name === "bash" && /\bgit\s+worktree\b/.test(event.argument));
 				await h.ensureSummary(artifactsDir, { command: "fh-collaborate", ok: false, stopped: stopper.stopped(), plan, taskExecutions, maxConcurrentWriteEnabledChildren, worktreeCommandsObserved: observedWorktrees, writerLeasePath: writerLease?.path, agents: runs.map(toStat), sessions: Object.fromEntries(slots.map((slot) => [slot.id, runs.find((run) => run.slot?.id === slot.id)?.sessionRef ?? h.cachedSlotId(slot)])), ...h.totals(runs, startedAt) });
