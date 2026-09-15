@@ -14,6 +14,8 @@ export interface CollaborationTaskOutcome {
 	schema_version: typeof COLLABORATION_OUTCOME_SCHEMA_VERSION;
 	status: CollaborationOutcomeStatus;
 	summary: string;
+	/** Only an implementation acceptance rejection may nominate an existing owner task. */
+	repair_target?: string;
 	decision?: CollaborationDecisionRequest;
 }
 
@@ -46,6 +48,7 @@ export const COLLABORATION_OUTCOME_INSTRUCTION = [
 	"End the report with exactly one metadata line using this format:",
 	`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":1,"status":"completed","summary":"short factual result"}`,
 	'Allowed status values are "completed", "no_op", "blocked", and "needs_decision".',
+	'Only for a completed verification that rejects implementation acceptance, use status "blocked" and repair_target: "<direct implementation dependency id>". Never nominate repair for missing permission, budget, human decisions, unavailable tools, or uncertain execution. Completed execution is not accepted delivery.',
 	'For "needs_decision", also include exactly one decision object: {"question":"...","options":["...","..."]}.',
 	"The final metadata line is mandatory. Prose without valid metadata fails closed.",
 ].join("\n");
@@ -67,7 +70,7 @@ function nonEmptyString(value: unknown, label: string): string {
 
 function validateOutcome(value: unknown): CollaborationTaskOutcome {
 	const raw = record(value, "task outcome");
-	assertExactKeys(raw, ["schema_version", "status", "summary", "decision"], "task outcome");
+	assertExactKeys(raw, ["schema_version", "status", "summary", "decision", "repair_target"], "task outcome");
 	if (raw.schema_version !== COLLABORATION_OUTCOME_SCHEMA_VERSION) {
 		throw new Error(`task outcome.schema_version must be ${COLLABORATION_OUTCOME_SCHEMA_VERSION}`);
 	}
@@ -77,9 +80,15 @@ function validateOutcome(value: unknown): CollaborationTaskOutcome {
 	}
 	const status = raw.status as CollaborationOutcomeStatus;
 	const summary = nonEmptyString(raw.summary, "task outcome.summary");
+	let repair_target: string | undefined;
+	if (raw.repair_target !== undefined) {
+		if (status !== "blocked") throw new Error("repair_target is only allowed for blocked acceptance");
+		repair_target = nonEmptyString(raw.repair_target, "task outcome.repair_target");
+		if (!/^\d+\.[A-Za-z0-9_-]+$/.test(repair_target)) throw new Error("invalid repair_target task id");
+	}
 	if (status !== "needs_decision") {
 		if (raw.decision !== undefined) throw new Error(`task outcome.decision is only allowed for needs_decision`);
-		return { schema_version: COLLABORATION_OUTCOME_SCHEMA_VERSION, status, summary };
+		return { schema_version: COLLABORATION_OUTCOME_SCHEMA_VERSION, status, summary, ...(repair_target ? { repair_target } : {}) };
 	}
 
 	const decision = record(raw.decision, "task outcome.decision");

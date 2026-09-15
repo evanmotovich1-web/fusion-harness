@@ -415,11 +415,11 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				].join("\n");
 				h.panel({ kind: "solo", command: "fh-collaborate", ok: true, agent: toStat(architectRun), artifactsDir }, planBody);
 
+				let admissionFailure: string | undefined;
 				try {
 					writerLease ??= acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
 				} catch (error) {
-					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir }, error instanceof Error ? error.message : String(error));
-					return;
+					admissionFailure = error instanceof Error ? error.message : String(error);
 				}
 
 				// ── Phase 3: dependency-driven execution ──
@@ -434,7 +434,10 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				const taskReports = new Map<string, string>();
 				const busySlots = new Set<string>();
 				const inFlight = new Map<string, Promise<void>>();
-				let executionFailure: string | undefined;
+				let executionFailure: string | undefined = admissionFailure;
+				let repairUsed = false;
+				const attempts = new Map<string, number>();
+				const skippedBy = new Map<string, string[]>();
 				const TASK_GLYPH: Record<string, string> = { pending: "○", queued: "◌", reading: "◐", writing: "●", completed: "✓", no_op: "–", blocked: "■", needs_decision: "?", failed: "✗", skipped: "·" };
 				const renderBoard = () => {
 					try {
@@ -450,7 +453,9 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					for (const dep of task.depends_on) parts.push(`\n## COMPLETED DEPENDENCY ${dep}\n${taskReports.get(dep) ?? "(report on disk)"}`);
 					return parts.join("\n");
 				};
-				const executeTask = async (task: CollaborationTask): Promise<void> => {
+				const executeTask = async (task: CollaborationTask, repairBrief = "", bounded = false): Promise<void> => {
+					const attempt = (attempts.get(task.id) ?? 0) + 1;
+					attempts.set(task.id, attempt);
 					const slot = slots.find((candidate) => candidate.id === task.assignee)!;
 					const run = runBySlot.get(slot.id)!;
 					const taskStartedAt = Date.now();
@@ -462,7 +467,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					}
 					const executePrompt = `${write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task))}\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`;
 					try {
-						await runChild({ run, prompt: withHarnessRepoState(executePrompt, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: bounded ? 30_000 : h.childTimeoutMs(), signal: stopper.signal });
 					} finally {
 						if (write) activeWriters--;
 					}
@@ -483,6 +488,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 						const applied = applyCollaborationTaskOutcome(plan!.tasks, taskStates, task.id, outcome);
 						taskStates = applied.states;
 						taskOutcomes.set(task.id, outcome);
+						skippedBy.set(task.id, applied.skippedTaskIds);
 						for (const skippedId of applied.skippedTaskIds) {
 							taskReports.set(skippedId, `SKIPPED after ${task.id} ${outcome.status}`);
 							await h.save(reportsDir, `${skippedId}-skipped.md`, taskReports.get(skippedId)!);
@@ -496,11 +502,13 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 								: `needs_decision from ${task.id}`;
 						}
 					} else {
+						taskOutcomes.delete(task.id);
 						taskStates = { ...taskStates, [task.id]: "failed" };
 					}
 					const ok = Boolean(outcome) && (outcome!.status === "completed" || outcome!.status === "no_op") && !executionFailure?.startsWith(`task ${task.id}`);
 					taskExecutions.push({ taskId: task.id, slot: slot.id, mode: task.mode, startedAt: taskStartedAt, endedAt: Date.now(), ok });
 					taskReports.set(task.id, rawReport);
+					await h.save(reportsDir, `${task.id}-attempt-${attempt}.md`, rawReport);
 					await h.save(reportsDir, `${task.id}-${slot.id}.md`, rawReport);
 					if (!stopper.stopped()) {
 						h.panel({ kind: "solo", command: "fh-collaborate", ok, agent: toStat(run), artifactsDir }, `### Task ${task.id} (${task.mode}) — ${slot.name}\n${task.description}\n\n${rawReport}`);
@@ -509,7 +517,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				ctx.ui.setStatus(CUSTOM_TYPE, "collaborate: executing the delegation graph…");
 				renderBoard();
 				while (!stopper.stopped()) {
-					if (!executionFailure) {
+					if (!executionFailure && !Object.values(taskStates).includes("blocked")) {
 						const startable = selectStartableCollaborationTasks(plan.tasks, taskStates, busySlots, activeWriters > 0);
 						for (const taskId of startable) {
 							const task = plan.tasks.find((candidate) => candidate.id === taskId)!;
@@ -523,7 +531,35 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 						}
 					}
 					renderBoard();
-					if (!inFlight.size) break;
+					if (!inFlight.size) {
+						const blocked = plan.tasks.filter((task) => taskStates[task.id] === "blocked");
+						const verifier = blocked.length === 1 ? blocked[0] : undefined;
+						const target = verifier && taskOutcomes.get(verifier.id)?.repair_target;
+						const owner = plan.tasks.find((task) => task.id === target);
+						// Only settled, independent acceptance can nominate its original writer.
+						// Quiescence avoids concurrent ownership and stale accepted sibling evidence.
+						if (!repairUsed && !executionFailure && verifier?.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && !plan.tasks.some((task) => task.id !== verifier.id && task.depends_on.includes(owner.id) && taskStates[task.id] === "completed")) {
+							repairUsed = true;
+							const approval = "approve one owner repair and one reverify";
+							const choice = await escalateOnce(ctx, `Acceptance rejected by ${verifier.id}: ${taskOutcomes.get(verifier.id)!.summary}. Confirm this is an implementation defect, NOT a permission/decision/tool/budget blocker. Authorize ${owner.assignee} to repair ONLY ${owner.id}'s original scope, then ${verifier.assignee} to reverify? Budget: at most 2 additional paid child calls, 30 seconds each, one cycle total. No uncertain replay or new live/release permission.`, ["remain blocked", approval]);
+							await h.save(collabDir, "repair-approval.json", JSON.stringify({ owner: owner.id, verifier: verifier.id, approved: choice === approval, maxCycles: 1, maxChildCalls: 2, childTimeoutMs: 30_000 }));
+							if (choice === approval && !stopper.stopped()) {
+								const skipped = skippedBy.get(verifier.id) ?? [];
+								const rejection = taskReports.get(verifier.id)!;
+								taskStates[owner.id] = "writing";
+								await executeTask(owner, `BOUNDED OWNER REPAIR — cycle 1/1. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`, true);
+								if (!executionFailure && !stopper.stopped() && taskStates[owner.id] === "completed") {
+									taskStates[verifier.id] = "reading";
+									await executeTask(verifier, `Reverification 1/1 after owner repair. Original rejected acceptance remains binding:\n${rejection}`, true);
+									if (taskStates[verifier.id] === "completed") {
+										for (const id of skipped) if (taskStates[id] === "skipped") taskStates[id] = "pending";
+									}
+								}
+								continue;
+							}
+						}
+						break;
+					}
 					await Promise.race(inFlight.values());
 				}
 				await Promise.allSettled([...inFlight.values()]);
@@ -532,13 +568,16 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped during delegated execution; finished task reports remain on disk.");
 					return;
 				}
-				if (executionFailure) {
-					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, `Delegated execution halted: ${executionFailure}. Downstream tasks were not started.`);
-					return;
-				}
-				const graphBlocked = Object.values(taskStates).some((state) => state === "blocked" || state === "failed" || state === "needs_decision");
+				const graphBlocked = Boolean(executionFailure) || Object.values(taskStates).some((state) => state !== "completed" && state !== "no_op");
 				if (graphBlocked) {
-					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, "Final write integration skipped: a task is blocked, failed, or awaiting a decision.");
+					const facts = ["# BLOCKED — final write integration, live/release and publication not authorized", executionFailure ?? "Acceptance remains blocked.", ...plan.tasks.map((task) => `- ${task.id}: ${taskStates[task.id]} — ${taskOutcomes.get(task.id)?.summary ?? "not accepted"}`)].join("\n");
+					// Persist host facts first: a failed/uncertain digest child must not erase them.
+					await h.save(collabDir, "final.md", facts);
+					await runChild({ run: architectRun, prompt: `READ-ONLY BLOCKED DIGEST\n${facts}\nReports: ${reportsDir}\nSummarize completed execution separately from accepted deliverables, blocked research/integration, missing approvals and next owner actions. Do not claim success or perform repairs, live validation, release or writes. Last word: architect.`, systemPrompt: stack.architect.systemPrompt, appendSystemPrompts: stack.architect.appendSystemPrompts, tools: READONLY_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					const digest = `${facts}\n\n## Architect digest\n${runOk(architectRun) ? architectRun.text : `Unavailable: ${runError(architectRun)}. No replay attempted.`}`;
+					await h.save(collabDir, "final.md", digest);
+					h.panel({ kind: "collab", command: "fh-collaborate", ok: false, agent: toStat(architectRun), artifactsDir }, digest);
+					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok: false, plan, taskStates, taskOutcomes: Object.fromEntries(taskOutcomes), executionFailure, taskExecutions, maxConcurrentWriteEnabledChildren, finalMode: "read", publishTo, agents: runs.map(toStat) }, null, 2));
 					return;
 				}
 

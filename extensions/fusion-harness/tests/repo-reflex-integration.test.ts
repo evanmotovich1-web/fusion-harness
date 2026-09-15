@@ -12,24 +12,49 @@ import { fileURLToPath } from "node:url";
 
 const TEST_DIR = dirname(fileURLToPath(import.meta.url));
 import { loadModelStack } from "../modules/model-stack.ts";
+import { acquireWriterLease } from "../modules/writer-lease.ts";
 import { HARNESS_REPO_STATE_HEADER, newRun, withHarnessRepoState, type AgentRun, type FhDetails, type HarnessDeps } from "../modules/runtime.ts";
 
 const gitIdentity = ["-c", "user.name=t", "-c", "user.email=t@t"];
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
 
-type ChildCall = { role: string; slot?: string; prompt: string; tools: string };
+type ChildCall = { role: string; slot?: string; prompt: string; tools: string; timeoutMs: number };
 const calls: ChildCall[] = [];
 let blockTaskId: string | null = null;
+let repairFixture = false;
+let repairFixed = false;
+let repairBehavior: "success" | "rejected" | "uncertain" | "decision" | "permission" = "success";
 let malformedTaskId: string | null = null;
 let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
 		const run: AgentRun = opts.run;
-		calls.push({ role: run.role, slot: run.slot?.id, prompt: opts.prompt, tools: opts.tools });
+		calls.push({ role: run.role, slot: run.slot?.id, prompt: opts.prompt, tools: opts.tools, timeoutMs: opts.timeoutMs });
 		run.status = "working";
 		run.startedAt = Date.now();
 		run.sessionRef = `${run.slot?.id ?? run.role}-${calls.length}`;
-		if (opts.prompt.includes("Merge them into ONE delegation plan")) {
+		if (repairFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			run.text = JSON.stringify({ tasks: [
+				{ id: "1.a", assignee: "sol", description: "implement", depends_on: [], mode: "write" },
+				{ id: "2.a", assignee: "terra", description: "verify acceptance", depends_on: ["1.a"], mode: "read" },
+				{ id: "3.a", assignee: "fable", description: "live release", depends_on: ["2.a"], mode: "write" },
+			] });
+		} else if (repairFixture && opts.prompt.includes("BOUNDED OWNER REPAIR")) {
+			if (repairBehavior === "uncertain") {
+				run.status = "error";
+				run.exitCode = 124;
+				run.error = "uncertain timeout";
+				return run;
+			}
+			repairFixed = repairBehavior !== "rejected";
+			run.text = 'FH_TASK_OUTCOME: {"schema_version":1,"status":"completed","summary":"repair executed"}';
+		} else if (repairFixture && opts.prompt.includes("executing delegated task 2.a") && !repairFixed) {
+			run.text = repairBehavior === "decision"
+				? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"needs_decision","summary":"requires permission","decision":{"question":"approve?","options":["yes","no"]}}'
+				: repairBehavior === "permission"
+					? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"blocked","summary":"missing permission"}'
+					: 'FH_TASK_OUTCOME: {"schema_version":1,"status":"blocked","summary":"acceptance rejected","repair_target":"1.a"}';
+		} else if (opts.prompt.includes("Merge them into ONE delegation plan")) {
 			run.text = JSON.stringify({
 				tasks: [
 					{ id: "1.a", assignee: "fable", description: "plan a", depends_on: [], outputs: ["a"], mode: "read" },
@@ -70,6 +95,9 @@ const files: string[] = [];
 afterEach(() => {
 	calls.length = 0;
 	blockTaskId = null;
+	repairFixture = false;
+	repairFixed = false;
+	repairBehavior = "success";
 	malformedTaskId = null;
 	onFinalCoordination = null;
 	while (files.length) rmSync(files.pop()!, { force: true });
@@ -163,7 +191,7 @@ function harness(cwd: string) {
 	};
 	registerCollaborateCommand(pi, h);
 	const ctx = { cwd, ui: { notify: () => {}, setStatus: () => {}, setWidget: () => {} } };
-	return { run: (args: string) => handler!(args, ctx), panels, artifacts };
+	return { run: (args: string) => handler!(args, ctx), panels, artifacts, ctx };
 }
 
 describe("parseCollaborateArgs", () => {
@@ -185,6 +213,47 @@ describe("parseCollaborateArgs", () => {
 });
 
 describe("/fh-collaborate repository reflexes", () => {
+	test("writer admission refusal still reaches the read-only architect digest", async () => {
+		const cwd = repo();
+		const lease = acquireWriterLease(cwd, "other writer");
+		try {
+			const fh = harness(cwd);
+			await fh.run("do not bypass lease");
+			expect(calls.at(-1)!.prompt).toContain("READ-ONLY BLOCKED DIGEST");
+			expect(calls.every((call) => call.tools === "read,grep,find,ls")).toBe(true);
+			expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("writer lease busy");
+		} finally { lease.release(); }
+	});
+	for (const behavior of ["rejected", "uncertain", "decision", "permission", "no approval"] as const) {
+		test(`repair fail-closed: ${behavior}`, async () => {
+			repairFixture = true;
+			repairBehavior = behavior === "no approval" ? "success" : behavior;
+			const fh = harness(repo());
+			if (behavior !== "no approval") (fh.ctx.ui as any).select = async (_q: string, options: string[]) => options.find((option) => option.startsWith("approve"));
+			await fh.run("do not release on failure");
+			const repairs = calls.filter((call) => call.prompt.includes("BOUNDED OWNER REPAIR"));
+			expect(repairs).toHaveLength(behavior === "rejected" || behavior === "uncertain" ? 1 : 0);
+			for (const call of repairs) expect(call.timeoutMs).toBe(30_000);
+			expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(behavior === "rejected" ? 2 : 1);
+			expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(false);
+			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(false);
+			expect(calls.at(-1)!.tools).toBe("read,grep,find,ls");
+			expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("BLOCKED");
+			expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
+		});
+	}
+	test("approved acceptance rejection routes once to owner then independent reverify", async () => {
+		repairFixture = true;
+		const fh = harness(repo());
+		(fh.ctx.ui as any).select = async (_question: string, options: string[]) => options.find((option) => option.startsWith("approve"));
+		await fh.run("repair acceptance");
+		const repair = calls.findIndex((call) => call.prompt.includes("BOUNDED OWNER REPAIR"));
+		expect(repair).toBeGreaterThan(-1);
+		expect(calls[repair]!.slot).toBe("sol");
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(2);
+		expect(calls.filter((call) => call.prompt.includes("BOUNDED OWNER REPAIR"))).toHaveLength(1);
+		expect(readFileSync(join(fh.artifacts, "collaborate/reports/2.a-attempt-1.md"), "utf8")).toContain("acceptance rejected");
+	});
 	test("already_integrated --publish-to does not spawn children", async () => {
 		const cwd = repo();
 		withOrigin(cwd);
@@ -303,6 +372,9 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.some((call) => call.tools === "read,grep,find,ls,bash,edit,write")).toBe(false);
 		expect(fh.panels.some((panel) => panel.content.includes("blocked by fixture") && panel.details.ok === false)).toBe(true);
 		expect(fh.panels.some((panel) => /Final write integration skipped|blocked/.test(panel.content))).toBe(true);
+		expect(calls.some((call) => call.prompt.includes("READ-ONLY BLOCKED DIGEST") && call.tools === "read,grep,find,ls")).toBe(true);
+		expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("1.a: blocked");
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
 	});
 
 	test("malformed task metadata fails closed before final write integration", async () => {
