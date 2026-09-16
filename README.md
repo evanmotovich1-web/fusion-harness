@@ -136,7 +136,7 @@ No config auto-discovery occurs; `--fh-config` is explicit.
 | `/fh-system-prompt` | Responsive grid of every slot's effective system prompt. |
 | `/find-workflow <task>` | Deterministically route a task to a saved workflow. Confident matches run automatically; weak or tied matches open a selector. |
 | `/create-workflow [--global] [id]` | Open a YAML skeleton, validate it, then save it to the project or global workflow directory. |
-| `/research-x <query>` | Call Grok's live `x_search` through the xAI Responses API and return cited results. Requires `XAI_API_KEY`; requests are billed by xAI. |
+| `/research-x <query>` | Call Grok's live `x_search` through the xAI Responses API and return cited results. Uses `XAI_API_KEY` if set, otherwise Pi's xAI OAuth seat (`pi auth print-bearer-token --provider xai`); requests are billed to that seat. |
 | `/fh-knowledge status\|search\|refresh\|capture` | Inspect harness knowledge: roots, the same retriever fan-out uses, cache refresh, or opt-in vault write-back. Retrieved evidence, not model training. |
 | `/fh-repo-state status\|refresh [remote]` | Deterministic local Git facts — exact SHAs, topology, dirt, freshness, verdict — as a measured card. `refresh` performs one explicit bounded fetch and reports changed remote-tracking refs. See [Repository reflexes](#repository-reflexes-deterministic-state-parent-owned-publication). |
 | `/fh-reset` | Full reset: fresh host session and fresh slot sessions — equivalent to `/new` plus a slot wipe. |

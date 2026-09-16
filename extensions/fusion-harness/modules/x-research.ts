@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
+import { execFileSync } from "node:child_process";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
 export interface XResearchOptions {
@@ -78,9 +79,19 @@ export function extractXResearchResponse(payload: unknown): { text: string; urls
 	return { text: uniqueText.join("\n\n"), urls: [...urls] };
 }
 
-export async function researchX(input: XResearchOptions, init: { apiKey?: string; fetchImpl?: typeof fetch } = {}): Promise<{ text: string; urls: string[]; raw: unknown }> {
-	const apiKey = init.apiKey ?? process.env.XAI_API_KEY;
-	if (!apiKey) throw new Error("XAI_API_KEY is not configured. Add it to .env or authenticate the xAI provider.");
+/** Bearer token from Pi's xAI OAuth seat (`pi auth print-bearer-token --provider xai`). Returns undefined when Pi or the seat is unavailable. The token is never logged. */
+export function resolvePiXaiBearerToken(): string | undefined {
+	try {
+		const token = execFileSync("pi", ["auth", "print-bearer-token", "--provider", "xai"], { encoding: "utf8", timeout: 20_000, stdio: ["ignore", "pipe", "ignore"] }).trim();
+		return token || undefined;
+	} catch {
+		return undefined;
+	}
+}
+
+export async function researchX(input: XResearchOptions, init: { apiKey?: string; fetchImpl?: typeof fetch; bearerResolver?: () => string | undefined } = {}): Promise<{ text: string; urls: string[]; raw: unknown }> {
+	const apiKey = init.apiKey !== undefined ? init.apiKey : (process.env.XAI_API_KEY || (init.bearerResolver ?? resolvePiXaiBearerToken)());
+	if (!apiKey) throw new Error("XAI_API_KEY is not configured and Pi's xAI OAuth seat is not ready. Add XAI_API_KEY to .env or run `pi auth check --provider xai`.");
 	const response = await (init.fetchImpl ?? fetch)("https://api.x.ai/v1/responses", {
 		method: "POST",
 		headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },

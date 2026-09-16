@@ -36,4 +36,22 @@ describe("Grok X research", () => {
 	test("fails clearly without an API key", async () => {
 		expect(researchX({ query: "topic" }, { apiKey: "" })).rejects.toThrow("XAI_API_KEY");
 	});
+
+	test("falls back to Pi's xAI OAuth bearer token when XAI_API_KEY is absent", async () => {
+		const saved = process.env.XAI_API_KEY;
+		delete process.env.XAI_API_KEY;
+		try {
+			let authorization = "";
+			const okFetch = (async (_url: string | URL | Request, init?: RequestInit) => {
+				authorization = new Headers(init?.headers).get("authorization") ?? "";
+				return new Response(JSON.stringify({ output_text: "Answer" }), { status: 200 });
+			}) as typeof fetch;
+			const result = await researchX({ query: "topic" }, { fetchImpl: okFetch, bearerResolver: () => "oauth-token" });
+			expect(result.text).toBe("Answer");
+			expect(authorization).toBe("Bearer oauth-token");
+			expect(researchX({ query: "topic" }, { fetchImpl: okFetch, bearerResolver: () => undefined })).rejects.toThrow("OAuth seat");
+		} finally {
+			if (saved !== undefined) process.env.XAI_API_KEY = saved;
+		}
+	});
 });
