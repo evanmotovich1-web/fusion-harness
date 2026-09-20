@@ -58,6 +58,7 @@ import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
 import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
 import { registerXResearchCommand } from "./modules/x-research.ts";
+import { registerNanoMediaCommand } from "./modules/nano-media.ts";
 import { knowledgeArtifactBodies, retrieveKnowledge } from "./modules/knowledge-base.ts";
 import { resolveKnowledgeConfig, type KnowledgeConfig } from "./modules/knowledge-config.ts";
 import { captureVaultNote } from "./modules/knowledge-ingest.ts";
@@ -1485,6 +1486,7 @@ export default function (pi: ExtensionAPI) {
 	registerKnowledgeCommand(pi, deps); // /fh-knowledge
 	registerRepoStateCommand(pi, deps); // /fh-repo-state
 	const researchXHandler = registerXResearchCommand(pi);
+	registerNanoMediaCommand(pi, deps); // /nano-media
 
 	const applyWorkflowStack = async (stackPath: string, ctx: any): Promise<void> => {
 		const next = cloneStack(loadModelStack(stackPath));
