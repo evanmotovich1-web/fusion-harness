@@ -453,7 +453,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					for (const dep of task.depends_on) parts.push(`\n## COMPLETED DEPENDENCY ${dep}\n${taskReports.get(dep) ?? "(report on disk)"}`);
 					return parts.join("\n");
 				};
-				const executeTask = async (task: CollaborationTask, repairBrief = "", bounded = false): Promise<void> => {
+				const executeTask = async (task: CollaborationTask, repairBrief = ""): Promise<void> => {
 					const attempt = (attempts.get(task.id) ?? 0) + 1;
 					attempts.set(task.id, attempt);
 					const slot = slots.find((candidate) => candidate.id === task.assignee)!;
@@ -467,7 +467,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					}
 					const executePrompt = `${write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task))}\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`;
 					try {
-						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: bounded ? 30_000 : h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					} finally {
 						if (write) activeWriters--;
 					}
@@ -540,17 +540,19 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 						// Quiescence avoids concurrent ownership and stale accepted sibling evidence.
 						if (!repairUsed && !executionFailure && verifier?.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && !plan.tasks.some((task) => task.id !== verifier.id && task.depends_on.includes(owner.id) && taskStates[task.id] === "completed")) {
 							repairUsed = true;
+							// Bound repairs by count (one cycle, two calls), not seconds: a write repair
+							// redoes owner-sized work, and a fixed 30s cap guaranteed "timed out".
 							const approval = "approve one owner repair and one reverify";
-							const choice = await escalateOnce(ctx, `Acceptance rejected by ${verifier.id}: ${taskOutcomes.get(verifier.id)!.summary}. Confirm this is an implementation defect, NOT a permission/decision/tool/budget blocker. Authorize ${owner.assignee} to repair ONLY ${owner.id}'s original scope, then ${verifier.assignee} to reverify? Budget: at most 2 additional paid child calls, 30 seconds each, one cycle total. No uncertain replay or new live/release permission.`, ["remain blocked", approval]);
-							await h.save(collabDir, "repair-approval.json", JSON.stringify({ owner: owner.id, verifier: verifier.id, approved: choice === approval, maxCycles: 1, maxChildCalls: 2, childTimeoutMs: 30_000 }));
+							const choice = await escalateOnce(ctx, `Acceptance rejected by ${verifier.id}: ${taskOutcomes.get(verifier.id)!.summary}. Confirm this is an implementation defect, NOT a permission/decision/tool/budget blocker. Authorize ${owner.assignee} to repair ONLY ${owner.id}'s original scope, then ${verifier.assignee} to reverify? Budget: at most 2 additional paid child calls at the normal child timeout, one cycle total. No uncertain replay or new live/release permission.`, ["remain blocked", approval]);
+							await h.save(collabDir, "repair-approval.json", JSON.stringify({ owner: owner.id, verifier: verifier.id, approved: choice === approval, maxCycles: 1, maxChildCalls: 2, childTimeoutMs: h.childTimeoutMs() }));
 							if (choice === approval && !stopper.stopped()) {
 								const skipped = skippedBy.get(verifier.id) ?? [];
 								const rejection = taskReports.get(verifier.id)!;
 								taskStates[owner.id] = "writing";
-								await executeTask(owner, `BOUNDED OWNER REPAIR — cycle 1/1. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`, true);
+								await executeTask(owner, `BOUNDED OWNER REPAIR — cycle 1/1. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`);
 								if (!executionFailure && !stopper.stopped() && taskStates[owner.id] === "completed") {
 									taskStates[verifier.id] = "reading";
-									await executeTask(verifier, `Reverification 1/1 after owner repair. Original rejected acceptance remains binding:\n${rejection}`, true);
+									await executeTask(verifier, `Reverification 1/1 after owner repair. Original rejected acceptance remains binding:\n${rejection}`);
 									if (taskStates[verifier.id] === "completed") {
 										for (const id of skipped) if (taskStates[id] === "skipped") taskStates[id] = "pending";
 									}

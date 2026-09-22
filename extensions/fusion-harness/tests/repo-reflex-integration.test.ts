@@ -233,7 +233,8 @@ describe("/fh-collaborate repository reflexes", () => {
 			await fh.run("do not release on failure");
 			const repairs = calls.filter((call) => call.prompt.includes("BOUNDED OWNER REPAIR"));
 			expect(repairs).toHaveLength(behavior === "rejected" || behavior === "uncertain" ? 1 : 0);
-			for (const call of repairs) expect(call.timeoutMs).toBe(30_000);
+			// Repairs get the ordinary child timeout (fixture: 1000ms), never a fixed 30s cap.
+			for (const call of repairs) expect(call.timeoutMs).toBe(1000);
 			expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(behavior === "rejected" ? 2 : 1);
 			expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(false);
 			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(false);
