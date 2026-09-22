@@ -97,7 +97,7 @@ import {
 } from "./modules/runtime.ts";
 import { createLane, gitTopLevel, laneStatus, type Lane, type LaneStatus } from "./modules/lanes.ts";
 import { AgentGrid, cellStr, FullWidth, laneRowStr, liveColumn, renderFhPanel, TwoCol } from "./modules/tui.ts";
-import { acquireWriterLease, type WriterLease } from "./modules/writer-lease.ts";
+import { acquireWriterLease, waitForWriterLease, type WriterLease } from "./modules/writer-lease.ts";
 
 // ═══ 1. Defaults ═════════════════════════════════════════════════════════════
 
@@ -1361,7 +1361,7 @@ export default function (pi: ExtensionAPI) {
 		ctx.ui.setStatus(CUSTOM_TYPE, `fh-only: ${slot.name} working…`);
 		try {
 			try {
-				writerLease = acquireWriterLease(ctx.cwd, `/fh-only ${slot.id} ${path.basename(artifactsDir)}`);
+				writerLease = await waitForWriterLease(ctx.cwd, `/fh-only ${slot.id} ${path.basename(artifactsDir)}`, { signal: stopper.signal, onWait: (holder) => ctx.ui.setStatus(CUSTOM_TYPE, `waiting for the writer lease — ${holder}`) });
 			} catch (error) {
 				panel({ kind: "error", command: "fh-only", ok: false, agent: toStat(run), artifactsDir }, error instanceof Error ? error.message : String(error));
 				return;

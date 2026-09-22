@@ -62,3 +62,36 @@ export function acquireWriterLease(cwd: string, ownerLabel: string): WriterLease
 	}
 	throw new Error(`could not acquire writer lease for ${canonicalCwd(cwd)}`);
 }
+
+export function isWriterLeaseBusy(error: unknown): boolean {
+	return error instanceof Error && error.message.startsWith("writer lease busy");
+}
+
+/**
+ * Queue for the checkout instead of failing: a second write-capable run waits
+ * until the live holder releases (a dead holder is reclaimed immediately by
+ * acquireWriterLease). No deadline — only the caller's stop signal ends the wait.
+ */
+export async function waitForWriterLease(
+	cwd: string,
+	ownerLabel: string,
+	opts: { signal?: AbortSignal; pollMs?: number; onWait?: (holder: string) => void } = {},
+): Promise<WriterLease> {
+	let announced = false;
+	for (;;) {
+		try {
+			return acquireWriterLease(cwd, ownerLabel);
+		} catch (error) {
+			if (!isWriterLeaseBusy(error)) throw error;
+			if (!announced) {
+				announced = true;
+				opts.onWait?.((error as Error).message);
+			}
+		}
+		if (opts.signal?.aborted) throw new Error(`stopped while waiting for the writer lease on ${canonicalCwd(cwd)}`);
+		await new Promise<void>((resolve) => {
+			const timer = setTimeout(resolve, opts.pollMs ?? 5_000);
+			opts.signal?.addEventListener("abort", () => { clearTimeout(timer); resolve(); }, { once: true });
+		});
+	}
+}

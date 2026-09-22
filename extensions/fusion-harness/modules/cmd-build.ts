@@ -68,7 +68,7 @@ import {
 	type HarnessDeps,
 	type Role,
 } from "./runtime.ts";
-import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
+import { waitForWriterLease, type WriterLease } from "./writer-lease.ts";
 
 const execFileAsync = promisify(execFile);
 const PUBLISH_TIMEOUT_MS = 30_000;
@@ -295,7 +295,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				if (publishTo) {
 					const parsedTarget = parsePublishTo(publishTo);
 					targetRef = parsedTarget.targetRef;
-					writerLease = acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
+					writerLease = await waitForWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`, { onWait: (holder) => ctx.ui.setStatus(CUSTOM_TYPE, `waiting for the writer lease — ${holder}`) });
 					await refreshRepoStateRemote(ctx.cwd, parsedTarget.remote);
 					repoRefreshed = true;
 				}
@@ -418,7 +418,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 
 				let admissionFailure: string | undefined;
 				try {
-					writerLease ??= acquireWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`);
+					writerLease ??= await waitForWriterLease(ctx.cwd, `/fh-collaborate ${path.basename(artifactsDir)}`, { signal: stopper.signal, onWait: (holder) => ctx.ui.setStatus(CUSTOM_TYPE, `waiting for the writer lease — ${holder}`) });
 				} catch (error) {
 					admissionFailure = error instanceof Error ? error.message : String(error);
 				}
@@ -727,7 +727,7 @@ export function registerAutoValidateCommand(pi: ExtensionAPI, h: HarnessDeps): (
 
 			try {
 				try {
-					writerLease = acquireWriterLease(ctx.cwd, `/fh-auto-validate ${path.basename(artifactsDir)}`);
+					writerLease = await waitForWriterLease(ctx.cwd, `/fh-auto-validate ${path.basename(artifactsDir)}`, { signal: stopper.signal, onWait: (holder) => ctx.ui.setStatus(CUSTOM_TYPE, `waiting for the writer lease — ${holder}`) });
 				} catch (error) {
 					fail(toStat(builder), error instanceof Error ? error.message : String(error));
 					return;

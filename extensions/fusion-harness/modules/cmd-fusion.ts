@@ -37,7 +37,7 @@ import {
 	type Role,
 	type SpawnIdentity,
 } from "./runtime.ts";
-import { acquireWriterLease, type WriterLease } from "./writer-lease.ts";
+import { waitForWriterLease, type WriterLease } from "./writer-lease.ts";
 
 export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
 	let handler: (raw: string, ctx: any) => Promise<void>;
@@ -103,7 +103,7 @@ export function registerFusionCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: s
 				}
 
 				try {
-					writerLease = acquireWriterLease(ctx.cwd, `/fh-fusion ${path.basename(artifactsDir)}`);
+					writerLease = await waitForWriterLease(ctx.cwd, `/fh-fusion ${path.basename(artifactsDir)}`, { signal: stopper.signal, onWait: (holder) => ctx.ui.setStatus(CUSTOM_TYPE, `waiting for the writer lease — ${holder}`) });
 				} catch (error) {
 					h.panel({ kind: "error", command: "fh-fusion", ok: false, sources: runs.map(toStat), artifactsDir }, error instanceof Error ? error.message : String(error));
 					return;

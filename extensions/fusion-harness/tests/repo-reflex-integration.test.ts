@@ -225,17 +225,21 @@ describe("parseCollaborateArgs", () => {
 });
 
 describe("/fh-collaborate repository reflexes", () => {
-	test("writer admission refusal still reaches the read-only architect digest", async () => {
+	test("a busy writer lease queues the run instead of blocking it", async () => {
 		const cwd = repo();
 		const lease = acquireWriterLease(cwd, "other writer");
-		try {
-			const fh = harness(cwd);
-			await fh.run("do not bypass lease");
-			expect(calls.at(-1)!.prompt).toContain("READ-ONLY BLOCKED DIGEST");
-			expect(calls.every((call) => call.tools === "read,grep,find,ls")).toBe(true);
-			expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("writer lease busy");
-		} finally { lease.release(); }
-	});
+		const statuses: string[] = [];
+		const fh = harness(cwd);
+		(fh.ctx.ui as any).setStatus = (_type: string, text: string) => statuses.push(String(text));
+		const running = fh.run("wait for the other writer");
+		await new Promise((resolve) => setTimeout(resolve, 200));
+		expect(calls.some((call) => call.prompt.includes("executing delegated task"))).toBe(false);
+		lease.release();
+		await running;
+		expect(statuses.some((text) => text.startsWith("waiting for the writer lease"))).toBe(true);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task"))).toBe(true);
+		expect(existsSync(join(fh.artifacts, "collaborate/final.md")) ? readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8") : "").not.toContain("writer lease busy");
+	}, 20_000);
 	for (const behavior of ["rejected", "uncertain", "decision", "permission"] as const) {
 		test(`repair stops without progress: ${behavior}`, async () => {
 			repairFixture = true;
