@@ -142,7 +142,7 @@ export function initializeCollaborationTaskStates(tasks: readonly Pick<Collabora
 	return Object.fromEntries(tasks.map((task) => [task.id, "pending" as const]));
 }
 
-function descendantIds(tasks: readonly Pick<CollaborationTask, "id" | "depends_on">[], taskId: string): string[] {
+export function collaborationDescendantIds(tasks: readonly Pick<CollaborationTask, "id" | "depends_on">[], taskId: string): string[] {
 	const descendants: string[] = [];
 	const queue = [taskId];
 	const seen = new Set(queue);
@@ -175,7 +175,7 @@ export function applyCollaborationTaskOutcome(
 	const states = { ...currentStates, [taskId]: outcome.status };
 	const skippedTaskIds: string[] = [];
 	if (outcome.status === "no_op" || outcome.status === "blocked") {
-		for (const descendantId of descendantIds(tasks, taskId)) {
+		for (const descendantId of collaborationDescendantIds(tasks, taskId)) {
 			const state = states[descendantId];
 			if (state === "reading" || state === "writing") {
 				throw new Error(`scheduler invariant violated: descendant ${descendantId} was running before ${taskId} finished`);
