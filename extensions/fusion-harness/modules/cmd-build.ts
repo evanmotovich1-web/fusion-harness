@@ -24,6 +24,7 @@ import {
 	parseCollaborationTaskOutcome,
 	selectCollaborationDecisionRequest,
 	selectStartableCollaborationTasks,
+	collaborationDescendantIds,
 	type CollaborationTaskOutcome,
 	type CollaborationTaskStates,
 } from "./collaboration-outcome.ts";
@@ -435,7 +436,9 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				const busySlots = new Set<string>();
 				const inFlight = new Map<string, Promise<void>>();
 				let executionFailure: string | undefined = admissionFailure;
-				let repairUsed = false;
+				const lastRejection = new Map<string, string>();
+				const repairCycles = new Map<string, number>();
+				const repairLog: Array<{ owner: string; verifier: string; cycle: number; childTimeoutMs: number; startedAt: number }> = [];
 				const attempts = new Map<string, number>();
 				const skippedBy = new Map<string, string[]>();
 				const TASK_GLYPH: Record<string, string> = { pending: "○", queued: "◌", reading: "◐", writing: "●", completed: "✓", no_op: "–", blocked: "■", needs_decision: "?", failed: "✗", skipped: "·" };
@@ -453,7 +456,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					for (const dep of task.depends_on) parts.push(`\n## COMPLETED DEPENDENCY ${dep}\n${taskReports.get(dep) ?? "(report on disk)"}`);
 					return parts.join("\n");
 				};
-				const executeTask = async (task: CollaborationTask, repairBrief = "", bounded = false): Promise<void> => {
+				const executeTask = async (task: CollaborationTask, repairBrief = ""): Promise<void> => {
 					const attempt = (attempts.get(task.id) ?? 0) + 1;
 					attempts.set(task.id, attempt);
 					const slot = slots.find((candidate) => candidate.id === task.assignee)!;
@@ -467,7 +470,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					}
 					const executePrompt = `${write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task))}\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`;
 					try {
-						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: bounded ? 30_000 : h.childTimeoutMs(), signal: stopper.signal });
+						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					} finally {
 						if (write) activeWriters--;
 					}
@@ -517,7 +520,9 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				ctx.ui.setStatus(CUSTOM_TYPE, "collaborate: executing the delegation graph…");
 				renderBoard();
 				while (!stopper.stopped()) {
-					if (!executionFailure && !Object.values(taskStates).includes("blocked")) {
+					// A blocked or failed task stops only its own descendants (they stay skipped/pending);
+					// every independent branch keeps running. Only a refused writer lease stops all work.
+					if (!admissionFailure) {
 						const startable = selectStartableCollaborationTasks(plan.tasks, taskStates, busySlots, activeWriters > 0);
 						for (const taskId of startable) {
 							const task = plan.tasks.find((candidate) => candidate.id === taskId)!;
@@ -532,31 +537,38 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					}
 					renderBoard();
 					if (!inFlight.size) {
-						const blocked = plan.tasks.filter((task) => taskStates[task.id] === "blocked");
-						const verifier = blocked.length === 1 ? blocked[0] : undefined;
-						const target = verifier && taskOutcomes.get(verifier.id)?.repair_target;
-						const owner = plan.tasks.find((task) => task.id === target);
-						// Only settled, independent acceptance can nominate its original writer.
-						// Quiescence avoids concurrent ownership and stale accepted sibling evidence.
-						if (!repairUsed && !executionFailure && verifier?.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && !plan.tasks.some((task) => task.id !== verifier.id && task.depends_on.includes(owner.id) && taskStates[task.id] === "completed")) {
-							repairUsed = true;
-							const approval = "approve one owner repair and one reverify";
-							const choice = await escalateOnce(ctx, `Acceptance rejected by ${verifier.id}: ${taskOutcomes.get(verifier.id)!.summary}. Confirm this is an implementation defect, NOT a permission/decision/tool/budget blocker. Authorize ${owner.assignee} to repair ONLY ${owner.id}'s original scope, then ${verifier.assignee} to reverify? Budget: at most 2 additional paid child calls, 30 seconds each, one cycle total. No uncertain replay or new live/release permission.`, ["remain blocked", approval]);
-							await h.save(collabDir, "repair-approval.json", JSON.stringify({ owner: owner.id, verifier: verifier.id, approved: choice === approval, maxCycles: 1, maxChildCalls: 2, childTimeoutMs: 30_000 }));
-							if (choice === approval && !stopper.stopped()) {
-								const skipped = skippedBy.get(verifier.id) ?? [];
-								const rejection = taskReports.get(verifier.id)!;
-								taskStates[owner.id] = "writing";
-								await executeTask(owner, `BOUNDED OWNER REPAIR — cycle 1/1. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`, true);
-								if (!executionFailure && !stopper.stopped() && taskStates[owner.id] === "completed") {
-									taskStates[verifier.id] = "reading";
-									await executeTask(verifier, `Reverification 1/1 after owner repair. Original rejected acceptance remains binding:\n${rejection}`, true);
-									if (taskStates[verifier.id] === "completed") {
-										for (const id of skipped) if (taskStates[id] === "skipped") taskStates[id] = "pending";
-									}
+						// Owner repair: a read-mode verifier rejected its write-mode dependency and named it.
+						// No cycle cap and no per-cycle prompt — repairs repeat while the verifier keeps
+						// producing NEW rejection evidence. An identical rejection means no progress: stop.
+						const repair = admissionFailure ? undefined : plan.tasks.map((verifier) => {
+							const outcome = taskStates[verifier.id] === "blocked" ? taskOutcomes.get(verifier.id) : undefined;
+							const owner = outcome?.repair_target ? plan.tasks.find((task) => task.id === outcome.repair_target) : undefined;
+							const rejection = taskReports.get(verifier.id) ?? "";
+							const eligible = verifier.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && lastRejection.get(verifier.id) !== rejection;
+							return eligible ? { verifier, owner: owner!, rejection } : undefined;
+						}).find(Boolean);
+						if (repair && !stopper.stopped()) {
+							const { verifier, owner, rejection } = repair;
+							lastRejection.set(verifier.id, rejection);
+							const cycle = (repairCycles.get(verifier.id) ?? 0) + 1;
+							repairCycles.set(verifier.id, cycle);
+							repairLog.push({ owner: owner.id, verifier: verifier.id, cycle, childTimeoutMs: h.childTimeoutMs(), startedAt: Date.now() });
+							await h.save(collabDir, "repairs.json", JSON.stringify(repairLog, null, 2));
+							taskStates[owner.id] = "writing";
+							await executeTask(owner, `OWNER REPAIR — cycle ${cycle}. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`);
+							if (!stopper.stopped() && taskStates[owner.id] === "completed") {
+								// The repair changed the owner's output: every other accepted descendant is stale.
+								for (const id of collaborationDescendantIds(plan.tasks, owner.id)) {
+									if (id !== verifier.id && taskStates[id] === "completed") taskStates[id] = "pending";
 								}
-								continue;
+								taskStates[verifier.id] = "reading";
+								await executeTask(verifier, `Reverification after owner repair cycle ${cycle}. Original rejected acceptance remains binding:\n${rejection}`);
+								if (taskStates[verifier.id] === "completed") {
+									// From the DAG, not skippedBy: a repeat rejection records no newly skipped ids.
+									for (const id of collaborationDescendantIds(plan.tasks, verifier.id)) if (taskStates[id] === "skipped") taskStates[id] = "pending";
+								}
 							}
+							continue;
 						}
 						break;
 					}

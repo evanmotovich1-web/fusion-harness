@@ -25,6 +25,8 @@ let repairFixture = false;
 let repairFixed = false;
 let repairBehavior: "success" | "rejected" | "uncertain" | "decision" | "permission" = "success";
 let malformedTaskId: string | null = null;
+let independentFixture = false;
+let rejectionsBeforeFix = 0;
 let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
@@ -33,27 +35,35 @@ mock.module("../modules/child-runner.ts", () => ({
 		run.status = "working";
 		run.startedAt = Date.now();
 		run.sessionRef = `${run.slot?.id ?? run.role}-${calls.length}`;
-		if (repairFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
+		if (independentFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			run.text = JSON.stringify({ tasks: [
+				{ id: "1.a", assignee: "sol", description: "blocked branch", depends_on: [], mode: "read" },
+				{ id: "1.b", assignee: "terra", description: "independent root", depends_on: [], mode: "read" },
+				{ id: "2.b", assignee: "terra", description: "independent follow-up", depends_on: ["1.b"], mode: "read" },
+				{ id: "1.c", assignee: "fable", description: "third slot", depends_on: [], mode: "read" },
+			] });
+		} else if (repairFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
 			run.text = JSON.stringify({ tasks: [
 				{ id: "1.a", assignee: "sol", description: "implement", depends_on: [], mode: "write" },
 				{ id: "2.a", assignee: "terra", description: "verify acceptance", depends_on: ["1.a"], mode: "read" },
 				{ id: "3.a", assignee: "fable", description: "live release", depends_on: ["2.a"], mode: "write" },
 			] });
-		} else if (repairFixture && opts.prompt.includes("BOUNDED OWNER REPAIR")) {
+		} else if (repairFixture && opts.prompt.includes("OWNER REPAIR")) {
 			if (repairBehavior === "uncertain") {
 				run.status = "error";
 				run.exitCode = 124;
 				run.error = "uncertain timeout";
 				return run;
 			}
-			repairFixed = repairBehavior !== "rejected";
+			if (rejectionsBeforeFix > 0) rejectionsBeforeFix--;
+			repairFixed = repairBehavior !== "rejected" && rejectionsBeforeFix === 0;
 			run.text = 'FH_TASK_OUTCOME: {"schema_version":1,"status":"completed","summary":"repair executed"}';
 		} else if (repairFixture && opts.prompt.includes("executing delegated task 2.a") && !repairFixed) {
 			run.text = repairBehavior === "decision"
 				? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"needs_decision","summary":"requires permission","decision":{"question":"approve?","options":["yes","no"]}}'
 				: repairBehavior === "permission"
 					? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"blocked","summary":"missing permission"}'
-					: 'FH_TASK_OUTCOME: {"schema_version":1,"status":"blocked","summary":"acceptance rejected","repair_target":"1.a"}';
+					: `acceptance rejected (${rejectionsBeforeFix} defects left)\n\nFH_TASK_OUTCOME: {"schema_version":1,"status":"blocked","summary":"acceptance rejected","repair_target":"1.a"}`;
 		} else if (opts.prompt.includes("Merge them into ONE delegation plan")) {
 			run.text = JSON.stringify({
 				tasks: [
@@ -99,6 +109,8 @@ afterEach(() => {
 	repairFixed = false;
 	repairBehavior = "success";
 	malformedTaskId = null;
+	independentFixture = false;
+	rejectionsBeforeFix = 0;
 	onFinalCoordination = null;
 	while (files.length) rmSync(files.pop()!, { force: true });
 	while (dirs.length) rmSync(dirs.pop()!, { recursive: true, force: true });
@@ -224,16 +236,16 @@ describe("/fh-collaborate repository reflexes", () => {
 			expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("writer lease busy");
 		} finally { lease.release(); }
 	});
-	for (const behavior of ["rejected", "uncertain", "decision", "permission", "no approval"] as const) {
-		test(`repair fail-closed: ${behavior}`, async () => {
+	for (const behavior of ["rejected", "uncertain", "decision", "permission"] as const) {
+		test(`repair stops without progress: ${behavior}`, async () => {
 			repairFixture = true;
-			repairBehavior = behavior === "no approval" ? "success" : behavior;
+			repairBehavior = behavior;
 			const fh = harness(repo());
-			if (behavior !== "no approval") (fh.ctx.ui as any).select = async (_q: string, options: string[]) => options.find((option) => option.startsWith("approve"));
 			await fh.run("do not release on failure");
-			const repairs = calls.filter((call) => call.prompt.includes("BOUNDED OWNER REPAIR"));
+			const repairs = calls.filter((call) => call.prompt.includes("OWNER REPAIR"));
 			expect(repairs).toHaveLength(behavior === "rejected" || behavior === "uncertain" ? 1 : 0);
-			for (const call of repairs) expect(call.timeoutMs).toBe(30_000);
+			// Repairs get the ordinary child timeout (fixture: 1000ms), never a fixed 30s cap.
+			for (const call of repairs) expect(call.timeoutMs).toBe(1000);
 			expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(behavior === "rejected" ? 2 : 1);
 			expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(false);
 			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(false);
@@ -242,16 +254,33 @@ describe("/fh-collaborate repository reflexes", () => {
 			expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
 		});
 	}
-	test("approved acceptance rejection routes once to owner then independent reverify", async () => {
+	test("repairs repeat without a cap while each rejection carries new evidence", async () => {
+		repairFixture = true;
+		rejectionsBeforeFix = 3;
+		const fh = harness(repo());
+		await fh.run("repair until accepted");
+		expect(calls.filter((call) => call.prompt.includes("OWNER REPAIR"))).toHaveLength(3);
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(4);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(true);
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "collaborate/repairs.json"), "utf8"))).toHaveLength(3);
+	});
+	test("a blocked task does not stop an independent branch", async () => {
+		independentFixture = true;
+		blockTaskId = "1.a";
+		const fh = harness(repo());
+		await fh.run("keep independent work moving");
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 2.b"))).toBe(true);
+		expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("2.b: completed");
+	});
+	test("acceptance rejection routes to owner then independent reverify with no approval prompt", async () => {
 		repairFixture = true;
 		const fh = harness(repo());
-		(fh.ctx.ui as any).select = async (_question: string, options: string[]) => options.find((option) => option.startsWith("approve"));
 		await fh.run("repair acceptance");
-		const repair = calls.findIndex((call) => call.prompt.includes("BOUNDED OWNER REPAIR"));
+		const repair = calls.findIndex((call) => call.prompt.includes("OWNER REPAIR"));
 		expect(repair).toBeGreaterThan(-1);
 		expect(calls[repair]!.slot).toBe("sol");
 		expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(2);
-		expect(calls.filter((call) => call.prompt.includes("BOUNDED OWNER REPAIR"))).toHaveLength(1);
+		expect(calls.filter((call) => call.prompt.includes("OWNER REPAIR"))).toHaveLength(1);
 		expect(readFileSync(join(fh.artifacts, "collaborate/reports/2.a-attempt-1.md"), "utf8")).toContain("acceptance rejected");
 	});
 	test("already_integrated --publish-to does not spawn children", async () => {
