@@ -61,7 +61,8 @@ describe("orchestration contracts", () => {
   test("collaborate serializes write-enabled children", () => {
     expect(source).toContain("activeWriters++");
     expect(source).toContain("maxConcurrentWriteEnabledChildren");
-    expect(source).toContain("acquireWriterLease(ctx.cwd, `/fh-collaborate");
+    // Queued, not refused: a second writer waits for the lease (waitForWriterLease).
+    expect(source).toContain("waitForWriterLease(ctx.cwd, `/fh-collaborate");
     expect(source).toContain("parseStrictJsonObject(architectRun.text");
     expect(source).toContain("tools: READONLY_TOOLS");
     expect(source).toContain("worktreeCommandsObserved");
