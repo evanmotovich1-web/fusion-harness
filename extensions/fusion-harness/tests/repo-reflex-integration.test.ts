@@ -29,6 +29,7 @@ let independentFixture = false;
 let rejectionsBeforeFix = 0;
 let quotaOnceTaskId: string | null = null;
 let bigStackSlots = 0;
+let quotaDuringPlanningSlot: string | null = null;
 let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
@@ -45,7 +46,26 @@ mock.module("../modules/child-runner.ts", () => ({
 			quotaOnceTaskId = null;
 			opts.onQuotaWait?.(0, "429: rate limited, retry after 0 seconds");
 		}
-		if (bigStackSlots && opts.prompt.includes("Merge them into ONE delegation plan")) {
+		const isProposal = !/Merge them into ONE delegation plan|executing delegated task|closing an N-agent collaboration|READ-ONLY BLOCKED DIGEST/.test(opts.prompt);
+		if (quotaDuringPlanningSlot && isProposal && run.slot?.id === quotaDuringPlanningSlot) {
+			opts.onQuotaWait?.(3_600_000, "429: 5-hour usage cap, resets later");
+			if (!run.slot?.architect) {
+				run.text = "";
+				run.exitCode = 1;
+				run.stopReason = "error";
+				run.errorMessage = "429: 5-hour usage cap, resets later";
+				run.status = "pending";
+				return run;
+			}
+		}
+		if (quotaDuringPlanningSlot === "terra" && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			run.text = opts.prompt.includes("UNAVAILABLE THIS RUN (provider quota exhausted): terra")
+				? JSON.stringify({ tasks: [
+					{ id: "1.a", assignee: "fable", description: "plan a", depends_on: [], mode: "read" },
+					{ id: "1.b", assignee: "sol", description: "plan b", depends_on: [], mode: "read" },
+				] })
+				: "architect never told terra is benched";
+		} else if (bigStackSlots && opts.prompt.includes("Merge them into ONE delegation plan")) {
 			// One task per slot: writes chained, reads fanned out behind the first write.
 			const names = ["fable", "sol", "terra", ...Array.from({ length: bigStackSlots - 3 }, (_, i) => `extra${i + 1}`)];
 			run.text = JSON.stringify({ tasks: names.map((name, i) => ({ id: `${i + 1}.a`, assignee: name, description: `work for ${name}`, depends_on: i === 0 ? [] : ["1.a"], mode: i % 2 === 0 ? "write" : "read" })) });
@@ -127,6 +147,7 @@ afterEach(() => {
 	rejectionsBeforeFix = 0;
 	quotaOnceTaskId = null;
 	bigStackSlots = 0;
+	quotaDuringPlanningSlot = null;
 	onFinalCoordination = null;
 	while (files.length) rmSync(files.pop()!, { force: true });
 	while (dirs.length) rmSync(dirs.pop()!, { recursive: true, force: true });
@@ -321,6 +342,28 @@ describe("/fh-collaborate repository reflexes", () => {
 			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(true);
 		}, 30_000);
 	}
+	test("a builder out of quota during planning is benched, not waited on", async () => {
+		quotaDuringPlanningSlot = "terra";
+		const statuses: string[] = [];
+		const fh = harness(repo());
+		(fh.ctx.ui as any).setStatus = (_type: string, text: string) => statuses.push(String(text));
+		await fh.run("keep going without terra");
+		expect(readFileSync(join(fh.artifacts, "collaborate/proposals/terra.md"), "utf8")).toContain("BENCHED");
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "collaborate/quota-benched.json"), "utf8")).terra).toBeDefined();
+		expect(statuses.some((text) => text.includes("benched terra"))).toBe(true);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 1.a"))).toBe(true);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 1.b"))).toBe(true);
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
+	});
+	test("an architect out of quota during planning waits visibly instead of being benched", async () => {
+		quotaDuringPlanningSlot = "fable";
+		const statuses: string[] = [];
+		const fh = harness(repo());
+		(fh.ctx.ui as any).setStatus = (_type: string, text: string) => statuses.push(String(text));
+		await fh.run("architect waits");
+		expect(statuses.some((text) => text.includes("architect fable") && text.includes("out of provider quota"))).toBe(true);
+		expect(existsSync(join(fh.artifacts, "collaborate/quota-benched.json"))).toBe(false);
+	});
 	test("acceptance rejection routes to owner then independent reverify with no approval prompt", async () => {
 		repairFixture = true;
 		const fh = harness(repo());
