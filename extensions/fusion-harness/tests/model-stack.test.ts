@@ -54,9 +54,16 @@ describe("model stack", () => {
     expect(() => loadModelStack(fixture(body).file)).toThrow("model-stack config invalid");
   });
 
-  test("rejects six slots", () => {
-    const extra = [1,2,3].map((n) => `- name: extra${n}\n  model: google/gemini-${n}\n`).join("");
-    expect(() => loadModelStack(fixture(valid + extra).file)).toThrow("slot count must be between 2 and 5");
+  test("accepts six or more slots — no upper cap — each with its own color", () => {
+    const extra = [1,2,3,4,5].map((n) => `- name: extra${n}\n  model: google/gemini-${n}\n`).join("");
+    const stack = loadModelStack(fixture(valid + extra).file);
+    expect(stack.slots.length).toBeGreaterThanOrEqual(6);
+    expect(new Set(stack.slots.map((slot) => slot.color)).size).toBe(stack.slots.length);
+  });
+
+  test("still needs at least two slots", () => {
+    const one = valid.split("\n- name:")[0] + "\n";
+    expect(() => loadModelStack(fixture(one).file)).toThrow("config invalid");
   });
 
   test("resolves a system prompt relative to YAML", () => {

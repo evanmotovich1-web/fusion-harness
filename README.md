@@ -1,6 +1,6 @@
 # fusion-harness
 
-> **Fuse 2–5 frontier models instead of racing them. AND, not OR.**
+> **Fuse 2 or more frontier models instead of racing them. AND, not OR.**
 
 📺 V2 walkthrough: **[Understand how to use the Pi Coding Agent to COMBINE COMPUTE not SELECT COMPUTE](https://youtu.be/rqZHR-hRllI)**
 
@@ -14,7 +14,7 @@
   <img src="images/hero.png" alt="MODEL FUSION — multiple model streams fusing into one over an engineer's keyboard" width="850">
 </p>
 
-**Fuse 2–5 frontier models instead of racing them. AND, not OR.**
+**Fuse 2 or more frontier models instead of racing them. AND, not OR.**
 
 A composable Pi extension with one configured ARCHITECT, one primary/Main BUILDER (the raw-chat host), and up to three secondary builders. It provides N-way opinions, fusion, debate, coordinated implementation, direct one-agent routing, model selection, and gate-first validation without taking over Pi's footer.
 
@@ -83,7 +83,7 @@ The extension selects the configured primary builder as Pi's live host model. In
 
 ## Model stack configuration
 
-`--fh-config <path>` accepts an explicit YAML list with 2–5 slots:
+`--fh-config <path>` accepts an explicit YAML list with 2 or more slots:
 
 ```yaml
 - name: fable
@@ -106,7 +106,7 @@ The extension selects the configured primary builder as Pi's live host model. In
 
 Rules:
 
-- 2–5 slots.
+- 2 or more slots (no upper cap).
 - Exactly one `architect: true`.
 - Exactly one **non-architect** `primary: true`; `primary` is only for the Main builder.
 - Unique 1–16 character names (`A-Za-z0-9_-`).
