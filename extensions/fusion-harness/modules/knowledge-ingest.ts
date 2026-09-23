@@ -8,10 +8,10 @@
 
 import { createHash, randomUUID } from "node:crypto";
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as path from "node:path";
 import { spawnSync } from "node:child_process";
 import { DEFAULT_CAPTURE_RELATIVE } from "./knowledge-config.ts";
+import { tmpRoot } from "./tmp-root.ts";
 
 export interface KnowledgeCaptureResult {
 	status: "captured" | "skipped" | "rejected" | "disabled";
@@ -45,7 +45,7 @@ function canonical(p: string): string {
 }
 
 export function vaultLockPath(vaultRoot: string): string {
-	const root = path.join(fs.existsSync("/tmp") ? "/tmp" : os.tmpdir(), "fusion-harness-vault-locks");
+	const root = path.join(tmpRoot(), "fusion-harness-vault-locks");
 	const key = createHash("sha256").update(canonical(vaultRoot)).digest("hex").slice(0, 24);
 	return path.join(root, `${key}.lock`);
 }

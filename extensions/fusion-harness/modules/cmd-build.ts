@@ -10,7 +10,6 @@
  */
 
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { execFile } from "node:child_process";
@@ -69,6 +68,7 @@ import {
 	type Role,
 } from "./runtime.ts";
 import { waitForWriterLease, type WriterLease } from "./writer-lease.ts";
+import { tmpRoot } from "./tmp-root.ts";
 
 const execFileAsync = promisify(execFile);
 const PUBLISH_TIMEOUT_MS = 30_000;
@@ -119,7 +119,7 @@ export function parsePublishTo(publishTo: string): { remote: string; branch: str
 }
 
 function consumedReceiptPath(repositoryId: string): string {
-	const root = path.join(fs.existsSync("/tmp") ? "/tmp" : os.tmpdir(), "fusion-harness-consumed-receipts");
+	const root = path.join(tmpRoot(), "fusion-harness-consumed-receipts");
 	return path.join(root, `${repositoryId}.json`);
 }
 

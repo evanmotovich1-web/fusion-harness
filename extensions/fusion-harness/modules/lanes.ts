@@ -14,9 +14,9 @@
 import { execFile } from "node:child_process";
 import { createHash } from "node:crypto";
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as path from "node:path";
 import { promisify } from "node:util";
+import { tmpRoot } from "./tmp-root";
 
 const execFileAsync = promisify(execFile);
 
@@ -89,7 +89,7 @@ function canonical(cwd: string): string {
 export const laneKey = (cwd: string): string => createHash("sha256").update(canonical(cwd)).digest("hex").slice(0, 12);
 
 export function laneRootFor(cwd: string): string {
-	const root = fs.existsSync("/tmp") ? "/tmp" : os.tmpdir();
+	const root = tmpRoot();
 	const readable = canonical(cwd).replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(-40) || "root";
 	return path.join(root, "fusion-harness-lanes", `${readable}-${laneKey(cwd)}`);
 }

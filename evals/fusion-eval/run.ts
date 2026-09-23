@@ -163,10 +163,10 @@ export function loadGroup(name: string): GroupEntry {
 	return group;
 }
 
-function findArtifacts(token: string, since: number): string | undefined {
-	for (const entry of fs.readdirSync("/tmp")) {
+function findArtifacts(token: string, since: number, root = "/tmp"): string | undefined {
+	for (const entry of fs.existsSync(root) ? fs.readdirSync(root) : []) {
 		if (!entry.startsWith("fusion-harness-")) continue;
-		const dir = path.join("/tmp", entry);
+		const dir = path.join(root, entry);
 		try {
 			if (fs.statSync(dir).mtimeMs < since - 60_000) continue;
 			if (fs.readFileSync(path.join(dir, "prompt.md"), "utf8").includes(token)) return dir;
@@ -226,6 +226,29 @@ export function homeReadRules(extra: string[] = []): string {
 	].join("\n");
 }
 
+/**
+ * A private temp root for ONE sandboxed run — the only temp it may write (Enemy pass 11: the shared
+ * TMPDIR holds pi's compiled-extension cache (jiti), which later UNSANDBOXED pi sessions execute, and
+ * /tmp/fusion-harness-* holds the writer leases and artifacts of Evan's own live runs). `tmp/` becomes
+ * the run's TMPDIR and `fh/` its FH_TMP_ROOT (where the harness puts artifacts and leases).
+ */
+export function privateRunRoot(kind: string): { root: string; artifacts: string; env: Record<string, string>; cleanupTemp(): void } {
+	const root = real(fs.mkdtempSync(path.join("/tmp", `fh-eval-root-${kind}-`)));
+	fs.chmodSync(root, 0o700);
+	for (const sub of ["tmp", "fh"]) fs.mkdirSync(path.join(root, sub));
+	return {
+		root,
+		artifacts: path.join(root, "fh"),
+		env: { TMPDIR: path.join(root, "tmp"), FH_TMP_ROOT: path.join(root, "fh") },
+		cleanupTemp: () => fs.rmSync(path.join(root, "tmp"), { recursive: true, force: true }),
+	};
+}
+
+/** Reads of shared temp are denied too (other sessions' transcripts, caches, other runs); a later allow re-opens the run's own dirs. */
+export function sharedTempReadDenies(): string {
+	return `(deny file-read* (subpath "/private/tmp") (subpath ${JSON.stringify(real(os.tmpdir()))}) (subpath "/private/var/tmp"))`;
+}
+
 /** Secret files neither sandbox needs — kept as a second line behind homeReadRules. */
 export function secretReadDenies(): string {
 	const home = os.homedir();
@@ -256,7 +279,7 @@ export function sandboxEnv(extra: Record<string, string> = {}): Record<string, s
  * auth WITHOUT refresh tokens: the trusted parent first refreshes each OAuth token so it outlives
  * the run, so the sandbox can neither rotate (and break) the real login nor keep a refresh token.
  */
-export function prepareAgentDir(minValidityMs: number): { dir: string; cleanup(): void } {
+export function prepareAgentDir(minValidityMs: number, parent = os.tmpdir()): { dir: string; cleanup(): void } {
 	const agent = path.join(os.homedir(), ".pi", "agent");
 	const authFile = path.join(agent, "auth.json");
 	const minutes = `${Math.ceil(minValidityMs / 60_000)}m`;
@@ -268,7 +291,7 @@ export function prepareAgentDir(minValidityMs: number): { dir: string; cleanup()
 			spawnSync("pi", ["auth", "print-bearer-token", "--provider", provider], opts); // lifetime shorter than the run: at least fresh
 		}
 	}
-	const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fh-pi-agent-"));
+	const dir = fs.mkdtempSync(path.join(parent, "fh-pi-agent-"));
 	const auth = Object.fromEntries(Object.entries<any>(readJson(authFile) ?? {}).map(([provider, credential]) => [provider, credential?.type === "oauth" ? { ...credential, refresh: "" } : credential]));
 	fs.writeFileSync(path.join(dir, "auth.json"), JSON.stringify(auth, null, 2), { mode: 0o600 });
 	if (fs.existsSync(path.join(agent, "models-store.json"))) fs.copyFileSync(path.join(agent, "models-store.json"), path.join(dir, "models-store.json"));
@@ -280,23 +303,26 @@ export function prepareAgentDir(minValidityMs: number): { dir: string; cleanup()
 	return { dir, cleanup: () => fs.rmSync(dir, { recursive: true, force: true }) };
 }
 
-export function harnessSandboxProfile(scratch: string, harness: string): string {
+export function harnessSandboxProfile(scratch: string, harness: string, runRoot?: string): string {
 	const home = os.homedir();
 	const loopDir = real(process.env.FH_LOOP_DIR || path.join(home, ".pi", "fusion-harness", "eval-loop"));
 	const own = JSON.stringify(real(scratch));
 	const q = (p: string) => JSON.stringify(real(p));
+	const mine = runRoot ? `(subpath ${q(runRoot)})` : "";
 	return [
 		"(version 1)",
 		"(allow default)",
 		"(deny file-write*)",
-		// No ~/.pi/agent at all: pi runs on a throwaway agent dir in temp (prepareAgentDir).
-		`(allow file-write* (subpath ${own}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") (subpath "/dev"))`,
+		// Writes: its scratch, its private run root (TMPDIR + artifacts), /dev. Not ~/.pi/agent (pi runs on a
+		// throwaway agent dir, prepareAgentDir), not the shared TMPDIR, not anyone else's /tmp/fusion-harness-*.
+		`(allow file-write* (subpath ${own}) ${mine} (subpath "/dev"))`,
+		sharedTempReadDenies(),
 		homeReadRules([path.join(harness, "node_modules")]),
 		`(deny file-read* (subpath ${q(loopDir)}) (subpath ${q(RESULTS_DIR)}) (regex #"^/private/tmp/fh-eval-") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()})`,
-		`(allow file-read* (subpath ${q(harness)}) (subpath ${own}))`,
+		`(allow file-read* (subpath ${q(harness)}) (subpath ${own}) ${mine})`,
 		'(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)"))',
 		// Later rules win: its own scratch repo (and that repo's .git) stays fully usable.
-		`(allow file-read* (subpath ${own}))`,
+		`(allow file-read* (subpath ${own}) ${mine})`,
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
@@ -320,21 +346,22 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const prompt = `${fs.readFileSync(path.join(TASKS_DIR, task, "prompt.md"), "utf8").trim()}\n\n(eval run ${token})`;
 	const startedAt = Date.now();
 	const logPath = path.join(scratch, ".fh-eval-pi.log");
+	const runRoot = privateRunRoot("harness");
 	const exitCode = await new Promise<number | null>((resolve) => {
 		const profile = path.join(profileDir(), `harness-${randomUUID()}.sb`);
-		fs.writeFileSync(profile, harnessSandboxProfile(scratch, harness));
-		const agentDir = prepareAgentDir(RUN_TIMEOUT_MS + 10 * 60_000);
+		fs.writeFileSync(profile, harnessSandboxProfile(scratch, harness, runRoot.root));
+		const agentDir = prepareAgentDir(RUN_TIMEOUT_MS + 10 * 60_000, runRoot.root);
 		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "--no-session", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
 		// Its own process group, killed when it ends: nothing the harness started outlives the run.
-		const child = spawn(cmd!, args, { cwd: scratch, detached: true, env: sandboxEnv({ PI_CODING_AGENT_DIR: agentDir.dir }), stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
+		const child = spawn(cmd!, args, { cwd: scratch, detached: true, env: sandboxEnv({ PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }), stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
 		const killGroup = () => { try { process.kill(-child.pid!, "SIGKILL"); } catch { /* already gone */ } };
 		const timer = setTimeout(killGroup, RUN_TIMEOUT_MS);
-		const done = (code: number | null) => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); agentDir.cleanup(); resolve(code); };
+		const done = (code: number | null) => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); agentDir.cleanup(); runRoot.cleanupTemp(); resolve(code); };
 		child.on("exit", (code) => done(code));
 		child.on("error", () => done(-1));
 	});
 	const wallMs = Date.now() - startedAt;
-	const artifacts = findArtifacts(token, startedAt);
+	const artifacts = findArtifacts(token, startedAt, runRoot.artifacts);
 	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
 	// Hidden tests are read straight from the sealed suite — never copied next to the solution.

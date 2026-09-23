@@ -528,3 +528,34 @@ describe("eval loop — throwaway pi agent dir", () => {
 		expect(require("node:fs").readFileSync(join(agent, "auth.json"), "utf8")).toContain("R-real"); // the real store is untouched
 	});
 });
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pass 11: a run writes only its private temp root", () => {
+	test("shared TMPDIR (pi's compiled-extension cache) and others' /tmp/fusion-harness-* are neither writable nor readable", () => {
+		const { privateRunRoot } = require("../../../evals/fusion-eval/run.ts");
+		const runRoot = privateRunRoot("test");
+		dirs.push(runRoot.root);
+		const scratch = temp("fh-p11-");
+		const shared = require("node:os").tmpdir();
+		// A stand-in for another session's live run and for a jiti cache entry, both outside the run's root.
+		const other = mkdtempSync("/tmp/fusion-harness-fh-p11-other-");
+		dirs.push(other);
+		writeFileSync(join(other, "plan.json"), "{}");
+		const cache = mkdtempSync(join(shared, "fh-p11-jiti-"));
+		dirs.push(cache);
+		writeFileSync(join(cache, "ext.mjs"), "export {};\n");
+		for (const profile of [harnessSandboxProfile(scratch, scratch, runRoot.root), fixSandboxProfile(scratch, temp("fh-p11-loop-"), [], runRoot.root)]) {
+			const file = join(temp("fh-p11-p-"), "p.sb");
+			writeFileSync(file, profile);
+			const sh = (script: string) => require("node:child_process").spawnSync("/usr/bin/sandbox-exec", ["-f", file, "/bin/sh", "-c", script], { encoding: "utf8", env: { PATH: process.env.PATH, ...runRoot.env } }).status;
+			expect(sh(`echo 'evil()' >> '${join(cache, "ext.mjs")}'`)).not.toBe(0);
+			expect(sh(`echo x > '${join(other, "plan.json")}'`)).not.toBe(0);
+			expect(sh(`touch /tmp/fusion-harness-fh-p11-new`)).not.toBe(0);
+			expect(sh(`cat '${join(cache, "ext.mjs")}'`)).not.toBe(0);
+			expect(sh(`cat '${join(other, "plan.json")}'`)).not.toBe(0);
+			// Its own root works: TMPDIR and the artifact root.
+			expect(sh(`echo ok > "$TMPDIR/t" && mkdir -p "$FH_TMP_ROOT/fusion-harness-x" && cat "$TMPDIR/t"`)).toBe(0);
+		}
+		expect(require("node:fs").readFileSync(join(cache, "ext.mjs"), "utf8")).toBe("export {};\n");
+		expect(existsSync("/tmp/fusion-harness-fh-p11-new")).toBe(false);
+	});
+});

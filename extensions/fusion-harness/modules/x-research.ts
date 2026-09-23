@@ -1,8 +1,8 @@
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as path from "node:path";
 import { execFileSync } from "node:child_process";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import { tmpRoot } from "./tmp-root";
 
 export interface XResearchOptions {
 	query: string;
@@ -121,7 +121,7 @@ export function registerXResearchCommand(pi: ExtensionAPI): XResearchRunner {
 		ctx.ui.setStatus("fusion-harness", "research-x: Grok searching live X…");
 		try {
 			const result = await researchX({ query: input });
-			const root = fs.existsSync("/tmp") ? "/tmp" : os.tmpdir();
+			const root = tmpRoot();
 			const dir = await fs.promises.mkdtemp(path.join(root, "fusion-harness-x-"));
 			await fs.promises.writeFile(path.join(dir, "response.json"), `${JSON.stringify(result.raw, null, 2)}\n`, "utf8");
 			const citations = result.urls.length ? `\n\nSources:\n${result.urls.map((url) => `- ${url}`).join("\n")}` : "";
