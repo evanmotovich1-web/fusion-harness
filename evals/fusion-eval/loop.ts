@@ -129,6 +129,23 @@ export function protectedChanges(dir: string, base: string): string[] {
 	return [...changed].filter((file) => file !== "node_modules" && !FIXABLE.test(file));
 }
 
+/**
+ * Commit whatever the fix run changed under extensions/ (the only fixable paths — the
+ * caller has already rejected anything else) and return the new HEAD, or undefined if
+ * nothing changed. Stages by pathspec, never by parsing porcelain: git() trims output,
+ * which once ate the first line's leading space and turned "extensions/…" into
+ * "xtensions/…" in the real end-to-end run.
+ */
+export function commitFixChanges(dir: string, base: string, message: string): string | undefined {
+	const dirty = spawnSync("git", ["status", "--porcelain", "--", "extensions/"], { cwd: dir, encoding: "utf8" }).stdout.trim();
+	if (dirty) {
+		git(["add", "-A", "--", "extensions/"], dir);
+		git(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", message], dir);
+	}
+	const head = git(["rev-parse", "HEAD"], dir);
+	return head === git(["rev-parse", base], dir) ? undefined : head;
+}
+
 /** Remove only the worktrees THIS process created (the pushed fix branches stay on the remote). */
 function cleanupWorktrees(): void {
 	for (const dir of created.splice(0)) {
@@ -152,6 +169,14 @@ function assertCleanGrader(): void {
 	const head = spawnSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).stdout.trim();
 	graderHead ??= head;
 	if (head !== graderHead) throw new Error("grader HEAD moved during the tick — refusing to grade");
+	// Content check, not status: skip-worktree / assume-unchanged hide edits from `git status`.
+	const tree = spawnSync("git", ["ls-tree", "-r", "-z", "HEAD", "--", "evals/"], { cwd: root, encoding: "utf8" }).stdout.split("\0").filter(Boolean);
+	const expected = new Map(tree.map((line) => { const [meta, file] = line.split("\t"); return [file!, meta!.split(" ")[2]!]; }));
+	const files = [...expected.keys()];
+	const actual = spawnSync("git", ["hash-object", "--stdin-paths"], { cwd: root, encoding: "utf8", input: files.join("\n") }).stdout.trim().split("\n");
+	const changed = files.filter((file, i) => actual[i] !== expected.get(file));
+	const extra = spawnSync("git", ["ls-files", "--others", "-z", "--", "evals/"], { cwd: root, encoding: "utf8" }).stdout.split("\0").filter((f) => f && !f.includes("__pycache__"));
+	if (changed.length || extra.length) throw new Error(`grader files differ from the committed grader (${[...changed, ...extra].slice(0, 5).join(", ")}) — refusing to grade`);
 }
 
 function groupFile(name: string): string {
@@ -288,13 +313,8 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			// Checked against the base, not the working tree: commits the agent made itself count too.
 			const forbidden = protectedChanges(dir, base);
 			if (forbidden.length) throw new Error(`fix run changed protected paths (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);
-			const dirty = git(["status", "--porcelain"], dir).split("\n").filter(Boolean).map((line) => line.slice(3)).filter((file) => file !== "node_modules");
-			if (dirty.length) {
-				git(["add", "--", ...dirty], dir);
-				git(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`], dir);
-			}
-			const head = git(["rev-parse", "HEAD"], dir);
-			return head === git(["rev-parse", base], dir) ? undefined : { branch, commit: head };
+			const head = commitFixChanges(dir, base, `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`);
+			return head ? { branch, commit: head } : undefined;
 		},
 		async runTests(commit) {
 			const wt = worktree(commit, `tests-${Date.now()}`);

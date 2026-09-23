@@ -97,7 +97,12 @@ export interface LoopDeps {
 }
 
 /** An error's shape: paths, hashes and numbers removed, so one persisting error is one ROT line. */
-export const errorShape = (message: string) => message.replace(/(?:\/[^\s:'"]+)+/g, "<path>").replace(/\b[0-9a-f]{7,40}\b/g, "<sha>").replace(/\d+/g, "#");
+export const errorShape = (message: string) => {
+	// Key on the error's KIND — the text before the first ": " — so a failure whose tail varies
+	// (model output, paths, timestamps) is still one ROT line until a successful tick clears it.
+	const kind = message.split(/:\s/)[0] ?? message;
+	return kind.replace(/(?:\/[^\s:'"]+)+/g, "<path>").replace(/\b[0-9a-f]{7,40}\b/g, "<sha>").replace(/\d+/g, "#");
+};
 
 export const emptyState = (): LoopState => ({ accepted: {}, attempted: [], history: [] });
 

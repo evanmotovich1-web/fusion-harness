@@ -10,7 +10,7 @@ import { mkdtempSync, rmSync, writeFileSync, mkdirSync, existsSync } from "node:
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { acquireLock, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
+import { acquireLock, commitFixChanges, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
 import { pytest } from "../../../evals/fusion-eval/run.ts";
 
 const LOOP_TS = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts");
@@ -79,6 +79,26 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 		return { dir, git, base, commit };
 	}
 
+	test("committing a fix: a modified tracked file listed FIRST (leading-space porcelain line) is committed intact", () => {
+		// Regression: the real e2e run failed with pathspec 'xtensions/…' — the first porcelain
+		// line's leading space was trimmed away and slice(3) cut the path.
+		const r = repo();
+		writeFileSync(join(r.dir, "extensions/a.ts"), "export const fixed = 1;\n");
+		writeFileSync(join(r.dir, "extensions/new.test.ts"), "// new test\n");
+		const head = commitFixChanges(r.dir, r.base, "fix");
+		expect(head).toBeDefined();
+		expect(r.git("show", "--name-only", "--format=", "HEAD").trim().split("\n").sort()).toEqual(["extensions/a.ts", "extensions/new.test.ts"]);
+		expect(r.git("status", "--porcelain").trim()).toBe("");
+	});
+
+	test("committing a fix: nothing changed → undefined; the agent's own commit is kept", () => {
+		const r = repo();
+		expect(commitFixChanges(r.dir, r.base, "fix")).toBeUndefined();
+		writeFileSync(join(r.dir, "extensions/a.ts"), "export const agent = 1;\n");
+		r.commit();
+		expect(commitFixChanges(r.dir, r.base, "fix")).toBe(r.git("rev-parse", "HEAD").trim());
+	});
+
 	test("a harness-only change is allowed", () => {
 		const r = repo();
 		writeFileSync(join(r.dir, "extensions/a.ts"), "export const fixed = true;\n");
@@ -128,47 +148,99 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 });
 
 describe("eval loop — the grader cannot be influenced by the code under test", () => {
-	test("a planted conftest.py that forces every test to pass does not change a failing solution's score", () => {
+	// Hidden tests in the real suite style: the solution is only ever called through _isolated.
+	const HIDDEN = "from _isolated import value, raises\ndef test_add():\n    assert value('calc', 'evaluate', '1+1') == 2\ndef test_mul():\n    assert value('calc', 'evaluate', '2*3') == 6\ndef test_div0():\n    assert raises('calc', 'evaluate', '1/0') == 'ZeroDivisionError'\n";
+	function grade(solution: string, extra: Record<string, string> = {}) {
 		const dir = temp("fh-loop-grade-");
-		writeFileSync(join(dir, "calc.py"), "def evaluate(expr):\n    return 0\n");
-		writeFileSync(join(dir, "conftest.py"), "import pytest\n@pytest.hookimpl(hookwrapper=True)\ndef pytest_runtest_makereport(item, call):\n    outcome = yield\n    outcome.get_result().outcome = 'passed'\n");
-		writeFileSync(join(dir, "pytest.ini"), "[pytest]\naddopts = -p no:terminal\n");
+		writeFileSync(join(dir, "calc.py"), solution);
+		for (const [name, text] of Object.entries(extra)) writeFileSync(join(dir, name), text);
 		mkdirSync(join(dir, "_hidden_eval"));
-		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "from calc import evaluate\ndef test_add():\n    assert evaluate('1+1') == 2\ndef test_mul():\n    assert evaluate('2*3') == 6\n");
-		const result = pytest(dir, "_hidden_eval");
-		expect(result.total).toBe(2);
-		expect(result.failed).toBe(2);
+		writeFileSync(join(dir, "_hidden_eval/test_h.py"), HIDDEN);
+		return pytest(dir, "_hidden_eval");
+	}
+	const BROKEN = "def evaluate(expr):\n    return 0\n";
+
+	test("an honest solution is graded exactly", () => {
+		expect(grade("def evaluate(expr):\n    if expr == '1/0':\n        raise ZeroDivisionError\n    return {'1+1': 2, '2*3': 7}[expr]\n")).toMatchObject({ total: 3, passed: 2, failed: 1 });
 	}, 120_000);
 
-	test("a solution that forges its own grade at import time still scores 0 (Enemy pass 3 required proof)", () => {
-		const dir = temp("fh-loop-forge-");
-		// Writes an all-pass report in its cwd AND at the --junitxml path it reads from argv, prints a fake
-		// summary, and exits 0 — everything an in-process forger can reach without knowing the canary.
-		writeFileSync(join(dir, "wordstats.py"), [
-			"import os, sys",
-			"xml = '<?xml version=\"1.0\"?><testsuites><testsuite name=\"pytest\" tests=\"2\" failures=\"0\" errors=\"0\" skipped=\"0\"><testcase name=\"test_a\"/><testcase name=\"test_b\"/></testsuite></testsuites>'",
-			"open('.fh-eval-junit.xml', 'w').write(xml)",
-			"for arg in sys.argv:",
-			"    if arg.startswith('--junitxml='):",
-			"        open(arg.split('=', 1)[1], 'w').write(xml)",
-			"print('2 passed in 0.01s')",
+	test("a planted conftest.py / pytest.ini that force every test to pass change nothing", () => {
+		const conftest = "import pytest\n@pytest.hookimpl(hookwrapper=True)\ndef pytest_runtest_makereport(item, call):\n    outcome = yield\n    outcome.get_result().outcome = 'passed'\n";
+		expect(grade(BROKEN, { "conftest.py": conftest, "pytest.ini": "[pytest]\naddopts = -p no:terminal\n" })).toMatchObject({ total: 3, passed: 0 });
+	}, 120_000);
+
+	test("Enemy pass 4: a solution that patches pytest's report records at import still scores 0", () => {
+		// Wraps _pytest.reports.TestReport.from_item_and_call to mark every test passed. It used to
+		// score 3/3; now the grading process never imports the solution, so the patch lands in a
+		// throwaway child that has no pytest in it.
+		const forge = [
+			"try:",
+			"    import _pytest.reports as R",
+			"    orig = R.TestReport.from_item_and_call",
+			"    def forged(item, call):",
+			"        rep = orig(item, call)",
+			"        rep.outcome = 'passed'",
+			"        return rep",
+			"    R.TestReport.from_item_and_call = staticmethod(forged)",
+			"except Exception:",
+			"    pass",
+			BROKEN,
+		].join("\n");
+		expect(grade(forge)).toMatchObject({ total: 3, passed: 0 });
+	}, 120_000);
+
+	test("a solution that writes fake reports, prints a fake summary and exits 0 still scores 0", () => {
+		const forge = [
+			"import os, sys, glob",
+			"xml = '<?xml version=\"1.0\"?><testsuites><testsuite tests=\"3\" failures=\"0\" errors=\"0\" skipped=\"0\"/></testsuites>'",
+			"for p in glob.glob(os.path.expanduser('~/.cache/fh-eval-grading/*/report-*.xml')) + ['.fh-eval-junit.xml']:",
+			"    try: open(p, 'w').write(xml)",
+			"    except Exception: pass",
+			"print('3 passed')",
 			"sys.stdout.flush()",
 			"os._exit(0)",
-			"",
-		].join("\n"));
-		mkdirSync(join(dir, "_hidden_eval"));
-		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "import wordstats\ndef test_a():\n    assert wordstats.count('a') == 1\ndef test_b():\n    assert False\n");
-		const result = pytest(dir, "_hidden_eval");
-		expect(result.passed).toBe(0);
+		].join("\n");
+		expect(grade(forge)).toMatchObject({ total: 3, passed: 0 });
 	}, 120_000);
 
-	test("an honest solution is graded exactly (canary excluded from the counts)", () => {
-		const dir = temp("fh-loop-honest-");
-		writeFileSync(join(dir, "calc.py"), "def evaluate(expr):\n    return eval(expr)\n");
-		mkdirSync(join(dir, "_hidden_eval"));
-		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "from calc import evaluate\ndef test_add():\n    assert evaluate('1+1') == 2\ndef test_bad():\n    assert evaluate('2*3') == 7\n");
-		expect(pytest(dir, "_hidden_eval")).toMatchObject({ total: 2, passed: 1, failed: 1 });
+	test("on macOS the solution cannot read the hidden tests or any reference solution", () => {
+		if (process.platform !== "darwin") return;
+		// Tries to find the expected answers on disk and replay them.
+		const peek = [
+			"import glob, os",
+			"LEAK = []",
+			"for pattern in ['../_hidden_eval/*.py', os.path.expanduser('~/fusion-harness/evals/fusion-eval/tasks/*/reference/*.py')]:",
+			"    for p in glob.glob(pattern):",
+			"        try: LEAK.append(open(p).read()[:20])",
+			"        except Exception: pass",
+			"def evaluate(expr):",
+			"    if LEAK: return {'1+1': 2, '2*3': 6}[expr]",
+			"    return 0",
+		].join("\n");
+		expect(grade(peek)).toMatchObject({ total: 3, passed: 0 });
 	}, 120_000);
+
+	test("Enemy pass 4: an edited grader hidden by skip-worktree is still refused", () => {
+		const root = temp("fh-loop-grader-");
+		const git = (...args: string[]) => execFileSync("git", args, { cwd: root, encoding: "utf8" });
+		git("init", "-q", "-b", "main");
+		mkdirSync(join(root, "evals/fusion-eval"), { recursive: true });
+		const src = require("node:fs").readFileSync(LOOP_TS, "utf8");
+		writeFileSync(join(root, "evals/fusion-eval/loop.ts"), src);
+		writeFileSync(join(root, "evals/fusion-eval/loop-core.ts"), require("node:fs").readFileSync(join(dirname(LOOP_TS), "loop-core.ts"), "utf8"));
+		writeFileSync(join(root, "evals/fusion-eval/run.ts"), "// honest runner\n");
+		writeFileSync(join(root, "evals/fusion-eval/lock.json"), '{"suiteHash":"S"}\n');
+		writeFileSync(join(root, "package.json"), "{}\n");
+		git("add", "-A");
+		git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "grader");
+		git("update-index", "--skip-worktree", "evals/fusion-eval/run.ts");
+		writeFileSync(join(root, "evals/fusion-eval/run.ts"), "// FORGED runner\n");
+		expect(git("status", "--porcelain").trim()).toBe(""); // invisible to status…
+		const probe = `import { realDeps } from ${JSON.stringify(join(root, "evals/fusion-eval/loop.ts"))};\ntry { realDeps({} as any).suiteHash(); console.log("GRADED"); } catch (e) { console.log("REFUSED " + e.message); }`;
+		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, FH_LOOP_DIR: temp("fh-loop-state-"), FH_LOOP_VAULT: "" } });
+		expect(out).toContain("REFUSED"); // …but not to the content check
+		expect(out).toContain("run.ts");
+	}, 60_000);
 
 	test("the trusted runner, started from the neutral dir, never loads a candidate's bunfig.toml preload", () => {
 		const candidate = temp("fh-loop-cand-");

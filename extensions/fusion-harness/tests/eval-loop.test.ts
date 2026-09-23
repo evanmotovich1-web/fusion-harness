@@ -388,6 +388,9 @@ describe("eval loop — decisions", () => {
 		for (let i = 0; i < 5; i++) { w.setHead(`e${i}`); await tick(w.deps, CONFIG); }
 		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(1);
 		expect(errorShape("/a/b/c-17900: x 12")).toBe(errorShape("/d/e-18000: x 99"));
+		// Enemy pass 4 R12: same failure, different words in the tail → still the same kind.
+		expect(errorShape("eval run failed: model said foo at step 3")).toBe(errorShape("eval run failed: provider timeout, other words"));
+		expect(errorShape("eval run failed: x")).not.toBe(errorShape("gh pr create failed: x"));
 	});
 
 	test("afterTick (cleanup, runner refresh) runs inside the lock, and never for a busy tick", async () => {

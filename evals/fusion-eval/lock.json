@@ -1,22 +1,23 @@
 {
   "suite": "fusion-eval",
-  "lockedAt": "2026-09-23T03:51:07.807Z",
+  "lockedAt": "2026-09-23T05:22:42.647Z",
   "files": {
-    "tasks/01-wordstats/hidden/test_hidden_wordstats.py": "337bd579c2e511116b07e6546e2289f669b85d178f7b2bcc99a30cafd5b9feaa",
+    "tasks/01-wordstats/hidden/test_hidden_wordstats.py": "93d62f5d0fba51c7ee89c02c76fb832029c849c927d1c06336cc2972e425d932",
     "tasks/01-wordstats/prompt.md": "c3d6092a70917416636caf91bed6f5476fa899c2ef75cc07c83290c5809cf142",
     "tasks/01-wordstats/reference/wordstats.py": "b803df7035f4c7c6437398c7cd84f4ffac35115666eea6883ba88759fa4150e5",
-    "tasks/02-roman/hidden/test_hidden_roman.py": "51b897efafff83b52466123db45da2e55df7530a9f343190ecffb31fea30f0af",
+    "tasks/02-roman/hidden/test_hidden_roman.py": "af400fcd6c7d0e8dcd58e230aafd88a1902cb15457e8d5221eec4c34df4f21fe",
     "tasks/02-roman/prompt.md": "e991fc6012e50c8aefe46542b6a09b06f1576d7246842a84117f335c7ed4bec2",
     "tasks/02-roman/reference/roman.py": "fdbf18994cf20603ec5be8a86161904a6f14dd87194f2cc68bfff4ffacebd0ab",
-    "tasks/03-intervals/hidden/test_hidden_intervals.py": "bd91202c6b44986a21219567a053555654fe43e2526721ff3bf420ada31e562e",
+    "tasks/03-intervals/hidden/test_hidden_intervals.py": "d41511c5ee9be0ce73047709f7e828eefb54be1aff7abdbf296805b686d9483c",
     "tasks/03-intervals/prompt.md": "7c9dc2dda693bd6075ca8a1525d1b93cf5dd353745f60406c68f0e0e8ff9154b",
     "tasks/03-intervals/reference/intervals.py": "a997f1af6d5d133c0e6534db6818d7f94e08310f9e5eebca011ba978c2184f67",
-    "tasks/04-lru/hidden/test_hidden_lru.py": "2244663ef534c054a2fffe7f0b07ec5829830e0ba554eb18445a16671ddf7bec",
+    "tasks/04-lru/hidden/test_hidden_lru.py": "a608fbe1ee92670ff606e789f6625102c20dbf03a4767979b879df3b2d0ed1ff",
     "tasks/04-lru/prompt.md": "bb2d82a89b9f2bc0b8d03219f52648fc96e35449653159794309eb0c5467809c",
     "tasks/04-lru/reference/lru.py": "4a52282fa9ba7fedcee21b751cc9551925bf53850282b85bd7637714231176ad",
-    "tasks/05-calc/hidden/test_hidden_calc.py": "ee4c4c58778ff29e693ca163f42a27cc4c1de61eebfd02d4456f64ba36d379a5",
+    "tasks/05-calc/hidden/test_hidden_calc.py": "58dec4bba5860f7765f75305e86809311b12630e277ce1b651ae5965e15357e9",
     "tasks/05-calc/prompt.md": "03dac0ae2943b94be89d1648ceb2ee8fcf9e4390cacb2c6e4bd7020733320027",
-    "tasks/05-calc/reference/calc.py": "61bc5779c20df175a7f933e9c23739a0d3491e91fe6e9fe71aea8ecc736ce1b0"
+    "tasks/05-calc/reference/calc.py": "61bc5779c20df175a7f933e9c23739a0d3491e91fe6e9fe71aea8ecc736ce1b0",
+    "tasks/_isolated.py": "5081bceb59749f0fc1dd6f995102827b096c451c3a61f309ead3b8bd18b518bb"
   },
-  "suiteHash": "2039d618f776467a860b44c65c6aeeaebf4dfe5bf43839533ec1503af7d31d46"
+  "suiteHash": "809706c25920a2230594bfe93bda15d0be0374a9863f3987a748b2c25f3475db"
 }

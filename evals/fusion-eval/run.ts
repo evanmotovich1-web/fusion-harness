@@ -74,57 +74,59 @@ export function verifyLock(): string {
 }
 
 /**
- * Grade in a FRESH directory: only the solution's top-level modules are copied in
- * (never its tests, conftest.py, or pytest config), next to the hidden tests.
- * `--noconftest`, `-c /dev/null` and a whitelisted environment keep planted files out.
+ * Grade with the solution OUTSIDE the grading process.
  *
- * The solution itself runs inside pytest when the tests import it, so the grade is
- * cross-checked from three signals it would have to forge together:
- *   - the JUnit report, written OUTSIDE the grading dir under a random name;
- *   - a random canary test that MUST fail (blanket "force pass" tricks flip it);
- *   - pytest's exit code and its final summary line, which must agree with the report.
- * Any inconsistency grades 0.
+ * The pytest process that runs the hidden tests never imports the solution: every
+ * test calls it through tasks/_isolated.py, which runs each call in a fresh child
+ * interpreter and asserts on the returned data here, in the trusted parent. So no
+ * in-process trick (patching pytest, writing reports, exiting early) can change a
+ * result — the solution can only influence what it returns.
+ *
+ * On macOS each child also runs under sandbox-exec: it cannot read the hidden tests,
+ * the grader or the reference solutions (any path containing evals/fusion-eval/ or
+ * _hidden_eval/), cannot write outside temp, and has no network. The grading root
+ * lives outside temp (~/.cache), so a child cannot touch it or the report.
  */
 export function pytest(dir: string, testDir: string): { total: number; passed: number; failed: number; output: string } {
-	const grade = fs.mkdtempSync(path.join(os.tmpdir(), "fh-eval-grade-"));
-	const reportDir = fs.mkdtempSync(path.join(os.tmpdir(), "fh-eval-report-"));
-	fs.chmodSync(reportDir, 0o700);
-	const nonce = randomUUID().replace(/-/g, "");
+	const cache = path.join(os.homedir(), ".cache", "fh-eval-grading");
+	fs.mkdirSync(cache, { recursive: true });
+	const root = fs.mkdtempSync(path.join(cache, "grade-"));
+	const solution = path.join(root, "solution");
+	const hidden = path.join(root, "_hidden_eval");
+	fs.mkdirSync(solution);
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.copyFileSync(path.join(dir, entry.name), path.join(grade, entry.name));
+		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.copyFileSync(path.join(dir, entry.name), path.join(solution, entry.name));
 	}
-	fs.cpSync(path.join(dir, testDir), path.join(grade, testDir), { recursive: true });
-	const canary = `test_zz_canary_${nonce}`;
-	fs.writeFileSync(path.join(grade, testDir, `${canary}.py`), `def ${canary}():\n    assert False, "grader canary: must fail"\n`);
-	const junit = path.join(reportDir, `${nonce}.xml`);
-	const env: Record<string, string> = { PYTHONPATH: grade, PYTHONDONTWRITEBYTECODE: "1" };
+	fs.cpSync(path.join(dir, testDir), hidden, { recursive: true });
+	fs.copyFileSync(path.join(TASKS_DIR, "_isolated.py"), path.join(hidden, "_isolated.py"));
+	const profile = path.join(root, "child.sb");
+	fs.writeFileSync(profile, [
+		"(version 1)",
+		"(allow default)",
+		"(deny network*)",
+		'(deny file-write* (subpath "/"))',
+		'(allow file-write* (subpath "/private/tmp") (subpath "/private/var/folders") (literal "/dev/null") (literal "/dev/tty"))',
+		'(deny file-read* (regex #"/_hidden_eval(/|$)") (regex #"/evals/fusion-eval(/|$)"))',
+		"",
+	].join("\n"));
+	const junit = path.join(root, `report-${randomUUID()}.xml`);
+	const env: Record<string, string> = { FH_EVAL_SOLUTION_DIR: solution, FH_EVAL_SANDBOX_PROFILE: profile, PYTHONDONTWRITEBYTECODE: "1" };
 	for (const key of ["PATH", "HOME", "USER", "LANG", "TMPDIR"]) if (process.env[key]) env[key] = process.env[key]!;
-	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--noconftest", "-c", "/dev/null", "--rootdir", grade, testDir, `--junitxml=${junit}`], { cwd: grade, encoding: "utf8", timeout: 180_000, env });
+	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--noconftest", "-c", "/dev/null", "--rootdir", root, "_hidden_eval", `--junitxml=${junit}`], { cwd: root, encoding: "utf8", timeout: 600_000, env });
 	const output = `${result.stdout ?? ""}${result.stderr ?? ""}`.slice(-4000);
-	const zero = (why: string) => ({ total: Math.max(0, reportedTotal), passed: 0, failed: Math.max(0, reportedTotal), output: `GRADER INTEGRITY: ${why}\n${output}` });
-	let reportedTotal = 0;
 	try {
 		const xml = fs.readFileSync(junit, "utf8");
 		const suite = xml.match(/<testsuite\b[^>]*>/)?.[0] ?? "";
 		const num = (name: string) => Number(suite.match(new RegExp(`\\b${name}="(\\d+)"`))?.[1] ?? 0);
 		const total = num("tests") - num("skipped");
 		const failed = num("failures") + num("errors");
-		reportedTotal = total - 1;
-		// 1) the canary is in the report and failed
-		const canaryCase = xml.match(new RegExp(`<testcase\\b[^>]*name="${canary}"[^>]*>([\\s\\S]*?)</testcase>`));
-		if (!canaryCase || !/<(failure|error)\b/.test(canaryCase[1] ?? "")) return zero("canary test missing or not failed");
-		// 2) exit code agrees (1 = some tests failed; the canary always does)
-		if (result.status !== 1) return zero(`pytest exit code ${result.status} disagrees with the report`);
-		// 3) the summary line agrees with the report
-		const summary = output.replace(/\x1b\[[0-9;]*m/g, "");
-		const count = (label: string) => Number(summary.match(new RegExp(`(\\d+) ${label}`))?.[1] ?? 0);
-		if (count("failed") + count("error") + count("errors") !== failed || count("passed") !== total - failed) return zero("pytest summary disagrees with the report");
-		return { total: total - 1, passed: total - failed, failed: failed - 1, output };
+		// The parent is trusted (it never runs solution code), but stay defensive: exit code must agree.
+		if ((failed === 0) !== (result.status === 0)) return { total, passed: 0, failed: total, output: `GRADER: exit code ${result.status} disagrees with the report\n${output}` };
+		return { total, passed: total - failed, failed, output };
 	} catch {
 		return { total: 0, passed: 0, failed: 0, output }; /* no report: collection failed — scores 0 */
 	} finally {
-		fs.rmSync(grade, { recursive: true, force: true });
-		fs.rmSync(reportDir, { recursive: true, force: true });
+		fs.rmSync(root, { recursive: true, force: true });
 	}
 }
 
