@@ -74,21 +74,37 @@ const execFileAsync = promisify(execFile);
 const PUBLISH_TIMEOUT_MS = 30_000;
 const SHA40_RE = /^[0-9a-f]{40}$/i;
 
-export function parseCollaborateArgs(raw: string): { prompt: string; publishTo: string | null } {
-	const words = (raw ?? "").trim().split(/\s+/).filter(Boolean);
+interface CollaborationInput {
+	prompt: string;
+	publishTo: string | null;
+}
+
+/** Generated content has no option or publication authority. */
+export type CollaboratePromptHandler = (prompt: string, ctx: any) => Promise<void>;
+
+/** Only the direct command may parse options, and only before prompt content. */
+export function parseCollaborateArgs(raw: string): CollaborationInput {
+	let prompt = (raw ?? "").trim();
 	let publishTo: string | null = null;
-	const rest: string[] = [];
-	for (let i = 0; i < words.length; i++) {
-		if (words[i] === "--publish-to") {
-			const value = words[i + 1];
-			if (!value || value.startsWith("-")) throw new Error("Usage: /fh-collaborate [--publish-to <remote/branch>] <prompt>");
-			publishTo = value;
-			i++;
-			continue;
+	while (prompt) {
+		const token = /^\S+/.exec(prompt)![0];
+		if (token === "--") {
+			prompt = prompt.slice(2).trimStart();
+			break;
 		}
-		rest.push(words[i]!);
+		if (token !== "--publish-to") {
+			if (token.startsWith("--publish-to=")) throw new Error("Use --publish-to <remote/branch>, not --publish-to=<target>");
+			break;
+		}
+		if (publishTo !== null) throw new Error("Duplicate --publish-to option");
+		prompt = prompt.slice(token.length).trimStart();
+		const value = /^\S+/.exec(prompt)?.[0];
+		if (!value || value.startsWith("-")) throw new Error("Usage: /fh-collaborate [--publish-to <remote/branch>] <prompt>");
+		parsePublishTo(value); // Validate before any artifacts, agents, or remote refresh.
+		publishTo = value;
+		prompt = prompt.slice(value.length).trimStart();
 	}
-	return { prompt: rest.join(" "), publishTo };
+	return { prompt, publishTo };
 }
 
 const REMOTE_NAME_RE = /^[A-Za-z0-9._-]+$/;
@@ -246,8 +262,8 @@ async function parentOwnedPublish(opts: {
 
 // ═══ /fh-collaborate ═════════════════════════════════════════════════════════
 
-export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (raw: string, ctx: any) => Promise<void> {
-	let handler: (raw: string, ctx: any) => Promise<void>;
+/** Register the user command, returning a separate no-publication prompt entry. */
+export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): CollaboratePromptHandler {
 	// No fixed deliberation choreography: each slot proposes how the work should be done,
 	// the ARCHITECT turns those proposals into one delegation DAG, and the executor runs
 	// on dependency READINESS — a task starts the moment its dependencies are done.
@@ -258,20 +274,10 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 	// task as its own report panel. The live N-column grid streams for the whole command;
 	// the task board is a separate belowEditor sub-widget.
 	const TASKBOARD_WIDGET = `${CUSTOM_TYPE}-taskboard`;
-	pi.registerCommand("fh-collaborate", {
-		description:
-			"Every agent plans read-only, the architect merges one delegation DAG, then tasks execute as dependencies clear — parallel where possible, exactly one shared-CWD writer at a time. Optional --publish-to <remote/branch> is parent-owned non-force fast-forward only.",
-		handler: handler = async (raw, ctx) => {
+	const executeCollaboration = async (input: CollaborationInput, ctx: any): Promise<void> => {
+			const prompt = input.prompt;
+			let publishTo = input.publishTo;
 			h.noteHost(ctx);
-			let parsedArgs: { prompt: string; publishTo: string | null };
-			try {
-				parsedArgs = parseCollaborateArgs(raw ?? "");
-			} catch (error) {
-				ctx.ui.notify(error instanceof Error ? error.message : String(error), "warning");
-				return;
-			}
-			const prompt = parsedArgs.prompt;
-			let publishTo = parsedArgs.publishTo;
 			if (!prompt) {
 				ctx.ui.notify("Usage: /fh-collaborate [--publish-to <remote/branch>] <prompt>", "warning");
 				return;
@@ -671,9 +677,25 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				try { ctx.ui.setWidget(TASKBOARD_WIDGET, undefined); } catch {}
 				ctx.ui.setStatus(CUSTOM_TYPE, undefined);
 			}
+	};
+	pi.registerCommand("fh-collaborate", {
+		description:
+			"Every agent plans read-only, the architect merges one delegation DAG, then tasks execute as dependencies clear — parallel where possible, exactly one shared-CWD writer at a time. Optional leading --publish-to <remote/branch> is parent-owned non-force fast-forward only.",
+		handler: async (raw, ctx) => {
+			let input: CollaborationInput;
+			try {
+				input = parseCollaborateArgs(raw ?? "");
+			} catch (error) {
+				ctx.ui.notify(error instanceof Error ? error.message : String(error), "warning");
+				return;
+			}
+			await executeCollaboration(input, ctx);
 		},
 	});
-	return handler;
+	return async (prompt, ctx) => {
+		if (typeof prompt !== "string") throw new Error("Internal collaboration requires prompt text only");
+		await executeCollaboration({ prompt, publishTo: null }, ctx);
+	};
 }
 
 // ═══ /fh-auto-validate ═══════════════════════════════════════════════════════
