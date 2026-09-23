@@ -58,6 +58,12 @@ describe("orchestration contracts", () => {
     expect(prompt("USER_PROMPT_DEBATE_CLOSING.md")).toContain("every other surviving agent");
   });
 
+  test("saved model groups are reachable by name, command, and key", () => {
+    expect(source).toContain('pi.registerCommand("workflow-model-picker"');
+    expect(source).toContain('pi.registerCommand("fh-groups"');
+    expect(source).toContain('pi.registerShortcut("alt+m"');
+  });
+
   test("collaborate serializes write-enabled children", () => {
     expect(source).toContain("activeWriters++");
     expect(source).toContain("maxConcurrentWriteEnabledChildren");

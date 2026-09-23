@@ -1559,6 +1559,15 @@ export default function (pi: ExtensionAPI) {
 			await pickModelGroup(ctx);
 		},
 	});
+	// Same picker under the name Evan asked for: typing /workflow-model-picker opens it
+	// directly (pi lists the skill of that name only as /skill:workflow-model-picker).
+	pi.registerCommand("workflow-model-picker", {
+		description: "Pick a saved model group (every combo you run is saved, with its reason). Same as alt+m.",
+		handler: async (_args, ctx) => {
+			noteHost(ctx);
+			await pickModelGroup(ctx);
+		},
+	});
 	pi.registerShortcut("alt+m" as any, {
 		description: "fusion-harness: pick a saved model group",
 		handler: async (ctx) => pickModelGroup(ctx),
