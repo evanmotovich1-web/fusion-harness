@@ -10,7 +10,7 @@ import { mkdtempSync, rmSync, writeFileSync, mkdirSync, existsSync } from "node:
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { acquireLock, commitFixChanges, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
+import { acquireLock, commitFixChanges, fixSandboxProfile, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
 import { pytest } from "../../../evals/fusion-eval/run.ts";
 
 const LOOP_TS = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts");
@@ -147,7 +147,10 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 	});
 });
 
-describe("eval loop — the grader cannot be influenced by the code under test", () => {
+// macOS forbids nested sandboxes: inside the loop's fix sandbox these skip; the gate runs them in full.
+const NESTED = Boolean(process.env.FH_IN_SANDBOX);
+
+describe.skipIf(NESTED)("eval loop — the grader cannot be influenced by the code under test", () => {
 	// Hidden tests in the real suite style: the solution is only ever called through _isolated.
 	const HIDDEN = "from _isolated import value, raises\ndef test_add():\n    assert value('calc', 'evaluate', '1+1') == 2\ndef test_mul():\n    assert value('calc', 'evaluate', '2*3') == 6\ndef test_div0():\n    assert raises('calc', 'evaluate', '1/0') == 'ZeroDivisionError'\n";
 	function grade(solution: string, extra: Record<string, string> = {}) {
@@ -336,5 +339,43 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		expect(loopSource).toContain("afterTick: () => { cleanupWorktrees(); refreshRunner(cfg); }");
 		// Every child gets a closed stdin: `pi -p` blocks forever on an open stdin pipe.
 		expect(loopSource).toContain('stdio: ["ignore", "pipe", "pipe"]');
+	}, 60_000);
+});
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — the fix run's sandbox", () => {
+	test("fix agents can edit their worktree and run git there, but cannot touch shared hooks, the grader toolchain, node_modules or the runner", () => {
+		// Like production (~/fusion-harness, ~/.pi/…): fixtures OUTSIDE temp, which the fix run may write.
+		const base = mkdtempSync(join(require("node:os").homedir(), ".cache", "fh-fix-test-"));
+		dirs.push(base);
+		const repo = join(base, "repo");
+		mkdirSync(repo);
+		const git = (...args: string[]) => execFileSync("git", args, { cwd: repo, encoding: "utf8" });
+		git("init", "-q", "-b", "main");
+		mkdirSync(join(repo, "extensions"), { recursive: true });
+		writeFileSync(join(repo, "extensions/a.ts"), "export {};\n");
+		git("add", "-A");
+		git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "base");
+		const fixDir = join(base, "wt");
+		git("worktree", "add", "-q", "--detach", fixDir, "HEAD");
+		const loopDir = join(base, "loop");
+		mkdirSync(loopDir);
+		mkdirSync(join(loopDir, "runner"));
+		const profile = join(temp("fh-fix-prof-"), "fix.sb");
+		writeFileSync(profile, fixSandboxProfile(fixDir, loopDir));
+		const home = require("node:os").homedir();
+		const script = [
+			't() { if eval "$2" >/dev/null 2>&1; then echo "ALLOWED $1"; else echo "blocked $1"; fi; }',
+			't edit-worktree "echo x > extensions/a.ts"',
+			't git-status-in-worktree "git status --porcelain"',
+			`t write-shared-hook "touch ${repo}/.git/hooks/fh-fixprobe"`,
+			`t write-runner "touch ${loopDir}/runner/fh-fixprobe"`,
+			`t write-uv-cache "touch ${home}/.cache/uv/fh-fixprobe"`,
+			`t write-node-modules "touch ${home}/fusion-harness/node_modules/fh-fixprobe"`,
+		].join("\n");
+		const out = execFileSync("/usr/bin/sandbox-exec", ["-f", profile, "/bin/bash", "-c", script], { cwd: fixDir, encoding: "utf8" });
+		for (const probe of [`${repo}/.git/hooks/fh-fixprobe`, `${home}/.cache/uv/fh-fixprobe`, `${home}/fusion-harness/node_modules/fh-fixprobe`]) try { require("node:fs").rmSync(probe, { force: true }); } catch {}
+		expect(out).toContain("ALLOWED edit-worktree");
+		expect(out).toContain("ALLOWED git-status-in-worktree");
+		for (const name of ["write-shared-hook", "write-runner", "write-uv-cache", "write-node-modules"]) expect(out).toContain(`blocked ${name}`);
 	}, 60_000);
 });

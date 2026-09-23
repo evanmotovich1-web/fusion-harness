@@ -21,6 +21,28 @@ import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
 
+/**
+ * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
+ * are deny-by-default: only the fix worktree, that worktree's own git metadata, run
+ * artifacts, temp, the grading cache (so its tests can run) and pi's state — never the
+ * shared .git (hooks, objects), the grader's Python/pytest, node_modules, the runner, or
+ * the loop's results/state. Credentials and the keychain are denied.
+ */
+export function fixSandboxProfile(fixDir: string, loopDir: string): string {
+	const home = os.homedir();
+	const q = (p: string) => JSON.stringify(p);
+	const gitDir = spawnSync("git", ["rev-parse", "--absolute-git-dir"], { cwd: fixDir, encoding: "utf8" }).stdout.trim();
+	return [
+		"(version 1)",
+		"(allow default)",
+		"(deny file-write*)",
+		`(allow file-write* (subpath ${q(fs.realpathSync(fixDir))}) ${gitDir ? `(subpath ${q(fs.realpathSync(gitDir))})` : ""} (regex #"^/private/tmp/fusion-harness-") (regex #"^/private/tmp/fh-") (subpath "/private/var/folders") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".pi", "agent"))}) (subpath "/dev"))`,
+		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}))`,
+		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
+		"",
+	].join("\n");
+}
+
 const HOME = os.homedir();
 const LOOP_DIR = process.env.FH_LOOP_DIR || path.join(HOME, ".pi", "fusion-harness", "eval-loop");
 const REPO = process.env.FH_LOOP_REPO || path.join(HOME, "fusion-harness");
@@ -312,7 +334,13 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			// The FIXER harness is the last accepted commit (found by the real e2e: the broken harness,
 			// fixing itself, skipped its own final integration and only got halfway). It edits `dir`.
 			const fixerHarness = fixer ? worktree(fixer, `fixer-${Date.now()}`) : dir;
-			const result = await run("pi", ["--no-extensions", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
+			const profile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.sb`);
+			fs.writeFileSync(profile, fixSandboxProfile(dir, LOOP_DIR));
+			const piArgs = ["pi", "--no-extensions", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
+			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
+			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs;
+			// FH_IN_SANDBOX: tests that need their own sandbox skip inside this one (macOS forbids nesting); the gate runs them in full.
+			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
 			// Checked against the base, not the working tree: commits the agent made itself count too.
 			const forbidden = protectedChanges(dir, base);
 			if (forbidden.length) throw new Error(`fix run changed protected paths (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);
