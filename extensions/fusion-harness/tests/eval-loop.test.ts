@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { emptyState, findRegressions, meetsBar, tick, type EvalRecord, type LoopConfig, type LoopDeps, type LoopState } from "../../../evals/fusion-eval/loop-core.ts";
+import { emptyState, errorShape, findRegressions, meetsBar, tick, type EvalRecord, type LoopConfig, type LoopDeps, type LoopState } from "../../../evals/fusion-eval/loop-core.ts";
 
 const CONFIG: LoopConfig = { groups: ["local"], nightlyGroups: ["local", "quad"], nightlyEveryMs: 24 * 3600_000, autoMerge: true };
 const TASKS = ["01", "02"];
@@ -378,6 +378,30 @@ describe("eval loop — decisions", () => {
 		const w = world({ throwOnEvaluate: true });
 		for (let i = 0; i < 4; i++) { w.setHead(`e${i}`); await tick(w.deps, CONFIG); }
 		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(1);
+	});
+
+	// ── Enemy third-pass regressions ──
+	test("a persisting error whose text carries paths/timestamps still reaches ROT once", async () => {
+		const w = world();
+		let n = 0;
+		w.deps.evaluate = async () => { n++; throw new Error(`/tmp/eval-loop/wt/abc123def456-eval-${1790000000000 + n}: package.json differs`); };
+		for (let i = 0; i < 5; i++) { w.setHead(`e${i}`); await tick(w.deps, CONFIG); }
+		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(1);
+		expect(errorShape("/a/b/c-17900: x 12")).toBe(errorShape("/d/e-18000: x 99"));
+	});
+
+	test("afterTick (cleanup, runner refresh) runs inside the lock, and never for a busy tick", async () => {
+		const w = world();
+		let heldDuringAfterTick: boolean | undefined;
+		let locked = false;
+		w.deps.lock = () => (locked ? undefined : ((locked = true), () => { locked = false; }));
+		w.deps.afterTick = () => { heldDuringAfterTick = locked; };
+		await tick(w.deps, CONFIG);
+		expect(heldDuringAfterTick).toBe(true);
+		heldDuringAfterTick = undefined;
+		locked = true; // someone else holds it
+		expect((await tick(w.deps, CONFIG)).outcome).toBe("busy");
+		expect(heldDuringAfterTick).toBeUndefined();
 	});
 
 	test("more than one concurrent writer is a regression even with no bar yet", () => {

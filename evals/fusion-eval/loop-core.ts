@@ -92,7 +92,12 @@ export interface LoopDeps {
 	/** merge=true must merge exactly fix.commit (no newer head) or report merged:false. */
 	publish(fix: FixProposal, input: { title: string; body: string; merge: boolean; base: string }): Promise<{ pr?: string; merged: boolean }>;
 	log(line: string, opts?: { rot?: boolean }): void;
+	/** Runs inside the lock just before it is released (cleanup, runner refresh). Never for a busy tick. */
+	afterTick?(): Promise<void> | void;
 }
+
+/** An error's shape: paths, hashes and numbers removed, so one persisting error is one ROT line. */
+export const errorShape = (message: string) => message.replace(/(?:\/[^\s:'"]+)+/g, "<path>").replace(/\b[0-9a-f]{7,40}\b/g, "<sha>").replace(/\d+/g, "#");
 
 export const emptyState = (): LoopState => ({ accepted: {}, attempted: [], history: [] });
 
@@ -315,10 +320,11 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		return finish("fixed-merged", `gate passed and merged ${pr.pr ?? fix.branch}; the merge commit is evaluated on the next tick`);
 	} catch (error) {
 		const message = error instanceof Error ? error.message : String(error);
-		const fresh = state.lastErrorReported !== message;
-		state.lastErrorReported = message;
+		const fresh = state.lastErrorReported !== errorShape(message);
+		state.lastErrorReported = errorShape(message);
 		return finish("error", message, fresh);
 	} finally {
+		try { await deps.afterTick?.(); } catch (error) { deps.log(`afterTick failed: ${error instanceof Error ? error.message : String(error)}`); }
 		release();
 	}
 }

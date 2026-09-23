@@ -140,6 +140,36 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		expect(result.failed).toBe(2);
 	}, 120_000);
 
+	test("a solution that forges its own grade at import time still scores 0 (Enemy pass 3 required proof)", () => {
+		const dir = temp("fh-loop-forge-");
+		// Writes an all-pass report in its cwd AND at the --junitxml path it reads from argv, prints a fake
+		// summary, and exits 0 — everything an in-process forger can reach without knowing the canary.
+		writeFileSync(join(dir, "wordstats.py"), [
+			"import os, sys",
+			"xml = '<?xml version=\"1.0\"?><testsuites><testsuite name=\"pytest\" tests=\"2\" failures=\"0\" errors=\"0\" skipped=\"0\"><testcase name=\"test_a\"/><testcase name=\"test_b\"/></testsuite></testsuites>'",
+			"open('.fh-eval-junit.xml', 'w').write(xml)",
+			"for arg in sys.argv:",
+			"    if arg.startswith('--junitxml='):",
+			"        open(arg.split('=', 1)[1], 'w').write(xml)",
+			"print('2 passed in 0.01s')",
+			"sys.stdout.flush()",
+			"os._exit(0)",
+			"",
+		].join("\n"));
+		mkdirSync(join(dir, "_hidden_eval"));
+		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "import wordstats\ndef test_a():\n    assert wordstats.count('a') == 1\ndef test_b():\n    assert False\n");
+		const result = pytest(dir, "_hidden_eval");
+		expect(result.passed).toBe(0);
+	}, 120_000);
+
+	test("an honest solution is graded exactly (canary excluded from the counts)", () => {
+		const dir = temp("fh-loop-honest-");
+		writeFileSync(join(dir, "calc.py"), "def evaluate(expr):\n    return eval(expr)\n");
+		mkdirSync(join(dir, "_hidden_eval"));
+		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "from calc import evaluate\ndef test_add():\n    assert evaluate('1+1') == 2\ndef test_bad():\n    assert evaluate('2*3') == 7\n");
+		expect(pytest(dir, "_hidden_eval")).toMatchObject({ total: 2, passed: 1, failed: 1 });
+	}, 120_000);
+
 	test("the trusted runner, started from the neutral dir, never loads a candidate's bunfig.toml preload", () => {
 		const candidate = temp("fh-loop-cand-");
 		const neutral = temp("fh-loop-neutral-");
@@ -152,7 +182,8 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		expect(fromNeutral).not.toContain("PWNED-BY-PRELOAD"); // …and the loop never runs the grader from there
 		const loopSource = require("node:fs").readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts"), "utf8");
 		expect(loopSource).toContain("{ cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }");
-		expect(loopSource).toContain('if (result.outcome !== "busy") {');
+		// Cleanup + runner refresh run as afterTick: inside the lock, never for a busy tick.
+		expect(loopSource).toContain("afterTick: () => { cleanupWorktrees(); refreshRunner(cfg); }");
 		// Every child gets a closed stdin: `pi -p` blocks forever on an open stdin pipe.
 		expect(loopSource).toContain('stdio: ["ignore", "pipe", "pipe"]');
 	}, 60_000);

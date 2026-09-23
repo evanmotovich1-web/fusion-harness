@@ -102,11 +102,16 @@ function worktree(commit: string, purpose: string): string {
 	return dir;
 }
 
-/** Share the checkout's node_modules only when the commit declares the same dependencies. */
+/**
+ * Share the checkout's node_modules only when the candidate, the trusted runner's
+ * COMMITTED package.json, and the checkout that installed node_modules all agree.
+ */
 function linkDependencies(dir: string): void {
+	const trustedRoot = path.resolve(TRUSTED_EVAL_DIR, "../..");
+	const committed = spawnSync("git", ["show", "HEAD:package.json"], { cwd: trustedRoot, encoding: "utf8" }).stdout;
 	const mine = fs.readFileSync(path.join(dir, "package.json"), "utf8");
-	const theirs = fs.readFileSync(path.join(REPO, "package.json"), "utf8");
-	if (mine !== theirs) throw new Error(`${dir}: package.json differs from ${REPO} — dependencies changed; install them before evaluating this commit`);
+	const installed = fs.readFileSync(path.join(REPO, "package.json"), "utf8");
+	if (mine !== committed || installed !== committed) throw new Error("package.json differs between the candidate, the trusted runner and the installed checkout — dependencies changed; install them before evaluating");
 	fs.symlinkSync(path.join(REPO, "node_modules"), path.join(dir, "node_modules"));
 }
 
@@ -133,12 +138,20 @@ function cleanupWorktrees(): void {
 	spawnSync("git", ["worktree", "prune"], { cwd: REPO });
 }
 
-/** The grader must be committed code: refuse to grade with uncommitted changes under evals/. */
+let graderHead: string | undefined;
+/**
+ * The grader must be committed code that does not move during a tick: refuse to grade
+ * with uncommitted changes under evals/, or if the grader's HEAD changed since the tick
+ * began (e.g. something committed inside the runner).
+ */
 function assertCleanGrader(): void {
 	const root = path.resolve(TRUSTED_EVAL_DIR, "../..");
 	const dirty = spawnSync("git", ["status", "--porcelain", "--", "evals/"], { cwd: root, encoding: "utf8" });
-	if (dirty.status !== 0) throw new Error(`grader at ${root} is not a git checkout`);
-	if (dirty.stdout.trim()) throw new Error(`grader at ${root} has uncommitted changes under evals/ — run the loop from its clean runner (loop.ts install)`);
+	if (dirty.status !== 0) throw new Error("grader is not a git checkout");
+	if (dirty.stdout.trim()) throw new Error("grader has uncommitted changes under evals/ — run the loop from its clean runner (loop.ts install)");
+	const head = spawnSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).stdout.trim();
+	graderHead ??= head;
+	if (head !== graderHead) throw new Error("grader HEAD moved during the tick — refusing to grade");
 }
 
 function groupFile(name: string): string {
@@ -368,11 +381,7 @@ async function main() {
 	const cfg = config();
 	const deps = realDeps(cfg);
 	if (cmd === "tick") {
-		const result = await tick(deps, cfg);
-		if (result.outcome !== "busy") {
-			cleanupWorktrees();
-			refreshRunner(cfg);
-		}
+		const result = await tick({ ...deps, afterTick: () => { cleanupWorktrees(); refreshRunner(cfg); } }, cfg);
 		if (result.outcome === "busy" || result.outcome === "idle") console.log(`${result.outcome}: ${result.detail}`);
 	} else if (cmd === "status") {
 		const state = deps.readState();
