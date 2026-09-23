@@ -1,8 +1,8 @@
 /**
- * fusion-harness — FUSE 2-5 frontier models instead of racing them. AND, not OR.
+ * fusion-harness — FUSE 2 or more frontier models instead of racing them. AND, not OR.
  *
  * Model stack: exactly one ARCHITECT, exactly one primary/Main BUILDER (the live
- * raw-chat host), and up to three secondary builders. Explicit YAML via --fh-config;
+ * raw-chat host), and any number of secondary builders. Explicit YAML via --fh-config;
  * legacy two-slot flags remain compatible.
  *
  * Commands:
@@ -115,7 +115,7 @@ export default function (pi: ExtensionAPI) {
 	// ── 2.1 Flags ──────────────────────────────────────────────
 	pi.registerFlag("fh-config", {
 		type: "string",
-		description: "Explicit path to .pi/fusion-harness/model-stack-<codename>.yaml (2-5 slots, exactly one architect and one primary builder).",
+		description: "Explicit path to .pi/fusion-harness/model-stack-<codename>.yaml (2+ slots, exactly one architect and one primary builder).",
 	});
 	pi.registerFlag("architect", {
 		type: "string",

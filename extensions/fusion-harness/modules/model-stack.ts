@@ -60,7 +60,7 @@ const THINKING_ALIASES: Record<string, Thinking> = {
 	max: "max",
 };
 
-export const SLOT_COLOR_PALETTE: HexColor[] = ["#22D3EE", "#F59E0B", "#A78BFA", "#34D399", "#F472B6"];
+export const SLOT_COLOR_PALETTE: HexColor[] = ["#22D3EE", "#F59E0B", "#A78BFA", "#34D399", "#F472B6", "#60A5FA", "#FB7185", "#FACC15", "#2DD4BF"];
 const HEX_COLOR_RE = /^#[0-9A-Fa-f]{6}$/;
 const SLOT_NAME_RE = /^[A-Za-z0-9_-]{1,16}$/;
 const MODEL_RE = /^[^/\s]+\/[^\s]+$/;
@@ -130,7 +130,9 @@ export function loadModelStack(configPathInput: string): ModelStack {
 	if (!Array.isArray(parsed)) {
 		throw new Error(`fusion-harness: model-stack config invalid (${configPath}):\n- top-level YAML value must be a list of model slots`);
 	}
-	if (parsed.length < 2 || parsed.length > 5) errors.push(`slot count must be between 2 and 5; found ${parsed.length}`);
+	// No upper cap: a stack holds every model the operator wants in the room. Two is the floor
+	// (one architect + one primary). The agent grid stacks columns when they get too narrow.
+	if (parsed.length < 2) errors.push(`slot count must be at least 2 (one architect + one primary); found ${parsed.length}`);
 
 	const codename = codenameFromPath(configPath);
 	const configDir = path.dirname(configPath);
