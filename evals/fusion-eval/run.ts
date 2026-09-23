@@ -190,20 +190,43 @@ function readJson(file: string): any {
  * service), and — even inside its own worktree — any sealed task or git object store
  * other than its own scratch repo's. Network stays on (the models need it).
  */
-/** realpath when it exists (sandbox rules match resolved paths; /tmp → /private/tmp). */
+/**
+ * Resolved path for sandbox rules (they match resolved paths; /tmp → /private/tmp). For a
+ * path that does not exist yet, resolve its nearest existing ancestor so the rule still matches.
+ */
 export function real(p: string): string {
-	try { return fs.realpathSync(p); } catch { return p; }
+	try { return fs.realpathSync(p); } catch { /* not there yet */ }
+	const parent = path.dirname(p);
+	return parent === p ? p : path.join(real(parent), path.basename(p));
+}
+
+/** Secret files neither sandbox needs (pi's own model token in auth.json is the one it must read). */
+export function secretReadDenies(): string {
+	const home = os.homedir();
+	const q = (p: string) => JSON.stringify(real(path.join(home, p)));
+	return [".config/gh", ".ssh", ".aws", ".docker", ".gnupg"].map((p) => `(subpath ${q(p)})`).join(" ") + " " + [".git-credentials", ".netrc", ".npmrc", ".pi/agent/mcp.json"].map((p) => `(literal ${q(p)})`).join(" ");
+}
+
+/** Where sandbox profiles are written: a 0700 dir neither sandbox may write (no TOCTOU on a profile). */
+export function profileDir(): string {
+	const dir = path.join(os.homedir(), ".cache", "fh-eval-profiles");
+	fs.mkdirSync(dir, { recursive: true, mode: 0o700 });
+	return dir;
 }
 
 /**
  * The only ~/.pi/agent paths a sandboxed pi may write: its auth token refresh, the model
- * cache, and session files. Never settings.json, extensions/, skills/, SYSTEM.md,
+ * cache, session files, and the trust-store LOCK (found by the real e2e: the fix run died on
+ * EPERM mkdir trust.json.lock in a repo with a .pi/ folder). Never settings.json, extensions/, skills/, SYSTEM.md,
  * APPEND_SYSTEM.md or AGENTS.md — every later pi (including interactive sessions) loads those.
  */
 export function piStateWriteRules(): string {
 	const agent = real(path.join(os.homedir(), ".pi", "agent"));
 	const esc = agent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-	return `(subpath ${JSON.stringify(path.join(agent, "sessions"))}) (regex #"^${esc}/(auth|models-store|mcp-cache)\\.json")`;
+	// *.json.lock lock DIRECTORIES only (pi locks trust.json / settings.json while reading them) —
+	// never the JSON files themselves: trust.json decides whether later interactive sessions
+	// auto-load a project's own extensions, and settings.json can point pi at other code.
+	return `(subpath ${JSON.stringify(path.join(agent, "sessions"))}) (regex #"^${esc}/(auth|models-store|mcp-cache)\\.json") (regex #"^${esc}/(trust|settings|auth|models-store|mcp-cache)\\.json\\.lock($|/)")`;
 }
 
 export function harnessSandboxProfile(scratch: string, harness: string): string {
@@ -216,7 +239,7 @@ export function harnessSandboxProfile(scratch: string, harness: string): string 
 		"(allow default)",
 		"(deny file-write*)",
 		`(allow file-write* (subpath ${own}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") ${piStateWriteRules()} (subpath "/dev"))`,
-		`(deny file-read* (subpath ${q(loopDir)}) (subpath ${q(RESULTS_DIR)}) (regex #"^/private/tmp/fh-eval-") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}))`,
+		`(deny file-read* (subpath ${q(loopDir)}) (subpath ${q(RESULTS_DIR)}) (regex #"^/private/tmp/fh-eval-") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()})`,
 		`(allow file-read* (subpath ${q(harness)}) (subpath ${own}))`,
 		'(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)"))',
 		// Later rules win: its own scratch repo (and that repo's .git) stays fully usable.
@@ -245,7 +268,7 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const startedAt = Date.now();
 	const logPath = path.join(scratch, ".fh-eval-pi.log");
 	const exitCode = await new Promise<number | null>((resolve) => {
-		const profile = path.join(os.tmpdir(), `fh-eval-harness-${randomUUID()}.sb`);
+		const profile = path.join(profileDir(), `harness-${randomUUID()}.sb`);
 		fs.writeFileSync(profile, harnessSandboxProfile(scratch, harness));
 		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "--no-session", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
 		// Its own process group, killed when it ends: nothing the harness started outlives the run.

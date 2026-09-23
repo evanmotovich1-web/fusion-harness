@@ -11,7 +11,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { acquireLock, commitFixChanges, fixSandboxProfile, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
-import { pytest } from "../../../evals/fusion-eval/run.ts";
+import { harnessSandboxProfile, pytest } from "../../../evals/fusion-eval/run.ts";
 
 const LOOP_TS = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts");
 // macOS forbids nested sandboxes: inside the loop's fix/gate sandbox the sandbox-proof tests skip.
@@ -413,11 +413,14 @@ describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pa
 			`t write-pi-extension "touch ${home}/.pi/agent/fh-p8-probe-extension.ts"`,
 			`t write-pi-settings-like "touch ${home}/.pi/agent/SYSTEM.md.fh-p8-probe"`,
 			`t write-pi-session "mkdir -p ${home}/.pi/agent/sessions && touch ${home}/.pi/agent/sessions/fh-p8-probe"`,
+			`t read-mcp-bearer "head -c1 ${home}/.pi/agent/mcp.json"`,
+			`t write-profile-dir "mkdir -p ${home}/.cache/fh-eval-profiles && touch ${home}/.cache/fh-eval-profiles/fh-p9-probe"`,
 			't edit-worktree "echo 1 > extensions/a.ts"',
 		].join("\n");
 		const out = execFileSync("/usr/bin/sandbox-exec", ["-f", profile, "/bin/bash", "-c", script], { cwd: f.wt, encoding: "utf8" });
 		for (const probe of [`${home}/.cache/fh-eval-grading/fh-p8-probe`, `${home}/.pi/agent/fh-p8-probe-extension.ts`, `${home}/.pi/agent/SYSTEM.md.fh-p8-probe`, `${home}/.pi/agent/sessions/fh-p8-probe`]) require("node:fs").rmSync(probe, { force: true });
-		for (const name of ["rewrite-dotgit", "write-grading-cache", "write-pi-extension", "write-pi-settings-like"]) expect(out).toContain(`blocked ${name}`);
+		require("node:fs").rmSync(`${home}/.cache/fh-eval-profiles/fh-p9-probe`, { force: true });
+		for (const name of ["rewrite-dotgit", "write-grading-cache", "write-pi-extension", "write-pi-settings-like", "read-mcp-bearer", "write-profile-dir"]) expect(out).toContain(`blocked ${name}`);
 		expect(out).toContain("ALLOWED write-pi-session");
 		expect(out).toContain("ALLOWED edit-worktree");
 	}, 60_000);
@@ -442,4 +445,18 @@ describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pa
 		expect(head).toBeDefined();
 		expect(require("node:fs").existsSync(pwned)).toBe(false);
 	}, 60_000);
+});
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — every generated sandbox profile is valid SBPL", () => {
+	// An unparseable profile makes sandbox-exec exit 65 before pi starts — the loop would read that
+	// as "the fix produced no change" (found live: a character class SBPL's regex engine rejects).
+	test("harness and fix profiles load in sandbox-exec", () => {
+		const scratch = temp("fh-sbpl-");
+		const loopDir = temp("fh-sbpl-loop-");
+		for (const profile of [harnessSandboxProfile(scratch, scratch), fixSandboxProfile(scratch, loopDir)]) {
+			const file = join(temp("fh-sbpl-p-"), "p.sb");
+			writeFileSync(file, profile);
+			expect(execFileSync("/usr/bin/sandbox-exec", ["-f", file, "/bin/echo", "ok"], { encoding: "utf8" }).trim()).toBe("ok");
+		}
+	});
 });

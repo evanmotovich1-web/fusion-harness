@@ -20,7 +20,7 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
-import { piStateWriteRules, real } from "./run.ts";
+import { piStateWriteRules, profileDir, real, secretReadDenies } from "./run.ts";
 
 /**
  * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
@@ -41,7 +41,7 @@ export function fixSandboxProfile(fixDir: string, loopDir: string): string {
 		// a rewritten .git made the loop's later, unsandboxed git calls run attacker hooks/fsmonitor).
 		`(allow file-write* (subpath ${JSON.stringify(dir)}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") ${piStateWriteRules()} (subpath "/dev"))`,
 		`(deny file-write* (literal ${JSON.stringify(path.join(dir, ".git"))}))`,
-		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}) (regex #"/evals/fusion-eval/tasks(/|$)"))`,
+		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()} (regex #"/evals/fusion-eval/tasks(/|$)"))`,
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
@@ -356,7 +356,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			// The FIXER harness is the last accepted commit (found by the real e2e: the broken harness,
 			// fixing itself, skipped its own final integration and only got halfway). It edits `dir`.
 			const fixerHarness = fixer ? worktree(fixer, `fixer-${Date.now()}`) : dir;
-			const profile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.sb`);
+			const profile = path.join(profileDir(), `${branch.replace(/\//g, "_")}.fix.sb`);
 			fs.writeFileSync(profile, fixSandboxProfile(dir, LOOP_DIR));
 			const piArgs = ["pi", "--no-extensions", "--no-session", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
 			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
@@ -374,7 +374,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const wt = worktree(commit, `tests-${Date.now()}`);
 			// The gate runs the (fix-written) tests in the fix sandbox too: FH_IN_SANDBOX skips only the
 			// sandbox-proof tests, which test evals/ — a path no fix may change.
-			const profile = path.join(LOOP_DIR, `tests-${commit.slice(0, 12)}-${Date.now()}.sb`);
+			const profile = path.join(profileDir(), `tests-${commit.slice(0, 12)}-${Date.now()}.sb`);
 			fs.writeFileSync(profile, fixSandboxProfile(wt, LOOP_DIR));
 			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, "bun", "test"] : ["bun", "test"];
 			const result = await run(cmd!, args, { cwd: wt, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 30 * 60_000, killGroup: true });
