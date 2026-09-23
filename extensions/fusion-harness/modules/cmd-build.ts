@@ -348,11 +348,38 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: ${slots.length} agents planning read-only…`);
 				const proposalsDir = path.join(collabDir, "proposals");
 				await fs.promises.mkdir(proposalsDir, { recursive: true });
+				// A builder out of provider quota is benched for this run instead of stalling
+				// everyone until its reset (run futyZD sat ~1.5h on two z.ai models). The
+				// architect is required, so it waits — visibly, with the reset time.
+				const quotaBenched = new Map<string, { model: string; until: string; error: string }>();
 				await Promise.all(runs.map(async (run) => {
 					const slot = run.slot!;
-					await runChild({ run, prompt: withHarnessRepoState(withKnowledge(collabProposePrompt(slot, stack, prompt), packet), repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
-					await h.save(proposalsDir, `${slot.id}.md`, runOk(run) ? run.text : `FAILED: ${runError(run)}`);
+					const own = new AbortController();
+					const onStop = () => own.abort();
+					stopper.signal.addEventListener("abort", onStop, { once: true });
+					const onQuotaWait = (waitMs: number, error: string) => {
+						const until = new Date(Date.now() + waitMs).toLocaleTimeString();
+						if (slot.architect) {
+							ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: architect ${slot.name} (${slot.model}) is out of provider quota — waiting, next try ${until}`);
+							return;
+						}
+						quotaBenched.set(slot.id, { model: slot.model, until, error: error.slice(0, 200) });
+						ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: benched ${[...quotaBenched.keys()].join(", ")} (provider quota) — continuing with the rest`);
+						own.abort();
+					};
+					try {
+						await runChild({ run, prompt: withHarnessRepoState(withKnowledge(collabProposePrompt(slot, stack, prompt), packet), repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...initialSpawns.get(slot.id)!, cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: own.signal, onQuotaWait });
+					} finally {
+						stopper.signal.removeEventListener("abort", onStop);
+					}
+					const benched = quotaBenched.get(slot.id);
+					await h.save(proposalsDir, `${slot.id}.md`, benched ? `BENCHED: ${slot.model} is out of provider quota (next try ${benched.until}); left out of this run.\n${benched.error}` : runOk(run) ? run.text : `FAILED: ${runError(run)}`);
 				}));
+				if (quotaBenched.size) {
+					await h.save(collabDir, "quota-benched.json", JSON.stringify(Object.fromEntries(quotaBenched), null, 2));
+					ctx.ui.notify(`fh-collaborate: left out ${[...quotaBenched.entries()].map(([id, b]) => `${id} (${b.model}, quota until ~${b.until})`).join(", ")}`, "warning");
+				}
+				const activeSlots = slots.filter((slot) => !quotaBenched.has(slot.id));
 				if (stopper.stopped()) {
 					h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped during planning; completed proposals remain on disk.");
 					return;
@@ -370,7 +397,8 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 				let planError = "";
 				for (let attempt = 1; attempt <= 3; attempt++) {
 					ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: architect merging plans into a delegation graph${attempt > 1 ? ` (repair ${attempt - 1})` : ""}…`);
-					const delegatePrompt = withHarnessRepoState(collabDelegatePrompt(stack, prompt, collabDir, planPath) + (planError ? `\n\nPREVIOUS PLAN VALIDATION FAILED:\n${planError}\nRewrite the complete corrected plan.` : ""), repoCardMarkdown);
+					const benchedNote = quotaBenched.size ? `\n\nUNAVAILABLE THIS RUN (provider quota exhausted): ${[...quotaBenched.keys()].join(", ")}. Assign them NO tasks; every other slot still needs meaningful work.` : "";
+					const delegatePrompt = withHarnessRepoState(collabDelegatePrompt(stack, prompt, collabDir, planPath) + benchedNote + (planError ? `\n\nPREVIOUS PLAN VALIDATION FAILED:\n${planError}\nRewrite the complete corrected plan.` : ""), repoCardMarkdown);
 					await runChild({ run: architectRun, prompt: delegatePrompt, systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: READONLY_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					if (stopper.stopped()) {
 						h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped while the architect was producing the delegation graph.");
@@ -387,10 +415,10 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 								}
 							}
 						}
-						plan = validateCollaborationPlan(parsedPlan, slots.map((slot) => slot.id));
+						plan = validateCollaborationPlan(parsedPlan, activeSlots.map((slot) => slot.id));
 						await fs.promises.writeFile(planPath, `${JSON.stringify(parsedPlan, null, 2)}\n`, "utf8");
 						const assigned = new Set(plan.tasks.map((task) => task.assignee));
-						const missing = slots.filter((slot) => !assigned.has(slot.id));
+						const missing = activeSlots.filter((slot) => !assigned.has(slot.id));
 						if (missing.length) throw new Error(`plan must assign meaningful work to every slot; missing ${missing.map((slot) => slot.id).join(", ")}`);
 						break;
 					} catch (error) {
