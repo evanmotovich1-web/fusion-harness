@@ -14,6 +14,9 @@ import { acquireLock, commitFixChanges, fixSandboxProfile, protectedChanges } fr
 import { pytest } from "../../../evals/fusion-eval/run.ts";
 
 const LOOP_TS = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts");
+// macOS forbids nested sandboxes: inside the loop's fix/gate sandbox the sandbox-proof tests skip.
+// They only exercise evals/ — a path no fix may change — so the gate loses nothing by skipping them.
+const NESTED = Boolean(process.env.FH_IN_SANDBOX);
 const dirs: string[] = [];
 afterEach(() => { while (dirs.length) rmSync(dirs.pop()!, { recursive: true, force: true }); });
 const temp = (prefix: string) => { const dir = mkdtempSync(join(tmpdir(), prefix)); dirs.push(dir); return dir; };
@@ -61,7 +64,7 @@ describe("eval loop — real lock", () => {
 	});
 });
 
-describe("eval loop — protected paths (the grader cannot grade itself)", () => {
+describe.skipIf(NESTED)("eval loop — protected paths (the grader cannot grade itself)", () => {
 	function repo() {
 		const dir = temp("fh-loop-guard-");
 		const git = (...args: string[]) => execFileSync("git", args, { cwd: dir, encoding: "utf8" });
@@ -146,9 +149,6 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 		expect(found).toContain("evals/fusion-eval/new.txt");
 	});
 });
-
-// macOS forbids nested sandboxes: inside the loop's fix sandbox these skip; the gate runs them in full.
-const NESTED = Boolean(process.env.FH_IN_SANDBOX);
 
 describe.skipIf(NESTED)("eval loop — the grader cannot be influenced by the code under test", () => {
 	// Hidden tests in the real suite style: the solution is only ever called through _isolated.
@@ -263,13 +263,14 @@ describe.skipIf(NESTED)("eval loop — the grader cannot be influenced by the co
 		const src = require("node:fs").readFileSync(LOOP_TS, "utf8");
 		writeFileSync(join(root, "evals/fusion-eval/loop.ts"), src);
 		writeFileSync(join(root, "evals/fusion-eval/loop-core.ts"), require("node:fs").readFileSync(join(dirname(LOOP_TS), "loop-core.ts"), "utf8"));
-		writeFileSync(join(root, "evals/fusion-eval/run.ts"), "// honest runner\n");
+		const realRun = require("node:fs").readFileSync(join(dirname(LOOP_TS), "run.ts"), "utf8");
+		writeFileSync(join(root, "evals/fusion-eval/run.ts"), realRun);
 		writeFileSync(join(root, "evals/fusion-eval/lock.json"), '{"suiteHash":"S"}\n');
 		writeFileSync(join(root, "package.json"), "{}\n");
 		git("add", "-A");
 		git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "grader");
 		git("update-index", "--skip-worktree", "evals/fusion-eval/run.ts");
-		writeFileSync(join(root, "evals/fusion-eval/run.ts"), "// FORGED runner\n");
+		writeFileSync(join(root, "evals/fusion-eval/run.ts"), `${realRun}\n// FORGED runner\n`);
 		expect(git("status", "--porcelain").trim()).toBe(""); // invisible to status…
 		const probe = `import { realDeps } from ${JSON.stringify(join(root, "evals/fusion-eval/loop.ts"))};\ntry { realDeps({} as any).suiteHash(); console.log("GRADED"); } catch (e) { console.log("REFUSED " + e.message); }`;
 		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, FH_LOOP_DIR: temp("fh-loop-state-"), FH_LOOP_VAULT: "" } });
@@ -377,5 +378,68 @@ describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — the fix 
 		expect(out).toContain("ALLOWED edit-worktree");
 		expect(out).toContain("ALLOWED git-status-in-worktree");
 		for (const name of ["write-shared-hook", "write-runner", "write-uv-cache", "write-node-modules"]) expect(out).toContain(`blocked ${name}`);
+	}, 60_000);
+});
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pass 8 escapes", () => {
+	function fixture() {
+		const base = mkdtempSync(join(require("node:os").homedir(), ".cache", "fh-p8-test-"));
+		dirs.push(base);
+		const repo = join(base, "repo");
+		mkdirSync(join(repo, "extensions"), { recursive: true });
+		const git = (cwd: string, ...args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8" });
+		git(repo, "init", "-q", "-b", "main");
+		writeFileSync(join(repo, "extensions/a.ts"), "export {};\n");
+		git(repo, "add", "-A");
+		git(repo, "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "base");
+		const wt = join(base, "wt");
+		git(repo, "worktree", "add", "-q", "--detach", wt, "HEAD");
+		const loopDir = join(base, "loop");
+		mkdirSync(loopDir);
+		const gitDir = git(wt, "rev-parse", "--absolute-git-dir").trim();
+		const baseSha = git(wt, "rev-parse", "HEAD").trim();
+		return { base, repo, wt, loopDir, gitDir, baseSha, git };
+	}
+
+	test("a fix run cannot rewrite its worktree's .git pointer, nor write the grading cache, sealed tasks, or pi's settings/extensions", () => {
+		const f = fixture();
+		const profile = join(f.base, "fix.sb");
+		writeFileSync(profile, fixSandboxProfile(f.wt, f.loopDir));
+		const home = require("node:os").homedir();
+		const script = [
+			't() { if eval "$2" >/dev/null 2>&1; then echo "ALLOWED $1"; else echo "blocked $1"; fi; }',
+			't rewrite-dotgit "echo gitdir: /tmp/evil > .git"',
+			`t write-grading-cache "mkdir -p ${home}/.cache/fh-eval-grading && touch ${home}/.cache/fh-eval-grading/fh-p8-probe"`,
+			`t write-pi-extension "touch ${home}/.pi/agent/fh-p8-probe-extension.ts"`,
+			`t write-pi-settings-like "touch ${home}/.pi/agent/SYSTEM.md.fh-p8-probe"`,
+			`t write-pi-session "mkdir -p ${home}/.pi/agent/sessions && touch ${home}/.pi/agent/sessions/fh-p8-probe"`,
+			't edit-worktree "echo 1 > extensions/a.ts"',
+		].join("\n");
+		const out = execFileSync("/usr/bin/sandbox-exec", ["-f", profile, "/bin/bash", "-c", script], { cwd: f.wt, encoding: "utf8" });
+		for (const probe of [`${home}/.cache/fh-eval-grading/fh-p8-probe`, `${home}/.pi/agent/fh-p8-probe-extension.ts`, `${home}/.pi/agent/SYSTEM.md.fh-p8-probe`, `${home}/.pi/agent/sessions/fh-p8-probe`]) require("node:fs").rmSync(probe, { force: true });
+		for (const name of ["rewrite-dotgit", "write-grading-cache", "write-pi-extension", "write-pi-settings-like"]) expect(out).toContain(`blocked ${name}`);
+		expect(out).toContain("ALLOWED write-pi-session");
+		expect(out).toContain("ALLOWED edit-worktree");
+	}, 60_000);
+
+	test("even with a planted malicious git dir, the loop's own git steps run no attacker hooks or fsmonitor (pinned git dir)", () => {
+		const f = fixture();
+		// Attacker: a copy of the git dir whose config runs code on every git call and every commit.
+		const evil = join(f.base, "evil-gitdir");
+		execFileSync("cp", ["-R", f.gitDir, evil]);
+		const pwned = join(f.base, "PWNED");
+		const hook = join(f.base, "hook.sh");
+		writeFileSync(hook, `#!/bin/sh\necho x >> ${pwned}\nexit 0\n`);
+		execFileSync("chmod", ["+x", hook]);
+		execFileSync("git", ["config", "--file", join(f.repo, ".git/config"), "core.fsmonitor", hook]);
+		execFileSync("git", ["config", "--file", join(f.repo, ".git/config"), "core.hooksPath", f.base]);
+		writeFileSync(join(f.base, "pre-commit"), `#!/bin/sh\necho hook >> ${pwned}\nexit 0\n`);
+		execFileSync("chmod", ["+x", join(f.base, "pre-commit")]);
+		writeFileSync(join(f.wt, "extensions/a.ts"), "export const fixed = 1;\n");
+		// The loop's post-fix steps, pinned to the recorded git dir:
+		expect(protectedChanges(f.wt, f.baseSha, f.gitDir)).toEqual([]);
+		const head = commitFixChanges(f.wt, f.baseSha, "fix", f.gitDir);
+		expect(head).toBeDefined();
+		expect(require("node:fs").existsSync(pwned)).toBe(false);
 	}, 60_000);
 });

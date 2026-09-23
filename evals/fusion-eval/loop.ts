@@ -20,6 +20,7 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
+import { piStateWriteRules, real } from "./run.ts";
 
 /**
  * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
@@ -30,17 +31,28 @@ import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, t
  */
 export function fixSandboxProfile(fixDir: string, loopDir: string): string {
 	const home = os.homedir();
-	const q = (p: string) => JSON.stringify(p);
-	const gitDir = spawnSync("git", ["rev-parse", "--absolute-git-dir"], { cwd: fixDir, encoding: "utf8" }).stdout.trim();
+	const q = (p: string) => JSON.stringify(real(p));
+	const dir = real(fixDir);
 	return [
 		"(version 1)",
 		"(allow default)",
 		"(deny file-write*)",
-		`(allow file-write* (subpath ${q(fs.realpathSync(fixDir))}) ${gitDir ? `(subpath ${q(fs.realpathSync(gitDir))})` : ""} (regex #"^/private/tmp/fusion-harness-") (regex #"^/private/tmp/fh-") (subpath "/private/var/folders") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".pi", "agent"))}) (subpath "/dev"))`,
-		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}))`,
+		// The worktree's files — but NOT its .git pointer, and no git metadata at all (Enemy pass 8:
+		// a rewritten .git made the loop's later, unsandboxed git calls run attacker hooks/fsmonitor).
+		`(allow file-write* (subpath ${JSON.stringify(dir)}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") ${piStateWriteRules()} (subpath "/dev"))`,
+		`(deny file-write* (literal ${JSON.stringify(path.join(dir, ".git"))}))`,
+		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}) (regex #"/evals/fusion-eval/tasks(/|$)"))`,
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
+}
+
+/**
+ * git on a worktree the candidate touched: never trust its `.git` pointer or its config.
+ * Uses the git dir recorded BEFORE the fix ran, with hooks and fsmonitor forced off.
+ */
+function safeGit(gitDir: string, workTree: string, args: string[]): string {
+	return git(["--git-dir", gitDir, "--work-tree", workTree, "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=", "-c", "core.untrackedCache=false", ...args], workTree);
 }
 
 const HOME = os.homedir();
@@ -91,19 +103,22 @@ function cleanEnv(extra: Record<string, string> = {}): Record<string, string> {
 	return { ...env, ...extra };
 }
 
-function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<string, string>; timeoutMs: number; logFile?: string }): Promise<{ code: number | null; out: string }> {
+function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<string, string>; timeoutMs: number; logFile?: string; killGroup?: boolean }): Promise<{ code: number | null; out: string }> {
 	return new Promise((resolve) => {
 		const chunks: Buffer[] = [];
 		// Always a whitelisted environment: nothing from the caller's shell or a candidate's .env leaks in.
 		// stdin MUST be closed: `pi -p` treats piped stdin as more prompt and waits for EOF forever
 		// (found by the real end-to-end run: the fix step hung at 0% CPU).
-		const child = spawn(cmd, args, { cwd: opts.cwd, env: cleanEnv(opts.env), stdio: ["ignore", "pipe", "pipe"] });
+		const child = spawn(cmd, args, { cwd: opts.cwd, env: cleanEnv(opts.env), stdio: ["ignore", "pipe", "pipe"], detached: Boolean(opts.killGroup) });
+		// killGroup: the child leads its own process group and the whole group is killed when it ends,
+		// so nothing a sandboxed run started (watchers, daemons) outlives it into the grading steps.
+		const reap = () => { if (opts.killGroup) try { process.kill(-child.pid!, "SIGKILL"); } catch { /* gone */ } };
 		const sink = opts.logFile ? fs.createWriteStream(opts.logFile, { flags: "a" }) : undefined;
 		child.stdout.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
 		child.stderr.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
-		const timer = setTimeout(() => child.kill("SIGTERM"), opts.timeoutMs);
-		child.on("close", (code) => { clearTimeout(timer); sink?.end(); resolve({ code, out: Buffer.concat(chunks).toString("utf8") }); });
-		child.on("error", (error) => { clearTimeout(timer); resolve({ code: -1, out: String(error) }); });
+		const timer = setTimeout(() => { child.kill("SIGTERM"); reap(); }, opts.timeoutMs);
+		child.on("close", (code) => { clearTimeout(timer); reap(); sink?.end(); resolve({ code, out: Buffer.concat(chunks).toString("utf8") }); });
+		child.on("error", (error) => { clearTimeout(timer); reap(); resolve({ code: -1, out: String(error) }); });
 	});
 }
 
@@ -142,11 +157,12 @@ function linkDependencies(dir: string): void {
  * sides of renames — that lies outside extensions/. NUL-separated and unquoted so
  * unusual file names cannot dodge the check.
  */
-export function protectedChanges(dir: string, base: string): string[] {
+export function protectedChanges(dir: string, base: string, gitDir?: string): string[] {
 	const changed = new Set<string>();
-	const diff = spawnSync("git", ["-c", "core.quotepath=false", "diff", "--name-only", "--no-renames", "-z", base], { cwd: dir, encoding: "utf8" });
+	const pin = gitDir ? ["--git-dir", gitDir, "--work-tree", dir, "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor="] : [];
+	const diff = spawnSync("git", [...pin, "-c", "core.quotepath=false", "diff", "--name-only", "--no-renames", "-z", base], { cwd: dir, encoding: "utf8" });
 	for (const file of diff.stdout.split("\0").filter(Boolean)) changed.add(file);
-	const untracked = spawnSync("git", ["-c", "core.quotepath=false", "ls-files", "--others", "--exclude-standard", "-z"], { cwd: dir, encoding: "utf8" });
+	const untracked = spawnSync("git", [...pin, "-c", "core.quotepath=false", "ls-files", "--others", "--exclude-standard", "-z"], { cwd: dir, encoding: "utf8" });
 	for (const file of untracked.stdout.split("\0").filter(Boolean)) changed.add(file);
 	return [...changed].filter((file) => file !== "node_modules" && !FIXABLE.test(file));
 }
@@ -158,14 +174,15 @@ export function protectedChanges(dir: string, base: string): string[] {
  * which once ate the first line's leading space and turned "extensions/…" into
  * "xtensions/…" in the real end-to-end run.
  */
-export function commitFixChanges(dir: string, base: string, message: string): string | undefined {
-	const dirty = spawnSync("git", ["status", "--porcelain", "--", "extensions/"], { cwd: dir, encoding: "utf8" }).stdout.trim();
+export function commitFixChanges(dir: string, base: string, message: string, gitDir?: string): string | undefined {
+	const g = (args: string[]) => (gitDir ? safeGit(gitDir, dir, args) : git(args, dir));
+	const dirty = g(["status", "--porcelain", "--", "extensions/"]);
 	if (dirty) {
-		git(["add", "-A", "--", "extensions/"], dir);
-		git(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", message], dir);
+		g(["add", "-A", "--", "extensions/"]);
+		g(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "--no-verify", "-m", message]);
 	}
-	const head = git(["rev-parse", "HEAD"], dir);
-	return head === git(["rev-parse", base], dir) ? undefined : head;
+	const head = g(["rev-parse", "HEAD"]);
+	return head === g(["rev-parse", base]) ? undefined : head;
 }
 
 /** Remove only the worktrees THIS process created (the pushed fix branches stay on the remote). */
@@ -300,7 +317,9 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			fs.mkdirSync(neutral, { recursive: true });
 			const label = `loop-${commit.slice(0, 8)}-${Date.now()}`;
 			// Graded by the loop's own runner + sealed tasks; the candidate only supplies the harness.
-			const runs = await Promise.all(groups.map((group) => run("bun", [path.join(TRUSTED_EVAL_DIR, "run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) })));
+			// Sequential, not parallel: no concurrent run exists for one run's leftovers to tamper with.
+			const runs: Array<{ code: number | null; out: string }> = [];
+			for (const group of groups) runs.push(await run("bun", [path.join(TRUSTED_EVAL_DIR, "run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) }));
 			const failed = runs.find((result) => result.code !== 0);
 			if (failed) throw new Error(`eval run failed: ${failed.out.trim().slice(-800)}`);
 			const records: EvalRecord[] = [];
@@ -322,6 +341,9 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			git(["worktree", "add", "-b", branch, dir, base]);
 			created.push(dir);
 			linkDependencies(dir);
+			// Recorded BEFORE the fix runs; every later git call on this worktree uses it, never the (writable) .git file.
+			const gitDir = git(["rev-parse", "--absolute-git-dir"], dir);
+			const dotGit = fs.readFileSync(path.join(dir, ".git"), "utf8");
 			const evidenceFile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.evidence.md`);
 			fs.writeFileSync(evidenceFile, evidence);
 			const prompt = [
@@ -336,20 +358,27 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const fixerHarness = fixer ? worktree(fixer, `fixer-${Date.now()}`) : dir;
 			const profile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.sb`);
 			fs.writeFileSync(profile, fixSandboxProfile(dir, LOOP_DIR));
-			const piArgs = ["pi", "--no-extensions", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
+			const piArgs = ["pi", "--no-extensions", "--no-session", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
 			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
 			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs;
 			// FH_IN_SANDBOX: tests that need their own sandbox skip inside this one (macOS forbids nesting); the gate runs them in full.
-			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
+			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true });
+			if (fs.readFileSync(path.join(dir, ".git"), "utf8") !== dotGit) throw new Error("fix run rewrote the worktree's .git pointer — rejected");
 			// Checked against the base, not the working tree: commits the agent made itself count too.
-			const forbidden = protectedChanges(dir, base);
+			const forbidden = protectedChanges(dir, base, gitDir);
 			if (forbidden.length) throw new Error(`fix run changed protected paths (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);
-			const head = commitFixChanges(dir, base, `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`);
+			const head = commitFixChanges(dir, base, `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`, gitDir);
 			return head ? { branch, commit: head } : undefined;
 		},
 		async runTests(commit) {
 			const wt = worktree(commit, `tests-${Date.now()}`);
-			const result = await run("bun", ["test"], { cwd: wt, timeoutMs: 30 * 60_000 });
+			// The gate runs the (fix-written) tests in the fix sandbox too: FH_IN_SANDBOX skips only the
+			// sandbox-proof tests, which test evals/ — a path no fix may change.
+			const profile = path.join(LOOP_DIR, `tests-${commit.slice(0, 12)}-${Date.now()}.sb`);
+			fs.writeFileSync(profile, fixSandboxProfile(wt, LOOP_DIR));
+			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, "bun", "test"] : ["bun", "test"];
+			const result = await run(cmd!, args, { cwd: wt, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 30 * 60_000, killGroup: true });
+			fs.rmSync(profile, { force: true });
 			const clean = result.out.replace(/\x1b\[[0-9;]*m/g, "");
 			const count = (label: string) => Number(clean.match(new RegExp(`^\\s*(\\d+) ${label}$`, "m"))?.[1] ?? 0);
 			const passed = count("pass");
