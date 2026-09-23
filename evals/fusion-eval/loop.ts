@@ -294,7 +294,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const body = git(["diff", `${from}..${to}`, "--", "extensions/"]);
 			return `${stat}\n\n${body.slice(0, 20_000)}${body.length > 20_000 ? "\n…(diff truncated)" : ""}`;
 		},
-		async proposeFix({ base, regressions, evidence }) {
+		async proposeFix({ base, fixer, regressions, evidence }) {
 			const branch = `eval-loop/fix-${base.slice(0, 8)}-${Date.now()}`;
 			const dir = path.join(LOOP_DIR, "fix", branch.replace(/\//g, "_"));
 			git(["worktree", "add", "-b", branch, dir, base]);
@@ -309,7 +309,10 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 				"Make the smallest change under extensions/fusion-harness that fixes the cause, add or update a test that fails without the fix, and run `bun test` until it passes.",
 				"Change ONLY files under extensions/. Any change anywhere else (evals/, bunfig.toml, .env, package.json, …) rejects the whole attempt — changing the grader or the build is not a fix. Do not commit, push, merge, or publish; the loop commits and its gate decides.",
 			].join(" ");
-			const result = await run("pi", ["--no-extensions", "-e", path.join(dir, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
+			// The FIXER harness is the last accepted commit (found by the real e2e: the broken harness,
+			// fixing itself, skipped its own final integration and only got halfway). It edits `dir`.
+			const fixerHarness = fixer ? worktree(fixer, `fixer-${Date.now()}`) : dir;
+			const result = await run("pi", ["--no-extensions", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
 			// Checked against the base, not the working tree: commits the agent made itself count too.
 			const forbidden = protectedChanges(dir, base);
 			if (forbidden.length) throw new Error(`fix run changed protected paths (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);

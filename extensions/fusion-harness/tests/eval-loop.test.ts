@@ -167,6 +167,17 @@ describe("eval loop — decisions", () => {
 		expect(w.calls.publish).toEqual([]);
 	});
 
+	test("the fix run is driven by the last ACCEPTED harness, not the broken candidate", async () => {
+		const w = world({ scores: { c2: { "local/01": { harnessOk: false } } }, fix: "ok" });
+		let fixer: string | undefined;
+		const propose = w.deps.proposeFix;
+		w.deps.proposeFix = async (input) => { fixer = input.fixer; return propose(input); };
+		await tick(w.deps, CONFIG);
+		w.setHead("c2");
+		await tick(w.deps, CONFIG);
+		expect(fixer).toBe("c1");
+	});
+
 	test("autoMerge off: a passing gate opens a PR but never merges", async () => {
 		const w = world({ scores: { c2: { "local/01": { harnessOk: false } } }, fix: "ok" });
 		await tick(w.deps, CONFIG);

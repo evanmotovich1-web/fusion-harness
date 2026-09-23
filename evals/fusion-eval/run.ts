@@ -100,7 +100,7 @@ export function pytest(dir: string, testDir: string): { total: number; passed: n
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
 		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.copyFileSync(path.join(dir, entry.name), path.join(solution, entry.name));
 	}
-	fs.cpSync(path.join(dir, testDir), hidden, { recursive: true });
+	fs.cpSync(path.isAbsolute(testDir) ? testDir : path.join(dir, testDir), hidden, { recursive: true });
 	fs.copyFileSync(path.join(TASKS_DIR, "_isolated.py"), path.join(hidden, "_isolated.py"));
 	const childTmp = path.join(root, "tmp");
 	fs.mkdirSync(childTmp);
@@ -145,8 +145,7 @@ function selfTest(): boolean {
 	for (const id of taskIds()) {
 		const scratch = fs.mkdtempSync(path.join(os.tmpdir(), `fh-eval-self-${id}-`));
 		for (const file of fs.readdirSync(path.join(TASKS_DIR, id, "reference"))) fs.copyFileSync(path.join(TASKS_DIR, id, "reference", file), path.join(scratch, file));
-		fs.cpSync(path.join(TASKS_DIR, id, "hidden"), path.join(scratch, "_hidden_eval"), { recursive: true });
-		const result = pytest(scratch, "_hidden_eval");
+		const result = pytest(scratch, path.join(TASKS_DIR, id, "hidden"));
 		const pass = result.total > 0 && result.failed === 0;
 		ok &&= pass;
 		console.log(`${pass ? "PASS" : "FAIL"}  ${id}: reference ${result.passed}/${result.total}`);
@@ -181,26 +180,32 @@ function readJson(file: string): any {
 }
 
 /**
- * Sandbox for the harness under test while it BUILDS the solution (Enemy pass 6): the
- * candidate harness is arbitrary code, and a "fix" could make it copy the reference
- * answers into the build folder. It keeps network and everything pi needs, but cannot
- * read any sealed task (references, hidden tests), any git object store except its
- * own scratch repo's, the loop's runner/results/state, or other grading folders — and
- * cannot write to any of them.
+ * Sandbox for the harness under test while it BUILDS the solution. The candidate harness
+ * is arbitrary code; a "fix" could make it plant known answers or tamper with the grader.
+ * Enemy passes 6-7 showed a deny-list always misses a path, so WRITES are deny-by-default:
+ * only its own scratch, run artifacts (/tmp/fusion-harness-*), temp, and pi's own state
+ * (~/.pi/agent). Nothing else — not git hooks, not the grader's Python/pytest, not
+ * node_modules, not the loop. READS: everything pi needs, except the loop's folder, other
+ * runs (/tmp/fh-eval-*), the grading cache, credentials (gh/ssh/git, and the keychain
+ * service), and — even inside its own worktree — any sealed task or git object store
+ * other than its own scratch repo's. Network stays on (the models need it).
  */
-export function harnessSandboxProfile(scratch: string): string {
+export function harnessSandboxProfile(scratch: string, harness: string): string {
 	const home = os.homedir();
 	const loopDir = process.env.FH_LOOP_DIR || path.join(home, ".pi", "fusion-harness", "eval-loop");
-	const off = [path.join(loopDir, "runner"), path.join(loopDir, "results"), path.join(loopDir, "state.json"), RESULTS_DIR, path.join(home, ".cache", "fh-eval-grading")];
-	const offRules = off.map((p) => `(subpath ${JSON.stringify(p)})`).join(" ");
-	const own = fs.realpathSync(scratch);
+	const own = JSON.stringify(fs.realpathSync(scratch));
+	const q = (p: string) => JSON.stringify(p);
 	return [
 		"(version 1)",
 		"(allow default)",
-		`(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)") ${offRules})`,
-		`(deny file-write* (regex #"/evals/fusion-eval(/|$)") ${offRules})`,
-		// Later rules win: the build's own scratch repo (including its .git) stays fully usable.
-		`(allow file-read* file-write* (subpath ${JSON.stringify(own)}))`,
+		"(deny file-write*)",
+		`(allow file-write* (subpath ${own}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") (subpath ${q(path.join(home, ".pi", "agent"))}) (subpath "/dev"))`,
+		`(deny file-read* (subpath ${q(loopDir)}) (subpath ${q(RESULTS_DIR)}) (regex #"^/private/tmp/fh-eval-") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".config", "gh"))}) (subpath ${q(path.join(home, ".ssh"))}) (literal ${q(path.join(home, ".git-credentials"))}))`,
+		`(allow file-read* (subpath ${q(fs.realpathSync(harness))}) (subpath ${own}))`,
+		'(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)"))',
+		// Later rules win: its own scratch repo (and that repo's .git) stays fully usable.
+		`(allow file-read* (subpath ${own}))`,
+		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
 }
@@ -225,7 +230,7 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const logPath = path.join(scratch, ".fh-eval-pi.log");
 	const exitCode = await new Promise<number | null>((resolve) => {
 		const profile = path.join(os.tmpdir(), `fh-eval-harness-${randomUUID()}.sb`);
-		fs.writeFileSync(profile, harnessSandboxProfile(scratch));
+		fs.writeFileSync(profile, harnessSandboxProfile(scratch, harness));
 		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
 		const child = spawn(cmd!, args, { cwd: scratch, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
 		const timer = setTimeout(() => child.kill("SIGTERM"), RUN_TIMEOUT_MS);
@@ -236,8 +241,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const artifacts = findArtifacts(token, startedAt);
 	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
-	fs.cpSync(path.join(TASKS_DIR, task, "hidden"), path.join(scratch, "_hidden_eval"), { recursive: true });
-	const hidden = pytest(scratch, "_hidden_eval");
+	// Hidden tests are read straight from the sealed suite — never copied next to the solution.
+	const hidden = pytest(scratch, path.join(TASKS_DIR, task, "hidden"));
 	const costUsd = (summary?.agents ?? []).reduce((sum: number, agent: any) => sum + (agent.costUsd ?? 0), 0);
 	const record = {
 		suiteHash: opts.suiteHash,
@@ -270,6 +275,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const out = path.join(RESULTS_DIR, opts.label, group.name);
 	fs.mkdirSync(out, { recursive: true });
 	fs.writeFileSync(path.join(out, `${task}.json`), `${JSON.stringify(record, null, 2)}\n`);
+	// Nothing a later run could read is left behind: the solution and build folder go (the record keeps the scores).
+	if (!process.env.FH_EVAL_KEEP_SCRATCH) fs.rmSync(scratch, { recursive: true, force: true });
 	return record;
 }
 

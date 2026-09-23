@@ -87,7 +87,8 @@ export interface LoopDeps {
 	/** Evaluate `commit` with the loop's trusted runner; tasks undefined = the whole suite. */
 	evaluate(commit: string, groups: string[], tasks?: string[]): Promise<EvalRecord[]>;
 	diffSince(from: string | undefined, to: string): Promise<string>;
-	proposeFix(input: { base: string; regressions: Regression[]; evidence: string }): Promise<FixProposal | undefined>;
+	/** `fixer` is the last ACCEPTED commit: the known-good harness that does the fixing (a broken harness cannot be trusted to fix itself). */
+	proposeFix(input: { base: string; fixer?: string; regressions: Regression[]; evidence: string }): Promise<FixProposal | undefined>;
 	runTests(commit: string): Promise<TestResult>;
 	/** merge=true must merge exactly fix.commit (no newer head) or report merged:false. */
 	publish(fix: FixProposal, input: { title: string; body: string; merge: boolean; base: string }): Promise<{ pr?: string; merged: boolean }>;
@@ -277,7 +278,7 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		phase("fix");
 		let fix: FixProposal | undefined;
 		try {
-			fix = await deps.proposeFix({ base: commit, regressions: fresh, evidence });
+			fix = await deps.proposeFix({ base: commit, fixer: state.acceptedCommit, regressions: fresh, evidence });
 		} catch (error) {
 			// A fix run that fails (or is rejected, e.g. it touched protected paths) is still an attempt.
 			state.attempted = [...new Set([...state.attempted, ...fresh.map(itemOf)])];
