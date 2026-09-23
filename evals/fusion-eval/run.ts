@@ -223,6 +223,26 @@ function readJson(file: string): any {
 	try { return JSON.parse(readRegular(file)); } catch { return undefined; }
 }
 
+const arrayOr = (value: unknown): unknown[] => (Array.isArray(value) ? value : []);
+const objectOr = (value: unknown): Record<string, unknown> => (value && typeof value === "object" && !Array.isArray(value) ? (value as Record<string, unknown>) : {});
+
+/**
+ * The harness's summary.json, type-checked field by field: it is written by the code under test,
+ * so any other shape reads as "not ok" instead of throwing (Enemy pass 15: `agents: "x"` made the
+ * cost sum throw outside every guard).
+ */
+function summaryOf(raw: unknown): { ok: boolean; executionFailure?: string; taskStates: Record<string, string>; maxConcurrentWriteEnabledChildren?: number; agents: Array<{ costUsd: number }> } {
+	const s = objectOr(raw);
+	const states = Object.fromEntries(Object.entries(objectOr(s.taskStates)).filter(([, v]) => typeof v === "string")) as Record<string, string>;
+	return {
+		ok: s.ok === true,
+		executionFailure: typeof s.executionFailure === "string" ? s.executionFailure.slice(0, 2000) : undefined,
+		taskStates: states,
+		maxConcurrentWriteEnabledChildren: Number.isFinite(s.maxConcurrentWriteEnabledChildren) ? (s.maxConcurrentWriteEnabledChildren as number) : undefined,
+		agents: arrayOr(s.agents).map((a) => objectOr(a).costUsd).filter((c): c is number => typeof c === "number" && Number.isFinite(c) && c >= 0).map((costUsd) => ({ costUsd })),
+	};
+}
+
 /** Where run artifacts and pi logs are kept: under $HOME (unreadable, unwritable for every sandbox). */
 const ARTIFACT_STORE = process.env.FH_EVAL_ARTIFACTS_DIR || path.join(os.homedir(), ".cache", "fh-eval-artifacts");
 
@@ -246,6 +266,7 @@ export function collectArtifacts(dir: string | undefined, dest: string): string 
 	let entries = 0;
 	let bytes = 0;
 	let plain = true;
+	try {
 	while (plain && stack.length) {
 		const current = stack.pop()!;
 		for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
@@ -255,6 +276,9 @@ export function collectArtifacts(dir: string | undefined, dest: string): string 
 			// Kept for a week: at most 200 MB of a run's artifacts (no disk filling via the store).
 			else if ((bytes += fs.lstatSync(path.join(current, entry.name)).size) > 200_000_000) { plain = false; break; }
 		}
+	}
+	} catch {
+		plain = false; // anything unreadable: refused, never a crash
 	}
 	if (plain) return dest;
 	removeTree(dest);
@@ -475,7 +499,7 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	try { found = findArtifacts(token, startedAt, runRoot.artifacts); } catch { found = undefined; }
 	const artifacts = collectArtifacts(found, path.join(store, "run"));
 	removeTree(runRoot.root);
-	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
+	const summary = artifacts ? summaryOf(readJson(path.join(artifacts, "summary.json"))) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
 	// Hidden tests are read straight from the sealed suite — never copied next to the solution.
 	let hidden: ReturnType<typeof pytest>;
@@ -485,7 +509,9 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		// Ungradable (e.g. the solution folder is unreadable): scores 0, never crashes the run.
 		hidden = { total: 0, passed: 0, failed: 0, output: `grading failed: ${error instanceof Error ? error.message : String(error)}` };
 	}
-	const costUsd = (summary?.agents ?? []).reduce((sum: number, agent: any) => sum + (agent.costUsd ?? 0), 0);
+	const costUsd = (summary?.agents ?? []).reduce((sum, agent) => sum + agent.costUsd, 0);
+	// The store keeps a week of logs: each pi.log is cut to its last 1 MB (a run can write up to 1 GiB into it).
+	try { if (fs.lstatSync(logPath).size > 1_000_000) fs.writeFileSync(logPath, readRegular(logPath, { tail: 1_000_000 })); } catch { /* best effort */ }
 	const record = {
 		suiteHash: opts.suiteHash,
 		label: opts.label,
@@ -502,8 +528,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		executionFailure: summary?.executionFailure ?? (artifacts ? null : `no run artifacts — pi did not start the collaboration (see ${logPath})`),
 		tasksFailed: Object.values(states).filter((state) => state === "failed" || state === "blocked").length,
 		maxWriters: summary?.maxConcurrentWriteEnabledChildren ?? null,
-		quotaWaits: artifacts ? (readJson(path.join(artifacts, "collaborate", "quota-waits.json")) ?? []).length : 0,
-		benched: artifacts ? Object.keys(readJson(path.join(artifacts, "collaborate", "quota-benched.json")) ?? {}) : [],
+		quotaWaits: artifacts ? arrayOr(readJson(path.join(artifacts, "collaborate", "quota-waits.json"))).length : 0,
+		benched: artifacts ? Object.keys(objectOr(readJson(path.join(artifacts, "collaborate", "quota-benched.json")))) : [],
 		costUsd: Number(costUsd.toFixed(4)),
 		wallMs,
 		hidden: { total: hidden.total, passed: hidden.passed, failed: hidden.failed },

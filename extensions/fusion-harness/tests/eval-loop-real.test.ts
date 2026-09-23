@@ -694,3 +694,29 @@ describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pa
 		expect(existsSync(join(dir, "big")) ? require("node:fs").statSync(join(dir, "big")).size : 0).toBeLessThanOrEqual(1024 ** 3);
 	});
 });
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pass 15: a malformed summary.json cannot crash the runner", () => {
+	test("summary with agents/taskStates of the wrong type still yields a record, read as not ok", () => {
+		const home = require("node:os").homedir();
+		const { harness, bin } = stubHarness();
+		const store = mkdtempSync(join(home, ".cache", "fh-p15-store-"));
+		dirs.push(store);
+		writeFileSync(join(bin, "pi"), [
+			"#!/bin/bash",
+			'[ "$1" = auth ] && exit 0',
+			'd="$FH_TMP_ROOT/fusion-harness-odd"; mkdir -p "$d/collaborate"; printf "%s" "$*" > "$d/prompt.md"',
+			`echo '{"ok":"yes","agents":"x","taskStates":[1,2],"maxConcurrentWriteEnabledChildren":"9"}' > "$d/summary.json"`,
+			`echo '"not-an-array"' > "$d/collaborate/quota-waits.json"; echo '42' > "$d/collaborate/quota-benched.json"`,
+			"exit 0",
+			"",
+		].join("\n"));
+		execFileSync("chmod", ["+x", join(bin, "pi")]);
+		const results = temp("fh-p15-results-");
+		const RUN_TS = join(dirname(LOOP_TS), "run.ts");
+		const probe = `import { runOne } from ${JSON.stringify(RUN_TS)};\nconst r = await runOne({ harness: ${JSON.stringify(harness)}, harnessCommit: "stub", label: "p15", group: { name: "stub", file: "/dev/null", signature: "x", models: [] }, task: "01-wordstats", suiteHash: "x" });\nconsole.log(JSON.stringify({ ok: r.harnessOk, cost: r.costUsd, writers: r.maxWriters, artifacts: r.artifacts }));`;
+		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, FH_EVAL_RESULTS_DIR: results, FH_EVAL_ARTIFACTS_DIR: store }, timeout: 300_000 });
+		const record = JSON.parse(out.trim().split("\n").pop()!);
+		expect(record.artifacts).not.toBeNull(); // the planted run was really found and read
+		expect(record).toMatchObject({ ok: false, cost: 0, writers: null });
+	}, 300_000);
+});
