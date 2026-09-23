@@ -122,7 +122,9 @@ export function findRegressions(current: EvalRecord[], accepted: Record<string, 
 		const bar = accepted[key];
 		if (!bar || bar.suiteHash !== record.suiteHash) continue;
 		if (record.passRate < bar.passRate) out.push({ key, kind: "pass-rate", detail: `hidden tests ${pct(bar.passRate)} → ${pct(record.passRate)}` });
-		if (bar.harnessOk && !record.harnessOk) out.push({ key, kind: "harness-fail", detail: `harness run failed (bar succeeded): ${record.executionFailure ?? "not ok"}` });
+		// Loop-written text only: the harness's own failure message goes to the evidence, never into details
+		// (details reach ROT.md and titles).
+		if (bar.harnessOk && !record.harnessOk) out.push({ key, kind: "harness-fail", detail: "harness run failed (bar succeeded)" });
 		if (bar.costUsd > 0 && record.costUsd > bar.costUsd * 1.5 && record.costUsd - bar.costUsd > 0.5) out.push({ key, kind: "cost", detail: `cost $${bar.costUsd.toFixed(2)} → $${record.costUsd.toFixed(2)}` });
 	}
 	return out;
@@ -138,6 +140,14 @@ export function meetsBar(record: EvalRecord | undefined, bar: EvalRecord | undef
 	if (bar.harnessOk && !record.harnessOk) return "harness run failed";
 	if (bar.costUsd > 0 && record.costUsd > bar.costUsd * 1.5 && record.costUsd - bar.costUsd > 0.5) return `cost $${record.costUsd.toFixed(2)} vs bar $${bar.costUsd.toFixed(2)}`;
 	return undefined;
+}
+
+/**
+ * Candidate-written text (harness output, solution stdout, the diff) inside a fence it cannot close:
+ * in the public PR body no mention, link, image or HTML in it renders.
+ */
+export function fence(lang: string, text: string): string {
+	return `~~~~${lang}\n${text.replace(/~{3,}/g, (m) => m.split("").join("\u200b"))}\n~~~~`;
 }
 
 function splitKey(key: string): { group: string; task: string } {
@@ -273,10 +283,10 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 			...fresh.map((r) => `- ${r.key} [${r.kind}] ${r.detail}`),
 			"",
 			"Failing evidence:",
-			...records.filter((record) => targetKeys.has(recordKey(record))).map((record) => `## ${recordKey(record)}\n${record.evidence ?? record.executionFailure ?? "(no output)"}`),
+			...records.filter((record) => targetKeys.has(recordKey(record))).map((record) => `## ${recordKey(record)}\n${fence("text", record.evidence ?? record.executionFailure ?? "(no output)")}`),
 			"",
 			"Diff since the accepted commit:",
-			await deps.diffSince(state.acceptedCommit, commit),
+			fence("diff", await deps.diffSince(state.acceptedCommit, commit)),
 		].join("\n");
 
 		phase("fix");

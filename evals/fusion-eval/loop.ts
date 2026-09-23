@@ -20,7 +20,7 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
-import { homeReadRules, prepareAgentDir, privateRunRoot, profileDir, real, secretReadDenies, sharedTempReadDenies } from "./run.ts";
+import { homeReadRules, prepareAgentDir, privateRunRoot, profileDir, real, removeTree, secretReadDenies, sharedTempReadDenies } from "./run.ts";
 
 /**
  * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
@@ -50,9 +50,19 @@ export function fixSandboxProfile(fixDir: string, loopDir: string, readable: str
 		sharedTempReadDenies(),
 		homeReadRules([fixDir, path.join(fixDir, "node_modules"), ...gitDirs, ...(runRoot ? [runRoot] : []), ...readable.flatMap((p) => [p, path.join(p, "node_modules")])]),
 		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()} (regex #"/evals/fusion-eval/tasks(/|$)"))`,
+		"(deny file-write-flags)", // no chflags: uchg on files the loop later removes or commits
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
+}
+
+/**
+ * A log line bound for the vault (ROT.md, indexed into the wiki agents read before deciding): one
+ * plain line, no wiki links, embeds, HTML, code or mentions — whatever a candidate managed to put
+ * into a path name or an error message stays inert text.
+ */
+export function vaultSafe(line: string): string {
+	return line.replace(/\s+/g, " ").replace(/\[\[|\]\]|[<>`!|]/g, "").replace(/@/g, "(at)").slice(0, 400);
 }
 
 /**
@@ -372,7 +382,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
 			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs;
 			// FH_IN_SANDBOX: tests that need their own sandbox skip inside this one (macOS forbids nesting); the gate runs them in full.
-			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1", PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true }).finally(() => { agentDir.cleanup(); fs.rmSync(runRoot.root, { recursive: true, force: true }); });
+			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1", PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true }).finally(() => { agentDir.cleanup(); removeTree(runRoot.root); });
 			if (fs.readFileSync(path.join(dir, ".git"), "utf8") !== dotGit) throw new Error("fix run rewrote the worktree's .git pointer — rejected");
 			// Checked against the base, not the working tree: commits the agent made itself count too.
 			const forbidden = protectedChanges(dir, base, gitDir);
@@ -388,7 +398,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const runRoot = privateRunRoot("gate");
 			fs.writeFileSync(profile, fixSandboxProfile(wt, LOOP_DIR, [], runRoot.root));
 			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, "bun", "test"] : ["bun", "test"];
-			const result = await run(cmd!, args, { cwd: wt, env: { FH_IN_SANDBOX: "1", ...runRoot.env }, timeoutMs: 30 * 60_000, killGroup: true }).finally(() => fs.rmSync(runRoot.root, { recursive: true, force: true }));
+			const result = await run(cmd!, args, { cwd: wt, env: { FH_IN_SANDBOX: "1", ...runRoot.env }, timeoutMs: 30 * 60_000, killGroup: true }).finally(() => removeTree(runRoot.root));
 			fs.rmSync(profile, { force: true });
 			const clean = result.out.replace(/\x1b\[[0-9;]*m/g, "");
 			const count = (label: string) => Number(clean.match(new RegExp(`^\\s*(\\d+) ${label}$`, "m"))?.[1] ?? 0);
@@ -421,7 +431,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			fs.appendFileSync(LOG, `${stamped}\n`);
 			console.log(stamped);
 			if (opts?.rot && VAULT && fs.existsSync(path.join(VAULT, "ROT.md"))) {
-				fs.appendFileSync(path.join(VAULT, "ROT.md"), `- ${new Date().toISOString().slice(0, 10)} — fusion eval loop: ${line.replace(/\s+/g, " ").slice(0, 400)} (log: ${LOG})\n`);
+				fs.appendFileSync(path.join(VAULT, "ROT.md"), `- ${new Date().toISOString().slice(0, 10)} — fusion eval loop: ${vaultSafe(line)} (log: ${LOG})\n`);
 				spawnSync("python3", ["scripts/llmwiki_sync.py"], { cwd: VAULT, timeout: 120_000 });
 			}
 		},

@@ -98,7 +98,8 @@ export function pytest(dir: string, testDir: string): { total: number; passed: n
 	const hidden = path.join(root, "_hidden_eval");
 	fs.mkdirSync(solution);
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.writeFileSync(path.join(solution, entry.name), readRegular(path.join(dir, entry.name)));
+		if (!entry.isFile() || !entry.name.endsWith(".py") || entry.name.startsWith("test_") || entry.name === "conftest.py") continue;
+		try { fs.writeFileSync(path.join(solution, entry.name), readRegular(path.join(dir, entry.name))); } catch { /* unreadable or oversized: not part of the solution */ }
 	}
 	fs.cpSync(path.isAbsolute(testDir) ? testDir : path.join(dir, testDir), hidden, { recursive: true });
 	fs.copyFileSync(path.join(TASKS_DIR, "_isolated.py"), path.join(hidden, "_isolated.py"));
@@ -164,13 +165,15 @@ export function loadGroup(name: string): GroupEntry {
 }
 
 function findArtifacts(token: string, since: number, root = "/tmp"): string | undefined {
-	for (const entry of fs.existsSync(root) ? fs.readdirSync(root, { withFileTypes: true }) : []) {
+	// The root itself must be a real directory too (a run could swap its `fh/` for a symlink).
+	try { if (!fs.lstatSync(root).isDirectory()) return undefined; } catch { return undefined; }
+	for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
 		// A real directory only — never a planted symlink (Enemy pass 12).
 		if (!entry.name.startsWith("fusion-harness-") || !entry.isDirectory()) continue;
 		const dir = path.join(root, entry.name);
 		try {
 			if (fs.lstatSync(dir).mtimeMs < since - 60_000) continue;
-			if (readRegular(path.join(dir, "prompt.md")).includes(token)) return dir;
+			if (readRegular(path.join(dir, "prompt.md"), { head: 200_000 }).includes(token)) return dir;
 		} catch { /* not a run dir */ }
 	}
 	return undefined;
@@ -181,14 +184,39 @@ function findArtifacts(token: string, since: number, root = "/tmp"): string | un
  * (Enemy pass 12: a planted `final.md -> ~/.pi/agent/auth.json` made the UNSANDBOXED runner read
  * the secret into the results, the fix evidence and the public PR body).
  */
-export function readRegular(file: string): string {
+export function readRegular(file: string, opts: { head?: number; tail?: number; max?: number } = {}): string {
 	const fd = fs.openSync(file, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
 	try {
-		if (!fs.fstatSync(fd).isFile()) throw new Error(`${file} is not a regular file`);
-		return fs.readFileSync(fd, "utf8");
+		const stat = fs.fstatSync(fd);
+		if (!stat.isFile()) throw new Error(`${file} is not a regular file`);
+		// Bounded (Enemy pass 13: a 3 GB sparse log made a whole-file read throw ENOMEM and crash the run).
+		const want = opts.head ?? opts.tail;
+		if (want === undefined && stat.size > (opts.max ?? 5_000_000)) throw new Error(`${file} is too large (${stat.size} bytes)`);
+		const length = want === undefined ? stat.size : Math.min(want, stat.size);
+		const buffer = Buffer.alloc(length);
+		const read = fs.readSync(fd, buffer, 0, length, opts.tail !== undefined ? stat.size - length : 0);
+		return buffer.subarray(0, read).toString("utf8");
 	} finally {
 		fs.closeSync(fd);
 	}
+}
+
+/**
+ * Remove a tree a sandboxed run wrote, whatever it did to it: the owner can always restore its own
+ * write bits and clear user flags (Enemy pass 13: `chflags uchg` / `chmod 0500` made rmSync/renameSync
+ * throw and crashed every tick). Never follows symlinks; never throws.
+ */
+export function removeTree(dir: string): void {
+	try {
+		if (!fs.existsSync(dir)) return;
+		unlockTree(dir);
+		fs.rmSync(dir, { recursive: true, force: true });
+	} catch { /* best effort — a leftover in /tmp must never fail a run */ }
+}
+
+function unlockTree(dir: string): void {
+	if (process.platform === "darwin") spawnSync("/usr/bin/chflags", ["-R", "-P", "nouchg,nouappnd", dir], { stdio: "ignore" });
+	spawnSync("/bin/chmod", ["-R", "-P", "u+rwX", dir], { stdio: "ignore" });
 }
 
 function readJson(file: string): any {
@@ -204,12 +232,29 @@ const ARTIFACT_STORE = process.env.FH_EVAL_ARTIFACTS_DIR || path.join(os.homedir
  * file or directory. After the move nothing the run left behind can swap a path under the reader.
  */
 export function collectArtifacts(dir: string | undefined, dest: string): string | undefined {
-	if (!dir || !fs.lstatSync(dir).isDirectory()) return undefined;
-	fs.mkdirSync(path.dirname(dest), { recursive: true, mode: 0o700 });
-	fs.renameSync(dir, dest);
-	const plain = (p: string): boolean => fs.readdirSync(p, { withFileTypes: true }).every((e) => e.isFile() || (e.isDirectory() && plain(path.join(p, e.name))));
-	if (plain(dest)) return dest;
-	fs.rmSync(dest, { recursive: true, force: true });
+	try {
+		if (!dir || !fs.lstatSync(dir).isDirectory()) return undefined;
+		fs.mkdirSync(path.dirname(dest), { recursive: true, mode: 0o700 });
+		unlockTree(dir);
+		fs.chmodSync(path.dirname(dir), 0o700); // leaving a directory needs write on its parent too
+		fs.renameSync(dir, dest);
+	} catch {
+		return undefined; // could not take it out of reach: treated as no artifacts (a harness failure), never a crash
+	}
+	// Iterative and bounded: a deeply nested or huge tree is refused, not a stack overflow.
+	const stack = [dest];
+	let entries = 0;
+	let plain = true;
+	while (plain && stack.length) {
+		const current = stack.pop()!;
+		for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+			if (++entries > 20_000 || current.split(path.sep).length - dest.split(path.sep).length > 32) { plain = false; break; }
+			if (entry.isDirectory()) stack.push(path.join(current, entry.name));
+			else if (!entry.isFile()) { plain = false; break; }
+		}
+	}
+	if (plain) return dest;
+	removeTree(dest);
 	return undefined;
 }
 
@@ -283,7 +328,7 @@ export function privateRunRoot(kind: string): { root: string; artifacts: string;
 		root,
 		artifacts: path.join(root, "fh"),
 		env: { TMPDIR: path.join(root, "tmp"), FH_TMP_ROOT: path.join(root, "fh") },
-		cleanupTemp: () => fs.rmSync(path.join(root, "tmp"), { recursive: true, force: true }),
+		cleanupTemp: () => removeTree(path.join(root, "tmp")),
 	};
 }
 
@@ -343,7 +388,7 @@ export function prepareAgentDir(minValidityMs: number, parent = os.tmpdir()): { 
 	const keep = Object.fromEntries(["defaultProvider", "defaultModel", "defaultThinkingLevel", "compaction", "lastChangelogVersion"].filter((k) => k in settings).map((k) => [k, settings[k]]));
 	fs.writeFileSync(path.join(dir, "settings.json"), JSON.stringify(keep, null, 2));
 	if (fs.existsSync(path.join(agent, "bin"))) fs.symlinkSync(path.join(agent, "bin"), path.join(dir, "bin"));
-	return { dir, cleanup: () => fs.rmSync(dir, { recursive: true, force: true }) };
+	return { dir, cleanup: () => removeTree(dir) };
 }
 
 export function harnessSandboxProfile(scratch: string, harness: string, runRoot?: string): string {
@@ -366,6 +411,8 @@ export function harnessSandboxProfile(scratch: string, harness: string, runRoot?
 		'(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)"))',
 		// Later rules win: its own scratch repo (and that repo's .git) stays fully usable.
 		`(allow file-read* (subpath ${own}) ${mine})`,
+		// No chflags anywhere (uchg on its own artifacts made the trusted cleanup and collection throw).
+		"(deny file-write-flags)",
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
 	].join("\n");
@@ -401,7 +448,10 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		const agentDir = prepareAgentDir(RUN_TIMEOUT_MS + 10 * 60_000, runRoot.root);
 		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "--no-session", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
 		// Its own process group, killed when it ends: nothing the harness started outlives the run.
-		const child = spawn(cmd!, args, { cwd: scratch, detached: true, env: sandboxEnv({ PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }), stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
+		// ONE descriptor for stdout and stderr (two made stdout overwrite the startup error on stderr).
+		const logFd = fs.openSync(logPath, "a");
+		const child = spawn(cmd!, args, { cwd: scratch, detached: true, env: sandboxEnv({ PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }), stdio: ["ignore", logFd, logFd] });
+		fs.closeSync(logFd);
 		const killGroup = () => { try { process.kill(-child.pid!, "SIGKILL"); } catch { /* already gone */ } };
 		const timer = setTimeout(killGroup, RUN_TIMEOUT_MS);
 		const done = (code: number | null) => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); agentDir.cleanup(); runRoot.cleanupTemp(); resolve(code); };
@@ -410,7 +460,7 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	});
 	const wallMs = Date.now() - startedAt;
 	const artifacts = collectArtifacts(findArtifacts(token, startedAt, runRoot.artifacts), path.join(store, "run"));
-	fs.rmSync(runRoot.root, { recursive: true, force: true });
+	removeTree(runRoot.root);
 	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
 	// Hidden tests are read straight from the sealed suite — never copied next to the solution.
@@ -440,15 +490,15 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		passRate: hidden.total ? hidden.passed / hidden.total : 0,
 		hiddenOutput: hidden.output.slice(-2000),
 		// Why the harness judged the run the way it did: the run's own final facts and task states.
-		harnessFacts: artifacts ? [`task states: ${JSON.stringify(states)}`, (() => { try { return readRegular(path.join(artifacts, "collaborate", "final.md")).slice(0, 1500); } catch { return ""; } })()].filter(Boolean).join("\n") : undefined,
-		startupLog: artifacts ? undefined : readRegular(logPath).slice(-1500),
+		harnessFacts: artifacts ? [`task states: ${JSON.stringify(states)}`, (() => { try { return readRegular(path.join(artifacts, "collaborate", "final.md"), { head: 1500 }); } catch { return ""; } })()].filter(Boolean).join("\n") : undefined,
+		startupLog: artifacts ? undefined : (() => { try { return readRegular(logPath, { tail: 1500 }); } catch { return ""; } })(),
 		finishedAt: new Date().toISOString(),
 	};
 	const out = path.join(RESULTS_DIR, opts.label, group.name);
 	fs.mkdirSync(out, { recursive: true });
 	fs.writeFileSync(path.join(out, `${task}.json`), `${JSON.stringify(record, null, 2)}\n`);
 	// Nothing a later run could read is left behind: the solution and build folder go (the record keeps the scores).
-	if (!process.env.FH_EVAL_KEEP_SCRATCH) fs.rmSync(scratch, { recursive: true, force: true });
+	if (!process.env.FH_EVAL_KEEP_SCRATCH) removeTree(scratch);
 	return record;
 }
 

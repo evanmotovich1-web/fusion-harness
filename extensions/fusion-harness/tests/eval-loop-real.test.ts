@@ -610,3 +610,50 @@ describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pa
 		expect(require("node:fs").readFileSync(join(results, "p12", "stub", "01-wordstats.json"), "utf8")).not.toContain("SECRET-p12");
 	}, 300_000);
 });
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pass 13: a run cannot crash the trusted runner", () => {
+	test("chflags is denied; chmod-locked artifacts and a 3 GB sparse log still yield a record, and the run's temp is removed", () => {
+		const home = require("node:os").homedir();
+		const { harness, bin } = stubHarness();
+		const store = mkdtempSync(join(home, ".cache", "fh-p13-store-"));
+		dirs.push(store);
+		writeFileSync(join(bin, "pi"), [
+			"#!/bin/bash",
+			'[ "$1" = auth ] && exit 0',
+			'd="$FH_TMP_ROOT/fusion-harness-lock"; mkdir -p "$d"; printf "%s" "$*" > "$d/prompt.md"; echo "{}" > "$d/summary.json"',
+			'chflags uchg "$d" 2>/dev/null && echo CHFLAGS-ALLOWED',
+			'chmod 0500 "$d"; chmod 0500 "$FH_TMP_ROOT"',
+			"echo STUB-RAN",
+			// A sparse multi-GB log through the inherited stdout descriptor.
+			"dd if=/dev/zero bs=1 count=1 seek=3000000000 2>/dev/null",
+			"exit 0",
+			"",
+		].join("\n"));
+		execFileSync("chmod", ["+x", join(bin, "pi")]);
+		const roots = () => new Set(require("node:fs").readdirSync("/tmp").filter((n: string) => n.startsWith("fh-eval-root-harness-")));
+		const before = roots();
+		const results = temp("fh-p13-results-");
+		const RUN_TS = join(dirname(LOOP_TS), "run.ts");
+		const probe = `import { runOne } from ${JSON.stringify(RUN_TS)};\nconst r = await runOne({ harness: ${JSON.stringify(harness)}, harnessCommit: "stub", label: "p13", group: { name: "stub", file: "/dev/null", signature: "x", models: [] }, task: "01-wordstats", suiteHash: "x" });\nconsole.log(JSON.stringify({ artifacts: r.artifacts, harnessOk: r.harnessOk, log: r.startupLog, scratch: r.scratch }));`;
+		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, FH_EVAL_RESULTS_DIR: results, FH_EVAL_ARTIFACTS_DIR: store }, timeout: 300_000 });
+		const record = JSON.parse(out.trim().split("\n").pop()!);
+		expect(existsSync(join(results, "p13", "stub", "01-wordstats.json"))).toBe(true);
+		expect(record.artifacts).not.toBeNull(); // the chmod lock was undone and the run was collected
+		expect(existsSync(record.scratch)).toBe(false);
+		const logs = require("node:fs").readdirSync(store).map((d: string) => join(store, d, "pi.log")).filter(existsSync);
+		const log = require("node:fs").readFileSync(logs[0], "utf8").slice(0, 200);
+		expect(log).toContain("STUB-RAN");
+		expect(log).not.toContain("CHFLAGS-ALLOWED");
+		// This run's private root is gone (other roots may belong to concurrent runs).
+		expect([...roots()].filter((n) => !before.has(n) && (() => { try { return require("node:fs").readdirSync(join("/tmp", n, "fh")).includes("fusion-harness-lock"); } catch { return false; } })())).toEqual([]);
+	}, 300_000);
+});
+
+describe("eval loop — vault lines are inert (Enemy pass 13)", () => {
+	test("vaultSafe drops wiki links, HTML, code and mentions, and keeps one bounded line", () => {
+		const { vaultSafe } = require("../../../evals/fusion-eval/loop.ts");
+		const line = vaultSafe("fix run changed protected paths ([[AGENTS]]\n<script>`x`</script> @evan ![e](x)) " + "y".repeat(600));
+		expect(line).not.toMatch(/\[\[|\]\]|[<>`!@\n]/);
+		expect(line.length).toBeLessThanOrEqual(400);
+	});
+});
