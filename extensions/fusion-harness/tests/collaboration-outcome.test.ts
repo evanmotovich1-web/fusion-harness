@@ -78,14 +78,16 @@ describe("collaboration outcome scheduling", () => {
 		expect(selectStartableCollaborationTasks(tasks, applied.states, new Set(), false)).toEqual(["1.b", "2.a"]);
 	});
 
-	test("no_op skips every descendant but leaves an independent task runnable", () => {
+	test("no_op satisfies its dependents — a clean review must not skip final integration", () => {
+		// Eval run current/council/01-wordstats: a read-only review returned no_op ("no defects"),
+		// which used to skip the final integration and mark a correct run FAIL.
 		const states = initializeCollaborationTaskStates(tasks);
 		states["1.a"] = "writing";
 		states["2.a"] = "queued";
 		const applied = applyCollaborationTaskOutcome(tasks, states, "1.a", outcome("no_op", "already integrated"));
-		expect(applied.states).toEqual({ "1.a": "no_op", "1.b": "pending", "2.a": "skipped", "3.a": "skipped" });
-		expect(applied.skippedTaskIds).toEqual(["2.a", "3.a"]);
-		expect(selectStartableCollaborationTasks(tasks, applied.states, new Set(), false)).toEqual(["1.b"]);
+		expect(applied.states).toEqual({ "1.a": "no_op", "1.b": "pending", "2.a": "queued", "3.a": "pending" });
+		expect(applied.skippedTaskIds).toEqual([]);
+		expect(selectStartableCollaborationTasks(tasks, applied.states, new Set(), false)).toContain("2.a");
 	});
 
 	test("blocked skips descendants without globally cancelling independent work", () => {

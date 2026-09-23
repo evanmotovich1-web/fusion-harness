@@ -174,7 +174,9 @@ export function applyCollaborationTaskOutcome(
 	}
 	const states = { ...currentStates, [taskId]: outcome.status };
 	const skippedTaskIds: string[] = [];
-	if (outcome.status === "no_op" || outcome.status === "blocked") {
+	// no_op means "done, nothing to change" (e.g. a review that found no defects):
+	// it satisfies its dependents. Only blocked stops a branch.
+	if (outcome.status === "blocked") {
 		for (const descendantId of collaborationDescendantIds(tasks, taskId)) {
 			const state = states[descendantId];
 			if (state === "reading" || state === "writing") {
@@ -214,7 +216,7 @@ export function selectStartableCollaborationTasks(
 	for (const task of tasks) {
 		const state = states[task.id];
 		if (state !== "pending" && state !== "queued") continue;
-		if (!task.depends_on.every((dependency) => states[dependency] === "completed")) continue;
+		if (!task.depends_on.every((dependency) => states[dependency] === "completed" || states[dependency] === "no_op")) continue;
 		if (occupied.has(task.assignee)) continue;
 		if (task.mode === "write" && writerSelected) continue;
 		selected.push(task.id);
