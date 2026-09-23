@@ -1,11 +1,11 @@
 {
   "suite": "fusion-eval",
-  "lockedAt": "2026-09-23T05:33:23.317Z",
+  "lockedAt": "2026-09-23T05:40:18.450Z",
   "files": {
     "tasks/01-wordstats/hidden/test_hidden_wordstats.py": "93d62f5d0fba51c7ee89c02c76fb832029c849c927d1c06336cc2972e425d932",
     "tasks/01-wordstats/prompt.md": "c3d6092a70917416636caf91bed6f5476fa899c2ef75cc07c83290c5809cf142",
     "tasks/01-wordstats/reference/wordstats.py": "b803df7035f4c7c6437398c7cd84f4ffac35115666eea6883ba88759fa4150e5",
-    "tasks/02-roman/hidden/test_hidden_roman.py": "cf06f79bf9b942f38e4f8f0e672ecde2be0555bd4329906b168a48dde893280a",
+    "tasks/02-roman/hidden/test_hidden_roman.py": "0ca67d6e24a18702963f18c0786fc541c7b8dc949c4ad9b8f0656e53f2b265f6",
     "tasks/02-roman/prompt.md": "e991fc6012e50c8aefe46542b6a09b06f1576d7246842a84117f335c7ed4bec2",
     "tasks/02-roman/reference/roman.py": "fdbf18994cf20603ec5be8a86161904a6f14dd87194f2cc68bfff4ffacebd0ab",
     "tasks/03-intervals/hidden/test_hidden_intervals.py": "d41511c5ee9be0ce73047709f7e828eefb54be1aff7abdbf296805b686d9483c",
@@ -17,7 +17,7 @@
     "tasks/05-calc/hidden/test_hidden_calc.py": "58dec4bba5860f7765f75305e86809311b12630e277ce1b651ae5965e15357e9",
     "tasks/05-calc/prompt.md": "03dac0ae2943b94be89d1648ceb2ee8fcf9e4390cacb2c6e4bd7020733320027",
     "tasks/05-calc/reference/calc.py": "61bc5779c20df175a7f933e9c23739a0d3491e91fe6e9fe71aea8ecc736ce1b0",
-    "tasks/_isolated.py": "6b19392e9821354d58ae5c2dafc8d6d0cd087e9e5aad6488564a9942fd5af4bb"
+    "tasks/_isolated.py": "06e7ae5c84bc18d505a968fd16f7c820fdbb4bc5fce44bd1b7fe342aff7f8773"
   },
-  "suiteHash": "c2e52daab931e7a6a5345ec34cd56276036be37a2dfa2496cc96f1f240d91c64"
+  "suiteHash": "641cbf75f81930eb1ba57ffc9ed48dfc722417955d8a2087468a7bbaaabd6a32"
 }

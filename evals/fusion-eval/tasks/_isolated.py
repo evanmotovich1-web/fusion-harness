@@ -70,7 +70,10 @@ def _dec(v):
 
 def _command(args):
     cmd = [sys.executable, "-I", *args]
-    if PROFILE and os.path.exists("/usr/bin/sandbox-exec"):
+    if PROFILE:
+        # A requested sandbox that cannot be applied is a hard failure, never a silent downgrade.
+        if not os.path.exists("/usr/bin/sandbox-exec"):
+            raise AssertionError("sandbox-exec missing: refusing to run the solution unsandboxed")
         cmd = ["/usr/bin/sandbox-exec", "-f", PROFILE, *cmd]
     return cmd
 

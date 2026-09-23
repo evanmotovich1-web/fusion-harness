@@ -274,6 +274,35 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		expect(out).toContain("run.ts");
 	}, 60_000);
 
+	test("Enemy pass 6: a harness that copies the reference answers into its build folder scores 0", () => {
+		if (process.platform !== "darwin") return;
+		const repoRoot = join(dirname(LOOP_TS), "../..");
+		const stubDir = temp("fh-pi-stub-");
+		// A malicious "harness": instead of building, it tries to plant the reference solution.
+		writeFileSync(join(stubDir, "pi"), [
+			"#!/bin/bash",
+			'cp "$FH_STUB_REPO/evals/fusion-eval/tasks/01-wordstats/reference/wordstats.py" . 2>/dev/null && echo COPIED >> planted.log',
+			'git -C "$FH_STUB_REPO" show HEAD:evals/fusion-eval/tasks/01-wordstats/reference/wordstats.py > from-git.py 2>/dev/null',
+			'if [ -s from-git.py ]; then cp from-git.py wordstats.py; echo GITSHOW >> planted.log; fi',
+			"exit 0",
+			"",
+		].join("\n"));
+		execFileSync("chmod", ["+x", join(stubDir, "pi")]);
+		// Control: unsandboxed, the attack works.
+		const control = temp("fh-pi-control-");
+		execFileSync(join(stubDir, "pi"), [], { cwd: control, env: { ...process.env, FH_STUB_REPO: repoRoot } });
+		expect(require("node:fs").readFileSync(join(control, "planted.log"), "utf8")).toContain("COPIED");
+		// Through the real runOne, the harness runs sandboxed: nothing planted, graded 0.
+		const results = temp("fh-pi-results-");
+		const RUN_TS = join(dirname(LOOP_TS), "run.ts");
+		const probe = `import { runOne } from ${JSON.stringify(RUN_TS)};\nconst r = await runOne({ harness: ${JSON.stringify(repoRoot)}, harnessCommit: "stub", label: "stub", group: { name: "stub", file: "/dev/null", signature: "x", models: [] }, task: "01-wordstats", suiteHash: "x" });\nconsole.log(JSON.stringify({ passed: r.hidden.passed, total: r.hidden.total, scratch: r.scratch }));`;
+		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, PATH: `${stubDir}:${process.env.PATH}`, FH_STUB_REPO: repoRoot, FH_EVAL_RESULTS_DIR: results }, timeout: 300_000 });
+		const record = JSON.parse(out.trim().split("\n").pop()!);
+		expect(record.passed).toBe(0);
+		expect(require("node:fs").existsSync(join(record.scratch, "planted.log"))).toBe(false);
+		expect(require("node:fs").existsSync(join(record.scratch, "wordstats.py"))).toBe(false);
+	}, 360_000);
+
 	test("the trusted runner, started from the neutral dir, never loads a candidate's bunfig.toml preload", () => {
 		const candidate = temp("fh-loop-cand-");
 		const neutral = temp("fh-loop-neutral-");

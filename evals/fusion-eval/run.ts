@@ -90,6 +90,7 @@ export function verifyLock(): string {
  * results, not other runs' folders — and there is no network.
  */
 export function pytest(dir: string, testDir: string): { total: number; passed: number; failed: number; output: string } {
+	if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing to grade unsandboxed on macOS");
 	const cache = path.join(os.homedir(), ".cache", "fh-eval-grading");
 	fs.mkdirSync(cache, { recursive: true });
 	const root = fs.mkdtempSync(path.join(cache, "grade-"));
@@ -179,6 +180,38 @@ function readJson(file: string): any {
 	try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return undefined; }
 }
 
+/**
+ * Sandbox for the harness under test while it BUILDS the solution (Enemy pass 6): the
+ * candidate harness is arbitrary code, and a "fix" could make it copy the reference
+ * answers into the build folder. It keeps network and everything pi needs, but cannot
+ * read any sealed task (references, hidden tests), any git object store except its
+ * own scratch repo's, the loop's runner/results/state, or other grading folders — and
+ * cannot write to any of them.
+ */
+export function harnessSandboxProfile(scratch: string): string {
+	const home = os.homedir();
+	const loopDir = process.env.FH_LOOP_DIR || path.join(home, ".pi", "fusion-harness", "eval-loop");
+	const off = [path.join(loopDir, "runner"), path.join(loopDir, "results"), path.join(loopDir, "state.json"), RESULTS_DIR, path.join(home, ".cache", "fh-eval-grading")];
+	const offRules = off.map((p) => `(subpath ${JSON.stringify(p)})`).join(" ");
+	const own = fs.realpathSync(scratch);
+	return [
+		"(version 1)",
+		"(allow default)",
+		`(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)") ${offRules})`,
+		`(deny file-write* (regex #"/evals/fusion-eval(/|$)") ${offRules})`,
+		// Later rules win: the build's own scratch repo (including its .git) stays fully usable.
+		`(allow file-read* file-write* (subpath ${JSON.stringify(own)}))`,
+		"",
+	].join("\n");
+}
+
+/** On macOS the sandbox is mandatory: grading without it would silently trust the code under test. */
+function sandboxCommand(profile: string, args: string[]): string[] {
+	if (process.platform !== "darwin") return args;
+	if (!fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing to run unsandboxed on macOS");
+	return ["/usr/bin/sandbox-exec", "-f", profile, ...args];
+}
+
 export async function runOne(opts: { harness: string; harnessCommit: string; label: string; group: GroupEntry; task: string; suiteHash: string }): Promise<Record<string, unknown>> {
 	const { harness, group, task } = opts;
 	const scratch = fs.mkdtempSync(path.join("/tmp", `fh-eval-${opts.label}-${group.name}-${task}-`));
@@ -191,7 +224,10 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const startedAt = Date.now();
 	const logPath = path.join(scratch, ".fh-eval-pi.log");
 	const exitCode = await new Promise<number | null>((resolve) => {
-		const child = spawn("pi", ["--no-extensions", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`], { cwd: scratch, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
+		const profile = path.join(os.tmpdir(), `fh-eval-harness-${randomUUID()}.sb`);
+		fs.writeFileSync(profile, harnessSandboxProfile(scratch));
+		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
+		const child = spawn(cmd!, args, { cwd: scratch, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
 		const timer = setTimeout(() => child.kill("SIGTERM"), RUN_TIMEOUT_MS);
 		child.on("exit", (code) => { clearTimeout(timer); resolve(code); });
 		child.on("error", () => { clearTimeout(timer); resolve(-1); });

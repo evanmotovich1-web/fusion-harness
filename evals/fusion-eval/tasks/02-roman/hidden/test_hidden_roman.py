@@ -20,14 +20,23 @@ def _canonical(n):
 
 
 def test_round_trip_all():
-    # One child returns every numeral and every parse; the parent checks both against its own oracle.
-    out = _child("""
+    import json
+    import random
+    # to_roman for every n, checked against the parent's own oracle.
+    numerals = _child("""
 import roman
-numerals = [roman.to_roman(n) for n in range(1, 4000)]
-_emit({"numerals": numerals, "parsed": [roman.from_roman(_canonical_numeral) for _canonical_numeral in numerals]})
+_emit([roman.to_roman(n) for n in range(1, 4000)])
 """)
-    assert out["numerals"] == [_canonical(n) for n in range(1, 4000)]
-    assert out["parsed"] == list(range(1, 4000))
+    assert numerals == [_canonical(n) for n in range(1, 4000)]
+    # from_roman on the canonical numerals in a SHUFFLED order chosen here: the right list
+    # cannot be derived from positions, only by actually parsing.
+    order = list(range(1, 4000))
+    random.shuffle(order)
+    parsed = _child(f"""
+import roman
+_emit([roman.from_roman(s) for s in json.loads({json.dumps(json.dumps([_canonical(n) for n in order]))})])
+""")
+    assert parsed == order
 
 
 @pytest.mark.parametrize("bad", [0, -1, 4000, 2.5, "10", True])
