@@ -15,7 +15,8 @@ import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "node:url";
 import { persistFailureStderr, promptArgs } from "./child-process-contract.ts";
 import { CHILD_GUARD_ACK_ENV, CHILD_GUARD_VERSION } from "./child-repo-guard.ts";
-import { briefArg, runOk, type AgentRun } from "./runtime.ts";
+import { retryOnQuota } from "./quota-wait.ts";
+import { briefArg, runError, runOk, type AgentRun } from "./runtime.ts";
 
 const KILL_GRACE_MS = 5_000; // SIGTERM → SIGKILL escalation window
 const MODULE_DIR: string =
@@ -48,7 +49,7 @@ export function piInvocation(args: string[]): { command: string; args: string[] 
  * Final answer = last assistant text part. The child writes its session into a
  * throwaway --session-dir under the run's /tmp artifacts dir.
  */
-export function runChild(opts: {
+export type RunChildOptions = {
 	run: AgentRun; // mutated live
 	prompt: string;
 	systemPrompt?: string;
@@ -64,7 +65,23 @@ export function runChild(opts: {
 	signal?: AbortSignal; // escape key — kill this child and settle it as "aborted"
 	/** Load the child-repo-guard via `-e` after `--no-extensions`. Default true. */
 	loadRepoGuard?: boolean;
-}): Promise<AgentRun> {
+	/** Called each time a provider quota (429) makes the child wait before rerunning. */
+	onQuotaWait?: (waitMs: number, error: string) => void;
+};
+
+/**
+ * Every child, in every command, survives a provider quota: a 429 waits for the
+ * reset and reruns the same child (no retry cap; only the stop signal ends it).
+ */
+export function runChild(opts: RunChildOptions): Promise<AgentRun> {
+	return retryOnQuota(
+		() => runChildOnce(opts),
+		(run) => (runOk(run) ? undefined : runError(run)),
+		{ signal: opts.signal, onWait: opts.onQuotaWait },
+	);
+}
+
+function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 	const run = opts.run;
 	run.thinking = opts.thinking;
 	const loadRepoGuard = opts.loadRepoGuard !== false;

@@ -69,7 +69,6 @@ import {
 	type Role,
 } from "./runtime.ts";
 import { waitForWriterLease, type WriterLease } from "./writer-lease.ts";
-import { isQuotaError, quotaWaitMs, sleepUnlessStopped } from "./quota-wait.ts";
 
 const execFileAsync = promisify(execFile);
 const PUBLISH_TIMEOUT_MS = 30_000;
@@ -472,18 +471,13 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): (r
 					}
 					const executePrompt = `${write && packet.captureEnabled ? withKnowledge(collabExecutePrompt(slot, prompt, task, taskHandoff(task)), { ...packet, promptBlock: "" }, { writeCapable: true }) : collabExecutePrompt(slot, prompt, task, taskHandoff(task))}\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`;
 					try {
-						// A provider quota (429) is not a task failure: wait for the reset and rerun
-						// the same child. No retry cap — quotas reset — only a stop ends the wait.
-						for (;;) {
-							await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
-							if (runOk(run) || stopper.stopped() || !isQuotaError(runError(run))) break;
-							const waitMs = quotaWaitMs(runError(run));
-							quotaWaits.push({ taskId: task.id, slot: slot.id, error: runError(run).slice(0, 300), waitMs, at: Date.now() });
-							await h.save(collabDir, "quota-waits.json", JSON.stringify(quotaWaits, null, 2));
+						// runChild already waits out a provider quota (429) and reruns; here we only surface it.
+						const onQuotaWait = (waitMs: number, error: string) => {
+							quotaWaits.push({ taskId: task.id, slot: slot.id, error: error.slice(0, 300), waitMs, at: Date.now() });
+							void h.save(collabDir, "quota-waits.json", JSON.stringify(quotaWaits, null, 2));
 							ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: ${task.id} (${slot.id}) hit a provider quota — retrying at ${new Date(Date.now() + waitMs).toLocaleTimeString()}`);
-							await sleepUnlessStopped(waitMs, stopper.signal);
-							if (stopper.stopped()) break;
-						}
+						};
+						await runChild({ run, prompt: withHarnessRepoState(executePrompt + `\n${repairBrief}`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: write ? FULL_TOOLS : READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal, onQuotaWait });
 					} finally {
 						if (write) activeWriters--;
 					}

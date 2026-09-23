@@ -40,13 +40,9 @@ mock.module("../modules/child-runner.ts", () => ({
 		run.stopReason = undefined;
 		run.errorMessage = undefined;
 		if (quotaOnceTaskId && opts.prompt.includes(`executing delegated task ${quotaOnceTaskId}`)) {
+			// The real runChild waits out the 429 itself; the command only has to surface it.
 			quotaOnceTaskId = null;
-			run.text = "";
-			run.exitCode = 1;
-			run.stopReason = "error";
-			run.errorMessage = "429: rate limited, retry after 0 seconds";
-			run.status = "error";
-			return run;
+			opts.onQuotaWait?.(0, "429: rate limited, retry after 0 seconds");
 		}
 		if (independentFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
 			run.text = JSON.stringify({ tasks: [
@@ -246,7 +242,11 @@ describe("/fh-collaborate repository reflexes", () => {
 		const fh = harness(cwd);
 		(fh.ctx.ui as any).setStatus = (_type: string, text: string) => statuses.push(String(text));
 		const running = fh.run("wait for the other writer");
-		await new Promise((resolve) => setTimeout(resolve, 200));
+		// Release only once the run is actually queued — a fixed delay races planning under load.
+		const deadline = Date.now() + 15_000;
+		while (!statuses.some((text) => text.startsWith("waiting for the writer lease")) && Date.now() < deadline) {
+			await new Promise((resolve) => setTimeout(resolve, 20));
+		}
 		expect(calls.some((call) => call.prompt.includes("executing delegated task"))).toBe(false);
 		lease.release();
 		await running;
@@ -290,15 +290,15 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.some((call) => call.prompt.includes("executing delegated task 2.b"))).toBe(true);
 		expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("2.b: completed");
 	});
-	test("a provider quota error waits and reruns the same task instead of failing it", async () => {
+	test("a task's provider quota wait is logged and shown, and the task still completes", async () => {
 		quotaOnceTaskId = "1.b";
 		const fh = harness(repo());
 		await fh.run("survive a 429");
-		expect(calls.filter((call) => call.prompt.includes("executing delegated task 1.b"))).toHaveLength(2);
 		const waits = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/quota-waits.json"), "utf8"));
 		expect(waits).toHaveLength(1);
 		expect(waits[0].taskId).toBe("1.b");
-		expect(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).not.toContain("429");
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 1.b"))).toHaveLength(1);
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
 	});
 	test("acceptance rejection routes to owner then independent reverify with no approval prompt", async () => {
 		repairFixture = true;

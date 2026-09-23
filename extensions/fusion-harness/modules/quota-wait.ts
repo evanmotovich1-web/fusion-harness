@@ -57,3 +57,27 @@ export function sleepUnlessStopped(ms: number, signal?: AbortSignal): Promise<vo
 		signal?.addEventListener("abort", () => { clearTimeout(timer); resolve(); }, { once: true });
 	});
 }
+
+/**
+ * Run one child attempt; while it fails on a provider quota, wait for the reset
+ * and run it again. Generic over the attempt so it is testable without spawning.
+ * While waiting the run reads as "pending" (widgets show "waiting") and keeps
+ * the provider message in errorMessage.
+ */
+export async function retryOnQuota<R extends { status: string; errorMessage?: string }>(
+	once: () => Promise<R>,
+	failure: (run: R) => string | undefined,
+	opts: { signal?: AbortSignal; onWait?: (waitMs: number, error: string) => void } = {},
+): Promise<R> {
+	for (;;) {
+		const run = await once();
+		const error = failure(run);
+		if (error === undefined || opts.signal?.aborted || !isQuotaError(error)) return run;
+		const waitMs = quotaWaitMs(error);
+		opts.onWait?.(waitMs, error);
+		run.status = "pending";
+		run.errorMessage = `provider quota — retrying at ${new Date(Date.now() + waitMs).toLocaleTimeString()}: ${error.slice(0, 200)}`;
+		await sleepUnlessStopped(waitMs, opts.signal);
+		if (opts.signal?.aborted) return run;
+	}
+}
