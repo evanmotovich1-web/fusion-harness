@@ -24,7 +24,7 @@ import * as path from "node:path";
 const EVAL_DIR = path.dirname(new URL(import.meta.url).pathname);
 const TASKS_DIR = path.join(EVAL_DIR, "tasks");
 const LOCK_PATH = path.join(EVAL_DIR, "lock.json");
-const RESULTS_DIR = path.join(EVAL_DIR, "results");
+const RESULTS_DIR = process.env.FH_EVAL_RESULTS_DIR || path.join(EVAL_DIR, "results");
 const GROUPS_INDEX = process.env.FH_GROUPS_DIR ? path.join(process.env.FH_GROUPS_DIR, "groups.json") : path.join(os.homedir(), ".pi", "fusion-harness", "groups", "groups.json");
 const RUN_TIMEOUT_MS = Number(process.env.FH_EVAL_RUN_TIMEOUT_MS || 90 * 60_000);
 
@@ -41,7 +41,7 @@ function parseArgs(argv: string[]): { cmd: string; args: Args } {
 	return { cmd, args };
 }
 
-function taskIds(): string[] {
+export function taskIds(): string[] {
 	return fs.readdirSync(TASKS_DIR).filter((name) => fs.existsSync(path.join(TASKS_DIR, name, "prompt.md"))).sort();
 }
 
@@ -64,7 +64,7 @@ function currentLock(): { files: Record<string, string>; suiteHash: string } {
 }
 
 /** Throws unless every task file matches lock.json exactly. */
-function verifyLock(): string {
+export function verifyLock(): string {
 	if (!fs.existsSync(LOCK_PATH)) throw new Error("no lock.json — run `lock` first");
 	const locked = JSON.parse(fs.readFileSync(LOCK_PATH, "utf8"));
 	const now = currentLock();
@@ -105,8 +105,8 @@ function selfTest(): boolean {
 	return ok;
 }
 
-interface GroupEntry { name: string; file: string; signature: string; models: string[] }
-function loadGroup(name: string): GroupEntry {
+export interface GroupEntry { name: string; file: string; signature: string; models: string[] }
+export function loadGroup(name: string): GroupEntry {
 	const groups: GroupEntry[] = JSON.parse(fs.readFileSync(GROUPS_INDEX, "utf8"));
 	const group = groups.find((candidate) => candidate.name === name);
 	if (!group) throw new Error(`no saved model group named ${name} (see: fusion groups)`);
@@ -129,7 +129,7 @@ function readJson(file: string): any {
 	try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return undefined; }
 }
 
-async function runOne(opts: { harness: string; harnessCommit: string; label: string; group: GroupEntry; task: string; suiteHash: string }): Promise<Record<string, unknown>> {
+export async function runOne(opts: { harness: string; harnessCommit: string; label: string; group: GroupEntry; task: string; suiteHash: string }): Promise<Record<string, unknown>> {
 	const { harness, group, task } = opts;
 	const scratch = fs.mkdtempSync(path.join("/tmp", `fh-eval-${opts.label}-${group.name}-${task}-`));
 	spawnSync("git", ["init", "-q", "-b", "main"], { cwd: scratch });
@@ -175,6 +175,7 @@ async function runOne(opts: { harness: string; harnessCommit: string; label: str
 		wallMs,
 		hidden: { total: hidden.total, passed: hidden.passed, failed: hidden.failed },
 		passRate: hidden.total ? hidden.passed / hidden.total : 0,
+		hiddenOutput: hidden.output.slice(-2000),
 		startupLog: artifacts ? undefined : fs.readFileSync(logPath, "utf8").slice(-1500),
 		finishedAt: new Date().toISOString(),
 	};
@@ -184,7 +185,7 @@ async function runOne(opts: { harness: string; harnessCommit: string; label: str
 	return record;
 }
 
-function loadResults(label: string): Map<string, any> {
+export function loadResults(label: string): Map<string, any> {
 	const map = new Map<string, any>();
 	const root = path.join(RESULTS_DIR, label);
 	if (!fs.existsSync(root)) return map;
