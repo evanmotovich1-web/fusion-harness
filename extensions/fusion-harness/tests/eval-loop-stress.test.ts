@@ -30,7 +30,9 @@ function simulate(seed: number, ticks: number) {
 	let nextCommit = 1;
 	let head = `c${nextCommit++}`;
 	const broken = new Map<string, Set<string>>([[head, new Set()]]); // ground truth: keys broken at a commit
-	const fixes = new Map<string, { good: boolean; testsOk: boolean; base: string }>();
+	const origin = new Map<string, Map<string, string>>([[head, new Map()]]); // commit → key → the commit that introduced its break
+	const inherit = (child: string, parent: string) => origin.set(child, new Map(origin.get(parent) ?? []));
+	const fixes = new Map<string, { good: boolean; testsOk: boolean; fewerTests: boolean; base: string; targets: string[] }>();
 	let state: LoopState = emptyState();
 	let lockHolder: symbol | undefined;
 	let dead = false; // set when the "process" crashed during the current tick
@@ -49,6 +51,7 @@ function simulate(seed: number, ticks: number) {
 		const me = Symbol("tick");
 		return {
 			now: () => clock,
+			suiteHash: () => "S",
 			lock() {
 				if (lockHolder) return undefined;
 				lockHolder = me;
@@ -58,7 +61,18 @@ function simulate(seed: number, ticks: number) {
 			},
 			readState: () => structuredClone(state),
 			writeState: (next) => { if (!dead) state = JSON.parse(JSON.stringify(next)); },
-			async head() { await pause(); maybeCrash(); return head; },
+			async head() {
+				await pause();
+				maybeCrash();
+				// Trap: another commit lands on the branch mid-tick.
+				if (chance(0.05)) {
+					const parent = head;
+					head = `c${nextCommit++}`;
+					broken.set(head, new Set(broken.get(parent) ?? []));
+					inherit(head, parent);
+				}
+				return head;
+			},
 			async evaluate(commit, groups, tasks) {
 				await pause();
 				maybeCrash();
@@ -67,7 +81,9 @@ function simulate(seed: number, ticks: number) {
 					const key = `${group}/${task}`;
 					const bad = (broken.get(commit)?.has(key) ?? false) || chance(0.08);
 					if (bad) observed.set(`${commit}|${key}`, (observed.get(`${commit}|${key}`) ?? 0) + 1);
-					out.push({ group, task, suiteHash: "S", passRate: bad ? 0.5 : 1, harnessOk: !bad, maxWriters: 1, costUsd: 1, hidden: { passed: bad ? 3 : 6, total: 6 } });
+					// Trap: a re-run of a candidate fix sometimes comes back "passing" under a foreign suite.
+					const forged = fixes.has(commit) && chance(0.15);
+					out.push({ group, task, suiteHash: forged ? "FORGED" : "S", passRate: bad && !forged ? 0.5 : 1, harnessOk: forged || !bad, maxWriters: 1, costUsd: 1, hidden: { passed: bad && !forged ? 3 : 6, total: 6 } });
 				}
 				return out;
 			},
@@ -78,26 +94,42 @@ function simulate(seed: number, ticks: number) {
 				for (const r of regressions) {
 					if ((observed.get(`${base}|${r.key}`) ?? 0) < 2) violations.push(`fix attempted for ${r.key}@${base} seen bad < 2 times (noise-triggered fix)`);
 				}
-				const sig = [...new Set(regressions.map((r) => `${r.key}:${r.kind}`))].sort().join("|");
-				fixAttemptsBySig.set(sig, (fixAttemptsBySig.get(sig) ?? 0) + 1);
-				if (fixAttemptsBySig.get(sig)! > 1) violations.push(`signature fixed twice: ${sig}`);
+				// A real break (ground-truth origin) must never be fix-attempted twice for the same item.
+				for (const r of regressions) {
+					const from = origin.get(base)?.get(r.key);
+					if (!from) continue; // noise that repeated: nothing real to double-attempt
+					const id = `${r.key}:${r.kind}#${from}`;
+					fixAttemptsBySig.set(id, (fixAttemptsBySig.get(id) ?? 0) + 1);
+					if (fixAttemptsBySig.get(id)! > 1) violations.push(`same real break fix-attempted twice: ${id}`);
+				}
 				if (!chance(0.85)) return undefined;
 				const commit = `c${nextCommit++}`;
 				const good = chance(0.6);
 				const stillBroken = new Set(broken.get(base) ?? []);
 				if (good) for (const r of regressions) stillBroken.delete(r.key);
 				broken.set(commit, stillBroken);
-				fixes.set(commit, { good, testsOk: chance(0.8), base });
+				inherit(commit, base);
+				for (const key of [...(origin.get(commit)?.keys() ?? [])]) if (!stillBroken.has(key)) origin.get(commit)!.delete(key);
+				fixes.set(commit, { good, testsOk: chance(0.8), fewerTests: chance(0.1), base, targets: regressions.map((r) => r.key) });
 				return { branch: `fix-${commit}`, commit };
 			},
-			async runTests(commit) { await pause(); maybeCrash(); const f = fixes.get(commit)!; return { ok: f.testsOk, summary: f.testsOk ? "ok" : "2 fail" }; },
+			async runTests(commit) {
+				await pause();
+				maybeCrash();
+				const f = fixes.get(commit);
+				if (!f) return { ok: true, summary: "base", total: 300 };
+				return { ok: f.testsOk, summary: f.testsOk ? "ok" : "2 fail", total: f.fewerTests ? 280 : 300 };
+			},
 			async publish(fix, input) {
 				await pause();
 				maybeCrash();
 				const f = fixes.get(fix.commit)!;
 				if (input.merge) {
 					if (!f.testsOk) violations.push(`merged ${fix.commit} with failing tests`);
-					if (!f.good) violations.push(`merged ${fix.commit}, a fix that does not repair the regression`);
+					if (f.fewerTests) violations.push(`merged ${fix.commit}, which deleted tests`);
+					const unrepaired = f.targets.filter((key) => broken.get(fix.commit)?.has(key));
+					if (unrepaired.length) violations.push(`merged ${fix.commit} with targeted tasks still broken: ${unrepaired.join(", ")}`);
+					if (head !== input.base) violations.push(`merged ${fix.commit} onto a moved branch (${input.base} → ${head})`);
 					head = fix.commit;
 				}
 				return { pr: "pr", merged: input.merge };
@@ -119,7 +151,14 @@ function simulate(seed: number, ticks: number) {
 				const parent = head;
 				head = `c${nextCommit++}`;
 				const next = new Set(broken.get(parent) ?? []);
-				if (chance(0.25)) next.add(`${chance(0.5) ? "local" : "quad"}/${TASKS[Math.floor(random() * TASKS.length)]}`);
+				inherit(head, parent);
+				// Humans fix things too: a new commit sometimes repairs a broken task.
+				for (const key of [...next]) if (chance(0.3)) { next.delete(key); origin.get(head)!.delete(key); }
+				if (chance(0.25)) {
+					const key = `${chance(0.5) ? "local" : "quad"}/${TASKS[Math.floor(random() * TASKS.length)]}`;
+					if (!next.has(key)) origin.get(head)!.set(key, head);
+					next.add(key);
+				}
 				broken.set(head, next);
 			}
 			const barBefore = snapshotBar();
@@ -127,7 +166,9 @@ function simulate(seed: number, ticks: number) {
 			const concurrent = i % 37 === 0;
 			const runs = concurrent ? [tick(makeDeps(), CONFIG), tick(makeDeps(), CONFIG)] : [tick(makeDeps(), CONFIG)];
 			const results = await Promise.all(runs.map((p) => p.catch((error) => {
-				if (error instanceof Crash) return { outcome: "crash" as const, detail: "" };
+				// tick() must contain every failure; an escaped rejection also released the lock early.
+				violations.push(`tick rejected instead of containing: ${String(error?.stack ?? error).split("\n").slice(0, 3).join(" | ")}`);
+				return { outcome: "error" as const, detail: "" };
 				throw error;
 			})));
 			for (const r of results) outcomes.set(r.outcome, (outcomes.get(r.outcome) ?? 0) + 1);
@@ -137,6 +178,11 @@ function simulate(seed: number, ticks: number) {
 				if (lockHolder) { lockHolder = undefined; active--; }
 			} else if (state.inFlight) violations.push(`inFlight left set after a clean tick (${state.inFlight.phase})`);
 			JSON.parse(JSON.stringify(state)); // state must always be serializable
+			// A stuck report may repeat only after that task recovered (it left reportedStuck).
+			for (const line of [...stuckRot.keys()]) {
+				const keys = [...line.matchAll(/(\w+\/\w+) /g)].map((m) => m[1]!);
+				if (!keys.some((key) => (state.reportedStuck ?? []).some((item) => item.startsWith(`${key}:`)))) stuckRot.delete(line);
+			}
 			if (new Set(state.attempted).size !== state.attempted.length) violations.push("duplicate attempted signatures");
 			for (const [key, before] of Object.entries(barBefore)) {
 				const after = state.accepted[key];
@@ -145,6 +191,7 @@ function simulate(seed: number, ticks: number) {
 			}
 		}
 		for (const [line, count] of stuckRot) if (count > 1) violations.push(`stuck reported to ROT ${count}x: ${line.slice(0, 80)}`);
+		for (const [key, record] of Object.entries(state.accepted)) if (record.suiteHash !== "S") violations.push(`bar for ${key} holds a foreign-suite record`);
 		return { violations, outcomes, maxActive, state };
 	})();
 }
@@ -153,6 +200,7 @@ describe("eval loop — stress", () => {
 	for (const seed of [1, 42, 1337, 2026]) {
 		test(`seed ${seed}: 1500 random ticks keep every safety invariant`, async () => {
 			const { violations, outcomes, maxActive, state } = await simulate(seed, 1500);
+			if (process.env.FH_STRESS_DEBUG) console.log(`seed ${seed}`, JSON.stringify(Object.fromEntries(outcomes)));
 			expect(violations).toEqual([]);
 			expect(maxActive).toBeLessThanOrEqual(1);
 			// The run must actually exercise the interesting paths, not pass by idling.

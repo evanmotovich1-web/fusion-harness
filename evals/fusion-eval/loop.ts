@@ -31,8 +31,10 @@ const LOG = path.join(LOOP_DIR, "loop.log");
 const RESULTS = path.join(LOOP_DIR, "results");
 const GROUPS_INDEX = path.join(HOME, ".pi", "fusion-harness", "groups", "groups.json");
 const PLIST = path.join(HOME, "Library", "LaunchAgents", "com.evanmotovich.fusion-eval-loop.plist");
-/** Files the fix run may never change: editing the grader is not a fix. */
-const LOCKED_SUITE = /^evals\/fusion-eval\/(tasks\/|lock\.json$)/;
+/** The loop grades every commit with ITS OWN runner and sealed tasks, never the candidate's. */
+const TRUSTED_EVAL_DIR = path.dirname(new URL(import.meta.url).pathname);
+/** Paths a fix may never touch: the grader, the sealed tasks, and the loop itself. */
+const PROTECTED = /^evals\//;
 
 interface FullConfig extends LoopConfig { remote: string; branch: string; fixGroup: string }
 const DEFAULTS: FullConfig = {
@@ -70,16 +72,50 @@ function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<stri
 	});
 }
 
-/** A clean detached worktree per commit: evaluations never see the shared checkout's WIP. */
-function worktree(commit: string): string {
-	const dir = path.join(LOOP_DIR, "wt", commit.slice(0, 12));
-	if (!fs.existsSync(path.join(dir, ".git"))) {
+/**
+ * A FRESH detached worktree per commit and purpose: evaluations never see the
+ * shared checkout's WIP, and nothing one step writes (test output, caches) can
+ * leak into the next step.
+ */
+function worktree(commit: string, purpose: string): string {
+	const dir = path.join(LOOP_DIR, "wt", `${commit.slice(0, 12)}-${purpose}`);
+	if (fs.existsSync(dir)) {
+		spawnSync("git", ["worktree", "remove", "--force", dir], { cwd: REPO });
 		fs.rmSync(dir, { recursive: true, force: true });
-		git(["worktree", "add", "--detach", "--force", dir, commit]);
 	}
-	const modules = path.join(dir, "node_modules");
-	if (!fs.existsSync(modules)) fs.symlinkSync(path.join(REPO, "node_modules"), modules);
+	git(["worktree", "add", "--detach", "--force", dir, commit]);
+	linkDependencies(dir);
 	return dir;
+}
+
+/** Share the checkout's node_modules only when the commit declares the same dependencies. */
+function linkDependencies(dir: string): void {
+	const mine = fs.readFileSync(path.join(dir, "package.json"), "utf8");
+	const theirs = fs.readFileSync(path.join(REPO, "package.json"), "utf8");
+	if (mine !== theirs) throw new Error(`${dir}: package.json differs from ${REPO} — dependencies changed; install them before evaluating this commit`);
+	fs.symlinkSync(path.join(REPO, "node_modules"), path.join(dir, "node_modules"));
+}
+
+/** Every path changed since `base` — committed, staged, unstaged, untracked, both sides of renames — that is protected. */
+export function protectedChanges(dir: string, base: string): string[] {
+	const changed = new Set<string>();
+	const diff = spawnSync("git", ["diff", "--name-status", "--no-renames", base], { cwd: dir, encoding: "utf8" });
+	for (const line of diff.stdout.split("\n").filter(Boolean)) for (const file of line.split("\t").slice(1)) changed.add(file);
+	const untracked = spawnSync("git", ["ls-files", "--others", "--exclude-standard"], { cwd: dir, encoding: "utf8" });
+	for (const file of untracked.stdout.split("\n").filter(Boolean)) changed.add(file);
+	return [...changed].filter((file) => PROTECTED.test(file));
+}
+
+/** Remove every worktree the loop created (the pushed fix branches stay on the remote). */
+function cleanupWorktrees(): void {
+	for (const root of ["wt", "fix"]) {
+		const dir = path.join(LOOP_DIR, root);
+		for (const entry of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
+			spawnSync("git", ["worktree", "remove", "--force", path.join(dir, entry)], { cwd: REPO });
+			fs.rmSync(path.join(dir, entry), { recursive: true, force: true });
+		}
+	}
+	spawnSync("git", ["worktree", "prune"], { cwd: REPO });
 }
 
 function groupFile(name: string): string {
@@ -92,7 +128,7 @@ function toRecord(raw: any): EvalRecord {
 	return {
 		group: raw.group, task: raw.task, suiteHash: raw.suiteHash, passRate: raw.passRate, harnessOk: raw.harnessOk,
 		maxWriters: raw.maxWriters, costUsd: raw.costUsd, hidden: raw.hidden, executionFailure: raw.executionFailure,
-		evidence: [raw.executionFailure, raw.hiddenOutput, raw.startupLog].filter(Boolean).join("\n").slice(-3000),
+		evidence: [raw.executionFailure, raw.harnessFacts, raw.hiddenOutput, raw.startupLog].filter(Boolean).join("\n").replace(/\x1b\[[0-9;]*m/g, "").slice(-4000),
 	};
 }
 
@@ -102,38 +138,60 @@ function repoSlug(): string | undefined {
 	return url.match(/github\.com[:/]([^/]+\/[^/.]+?)(?:\.git)?$/)?.[1];
 }
 
+/**
+ * Single-instance lock. Creation is O_EXCL; a dead holder's lock is reclaimed by
+ * renaming it away first — rename is atomic, so exactly one contender wins the
+ * reclaim and every other one sees a live (or missing) lock and backs off.
+ */
+export function acquireLock(file: string): (() => void) | undefined {
+	for (let attempt = 0; attempt < 3; attempt++) {
+		try {
+			const fd = fs.openSync(file, "wx");
+			fs.writeSync(fd, String(process.pid));
+			fs.closeSync(fd);
+			return () => { try { if (fs.readFileSync(file, "utf8") === String(process.pid)) fs.unlinkSync(file); } catch { /* gone */ } };
+		} catch (error: any) {
+			if (error?.code !== "EEXIST") throw error;
+		}
+		let holder = NaN;
+		try { holder = Number(fs.readFileSync(file, "utf8")); } catch { continue; /* vanished: retry create */ }
+		let alive = false;
+		try { process.kill(holder, 0); alive = true; } catch (error: any) { alive = error?.code === "EPERM"; }
+		if (alive) return undefined;
+		const graveyard = `${file}.stale.${process.pid}.${Date.now()}`;
+		try { fs.renameSync(file, graveyard); } catch { return undefined; /* another contender reclaimed it */ }
+		// Re-check what we moved: if it was not the dead holder's lock, put it back and back off.
+		if (Number(fs.readFileSync(graveyard, "utf8")) !== holder) {
+			try { fs.linkSync(graveyard, file); } catch { /* someone recreated it */ }
+			fs.rmSync(graveyard, { force: true });
+			return undefined;
+		}
+		fs.rmSync(graveyard, { force: true });
+	}
+	return undefined;
+}
+
 export function realDeps(cfg: FullConfig): LoopDeps {
 	fs.mkdirSync(LOOP_DIR, { recursive: true });
 	return {
 		now: () => Date.now(),
-		lock() {
-			try {
-				const fd = fs.openSync(LOCK, "wx");
-				fs.writeSync(fd, String(process.pid));
-				fs.closeSync(fd);
-			} catch {
-				const holder = Number(fs.readFileSync(LOCK, "utf8"));
-				let alive = false;
-				try { process.kill(holder, 0); alive = true; } catch (error: any) { alive = error?.code === "EPERM"; }
-				if (alive) return undefined;
-				fs.writeFileSync(LOCK, String(process.pid)); // dead holder: reclaim
-			}
-			return () => { try { if (fs.readFileSync(LOCK, "utf8") === String(process.pid)) fs.unlinkSync(LOCK); } catch { /* gone */ } };
-		},
+		lock: () => acquireLock(LOCK),
 		readState: () => (fs.existsSync(STATE) ? { ...emptyState(), ...JSON.parse(fs.readFileSync(STATE, "utf8")) } : emptyState()),
 		writeState(state: LoopState) {
 			const tmp = `${STATE}.${process.pid}.tmp`;
 			fs.writeFileSync(tmp, `${JSON.stringify(state, null, 2)}\n`);
 			fs.renameSync(tmp, STATE);
 		},
+		suiteHash: () => JSON.parse(fs.readFileSync(path.join(TRUSTED_EVAL_DIR, "lock.json"), "utf8")).suiteHash,
 		async head() {
 			git(["fetch", "--quiet", cfg.remote, cfg.branch]);
 			return git(["rev-parse", `${cfg.remote}/${cfg.branch}`]);
 		},
 		async evaluate(commit, groups, tasks) {
-			const wt = worktree(commit);
+			const wt = worktree(commit, `eval-${Date.now()}`);
 			const label = `loop-${commit.slice(0, 8)}-${Date.now()}`;
-			const runs = await Promise.all(groups.map((group) => run("bun", [path.join(wt, "evals/fusion-eval/run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: wt, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) })));
+			// Graded by the loop's own runner + sealed tasks; the candidate only supplies the harness.
+			const runs = await Promise.all(groups.map((group) => run("bun", [path.join(TRUSTED_EVAL_DIR, "run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: wt, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) })));
 			const failed = runs.find((result) => result.code !== 0);
 			if (failed) throw new Error(`eval run failed: ${failed.out.trim().slice(-800)}`);
 			const records: EvalRecord[] = [];
@@ -153,7 +211,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const branch = `eval-loop/fix-${base.slice(0, 8)}-${Date.now()}`;
 			const dir = path.join(LOOP_DIR, "fix", branch.replace(/\//g, "_"));
 			git(["worktree", "add", "-b", branch, dir, base]);
-			fs.symlinkSync(path.join(REPO, "node_modules"), path.join(dir, "node_modules"));
+			linkDependencies(dir);
 			const evidenceFile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.evidence.md`);
 			fs.writeFileSync(evidenceFile, evidence);
 			const prompt = [
@@ -161,22 +219,28 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 				`Evidence (confirmed by a re-run, with the diff since the last good commit): ${evidenceFile}`,
 				`Regressions: ${regressions.map((r) => `${r.key} [${r.kind}] ${r.detail}`).join("; ")}.`,
 				"Make the smallest change under extensions/fusion-harness that fixes the cause, add or update a test that fails without the fix, and run `bun test` until it passes.",
-				"Do NOT edit evals/fusion-eval/tasks/ or evals/fusion-eval/lock.json — changing the grader is not a fix. Do not push, merge, or publish; the loop's gate does that.",
+				"Do NOT touch anything under evals/ (the grader, its sealed tasks, and this loop) — changing the grader is not a fix and rejects the whole attempt. Do not commit, push, merge, or publish; the loop commits and its gate decides.",
 			].join(" ");
-			const result = await run("pi", ["-e", path.join(dir, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
-			const changed = git(["status", "--porcelain"], dir).split("\n").filter(Boolean).map((line) => line.slice(3)).filter((file) => file !== "node_modules");
-			if (!changed.length) return undefined;
-			const forbidden = changed.filter((file) => LOCKED_SUITE.test(file));
-			if (forbidden.length) throw new Error(`fix run edited the locked suite (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);
-			git(["add", "--", ...changed], dir);
-			git(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`], dir);
-			return { branch, commit: git(["rev-parse", "HEAD"], dir) };
+			const result = await run("pi", ["--no-extensions", "-e", path.join(dir, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
+			// Checked against the base, not the working tree: commits the agent made itself count too.
+			const forbidden = protectedChanges(dir, base);
+			if (forbidden.length) throw new Error(`fix run changed protected paths (${forbidden.join(", ")}) — rejected (pi exit ${result.code})`);
+			const dirty = git(["status", "--porcelain"], dir).split("\n").filter(Boolean).map((line) => line.slice(3)).filter((file) => file !== "node_modules");
+			if (dirty.length) {
+				git(["add", "--", ...dirty], dir);
+				git(["-c", "user.name=fusion-eval-loop", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", `eval-loop: fix ${regressions.map((r) => `${r.key} ${r.kind}`).join(", ")}\n\nProposed by the fusion eval loop from confirmed regressions; see the PR for evidence and the gate result.`], dir);
+			}
+			const head = git(["rev-parse", "HEAD"], dir);
+			return head === git(["rev-parse", base], dir) ? undefined : { branch, commit: head };
 		},
 		async runTests(commit) {
-			const wt = worktree(commit);
+			const wt = worktree(commit, `tests-${Date.now()}`);
 			const result = await run("bun", ["test"], { cwd: wt, timeoutMs: 30 * 60_000 });
-			const counts = result.out.replace(/\x1b\[[0-9;]*m/g, "").match(/^\s*\d+ (pass|fail)$/gm)?.map((line) => line.trim()).join(", ") ?? "no summary";
-			return { ok: result.code === 0 && /\b0 fail\b/.test(counts), summary: counts };
+			const clean = result.out.replace(/\x1b\[[0-9;]*m/g, "");
+			const count = (label: string) => Number(clean.match(new RegExp(`^\\s*(\\d+) ${label}$`, "m"))?.[1] ?? 0);
+			const passed = count("pass");
+			const failed = count("fail");
+			return { ok: result.code === 0 && failed === 0 && passed > 0, summary: `${passed} pass, ${failed} fail`, total: passed + failed };
 		},
 		async publish(fix: FixProposal, { title, body, merge }) {
 			git(["push", "--quiet", cfg.remote, `${fix.commit}:refs/heads/${fix.branch}`]);
@@ -193,7 +257,8 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const pr = (created.stdout || "").trim().split("\n").pop();
 			if (created.status !== 0) throw new Error(`gh pr create failed: ${created.stderr.trim().slice(0, 400)}`);
 			if (!merge) return { pr, merged: false };
-			spawnSync("gh", ["pr", "merge", fix.branch, "--repo", slug, "--merge"], { encoding: "utf8" });
+			// Merge exactly the gated commit: gh refuses if the PR head moved.
+			spawnSync("gh", ["pr", "merge", fix.branch, "--repo", slug, "--merge", "--match-head-commit", fix.commit], { encoding: "utf8" });
 			const state = spawnSync("gh", ["pr", "view", fix.branch, "--repo", slug, "--json", "state", "-q", ".state"], { encoding: "utf8" }).stdout.trim();
 			return { pr, merged: state === "MERGED" };
 		},
@@ -236,6 +301,7 @@ async function main() {
 	const deps = realDeps(cfg);
 	if (cmd === "tick") {
 		const result = await tick(deps, cfg);
+		cleanupWorktrees();
 		if (result.outcome === "busy" || result.outcome === "idle") console.log(`${result.outcome}: ${result.detail}`);
 	} else if (cmd === "status") {
 		const state = deps.readState();

@@ -141,7 +141,7 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const startedAt = Date.now();
 	const logPath = path.join(scratch, ".fh-eval-pi.log");
 	const exitCode = await new Promise<number | null>((resolve) => {
-		const child = spawn("pi", ["-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`], { cwd: scratch, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
+		const child = spawn("pi", ["--no-extensions", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`], { cwd: scratch, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
 		const timer = setTimeout(() => child.kill("SIGTERM"), RUN_TIMEOUT_MS);
 		child.on("exit", (code) => { clearTimeout(timer); resolve(code); });
 		child.on("error", () => { clearTimeout(timer); resolve(-1); });
@@ -176,6 +176,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		hidden: { total: hidden.total, passed: hidden.passed, failed: hidden.failed },
 		passRate: hidden.total ? hidden.passed / hidden.total : 0,
 		hiddenOutput: hidden.output.slice(-2000),
+		// Why the harness judged the run the way it did: the run's own final facts and task states.
+		harnessFacts: artifacts ? [`task states: ${JSON.stringify(states)}`, (() => { try { return fs.readFileSync(path.join(artifacts, "collaborate", "final.md"), "utf8").slice(0, 1500); } catch { return ""; } })()].filter(Boolean).join("\n") : undefined,
 		startupLog: artifacts ? undefined : fs.readFileSync(logPath, "utf8").slice(-1500),
 		finishedAt: new Date().toISOString(),
 	};
