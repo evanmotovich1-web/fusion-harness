@@ -214,7 +214,7 @@ export function removeTree(dir: string): void {
 	} catch { /* best effort — a leftover in /tmp must never fail a run */ }
 }
 
-function unlockTree(dir: string): void {
+export function unlockTree(dir: string): void {
 	if (process.platform === "darwin") spawnSync("/usr/bin/chflags", ["-R", "-P", "nouchg,nouappnd", dir], { stdio: "ignore" });
 	spawnSync("/bin/chmod", ["-R", "-P", "u+rwX", dir], { stdio: "ignore" });
 }
@@ -244,6 +244,7 @@ export function collectArtifacts(dir: string | undefined, dest: string): string 
 	// Iterative and bounded: a deeply nested or huge tree is refused, not a stack overflow.
 	const stack = [dest];
 	let entries = 0;
+	let bytes = 0;
 	let plain = true;
 	while (plain && stack.length) {
 		const current = stack.pop()!;
@@ -251,6 +252,8 @@ export function collectArtifacts(dir: string | undefined, dest: string): string 
 			if (++entries > 20_000 || current.split(path.sep).length - dest.split(path.sep).length > 32) { plain = false; break; }
 			if (entry.isDirectory()) stack.push(path.join(current, entry.name));
 			else if (!entry.isFile()) { plain = false; break; }
+			// Kept for a week: at most 200 MB of a run's artifacts (no disk filling via the store).
+			else if ((bytes += fs.lstatSync(path.join(current, entry.name)).size) > 200_000_000) { plain = false; break; }
 		}
 	}
 	if (plain) return dest;
@@ -420,9 +423,14 @@ export function harnessSandboxProfile(scratch: string, harness: string, runRoot?
 
 /** On macOS the sandbox is mandatory: grading without it would silently trust the code under test. */
 function sandboxCommand(profile: string, args: string[]): string[] {
-	if (process.platform !== "darwin") return args;
+	if (process.platform !== "darwin") return sizeLimited(args);
 	if (!fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing to run unsandboxed on macOS");
-	return ["/usr/bin/sandbox-exec", "-f", profile, ...args];
+	return sizeLimited(["/usr/bin/sandbox-exec", "-f", profile, ...args]);
+}
+
+/** No single file a sandboxed process writes may exceed 1 GiB (RLIMIT_FSIZE; the pi log is written through its fd). */
+export function sizeLimited(args: string[]): string[] {
+	return ["/bin/sh", "-c", 'ulimit -f 2097152 && exec "$@"', "fh-size-limit", ...args];
 }
 
 export async function runOne(opts: { harness: string; harnessCommit: string; label: string; group: GroupEntry; task: string; suiteHash: string }): Promise<Record<string, unknown>> {
@@ -459,12 +467,24 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		child.on("error", () => done(-1));
 	});
 	const wallMs = Date.now() - startedAt;
-	const artifacts = collectArtifacts(findArtifacts(token, startedAt, runRoot.artifacts), path.join(store, "run"));
+	// Before ANY read: undo whatever permission locks the run left on its scratch and root (Enemy pass 14:
+	// chmod 000 on either made the first readdir throw and crashed the whole evaluation).
+	unlockTree(scratch);
+	unlockTree(runRoot.root);
+	let found: string | undefined;
+	try { found = findArtifacts(token, startedAt, runRoot.artifacts); } catch { found = undefined; }
+	const artifacts = collectArtifacts(found, path.join(store, "run"));
 	removeTree(runRoot.root);
 	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
 	// Hidden tests are read straight from the sealed suite — never copied next to the solution.
-	const hidden = pytest(scratch, path.join(TASKS_DIR, task, "hidden"));
+	let hidden: ReturnType<typeof pytest>;
+	try {
+		hidden = pytest(scratch, path.join(TASKS_DIR, task, "hidden"));
+	} catch (error) {
+		// Ungradable (e.g. the solution folder is unreadable): scores 0, never crashes the run.
+		hidden = { total: 0, passed: 0, failed: 0, output: `grading failed: ${error instanceof Error ? error.message : String(error)}` };
+	}
 	const costUsd = (summary?.agents ?? []).reduce((sum: number, agent: any) => sum + (agent.costUsd ?? 0), 0);
 	const record = {
 		suiteHash: opts.suiteHash,

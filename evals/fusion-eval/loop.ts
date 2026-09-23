@@ -20,7 +20,7 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
-import { homeReadRules, prepareAgentDir, privateRunRoot, profileDir, real, removeTree, secretReadDenies, sharedTempReadDenies } from "./run.ts";
+import { homeReadRules, prepareAgentDir, privateRunRoot, profileDir, real, removeTree, secretReadDenies, sharedTempReadDenies, sizeLimited } from "./run.ts";
 
 /**
  * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
@@ -121,7 +121,7 @@ function cleanEnv(extra: Record<string, string> = {}): Record<string, string> {
 	return { ...env, ...extra };
 }
 
-function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<string, string>; timeoutMs: number; logFile?: string; killGroup?: boolean }): Promise<{ code: number | null; out: string }> {
+export function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<string, string>; timeoutMs: number; logFile?: string; killGroup?: boolean }): Promise<{ code: number | null; out: string }> {
 	return new Promise((resolve) => {
 		const chunks: Buffer[] = [];
 		// Always a whitelisted environment: nothing from the caller's shell or a candidate's .env leaks in.
@@ -132,8 +132,18 @@ function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<stri
 		// so nothing a sandboxed run started (watchers, daemons) outlives it into the grading steps.
 		const reap = () => { if (opts.killGroup) try { process.kill(-child.pid!, "SIGKILL"); } catch { /* gone */ } };
 		const sink = opts.logFile ? fs.createWriteStream(opts.logFile, { flags: "a" }) : undefined;
-		child.stdout.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
-		child.stderr.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
+		// Bounded (Enemy pass 14: a gate test flooding stdout grew the buffer until the loop died with
+		// ERR_STRING_TOO_LONG, and the lock and cleanup never ran). Keep the last 2 MB; log at most 50 MB.
+		let kept = 0;
+		let logged = 0;
+		const take = (chunk: Buffer) => {
+			chunks.push(chunk);
+			kept += chunk.length;
+			while (kept > 2_000_000 && chunks.length > 1) kept -= chunks.shift()!.length;
+			if (sink && logged < 50_000_000) { logged += chunk.length; sink.write(chunk); }
+		};
+		child.stdout.on("data", take);
+		child.stderr.on("data", take);
 		const timer = setTimeout(() => { child.kill("SIGTERM"); reap(); }, opts.timeoutMs);
 		child.on("close", (code) => { clearTimeout(timer); reap(); sink?.end(); resolve({ code, out: Buffer.concat(chunks).toString("utf8") }); });
 		child.on("error", (error) => { clearTimeout(timer); reap(); resolve({ code: -1, out: String(error) }); });
@@ -149,7 +159,7 @@ function worktree(commit: string, purpose: string): string {
 	const dir = path.join(LOOP_DIR, "wt", `${commit.slice(0, 12)}-${purpose}`);
 	if (fs.existsSync(dir)) {
 		spawnSync("git", ["worktree", "remove", "--force", dir], { cwd: REPO });
-		fs.rmSync(dir, { recursive: true, force: true });
+		removeTree(dir); // undoes chmod locks a fix/gate run left; never throws
 	}
 	git(["worktree", "add", "--detach", "--force", dir, commit]);
 	created.push(dir);
@@ -207,7 +217,7 @@ export function commitFixChanges(dir: string, base: string, message: string, git
 function cleanupWorktrees(): void {
 	for (const dir of created.splice(0)) {
 		spawnSync("git", ["worktree", "remove", "--force", dir], { cwd: REPO });
-		fs.rmSync(dir, { recursive: true, force: true });
+		removeTree(dir); // undoes chmod locks a fix/gate run left; never throws
 	}
 	spawnSync("git", ["worktree", "prune"], { cwd: REPO });
 }
@@ -380,7 +390,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const agentDir = prepareAgentDir(4 * 3600_000 + 10 * 60_000, runRoot.root);
 			const piArgs = ["pi", "--no-extensions", "--no-session", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
 			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
-			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs;
+			const [cmd, ...args] = sizeLimited(process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs);
 			// FH_IN_SANDBOX: tests that need their own sandbox skip inside this one (macOS forbids nesting); the gate runs them in full.
 			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1", PI_CODING_AGENT_DIR: agentDir.dir, ...runRoot.env }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true }).finally(() => { agentDir.cleanup(); removeTree(runRoot.root); });
 			if (fs.readFileSync(path.join(dir, ".git"), "utf8") !== dotGit) throw new Error("fix run rewrote the worktree's .git pointer — rejected");
@@ -397,7 +407,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const profile = path.join(profileDir(), `tests-${commit.slice(0, 12)}-${Date.now()}.sb`);
 			const runRoot = privateRunRoot("gate");
 			fs.writeFileSync(profile, fixSandboxProfile(wt, LOOP_DIR, [], runRoot.root));
-			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, "bun", "test"] : ["bun", "test"];
+			const [cmd, ...args] = sizeLimited(process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, "bun", "test"] : ["bun", "test"]);
 			const result = await run(cmd!, args, { cwd: wt, env: { FH_IN_SANDBOX: "1", ...runRoot.env }, timeoutMs: 30 * 60_000, killGroup: true }).finally(() => removeTree(runRoot.root));
 			fs.rmSync(profile, { force: true });
 			const clean = result.out.replace(/\x1b\[[0-9;]*m/g, "");

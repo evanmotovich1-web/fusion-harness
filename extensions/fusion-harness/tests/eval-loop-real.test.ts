@@ -657,3 +657,40 @@ describe("eval loop — vault lines are inert (Enemy pass 13)", () => {
 		expect(line.length).toBeLessThanOrEqual(400);
 	});
 });
+
+describe.skipIf(NESTED || process.platform !== "darwin")("eval loop — Enemy pass 14: locks, floods and giant files cannot wedge the loop", () => {
+	test("a harness that chmod 000s its scratch and private root still yields a record (scored 0), and both are removed", () => {
+		const home = require("node:os").homedir();
+		const { harness, bin } = stubHarness();
+		const store = mkdtempSync(join(home, ".cache", "fh-p14-store-"));
+		dirs.push(store);
+		writeFileSync(join(bin, "pi"), ["#!/bin/bash", '[ "$1" = auth ] && exit 0', "echo STUB-RAN", 'chmod 000 "$FH_TMP_ROOT"; chmod 000 "$PWD"', "exit 0", ""].join("\n"));
+		execFileSync("chmod", ["+x", join(bin, "pi")]);
+		const results = temp("fh-p14-results-");
+		const RUN_TS = join(dirname(LOOP_TS), "run.ts");
+		const probe = `import { runOne } from ${JSON.stringify(RUN_TS)};\nconst r = await runOne({ harness: ${JSON.stringify(harness)}, harnessCommit: "stub", label: "p14", group: { name: "stub", file: "/dev/null", signature: "x", models: [] }, task: "01-wordstats", suiteHash: "x" });\nconsole.log(JSON.stringify({ passed: r.hidden.passed, log: r.startupLog, scratch: r.scratch }));`;
+		const out = execFileSync("bun", ["-e", probe], { encoding: "utf8", env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, FH_EVAL_RESULTS_DIR: results, FH_EVAL_ARTIFACTS_DIR: store }, timeout: 300_000 });
+		const record = JSON.parse(out.trim().split("\n").pop()!);
+		expect(record.log).toContain("STUB-RAN");
+		expect(record.passed).toBe(0);
+		expect(existsSync(record.scratch)).toBe(false);
+		expect(existsSync(join(results, "p14", "stub", "01-wordstats.json"))).toBe(true);
+	}, 300_000);
+
+	test("a child flooding stdout (300 MB) is captured bounded: run() resolves, keeping only the tail", async () => {
+		const { run } = require("../../../evals/fusion-eval/loop.ts");
+		const flood = 'const b = Buffer.alloc(1 << 20, 120); for (let i = 0; i < 300; i++) process.stdout.write(b); process.stdout.write("\\nTAIL-MARK\\n");';
+		const result = await run("bun", ["-e", flood], { cwd: tmpdir(), timeoutMs: 120_000 });
+		expect(result.out.length).toBeLessThan(3_000_000);
+		expect(result.out).toContain("TAIL-MARK");
+	}, 150_000);
+
+	test("no single file a sandboxed process writes can exceed 1 GiB (a sparse 3 GB write fails)", () => {
+		const { sizeLimited } = require("../../../evals/fusion-eval/run.ts");
+		const dir = temp("fh-p14-fsize-");
+		const [cmd, ...args] = sizeLimited(["/bin/dd", "if=/dev/zero", `of=${join(dir, "big")}`, "bs=1", "count=1", "seek=3000000000"]);
+		const status = require("node:child_process").spawnSync(cmd, args, { stdio: "ignore" }).status;
+		expect(status).not.toBe(0);
+		expect(existsSync(join(dir, "big")) ? require("node:fs").statSync(join(dir, "big")).size : 0).toBeLessThanOrEqual(1024 ** 3);
+	});
+});
