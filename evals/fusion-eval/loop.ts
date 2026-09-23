@@ -33,8 +33,12 @@ const GROUPS_INDEX = path.join(HOME, ".pi", "fusion-harness", "groups", "groups.
 const PLIST = path.join(HOME, "Library", "LaunchAgents", "com.evanmotovich.fusion-eval-loop.plist");
 /** The loop grades every commit with ITS OWN runner and sealed tasks, never the candidate's. */
 const TRUSTED_EVAL_DIR = path.dirname(new URL(import.meta.url).pathname);
-/** Paths a fix may never touch: the grader, the sealed tasks, and the loop itself. */
-const PROTECTED = /^evals\//;
+/** The ONLY paths a fix may change. Everything else — evals/, bunfig.toml, .env, package.json — is refused. */
+const FIXABLE = /^extensions\//;
+/** Environment the grader and fix runs get: nothing a candidate could have planted. */
+const ENV_KEEP = ["PATH", "HOME", "USER", "LOGNAME", "SHELL", "LANG", "LC_ALL", "TMPDIR", "TERM"];
+/** Worktrees THIS process created — the only ones it may remove. */
+const created: string[] = [];
 
 interface FullConfig extends LoopConfig { remote: string; branch: string; fixGroup: string }
 const DEFAULTS: FullConfig = {
@@ -59,10 +63,17 @@ function git(args: string[], cwd = REPO): string {
 	return result.stdout.trim();
 }
 
+function cleanEnv(extra: Record<string, string> = {}): Record<string, string> {
+	const env: Record<string, string> = {};
+	for (const key of ENV_KEEP) if (process.env[key] !== undefined) env[key] = process.env[key]!;
+	return { ...env, ...extra };
+}
+
 function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<string, string>; timeoutMs: number; logFile?: string }): Promise<{ code: number | null; out: string }> {
 	return new Promise((resolve) => {
 		const chunks: Buffer[] = [];
-		const child = spawn(cmd, args, { cwd: opts.cwd, env: { ...process.env, ...opts.env } });
+		// Always a whitelisted environment: nothing from the caller's shell or a candidate's .env leaks in.
+		const child = spawn(cmd, args, { cwd: opts.cwd, env: cleanEnv(opts.env) });
 		const sink = opts.logFile ? fs.createWriteStream(opts.logFile, { flags: "a" }) : undefined;
 		child.stdout.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
 		child.stderr.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
@@ -84,6 +95,7 @@ function worktree(commit: string, purpose: string): string {
 		fs.rmSync(dir, { recursive: true, force: true });
 	}
 	git(["worktree", "add", "--detach", "--force", dir, commit]);
+	created.push(dir);
 	linkDependencies(dir);
 	return dir;
 }
@@ -96,26 +108,35 @@ function linkDependencies(dir: string): void {
 	fs.symlinkSync(path.join(REPO, "node_modules"), path.join(dir, "node_modules"));
 }
 
-/** Every path changed since `base` — committed, staged, unstaged, untracked, both sides of renames — that is protected. */
+/**
+ * Every path changed since `base` — committed, staged, unstaged, untracked, both
+ * sides of renames — that lies outside extensions/. NUL-separated and unquoted so
+ * unusual file names cannot dodge the check.
+ */
 export function protectedChanges(dir: string, base: string): string[] {
 	const changed = new Set<string>();
-	const diff = spawnSync("git", ["diff", "--name-status", "--no-renames", base], { cwd: dir, encoding: "utf8" });
-	for (const line of diff.stdout.split("\n").filter(Boolean)) for (const file of line.split("\t").slice(1)) changed.add(file);
-	const untracked = spawnSync("git", ["ls-files", "--others", "--exclude-standard"], { cwd: dir, encoding: "utf8" });
-	for (const file of untracked.stdout.split("\n").filter(Boolean)) changed.add(file);
-	return [...changed].filter((file) => PROTECTED.test(file));
+	const diff = spawnSync("git", ["-c", "core.quotepath=false", "diff", "--name-only", "--no-renames", "-z", base], { cwd: dir, encoding: "utf8" });
+	for (const file of diff.stdout.split("\0").filter(Boolean)) changed.add(file);
+	const untracked = spawnSync("git", ["-c", "core.quotepath=false", "ls-files", "--others", "--exclude-standard", "-z"], { cwd: dir, encoding: "utf8" });
+	for (const file of untracked.stdout.split("\0").filter(Boolean)) changed.add(file);
+	return [...changed].filter((file) => file !== "node_modules" && !FIXABLE.test(file));
 }
 
-/** Remove every worktree the loop created (the pushed fix branches stay on the remote). */
+/** Remove only the worktrees THIS process created (the pushed fix branches stay on the remote). */
 function cleanupWorktrees(): void {
-	for (const root of ["wt", "fix"]) {
-		const dir = path.join(LOOP_DIR, root);
-		for (const entry of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
-			spawnSync("git", ["worktree", "remove", "--force", path.join(dir, entry)], { cwd: REPO });
-			fs.rmSync(path.join(dir, entry), { recursive: true, force: true });
-		}
+	for (const dir of created.splice(0)) {
+		spawnSync("git", ["worktree", "remove", "--force", dir], { cwd: REPO });
+		fs.rmSync(dir, { recursive: true, force: true });
 	}
 	spawnSync("git", ["worktree", "prune"], { cwd: REPO });
+}
+
+/** The grader must be committed code: refuse to grade with uncommitted changes under evals/. */
+function assertCleanGrader(): void {
+	const root = path.resolve(TRUSTED_EVAL_DIR, "../..");
+	const dirty = spawnSync("git", ["status", "--porcelain", "--", "evals/"], { cwd: root, encoding: "utf8" });
+	if (dirty.status !== 0) throw new Error(`grader at ${root} is not a git checkout`);
+	if (dirty.stdout.trim()) throw new Error(`grader at ${root} has uncommitted changes under evals/ — run the loop from its clean runner (loop.ts install)`);
 }
 
 function groupFile(name: string): string {
@@ -139,34 +160,53 @@ function repoSlug(): string | undefined {
 }
 
 /**
- * Single-instance lock. Creation is O_EXCL; a dead holder's lock is reclaimed by
- * renaming it away first — rename is atomic, so exactly one contender wins the
- * reclaim and every other one sees a live (or missing) lock and backs off.
+ * Single-instance lock. Creation is O_EXCL. A dead holder's lock may only be
+ * removed by the one process holding the RECLAIM token (itself O_EXCL), and only
+ * after re-reading the lock while holding the token: while the token is held and
+ * the lock exists, nobody else can remove or recreate it, so the dead pid we
+ * re-read is exactly what we remove. Everyone else backs off as busy.
  */
 export function acquireLock(file: string): (() => void) | undefined {
+	const token = `${file}.reclaim`;
+	// Publish with the pid ALREADY inside: write a private temp file, then link() it into place
+	// (link fails with EEXIST if the target exists). The lock is never visible empty — an empty
+	// lock read as "pid 0 → dead" is exactly the race that let two holders in under load.
+	const create = (target: string) => {
+		const temp = `${target}.${process.pid}.${Math.random().toString(36).slice(2)}`;
+		fs.writeFileSync(temp, String(process.pid));
+		try { fs.linkSync(temp, target); } finally { fs.rmSync(temp, { force: true }); }
+	};
+	const alive = (pid: number) => {
+		if (!Number.isInteger(pid) || pid <= 0) return false;
+		try { process.kill(pid, 0); return true; } catch (error: any) { return error?.code === "EPERM"; }
+	};
+	// undefined = no lock; NaN = unreadable (treated as busy, never as dead).
+	const holderOf = (target: string) => { try { const text = fs.readFileSync(target, "utf8").trim(); return text ? Number(text) : NaN; } catch { return undefined; } };
 	for (let attempt = 0; attempt < 3; attempt++) {
 		try {
-			const fd = fs.openSync(file, "wx");
-			fs.writeSync(fd, String(process.pid));
-			fs.closeSync(fd);
-			return () => { try { if (fs.readFileSync(file, "utf8") === String(process.pid)) fs.unlinkSync(file); } catch { /* gone */ } };
+			create(file);
+			return () => { if (holderOf(file) === process.pid) fs.rmSync(file, { force: true }); };
 		} catch (error: any) {
 			if (error?.code !== "EEXIST") throw error;
 		}
-		let holder = NaN;
-		try { holder = Number(fs.readFileSync(file, "utf8")); } catch { continue; /* vanished: retry create */ }
-		let alive = false;
-		try { process.kill(holder, 0); alive = true; } catch (error: any) { alive = error?.code === "EPERM"; }
-		if (alive) return undefined;
-		const graveyard = `${file}.stale.${process.pid}.${Date.now()}`;
-		try { fs.renameSync(file, graveyard); } catch { return undefined; /* another contender reclaimed it */ }
-		// Re-check what we moved: if it was not the dead holder's lock, put it back and back off.
-		if (Number(fs.readFileSync(graveyard, "utf8")) !== holder) {
-			try { fs.linkSync(graveyard, file); } catch { /* someone recreated it */ }
-			fs.rmSync(graveyard, { force: true });
+		const holder = holderOf(file);
+		if (holder === undefined) continue; // vanished: retry create
+		if (Number.isNaN(holder) || alive(holder)) return undefined;
+		try {
+			create(token);
+		} catch {
+			// Someone else is reclaiming. A token left by a dead reclaimer is cleared for the next tick.
+			const reclaimer = holderOf(token);
+			if (reclaimer !== undefined && !Number.isNaN(reclaimer) && !alive(reclaimer)) fs.rmSync(token, { force: true });
 			return undefined;
 		}
-		fs.rmSync(graveyard, { force: true });
+		try {
+			const current = holderOf(file);
+			if (current !== undefined && (Number.isNaN(current) || alive(current))) return undefined;
+			if (current !== undefined) fs.rmSync(file, { force: true });
+		} finally {
+			fs.rmSync(token, { force: true });
+		}
 	}
 	return undefined;
 }
@@ -182,16 +222,23 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			fs.writeFileSync(tmp, `${JSON.stringify(state, null, 2)}\n`);
 			fs.renameSync(tmp, STATE);
 		},
-		suiteHash: () => JSON.parse(fs.readFileSync(path.join(TRUSTED_EVAL_DIR, "lock.json"), "utf8")).suiteHash,
+		suiteHash: () => {
+			assertCleanGrader();
+			return JSON.parse(fs.readFileSync(path.join(TRUSTED_EVAL_DIR, "lock.json"), "utf8")).suiteHash;
+		},
 		async head() {
 			git(["fetch", "--quiet", cfg.remote, cfg.branch]);
 			return git(["rev-parse", `${cfg.remote}/${cfg.branch}`]);
 		},
 		async evaluate(commit, groups, tasks) {
+			assertCleanGrader();
 			const wt = worktree(commit, `eval-${Date.now()}`);
+			// The trusted runner runs from an empty neutral directory: no candidate bunfig.toml or .env is in reach.
+			const neutral = path.join(LOOP_DIR, "neutral");
+			fs.mkdirSync(neutral, { recursive: true });
 			const label = `loop-${commit.slice(0, 8)}-${Date.now()}`;
 			// Graded by the loop's own runner + sealed tasks; the candidate only supplies the harness.
-			const runs = await Promise.all(groups.map((group) => run("bun", [path.join(TRUSTED_EVAL_DIR, "run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: wt, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) })));
+			const runs = await Promise.all(groups.map((group) => run("bun", [path.join(TRUSTED_EVAL_DIR, "run.ts"), "run", "--label", label, "--groups", group, "--harness", wt, ...(tasks ? ["--tasks", tasks.join(",")] : [])], { cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }, timeoutMs: 6 * 3600_000, logFile: path.join(LOOP_DIR, `${label}-${group}.log`) })));
 			const failed = runs.find((result) => result.code !== 0);
 			if (failed) throw new Error(`eval run failed: ${failed.out.trim().slice(-800)}`);
 			const records: EvalRecord[] = [];
@@ -211,6 +258,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			const branch = `eval-loop/fix-${base.slice(0, 8)}-${Date.now()}`;
 			const dir = path.join(LOOP_DIR, "fix", branch.replace(/\//g, "_"));
 			git(["worktree", "add", "-b", branch, dir, base]);
+			created.push(dir);
 			linkDependencies(dir);
 			const evidenceFile = path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.evidence.md`);
 			fs.writeFileSync(evidenceFile, evidence);
@@ -219,7 +267,7 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 				`Evidence (confirmed by a re-run, with the diff since the last good commit): ${evidenceFile}`,
 				`Regressions: ${regressions.map((r) => `${r.key} [${r.kind}] ${r.detail}`).join("; ")}.`,
 				"Make the smallest change under extensions/fusion-harness that fixes the cause, add or update a test that fails without the fix, and run `bun test` until it passes.",
-				"Do NOT touch anything under evals/ (the grader, its sealed tasks, and this loop) — changing the grader is not a fix and rejects the whole attempt. Do not commit, push, merge, or publish; the loop commits and its gate decides.",
+				"Change ONLY files under extensions/. Any change anywhere else (evals/, bunfig.toml, .env, package.json, …) rejects the whole attempt — changing the grader or the build is not a fix. Do not commit, push, merge, or publish; the loop commits and its gate decides.",
 			].join(" ");
 			const result = await run("pi", ["--no-extensions", "-e", path.join(dir, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`], { cwd: dir, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`) });
 			// Checked against the base, not the working tree: commits the agent made itself count too.
@@ -274,6 +322,24 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 	};
 }
 
+const RUNNER = path.join(LOOP_DIR, "runner");
+
+/** The loop's own clean copy of the watched branch: its grader is committed code, never the shared checkout's WIP. */
+function ensureRunner(cfg: FullConfig): string {
+	git(["fetch", "--quiet", cfg.remote, cfg.branch]);
+	if (!fs.existsSync(path.join(RUNNER, ".git"))) {
+		fs.rmSync(RUNNER, { recursive: true, force: true });
+		git(["worktree", "add", "--detach", "--force", RUNNER, `${cfg.remote}/${cfg.branch}`]);
+	}
+	return RUNNER;
+}
+
+/** After a tick, move the runner to the latest watched commit (fixes cannot touch evals/, so only humans change the grader). */
+function refreshRunner(cfg: FullConfig): void {
+	if (!path.resolve(TRUSTED_EVAL_DIR).startsWith(path.resolve(RUNNER) + path.sep)) return; // not running from the runner
+	spawnSync("git", ["-C", RUNNER, "checkout", "--quiet", "--detach", "--force", `${cfg.remote}/${cfg.branch}`], { encoding: "utf8" });
+}
+
 function plist(): string {
 	const bin = [path.join(HOME, ".bun/bin"), path.join(HOME, ".local/bin"), "/opt/homebrew/bin", "/usr/local/bin", "/usr/bin", "/bin"].join(":");
 	return `<?xml version="1.0" encoding="UTF-8"?>
@@ -282,11 +348,11 @@ function plist(): string {
   <key>Label</key><string>com.evanmotovich.fusion-eval-loop</string>
   <key>ProgramArguments</key><array>
     <string>${path.join(HOME, ".bun/bin/bun")}</string>
-    <string>${path.join(REPO, "evals/fusion-eval/loop.ts")}</string>
+    <string>${path.join(RUNNER, "evals/fusion-eval/loop.ts")}</string>
     <string>tick</string>
   </array>
-  <key>WorkingDirectory</key><string>${REPO}</string>
-  <key>EnvironmentVariables</key><dict><key>PATH</key><string>${bin}</string><key>HOME</key><string>${HOME}</string></dict>
+  <key>WorkingDirectory</key><string>${LOOP_DIR}</string>
+  <key>EnvironmentVariables</key><dict><key>PATH</key><string>${bin}</string><key>HOME</key><string>${HOME}</string><key>FH_LOOP_REPO</key><string>${REPO}</string><key>FH_LOOP_DIR</key><string>${LOOP_DIR}</string></dict>
   <key>StartInterval</key><integer>1800</integer>
   <key>RunAtLoad</key><false/>
   <key>StandardOutPath</key><string>${path.join(LOOP_DIR, "launchd.out.log")}</string>
@@ -301,7 +367,10 @@ async function main() {
 	const deps = realDeps(cfg);
 	if (cmd === "tick") {
 		const result = await tick(deps, cfg);
-		cleanupWorktrees();
+		if (result.outcome !== "busy") {
+			cleanupWorktrees();
+			refreshRunner(cfg);
+		}
 		if (result.outcome === "busy" || result.outcome === "idle") console.log(`${result.outcome}: ${result.detail}`);
 	} else if (cmd === "status") {
 		const state = deps.readState();
@@ -324,11 +393,12 @@ async function main() {
 		deps.writeState(state);
 		console.log(`seeded ${Object.keys(state.accepted).length} results as the bar at ${commit.slice(0, 8)}`);
 	} else if (cmd === "install") {
+		ensureRunner(cfg);
 		fs.mkdirSync(path.dirname(PLIST), { recursive: true });
 		fs.writeFileSync(PLIST, plist());
 		spawnSync("launchctl", ["unload", PLIST]);
 		const loaded = spawnSync("launchctl", ["load", "-w", PLIST], { encoding: "utf8" });
-		console.log(loaded.status === 0 ? `installed: ticks every 30 min (${PLIST})` : `launchctl load failed: ${loaded.stderr}`);
+		console.log(loaded.status === 0 ? `installed: ticks every 30 min from the clean runner ${RUNNER} (${PLIST})` : `launchctl load failed: ${loaded.stderr}`);
 	} else if (cmd === "uninstall") {
 		spawnSync("launchctl", ["unload", "-w", PLIST]);
 		fs.rmSync(PLIST, { force: true });

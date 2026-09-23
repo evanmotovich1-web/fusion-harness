@@ -11,6 +11,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { acquireLock, protectedChanges } from "../../../evals/fusion-eval/loop.ts";
+import { pytest } from "../../../evals/fusion-eval/run.ts";
 
 const LOOP_TS = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts");
 const dirs: string[] = [];
@@ -18,7 +19,8 @@ afterEach(() => { while (dirs.length) rmSync(dirs.pop()!, { recursive: true, for
 const temp = (prefix: string) => { const dir = mkdtempSync(join(tmpdir(), prefix)); dirs.push(dir); return dir; };
 
 function contender(lockFile: string, holdMs: number): Promise<string> {
-	const script = `import { acquireLock } from ${JSON.stringify(LOOP_TS)};\nconst release = acquireLock(${JSON.stringify(lockFile)});\nconsole.log(release ? "ACQUIRED" : "BUSY");\nawait new Promise((r) => setTimeout(r, ${holdMs}));\nrelease?.();`;
+	// Prints "ACQUIRED <start> <end>" (the interval it held the lock) or "BUSY".
+	const script = `import { acquireLock } from ${JSON.stringify(LOOP_TS)};\nconst release = acquireLock(${JSON.stringify(lockFile)});\nif (!release) { console.log("BUSY"); } else { const start = performance.timeOrigin + performance.now(); await new Promise((r) => setTimeout(r, ${holdMs})); const end = performance.timeOrigin + performance.now(); release(); console.log("ACQUIRED " + start + " " + end); }`;
 	return new Promise((resolve) => {
 		const child = spawn("bun", ["-e", script], { stdio: ["ignore", "pipe", "pipe"] });
 		let out = "";
@@ -28,15 +30,25 @@ function contender(lockFile: string, holdMs: number): Promise<string> {
 }
 
 describe("eval loop — real lock", () => {
-	test("three processes racing over a dead holder's lock: exactly one acquires", async () => {
-		for (let round = 0; round < 5; round++) {
-			const lock = join(temp("fh-loop-lock-"), "loop.lock");
-			writeFileSync(lock, "999999"); // a pid that is not running
-			const results = await Promise.all([contender(lock, 400), contender(lock, 400), contender(lock, 400)]);
-			expect(results.filter((r) => r === "ACQUIRED")).toHaveLength(1);
-			expect(results.filter((r) => r === "BUSY")).toHaveLength(2);
+	test("eight processes racing over a dead holder's lock, under CPU load: never two holders", async () => {
+		// Load is what broke the rename-based version (Enemy pass 2): burn every core while racing.
+		const burners = Array.from({ length: 4 }, () => spawn("bun", ["-e", "const end = Date.now() + 120000; while (Date.now() < end) {}"], { stdio: "ignore" }));
+		try {
+			for (let round = 0; round < 20; round++) {
+				const lock = join(temp("fh-loop-lock-"), "loop.lock");
+				writeFileSync(lock, "999999"); // a pid that is not running
+				const results = await Promise.all(Array.from({ length: 8 }, () => contender(lock, 600)));
+				expect(results.every((r) => r === "BUSY" || r.startsWith("ACQUIRED "))).toBe(true);
+				// Exclusion means no two holders' intervals overlap. (A slow starter acquiring AFTER an
+				// earlier holder released is correct — counting "ACQUIRED" lines alone cannot tell.)
+				const held = results.filter((r) => r.startsWith("ACQUIRED ")).map((r) => r.split(" ").slice(1).map(Number) as [number, number]).sort((a, b) => a[0] - b[0]);
+				expect(held.length).toBeGreaterThanOrEqual(1);
+				for (let i = 1; i < held.length; i++) expect(held[i]![0]).toBeGreaterThanOrEqual(held[i - 1]![1]);
+			}
+		} finally {
+			for (const burner of burners) burner.kill("SIGKILL");
 		}
-	}, 60_000);
+	}, 180_000);
 
 	test("a live holder keeps the lock; release frees it", () => {
 		const lock = join(temp("fh-loop-lock-"), "loop.lock");
@@ -87,6 +99,24 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 		expect(protectedChanges(r.dir, r.base)).toEqual(["evals/fusion-eval/run.ts"]);
 	});
 
+	test("anything outside extensions/ is refused: root bunfig.toml, .env, package.json", () => {
+		const r = repo();
+		writeFileSync(join(r.dir, "bunfig.toml"), 'preload = ["./evil.ts"]\n');
+		writeFileSync(join(r.dir, ".env"), "FH_GROUPS_DIR=/tmp/evil\n");
+		r.commit();
+		expect(protectedChanges(r.dir, r.base).sort()).toEqual([".env", "bunfig.toml"]);
+	});
+
+	test("non-ASCII names cannot dodge the check (committed and untracked)", () => {
+		const r = repo();
+		writeFileSync(join(r.dir, "evals/fusion-eval/tasks/01/conftést.py"), "x\n");
+		r.commit();
+		writeFileSync(join(r.dir, "evals/fusion-eval/rün.ts"), "x\n");
+		const found = protectedChanges(r.dir, r.base);
+		expect(found).toContain("evals/fusion-eval/tasks/01/conftést.py");
+		expect(found).toContain("evals/fusion-eval/rün.ts");
+	});
+
 	test("renaming a task out, deleting one, or adding an untracked file under evals/ is caught", () => {
 		const r = repo();
 		r.git("mv", "evals/fusion-eval/tasks/01/prompt.md", "extensions/prompt.md");
@@ -95,4 +125,33 @@ describe("eval loop — protected paths (the grader cannot grade itself)", () =>
 		expect(found).toContain("evals/fusion-eval/tasks/01/prompt.md");
 		expect(found).toContain("evals/fusion-eval/new.txt");
 	});
+});
+
+describe("eval loop — the grader cannot be influenced by the code under test", () => {
+	test("a planted conftest.py that forces every test to pass does not change a failing solution's score", () => {
+		const dir = temp("fh-loop-grade-");
+		writeFileSync(join(dir, "calc.py"), "def evaluate(expr):\n    return 0\n");
+		writeFileSync(join(dir, "conftest.py"), "import pytest\n@pytest.hookimpl(hookwrapper=True)\ndef pytest_runtest_makereport(item, call):\n    outcome = yield\n    outcome.get_result().outcome = 'passed'\n");
+		writeFileSync(join(dir, "pytest.ini"), "[pytest]\naddopts = -p no:terminal\n");
+		mkdirSync(join(dir, "_hidden_eval"));
+		writeFileSync(join(dir, "_hidden_eval/test_h.py"), "from calc import evaluate\ndef test_add():\n    assert evaluate('1+1') == 2\ndef test_mul():\n    assert evaluate('2*3') == 6\n");
+		const result = pytest(dir, "_hidden_eval");
+		expect(result.total).toBe(2);
+		expect(result.failed).toBe(2);
+	}, 120_000);
+
+	test("the trusted runner, started from the neutral dir, never loads a candidate's bunfig.toml preload", () => {
+		const candidate = temp("fh-loop-cand-");
+		const neutral = temp("fh-loop-neutral-");
+		writeFileSync(join(candidate, "evil.ts"), 'console.log("PWNED-BY-PRELOAD");\n');
+		writeFileSync(join(candidate, "bunfig.toml"), 'preload = ["./evil.ts"]\n');
+		const runner = join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/run.ts");
+		const fromCandidate = execFileSync("bun", [runner, "verify"], { cwd: candidate, encoding: "utf8" });
+		const fromNeutral = execFileSync("bun", [runner, "verify"], { cwd: neutral, encoding: "utf8" });
+		expect(fromCandidate).toContain("PWNED-BY-PRELOAD"); // the attack is real from the candidate's cwd…
+		expect(fromNeutral).not.toContain("PWNED-BY-PRELOAD"); // …and the loop never runs the grader from there
+		const loopSource = require("node:fs").readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts"), "utf8");
+		expect(loopSource).toContain("{ cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }");
+		expect(loopSource).toContain('if (result.outcome !== "busy") {');
+	}, 60_000);
 });

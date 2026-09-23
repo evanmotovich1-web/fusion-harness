@@ -298,7 +298,9 @@ describe("eval loop — decisions", () => {
 		await tick(w.deps, CONFIG);
 		for (const head of ["c2", "c3"]) { w.setHead(head); await tick(w.deps, CONFIG); }
 		expect(w.calls.fix).toBe(1);
-		w.setHead("c4"); // healthy again: recovered
+		w.setHead("c4"); // healthy again…
+		expect((await tick(w.deps, CONFIG)).outcome).toBe("accepted");
+		w.setHead("c4b"); // …twice in a row: recovered
 		expect((await tick(w.deps, CONFIG)).outcome).toBe("accepted");
 		w.setHead("c5"); // recurs
 		expect((await tick(w.deps, CONFIG)).outcome).toBe("fix-pr-open");
@@ -330,6 +332,52 @@ describe("eval loop — decisions", () => {
 		expect(result.outcome).toBe("error");
 		expect(result.detail).toContain("gh pr create failed");
 		expect(releasedBeforePublishSettled).toBe(false);
+	});
+
+	// ── Enemy second-pass regressions ──
+	test("a fix run that throws still counts as an attempt (no endless paid retries)", async () => {
+		const bad = { "local/01": { harnessOk: false } };
+		const w = world({ scores: { c2: bad, c3: bad, c4: bad } });
+		w.deps.proposeFix = async () => { w.calls.fix++; throw new Error("fix run changed protected paths (evals/x)"); };
+		await tick(w.deps, CONFIG);
+		for (const head of ["c2", "c3", "c4"]) { w.setHead(head); await tick(w.deps, CONFIG); }
+		expect(w.calls.fix).toBe(1);
+		expect(w.state().attempted).toContain("local/01:harness-fail");
+	});
+
+	test("the bar is not raised from a fix that never merged", async () => {
+		const w = world({ scores: { c2: { "local/01": { passRate: 0.5, hidden: { passed: 3, total: 6 } } } }, fix: "ok", moveHeadBeforeMerge: true });
+		await tick(w.deps, CONFIG);
+		const before = structuredClone(w.state().accepted["local/01"]);
+		w.setHead("c2");
+		expect((await tick(w.deps, CONFIG)).outcome).toBe("fix-pr-open");
+		expect(w.state().accepted["local/01"]).toEqual(before);
+	});
+
+	test("one lucky clean run does not clear the attempt memory for a flaky task", async () => {
+		const bad = { "local/01": { harnessOk: false } };
+		const w = world({ scores: { c2: bad, c4: bad }, fix: "tests-fail" });
+		await tick(w.deps, CONFIG);
+		w.setHead("c2"); await tick(w.deps, CONFIG); // attempted
+		w.setHead("c3"); await tick(w.deps, CONFIG); // one clean run
+		w.setHead("c4");
+		expect((await tick(w.deps, CONFIG)).outcome).toBe("stuck");
+		expect(w.calls.fix).toBe(1);
+	});
+
+	test("a $0 first run does not switch the cost check off", async () => {
+		const w = world({ scores: { c1: { "local/01": { costUsd: 0 } }, c2: { "local/01": { costUsd: 1 } }, c3: { "local/01": { costUsd: 40 } } } });
+		await tick(w.deps, CONFIG);
+		w.setHead("c2"); await tick(w.deps, CONFIG);
+		expect(w.state().accepted["local/01"]!.costUsd).toBe(1);
+		w.setHead("c3");
+		expect((await tick(w.deps, CONFIG)).outcome).not.toBe("accepted");
+	});
+
+	test("a persisting error reaches ROT once, not every tick", async () => {
+		const w = world({ throwOnEvaluate: true });
+		for (let i = 0; i < 4; i++) { w.setHead(`e${i}`); await tick(w.deps, CONFIG); }
+		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(1);
 	});
 
 	test("more than one concurrent writer is a regression even with no bar yet", () => {

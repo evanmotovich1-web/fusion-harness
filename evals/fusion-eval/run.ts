@@ -73,9 +73,22 @@ export function verifyLock(): string {
 	return locked.suiteHash;
 }
 
-function pytest(dir: string, testDir: string): { total: number; passed: number; failed: number; output: string } {
-	const junit = path.join(dir, ".fh-eval-junit.xml");
-	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", testDir, `--junitxml=${junit}`], { cwd: dir, encoding: "utf8", timeout: 180_000, env: { ...process.env, PYTHONPATH: dir, PYTHONDONTWRITEBYTECODE: "1" } });
+/**
+ * Grade in a FRESH directory: only the solution's top-level modules are copied in
+ * (never its tests, conftest.py, or pytest config), next to the hidden tests.
+ * `--noconftest`, `-c /dev/null` and a whitelisted environment mean nothing the
+ * code under test wrote into its scratch repo can influence the grader.
+ */
+export function pytest(dir: string, testDir: string): { total: number; passed: number; failed: number; output: string } {
+	const grade = fs.mkdtempSync(path.join(os.tmpdir(), "fh-eval-grade-"));
+	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.copyFileSync(path.join(dir, entry.name), path.join(grade, entry.name));
+	}
+	fs.cpSync(path.join(dir, testDir), path.join(grade, testDir), { recursive: true });
+	const junit = path.join(grade, ".fh-eval-junit.xml");
+	const env: Record<string, string> = { PYTHONPATH: grade, PYTHONDONTWRITEBYTECODE: "1" };
+	for (const key of ["PATH", "HOME", "USER", "LANG", "TMPDIR"]) if (process.env[key]) env[key] = process.env[key]!;
+	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--noconftest", "-c", "/dev/null", "--rootdir", grade, testDir, `--junitxml=${junit}`], { cwd: grade, encoding: "utf8", timeout: 180_000, env });
 	let total = 0, failed = 0;
 	try {
 		const xml = fs.readFileSync(junit, "utf8");
@@ -86,6 +99,7 @@ function pytest(dir: string, testDir: string): { total: number; passed: number; 
 		total -= num("skipped");
 	} catch { /* collection failed: no junit — counts stay 0 and the run scores 0 */ }
 	const output = `${result.stdout ?? ""}${result.stderr ?? ""}`.slice(-4000);
+	fs.rmSync(grade, { recursive: true, force: true });
 	return { total, passed: Math.max(0, total - failed), failed, output };
 }
 

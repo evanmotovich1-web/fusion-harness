@@ -57,6 +57,10 @@ export interface LoopState {
 	attempted: string[];
 	/** Stuck items already reported to ROT — reported once, then quiet until they recover. */
 	reportedStuck?: string[];
+	/** Consecutive clean ticks per attempted item; two in a row = recovered (one lucky run is not). */
+	cleanStreak?: Record<string, number>;
+	/** The last error message sent to ROT — a persisting error is reported once, not every tick. */
+	lastErrorReported?: string;
 	/** Set while a tick runs; still set at the next tick means the last one died. */
 	inFlight?: { commit: string; phase: string; startedAt: number };
 	history: HistoryEntry[];
@@ -140,7 +144,8 @@ function raiseBar(state: LoopState, records: EvalRecord[]): void {
 		const key = recordKey(record);
 		const bar = state.accepted[key];
 		const worse = bar && (record.passRate < bar.passRate || (bar.harnessOk && !record.harnessOk));
-		if (!worse) state.accepted[key] = bar ? { ...record, costUsd: bar.costUsd } : record;
+		// Cost anchor: the first NONZERO accepted cost (a $0 run must not switch the cost check off).
+		if (!worse) state.accepted[key] = bar ? { ...record, costUsd: bar.costUsd > 0 ? bar.costUsd : record.costUsd } : record;
 	}
 }
 
@@ -151,6 +156,7 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 	let commit = "";
 	const finish = (outcome: TickOutcome, detail: string, rot = false) => {
 		state.inFlight = undefined;
+		if (outcome !== "error") state.lastErrorReported = undefined;
 		state.history.push({ at: deps.now(), commit, outcome, detail });
 		if (state.history.length > 500) state.history.splice(0, state.history.length - 500);
 		deps.writeState(state);
@@ -211,9 +217,17 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		// Items that no longer regress have recovered: a later recurrence gets a fresh attempt.
 		const confirmedItems = new Set(confirmed.map(itemOf));
 		const evaluatedKeys = new Set(records.map(recordKey));
-		const recovered = (item: string) => evaluatedKeys.has(item.slice(0, item.lastIndexOf(":"))) && !confirmedItems.has(item);
+		const streak = state.cleanStreak ?? {};
+		for (const item of new Set([...state.attempted, ...(state.reportedStuck ?? [])])) {
+			const key = item.slice(0, item.lastIndexOf(":"));
+			if (!evaluatedKeys.has(key)) continue;
+			streak[item] = confirmedItems.has(item) ? 0 : (streak[item] ?? 0) + 1;
+		}
+		const recovered = (item: string) => (streak[item] ?? 0) >= 2;
 		state.attempted = state.attempted.filter((item) => !recovered(item));
 		state.reportedStuck = (state.reportedStuck ?? []).filter((item) => !recovered(item));
+		for (const item of Object.keys(streak)) if (recovered(item) || !(state.attempted.includes(item) || (state.reportedStuck ?? []).includes(item))) delete streak[item];
+		state.cleanStreak = streak;
 
 		state.lastEvaluatedCommit = commit;
 		if (nightlyDue) state.lastNightlyAt = deps.now();
@@ -251,8 +265,15 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		].join("\n");
 
 		phase("fix");
-		const fix = await deps.proposeFix({ base: commit, regressions: fresh, evidence });
-		// Recorded only once the attempt finished: a crash before this point retries it.
+		let fix: FixProposal | undefined;
+		try {
+			fix = await deps.proposeFix({ base: commit, regressions: fresh, evidence });
+		} catch (error) {
+			// A fix run that fails (or is rejected, e.g. it touched protected paths) is still an attempt.
+			state.attempted = [...new Set([...state.attempted, ...fresh.map(itemOf)])];
+			return finish("fix-failed", `fix run failed for ${fresh.map(itemOf).join(", ")}: ${error instanceof Error ? error.message : String(error)}`, true);
+		}
+		// Recorded only once the attempt finished: a process crash before this point retries it.
 		state.attempted = [...new Set([...state.attempted, ...fresh.map(itemOf)])];
 		if (!fix) return finish("fix-failed", `fix run produced no change for: ${fresh.map(itemOf).join(", ")}`, true);
 
@@ -269,6 +290,7 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		if (tests.total < baseTests.total) return await leaveOpen(`the fix has fewer tests (${tests.total}) than its base (${baseTests.total})`);
 
 		phase("gate-eval");
+		let gated: EvalRecord[] = [];
 		for (let round = 1; round <= 2; round++) {
 			const recheck: EvalRecord[] = [];
 			const tasksByGroup = new Map<string, string[]>();
@@ -282,16 +304,20 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 				return why ? [`${key}: ${why}`] : [];
 			});
 			if (failures.length) return await leaveOpen(`eval re-run ${round}/2: ${failures.join("; ")}`);
-			if (round === 2) raiseBar(state, recheck);
+			if (round === 2) gated = recheck;
 		}
 
 		phase("publish");
 		if ((await deps.head()) !== commit) return await leaveOpen("the branch moved during the fix; the merged result would be untested — re-evaluated next tick");
 		const pr = await deps.publish(fix, { title, body: `${evidence}\n\nGATE PASSED — tests: ${tests.summary} (base ${baseTests.total}); two eval re-runs at/above the bar for ${[...targetKeys].join(", ")}.`, merge: config.autoMerge, base: commit });
 		if (!pr.merged) return finish("fix-pr-open", `gate passed; PR ${pr.pr ?? ""} awaiting merge (autoMerge ${config.autoMerge ? "on, merge failed" : "off"})`, config.autoMerge);
+		raiseBar(state, gated); // only now: this code is actually on the branch
 		return finish("fixed-merged", `gate passed and merged ${pr.pr ?? fix.branch}; the merge commit is evaluated on the next tick`);
 	} catch (error) {
-		return finish("error", error instanceof Error ? error.message : String(error), true);
+		const message = error instanceof Error ? error.message : String(error);
+		const fresh = state.lastErrorReported !== message;
+		state.lastErrorReported = message;
+		return finish("error", message, fresh);
 	} finally {
 		release();
 	}
