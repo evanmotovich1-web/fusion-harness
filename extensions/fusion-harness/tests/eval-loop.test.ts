@@ -385,8 +385,12 @@ describe("eval loop — decisions", () => {
 		const w = world();
 		let n = 0;
 		w.deps.evaluate = async () => { n++; throw new Error(`/tmp/eval-loop/wt/abc123def456-eval-${1790000000000 + n}: package.json differs`); };
-		for (let i = 0; i < 5; i++) { w.setHead(`e${i}`); await tick(w.deps, CONFIG); }
+		for (let i = 0; i < 5; i++) { w.setHead(`e${i}`); w.advance(3600_000); await tick(w.deps, CONFIG); }
 		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(1);
+		w.advance(24 * 3600_000); // still failing a day later: one reminder
+		w.setHead("e9");
+		await tick(w.deps, CONFIG);
+		expect(w.calls.rot.filter((line) => line.startsWith("error"))).toHaveLength(2);
 		expect(errorShape("/a/b/c-17900: x 12")).toBe(errorShape("/d/e-18000: x 99"));
 		// Enemy pass 4 R12: same failure, different words in the tail → still the same kind.
 		expect(errorShape("eval run failed: model said foo at step 3")).toBe(errorShape("eval run failed: provider timeout, other words"));

@@ -82,10 +82,12 @@ export function verifyLock(): string {
  * in-process trick (patching pytest, writing reports, exiting early) can change a
  * result — the solution can only influence what it returns.
  *
- * On macOS each child also runs under sandbox-exec: it cannot read the hidden tests,
- * the grader or the reference solutions (any path containing evals/fusion-eval/ or
- * _hidden_eval/), cannot write outside temp, and has no network. The grading root
- * lives outside temp (~/.cache), so a child cannot touch it or the report.
+ * On macOS each child also runs under sandbox-exec with DENY-BY-DEFAULT file access:
+ * it may read only the OS, the Python installation, its own solution folder and its
+ * own private temp folder, and may write only that temp folder. So no copy of the
+ * answers is reachable — not the hidden tests, not the reference solutions, not the
+ * git object store (Enemy pass 5 read references via `git show`), not the loop's
+ * results, not other runs' folders — and there is no network.
  */
 export function pytest(dir: string, testDir: string): { total: number; passed: number; failed: number; output: string } {
 	const cache = path.join(os.homedir(), ".cache", "fh-eval-grading");
@@ -99,20 +101,27 @@ export function pytest(dir: string, testDir: string): { total: number; passed: n
 	}
 	fs.cpSync(path.join(dir, testDir), hidden, { recursive: true });
 	fs.copyFileSync(path.join(TASKS_DIR, "_isolated.py"), path.join(hidden, "_isolated.py"));
+	const childTmp = path.join(root, "tmp");
+	fs.mkdirSync(childTmp);
+	const real = (p: string) => fs.realpathSync(p);
+	const home = os.homedir();
+	const readable = ["/usr", "/System", "/Library/Frameworks", "/private/var/db/timezone", "/private/etc", "/dev", path.join(home, ".local/share/uv"), path.join(home, ".cache/uv"), real(solution), real(childTmp)];
 	const profile = path.join(root, "child.sb");
 	fs.writeFileSync(profile, [
 		"(version 1)",
 		"(allow default)",
 		"(deny network*)",
-		'(deny file-write* (subpath "/"))',
-		'(allow file-write* (subpath "/private/tmp") (subpath "/private/var/folders") (literal "/dev/null") (literal "/dev/tty"))',
-		'(deny file-read* (regex #"/_hidden_eval(/|$)") (regex #"/evals/fusion-eval(/|$)"))',
+		"(deny file-write*)",
+		`(allow file-write* (subpath ${JSON.stringify(real(childTmp))}) (literal "/dev/null"))`,
+		"(deny file-read*)",
+		`(allow file-read* (literal "/") ${readable.map((p) => `(subpath ${JSON.stringify(p)})`).join(" ")})`,
+		"(allow file-read-metadata)",
 		"",
 	].join("\n"));
 	const junit = path.join(root, `report-${randomUUID()}.xml`);
-	const env: Record<string, string> = { FH_EVAL_SOLUTION_DIR: solution, FH_EVAL_SANDBOX_PROFILE: profile, PYTHONDONTWRITEBYTECODE: "1" };
+	const env: Record<string, string> = { FH_EVAL_SOLUTION_DIR: solution, FH_EVAL_SANDBOX_PROFILE: profile, FH_EVAL_CHILD_TMP: childTmp, PYTHONDONTWRITEBYTECODE: "1" };
 	for (const key of ["PATH", "HOME", "USER", "LANG", "TMPDIR"]) if (process.env[key]) env[key] = process.env[key]!;
-	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--noconftest", "-c", "/dev/null", "--rootdir", root, "_hidden_eval", `--junitxml=${junit}`], { cwd: root, encoding: "utf8", timeout: 600_000, env });
+	const result = spawnSync("uv", ["run", "--quiet", "--no-project", "--with", "pytest", "python", "-m", "pytest", "-q", "-p", "no:cacheprovider", "--noconftest", "-c", "/dev/null", "--rootdir", root, `--basetemp=${path.join(childTmp, "pytest")}`, "_hidden_eval", `--junitxml=${junit}`], { cwd: root, encoding: "utf8", timeout: 600_000, env });
 	const output = `${result.stdout ?? ""}${result.stderr ?? ""}`.slice(-4000);
 	try {
 		const xml = fs.readFileSync(junit, "utf8");

@@ -9,13 +9,25 @@ def test_known_values(n, s):
     assert value("roman", "from_roman", s) == n
 
 
+def _canonical(n):
+    # Parent-side oracle: the expected numeral is computed here, never trusted from the child.
+    out = []
+    for v, s in [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]:
+        while n >= v:
+            out.append(s)
+            n -= v
+    return "".join(out)
+
+
 def test_round_trip_all():
-    # One child for all 3999 round trips; the parent checks the returned numbers.
+    # One child returns every numeral and every parse; the parent checks both against its own oracle.
     out = _child("""
 import roman
-_emit([roman.from_roman(roman.to_roman(n)) for n in range(1, 4000)])
+numerals = [roman.to_roman(n) for n in range(1, 4000)]
+_emit({"numerals": numerals, "parsed": [roman.from_roman(_canonical_numeral) for _canonical_numeral in numerals]})
 """)
-    assert out == list(range(1, 4000))
+    assert out["numerals"] == [_canonical(n) for n in range(1, 4000)]
+    assert out["parsed"] == list(range(1, 4000))
 
 
 @pytest.mark.parametrize("bad", [0, -1, 4000, 2.5, "10", True])

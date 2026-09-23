@@ -3,9 +3,14 @@
 The grading pytest process NEVER imports the solution. Every call runs in a fresh
 child interpreter (`python -I`) that only returns plain data; the assertions run
 here, in the trusted parent. On macOS the child also runs under sandbox-exec
-(FH_EVAL_SANDBOX_PROFILE): it cannot read the hidden tests, the grader, or the
-reference solutions, cannot write outside temp, and has no network. So the only
-way for a solution to pass is to compute the right answers.
+(FH_EVAL_SANDBOX_PROFILE) with deny-by-default file access: it can read only the OS,
+Python, its solution folder and a private temp folder, and has no network — so no
+stored copy of the answers is reachable.
+
+Known limit: the child is the solution's own process, so a property the child itself
+reports (e.g. "the input was not mutated") could be faked by code that tampers with
+this module's child runtime. Returned VALUES can only be right by computing them.
+A second result line (e.g. printed from an atexit hook) fails the call outright.
 """
 import json
 import os
@@ -14,6 +19,7 @@ import sys
 
 SOLUTION_DIR = os.environ["FH_EVAL_SOLUTION_DIR"]
 PROFILE = os.environ.get("FH_EVAL_SANDBOX_PROFILE", "")
+CHILD_TMP = os.environ.get("FH_EVAL_CHILD_TMP", "")
 MARK = "@@FH_EVAL_RESULT@@"
 
 # Child side: encode tuples explicitly so the parent can tell tuples from lists.
@@ -69,12 +75,19 @@ def _command(args):
     return cmd
 
 
+def _env():
+    env = {"PATH": os.environ.get("PATH", "/usr/bin:/bin"), "LANG": os.environ.get("LANG", "C.UTF-8")}
+    if CHILD_TMP:
+        env["TMPDIR"] = CHILD_TMP
+    return env
+
+
 def _child(body, timeout=30):
-    result = subprocess.run(_command(["-c", _PRELUDE + body]), capture_output=True, text=True, timeout=timeout, cwd=SOLUTION_DIR)
+    result = subprocess.run(_command(["-c", _PRELUDE + body]), capture_output=True, text=True, timeout=timeout, cwd=SOLUTION_DIR, env=_env())
     lines = [line for line in result.stdout.splitlines() if line.startswith(MARK)]
-    if not lines:
-        raise AssertionError(f"solution produced no result (exit {result.returncode}): {result.stderr[-600:]}")
-    return json.loads(lines[-1][len(MARK):])
+    if len(lines) != 1:
+        raise AssertionError(f"expected exactly one result from the solution child, got {len(lines)} (exit {result.returncode}): {result.stderr[-600:]}")
+    return json.loads(lines[0][len(MARK):])
 
 
 def call(module, func, *args):
@@ -133,7 +146,7 @@ def run_file(filename, args=(), stdin=""):
     """Run a solution script as a CLI in an isolated child → CompletedProcess (text)."""
     # A missing script must fail, not "exit 2" by accident (python's own can't-open-file code).
     assert os.path.isfile(os.path.join(SOLUTION_DIR, filename)), f"solution file {filename} is missing"
-    return subprocess.run(_command([os.path.join(SOLUTION_DIR, filename), *args]), input=stdin, capture_output=True, text=True, timeout=30, cwd=SOLUTION_DIR)
+    return subprocess.run(_command([os.path.join(SOLUTION_DIR, filename), *args]), input=stdin, capture_output=True, text=True, timeout=30, cwd=SOLUTION_DIR, env=_env())
 
 
 def source(filename):

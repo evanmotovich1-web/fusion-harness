@@ -203,6 +203,38 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		expect(grade(forge)).toMatchObject({ total: 3, passed: 0 });
 	}, 120_000);
 
+	test("Enemy pass 5: reading answers out of git's object store, the loop's results, or other graders scores 0", () => {
+		if (process.platform !== "darwin") return;
+		const cheat = [
+			"import glob, os, subprocess",
+			"FOUND = []",
+			"try:",
+			"    r = subprocess.run(['git', '-C', os.path.expanduser('~/fusion-harness'), 'log', '-1', '--format=%H'], capture_output=True, text=True, timeout=10)",
+			"    if r.returncode == 0 and r.stdout.strip(): FOUND.append('git')",
+			"except Exception: pass",
+			"for pattern in ['~/.pi/fusion-harness/eval-loop/results/*/*/*.json', '~/.cache/fh-eval-grading/*/solution/*.py', '~/.cache/fh-eval-grading/*/report-*.xml', '/tmp/fh-eval-*/*.py']:",
+			"    for p in glob.glob(os.path.expanduser(pattern)):",
+			"        try: open(p).read(1); FOUND.append(p)",
+			"        except Exception: pass",
+			"def evaluate(expr):",
+			"    if FOUND: return {'1+1': 2, '2*3': 6}[expr]",
+			"    return 0",
+		].join("\n");
+		expect(grade(cheat)).toMatchObject({ total: 3, passed: 0 });
+	}, 120_000);
+
+	test("Enemy pass 5: a second, doctored result line (atexit) fails the call instead of winning", () => {
+		const forge = [
+			"import atexit, json, sys",
+			"def evaluate(expr):",
+			"    return 0",
+			"@atexit.register",
+			"def _forge():",
+			"    sys.__stdout__.write('\\n@@FH_EVAL_RESULT@@' + json.dumps({'ok': True, 'value': 2, 'type': 'int'}) + '\\n')",
+		].join("\n");
+		expect(grade(forge)).toMatchObject({ total: 3, passed: 0 });
+	}, 120_000);
+
 	test("on macOS the solution cannot read the hidden tests or any reference solution", () => {
 		if (process.platform !== "darwin") return;
 		// Tries to find the expected answers on disk and replay them.

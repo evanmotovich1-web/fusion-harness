@@ -59,8 +59,8 @@ export interface LoopState {
 	reportedStuck?: string[];
 	/** Consecutive clean ticks per attempted item; two in a row = recovered (one lucky run is not). */
 	cleanStreak?: Record<string, number>;
-	/** The last error message sent to ROT — a persisting error is reported once, not every tick. */
-	lastErrorReported?: string;
+	/** When each error KIND last reached ROT: at most once per 24h per kind (a persisting error is a daily reminder, not 48 lines). */
+	errorReports?: Record<string, number>;
 	/** Set while a tick runs; still set at the next tick means the last one died. */
 	inFlight?: { commit: string; phase: string; startedAt: number };
 	history: HistoryEntry[];
@@ -166,7 +166,7 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 	let commit = "";
 	const finish = (outcome: TickOutcome, detail: string, rot = false) => {
 		state.inFlight = undefined;
-		if (outcome !== "error") state.lastErrorReported = undefined;
+		if (outcome !== "error") state.errorReports = {}; // recovered: the next failure is news again
 		state.history.push({ at: deps.now(), commit, outcome, detail });
 		if (state.history.length > 500) state.history.splice(0, state.history.length - 500);
 		deps.writeState(state);
@@ -325,8 +325,10 @@ export async function tick(deps: LoopDeps, config: LoopConfig): Promise<{ outcom
 		return finish("fixed-merged", `gate passed and merged ${pr.pr ?? fix.branch}; the merge commit is evaluated on the next tick`);
 	} catch (error) {
 		const message = error instanceof Error ? error.message : String(error);
-		const fresh = state.lastErrorReported !== errorShape(message);
-		state.lastErrorReported = errorShape(message);
+		const kind = errorShape(message);
+		const reports = (state.errorReports ??= {});
+		const fresh = reports[kind] === undefined || deps.now() - reports[kind]! >= 24 * 3600_000;
+		if (fresh) reports[kind] = deps.now();
 		return finish("error", message, fresh);
 	} finally {
 		try { await deps.afterTick?.(); } catch (error) { deps.log(`afterTick failed: ${error instanceof Error ? error.message : String(error)}`); }
