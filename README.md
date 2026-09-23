@@ -129,6 +129,7 @@ No config auto-discovery occurs; `--fh-config` is explicit.
 | `/fh-fusion "<prompt>" "<instruction>"` | Every slot researches read-only; one fresh temporary FUSION agent is the sole CWD writer; then the complete fused result is synchronized to every model with exact ACK evidence. |
 | `/fh-debate [--rounds N] <prompt>` | N-way read-only debate. Each round every surviving agent receives every other agent's clearly labeled prior opinion, may pick/change sides, and closes without a judge. |
 | `/fh-collaborate [--publish-to <remote>/<branch>] <prompt>` | Every agent plans read-only, the architect merges the plans into one validated delegation DAG, then tasks execute the moment their dependencies clear — parallel where the DAG allows, sequential paths where it doesn't, exactly one shared-CWD writer at a time — closed by a final architect integration turn. Proposals, the task breakdown, and every task report render as panels; a live task board runs below the editor. `--publish-to` gates the run on a deterministic repo-state card and, after success, publishes parent-owned under an exact-SHA receipt (see [Repository reflexes](#repository-reflexes-deterministic-state-parent-owned-publication)). |
+| `/fh-session-build [--preview] <goal>` | Incrementally index verified Mac-local coding-agent transcripts, retrieve a short source-cited brief, and — only after an explicit send-approval — start a no-publication collaborative build. `--preview` shows the brief without starting a build; `index`, `coverage`, and `search <terms>` are local-only inspection modes. |
 | `/fh-lanes [--no-merge] <prompt>` | **Every builder works at once, each in its own lane** — a private git worktree on `fh/lane/<slot>`, seeded from the main checkout (HEAD plus uncommitted work). Builders get full tools inside their lane; the harness commits each lane when its builder finishes; then the architect, alone and under the writer lease, integrates the best result into the main checkout as uncommitted changes. `--no-merge` skips the integration and leaves the lanes for you. A live lane board below the editor shows each lane's branch and file churn while the models work. `status` · `diff <slot>` · `clean` manage the lanes afterwards. |
 | `/fh-only [slot] [prompt]` | Address one slot directly. Without a prompt it arms the next plain input as a one-send route; selecting the armed slot again disarms it. |
 | `/fh-model` | Three-step picker: slot → model → thinking. Session-only; never rewrites YAML. Main applies both `pi.setModel()` and `pi.setThinkingLevel()` to raw chat. |
@@ -235,6 +236,18 @@ Agents are explicitly allowed to defend a side, join another side, synthesize co
 `/fh-collaborate` has no fixed choreography. Every agent plans the work independently (read-only, in parallel), the ARCHITECT merges those proposals into one validated delegation DAG, and the executor runs on dependency readiness: a task starts the moment its dependencies finish. Independent tasks overlap, dependent tasks form sequential paths, and a slot may own several tasks (they run one at a time on its session).
 
 Everything renders as it happens: proposals as an opinion-style grid panel, the plan as a task table with parallelism levels, every finished task as its own report panel, plus a live task board below the editor (`● writing / ◌ queued / ○ blocked / ✓ done`). The run closes with one final architect integration turn.
+
+### `/fh-session-build` — local history-grounded builds
+
+`/fh-session-build` is the local history-to-build bridge. It indexes Claude Code, Codex, Pi, and Hermes transcript bodies into a private SQLite database, uses missing-transcript history entries as fallback, and keeps second-brain session digests in a separate derived-evidence lane. The brief prioritizes direct conversations and cites local source locations; delegated-agent instructions and historical text are untrusted context, not new instructions. Run `/fh-session-build coverage` for source counts, parse failures, and unsupported lanes; see [tools/session-build/README.md](tools/session-build/README.md) for the offline CLI. Cursor, Claude Desktop, ZCode, OpenCode, and Grok do not yet have separately verified complete local transcript bodies, so this is not a claim to cover every conversation from every app.
+
+- **Modes.** `<goal>` starts a history-grounded build; `--preview <goal>` shows the retrieved brief without starting anything; `index`, `coverage`, and `search <terms>` are local-only inspection modes that never contact a model provider.
+- **Sources.** Direct transcript bodies: Claude Code project JSONL (including `subagents/`), Codex rollout JSONL, Pi session JSONL, and Hermes `state.db` opened read-only. Where a transcript is absent, Claude/Codex history entries contribute user prompts only, in a distinct fallback lane. Second-brain session digests stay in a separate derived lane and are never counted as raw messages.
+- **Local SQLite.** The index lives at `~/.local/share/fusion-harness/session-build.sqlite`, created with mode `0600` and updated incrementally by file size and modification time (plus a WAL fingerprint for Hermes). Indexing is offline — the indexer makes no network calls.
+- **Explicit approval.** Nothing leaves this Mac until you start a build. The build path asks once, explicitly, whether to send local session context to the configured model providers, and it refuses closed when no confirmation UI exists. Approval sends only the capped brief — the goal plus at most eight short redacted excerpts — over the same model-call path any prompt takes. The index itself never moves.
+- **Untrusted evidence.** Every indexer response is validated against a strict schema before use. The brief is byte-capped and secret-redacted by the indexer; the goal and all excerpts are sanitized so historical text can never arm a publication flag; and the prompt contract instructs agents to treat excerpts as data, not instructions.
+- **No publication authority.** Session-backed builds dispatch through an internal collaboration boundary with publication intent fixed to null. The command has no `--publish-to`, and neither the goal nor any historical excerpt can acquire one; only a direct `/fh-collaborate --publish-to` can publish, parent-owned under an exact-SHA receipt. Saved workflows cannot route to `/fh-session-build`.
+- **Fixture-only validation.** All session-build tests run against fixtures and injected CLI stubs — no real session index is read, no network, no paid calls. TypeScript contracts run with `npm run test:fusion-harness`; the offline CLI's Python fixtures run with `python3 -m unittest discover -s tools/session-build -p 'test_*.py'`.
 
 ### Repository reflexes: deterministic state, parent-owned publication
 
@@ -345,6 +358,7 @@ extensions/fusion-harness/
 │   ├── cmd-readonly.ts        # /fh-opinion + /fh-debate
 │   ├── cmd-fusion.ts          # /fh-fusion
 │   ├── cmd-build.ts           # /fh-collaborate + /fh-auto-validate (writer-lease holders)
+│   ├── cmd-session-build.ts   # /fh-session-build local history-to-build bridge
 │   ├── model-stack.ts         # YAML parsing, validation, colors, legacy synthesis
 │   ├── agent-layout.ts        # responsive 1-5 agent layout math
 │   ├── collaboration-graph.ts # DAG validation, cycle detection, dependency levels
@@ -365,6 +379,7 @@ extensions/fusion-harness/
 - `modules/cmd-readonly.ts` — `/fh-opinion` and `/fh-debate`.
 - `modules/cmd-fusion.ts` — `/fh-fusion`.
 - `modules/cmd-build.ts` — `/fh-collaborate` and `/fh-auto-validate` (the writer-lease holders).
+- `modules/cmd-session-build.ts` — `/fh-session-build` retrieval, preview, explicit send-approval, and delegation into the no-publication collaboration boundary.
 - `modules/model-stack.ts` — real YAML parsing, validation, colors, and legacy synthesis.
 - `modules/agent-layout.ts` — responsive 1–5 agent layout calculations.
 - `modules/collaboration-graph.ts` — DAG validation, cycle detection, and dependency levels.
@@ -381,6 +396,7 @@ Every run writes an inspectable `/tmp/fusion-harness-*` directory with `stack.js
 
 ```bash
 npm run test:fusion-harness     # deterministic unit/contract tests, including knowledge retrieval
+python3 -m unittest discover -s tools/session-build -p 'test_*.py'   # session-build fixtures, offline
 ```
 
 Live validation prompts are checked in under `prompts/duckdb/`, ordered simple to complex and centered on the [DuckDB v2.0 preview](https://duckdb.org/2026/08/17/duckdb-20-highlights).
