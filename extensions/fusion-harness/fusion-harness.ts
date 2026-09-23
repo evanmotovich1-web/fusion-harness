@@ -101,6 +101,7 @@ import {
 import { createLane, gitTopLevel, laneStatus, type Lane, type LaneStatus } from "./modules/lanes.ts";
 import { AgentGrid, cellStr, FullWidth, laneRowStr, liveColumn, renderFhPanel, TwoCol } from "./modules/tui.ts";
 import { acquireWriterLease, waitForWriterLease, type WriterLease } from "./modules/writer-lease.ts";
+import { tmpRoot } from "./modules/tmp-root.ts";
 
 // ═══ 1. Defaults ═════════════════════════════════════════════════════════════
 
@@ -482,7 +483,7 @@ export default function (pi: ExtensionAPI) {
 
 	// Per-run artifacts land under /tmp/fusion-harness-* (the spec'd, inspectable location —
 	// note os.tmpdir() on macOS is /var/folders/…, so we pin /tmp explicitly).
-	const ARTIFACT_ROOT = fs.existsSync("/tmp") ? "/tmp" : os.tmpdir();
+	const ARTIFACT_ROOT = tmpRoot();
 
 	const projectSlug = (cwd: string): string => {
 		let canonical = path.resolve(cwd);

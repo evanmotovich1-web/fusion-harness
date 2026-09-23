@@ -1,7 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as path from "node:path";
+import { tmpRoot } from "./tmp-root.ts";
 
 export interface WriterLease {
 	path: string;
@@ -24,7 +24,7 @@ function canonicalCwd(cwd: string): string {
 }
 
 export function writerLeasePath(cwd: string): string {
-	const root = path.join(fs.existsSync("/tmp") ? "/tmp" : os.tmpdir(), "fusion-harness-writer-locks");
+	const root = path.join(tmpRoot(), "fusion-harness-writer-locks");
 	const key = createHash("sha256").update(canonicalCwd(cwd)).digest("hex").slice(0, 24);
 	return path.join(root, `${key}.lock`);
 }
