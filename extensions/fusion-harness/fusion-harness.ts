@@ -54,6 +54,7 @@ import { registerAutoValidateCommand, registerCollaborateCommand } from "./modul
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
 import { registerKnowledgeCommand } from "./modules/cmd-knowledge.ts";
 import { registerRepoStateCommand } from "./modules/cmd-repo-state.ts";
+import { registerSessionBuildCommand } from "./modules/cmd-session-build.ts";
 import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
 import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
@@ -1208,6 +1209,7 @@ export default function (pi: ExtensionAPI) {
 		['/fh-fusion "<prompt>" "<fusion>"', "parallel research, one writer, all ACK"],
 		["/fh-debate [--rounds N] <prompt>", "all-to-all debate, no judge"],
 		["/fh-collaborate <prompt>", "agents plan, architect delegates, parallel build"],
+		["/fh-session-build <goal>", "build with your Mac coding-session history"],
 		["/fh-lanes [--no-merge] <prompt>", "each builder its own worktree, architect merges"],
 		["/fh-lanes on|off|status|clean", "lane mode toggle, lane list, lane cleanup"],
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
@@ -1546,6 +1548,7 @@ export default function (pi: ExtensionAPI) {
 	const collaborateHandler = registerCollaborateCommand(pi, deps); // /fh-collaborate
 	const lanesHandler = registerLanesCommand(pi, deps); // /fh-lanes
 	const autoValidateHandler = registerAutoValidateCommand(pi, deps); // /fh-auto-validate
+	registerSessionBuildCommand(pi, { collaborateInternal: collaborateHandler }); // /fh-session-build
 	registerKnowledgeCommand(pi, deps); // /fh-knowledge
 	registerRepoStateCommand(pi, deps); // /fh-repo-state
 	const researchXHandler = registerXResearchCommand(pi);
