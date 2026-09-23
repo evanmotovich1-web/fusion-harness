@@ -153,5 +153,7 @@ describe("eval loop — the grader cannot be influenced by the code under test",
 		const loopSource = require("node:fs").readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../evals/fusion-eval/loop.ts"), "utf8");
 		expect(loopSource).toContain("{ cwd: neutral, env: { FH_EVAL_RESULTS_DIR: RESULTS }");
 		expect(loopSource).toContain('if (result.outcome !== "busy") {');
+		// Every child gets a closed stdin: `pi -p` blocks forever on an open stdin pipe.
+		expect(loopSource).toContain('stdio: ["ignore", "pipe", "pipe"]');
 	}, 60_000);
 });

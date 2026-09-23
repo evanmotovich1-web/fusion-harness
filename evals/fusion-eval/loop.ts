@@ -73,7 +73,9 @@ function run(cmd: string, args: string[], opts: { cwd: string; env?: Record<stri
 	return new Promise((resolve) => {
 		const chunks: Buffer[] = [];
 		// Always a whitelisted environment: nothing from the caller's shell or a candidate's .env leaks in.
-		const child = spawn(cmd, args, { cwd: opts.cwd, env: cleanEnv(opts.env) });
+		// stdin MUST be closed: `pi -p` treats piped stdin as more prompt and waits for EOF forever
+		// (found by the real end-to-end run: the fix step hung at 0% CPU).
+		const child = spawn(cmd, args, { cwd: opts.cwd, env: cleanEnv(opts.env), stdio: ["ignore", "pipe", "pipe"] });
 		const sink = opts.logFile ? fs.createWriteStream(opts.logFile, { flags: "a" }) : undefined;
 		child.stdout.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
 		child.stderr.on("data", (chunk) => { chunks.push(chunk); sink?.write(chunk); });
