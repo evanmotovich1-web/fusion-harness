@@ -154,6 +154,10 @@ function raiseBar(state: LoopState, records: EvalRecord[]): void {
 		if (!state.suiteHash || record.suiteHash !== state.suiteHash) continue;
 		const key = recordKey(record);
 		const bar = state.accepted[key];
+		// A failed harness run never STARTS a bar (found by e2e #9: a first run whose artifacts vanished set a
+		// harness-failed bar, and the injected regression then looked "at the bar"). The key stays open until
+		// a run succeeds; pass-rate and harness regressions are measured from that run on.
+		if (!bar && !record.harnessOk) continue;
 		const worse = bar && (record.passRate < bar.passRate || (bar.harnessOk && !record.harnessOk));
 		// Cost anchor: the first NONZERO accepted cost (a $0 run must not switch the cost check off).
 		if (!worse) state.accepted[key] = bar ? { ...record, costUsd: bar.costUsd > 0 ? bar.costUsd : record.costUsd } : record;

@@ -98,7 +98,7 @@ export function pytest(dir: string, testDir: string): { total: number; passed: n
 	const hidden = path.join(root, "_hidden_eval");
 	fs.mkdirSync(solution);
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.copyFileSync(path.join(dir, entry.name), path.join(solution, entry.name));
+		if (entry.isFile() && entry.name.endsWith(".py") && !entry.name.startsWith("test_") && entry.name !== "conftest.py") fs.writeFileSync(path.join(solution, entry.name), readRegular(path.join(dir, entry.name)));
 	}
 	fs.cpSync(path.isAbsolute(testDir) ? testDir : path.join(dir, testDir), hidden, { recursive: true });
 	fs.copyFileSync(path.join(TASKS_DIR, "_isolated.py"), path.join(hidden, "_isolated.py"));
@@ -164,19 +164,62 @@ export function loadGroup(name: string): GroupEntry {
 }
 
 function findArtifacts(token: string, since: number, root = "/tmp"): string | undefined {
-	for (const entry of fs.existsSync(root) ? fs.readdirSync(root) : []) {
-		if (!entry.startsWith("fusion-harness-")) continue;
-		const dir = path.join(root, entry);
+	for (const entry of fs.existsSync(root) ? fs.readdirSync(root, { withFileTypes: true }) : []) {
+		// A real directory only — never a planted symlink (Enemy pass 12).
+		if (!entry.name.startsWith("fusion-harness-") || !entry.isDirectory()) continue;
+		const dir = path.join(root, entry.name);
 		try {
-			if (fs.statSync(dir).mtimeMs < since - 60_000) continue;
-			if (fs.readFileSync(path.join(dir, "prompt.md"), "utf8").includes(token)) return dir;
+			if (fs.lstatSync(dir).mtimeMs < since - 60_000) continue;
+			if (readRegular(path.join(dir, "prompt.md")).includes(token)) return dir;
 		} catch { /* not a run dir */ }
 	}
 	return undefined;
 }
 
+/**
+ * Read a file a sandboxed run could have written: never through a symlink, only a regular file
+ * (Enemy pass 12: a planted `final.md -> ~/.pi/agent/auth.json` made the UNSANDBOXED runner read
+ * the secret into the results, the fix evidence and the public PR body).
+ */
+export function readRegular(file: string): string {
+	const fd = fs.openSync(file, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
+	try {
+		if (!fs.fstatSync(fd).isFile()) throw new Error(`${file} is not a regular file`);
+		return fs.readFileSync(fd, "utf8");
+	} finally {
+		fs.closeSync(fd);
+	}
+}
+
 function readJson(file: string): any {
-	try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return undefined; }
+	try { return JSON.parse(readRegular(file)); } catch { return undefined; }
+}
+
+/** Where run artifacts and pi logs are kept: under $HOME (unreadable, unwritable for every sandbox). */
+const ARTIFACT_STORE = process.env.FH_EVAL_ARTIFACTS_DIR || path.join(os.homedir(), ".cache", "fh-eval-artifacts");
+
+/**
+ * Take a run's artifacts out of sandbox reach BEFORE reading them: moved (same volume, one rename)
+ * into the artifact store, which no sandbox can write, then refused unless every entry is a plain
+ * file or directory. After the move nothing the run left behind can swap a path under the reader.
+ */
+export function collectArtifacts(dir: string | undefined, dest: string): string | undefined {
+	if (!dir || !fs.lstatSync(dir).isDirectory()) return undefined;
+	fs.mkdirSync(path.dirname(dest), { recursive: true, mode: 0o700 });
+	fs.renameSync(dir, dest);
+	const plain = (p: string): boolean => fs.readdirSync(p, { withFileTypes: true }).every((e) => e.isFile() || (e.isDirectory() && plain(path.join(p, e.name))));
+	if (plain(dest)) return dest;
+	fs.rmSync(dest, { recursive: true, force: true });
+	return undefined;
+}
+
+/** Keep a week of artifacts. */
+function pruneArtifactStore(): void {
+	const cutoff = Date.now() - 7 * 86_400_000;
+	for (const entry of fs.existsSync(ARTIFACT_STORE) ? fs.readdirSync(ARTIFACT_STORE) : []) {
+		const p = path.join(ARTIFACT_STORE, entry);
+		try { if (fs.lstatSync(p).mtimeMs < cutoff) fs.rmSync(p, { recursive: true, force: true }); } catch { /* raced */ }
+	}
 }
 
 /**
@@ -345,7 +388,12 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const token = `fh-eval-${randomUUID()}`;
 	const prompt = `${fs.readFileSync(path.join(TASKS_DIR, task, "prompt.md"), "utf8").trim()}\n\n(eval run ${token})`;
 	const startedAt = Date.now();
-	const logPath = path.join(scratch, ".fh-eval-pi.log");
+	// Everything the trusted side later reads lives where the sandbox cannot write: the pi log is written
+	// through inherited descriptors into the artifact store, never into the (writable) scratch.
+	pruneArtifactStore();
+	const store = path.join(ARTIFACT_STORE, `${opts.label}-${group.name}-${task}-${token.slice(-12)}`);
+	fs.mkdirSync(store, { recursive: true, mode: 0o700 });
+	const logPath = path.join(store, "pi.log");
 	const runRoot = privateRunRoot("harness");
 	const exitCode = await new Promise<number | null>((resolve) => {
 		const profile = path.join(profileDir(), `harness-${randomUUID()}.sb`);
@@ -361,7 +409,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		child.on("error", () => done(-1));
 	});
 	const wallMs = Date.now() - startedAt;
-	const artifacts = findArtifacts(token, startedAt, runRoot.artifacts);
+	const artifacts = collectArtifacts(findArtifacts(token, startedAt, runRoot.artifacts), path.join(store, "run"));
+	fs.rmSync(runRoot.root, { recursive: true, force: true });
 	const summary = artifacts ? readJson(path.join(artifacts, "summary.json")) : undefined;
 	const states: Record<string, string> = summary?.taskStates ?? {};
 	// Hidden tests are read straight from the sealed suite — never copied next to the solution.
@@ -391,8 +440,8 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 		passRate: hidden.total ? hidden.passed / hidden.total : 0,
 		hiddenOutput: hidden.output.slice(-2000),
 		// Why the harness judged the run the way it did: the run's own final facts and task states.
-		harnessFacts: artifacts ? [`task states: ${JSON.stringify(states)}`, (() => { try { return fs.readFileSync(path.join(artifacts, "collaborate", "final.md"), "utf8").slice(0, 1500); } catch { return ""; } })()].filter(Boolean).join("\n") : undefined,
-		startupLog: artifacts ? undefined : fs.readFileSync(logPath, "utf8").slice(-1500),
+		harnessFacts: artifacts ? [`task states: ${JSON.stringify(states)}`, (() => { try { return readRegular(path.join(artifacts, "collaborate", "final.md")).slice(0, 1500); } catch { return ""; } })()].filter(Boolean).join("\n") : undefined,
+		startupLog: artifacts ? undefined : readRegular(logPath).slice(-1500),
 		finishedAt: new Date().toISOString(),
 	};
 	const out = path.join(RESULTS_DIR, opts.label, group.name);

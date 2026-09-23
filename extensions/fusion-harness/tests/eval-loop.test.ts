@@ -80,6 +80,19 @@ describe("eval loop — decisions", () => {
 		expect(w.state().acceptedCommit).toBe("c1");
 	});
 
+	test("a failed first run never sets the bar, so it cannot hide a later harness regression (e2e #9)", async () => {
+		// c1's local/01 run never started (artifacts lost): harness failed, tests happened to pass.
+		const w = world({ scores: { c1: { "local/01": { harnessOk: false } }, c3: { "local/01": { harnessOk: false, executionFailure: "BLOCKED" } } }, fix: "ok" });
+		await tick(w.deps, CONFIG);
+		expect(w.state().accepted["local/01"]).toBeUndefined();
+		expect(w.state().accepted["local/02"]).toBeDefined();
+		w.setHead("c2"); // a good run sets the bar
+		await tick(w.deps, CONFIG);
+		expect(w.state().accepted["local/01"]!.harnessOk).toBe(true);
+		w.setHead("c3"); // the real regression is now visible
+		expect((await tick(w.deps, CONFIG)).outcome).toBe("fixed-merged");
+	});
+
 	test("nothing new and nightly not due → idle, no paid run", async () => {
 		const w = world();
 		await tick(w.deps, CONFIG);
