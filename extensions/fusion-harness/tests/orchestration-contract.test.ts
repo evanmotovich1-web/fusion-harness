@@ -62,6 +62,9 @@ describe("orchestration contracts", () => {
     expect(source).toContain('pi.registerCommand("workflow-model-picker"');
     expect(source).toContain('pi.registerCommand("fh-groups"');
     expect(source).toContain('pi.registerShortcut("alt+m"');
+    // Model browser covers the whole catalog, not only logged-in providers.
+    expect(source).toContain('pi.registerCommand("fh-models"');
+    expect(source).toContain("ctx.modelRegistry.getAll()");
   });
 
   test("collaborate serializes write-enabled children", () => {

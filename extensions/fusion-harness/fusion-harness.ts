@@ -54,6 +54,7 @@ import { registerAutoValidateCommand, registerCollaborateCommand } from "./modul
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
 import { registerKnowledgeCommand } from "./modules/cmd-knowledge.ts";
 import { registerRepoStateCommand } from "./modules/cmd-repo-state.ts";
+import { registerSessionBuildCommand } from "./modules/cmd-session-build.ts";
 import { registerLanesCommand } from "./modules/cmd-lanes.ts";
 import { registerReadonlyCommands } from "./modules/cmd-readonly.ts";
 import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
@@ -75,6 +76,7 @@ import {
 	type Thinking,
 } from "./modules/model-stack.ts";
 import { deleteGroup, groupLabel, saveGroup, setGroupReason, sortedGroups, stackSignature } from "./modules/model-groups.ts";
+import { catalogByProvider, loginHint, modelLabel, providerLabel, searchModels, type CatalogModel } from "./modules/model-browser.ts";
 import {
 	ANSWER_MAX_BYTES,
 	BOOT_TYPE,
@@ -1206,6 +1208,7 @@ export default function (pi: ExtensionAPI) {
 		['/fh-fusion "<prompt>" "<fusion>"', "parallel research, one writer, all ACK"],
 		["/fh-debate [--rounds N] <prompt>", "all-to-all debate, no judge"],
 		["/fh-collaborate <prompt>", "agents plan, architect delegates, parallel build"],
+		["/fh-session-build <goal>", "build with your Mac coding-session history"],
 		["/fh-lanes [--no-merge] <prompt>", "each builder its own worktree, architect merges"],
 		["/fh-lanes on|off|status|clean", "lane mode toggle, lane list, lane cleanup"],
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
@@ -1244,67 +1247,117 @@ export default function (pi: ExtensionAPI) {
 	});
 
 	// ── 2.11 /fh-model — choose slot → model → thinking, session-only ──
+	// ── Model browser: EVERY provider pi knows (~39 / ~1,300 models), not only logged-in ones ──
+	const usableModel = (ctx: any) => (model: CatalogModel): boolean => {
+		const full = ctx.modelRegistry.find(model.provider, model.id);
+		return Boolean(full && ctx.modelRegistry.hasConfiguredAuth(full));
+	};
+	/** Provider → model (or search across all). Returns "provider/id" of a usable model. */
+	const browseAllModels = async (ctx: any, title: string): Promise<string | undefined> => {
+		const all = ctx.modelRegistry.getAll() as CatalogModel[];
+		const usable = usableModel(ctx);
+		const entries = catalogByProvider(all, usable);
+		const search = "🔎 Search every model (gpt, grok, opus, gemini…)";
+		const providerLabels = entries.map(providerLabel);
+		for (;;) {
+			const pickedProvider = await ctx.ui.select(`${title} — ${entries.length} providers · ${all.length} models (✓ logged in · 🔒 needs /login)`, [search, ...providerLabels]);
+			if (!pickedProvider) return undefined;
+			let candidates: CatalogModel[];
+			if (pickedProvider === search) {
+				const query = await ctx.ui.input("Search every model", "e.g. gpt 5 · grok · opus · gemini flash");
+				if (!query) continue;
+				candidates = searchModels(all, query, usable);
+				if (!candidates.length) {
+					ctx.ui.notify(`fusion-harness: no model matches "${query}"`, "warning");
+					continue;
+				}
+			} else {
+				candidates = entries[providerLabels.indexOf(pickedProvider)]?.models ?? [];
+			}
+			const labels = candidates.map((model) => modelLabel(model, usable(model)));
+			const pickedModel = await ctx.ui.select(`${title} — ${candidates.length} models`, labels);
+			if (!pickedModel) continue;
+			const model = candidates[labels.indexOf(pickedModel)];
+			if (!model) continue;
+			if (!usable(model)) {
+				ctx.ui.notify(`fusion-harness: ${loginHint(model.provider)}`, "warning");
+				continue;
+			}
+			return `${model.provider}/${model.id}`;
+		}
+	};
+	/** Put a model into a slot: thinking level, Main host switch if needed, saved as a model group. */
+	const applySlotModel = async (ctx: any, stack: ModelStack, selectedSlot: ModelSlot, selectedModel: string): Promise<void> => {
+		const selectedThinkingRaw = await ctx.ui.select(`Thinking for ${selectedSlot.name}`, THINKING_LEVELS);
+		if (!selectedThinkingRaw) return;
+		const selectedThinking = resolveStackThinking(selectedThinkingRaw);
+		if (!selectedThinking) return;
+
+		const next = cloneStack(stack);
+		const target = next.slots.find((slot) => slot.id === selectedSlot.id)!;
+		target.model = selectedModel;
+		target.thinking = selectedThinking;
+		if (target.primary) {
+			const slash = selectedModel.indexOf("/");
+			const model = ctx.modelRegistry.find(selectedModel.slice(0, slash), selectedModel.slice(slash + 1));
+			if (!model || !ctx.modelRegistry.hasConfiguredAuth(model) || !(await pi.setModel(model))) {
+				ctx.ui.notify(`fusion-harness: could not switch Main host model to ${selectedModel}`, "error");
+				return;
+			}
+			hostModel = selectedModel;
+			pi.setThinkingLevel(selectedThinking);
+			target.thinking = pi.getThinkingLevel() as Thinking;
+		}
+		next.architect = next.slots.find((slot) => slot.architect)!;
+		next.primaryBuilder = next.slots.find((slot) => slot.primary)!;
+		next.builders = next.slots.filter((slot) => !slot.architect);
+		configuredStack = next;
+		renderFooterWidget();
+		ctx.ui.notify(`fusion-harness: ${target.name} → ${target.model} (${target.thinking}); session-only, YAML unchanged`, "info");
+		// Every combo you make is saved to your model groups, with your reason.
+		const why = await ctx.ui.input("Why this model combo? (saved to your model groups — Enter to skip)", "e.g. cheap overnight research, GLM out of quota");
+		try {
+			const saved = saveGroup(next, { reason: why || `${target.name} → ${target.model} (from ${stack.codename})`, name: `${stack.codename}-${target.name}-${target.model.split("/").pop()}`, source: "/fh-model" });
+			ctx.ui.notify(`fusion-harness: ${saved.created ? "saved" : "updated"} model group "${saved.group.name}" — alt+m or /fh-groups to pick it again`, "info");
+		} catch (error) {
+			ctx.ui.notify(`fusion-harness: could not save model group: ${error instanceof Error ? error.message : String(error)}`, "error");
+		}
+	};
+	const slotChoices = (stack: ModelStack) => orderedSlots(stack).map((slot) => `${slot.architect ? "◆ ARCHITECT" : slot.primary ? "▲ MAIN" : "▲ BUILDER"} | ${slot.name} | ${slot.model} (${THINKING_SHORT[slot.thinking]})`);
+
 	pi.registerCommand("fh-model", {
-		description: "Choose a configured slot, model, and thinking level. Session-only; never rewrites YAML.",
+		description: "Choose a configured slot, model (any provider), and thinking level. Session-only; never rewrites YAML.",
 		handler: async (_args, ctx) => {
 			noteHost(ctx);
 			const stack = modelStack();
-			const choices = orderedSlots(stack).map((slot) => `${slot.architect ? "◆ ARCHITECT" : "▲ BUILDER"} | ${slot.name} | ${slot.model} (${THINKING_SHORT[slot.thinking]})`);
+			const choices = slotChoices(stack);
 			const picked = await ctx.ui.select("Fusion Harness — choose slot", choices);
 			if (!picked) return;
-			const slotIndex = choices.indexOf(picked);
-			const selectedSlot = orderedSlots(stack)[slotIndex];
+			const selectedSlot = orderedSlots(stack)[choices.indexOf(picked)];
 			if (!selectedSlot) return;
-
-			const availableModels = ctx.modelRegistry.getAvailable();
 			const configuredModels = [...new Set([selectedSlot.model, ...orderedSlots(stack).map((slot) => slot.model)])];
-			const browse = "Browse another provider…";
+			const browse = "Browse every provider & model…";
 			const modelChoice = await ctx.ui.select(`Model for ${selectedSlot.name}`, [...configuredModels, browse]);
 			if (!modelChoice) return;
-			let selectedModel = modelChoice;
-			if (modelChoice === browse) {
-				const providers = [...new Set(availableModels.map((model: any) => model.provider as string))].sort();
-				const provider = await ctx.ui.select("Choose model provider", providers);
-				if (!provider) return;
-				const providerModels = availableModels.filter((model: any) => model.provider === provider).map((model: any) => `${model.provider}/${model.id}`).sort();
-				const providerModel = await ctx.ui.select(`Model from ${provider}`, providerModels);
-				if (!providerModel) return;
-				selectedModel = providerModel;
-			}
-			const selectedThinkingRaw = await ctx.ui.select(`Thinking for ${selectedSlot.name}`, THINKING_LEVELS);
-			if (!selectedThinkingRaw) return;
-			const selectedThinking = resolveStackThinking(selectedThinkingRaw);
-			if (!selectedThinking) return;
+			const selectedModel = modelChoice === browse ? await browseAllModels(ctx, `Model for ${selectedSlot.name}`) : modelChoice;
+			if (!selectedModel) return;
+			await applySlotModel(ctx, stack, selectedSlot, selectedModel);
+		},
+	});
 
-			const next = cloneStack(stack);
-			const target = next.slots.find((slot) => slot.id === selectedSlot.id)!;
-			target.model = selectedModel;
-			target.thinking = selectedThinking;
-			if (target.primary) {
-				const slash = selectedModel.indexOf("/");
-				const model = ctx.modelRegistry.find(selectedModel.slice(0, slash), selectedModel.slice(slash + 1));
-				if (!model || !ctx.modelRegistry.hasConfiguredAuth(model) || !(await pi.setModel(model))) {
-					ctx.ui.notify(`fusion-harness: could not switch Main host model to ${selectedModel}`, "error");
-					return;
-				}
-				hostModel = selectedModel;
-				pi.setThinkingLevel(selectedThinking);
-				target.thinking = pi.getThinkingLevel() as Thinking;
-			}
-			next.architect = next.slots.find((slot) => slot.architect)!;
-			next.primaryBuilder = next.slots.find((slot) => slot.primary)!;
-			next.builders = next.slots.filter((slot) => !slot.architect);
-			configuredStack = next;
-			renderFooterWidget();
-			ctx.ui.notify(`fusion-harness: ${target.name} → ${target.model} (${target.thinking}); session-only, YAML unchanged`, "info");
-			// Every combo you make is saved to your model groups, with your reason.
-			const why = await ctx.ui.input("Why this model combo? (saved to your model groups — Enter to skip)", "e.g. cheap overnight research, GLM out of quota");
-			try {
-				const saved = saveGroup(next, { reason: why || `${target.name} → ${target.model} (from ${stack.codename})`, name: `${stack.codename}-${target.name}-${target.model.split("/").pop()}`, source: "/fh-model" });
-				ctx.ui.notify(`fusion-harness: ${saved.created ? "saved" : "updated"} model group "${saved.group.name}" — alt+m or /fh-groups to pick it again`, "info");
-			} catch (error) {
-				ctx.ui.notify(`fusion-harness: could not save model group: ${error instanceof Error ? error.message : String(error)}`, "error");
-			}
+	pi.registerCommand("fh-models", {
+		description: "Browse every model provider and model (GPT, Grok, Claude, Gemini, …), then put one in a slot.",
+		handler: async (_args, ctx) => {
+			noteHost(ctx);
+			const selectedModel = await browseAllModels(ctx, "All models");
+			if (!selectedModel) return;
+			const stack = modelStack();
+			const choices = slotChoices(stack);
+			const picked = await ctx.ui.select(`Put ${selectedModel} in which slot?`, choices);
+			if (!picked) return;
+			const selectedSlot = orderedSlots(stack)[choices.indexOf(picked)];
+			if (!selectedSlot) return;
+			await applySlotModel(ctx, stack, selectedSlot, selectedModel);
 		},
 	});
 
@@ -1494,6 +1547,7 @@ export default function (pi: ExtensionAPI) {
 	const collaborateHandler = registerCollaborateCommand(pi, deps); // /fh-collaborate
 	const lanesHandler = registerLanesCommand(pi, deps); // /fh-lanes
 	const autoValidateHandler = registerAutoValidateCommand(pi, deps); // /fh-auto-validate
+	registerSessionBuildCommand(pi, { collaborate: collaborateHandler }); // /fh-session-build
 	registerKnowledgeCommand(pi, deps); // /fh-knowledge
 	registerRepoStateCommand(pi, deps); // /fh-repo-state
 	const researchXHandler = registerXResearchCommand(pi);
