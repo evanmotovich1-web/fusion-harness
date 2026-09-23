@@ -2,7 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { execFileSync } from "node:child_process";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
-import { tmpRoot } from "./tmp-root";
+import { tmpRoot } from "./tmp-root.ts";
 
 export interface XResearchOptions {
 	query: string;

@@ -16,7 +16,7 @@ import { createHash } from "node:crypto";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { promisify } from "node:util";
-import { tmpRoot } from "./tmp-root";
+import { tmpRoot } from "./tmp-root.ts";
 
 const execFileAsync = promisify(execFile);
 
