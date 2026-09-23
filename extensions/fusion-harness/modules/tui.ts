@@ -75,7 +75,7 @@ export class TwoCol {
 	invalidate() {} // pi-tui Component contract — nothing cached to invalidate
 }
 
-/** Responsive 1-5 agent grid. If any column would be narrower than 34 cells, stack vertically. */
+/** Responsive agent grid, any number of agents. If any column would be narrower than 34 cells, stack vertically. */
 export class AgentGrid {
 	constructor(
 		private count: number,

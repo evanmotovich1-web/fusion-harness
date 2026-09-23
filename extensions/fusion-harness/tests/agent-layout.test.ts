@@ -4,7 +4,7 @@ import { computeAgentGridLayout } from "../modules/agent-layout.ts";
 describe("AgentGrid layout", () => {
   test("never allocates columns beyond widths 40-300", () => {
     for (let width = 40; width <= 300; width++) {
-      for (const count of [2, 3, 4, 5]) {
+      for (const count of [2, 3, 4, 5, 6, 8]) {
         const layout = computeAgentGridLayout(width, count, 3, 34);
         expect(layout.count).toBe(count);
         expect(layout.columnWidth).toBeGreaterThan(0);
@@ -24,5 +24,12 @@ describe("AgentGrid layout", () => {
   test("stacks three agents below the minimum-per-column threshold", () => {
     expect(computeAgentGridLayout(100, 3).stacked).toBe(true);
     expect(computeAgentGridLayout(108, 3).stacked).toBe(false);
+  });
+
+  test("never drops agents: six and eight models each get a column or a stacked block", () => {
+    expect(computeAgentGridLayout(300, 6).count).toBe(6);
+    expect(computeAgentGridLayout(300, 8).count).toBe(8);
+    expect(computeAgentGridLayout(250, 8).stacked).toBe(true);
+    expect(computeAgentGridLayout(240, 6).stacked).toBe(false);
   });
 });
