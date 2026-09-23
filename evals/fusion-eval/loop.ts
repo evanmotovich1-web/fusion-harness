@@ -20,7 +20,7 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import { emptyState, tick, type EvalRecord, type FixProposal, type LoopConfig, type LoopDeps, type LoopState } from "./loop-core.ts";
-import { piStateWriteRules, profileDir, real, secretReadDenies } from "./run.ts";
+import { homeReadRules, prepareAgentDir, profileDir, real, secretReadDenies } from "./run.ts";
 
 /**
  * Sandbox for the FIX run (models with edit tools, driven by the accepted harness). Writes
@@ -29,18 +29,24 @@ import { piStateWriteRules, profileDir, real, secretReadDenies } from "./run.ts"
  * shared .git (hooks, objects), the grader's Python/pytest, node_modules, the runner, or
  * the loop's results/state. Credentials and the keychain are denied.
  */
-export function fixSandboxProfile(fixDir: string, loopDir: string): string {
+export function fixSandboxProfile(fixDir: string, loopDir: string, readable: string[] = []): string {
 	const home = os.homedir();
 	const q = (p: string) => JSON.stringify(real(p));
 	const dir = real(fixDir);
+	// The worktree's git dir lives in the shared repo's .git (outside the home allow-list): readable, so
+	// fix agents can run git status/diff/log; never writable (hooks, config — Enemy pass 8).
+	const common = spawnSync("git", ["rev-parse", "--path-format=absolute", "--git-common-dir"], { cwd: fixDir, encoding: "utf8" });
+	const gitDirs = common.status === 0 && common.stdout.trim() ? [common.stdout.trim()] : [];
 	return [
 		"(version 1)",
 		"(allow default)",
 		"(deny file-write*)",
 		// The worktree's files — but NOT its .git pointer, and no git metadata at all (Enemy pass 8:
 		// a rewritten .git made the loop's later, unsandboxed git calls run attacker hooks/fsmonitor).
-		`(allow file-write* (subpath ${JSON.stringify(dir)}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") ${piStateWriteRules()} (subpath "/dev"))`,
+		// No ~/.pi/agent at all: pi runs on a throwaway agent dir in temp (prepareAgentDir).
+		`(allow file-write* (subpath ${JSON.stringify(dir)}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") (subpath "/dev"))`,
 		`(deny file-write* (literal ${JSON.stringify(path.join(dir, ".git"))}))`,
+		homeReadRules([fixDir, path.join(fixDir, "node_modules"), ...gitDirs, ...readable.flatMap((p) => [p, path.join(p, "node_modules")])]),
 		`(deny file-read* (subpath ${q(path.join(loopDir, "runner"))}) (subpath ${q(path.join(loopDir, "results"))}) (literal ${q(path.join(loopDir, "state.json"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()} (regex #"/evals/fusion-eval/tasks(/|$)"))`,
 		'(deny mach-lookup (global-name "com.apple.SecurityServer") (global-name "com.apple.securityd.xpc") (global-name "com.apple.security.agent"))',
 		"",
@@ -357,12 +363,13 @@ export function realDeps(cfg: FullConfig): LoopDeps {
 			// fixing itself, skipped its own final integration and only got halfway). It edits `dir`.
 			const fixerHarness = fixer ? worktree(fixer, `fixer-${Date.now()}`) : dir;
 			const profile = path.join(profileDir(), `${branch.replace(/\//g, "_")}.fix.sb`);
-			fs.writeFileSync(profile, fixSandboxProfile(dir, LOOP_DIR));
+			fs.writeFileSync(profile, fixSandboxProfile(dir, LOOP_DIR, [fixerHarness]));
+			const agentDir = prepareAgentDir(4 * 3600_000 + 10 * 60_000);
 			const piArgs = ["pi", "--no-extensions", "--no-session", "-e", path.join(fixerHarness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", groupFile(cfg.fixGroup), "-p", `/fh-collaborate ${prompt}`];
 			if (process.platform === "darwin" && !fs.existsSync("/usr/bin/sandbox-exec")) throw new Error("sandbox-exec is missing — refusing an unsandboxed fix run on macOS");
 			const [cmd, ...args] = process.platform === "darwin" ? ["/usr/bin/sandbox-exec", "-f", profile, ...piArgs] : piArgs;
 			// FH_IN_SANDBOX: tests that need their own sandbox skip inside this one (macOS forbids nesting); the gate runs them in full.
-			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1" }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true });
+			const result = await run(cmd!, args, { cwd: dir, env: { FH_IN_SANDBOX: "1", PI_CODING_AGENT_DIR: agentDir.dir }, timeoutMs: 4 * 3600_000, logFile: path.join(LOOP_DIR, `${branch.replace(/\//g, "_")}.fix.log`), killGroup: true }).finally(() => agentDir.cleanup());
 			if (fs.readFileSync(path.join(dir, ".git"), "utf8") !== dotGit) throw new Error("fix run rewrote the worktree's .git pointer — rejected");
 			// Checked against the base, not the working tree: commits the agent made itself count too.
 			const forbidden = protectedChanges(dir, base, gitDir);

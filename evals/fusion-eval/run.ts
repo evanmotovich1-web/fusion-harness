@@ -200,7 +200,33 @@ export function real(p: string): string {
 	return parent === p ? p : path.join(real(parent), path.basename(p));
 }
 
-/** Secret files neither sandbox needs (pi's own model token in auth.json is the one it must read). */
+/**
+ * READS under $HOME are deny-by-default (Enemy pass 10: every deny-list of secrets missed one —
+ * ~/.codex/auth.json, ~/.hermes, ~/.claude.json, shell history, the keychain files). Readable:
+ * the toolchain (pi, node, bun, uv + its Pythons), git's config, the model-group configs, pi's
+ * downloaded tools, and each `extra` path (its symlinks resolved — a worktree's node_modules link).
+ * Everything else under $HOME, including the real ~/.pi/agent, is unreadable.
+ */
+export function homeReadRules(extra: string[] = []): string {
+	const home = os.homedir();
+	const q = (p: string) => JSON.stringify(real(p));
+	const trees = [".local/bin", ".local/lib", ".local/share/uv", ".cache/uv", ".bun", ".hermes/node", ".config/git", ".pi/fusion-harness", ".pi/agent/bin"].map((p) => path.join(home, p));
+	// Model-stack configs are often symlinks (e.g. into ~/dotfiles): allow each link's own target, nothing beside it.
+	const linked: string[] = [];
+	for (const dir of [path.join(home, ".pi", "fusion-harness"), path.join(home, ".pi", "fusion-harness", "groups")]) {
+		for (const entry of fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTypes: true }) : []) if (entry.isSymbolicLink()) linked.push(real(path.join(dir, entry.name)));
+	}
+	return [
+		`(deny file-read* (subpath ${q(home)}))`,
+		`(allow file-read* (literal ${q(home)}) (literal ${q(path.join(home, ".gitconfig"))}) ${[...trees, ...extra].map((p) => `(subpath ${q(p)})`).join(" ")} ${linked.map((p) => `(literal ${JSON.stringify(p)})`).join(" ")})`,
+		// Walking to an allowed path needs stat() on its parents; no contents are readable.
+		"(allow file-read-metadata)",
+		// ssh-agent and other per-user launchd sockets: no signing with keys the sandbox cannot read.
+		'(deny network-outbound (remote unix-socket (path-regex #"^/private/tmp/com\\.apple\\.launchd\\.")))',
+	].join("\n");
+}
+
+/** Secret files neither sandbox needs — kept as a second line behind homeReadRules. */
 export function secretReadDenies(): string {
 	const home = os.homedir();
 	const q = (p: string) => JSON.stringify(real(path.join(home, p)));
@@ -211,22 +237,47 @@ export function secretReadDenies(): string {
 export function profileDir(): string {
 	const dir = path.join(os.homedir(), ".cache", "fh-eval-profiles");
 	fs.mkdirSync(dir, { recursive: true, mode: 0o700 });
+	fs.chmodSync(dir, 0o700); // mkdir's mode only applies on creation
 	return dir;
 }
 
+/** Environment for a sandboxed pi: nothing from the caller's shell (session tokens, SSH_AUTH_SOCK, API keys). */
+export function sandboxEnv(extra: Record<string, string> = {}): Record<string, string> {
+	const env: Record<string, string> = {};
+	for (const key of ["PATH", "HOME", "USER", "LOGNAME", "SHELL", "LANG", "LC_ALL", "TMPDIR", "TERM"]) if (process.env[key] !== undefined) env[key] = process.env[key]!;
+	return { ...env, ...extra };
+}
+
 /**
- * The only ~/.pi/agent paths a sandboxed pi may write: its auth token refresh, the model
- * cache, session files, and the trust-store LOCK (found by the real e2e: the fix run died on
- * EPERM mkdir trust.json.lock in a repo with a .pi/ folder). Never settings.json, extensions/, skills/, SYSTEM.md,
- * APPEND_SYSTEM.md or AGENTS.md — every later pi (including interactive sessions) loads those.
+ * A throwaway pi agent dir for ONE sandboxed run (Enemy pass 10). The sandbox never writes the
+ * real ~/.pi/agent: a writable models-store.json there let a harness point every LATER pi session
+ * at its own baseUrl (tokens + prompts + tool calls), and planted lock dirs hung every later pi.
+ * The copy holds the model catalog, the model defaults, pi's tool binaries (read-only link), and
+ * auth WITHOUT refresh tokens: the trusted parent first refreshes each OAuth token so it outlives
+ * the run, so the sandbox can neither rotate (and break) the real login nor keep a refresh token.
  */
-export function piStateWriteRules(): string {
-	const agent = real(path.join(os.homedir(), ".pi", "agent"));
-	const esc = agent.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-	// *.json.lock lock DIRECTORIES only (pi locks trust.json / settings.json while reading them) —
-	// never the JSON files themselves: trust.json decides whether later interactive sessions
-	// auto-load a project's own extensions, and settings.json can point pi at other code.
-	return `(subpath ${JSON.stringify(path.join(agent, "sessions"))}) (regex #"^${esc}/(auth|models-store|mcp-cache)\\.json") (regex #"^${esc}/(trust|settings|auth|models-store|mcp-cache)\\.json\\.lock($|/)")`;
+export function prepareAgentDir(minValidityMs: number): { dir: string; cleanup(): void } {
+	const agent = path.join(os.homedir(), ".pi", "agent");
+	const authFile = path.join(agent, "auth.json");
+	const minutes = `${Math.ceil(minValidityMs / 60_000)}m`;
+	for (const [provider, credential] of Object.entries<any>(readJson(authFile) ?? {})) {
+		if (credential?.type !== "oauth") continue;
+		// Trusted, unsandboxed: pi's own refresh path persists the rotated token in the real store.
+		const opts = { stdio: ["ignore", "ignore", "ignore"] as const, env: sandboxEnv(), timeout: 60_000 };
+		if (spawnSync("pi", ["auth", "print-bearer-token", "--provider", provider, "--min-expiry", minutes], opts).status !== 0) {
+			spawnSync("pi", ["auth", "print-bearer-token", "--provider", provider], opts); // lifetime shorter than the run: at least fresh
+		}
+	}
+	const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fh-pi-agent-"));
+	const auth = Object.fromEntries(Object.entries<any>(readJson(authFile) ?? {}).map(([provider, credential]) => [provider, credential?.type === "oauth" ? { ...credential, refresh: "" } : credential]));
+	fs.writeFileSync(path.join(dir, "auth.json"), JSON.stringify(auth, null, 2), { mode: 0o600 });
+	if (fs.existsSync(path.join(agent, "models-store.json"))) fs.copyFileSync(path.join(agent, "models-store.json"), path.join(dir, "models-store.json"));
+	// Model defaults only — never `packages` (code pi would load) or anything else.
+	const settings = readJson(path.join(agent, "settings.json")) ?? {};
+	const keep = Object.fromEntries(["defaultProvider", "defaultModel", "defaultThinkingLevel", "compaction", "lastChangelogVersion"].filter((k) => k in settings).map((k) => [k, settings[k]]));
+	fs.writeFileSync(path.join(dir, "settings.json"), JSON.stringify(keep, null, 2));
+	if (fs.existsSync(path.join(agent, "bin"))) fs.symlinkSync(path.join(agent, "bin"), path.join(dir, "bin"));
+	return { dir, cleanup: () => fs.rmSync(dir, { recursive: true, force: true }) };
 }
 
 export function harnessSandboxProfile(scratch: string, harness: string): string {
@@ -238,7 +289,9 @@ export function harnessSandboxProfile(scratch: string, harness: string): string 
 		"(version 1)",
 		"(allow default)",
 		"(deny file-write*)",
-		`(allow file-write* (subpath ${own}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") ${piStateWriteRules()} (subpath "/dev"))`,
+		// No ~/.pi/agent at all: pi runs on a throwaway agent dir in temp (prepareAgentDir).
+		`(allow file-write* (subpath ${own}) (regex #"^/private/tmp/fusion-harness-") (subpath "/private/var/folders") (subpath "/dev"))`,
+		homeReadRules([path.join(harness, "node_modules")]),
 		`(deny file-read* (subpath ${q(loopDir)}) (subpath ${q(RESULTS_DIR)}) (regex #"^/private/tmp/fh-eval-") (subpath ${q(path.join(home, ".cache", "fh-eval-grading"))}) (subpath ${q(path.join(home, ".cache", "fh-eval-profiles"))}) ${secretReadDenies()})`,
 		`(allow file-read* (subpath ${q(harness)}) (subpath ${own}))`,
 		'(deny file-read* (regex #"/evals/fusion-eval/tasks(/|$)") (regex #"/\\.git/objects(/|$)"))',
@@ -270,13 +323,15 @@ export async function runOne(opts: { harness: string; harnessCommit: string; lab
 	const exitCode = await new Promise<number | null>((resolve) => {
 		const profile = path.join(profileDir(), `harness-${randomUUID()}.sb`);
 		fs.writeFileSync(profile, harnessSandboxProfile(scratch, harness));
+		const agentDir = prepareAgentDir(RUN_TIMEOUT_MS + 10 * 60_000);
 		const [cmd, ...args] = sandboxCommand(profile, ["pi", "--no-extensions", "--no-session", "-e", path.join(harness, "extensions/fusion-harness/fusion-harness.ts"), "--fh-config", group.file, "-p", `/fh-collaborate ${prompt}`]);
 		// Its own process group, killed when it ends: nothing the harness started outlives the run.
-		const child = spawn(cmd!, args, { cwd: scratch, detached: true, stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
+		const child = spawn(cmd!, args, { cwd: scratch, detached: true, env: sandboxEnv({ PI_CODING_AGENT_DIR: agentDir.dir }), stdio: ["ignore", fs.openSync(logPath, "w"), fs.openSync(logPath, "a")] });
 		const killGroup = () => { try { process.kill(-child.pid!, "SIGKILL"); } catch { /* already gone */ } };
 		const timer = setTimeout(killGroup, RUN_TIMEOUT_MS);
-		child.on("exit", (code) => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); resolve(code); });
-		child.on("error", () => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); resolve(-1); });
+		const done = (code: number | null) => { clearTimeout(timer); killGroup(); fs.rmSync(profile, { force: true }); agentDir.cleanup(); resolve(code); };
+		child.on("exit", (code) => done(code));
+		child.on("error", () => done(-1));
 	});
 	const wallMs = Date.now() - startedAt;
 	const artifacts = findArtifacts(token, startedAt);
