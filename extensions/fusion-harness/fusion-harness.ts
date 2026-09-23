@@ -74,6 +74,7 @@ import {
 	type ModelStack,
 	type Thinking,
 } from "./modules/model-stack.ts";
+import { deleteGroup, groupLabel, saveGroup, setGroupReason, sortedGroups, stackSignature } from "./modules/model-groups.ts";
 import {
 	ANSWER_MAX_BYTES,
 	BOOT_TYPE,
@@ -214,6 +215,8 @@ export default function (pi: ExtensionAPI) {
 			stackReadyError = error instanceof Error ? error.message : String(error);
 			throw error;
 		}
+		// Every launched combo lands in the saved model groups (deduped by combo).
+		try { saveGroup(configuredStack, { source: configuredStack.configPath }); } catch { /* never block startup */ }
 	};
 	if (rawCliFlag("fh-config")) {
 		try {
@@ -1294,6 +1297,14 @@ export default function (pi: ExtensionAPI) {
 			configuredStack = next;
 			renderFooterWidget();
 			ctx.ui.notify(`fusion-harness: ${target.name} → ${target.model} (${target.thinking}); session-only, YAML unchanged`, "info");
+			// Every combo you make is saved to your model groups, with your reason.
+			const why = await ctx.ui.input("Why this model combo? (saved to your model groups — Enter to skip)", "e.g. cheap overnight research, GLM out of quota");
+			try {
+				const saved = saveGroup(next, { reason: why || `${target.name} → ${target.model} (from ${stack.codename})`, name: `${stack.codename}-${target.name}-${target.model.split("/").pop()}`, source: "/fh-model" });
+				ctx.ui.notify(`fusion-harness: ${saved.created ? "saved" : "updated"} model group "${saved.group.name}" — alt+m or /fh-groups to pick it again`, "info");
+			} catch (error) {
+				ctx.ui.notify(`fusion-harness: could not save model group: ${error instanceof Error ? error.message : String(error)}`, "error");
+			}
 		},
 	});
 
@@ -1510,8 +1521,48 @@ export default function (pi: ExtensionAPI) {
 		stackReadyError = undefined;
 		hostModel = next.primaryBuilder.model;
 		renderFooterWidget();
+		try { saveGroup(next, { source: stackPath }); } catch { /* the switch already happened */ }
 		ctx.ui.notify(`fusion-harness: workflow stack → ${next.codename} (session-only)`, "info");
 	};
+
+	// ── Saved model groups: /fh-groups and alt+m pick any combo you have run ──
+	const pickModelGroup = async (ctx: any): Promise<void> => {
+		const groups = sortedGroups();
+		if (!groups.length) {
+			ctx.ui.notify("fusion-harness: no saved model groups yet — every stack you launch or change with /fh-model is saved automatically", "info");
+			return;
+		}
+		const current = configuredStack ? stackSignature(configuredStack) : undefined;
+		const labels = groups.map((group) => groupLabel(group, current));
+		const picked = await ctx.ui.select("Saved model groups (● = current) — pick one", labels);
+		if (!picked) return;
+		const group = groups[labels.indexOf(picked)];
+		if (!group) return;
+		const action = await ctx.ui.select(`${group.name}\n${group.reason}\n${group.models.join("\n")}`, ["Use this group", "Edit reason", "Delete"]);
+		if (action === "Use this group") {
+			try {
+				await applyWorkflowStack(group.file, ctx);
+			} catch (error) {
+				ctx.ui.notify(`fusion-harness: ${error instanceof Error ? error.message : String(error)}`, "error");
+			}
+		} else if (action === "Edit reason") {
+			const reason = await ctx.ui.input(`Reason for ${group.name}`, group.reason);
+			if (reason && setGroupReason(group.name, reason)) ctx.ui.notify(`fusion-harness: reason saved for ${group.name}`, "info");
+		} else if (action === "Delete") {
+			if (deleteGroup(group.name)) ctx.ui.notify(`fusion-harness: deleted model group ${group.name}`, "info");
+		}
+	};
+	pi.registerCommand("fh-groups", {
+		description: "Pick, re-reason, or delete a saved model group (every combo you run is saved). Shortcut: alt+m.",
+		handler: async (_args, ctx) => {
+			noteHost(ctx);
+			await pickModelGroup(ctx);
+		},
+	});
+	pi.registerShortcut("alt+m" as any, {
+		description: "fusion-harness: pick a saved model group",
+		handler: async (ctx) => pickModelGroup(ctx),
+	});
 
 	registerWorkflowCommands(pi, {
 		handlers: {
