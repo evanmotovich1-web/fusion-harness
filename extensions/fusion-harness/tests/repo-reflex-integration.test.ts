@@ -28,6 +28,7 @@ let malformedTaskId: string | null = null;
 let independentFixture = false;
 let rejectionsBeforeFix = 0;
 let quotaOnceTaskId: string | null = null;
+let bigStackSlots = 0;
 let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
@@ -44,7 +45,11 @@ mock.module("../modules/child-runner.ts", () => ({
 			quotaOnceTaskId = null;
 			opts.onQuotaWait?.(0, "429: rate limited, retry after 0 seconds");
 		}
-		if (independentFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
+		if (bigStackSlots && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			// One task per slot: writes chained, reads fanned out behind the first write.
+			const names = ["fable", "sol", "terra", ...Array.from({ length: bigStackSlots - 3 }, (_, i) => `extra${i + 1}`)];
+			run.text = JSON.stringify({ tasks: names.map((name, i) => ({ id: `${i + 1}.a`, assignee: name, description: `work for ${name}`, depends_on: i === 0 ? [] : ["1.a"], mode: i % 2 === 0 ? "write" : "read" })) });
+		} else if (independentFixture && opts.prompt.includes("Merge them into ONE delegation plan")) {
 			run.text = JSON.stringify({ tasks: [
 				{ id: "1.a", assignee: "sol", description: "blocked branch", depends_on: [], mode: "read" },
 				{ id: "1.b", assignee: "terra", description: "independent root", depends_on: [], mode: "read" },
@@ -121,6 +126,7 @@ afterEach(() => {
 	independentFixture = false;
 	rejectionsBeforeFix = 0;
 	quotaOnceTaskId = null;
+	bigStackSlots = 0;
 	onFinalCoordination = null;
 	while (files.length) rmSync(files.pop()!, { force: true });
 	while (dirs.length) rmSync(dirs.pop()!, { recursive: true, force: true });
@@ -161,7 +167,8 @@ function stackFile(): string {
 	const dir = mkdtempSync(join(tmpdir(), "fh-repo-reflex-stack-"));
 	dirs.push(dir);
 	const file = join(dir, "stack.yaml");
-	writeFileSync(file, ["- name: fable", "  model: anthropic/claude-fable-5", "  architect: true", "- name: sol", "  model: openai/gpt-5.6-sol", "  primary: true", "- name: terra", "  model: openai/gpt-5.6-terra", ""].join("\n"));
+	const extras = Array.from({ length: Math.max(0, bigStackSlots - 3) }, (_, i) => [`- name: extra${i + 1}`, `  model: vendor/model-${i + 1}`]).flat();
+	writeFileSync(file, ["- name: fable", "  model: anthropic/claude-fable-5", "  architect: true", "- name: sol", "  model: openai/gpt-5.6-sol", "  primary: true", "- name: terra", "  model: openai/gpt-5.6-terra", ...extras, ""].join("\n"));
 	return file;
 }
 
@@ -300,6 +307,20 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.filter((call) => call.prompt.includes("executing delegated task 1.b"))).toHaveLength(1);
 		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
 	});
+	for (const size of [6, 8]) {
+		test(`collaborate runs end to end with ${size} models — every model plans and works`, async () => {
+			bigStackSlots = size;
+			const fh = harness(repo());
+			await fh.run("big council build");
+			const slotsCalled = new Set(calls.filter((call) => call.slot).map((call) => call.slot));
+			expect(slotsCalled.size).toBe(size);
+			for (let i = 1; i <= size; i++) expect(calls.some((call) => call.prompt.includes(`executing delegated task ${i}.a`))).toBe(true);
+			const summary = JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8"));
+			expect(summary.ok).toBe(true);
+			expect(summary.maxConcurrentWriteEnabledChildren).toBe(1);
+			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(true);
+		}, 30_000);
+	}
 	test("acceptance rejection routes to owner then independent reverify with no approval prompt", async () => {
 		repairFixture = true;
 		const fh = harness(repo());
