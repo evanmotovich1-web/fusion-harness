@@ -515,15 +515,26 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 					} finally {
 						if (write) activeWriters--;
 					}
-					const childOk = runOk(run) && !stopper.stopped();
-					const rawReport = childOk ? run.text : `FAILED: ${runError(run)}`;
+					let childOk = runOk(run) && !stopper.stopped();
+					let rawReport = childOk ? run.text : `FAILED: ${runError(run)}`;
 					let outcome: CollaborationTaskOutcome | undefined;
 					if (childOk) {
 						try {
-							const parsedOutcome = parseCollaborationTaskOutcome(run.text);
-							outcome = parsedOutcome.outcome;
+							outcome = parseCollaborationTaskOutcome(run.text).outcome;
 						} catch (error) {
-							executionFailure ??= `task ${task.id} (${slot.id}) failed closed: ${error instanceof Error ? error.message : String(error)}`;
+							// A read-only task can safely be rerun once. Never invent a metadata
+							// receipt from prose, and never replay a write with uncertain effects.
+							const reason = error instanceof Error ? error.message : String(error);
+							if (!write && !stopper.stopped()) {
+								await h.save(reportsDir, `${task.id}-attempt-${attempt}-invalid.md`, rawReport);
+								await runChild({ run, prompt: withHarnessRepoState(`${executePrompt}\n\nREAD-ONLY REPORT RETRY: your previous response failed the outcome contract (${reason}). Recheck your findings and return a complete report ending in exactly one FH_TASK_OUTCOME metadata line. Do not claim unverified work or copy a sample marker into the body.`, repoCardMarkdown), systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+							childOk = runOk(run) && !stopper.stopped();
+							rawReport = childOk ? run.text : `FAILED: ${runError(run)}`;
+							if (childOk) {
+								try { outcome = parseCollaborationTaskOutcome(run.text).outcome; }
+								catch (retryError) { executionFailure ??= `task ${task.id} (${slot.id}) failed closed after report retry: ${retryError instanceof Error ? retryError.message : String(retryError)}`; }
+							} else executionFailure ??= `task ${task.id} (${slot.id}) failed during report retry: ${runError(run)}`;
+							} else executionFailure ??= `task ${task.id} (${slot.id}) failed closed: ${reason}`;
 						}
 					} else {
 						executionFailure ??= `task ${task.id} (${slot.id}) failed: ${runError(run)}`;
@@ -631,6 +642,10 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 					await h.save(collabDir, "final.md", digest);
 					h.panel({ kind: "collab", command: "fh-collaborate", ok: false, agent: toStat(architectRun), artifactsDir }, digest);
 					await h.save(artifactsDir, "summary.json", JSON.stringify({ command: "fh-collaborate", ok: false, plan, taskStates, taskOutcomes: Object.fromEntries(taskOutcomes), executionFailure, taskExecutions, maxConcurrentWriteEnabledChildren, finalMode: "read", publishTo, agents: runs.map(toStat) }, null, 2));
+					// The interactive Pi host may repair the blocked work itself. This is a
+					// new, scoped turn, NOT a conversion of failed child prose into acceptance.
+					// Never give the blocked child write tools or publish from this branch.
+					pi.sendMessage({ customType: "fh-host-recovery", display: true, content: `Pi host recovery is authorized for the original request, within the existing working tree. Collaboration remains BLOCKED; no child report may be treated as accepted unless its evidence and outcome are verified. Read ${planPath}, ${reportsDir}, and ${path.join(collabDir, "final.md")}; inspect current files before editing. You may complete missing reversible research, writing, audits and final integration yourself, preserving unrelated changes. Do not bypass a real clinical, data, publication, or human approval gate. Do not claim the collaboration succeeded; report separately what you verified and completed as host. No commit, push, deploy or outreach.`, details: { artifactsDir, blocked: true } }, { deliverAs: "followUp", triggerTurn: true });
 					return;
 				}
 

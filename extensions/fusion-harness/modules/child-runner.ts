@@ -8,26 +8,14 @@
  */
 
 import { spawn } from "node:child_process";
-import { randomUUID } from "node:crypto";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { performance } from "node:perf_hooks";
-import { fileURLToPath } from "node:url";
 import { persistFailureStderr, promptArgs } from "./child-process-contract.ts";
-import { CHILD_GUARD_ACK_ENV, CHILD_GUARD_VERSION } from "./child-repo-guard.ts";
 import { retryOnQuota } from "./quota-wait.ts";
 import { briefArg, runError, runOk, type AgentRun } from "./runtime.ts";
 
 const KILL_GRACE_MS = 5_000; // SIGTERM → SIGKILL escalation window
-const MODULE_DIR: string =
-	typeof __dirname !== "undefined" && __dirname
-		? __dirname
-		: path.dirname(fileURLToPath(import.meta.url));
-
-/** Absolute path of the child git-action guard, loaded with `pi -e` after `--no-extensions`. */
-export function childRepoGuardPath(): string {
-	return path.join(MODULE_DIR, "child-repo-guard.ts");
-}
 
 /** Locate the running pi binary so we can re-invoke it as a child. */
 export function piInvocation(args: string[]): { command: string; args: string[] } {
@@ -63,8 +51,6 @@ export type RunChildOptions = {
 	cwd: string;
 	timeoutMs: number;
 	signal?: AbortSignal; // escape key — kill this child and settle it as "aborted"
-	/** Load the child-repo-guard via `-e` after `--no-extensions`. Default true. */
-	loadRepoGuard?: boolean;
 	/** Called each time a provider quota (429) makes the child wait before rerunning. */
 	onQuotaWait?: (waitMs: number, error: string) => void;
 };
@@ -84,12 +70,6 @@ export function runChild(opts: RunChildOptions): Promise<AgentRun> {
 function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 	const run = opts.run;
 	run.thinking = opts.thinking;
-	const loadRepoGuard = opts.loadRepoGuard !== false;
-	const guardPath = childRepoGuardPath();
-	const guardAckPath = loadRepoGuard ? path.join(opts.sessionDir, `fh-guard-ack-${randomUUID()}.json`) : undefined;
-	if (guardAckPath) {
-		try { fs.unlinkSync(guardAckPath); } catch { /* must not reuse a prior spawn's ack */ }
-	}
 	// Clean-room spawn: children never auto-discover skills, extensions (recursion guard),
 	// or context files. Only stack-declared skills are added explicitly below.
 	const args: string[] = [
@@ -102,7 +82,6 @@ function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 		"--no-extensions",
 		"--no-context-files",
 	];
-	if (loadRepoGuard) args.push("-e", guardPath);
 	// --skill is explicitly additive even with --no-skills: only stack-declared,
 	// YAML-resolved skills enter this clean-room child.
 	for (const skill of opts.run.slot?.skills ?? []) args.push("--skill", skill);
@@ -253,21 +232,19 @@ function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 		};
 
 		const invocation = piInvocation(args);
-		if (guardAckPath) fs.mkdirSync(path.dirname(guardAckPath), { recursive: true });
 		const proc = spawn(invocation.command, invocation.args, {
 			cwd: opts.cwd,
 			shell: false,
 			detached: process.platform !== "win32", // own process group so cancellation reaches tool/bash descendants
 			stdio: ["ignore", "pipe", "pipe"],
 			// Children still make their real model API calls — this only skips startup chores.
-			// GIT_CONFIG_*=/dev/null hides config aliases the child-repo-guard cannot see.
+			// Ignore user Git aliases/config for deterministic child commands; this does not restrict Git verbs.
 			env: {
 				...process.env,
 				PI_OFFLINE: "1",
 				PI_SKIP_VERSION_CHECK: "1",
 				GIT_CONFIG_GLOBAL: "/dev/null",
 				GIT_CONFIG_SYSTEM: "/dev/null",
-				...(guardAckPath ? { [CHILD_GUARD_ACK_ENV]: guardAckPath } : {}),
 			},
 		});
 
@@ -313,20 +290,6 @@ function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 			closed = true;
 			if (buffer.trim()) processLine(buffer); // flush a final unterminated line
 			run.exitCode = aborted ? 130 : timedOut ? 124 : (code ?? 0);
-			if (!aborted && !timedOut && guardAckPath) {
-				const failedLoad = /Failed to load extension/i.test(run.stderr);
-				let ackOk = false;
-				try {
-					const ack = JSON.parse(fs.readFileSync(guardAckPath, "utf8"));
-					ackOk = ack?.guard === "child-repo-guard" && ack?.version === CHILD_GUARD_VERSION && Number(ack?.pid) === proc.pid;
-				} catch {
-					ackOk = false;
-				}
-				if (failedLoad || !ackOk) {
-					run.exitCode = run.exitCode || 78;
-					run.errorMessage = "child-repo-guard did not load; treating child as unguarded";
-				}
-			}
 			cleanup();
 			settle();
 			persistFailureStderr(run, opts.sessionDir, started);

@@ -16,11 +16,7 @@ There is one shared working directory. Never restart from scratch, erase another
 Never run `git push`, `git fetch`, `git pull`, `git merge`, `git rebase`, `git reset --hard`, `git clean`, force ref updates, or stash. Publication is parent-owned and requires an exact-SHA harness receipt. A HARNESS REPO STATE block is measured fact, not a claim you can replace.
 
 Output a concrete report: changes/evidence, paths, validation, and exact handoff.
-End the report with exactly one metadata line using this format:
-FH_TASK_OUTCOME: {"schema_version":1,"status":"completed","summary":"short factual result"}
-Allowed status values are "completed", "no_op", "blocked", and "needs_decision".
-For "needs_decision", also include exactly one decision object: {"question":"...","options":["...","..."]}.
-The final metadata line is mandatory. Prose without valid metadata fails closed.
+Follow the outcome contract appended after this task prompt: finish with exactly one FH_TASK_OUTCOME line. Do not include a second example line in the report. A failed outcome is not host approval; the Pi host can independently recover only within the original scope.
 
 # ORIGINAL REQUEST
 {{PROMPT}}
