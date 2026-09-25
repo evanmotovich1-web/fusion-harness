@@ -38,3 +38,67 @@ fusion *ARGS:
 # 5-slot fusion stack: fusion trio + fire=Kimi K3 + hawk=DeepSeek V4 Flash (both Fireworks)
 fusion5 *ARGS:
     just fh-stack .pi/fusion-harness/model-stack-fusion-5.yaml {{ARGS}}
+
+# self-compact agent brief shared by Claude Code, Codex CLI, and Pi.
+SELF_COMPACT_BRIEF := "self-compact/SELF_COMPACT_AGENT_BRIEF.md"
+
+# Print the shared self-compact contract.
+self-compact:
+    @cat {{SELF_COMPACT_BRIEF}}
+
+# Print the Claude Code version of the self-compact brief.
+self-compact-claude:
+    @printf 'Target agent: Claude Code\n\n'
+    @cat {{SELF_COMPACT_BRIEF}}
+
+# Print the Codex CLI version of the self-compact brief.
+self-compact-codex:
+    @printf 'Target agent: Codex CLI\n\n'
+    @cat {{SELF_COMPACT_BRIEF}}
+
+# Print the Pi version of the self-compact brief.
+self-compact-pi:
+    @printf 'Target agent: Pi\n\n'
+    @cat {{SELF_COMPACT_BRIEF}}
+
+# Copy an agent-targeted self-compact prompt to the macOS clipboard.
+self-compact-copy AGENT="pi":
+    @printf 'Target agent: {{AGENT}}\n\n' > /tmp/self-compact-agent-brief.md
+    @cat {{SELF_COMPACT_BRIEF}} >> /tmp/self-compact-agent-brief.md
+    @pbcopy < /tmp/self-compact-agent-brief.md
+    @printf 'Copied self-compact brief for %s to clipboard.\n' '{{AGENT}}'
+
+# Raw compound prompt written by Evan for self-compact implementation runs.
+compound := "self-compact/prompt.compound.md"
+
+# Start Claude Code with the compound prompt appended to Claude's system prompt.
+compound-claude:
+    claude --append-system-prompt "$(cat {{compound}})"
+
+# Start Codex CLI with the compound prompt as the initial prompt. Codex has no system-prompt flag in this CLI.
+compound-codex:
+    codex "$(cat {{compound}})"
+
+# Start Pi with the compound prompt appended to Pi's system prompt.
+compound-pi:
+    pi --append-system-prompt "$(cat {{compound}})"
+
+# Start Hermes with the compound prompt as the first interactive turn. Hermes has no system-prompt flag here.
+compound-hermes:
+    hermes chat --query-file {{compound}}
+
+# Start the default global fusion stack with the compound prompt appended to Pi's system prompt.
+compound-fusion:
+    fusion pi --append-system-prompt "$(cat {{compound}})"
+
+# Alias for the default global fusion stack with the compound prompt.
+compound-fusion-pi:
+    fusion pi --append-system-prompt "$(cat {{compound}})"
+
+# Start the local fusion stack with the compound prompt.
+compound-fusion-local:
+    fusion local --append-system-prompt "$(cat {{compound}})"
+
+# Start the repo five-slot fusion stack with the compound prompt.
+compound-fusion5:
+    fusion 5 --append-system-prompt "$(cat {{compound}})"
