@@ -1,7 +1,7 @@
 /**
  * Drives /fh-collaborate repository reflexes with the child runner mocked.
  * Zero paid calls. Asserts hashed cards, publication short-circuits, prompt injection,
- * and that the child-runner source loads the git guard after --no-extensions.
+ * and that the child-runner retains clean-room flags without a guard load or ack.
  */
 import { afterEach, describe, expect, mock, spyOn, test } from "bun:test";
 import { execFileSync } from "node:child_process";
@@ -26,6 +26,7 @@ let repairFixture = false;
 let repairFixed = false;
 let repairBehavior: "success" | "rejected" | "uncertain" | "decision" | "permission" = "success";
 let malformedTaskId: string | null = null;
+let malformedOnce = false;
 let independentFixture = false;
 let rejectionsBeforeFix = 0;
 let quotaOnceTaskId: string | null = null;
@@ -110,6 +111,7 @@ mock.module("../modules/child-runner.ts", () => ({
 		} else if (opts.prompt.includes("FH_TASK_OUTCOME") || opts.prompt.includes("executing delegated task")) {
 			const blocked = blockTaskId && opts.prompt.includes(`task ${blockTaskId}`);
 			const malformed = malformedTaskId && opts.prompt.includes(`task ${malformedTaskId}`);
+			if (malformed && malformedOnce) malformedTaskId = null;
 			run.text = malformed
 				? "nonempty success prose without outcome metadata"
 				: blocked
@@ -127,7 +129,6 @@ mock.module("../modules/child-runner.ts", () => ({
 		return run;
 	},
 	runProc: async () => ({ code: 0, output: "" }),
-	childRepoGuardPath: () => join(TEST_DIR, "../modules/child-repo-guard.ts"),
 	piInvocation: (args: string[]) => ({ command: "pi", args }),
 }));
 mock.module("@earendil-works/pi-tui", () => ({ truncateToWidth: (s: string) => s }));
@@ -146,6 +147,7 @@ afterEach(() => {
 	repairFixed = false;
 	repairBehavior = "success";
 	malformedTaskId = null;
+	malformedOnce = false;
 	independentFixture = false;
 	rejectionsBeforeFix = 0;
 	quotaOnceTaskId = null;
@@ -200,7 +202,8 @@ function harness(cwd: string) {
 	const stack = loadModelStack(stackFile());
 	const panels: Array<{ details: FhDetails; content: string }> = [];
 	let handler: ((args: string, ctx: any) => Promise<void>) | undefined;
-	const pi = { registerCommand: (_name: string, spec: any) => (handler = spec.handler), sendMessage: () => {} } as any;
+	const hostMessages: Array<{ content: string; options: any }> = [];
+	const pi = { registerCommand: (_name: string, spec: any) => (handler = spec.handler), sendMessage: (message: any, options: any) => hostMessages.push({ content: message.content, options }) } as any;
 	const artifacts = mkdtempSync(join(tmpdir(), "fh-repo-reflex-art-"));
 	dirs.push(artifacts);
 	const h: HarnessDeps = {
@@ -245,7 +248,7 @@ function harness(cwd: string) {
 	const internal = registerCollaborateCommand(pi, h);
 	const notifications: string[] = [];
 	const ctx = { cwd, ui: { notify: (text: string) => notifications.push(text), setStatus: () => {}, setWidget: () => {} } };
-	return { run: (args: string) => handler!(args, ctx), internal, panels, artifacts, ctx, notifications };
+	return { run: (args: string) => handler!(args, ctx), internal, panels, artifacts, ctx, notifications, hostMessages };
 }
 
 describe("parseCollaborateArgs", () => {
@@ -624,6 +627,9 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.some((call) => call.prompt.includes("READ-ONLY BLOCKED DIGEST") && call.tools === "read,grep,find,ls")).toBe(true);
 		expect(readFileSync(join(fh.artifacts, "collaborate/final.md"), "utf8")).toContain("1.a: blocked");
 		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
+		expect(fh.hostMessages).toHaveLength(1);
+		expect(fh.hostMessages[0]!.content).toContain("Pi host recovery is authorized");
+		expect(fh.hostMessages[0]!.options).toMatchObject({ deliverAs: "followUp", triggerTurn: true });
 	});
 
 	test("malformed task metadata fails closed before final write integration", async () => {
@@ -633,6 +639,20 @@ describe("/fh-collaborate repository reflexes", () => {
 		await fh.run("reject a malformed outcome");
 		expect(calls.some((call) => call.tools === "read,grep,find,ls,bash,edit,write")).toBe(false);
 		expect(fh.panels.some((panel) => panel.content.includes("failed closed") && panel.content.includes("exactly one FH_TASK_OUTCOME"))).toBe(true);
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 1.a"))).toHaveLength(2);
+		expect(existsSync(join(fh.artifacts, "collaborate/reports/1.a-attempt-1-invalid.md"))).toBe(true);
+	});
+
+	test("read-only malformed report gets one bounded retry and may unblock the graph", async () => {
+		const cwd = repo();
+		malformedTaskId = "1.a";
+		malformedOnce = true;
+		const fh = harness(cwd);
+		await fh.run("repair a missing outcome line");
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 1.a"))).toHaveLength(2);
+		expect(calls.some((call) => call.tools === "read,grep,find,ls,bash,edit,write")).toBe(true);
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
+		expect(fh.hostMessages).toHaveLength(0);
 	});
 
 	test("non-publish collab injects the measured repo card before proposals", async () => {
@@ -654,16 +674,18 @@ describe("/fh-collaborate repository reflexes", () => {
 	});
 });
 
-describe("child-runner guard wiring", () => {
-	test("loads the guard with -e after --no-extensions and sets GIT_CONFIG_* plus FH_GUARD_ACK", () => {
+describe("child-runner clean-room wiring", () => {
+	test("retains clean-room flags and Git config isolation without a guard load or ack", () => {
 		const source = readFileSync(join(TEST_DIR, "../modules/child-runner.ts"), "utf8");
-		expect(source).toContain('args.push("-e", guardPath)');
+		expect(source).toContain("--no-skills");
 		expect(source).toContain("--no-extensions");
-		expect(source).toContain("CHILD_GUARD_ACK_ENV");
-		expect(source).toContain("CHILD_GUARD_VERSION");
-		expect(source).toContain("fh-guard-ack-");
+		expect(source).toContain("--no-context-files");
+		expect(source).toContain('args.push("--tools", opts.tools)');
 		expect(source).toContain('GIT_CONFIG_GLOBAL: "/dev/null"');
-		expect(source).toContain("treating child as unguarded");
-		expect(source).not.toContain("import.meta.dir");
+		expect(source).toContain('GIT_CONFIG_SYSTEM: "/dev/null"');
+		expect(source).not.toContain('args.push("-e"');
+		expect(source).not.toContain("FH_GUARD_ACK");
+		expect(source).not.toContain("failedLoad");
+		expect(source).not.toContain("treating child as unguarded");
 	});
 });

@@ -69,6 +69,7 @@ In addition to clearly communicating. It's important that we clearly communicate
 - Do not widen work into cleanup, refactoring, documentation, or any adjacent features.
 - Do not speculate on abstractions for future requirements.
 - Do not claim completion without evidence.
+- In fusion-harness collaborations, the interactive Pi host may perform the final scoped write or recover a blocked graph after checking actual artifacts. Child models contribute evidence and bounded edits; their reports cannot grant approval or publication rights. An invalid child outcome remains unaccepted until verified or independently redone. Clinical deployment, data access, commit, push, and release remain separate gates.
 - Never add a co-author to a commit message.
 - For completed work, concisely restate it but do not overload with response detail.
 
