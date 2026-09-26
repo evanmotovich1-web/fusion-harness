@@ -13,10 +13,28 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import type { CollaborationTask } from "./collaboration-graph.ts";
 import type { KnowledgePacket } from "./knowledge-base.ts";
+import { buildBrief } from "./knowledge-brief.ts";
+import { DEFAULT_PACKET_BYTES } from "./knowledge-config.ts";
 import { orderedSlots, type ModelSlot, type ModelStack } from "./model-stack.ts";
 import { runOk, runError, shortModel, truncateChars, type AgentRun } from "./runtime.ts";
 
 export const HANDOFF_MAX = 60_000; // chars of one agent's answer injected into another's prompt
+
+/**
+ * Prepend the distilled brief ahead of the query packet.
+ * Empty promptBlock (disabled, guard error, or a caller that cleared it) is unchanged.
+ * Hash is untouched so summaries keep knowledgeHash.
+ */
+export function withDistilledBrief(packet: KnowledgePacket): KnowledgePacket {
+	if (!packet.promptBlock) return packet;
+	try {
+		const brief = buildBrief(packet, { maxBytes: DEFAULT_PACKET_BYTES });
+		if (!brief.briefMarkdown) return packet;
+		return { ...packet, promptBlock: `${brief.briefMarkdown}\n\n${packet.promptBlock}` };
+	} catch {
+		return packet;
+	}
+}
 
 /** Prepend the immutable retrieved-evidence packet. ACK-only turns must not call this. */
 export function withKnowledge(prompt: string, packet: KnowledgePacket, opts?: { writeCapable?: boolean }): string {

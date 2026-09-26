@@ -8,12 +8,15 @@
 import * as path from "node:path";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { formatKnowledgeStatus, retrieveKnowledge, refreshKnowledgeCache } from "./knowledge-base.ts";
+import { buildBrief } from "./knowledge-brief.ts";
+import { DEFAULT_PACKET_BYTES } from "./knowledge-config.ts";
+import { safeKnowledge } from "./knowledge-guard.ts";
 import { acquireWriterLease } from "./writer-lease.ts";
 import type { HarnessDeps } from "./runtime.ts";
 
 export function registerKnowledgeCommand(pi: ExtensionAPI, h: HarnessDeps): void {
 	pi.registerCommand("fh-knowledge", {
-		description: "Inspect harness knowledge: status, search <query>, refresh, capture on|off. Read-only except capture.",
+		description: "Inspect harness knowledge: status, search <query>, brief <query>, refresh, capture on|off. Read-only except capture.",
 		handler: async (raw, ctx) => {
 			h.noteHost(ctx);
 			const input = (raw ?? "").trim();
@@ -55,6 +58,24 @@ export function registerKnowledgeCommand(pi: ExtensionAPI, h: HarnessDeps): void
 				return;
 			}
 
+			if (action === "brief") {
+				const query = rest.join(" ").trim().replace(/^["']|["']$/g, "");
+				if (!query) {
+					ctx.ui.notify("Usage: /fh-knowledge brief <query>", "warning");
+					return;
+				}
+				const packet = await safeKnowledge(() => retrieveKnowledge({ query, cwd: ctx.cwd, config }), { query });
+				const brief = buildBrief(packet, { maxBytes: DEFAULT_PACKET_BYTES, query });
+				ctx.ui.notify(
+					[
+						`knowledge brief  status=${packet.status}  hash=${packet.hash.slice(0, 12)}  brief=${brief.briefHash.slice(0, 12)}  bytes=${brief.bytes}`,
+						brief.briefMarkdown,
+					].join("\n"),
+					packet.status === "error" ? "error" : "info",
+				);
+				return;
+			}
+
 			if (action === "search") {
 				const query = rest.join(" ").trim();
 				if (!query) {
@@ -79,7 +100,7 @@ export function registerKnowledgeCommand(pi: ExtensionAPI, h: HarnessDeps): void
 			}
 
 			if (action !== "status") {
-				ctx.ui.notify("Usage: /fh-knowledge status|search <query>|refresh|capture on|off", "warning");
+				ctx.ui.notify("Usage: /fh-knowledge status|search <query>|brief <query>|refresh|capture on|off", "warning");
 				return;
 			}
 

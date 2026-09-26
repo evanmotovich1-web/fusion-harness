@@ -1,0 +1,7 @@
+[features]
+hooks = true
+
+[hooks.state]
+
+[hooks.state."/fixture/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"

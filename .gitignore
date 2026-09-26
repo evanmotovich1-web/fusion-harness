@@ -48,3 +48,13 @@ Thumbs.db
 !.vscode/settings.json
 !.vscode/extensions.json
 .nano-media/
+
+# --- Local-only run artifacts (never committed) ---
+# OS/bun cache trees. Nested fixture caches use the same name.
+/Library/
+**/Library/Caches/
+planf1/
+/VERDICT.md
+/publication.wave*.pending.json
+.hermes/plans/
+live_final_generation/

@@ -1,0 +1,8 @@
+{
+  "approvals": [
+    {
+      "event": "pre_llm_call",
+      "command": "vault-semantic hook --agent hermes --event prompt"
+    }
+  ]
+}

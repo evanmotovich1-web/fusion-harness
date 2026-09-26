@@ -1,0 +1,15 @@
+#!/usr/bin/env bun
+/**
+ * fh-knowledge — standalone shim for runtimes that are not Pi.
+ *
+ * No pi import: Claude Code, Codex, Hermes, ADW workflows and factory seats can
+ * call the same `resolveKnowledgeConfig` + `retrieveKnowledge` the Pi extension
+ * uses, so every surface gets the same packet for the same query and cwd.
+ *
+ * Subcommands: status | search <query>
+ * Flags:       --cwd <dir> | --json | --markdown | --max-bytes <n> | --fh-knowledge off
+ * Exit:        0 for passed, wiki miss, and disabled; 2 only for a real error.
+ */
+import { main } from "../modules/knowledge-cli.ts";
+
+process.exit(main(process.argv.slice(2)));

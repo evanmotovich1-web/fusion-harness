@@ -14,6 +14,7 @@
  *   /fh-auto-validate architect + Main gate-first build loop     (modules/cmd-build.ts)
  *   /fh-only         direct one slot or arm the next plain prompt
  *   /fh-model        slot → model → thinking picker (session-only)
+ *   /fh-plan         one planner writes a plan, then stops     (modules/cmd-plan.ts)
  *   /fh-knowledge    status | search | refresh | capture     (modules/cmd-knowledge.ts)
  *   /fh-system-prompt · /fh-reset · /fh model-bar front door
  *
@@ -53,6 +54,7 @@ import { Container, Text, matchesKey, truncateToWidth, visibleWidth } from "@ear
 import { registerAutoValidateCommand, registerCollaborateCommand } from "./modules/cmd-build.ts";
 import { registerFusionCommand } from "./modules/cmd-fusion.ts";
 import { registerKnowledgeCommand } from "./modules/cmd-knowledge.ts";
+import { registerPlanCommand } from "./modules/cmd-plan.ts";
 import { registerRepoStateCommand } from "./modules/cmd-repo-state.ts";
 import { registerSessionBuildCommand } from "./modules/cmd-session-build.ts";
 import { registerLanesCommand } from "./modules/cmd-lanes.ts";
@@ -61,9 +63,11 @@ import { registerWorkflowCommands } from "./modules/cmd-workflows.ts";
 import { registerXResearchCommand } from "./modules/x-research.ts";
 import { registerNanoMediaCommand } from "./modules/nano-media.ts";
 import { knowledgeArtifactBodies, retrieveKnowledge } from "./modules/knowledge-base.ts";
+import { createKnowledgeInjectHandler } from "./modules/knowledge-inject.ts";
+import { safeKnowledge } from "./modules/knowledge-guard.ts";
 import { resolveKnowledgeConfig, type KnowledgeConfig } from "./modules/knowledge-config.ts";
 import { captureVaultNote } from "./modules/knowledge-ingest.ts";
-import { withKnowledge } from "./modules/prompt-library.ts";
+import { withDistilledBrief, withKnowledge } from "./modules/prompt-library.ts";
 import { piInvocation, runChild } from "./modules/child-runner.ts";
 import {
 	cloneStack,
@@ -1095,10 +1099,18 @@ export default function (pi: ExtensionAPI) {
 		knowledgeCaptureOverride = on;
 	};
 	const prepareKnowledge = async (query: string, cwd: string, artifactsDir: string) => {
-		const packet = retrieveKnowledge({ query, cwd, config: knowledgeConfig(cwd) });
-		for (const [name, body] of Object.entries(knowledgeArtifactBodies(packet))) await save(artifactsDir, name, body);
+		const retrieved = await safeKnowledge(() => retrieveKnowledge({ query, cwd, config: knowledgeConfig(cwd) }), { query });
+		const packet = withDistilledBrief(retrieved);
+		try {
+			for (const [name, body] of Object.entries(knowledgeArtifactBodies(packet))) await save(artifactsDir, name, body);
+		} catch {
+			/* artifact write must not block the child spawn */
+		}
 		return packet;
 	};
+	pi.on("before_agent_start", createKnowledgeInjectHandler({
+		retrieve: (query, cwd) => retrieveKnowledge({ query, cwd, config: knowledgeConfig(cwd) }),
+	}));
 	const captureKnowledge = async (opts: { cwd: string; runId: string; texts: string[]; command: string; artifactsDir?: string }) => {
 		const cfg = knowledgeConfig(opts.cwd);
 		const result = captureVaultNote({
@@ -1219,6 +1231,7 @@ export default function (pi: ExtensionAPI) {
 		["/find-workflow <task>", "route to a saved task harness"],
 		["/create-workflow [id]", "create a validated workflow"],
 		["/research-x <query>", "Grok live X research with citations"],
+		["/fh-plan [--plan-dir DIR] <task>", "write a plan, do not code"],
 		["/fh-knowledge status|search|refresh", "inspect retrieved evidence packet"],
 		["/fh-repo-state status|refresh", "deterministic git facts, optional fetch"],
 		["/fh-reset", "full reset, host and slots"],
@@ -1550,6 +1563,7 @@ export default function (pi: ExtensionAPI) {
 	const autoValidateHandler = registerAutoValidateCommand(pi, deps); // /fh-auto-validate
 	registerSessionBuildCommand(pi, { collaborateInternal: collaborateHandler }); // /fh-session-build
 	registerKnowledgeCommand(pi, deps); // /fh-knowledge
+	registerPlanCommand(pi, deps); // /fh-plan
 	registerRepoStateCommand(pi, deps); // /fh-repo-state
 	const researchXHandler = registerXResearchCommand(pi);
 	registerNanoMediaCommand(pi, deps); // /nano-media
