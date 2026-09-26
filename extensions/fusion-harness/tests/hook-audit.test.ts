@@ -12,11 +12,13 @@ import {
 	auditHookSurfaces,
 	auditHooks,
 	buildHookReport,
+	classifyPiExtension,
 	probeHook,
 	type HookSurface,
 } from "../modules/hook-audit.ts";
 
 const fixtureHome = join(import.meta.dir, "fixtures", "hooks");
+const uiOnlyHome = join(import.meta.dir, "fixtures", "hooks-ui-only");
 const doctorPath = join(import.meta.dir, "..", "tools", "hooks-doctor.ts");
 const repoRoot = join(import.meta.dir, "..", "..", "..");
 
@@ -106,6 +108,38 @@ describe("hook-audit enumeration", () => {
 		expect(vault?.blocking).toBe(false);
 		expect(vault?.event).toBe("before_agent_start");
 		expect(vault?.probe).toBe(false);
+	});
+
+	test("a UI-gated block (TUI decline only) is fail-open, not can-block", () => {
+		// Same tool_call shape as the real permission-gate, but the only block follows an
+		// interactive ctx.ui prompt, so a headless run can never be stopped by it.
+		const map = byId(auditHooks({ home: uiOnlyHome }));
+		const gate = map.get("pi:extension:permission-gate.ts");
+		expect(gate?.verdict).toBe("fail-open");
+		expect(gate?.blocking).toBe(false);
+		expect(gate?.reason).toContain("UI-gated");
+	});
+
+	test("classifyPiExtension distinguishes headless, UI-gated, and unconditional blocks", () => {
+		const headless = classifyPiExtension("if (!ctx.hasUI) { return { block: true, reason: 'no ui' }; }", "gate.ts");
+		expect(headless.verdict).toBe("can-block");
+		expect(headless.reason).toContain("headless");
+
+		const uiGated = classifyPiExtension(
+			"const c = await ctx.ui.select('Allow?', ['Yes','No']);\nif (c !== 'Yes') return { block: true, reason: 'Blocked by user' };",
+			"gate.ts",
+		);
+		expect(uiGated.verdict).toBe("fail-open");
+		expect(uiGated.reason).toContain("UI-gated");
+
+		const unconditional = classifyPiExtension("if (dangerous) return { block: true, reason: 'nope' };", "gate.ts");
+		expect(unconditional.verdict).toBe("can-block");
+		expect(unconditional.reason).toContain("unconditionally");
+
+		// plan-mode shape: a file full of ctx.ui. calls but a block far from any prompt is
+		// still a real block. Co-presence must not downgrade it (proximity regression guard).
+		const farFromPrompt = `ctx.ui.notify('status', 'info');\n${"// padding to push the block past the UI proximity window\n".repeat(6)}if (!isSafeCommand(command)) {\n  return { block: true, reason: 'Plan mode: command blocked' };\n}`;
+		expect(classifyPiExtension(farFromPrompt, "plan-mode.ts").verdict).toBe("can-block");
 	});
 
 	test("claude Stop block script is can-block and static-only; injection events are probeable", () => {

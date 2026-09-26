@@ -239,6 +239,55 @@ interface Classification {
 	reason: string;
 }
 
+/** `if (!ctx.hasUI) …` / `if (ctx.hasUI === false) …` — the headless guard. */
+const HEADLESS_GUARD_RE = /if\s*\(\s*(?:!\s*(?:[\w$]+\.)?hasUI|(?:[\w$]+\.)?hasUI\s*===?\s*false)\s*\)/g;
+
+/** The brace-balanced block, or the single statement, that follows `from`. */
+function guardedStatement(content: string, from: number): string {
+	let i = from;
+	while (i < content.length && /\s/.test(content.charAt(i))) i++;
+	if (content.charAt(i) !== "{") {
+		const end = content.indexOf(";", i);
+		return content.slice(i, end === -1 ? content.length : end + 1);
+	}
+	let depth = 0;
+	for (let j = i; j < content.length; j++) {
+		const ch = content.charAt(j);
+		if (ch === "{") depth++;
+		else if (ch === "}" && --depth === 0) return content.slice(i, j + 1);
+	}
+	return content.slice(i);
+}
+
+/** True when a `block: true` sits inside a `!ctx.hasUI` guard: a real headless block. */
+export function headlessBlock(content: string): boolean {
+	for (const match of content.matchAll(HEADLESS_GUARD_RE)) {
+		if (/block\s*:\s*true/.test(guardedStatement(content, match.index! + match[0].length))) return true;
+	}
+	return false;
+}
+
+/** A `block: true` within this many characters after a `ctx.ui.` prompt is a decline path. */
+const UI_GATED_PROXIMITY = 200;
+
+/**
+ * True when *every* `block: true` follows an interactive `ctx.ui.` prompt/decline, i.e. no
+ * block is reachable without a UI. Co-presence is not enough: `plan-mode` contains many
+ * `ctx.ui.` calls and blocks a non-allowlisted command unconditionally, so require the
+ * block itself to sit near the prompt. A single far/unconditional block means can-block.
+ */
+export function uiGatedBlock(content: string): boolean {
+	const prompts: number[] = [];
+	for (const match of content.matchAll(/ctx\s*\.\s*ui\s*\./g)) prompts.push(match.index!);
+	let seen = false;
+	for (const match of content.matchAll(/block\s*:\s*true/g)) {
+		seen = true;
+		const at = match.index!;
+		if (!prompts.some((prompt) => at > prompt && at - prompt <= UI_GATED_PROXIMITY)) return false;
+	}
+	return seen;
+}
+
 export function classifyPiExtension(content: string, file: string | null): Classification {
 	if (!file) {
 		return { verdict: "fail-open", blocking: false, reason: "no loadable implementation file; a load error is logged and Pi continues" };
@@ -247,10 +296,13 @@ export function classifyPiExtension(content: string, file: string | null): Class
 		return { verdict: "can-block", blocking: true, reason: "contains a block/deny contract" };
 	}
 	if (/block\s*:\s*true/.test(content)) {
-		const reason = /hasUI/.test(content)
-			? "returns block:true when ctx.hasUI is false (headless cannot confirm)"
-			: "returns block:true";
-		return { verdict: "can-block", blocking: true, reason };
+		if (headlessBlock(content)) {
+			return { verdict: "can-block", blocking: true, reason: "headless: returns block:true when ctx.hasUI is false (headless cannot confirm)" };
+		}
+		if (uiGatedBlock(content)) {
+			return { verdict: "fail-open", blocking: false, reason: "UI-gated: block:true only follows an interactive ctx.ui prompt/decline; a headless run cannot reach it" };
+		}
+		return { verdict: "can-block", blocking: true, reason: "returns block:true unconditionally" };
 	}
 	if (CONTINUE_FALSE_RE.test(content)) {
 		return { verdict: "can-block", blocking: true, reason: "contains continue:false" };

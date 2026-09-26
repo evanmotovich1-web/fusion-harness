@@ -1,64 +1,50 @@
 # Knowledge brief + global command — objective validation (2026-09-26)
 
-This report records the end-to-end verification of the distilled-brief / global
-knowledge-command work (`modules/knowledge-brief.ts`, `modules/knowledge-cli.ts`,
-`modules/knowledge-inject.ts`, `modules/knowledge-guard.ts`, `modules/knowledge-base.ts`,
-`prompts/KNOWLEDGE_GLOBAL_CONTRACT.md`). Measurements are from the shared working tree,
-which is `blocked_dirty`; nothing was committed or pushed.
+End-to-end verification of the distilled-brief / global knowledge-command work
+(`modules/knowledge-brief.ts`, `modules/knowledge-cli.ts`, `modules/knowledge-inject.ts`,
+`modules/knowledge-guard.ts`, `modules/knowledge-base.ts`, `modules/hook-audit.ts`,
+`modules/knowledge-install.ts`, `prompts/KNOWLEDGE_GLOBAL_CONTRACT.md`).
+
+**Verified base commit:** `aed807fffd6166d2b8ce60a5b11cf9b82eed1e4b` (parent `3ce94bfe`),
+41 files, +4964/-9, subject `Add fail-open vault knowledge brief, CLI, and hook doctor.`
+The working tree additionally carries one uncommitted host repair to
+`tests/knowledge-install.test.ts` (see "Host repair" below) and this refreshed report.
+Nothing was pushed.
 
 ## Commands and results
 
 ```bash
 bun test extensions/fusion-harness/tests
-# 425 tests across 45 files — 423 pass / 2 fail — 6558 expect() calls — 58.59s — exit 1
+# 434 tests across 45 files — 434 pass / 0 fail — 6659 expect() calls — 62.95s — exit 0
 ```
 
-### Failure 1 (real implementation defect, Node-safety contract)
+Both prior failures are resolved in the commit:
 
+1. **Node-safety contract** — `hook-audit.ts` no longer uses `import.meta.dir`; it derives
+   `MODULE_DIR` from `__dirname` / `new URL(import.meta.url)`, matching `prompt-library.ts`
+   and `cmd-workflows.ts`. `tools/knowledge-install.ts` was given the same treatment.
+2. **`tracked-imports`** — every module imported by tracked code is now tracked in
+   `aed807ff`, so the invariant holds on a clean checkout of that SHA.
+
+### Host repair (uncommitted, one test)
+
+`knowledge-install safety > refuses to write the real home without --allow-real-home`
+asserted `existsSync($HOME/.fh-knowledge/manifest.json) === false` — a property of the
+developer's live machine. Once the authorized global install (step 2) ran, that assertion was
+necessarily false. The test now asserts the refusal *changed nothing*: the manifest is
+byte-identical before and after the refused `--apply` (or stays absent). Same refusal
+contract, no dependence on machine install state.
+
+```bash
+bun test extensions/fusion-harness/tests/knowledge-install.test.ts
+# 20 pass / 0 fail — 129 expect() calls
 ```
-orchestration contracts > every runtime module is Node-safe: no Bun-only APIs in modules/
-extensions/fusion-harness/tests/orchestration-contract.test.ts:225
-Expected: false  Received: true   (text.includes("import.meta.dir"))
-```
-
-Offender: `extensions/fusion-harness/modules/hook-audit.ts:668`
-
-```ts
-const modulesDir = options.modulesDir ?? import.meta.dir;
-```
-
-`import.meta.dir` is Bun-only; pi runs the extension under Node, where it is `undefined`.
-While `hook-audit.ts` is imported only by `tools/hooks-doctor.ts` and its test today, the
-repo contract forbids Bun-only globals in `modules/` unconditionally. Recommended repair
-(same pattern as `prompt-library.ts` / `cmd-workflows.ts`): derive the directory from
-`__dirname` when present, else `path.dirname(new URL(import.meta.url).pathname)`.
-
-### Failure 2 (parent-owned staging debt, not a code defect)
-
-```
-committed code only imports committed files > every relative import in tracked extension code is tracked
-```
-
-Seven tracked files import modules that are new and still untracked:
-
-```
-fusion-harness.ts → ./modules/cmd-plan.ts
-fusion-harness.ts → ./modules/knowledge-inject.ts
-fusion-harness.ts → ./modules/knowledge-guard.ts
-cmd-knowledge.ts → ./knowledge-brief.ts
-cmd-knowledge.ts → ./knowledge-guard.ts
-knowledge-base.ts → ./knowledge-brief.ts
-prompt-library.ts → ./knowledge-brief.ts
-```
-
-This is the expected consequence of landing new modules without a commit. The parent must
-stage the new files in one tracked change before this invariant can pass.
 
 ## Live command — same query twice
 
 ```bash
 ./extensions/fusion-harness/bin/fh-knowledge brief \
-  "distill the vault into a global knowledge command injected for every agent" \
+  "finish the five residual gates and publish the knowledge slice" \
   --cwd /Users/evanmotovich/fusion-harness --json   # run twice
 ```
 
@@ -66,18 +52,19 @@ stage the new files in one tracked change before this invariant can pass.
 |---|---|---|
 | exit code | 0 | 0 |
 | status | passed | passed |
-| packetHash | `f680ca00228378d679383bbb31a5e4fe066920a19a13c5391c556fd04db451e3` | same |
-| briefHash | `16f7b08ec40dddff01265f3868ab69a6efa20b045fe160d8c68857c3d5a9c609` | same |
-| briefBytes | 1944 | 1944 |
-| packetBytes | 5308 | 5308 |
+| packetHash | `a0b1e4395e2217dadf1284791d610d4f97f81557825711faa2c5a204b36c1345` | identical |
+| briefHash | `5fce23decd4d83e7184cfb9da695507055ad58db44bd2b800c41d17e17808d9e` | identical |
+| briefBytes | 1866 | 1866 |
+| packetBytes | 7660 | 7660 |
 | briefTruncated | false | false |
-| sections | decisions 2 · constraints 2 · hooks 1 · do-not-repeat 1 | same |
+| sections | decisions 3 · constraints 1 · hooks 2 · do-not-repeat 0 | same |
 
-Retrieval ran against the real machine: roots
-`~/code/second-brain/wiki`, `~/code/second-brain/me`, `<repo>/ai_docs`;
-496 files / 4630 chunks indexed; `reasons` includes `semantic: 24 vault-semantic hits fused`;
-`errors: []`. Hash stability holds across runs (the `retrievedAt` timestamp is deliberately
-outside the hash).
+Retrieval ran against the real machine: roots `~/code/second-brain/wiki`,
+`~/code/second-brain/me`, `<repo>/ai_docs`; **497 files / 4820 chunks** indexed;
+`reasons` includes `semantic: 24 vault-semantic hits fused`; `errors: []`. Hash stability
+holds across runs (`retrievedAt` is outside the hash; semantic scores are quantized to 2
+decimals by `rankSemanticHits` before they feed RRF, so back-end float noise cannot flip a
+near-tie).
 
 ## Hook doctor
 
@@ -89,41 +76,61 @@ bun extensions/fusion-harness/tools/hooks-doctor.ts --json --no-probe
 | Check | Value |
 |---|---|
 | `ok` | false |
-| surfaces scanned | 28 |
-| `checks.contractBlock` | `not-installed` |
-| `checks.contractSurfaces` | `[]` |
+| surfaces scanned | 63 |
+| `checks.contractBlock` | `current` |
+| `checks.contractSurfaces` | 35 (5 home + 30 ADW) |
 | `checks.knowledgeInject` | `fail-open` |
 | `checks.knowledgeGuard` | `fail-open` |
 | `checks.stopGateInstalledByUs` | `none` |
 | `checks.codexTrust` | `pass` |
 | `checks.canBlockCount` | 4 |
 
-Findings: can-block surfaces `pi:extension:permission-gate.ts`, `pi:extension:plan-mode`,
-`claude:PreToolUse:1:0`, `claude:Stop:0:0`. These are pre-existing, outside this repo, and
-are the concrete hook-failure class the audit exists to surface. The doctor always exits 0
-and reports failure through `ok`/`findings`, as designed.
+Findings: `pi:extension:permission-gate.ts`, `pi:extension:plan-mode`,
+`claude:PreToolUse:1:0`, `claude:Stop:0:0`. The first and last are the H1/H2 blocking hooks;
+**step 3 (global hook hardening) did not execute** (the delegated task failed on model
+capacity), so they are still reported can-block. The doctor always exits 0 and reports
+failure through `ok`/`findings`, as designed.
+
+## Global install (step 2)
+
+| Surface | `begin` | `end` |
+|---|---|---|
+| `~/.pi/agent/AGENTS.md` | 1 | 1 |
+| `~/AGENTS.md` | 1 | 1 |
+| `~/.claude/CLAUDE.md` | 1 | 1 |
+| `~/.codex/AGENTS.md` | 1 | 1 |
+| `~/.hermes/SOUL.md` | 1 | 1 |
+
+Manifest `~/.fh-knowledge/manifest.json`, contract
+`5581216a9c645ecf8b9e25bb3795c8c3060ef2f137654f53ced42ff83c8f18e6`, 35 entries.
+`knowledge-install.ts --check --home "$HOME" --json` → exit 0, `applied:false`,
+5 `current` + 1 `skipped` (ADW, not selected). Reversible via `--uninstall`.
+
+## ADW / SSSF (step 4)
+
+30 `system.md` under `~/code/sssf/adws/adw_data/prompt_engineering/**`, all 30 carry exactly
+one marker pair; `git -C ~/code/sssf status --porcelain` shows exactly those 30 ` M`. This is
+prompt-fragment coverage only — the ADW runner does not call `fh-knowledge`, and
+`fh-knowledge` is not on `PATH` for those seats.
 
 ## Safety evidence
 
 | Check | Result |
 |---|---|
-| Existing knowledge suite (11 files) | 75 pass / 0 fail (from task 2.e; re-run green) |
-| `~/.fh-knowledge` install manifest | absent |
-| `~/.cache/fusion-harness/knowledge` cache | absent (CLI does not persist; only `persistKnowledgeBrief` writes) |
-| `tools/knowledge-install.ts --check` (dry run) | exit 0 · contract `5581216a9c64` · pi/root/claude/codex/hermes = `missing` · adw `skipped` |
+| `~/.cache/fusion-harness/knowledge` | absent |
+| Fixture `tests/fixtures/hooks/Library/` | absent; `.gitignore` rule `Library/` in place |
 | Vault `trading/` mtime | 2026-09-02T02:04:42 |
-| Vault `sessions/` mtime | 2026-09-26T02:32:19 (predates this task's commands) |
+| Vault `sessions/` mtime | 2026-09-26T02:32:19 |
 | Vault `wiki/agent-learnings.md` mtime | 2026-09-26T01:26:45 |
-| Capture | opt-in and OFF; no capture command was run; the CLI is read-only |
-| Global config | unchanged — installer was never executed, only `--check` |
+| Capture | opt-in and OFF; the CLI is read-only |
 
-## Handoff / follow-ups (not authorized here)
+## Follow-ups (not authorized in this graph)
 
-1. Repair the `import.meta.dir` use in `hook-audit.ts` (task 3.b) and re-run the full suite.
-2. Parent: stage the new modules so `tracked-imports` passes.
-3. SSSF/ADW wiring (`just plan` / `adws/adw_plan.py` planner+builder prompt fragment) lives in
-   `/Users/evanmotovich/code/sssf` — a different repo; not touched.
-4. Running the installer against the real home (5 surfaces currently `missing`) is a global
-   change and remains unauthorized.
-5. Grok on remote Linux cannot execute the local binary; "everywhere" is scoped to hosts that
-   can run the CLI.
+1. **Step 3 — global hook hardening** (H1 permission-gate headless block, H2 Claude Stop gate,
+   H5 `vault-semantic` 8s→1.5s): never executed; three live files unpatched; no backups taken.
+2. **Step 1 — publication**: `aed807ff` is local only. `refuse_dirty` fires on the residual
+   untracked paths; a `fork/main`-targeted card and receipt must be minted first. Target is
+   `fork` (`evanmotovich1-web/fusion-harness`), never `origin` (`disler/fusion-harness`).
+3. **Step 5 — vault write-back**: gated; the H1–H5 taxonomy and the `rankSemanticHits`
+   determinism root cause are not yet filed in `wiki/`.
+4. Make `fh-knowledge` reachable on ADW/pi seats before claiming ADW agents can call it.
