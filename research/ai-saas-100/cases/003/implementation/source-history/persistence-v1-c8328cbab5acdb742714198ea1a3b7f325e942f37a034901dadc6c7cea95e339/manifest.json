@@ -1,0 +1,62 @@
+{
+  "artifacts": [
+    {
+      "original_path": "cases/003/implementation/workflow.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/workflow.py",
+      "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4"
+    },
+    {
+      "original_path": "cases/003/implementation/persistence.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/persistence.py",
+      "sha256": "19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e"
+    },
+    {
+      "original_path": "cases/003/implementation/demo_persistence.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py",
+      "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+    },
+    {
+      "original_path": "cases/003/implementation/PERSISTENCE.md",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/PERSISTENCE.md",
+      "sha256": "be57d1c80bc87380c3fb7f3bd0dbbdb5dc326bdbde43fb9fe29a88b4140a4d3b"
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/fixtures.json",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/fixtures.json",
+      "sha256": "709362107acff5308488d3282edc13a82ecd2542a95528be218a40ecff037125"
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/run.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/run.py",
+      "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5"
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/execute.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/execute.py",
+      "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+    },
+    {
+      "original_path": "cases/003/tests/fixtures.json",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.json",
+      "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f"
+    },
+    {
+      "original_path": "cases/003/tests/run.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run.py",
+      "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8"
+    },
+    {
+      "original_path": "cases/003/tests/fixtures.repair-v1.json",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.repair-v1.json",
+      "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+    },
+    {
+      "original_path": "cases/003/tests/run_repair_v1.py",
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run_repair_v1.py",
+      "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8"
+    }
+  ],
+  "bundle_sha256": "c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339",
+  "schema_version": 1,
+  "scope": "Immutable source and fixture bytes used by local persistence tests"
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "task_id": "3.a",
+  "scope": "Accurate bounded pilot attempt ledger; not accepted prototype delivery",
+  "task_started_at_utc": "2026-09-20T21:18:24.296020+00:00",
+  "start_time_scope": "First task execution probe; initial directory listing preceded it",
+  "ledger_written_at_utc": "2026-09-20T21:31:41.617858+00:00",
+  "requested_minimum_campaign_duration_seconds": 86400,
+  "observed_task_wall_elapsed_seconds": 797.321838,
+  "observed_active_campaign_seconds": null,
+  "active_time_unknown_reason": "No complete interval instrumentation for all reasoning, reading, authoring and review. Wall time is not active time.",
+  "duration_fulfilled": false,
+  "request_complete": false,
+  "counts": {
+    "pilots_assigned": 3,
+    "attempted": 3,
+    "partial_implementations": 3,
+    "local_regression_suites_executed": 3,
+    "local_regression_assertions_passed": 60,
+    "generic_model_baselines_executed": 0,
+    "original_products_executed": 0,
+    "accepted_products": 0,
+    "incomplete_products": 3,
+    "blocked_products": 3,
+    "unattempted_products": 0
+  },
+  "products": [
+    {
+      "id": "001",
+      "name": "Smodin",
+      "status": "blocked",
+      "accepted": false,
+      "dossier_path": "cases/001/dossier.json",
+      "verdict_path": "cases/001/verdict.json",
+      "research_status": "bounded_first_party_research_incomplete",
+      "public_pages_captured": [
+        "https://smodin.io/",
+        "https://smodin.io/api",
+        "https://smodin.io/pricing",
+        "https://smodin.io/free-english-rewriter-and-spinner"
+      ],
+      "independent_implementation_status": "partial",
+      "coverage": [
+        "Input validation and honest blocked-model handling execute locally",
+        "Response auditing code exists but no actual model response was tested"
+      ],
+      "missing_capabilities": [
+        "Central rewrite model",
+        "Generic-model B1",
+        "Independent held-out tests",
+        "Original-product observations"
+      ],
+      "local_regression_assertions_passed": 20,
+      "local_regression_assertions_total": 20,
+      "generic_baseline_status": "blocked_not_executed",
+      "original_product_status": "not_observed",
+      "central_workflow_accepted": false,
+      "commercial_verdict": "insufficient_evidence",
+      "receipts": [
+        "cases/001/receipts/001-local-20260920T212619017964Z.json"
+      ],
+      "baseline_receipt": "cases/001/receipts/baseline-blocked.json",
+      "held_out_evaluation": false,
+      "review_status": "pending_independent_review"
+    },
+    {
+      "id": "002",
+      "name": "LinkBunny",
+      "status": "blocked",
+      "accepted": false,
+      "dossier_path": "cases/002/dossier.json",
+      "verdict_path": "cases/002/verdict.json",
+      "research_status": "bounded_first_party_research_incomplete",
+      "public_pages_captured": [
+        "https://getlinkbunny.com/docs/agents",
+        "https://getlinkbunny.com/",
+        "https://getlinkbunny.com/about",
+        "https://getlinkbunny.com/pricing"
+      ],
+      "independent_implementation_status": "partial",
+      "coverage": [
+        "Original in-memory marketplace subset runs on all 20 frozen scenarios"
+      ],
+      "missing_capabilities": [
+        "Agent editorial reasoning",
+        "Generic-model B1 or reviewed alternative",
+        "Independent held-out tests",
+        "Real pool and original-product observations"
+      ],
+      "local_regression_assertions_passed": 20,
+      "local_regression_assertions_total": 20,
+      "generic_baseline_status": "blocked_not_executed",
+      "original_product_status": "not_observed",
+      "central_workflow_accepted": false,
+      "commercial_verdict": "insufficient_evidence",
+      "receipts": [
+        "cases/002/receipts/002-local-20260920T212619053188Z.json"
+      ],
+      "baseline_receipt": "cases/002/receipts/baseline-blocked.json",
+      "held_out_evaluation": false,
+      "review_status": "pending_independent_review"
+    },
+    {
+      "id": "003",
+      "name": "Northlight",
+      "status": "blocked",
+      "accepted": false,
+      "dossier_path": "cases/003/dossier.json",
+      "verdict_path": "cases/003/verdict.json",
+      "research_status": "bounded_first_party_research_incomplete",
+      "public_pages_captured": [
+        "https://northlight.ai/",
+        "https://northlight.ai/pricing",
+        "https://northlight.ai/features",
+        "https://northlight.ai/integrations"
+      ],
+      "independent_implementation_status": "partial",
+      "coverage": [
+        "Original structured CRM preview subset runs on all 20 frozen scenarios"
+      ],
+      "missing_capabilities": [
+        "Natural-language inference",
+        "Real authorized integration",
+        "Generic-model B1",
+        "Independent hidden tests",
+        "Original-product observations"
+      ],
+      "local_regression_assertions_passed": 20,
+      "local_regression_assertions_total": 20,
+      "generic_baseline_status": "blocked_not_executed",
+      "original_product_status": "not_observed",
+      "central_workflow_accepted": false,
+      "commercial_verdict": "insufficient_evidence",
+      "receipts": [
+        "cases/003/receipts/003-local-20260920T212619100032Z.json"
+      ],
+      "baseline_receipt": "cases/003/receipts/baseline-blocked.json",
+      "held_out_evaluation": false,
+      "review_status": "pending_independent_review"
+    }
+  ],
+  "timing": {
+    "measured_public_request_seconds": 2.928060376,
+    "measured_local_regression_seconds": 0.101252083,
+    "basis": "Monotonic measurements for sequential recorded operations only, excluding uninstrumented authoring and review",
+    "active_research_minutes_per_product": null,
+    "active_implementation_minutes_per_product": null,
+    "active_review_minutes_per_product": null,
+    "blocked_waiting_seconds": null,
+    "setup_overhead_seconds": null,
+    "unknown_reason": "Not separately instrumented; do not backfill fabricated phase durations"
+  },
+  "spending": {
+    "additional_paid_calls": 0,
+    "purchases": 0,
+    "external_workflow_api_calls": 0,
+    "independent_model_calls": 0,
+    "authorized_additional_spend_usd": 0,
+    "operating_cost_usd": null,
+    "harness_inference_cost_usd": null,
+    "classification": "unknown",
+    "unknown_reason": "No billing or local-resource allocation measurements. No paid provider calls or purchases initiated by this task."
+  },
+  "throughput": {
+    "accepted_products_per_observed_task_wall_hour": 0,
+    "accepted_products_per_active_hour": null,
+    "sample_size": 3,
+    "scope": "Observed incomplete pilot batch only, not an estimate of successful campaign throughput",
+    "remaining_products_to_accept": 100,
+    "finite_completion_forecast_hours": null,
+    "forecast_reason": "Zero accepted pilots and no verified inference baseline. A finite completion forecast is unsupported; changing companies does not resolve a campaign-wide inference blocker.",
+    "next_forecast_gate": "Complete and independently accept three representative pilots, measure research/build/evaluation/review intervals, then forecast by workflow class"
+  },
+  "method_scaling_accepted": false,
+  "validation": {
+    "receipt": "cases/001/tests/pilot-validation.json",
+    "local_regressions": "60 assertions passed across three partial workflows",
+    "campaign_tool_tests": "31 passed in foreground",
+    "dossiers": "3 structurally valid but not accepted",
+    "source_quotes": "All selected excerpts match saved captures",
+    "frozen_fixtures": "20 per pilot with unchanged hashes, authored before implementations",
+    "exposure": "All fixtures are builder-visible fixed regression, not held-out cases"
+  },
+  "restrictions_observed": [
+    "No real outreach, deployment, publication or account registration",
+    "No credentials inspected or settings changed",
+    "No model/API spending",
+    "No original-product workflow execution claimed",
+    "All subprocesses ran in foreground and finished"
+  ],
+  "handoff": {
+    "review_task": "4.a",
+    "review_targets": [
+      "cases/001/dossier.json",
+      "cases/002/dossier.json",
+      "cases/003/dossier.json",
+      "cases/001/tests/pilot-validation.json"
+    ],
+    "required_next_work": [
+      "Audit partial scope and frozen fixtures without equating assertion success to workflow acceptance",
+      "Resolve inference access using authorized no-charge resources or an explicit budget decision",
+      "Complete missing central behavior and independent hidden fixtures",
+      "Execute B1/B2 on identical inputs and observe B3 only when permitted",
+      "Reconcile case statuses into the shared registry through its owner"
+    ],
+    "shared_registry_modified": false,
+    "replace_products_without_owner_approval": false
+  }
+}

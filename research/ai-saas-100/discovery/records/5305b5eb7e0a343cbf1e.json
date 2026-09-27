@@ -1,0 +1,577 @@
+{
+  "evidence_id": "web-5305b5eb7e0a343cbf1e",
+  "source_url": "https://www.wisecut.ai/",
+  "retrieved_at": "2026-09-20T21:00:45.748081+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://wisecut.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/5305b5eb7e0a343cbf1e.html",
+  "capture_sha256": "4e076c59ecf3b77fac3ea5b98880bf7c700b9a504c81d3a09976c7f0de652baf",
+  "bytes_saved": 262144,
+  "title": "AI Video Editor for Podcasts & YouTube Clips | Wisecut",
+  "metadata": [
+    {
+      "key": "application-name",
+      "value": "Wisecut"
+    },
+    {
+      "key": "description",
+      "value": "Turn podcasts, YouTube videos and webinars into short vertical clips with AI: automatic cuts, captions, reframing and music. Built for creators and teams that publish weekly."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Wisecut"
+    },
+    {
+      "key": "og:title",
+      "value": "AI Video Editor for Podcasts & YouTube Clips | Wisecut"
+    },
+    {
+      "key": "og:description",
+      "value": "Turn long videos into publish-ready vertical clips with AI cuts, captions, reframing and music. Built for creators and teams that publish weekly."
+    }
+  ],
+  "text": "AI Video Editor for Podcasts & YouTube Clips | Wisecut\nFeatures\nBusiness\nPricing\nLog in\nEN\nGet started\nWish\nAutopilot\nMCP\nAll features\nHighlights\nClean Edit\nCaptions\nAutocut Silence\nAuto Reframe\nAuto Punch-in/out\nHook Title\nStudio Voice\nSmart Background Music\nBackground Noise Cancelling\nBusiness\nPricing\nGet started\nTurn\nyour\nvideos\ninto\nAI-edited\ncontent,\na\nu\nt\no\nm\na\nt\ni\nc\na\nl\nl\ny\ns\nc\nh\ne\nd\nu\nl\ne\nd\na\nn\nd\np\nu\nb\nl\ni\ns\nh\ne\nd\nt\no\nY\no\nu\nT\nu\nb\ne\n.\nTurn your videos into AI-edited content,\nautomatically scheduled and published to YouTube.\nWisecut finds the right moments in your videos and keeps your channel active automatically.\nContinue\nWish\nAI Highlight Detection\nAuto Reframe 9:16\n0:29\n0\nReady to review\n0:15\n0\n0:45\n0\nTrusted by 1M+ creators\nand media teams\nAutopilot\nKeep creating.\nAutopilot posts for you.\nConnect a YouTube channel once. Every new video becomes\nshort clips\n, scheduled and published on your platforms — without writing a prompt every time.\n01\nConnect your channel\nChoose videos, live streams, or both.\n02\nAuto clips\nNew content turns into ready clips.\n03\nAuto publishing\nClips are scheduled and published.\nAutopilot\nConnecting...\n01\nMonitor\nYour channel\n48:12\nConnecting...\nNew videos\nLive streams\nBoth\n02\nAnalyzing\n…\nThis\nchanged\neverything\n0:38\nWe tested it\nlive\n0:52\nHere's the\nresult\n0:29\n03\nPublish calendar\nScheduled\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n4\n5\n6\n7\n8\n9\n10\nDiscover Autopilot\nAI video editing.\nJust make a\nwish.\nDescribe the edit you want in plain words. WISH plans cuts, reframes, captions and music — you review the result.\nraw_footage.mp4\nWISH is planning the edit\nAnalyzing the video\nClip 1\n0:18\nClip 2\n0:32\nClip 3\n0:24\nRendering\n9:16 · 60s · captions on\nMake your first wish\nLong to short made wise\nHours of footage into scroll-stopping clips\nAI that finds your best moments\nAuto reframe · Auto subtitles · Auto highlights\nEdit less. Publish more.\nFrom raw take to ready to post\nLong to short made wise\nHours of footage into scroll-stopping clips\nAI that finds your best moments\nAuto reframe · Auto subtitles · Auto highlights\nEdit less. Publish more.\nFrom raw take to ready to post\nEDITOR FEATURES\nMinimize editing time, maximize content creation.\nUpload once, publish everywhere\nSilences removed automatically\nSubtitles styled to match your brand\nVertical, square, widescreen — one click\nStoryboard editing, no timeline required\nMusic that syncs to your story\nUpload once, publish everywhere\nSilences removed automatically\nSubtitles styled to match your brand\nVertical, square, widescreen — one click\nStoryboard editing, no timeline required\nMusic that syncs to your story\nAI highlight detection\nOur AI analyzes your recordings and finds the moments with viral potential. It’s like having a personal editor who knows exactly what will engage your audience.\nAI is working\nAI is working\nAI is working\nAutomatic captions and translations\nIn a world where 69% of people watch videos without sound in public, captions are essential. Boost engagement with auto-generated captions that are easy to fine-tune in the Wisecut Storyboard. Expand your reach globally by translating content into multiple languages effortlessly.\nEnglish\nEspañol\nPortuguês (BR)\nMultiple languages\nStoryboard-based video editing\nFor fine adjustments, Wisecut generates a storyboard transcribed from your speech. You edit by moving text and scenes — no keyframes, no complex timelines, no need to master editing software.\nAI storyboard\nAutomatically remove silences\nWisecut’s AI, together with auto-zoom, detects and cuts silent pauses, saving you time and keeping your videos flowing smoothly.\nSmart background music\nWisecut picks a track and tunes the soundtrack to match your video. It also handles audio ducking: lowering the music while someone is speaking and raising it when there’s no speech.\nGet started\nCut the silences\nKeep the punchlines\nAdd captions\nTranslate anywhere\nReframe to 9:16\nZoom on cue\nDuck the music\nKill the noise\nPolish the voice\nHook the scroll\nShip the highlight\nYou choose\nCut the silences\nKeep the punchlines\nAdd captions\nTranslate anywhere\nReframe to 9:16\nZoom on cue\nDuck the music\nKill the noise\nPolish the voice\nHook the scroll\nShip the highlight\nYou choose\nYou choose:\nand there are many options!\nCaptions\nGenerate accurate subtitles automatically to improve accessibility and engagement.\nClean edit\nRemove false starts, repeated takes and long pauses automatically.\nAutocut silence\nAutomatically remove silent sections to streamline your video content.\nAuto punch-in/out\nHighlight key moments with automated punch-in and punch-out zoom transitions.\nAuto reframe\nAdjust your video to fit vertical, square, or horizontal formats seamlessly.\nHook title\nHook Titles create scroll-stopping text that appears in the first few seconds of your video.\nStudio voice\nRefine your audio to sound like a professional broadcaster or podcaster.\nBackground music\nwith Auto Duck\nAutomatically lower background music volume when speech is detected.\nNoise cancelling\nEliminate unwanted background noise for crisp, clear audio quality.\nHighlights\nWisecut makes short, engaging videos from your best moments.\nWisecut vs other AI video editors\n#\nMadeWithWisecut\nReviews\nBeing able to “simply” edit a video is remarkable.\nOther software requires tweaking a bunch of things I don’t understand and takes hours of study. Forget it. It never gets done. Thank you, Wisecut.\nCortney G.\nFounder and Financial Planner\nThis is huge for anyone producing video.\nWith Wisecut, we simplified clip generation for DraperTV, which lets us publish more content and reach more people.\nTim Draper\nFounder / DraperTV\nExactly what my company was looking for.\nWe produce a lot of testimonial videos, and the time spent cutting pauses and transcribing captions was huge. This saves an absurd amount of time.\nScott R.\nManaging Partner\nBought it years ago and still use it professionally.\nI turn interviews and long videos into social-media clips. It saves a huge amount of time on repetitive editing tasks — the value is so high I bought an extra license.\nAlex W.\nMarketing Agency\nAW\nSurprising results and a lot of time saved.\nI tried other tools promising the same, but the cuts felt rough and needed manual editing. Wisecut delivered a much better result right away.\nLuiz M.\nContent Creator\nLM\nGreat for turning long videos into captioned clips.\nIt takes my 90-minute videos, picks the best moments and even removes filler words effortlessly. It simplified my editing process a lot.\nMae T.\nContent Producer\nMT\nFantastic tool with a bright future.\nI love how practical the app is and being able to access it right from the mobile browser. The team keeps rolling out advanced AI features that make life easier.\nQueordal\nVerified User\nQ\nStraightforward, super intuitive video editing!\nI really enjoyed how easy it is. The AI’s ability to auto-adjust cuts and switch perspectives is fantastic. A great tool for anyone who needs engaging videos without learning complex software.\nInfo Customer\nContent Producer\nIC\nMagic that removes silences and noise in seconds.\nWisecut removed all the background noise and filler words (“um/uh”) from my project instantly. It cut awkward silences, generated captions and split content easily. It saved me hours of manual work.\nHoang P.\nContent Creator\nHP\nPerfect for anyone who needs editing agility.\nThe app does exactly what it promises! It edits incredibly fast, and the auto-duck feature for background music while someone speaks is extremely handy.\nVincent P.\nConsultant and Content Creator\nVP\nFinally a solution for anyone who hates editing long videos.\nI kept putting off recording videos because of the editing work. Wisecut simplified my process in an impressive way. Full marks for how much time it gives back.\nJ. B.\nDigital Entrepreneur\nJB\nRaised the quality of my videos without blowing the budget.\nI asked a professional video editor to review the final material edited only in Wisecut. They confirmed that reaching that quality would require many hours of manual work and a high cost. For me, the value is unbeatable.\nFourscene\nVideo Producer\nF\nBeing able to “simply” edit a video is remarkable.\nOther software requires tweaking a bunch of things I don’t understand and takes hours of study. Forget it. It never gets done. Thank you, Wisecut.\nCortney G.\nFounder and Financial Planner\nThis is huge for anyone producing video.\nWith Wisecut, we simplified clip generation for DraperTV, which lets us publish more content and reach more people.\nTim Draper\nFounder / DraperTV\nExactly what my company was looking for.\nWe produce a lot of testimonial videos, and the time spent cutting pauses and transcribing captions was huge. This saves an absurd amount of time.\nScott R.\nManaging Partner\nBought it years ago and still use it professionally.\nI turn interviews and long videos into social-media clips. It saves a huge amount of time on repetitive editing tasks — the value is so high I bought an extra license.\nAlex W.\nMarketing Agency\nAW\nSurprising results and a lot of time saved.\nI tried other tools promising the same, but the cuts felt rough and needed manual editing. Wisecut delivered a much better result right away.\nLuiz M.\nContent Creator\nLM\nGreat for turning long videos into captioned clips.\nIt takes my 90-minute videos, picks the best moments and even removes filler words effortlessly. It simplified my editing process a lot.\nMae T.\nContent Producer\nMT\nFantastic tool with a bright future.\nI love how practical the app is and being able to access it right from the mobile browser. The team keeps rolling out advanced AI features that make life easier.\nQueordal\nVerified User\nQ\nStraightforward, super intuitive video editing!\nI really enjoyed how easy it is. The AI’s ability to auto-adjust cuts and switch perspectives is fantastic. A great tool for anyone who needs engaging videos without learning complex software.\nInfo Customer\nContent Producer\nIC\nMagic that removes silences and noise in seconds.\nWisecut removed all the background noise and filler words (“um/uh”) from my project instantly. It cut awkward silences, generated captions and split content easily. It saved me hours of manual work.\nHoang P.\nContent Creator\nHP\nPerfect for anyone who needs editing agility.\nThe app does exactly what it promises! It edits incredibly fast, and the auto-duck feature for background music while someone speaks is extremely handy.\nVincent P.\nConsultant and Content Creator\nVP\nFinally a solution for anyone who hates editing long videos.\nI kept putting off recording videos because of the editing work. Wisecut simplified my process in an impressive way. Full marks for how much time it gives back.\nJ. B.\nDigital Entrepreneur\nJB\nRaised the quality of my videos without blowing the budget.\nI asked a professional video editor to review the final material edited only in Wisecut. They confirmed that reaching that quality would require many hours of manual work and a high cost. For me, the value is unbeatable.\nFourscene\nVideo Producer\nF\nGet started\nDrop your video.\nGet unskippable clips\nin minutes.\nUpload a file or paste a link. Wisecut handles cuts, captions, reframes and highlights, ready to publish.\nContinue\nSite map\nAgentic AI video editing. Just make a wish.\nFollow along\nProduct\nAutopilot\nMCP\nWish\nBusiness\nPricing\nEnterprise plan\nResources\nAI clip generator for long videos\nAll resources\nAn AI video editor for YouTube creators\nClip long videos into shorts\nEdit video automatically with AI\nEdit video from the transcript\nKeep your YouTube channel active automatically\nLooking for an Opus Clip alternative\nPodcast to Clips: Turn episodes into shorts\nRemove silence from a video automatically\nTurn YouTube videos into Shorts\nFeatures\nAuto Punch-in/out\nAuto Reframe\nAutocut Silence\nBackground Noise Cancelling\nCaptions\nClean Edit\nHighlights\nHook Title\nSmart Background Music\nStudio Voice\nComparison\nAll comparisons\nWisecut vs AutoCut for Premiere Pro\nWisecut vs CapCut\nWisecut vs Descript\nWisecut vs Klap\nWisecut vs Opus Clip\nWisecut vs Submagic\nWisecut vs VEED\nWisecut vs Vizard\nWho it's for\nAll audiences\nWisecut for agencies\nWisecut for churches\nWisecut for creators\nWisecut for educators\nWisecut for marketing teams\nWisecut for media and broadcasters\nWisecut for podcasters\nWisecut for social media managers\nWisecut for YouTubers\nCompany\nAbout us\nCareers\nContact\nDiscord community\nGet started\nCreate account\nLog in\nProduct\nAutopilot\nMCP\nWish\nBusiness\nPricing\nEnterprise plan\nResources\nAI clip generator for long videos\nAll resources",
+  "links": [
+    {
+      "href": "/__l5e/assets-v1/5a170fbf-eaa8-46ad-8a2b-06f2baeb42f2/logo-wisecut.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/__l5e/assets-v1/265c7ff6-6c2d-404e-8aad-569e51da9b78/logo-wish.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets/styles-BcyffO_Q.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-CsLE_B6G.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/react-ChzRCVbU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/proxy-DA9Qel6W.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/createLucideIcon-HhVpsfyw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useStore-CKxeOQiH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/utils-DvviNs_B.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/react-dom-zZbXYU44.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/shim-S4YZJ0FA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/routes-uv7ng2AL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/view-C-q_WovP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.google-analytics.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.clarity.ms",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-96.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://wisecut.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://wisecut.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://wisecut.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "/__l5e/assets-v1/64e58c04-900b-48d2-bc9c-63bbcb8999b5/hero-poster.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.wisecut.ai",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://app.wisecut.ai",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/wish",
+      "rel": null
+    },
+    {
+      "href": "/autopilot",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/features/highlights",
+      "rel": null
+    },
+    {
+      "href": "/features/clean-edit",
+      "rel": null
+    },
+    {
+      "href": "/features/captions",
+      "rel": null
+    },
+    {
+      "href": "/features/autocut-silence",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-reframe",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-punch",
+      "rel": null
+    },
+    {
+      "href": "/features/hook-title",
+      "rel": null
+    },
+    {
+      "href": "/features/studio-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/smart-background-music",
+      "rel": null
+    },
+    {
+      "href": "/features/noise-cancelling",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.wisecut.ai",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/resources/youtube-to-shorts",
+      "rel": null
+    },
+    {
+      "href": "/autopilot",
+      "rel": null
+    },
+    {
+      "href": "/wish",
+      "rel": null
+    },
+    {
+      "href": "https://app.wisecut.ai/register",
+      "rel": null
+    },
+    {
+      "href": "/features/captions",
+      "rel": null
+    },
+    {
+      "href": "/features/clean-edit",
+      "rel": null
+    },
+    {
+      "href": "/features/autocut-silence",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-punch",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-reframe",
+      "rel": null
+    },
+    {
+      "href": "/features/hook-title",
+      "rel": null
+    },
+    {
+      "href": "/features/studio-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/smart-background-music",
+      "rel": null
+    },
+    {
+      "href": "/features/noise-cancelling",
+      "rel": null
+    },
+    {
+      "href": "/features/highlights",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "https://www.capterra.com/p/236150/Wisecutvideo/reviews/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://x.com/wisecut",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://instagram.com/wisecut",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://youtube.com/@wisecut",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://linkedin.com/company/wisecut",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.facebook.com/wisecut/",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://discord.com/invite/vsDJKgTqqb",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/autopilot",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/wish",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/resources/ai-clip-generator",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "/resources/ai-video-editor-for-youtube",
+      "rel": null
+    },
+    {
+      "href": "/resources/repurpose-long-videos",
+      "rel": null
+    },
+    {
+      "href": "/resources/automatic-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/resources/text-based-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/resources/post-shorts-to-youtube-automatically",
+      "rel": null
+    },
+    {
+      "href": "/resources/opus-clip-alternative",
+      "rel": null
+    },
+    {
+      "href": "/resources/podcast-to-shorts",
+      "rel": null
+    },
+    {
+      "href": "/resources/remove-silence-from-video",
+      "rel": null
+    },
+    {
+      "href": "/resources/youtube-to-shorts",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-punch",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-reframe",
+      "rel": null
+    },
+    {
+      "href": "/features/autocut-silence",
+      "rel": null
+    },
+    {
+      "href": "/features/noise-cancelling",
+      "rel": null
+    },
+    {
+      "href": "/features/captions",
+      "rel": null
+    },
+    {
+      "href": "/features/clean-edit",
+      "rel": null
+    },
+    {
+      "href": "/features/highlights",
+      "rel": null
+    },
+    {
+      "href": "/features/hook-title",
+      "rel": null
+    },
+    {
+      "href": "/features/smart-background-music",
+      "rel": null
+    },
+    {
+      "href": "/features/studio-voice",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-autocut",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-capcut",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-descript",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-klap",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-opus-clip",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-submagic",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-veed",
+      "rel": null
+    },
+    {
+      "href": "/compare/wisecut-vs-vizard",
+      "rel": null
+    },
+    {
+      "href": "/for",
+      "rel": null
+    },
+    {
+      "href": "/for/agencies",
+      "rel": null
+    },
+    {
+      "href": "/for/churches",
+      "rel": null
+    },
+    {
+      "href": "/for/creators",
+      "rel": null
+    },
+    {
+      "href": "/for/educators",
+      "rel": null
+    },
+    {
+      "href": "/for/marketers",
+      "rel": null
+    },
+    {
+      "href": "/for/media-tv",
+      "rel": null
+    },
+    {
+      "href": "/for/podcasters",
+      "rel": null
+    },
+    {
+      "href": "/for/social-media-managers",
+      "rel": null
+    },
+    {
+      "href": "/for/youtubers",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/vsDJKgTqqb",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://app.wisecut.ai/register",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://app.wisecut.ai",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/autopilot",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/wish",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/resources/ai-clip-generator",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 2.4255
+}

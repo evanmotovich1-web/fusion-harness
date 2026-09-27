@@ -1,0 +1,489 @@
+{
+  "evidence_id": "web-cdcc7e7e39c250940e79",
+  "source_url": "https://www.opus.pro/",
+  "retrieved_at": "2026-09-20T21:00:45.600842+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.opus.pro/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/cdcc7e7e39c250940e79.html",
+  "capture_sha256": "6a95059c6566191bca83f45c83f53edc77abab2b8263d550d8691c04a03d36e4",
+  "bytes_saved": 262144,
+  "title": "OpusClip: #1 AI video clipping and editing tool",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "OpusClip turns long videos into high-quality viral clips, and publishes them to all social platforms in one click. We help 10M+ creators create and grow faster."
+    },
+    {
+      "key": "og:title",
+      "value": "OpusClip: #1 AI video clipping tool to create viral shorts"
+    },
+    {
+      "key": "og:description",
+      "value": "OpusClip turns long videos into high-quality viral clips, and publishes them to all social platforms in one click. We help 10M+ creators create and grow faster."
+    }
+  ],
+  "text": "OpusClip: #1 AI video clipping and editing tool\nOpusClip\nEasily edit clips\nOpen app\nFeatures\nFeatures\nAI Producer\nNew\nTurn your raw footage into a polished, ready to post video\nAnimated captions\nThe fastest way to add animated captions\nAI Reframe\nUpdated\nResize any video for every platform in 1 click\nClipAnything\nThe fastest way to turn any video into viral shorts\nSocial scheduler\nSchedule a month’s posts to all platforms in 10 minutes\nBrand template\nEasily create and add brand templates in 1 click\nAI B-Roll\nGet relevant AI B-Roll in 1 click, under 1 minute\nExport to XML\nEdit in Adobe Premiere Pro or DaVinci Resolve at ease\nTeam workspace\nMaximize your team's productivity with AI\nEditor\nUpdated\nAll-in-one AI editor. No editing skills required\nThumbnail generator\nNew\nDrop a link & get YouTube thumbnail in 1 click\nAgentic workflows\nAPI\nThe video API every AI agent can call\nMCP\nNew\nVideo MCP any AI agent workflow can use\nInspiration gallery\nSee what you can build with OpusClip MCP\nSolutions\nCreators\nFastest way to gain your next 1 million views without burnout\nMedia & entertainment\nStreamline video creation workflow & reach 10x more audiences\nMarketers\nMake every marketer a pro video editor\nPodcasters\nGet your next 1 million views in weeks via consistent posting\nAgencies\nScale your business and save $2,700 monthly on editing cost\nLivestreamers\nDrive more traffic back to your livestreams through shorts\nAdvertisers\nCreate high-performing ad creatives at scale\nChurch\nEvangelize digitally to reach more people & get more donations\nE-commerce\nSell more products & increase exposure with viral shorts\nReal estate\nGet more leads through shorts to become the top-selling realtor\nMedia & Entertainment\nCreators\nResources\nCustomer stories\nBlog\nLearning center\nHelp center\nProduct change log\nHow OpusClip helps marketing agencies boost revenue by 148%\nPricing\nFor business\nOpus Labs\nMy dashboard\nSign in\nSign up - It’s FREE\n#1 AI VIDEO CLIPPING TOOL\n1 long video, 10 viral clips. Create 10x faster.\nOpusClip turns long videos into shorts, and publishes them to all social platforms in one click.\nDrop a video link\nInvalid URL\nFor Pro plan, we support videos from:\nYouTube,\nGoogle Drive,\nVimeo,\nZoom,\nRumble,\nTwitch,\nFacebook,\nLinkedIn,\nTwitter,\nLoom,\nRiverside,\nStreamYard and more.\nCurrently, we support videos in English, German, Spanish, French, Portuguese and other 20 more languages.\nGet free clips\nSee demos\nVlog\nSports\nPodcast\nor\nUpload files\nOr upload videos after signing up\nAI clipping\nAI captioning\nAI reframe\nAI B-Roll\nAI audio enhance\nAI voice-over\nUsed by 16M+ creators and businesses\nGrant Cardone\n4.7M\nScott Galloway\n192K\nWhat If\n7.9M\nLogan Paul\n23.6M\nJenny Hoyos\n4M\nLinguamarina\n8.52M\nDhar Mann Studios\n24.8M\nTwoSetViolin\n4.3M\nJon Youshaei\n435K\nArmchair Historian\n2.2M\nSaaStr\n54.4K\nSebastien Jefferies\n422K\nFLAGRANT\n1.5M\nMai Pham\n3.3M\nValuetainment\n5.3M\nJubilee Media\n9.79M\nTom Bilyeu\n4.5M\nJacksfilms\n5.08M\nMark Rober\n65.9M\nAI editing models\nAI that understands every pixel of your video\nThe most powerful AI editing models that work on any video. Built for speed, accuracy, and creative flexibility.\nClipAnything\nEvery other AI clipping tool only works with video podcasts. ClipAnything is the only AI clipping model that turns any genre — vlogs, gaming, sports, interviews, explainer videos — into viral clips in 1 click.\nReframeAnything\nThe only AI reframe model that resizes any video for any platform and keeps moving subjects centered with AI object tracking. If you want more control, use manual tracking to instruct AI exactly what to follow.\nWorkflow automation\nYour video creation process — now on autopilot\nCreate and publish videos 5x faster with OpusClip’s web app and API, so you can go on vacation and still keep your content rolling.\nAI editor\nAI that edits with you, not just for you\nTake full editing control, or let our AI take over. Either way, it’s effortless.\nOpusClip for teams\nScale your creative output and business without scaling overhead\nEvery business is becoming video-first. OpusClip helps your brand stay top of mind.\nBrand templates\nCreate various brand templates with on-brand font style, color, logo, intro&outro and more.\nTeam workspace\nEasily set up a team account to collaborate and manage creative projects with your team members.\nWorkflow integration\nWith our API, you can integrate OpusClip with your CMS and other tools to automate your video creation workflow.\nA partner to your growth\nThe only AI editor that actually drives growth. Just ask millions of creators and brands.\nFrom top creators\nUser growth chart\n\"It used to take days to create clips. Now it takes us minutes to create them.\"\nLewis Howes\n“The only AI tool that I've found helpful so far is OpusClip. It can do something that I don't have time to do. I'm a super fan.”\nJason Lemkin\n\"Opusclip has been crucial in helping me upload more short form videos. I get to throw more things at the wall to see what sticks, rather than waste time editing a short that underperforms. It’s a no-brainer for anyone aiming to convert their long, wide form videos to vertical shorts.\"\nJacksfilms\n\"We love YT shorts' massive reach but hate its revenue - that’s why we use OpusClip to bring the cost down.\"\nWildBrain\n\"It used to take days to create clips. Now it takes us minutes to create them.\"\nLewis Howes\n“The only AI tool that I've found helpful so far is OpusClip. It can do something that I don't have time to do. I'm a super fan.”\nJason Lemkin\n\"Opusclip has been crucial in helping me upload more short form videos. I get to throw more things at the wall to see what sticks, rather than waste time editing a short that underperforms. It’s a no-brainer for anyone aiming to convert their long, wide form videos to vertical shorts.\"\nJacksfilms\n\"We love YT shorts' massive reach but hate its revenue - that’s why we use OpusClip to bring the cost down.\"\nWildBrain\n\"It used to take days to create clips. Now it takes us minutes to create them.\"\nLewis Howes\n“The only AI tool that I've found helpful so far is OpusClip. It can do something that I don't have time to do. I'm a super fan.”\nJason Lemkin\n\"Opusclip has been crucial in helping me upload more short form videos. I get to throw more things at the wall to see what sticks, rather than waste time editing a short that underperforms. It’s a no-brainer for anyone aiming to convert their long, wide form videos to vertical shorts.\"\nJacksfilms\n\"We love YT shorts' massive reach but hate its revenue - that’s why we use OpusClip to bring the cost down.\"\nWildBrain\n\"It used to take days to create clips. Now it takes us minutes to create them.\"\nLewis Howes\n“The only AI tool that I've found helpful so far is OpusClip. It can do something that I don't have time to do. I'm a super fan.”\nJason Lemkin\n\"Opusclip has been crucial in helping me upload more short form videos. I get to throw more things at the wall to see what sticks, rather than waste time editing a short that underperforms. It’s a no-brainer for anyone aiming to convert their long, wide form videos to vertical shorts.\"\nJacksfilms\n\"We love YT shorts' massive reach but hate its revenue - that’s why we use OpusClip to bring the cost down.\"\nWildBrain\n“I see an increase of 266% for YouTube's shown-in-feed. It also helped me discover my niche.”\nKaren V. Kitt, M.Ed. (K)\n\"Watch time increased by 57%. There has been an increase across the board.\"\njraahpodcast\n\"The percentage of those that watch the whole video has increased from 1-3% to 12+%.\"\nveteransarchives\n\"Some OpusClip videos were the top performing ones on our YouTube and TikTok. On average, our views have gone up 2x in the last few months.\"\nWake Up Warrior\n\"Increased my watch time by over 40%, and I tend to gain more subscribers due to my clips versus my long form content.\"\nCloseted Kicks Convos\n\"OpusClip videos drive more people to long form podcasts. Viewers up by 30%.\"\nmatt nappo\n\"Increased my watch time by hundreds of views. I was getting 60-200 views prior to OpusClip. Since using OpusClip, my views range from 500-1,000.\"\nBurstonWithComedy\n\"OpusClip increased my watch time by 50%.\"\nRoJo Travel\n“I see an increase of 266% for YouTube's shown-in-feed. It also helped me discover my niche.”\nKaren V. Kitt, M.Ed. (K)\n\"Watch time increased by 57%. There has been an increase across the board.\"\njraahpodcast\n\"The percentage of those that watch the whole video has increased from 1-3% to 12+%.\"\nveteransarchives\n\"Some OpusClip videos were the top performing ones on our YouTube and TikTok. On average, our views have gone up 2x in the last few months.\"\nWake Up Warrior\n\"Increased my watch time by over 40%, and I tend to gain more subscribers due to my clips versus my long form content.\"\nCloseted Kicks Convos\n\"OpusClip videos drive more people to long form podcasts. Viewers up by 30%.\"\nmatt nappo\n\"Increased my watch time by hundreds of views. I was getting 60-200 views prior to OpusClip. Since using OpusClip, my views range from 500-1,000.\"\nBurstonWithComedy\n\"OpusClip increased my watch time by 50%.\"\nRoJo Travel\n“I see an increase of 266% for YouTube's shown-in-feed. It also helped me discover my niche.”\nKaren V. Kitt, M.Ed. (K)\n\"Watch time increased by 57%. There has been an increase across the board.\"\njraahpodcast\n\"The percentage of those that watch the whole video has increased from 1-3% to 12+%.\"\nveteransarchives\n\"Some OpusClip videos were the top performing ones on our YouTube and TikTok. On average, our views have gone up 2x in the last few months.\"\nWake Up Warrior\n\"Increased my watch time by over 40%, and I tend to gain more subscribers due to my clips versus my long form content.\"\nCloseted Kicks Convos\n\"OpusClip videos drive more people to long form podcasts. Viewers up by 30%.\"\nmatt nappo\n\"Increased my watch time by hundreds of views. I was getting 60-200 views prior to OpusClip. Since using OpusClip, my views range from 500-1,000.\"\nBurstonWithComedy\n\"OpusClip increased my watch time by 50%.\"\nRoJo Travel\n“I see an increase of 266% for YouTube's shown-in-feed. It also helped me discover my niche.”\nKaren V. Kitt, M.Ed. (K)\n\"Watch time increased by 57%. There has been an increase across the board.\"\njraahpodcast\n\"The percentage of those that watch the whole video has increased from 1-3% to 12+%.\"\nveteransarchives\n\"Some OpusClip videos were the top performing ones on our YouTube and TikTok. On average, our views have gone up 2x in the last few months.\"\nWake Up Warrior\n\"Increased my watch time by over 40%, and I tend to gain more subscribers due to my clips versus my long form content.\"\nCloseted Kicks Convos\n\"OpusClip videos drive more people to long form podcasts. Viewers up by 30%.\"\nmatt nappo\n\"Increased my watch time by hundreds of views. I was getting 60-200 views prior to OpusClip. Since using OpusClip, my views range from 500-1,000.\"\nBurstonWithComedy\n\"OpusClip increased my watch time by 50%.\"\nRoJo Travel\n“I see an increase of 266% for YouTube's shown-in-feed. It also helped me discover my niche.”\nKaren V. Kitt, M.Ed. (K)\n\"Watch time increased by 57%. There has been an increase across the board.\"\njraahpodcast\n\"The percentage of those that watch the whole video has increased from 1-3% to 12+%.\"\nveteransarchives\n\"Some OpusClip videos were the top performing ones on our YouTube and TikTok. On average, our views have gone up 2x in the last few months.\"\nWake Up Warrior\n\"Increased my watch time by over 40%, and I tend to gain more subscribers due to my clips versus my long form content.\"\nCloseted Kicks Convos\n\"OpusClip videos drive more people to long form podcasts. Viewers up by 30%.\"\nmatt nappo\n\"Increased my watch time by hundreds of views. I was getting 60-200 views prior to OpusClip. Since using OpusClip, my views range from 500-1,000.\"\nBurstonWithComedy\n\"OpusClip increased my watch time by 50%.\"\nRoJo Travel\nGot questions?\nHow does OpusClip work?\nOpusClip leverages big data to analyze your video content in relation to the latest social and marketing trends from major platforms, and generates a comprehensive understanding of your video for a data-driven decision on content repurposing. It then picks the highlighting moments of your long video, rearranges them into a viral-worthy short and polishes it with dynamic captions, AI-relayout, smooth transition to ensure that the clip is coherent and attention-grabbing, and ends with a strong call-to-action.\nWhat types of videos can I upload?\nYou can use OpusClip to clip any video type that you have with our newest model\nClipAnything\n. Whether it's talking-head videos like podcasts and interviews, vlogs, sports, TV shows, or videos with little to no dialogue, ClipAnything understands all the visual, audio and sentiment cues throughout the video, and can clip the best moments from your video. You can also use natural language prompts to clip a specific moment. To learn more about it, please visit the\nClipAnything\npage.\nWhich languages are supported?\nWe support English, German, Spanish, French, Portuguese, Italian, Dutch, Russian, Polish, Indonesian, Ukrainian, Swedish, Turkish, Norwegian, Croatian, Romanian, Slovak, Greek, Danish, Finnish, Hungarian, Czech, Japanese, Korean, Vietnamese and more to come.\nCan I add captions?\nAbsolutely! In fact, OpusClip automatically adds captions for you with over 97% accuracy! You can change text and edit it freely.\nIs OpusClip free to use?\nOpusClip is free to use.\nIf you are a new user, you will enjoy a 7-day free trial of our Pro Plan, which gives you 90 minutes of video processing time (~30 downloadable clips).\nOnce your free trial ends, you can either upgrade to paid subscription, or use our free-forever plan with 60 minutes of video processing time refreshed monthly.\nWe offer paid subscription plans with flexible upload credits, available on both a monthly and yearly basis. Please check out further details above.\nI have more questions!\nPlease join our\nDiscord\nor email us at\ncontact@opus.pro\nif you need help or have any questions or advice for us.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.opus.pro/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.opus.pro/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.opus.pro/es-es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.opus.pro/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.opus.pro/de-de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.opus.pro/fr-fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/css/opusclip-staging.shared.ac40eb706.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/64351a9e4e9223f5e0f46d64_ico-final.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/6435197bfb1d6e486e04c37b_webclip.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://uploads-ssl.webflow.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://uploads-ssl.webflow.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://assets-global.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://assets-global.website-files.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://public.cdn.opus.pro",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://public.cdn.opus.pro",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.opus.pro",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://public.cdn.opus.pro/assets/ai_clipping_new.riv",
+      "rel": "preload"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://producer.opus.pro/",
+      "rel": null
+    },
+    {
+      "href": "/captions",
+      "rel": null
+    },
+    {
+      "href": "/ai-reframe",
+      "rel": null
+    },
+    {
+      "href": "/clipanything",
+      "rel": null
+    },
+    {
+      "href": "/calendar",
+      "rel": null
+    },
+    {
+      "href": "/brand-templates",
+      "rel": null
+    },
+    {
+      "href": "/ai-b-roll",
+      "rel": null
+    },
+    {
+      "href": "/export-to-xml",
+      "rel": null
+    },
+    {
+      "href": "/team-workspace",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-editor",
+      "rel": null
+    },
+    {
+      "href": "https://opus.pro/thumbnail",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/mcp/inspiration",
+      "rel": null
+    },
+    {
+      "href": "/business/creators",
+      "rel": null
+    },
+    {
+      "href": "/business/media-and-entertainment",
+      "rel": null
+    },
+    {
+      "href": "/business/marketing",
+      "rel": null
+    },
+    {
+      "href": "/business/podcaster",
+      "rel": null
+    },
+    {
+      "href": "/business/agencies",
+      "rel": null
+    },
+    {
+      "href": "/business/live-streaming",
+      "rel": null
+    },
+    {
+      "href": "/business/advertisers",
+      "rel": null
+    },
+    {
+      "href": "/business/church",
+      "rel": null
+    },
+    {
+      "href": "/business/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/business/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/business/media-and-entertainment",
+      "rel": null
+    },
+    {
+      "href": "/business/creators",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/learning-center",
+      "rel": null
+    },
+    {
+      "href": "https://help.opus.pro/",
+      "rel": null
+    },
+    {
+      "href": "https://opusclip.canny.io/changelog",
+      "rel": null
+    },
+    {
+      "href": "/opusclip-helps-marketing-agencies-boost-revenue-and-client-acquisition",
+      "rel": null
+    },
+    {
+      "href": "/how-creators-are-earning-10m-views-in-1-month",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "https://labs.opus.pro/",
+      "rel": null
+    },
+    {
+      "href": "/agent",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/dashboard",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/dashboard",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/dashboard",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/clip/demo-danny",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/clip/demo-basketball",
+      "rel": null
+    },
+    {
+      "href": "https://clip.opus.pro/clip/demo-podcast",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCkoxEfK4yEQSdYRsvA_wFQw",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@jraahpodcast?is_from_webapp=1&sender_device=pc",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@veteransarchives",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@wakeupwarrior2969",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@closetedkicksconvos",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@minddog",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@burstonwithcomedy?_t=8rhMsYF81c6",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCKZ2kC8RGB37XTGqrU_SelA",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCkoxEfK4yEQSdYRsvA_wFQw",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@jraahpodcast?is_from_webapp=1&sender_device=pc",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@veteransarchives",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@wakeupwarrior2969",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@closetedkicksconvos",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@minddog",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@burstonwithcomedy?_t=8rhMsYF81c6",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCKZ2kC8RGB37XTGqrU_SelA",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCkoxEfK4yEQSdYRsvA_wFQw",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@jraahpodcast?is_from_webapp=1&sender_device=pc",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@veteransarchives",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@wakeupwarrior2969",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@closetedkicksconvos",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@minddog",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@burstonwithcomedy?_t=8rhMsYF81c6",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCKZ2kC8RGB37XTGqrU_SelA",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCkoxEfK4yEQSdYRsvA_wFQw",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@jraahpodcast?is_from_webapp=1&sender_device=pc",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@veteransarchives",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@wakeupwarrior2969",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@closetedkicksconvos",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@minddog",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@burstonwithcomedy?_t=8rhMsYF81c6",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCKZ2kC8RGB37XTGqrU_SelA",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCkoxEfK4yEQSdYRsvA_wFQw",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@jraahpodcast?is_from_webapp=1&sender_device=pc",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@veteransarchives",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@wakeupwarrior2969",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@closetedkicksconvos",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@minddog",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@burstonwithcomedy?_t=8rhMsYF81c6",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCKZ2kC8RGB37XTGqrU_SelA",
+      "rel": null
+    },
+    {
+      "href": "/clipanything",
+      "rel": null
+    },
+    {
+      "href": "/clipanything",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/wqbb7ZKhjg",
+      "rel": null
+    },
+    {
+      "href": "mailto:contact@opus.pro?subject=Questions%20about%20OpusClip",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1468
+}

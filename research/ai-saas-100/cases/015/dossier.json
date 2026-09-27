@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "015",
+    "name": "Anyword",
+    "canonical_url": "https://www.anyword.com/",
+    "category": "C02",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-af70a2afdc3529d896ea"
+    ],
+    "aliases": [
+      "https://anyword.com/"
+    ]
+  },
+  "selection": {
+    "candidate_id": "anyword.com",
+    "selection_position": 15,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Marketing teams drafting and selecting advertising copy",
+    "job": "Generate constrained ad-copy variants and rank them against explicitly supplied historical campaign examples",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "variants": "array of text/source_facts",
+      "ranking": "array with evidence and uncertainty",
+      "prediction_scope": "string"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Generate constrained ad-copy variants and rank them against explicitly supplied historical campaign examples",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "The page displays Starter at $49/month and Data-Driven at $99/month, with monthly/yearly controls. The selected billing-toggle state was not verified.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Marketing teams drafting and selecting advertising copy",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "jasper.ai",
+        "name": "Jasper",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary-vendor"
+      ],
+      "value": {
+        "exclusive_access_verified": false
+      },
+      "unknown_reason": "Vendor statements do not establish exclusive access or an independently demonstrated technical advantage."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Marketing teams drafting and selecting advertising copy.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        },
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "The page displays Starter at $49/month and Data-Driven at $99/month, with monthly/yearly controls. The selected billing-toggle state was not verified.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r015-464606dc01e87357594f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r015-464606dc01e87357594f",
+          "locator": "text characters 3826:6312",
+          "excerpt": "k email to keep all your marketing content in one place\nStart with Google\nOr continue with work email\nSign Up\nBy signing up, you agree to our\nTerms of Service\nand\nPrivacy Policy\nPlans & Pricing Designed to Grow With Your Business\nSave up to 50%\nMonthly\nYearly\nStarter\nFor solo marketers & freelancers who want on-brand content backed by Anyword’s performance data.\n$\n49\n/month\nStart\nyour 7-day free trial\nfor free\nBuy Now\nfor free\nStarter plan includes:\n50 performance predictions\n50 performance data rows\nIncludes 1 seat\nUnlimited copy generation\n1 brand voice\n1-click boost performance & content improver\n100+ marketing templates & prompts\nBlog Wizard with plagiarism checker\nAnyword’s Google Chrome Extension\nData-Driven\nFor marketing teams who want on-brand content backed by Anyword’s performance data.\n$\n99\n/month\nStart\nyour 7-day free trial\nfor free\nBuy Now\nfor free\nEverything in Starter, plus:\n100 performance predictions\n50 performance data rows\nIncludes 3 seats\nReal-time performance predictions for manual edits\nBusiness\nFor marketing teams aiming for superior performance across channels with AI trained on their most successful past messages and campaigns.\nCustom pricing\nLets discuss your needs\nContact sales\nEverything in Data-Driven, plus:\n250 performance predictions\n5,000 performance data rows (connect your marketing channel and learn from past campaigns)\nIncludes 3 seats\nCustom-built AI models\nReal-time content intelligence across your marketing channels\nBenchmark new generated content against copy published in the past\nIdentify high-performing talking points & incorporate them into new content\nAutomated website messaging A/B testing\nOnboarding & account setup\nRoles & permissions management\nPriority support\nEnterprise\nFor teams who want custom-built AI tailored to their brand, with enterprise-grade security, privacy, and control.\nCustom pricing\nLets discuss your needs\nRequest a demo\nEverything in Business, plus:\n500+ performance predictions\n10,000+ performance data rows (connect your marketing channel and learn from past campaigns)\nEnterprise-grade security & SSO\nPrivate language model (LLM)\nCustom integrations\nCustom-built AI models\nFull API access\nSecurity & legal review\nDedicated customer success manager\nCompare all plans\nStarter\n-20%\n$49\n/mo\nGet started\nBuy Now\nData-Driven\n-20%\n$99\n/mo\nGet started\nBuy Now\nBusiness\nCustom\nContact sales\nEnterprise\nCustom\nGet started\nSave 20%\nStarter\nFor solo marketers & freelancers who want on-brand content "
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r015-464606dc01e87357594f": "2026-09-20T21:35:30.914546+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: ction with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nBlog\nHuman Insights on Artificial Intel",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r015-4b7e05fa659241de57fb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r015-4b7e05fa659241de57fb",
+          "locator": "text characters 1584:2148",
+          "excerpt": "ction with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nBlog\nHuman Insights on Artificial Intel"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r015-4b7e05fa659241de57fb": "2026-09-20T21:35:30.915421+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary-vendor",
+      "statement": "Vendor data/model/security wording: ompt.\nRequest demo\nTry it now\nTrusted by the World’s Leading Companies\nGen-AI Content Platform\nAward winning AI content platform, backed by A/B-tested data, built for world class enterprise GTM teams.\nGen-AI Content Performance API\nAdd A/B-tested data, performance predictions and performance RAG to your AI Apps and Agents.\nAnyword delivers world class accuracy in performance prediction\nAnyword’s AI delivers industry-leading performance prediction—accurately determining which of two content variations will perform better based on audience, business goal, and channel—with 82% accuracy. In comparison, generic AI models like GPT-5 achieve only 52%.\nPe",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "text characters 4369:5024",
+          "excerpt": "ompt.\nRequest demo\nTry it now\nTrusted by the World’s Leading Companies\nGen-AI Content Platform\nAward winning AI content platform, backed by A/B-tested data, built for world class enterprise GTM teams.\nGen-AI Content Performance API\nAdd A/B-tested data, performance predictions and performance RAG to your AI Apps and Agents.\nAnyword delivers world class accuracy in performance prediction\nAnyword’s AI delivers industry-leading performance prediction—accurately determining which of two content variations will perform better based on audience, business goal, and channel—with 82% accuracy. In comparison, generic AI models like GPT-5 achieve only 52%.\nPe"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "No independent verification of exclusivity, training data rights, model quality, certification, or contractual enforceability.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Jasper advertises: Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-81690fdbcd7e34e96ec8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-81690fdbcd7e34e96ec8",
+          "locator": "metadata[0].description",
+          "excerpt": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-81690fdbcd7e34e96ec8": "2026-09-20T21:00:10.187035+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Jasper. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea",
+        "web-81690fdbcd7e34e96ec8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        },
+        {
+          "evidence_id": "web-81690fdbcd7e34e96ec8",
+          "locator": "metadata[0].description",
+          "excerpt": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00",
+          "web-81690fdbcd7e34e96ec8": "2026-09-20T21:00:10.187035+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Access to real performance data and calibrated prediction quality could be an advantage. Synthetic rankings cannot establish conversion lift.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea",
+        "r015-4b7e05fa659241de57fb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        },
+        {
+          "evidence_id": "web-af70a2afdc3529d896ea",
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        },
+        {
+          "evidence_id": "r015-4b7e05fa659241de57fb",
+          "locator": "text characters 1584:2148",
+          "excerpt": "ction with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nBlog\nHuman Insights on Artificial Intel"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-af70a2afdc3529d896ea": "2026-09-20T21:00:10.228895+00:00",
+          "r015-4b7e05fa659241de57fb": "2026-09-20T21:35:30.915421+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/015/tests/specification.json",
+    "sha256": "479038bd0b80b23887d31df90b7c892ebcf9ff1bb604356e38102bd61f3ef638",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:10.228895+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-af70a2afdc3529d896ea",
+        "r015-464606dc01e87357594f",
+        "r015-4b7e05fa659241de57fb",
+        "web-81690fdbcd7e34e96ec8"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

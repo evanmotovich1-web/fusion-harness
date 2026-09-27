@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+      "source_url": "https://languagetool.org/",
+      "final_url": "https://languagetool.org/",
+      "publisher": "languagetool.org",
+      "retrieved_at": "2026-09-20T21:00:09.656972+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Free AI Grammar Checker - LanguageTool"
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "LanguageTool"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        },
+        {
+          "locator": "text characters 0:247",
+          "excerpt": "Free AI Grammar Checker - LanguageTool\nLanguage\nTool\nYour writing assistant\nGrammar Checker\nParaphrasing Tool\nPremium\n-20%\nFor Business\nMore\nSign Up\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSett"
+        },
+        {
+          "locator": "text characters 1396:1708",
+          "excerpt": "n\nMore than a Grammar Checker\nFree Grammar Checker\nLanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spelling mistakes across languages.\nSign Up\n20\n%\nLimited-time discount on Premium!\nGet discount now\n2000+ organizations trust our AI-based writing"
+        },
+        {
+          "locator": "text characters 1622:1934",
+          "excerpt": "e discount on Premium!\nGet discount now\n2000+ organizations trust our AI-based writing tools\nEuropean Union\nSpiegel Magazine\nDeutsche Presse-Agentur (dpa)\nDeezer\nTÜV Süd\nAlgemeen Nederlands Persbureau (ANP)\nHeise\nMax-Planck-Gesellschaft\nBlinkist\nBertelsmann Stiftung\nSchweizer Radio und Fernsehen (SRF)\nKronen Ze"
+        },
+        {
+          "locator": "text characters 2928:3198",
+          "excerpt": "refox with over 1 million users\nBest-rated grammar checker for Safari\nOver 4 million users trust LanguageTool with their writing\n10,000+ Chrome Store reviews\nTop-rated grammar checker for Chrome with over 3 million users\nDo you speak a foreign language?\nThe Most Interna"
+        },
+        {
+          "locator": "text characters 1026:1567",
+          "excerpt": "dd-ons\nGmail\nOutlook\nBETA\nApple Mail\nThunderbird\nToggle Sub Menu\nOffice Plugins\nGoogle Docs\nWord\nApple Pages\nLibreOffice\nToggle Sub Menu\nApps\nmacOS\nWindows\nMore\nFor Businesses\nProofreading API\nBlog\nCareers\nHelp\nPrivacy\nTerms & Conditions\nImprint\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\nLog in\nMore than a Grammar Checker\nFree Grammar Checker\nLanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spell"
+        }
+      ],
+      "capture_path": "discovery/captures/9b0e8351b8b9ad4fc9bb.html",
+      "capture_sha256": "be1f1c93e9c87c29b848e5ef044f4b70390d282fdd836035021ae8ade9eab9b8",
+      "record_path": "discovery/records/9b0e8351b8b9ad4fc9bb.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r004-70e1845e0b54e7c7c14a",
+      "source_url": "https://languagetool.org/premium",
+      "publisher": "languagetool.org",
+      "retrieved_at": "2026-09-20T21:35:25.748005+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://languagetool.org/premium",
+      "capture_path": "cases/004/research/captures/70e1845e0b54e7c7c14a.html",
+      "capture_sha256": "cf64e2af996b10582c779b74bc3f51424cf01cebf495dfa96ad610d8051a0d4a",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/004/research/records/70e1845e0b54e7c7c14a.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Premium - LanguageTool"
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "LanguageTool"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Only with LanguageTool Premium, you can use the spell checking for longer texts, get more corrections of style and enjoy more features for your proofreading."
+        },
+        {
+          "locator": "text characters 1312:3813",
+          "excerpt": "og in\nTake Your Writing to the Next Level\nMake your text sound professional and avoid embarrassing style, punctuation, and grammar mistakes\n20\n%\nOff\nLimited-time discount on Premium!\nTake your writing to the next level\nhour\nhours\nminute\nminutes\nsecond\nseconds\nThere was an issue displaying the prices. Please try again later.\nLimited-time offer\nFor Individual Users\n-\n% discount\nPerfect for everyone who wants to improve their writing noticeably.\nOnly with Premium\nEnhanced grammar, punctuation, and style checking\nMore than 20,000 additional checks for English, German, French, Spanish, Dutch, Polish, and Portuguese are performed to perfect your text style and prevent embarrassing mistakes.\nUp to 150,000 characters per text field\nPerfect for blog articles, letters, or when that important e-mail gets a little long.\nUnlimited sentence paraphrasing powered by A.I.\nLevel up your writing by having our state-of-the-art A.I. paraphrase your sentences to be more formal, fluid, or simply shorter.\nStyle Guide\nCreate custom rules to enforce consistent wording throughout your writing.\nAdd-on for your browser\nUse LanguageTool's grammar checker wherever you write on the web. Works with all your favorite web services.\nChoose payment interval\nYour current plan\n2 years\n/2 years\nper month\nAnnual\nBESTSELLER\n/year\nper month\nQuarterly\n/quarter\nper month\nMonthly\n/month\n/year\nScroll to read more about Premium\nGet started\nCurrent plan\nLimited-time offer\nFor Teams\n-\n% discount\nOnly for Teams\nAll benefits for Premium\nYour team benefits from all the Premium features like advanced checking, a shared style guide and the ability to check texts up to 150,000 characters.\nUser management\nInvite the users in your team by e-mail and manage them.\nTeam Style Guide\nCreate custom rules to enforce consistent wording and a common voice for all team members.\nTeam Dictionary\nAdd technical terms and unique phrases to your Team Dictionary to avoid spelling mistakes and get better suggestions for everyone.\nUsers\n2\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n1"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r004-8f12ca3a24fc8dac5f8f",
+      "source_url": "https://languagetool.org/proofreading-api",
+      "publisher": "languagetool.org",
+      "retrieved_at": "2026-09-20T21:35:25.747674+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://languagetool.org/proofreading-api",
+      "capture_path": "cases/004/research/captures/8f12ca3a24fc8dac5f8f.html",
+      "capture_sha256": "a1108822e236259f4bcd1b70c35f49f4b22e38202c6d0b62c4e67c43a278d759",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/004/research/records/8f12ca3a24fc8dac5f8f.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "API, Open Source and Developer information - LanguageTool"
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "LanguageTool"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking."
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-324c6f2b51b260f2c8e9",
+      "source_url": "https://www.grammarly.com/",
+      "final_url": "https://www.grammarly.com/",
+      "publisher": "www.grammarly.com",
+      "retrieved_at": "2026-09-20T21:00:09.998981+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Grammarly: Free AI Writing Assistance Grammarly Home Grammarly Home Grammarly Home"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Grammarly: Free AI Writing Assistance"
+        },
+        {
+          "locator": "text characters 0:258",
+          "excerpt": "Grammarly: Free AI Writing Assistance\nProduct\nLearn\nFeatures\nAI agents\nAI assistant\nAI at Grammarly\nTrust & security\nSuperhuman\nUse Grammarly\nDocs\nDesktop\nMobile\nBrowser\nLanguages\nWork\nBy team size\nEnterprise\nTeams & businesses\nIndividuals\nBy team function\nC"
+        },
+        {
+          "locator": "text characters 0:303",
+          "excerpt": "Grammarly: Free AI Writing Assistance\nProduct\nLearn\nFeatures\nAI agents\nAI assistant\nAI at Grammarly\nTrust & security\nSuperhuman\nUse Grammarly\nDocs\nDesktop\nMobile\nBrowser\nLanguages\nWork\nBy team size\nEnterprise\nTeams & businesses\nIndividuals\nBy team function\nCustomer support\nMarketing\nIT\nSales\nHR\nEducati"
+        },
+        {
+          "locator": "text characters 1:313",
+          "excerpt": "rammarly: Free AI Writing Assistance\nProduct\nLearn\nFeatures\nAI agents\nAI assistant\nAI at Grammarly\nTrust & security\nSuperhuman\nUse Grammarly\nDocs\nDesktop\nMobile\nBrowser\nLanguages\nWork\nBy team size\nEnterprise\nTeams & businesses\nIndividuals\nBy team function\nCustomer support\nMarketing\nIT\nSales\nHR\nEducation\nStudent"
+        },
+        {
+          "locator": "text characters 14:326",
+          "excerpt": "e AI Writing Assistance\nProduct\nLearn\nFeatures\nAI agents\nAI assistant\nAI at Grammarly\nTrust & security\nSuperhuman\nUse Grammarly\nDocs\nDesktop\nMobile\nBrowser\nLanguages\nWork\nBy team size\nEnterprise\nTeams & businesses\nIndividuals\nBy team function\nCustomer support\nMarketing\nIT\nSales\nHR\nEducation\nStudents\nInstitution"
+        },
+        {
+          "locator": "text characters 369:681",
+          "excerpt": "ries\nBusiness Events & Resources\nEducation Events & Resources\nAgentic AI\nGrammar guide\nWriting guide\nEssay writing\nCareer guides\nHelp center\nTools\nAI Writing Tools\nGrammar Checker\nPlagiarism Checker\nAI Detector\nAI Humanizer\nParaphrasing Tool\nTranslator\nAI Chat\nCitation Generator\nWord Counter\nAI agents\nResume Bu"
+        },
+        {
+          "locator": "text characters 446:758",
+          "excerpt": "mar guide\nWriting guide\nEssay writing\nCareer guides\nHelp center\nTools\nAI Writing Tools\nGrammar Checker\nPlagiarism Checker\nAI Detector\nAI Humanizer\nParaphrasing Tool\nTranslator\nAI Chat\nCitation Generator\nWord Counter\nAI agents\nResume Builder\nCitation Finder\nAI Grader\nReader Reactions\nContact Sales\nLog in\nGet Gra"
+        }
+      ],
+      "capture_path": "discovery/captures/324c6f2b51b260f2c8e9.html",
+      "capture_sha256": "55145c196e8244254c3bd4e564bf1855bd16aba5d5d8f7fcc7ea05a28f6aa812",
+      "record_path": "discovery/records/324c6f2b51b260f2c8e9.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

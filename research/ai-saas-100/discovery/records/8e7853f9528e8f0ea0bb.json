@@ -1,0 +1,205 @@
+{
+  "evidence_id": "web-8e7853f9528e8f0ea0bb",
+  "source_url": "https://since.dev/",
+  "retrieved_at": "2026-09-20T21:01:54.075660+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://since.dev/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/8e7853f9528e8f0ea0bb.html",
+  "capture_sha256": "94ade4cbbae3d82bc637a3b2efcf8b976acad7399aa7be8b0409526f2c648e80",
+  "bytes_saved": 74401,
+  "title": "Since.dev — Make Your Software Self-Repairable",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Watch APIs, SDKs, packages, and models. Find affected code, review supported repair PRs, and verify changes through your repository’s CI."
+    },
+    {
+      "key": "application-name",
+      "value": "Since.dev"
+    },
+    {
+      "key": "og:title",
+      "value": "Since.dev — Make Your Software Self-Repairable"
+    },
+    {
+      "key": "og:description",
+      "value": "Watch APIs, SDKs, packages, and models. Find affected code, review supported repair PRs, and verify changes through your repository’s CI."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Since.dev"
+    }
+  ],
+  "text": "Since.dev — Make Your Software Self-Repairable\nSkip to content\nSince\n.dev\nProduct\nUse cases\nShared monitoring\nDocs\nPricing\nSign in\nStart free\nMenu\nMake your software\nself-repairable.\nSince.dev\nwatches your APIs, packages, SDKs, and models, then turns supported dependency changes into repair PRs.\nStart free\nSee how it works\nA change becomes a way forward.\nDependency change\nAn API has moved.\nSupported repair\nA draft PR is ready.\nIllustrative workflow\nSince the last change.\nReduced motion\nFor the dependencies behind what you build.\nnpm\nGitHub\nPyPI\nRust\nOpenAPI\nRubyGems\nFrom outside change to inside fix\nLess chasing changes.\nMore moving forward.\nConnect your GitHub repository. See what changed, find the affected code, and review a supported repair.\nA change, followed through.\nInteractive example\n0\n1\nWatch\nSpot the external change.\n0\n2\nImpact\nFind the code it touches.\n0\n3\nRepair\nPrepare a small, supported fix.\n0\n4\nReview\nYour CI. Your final call.\nDependency change detected\nThe SDK changed.\nNow you know.\nA scheduled check finds a release and its official migration guide.\nPreviously observed\n19.0.0\n09:00\nLatest observed\n20.0.0\n10:15\nMigration guide:\nsend\n→\nmessages.create\nIllustrative workflow. Fictional package and observations.\nNext step\nSupported patches and draft PRs by\nSince.dev\n. Tests run in your repository. You choose what ships.\nYour code has dependencies.\nWe keep an eye on them.\nAPI changes\nSDK updates\nDeprecations\nProvider changes\nAPI contract\nAn endpoint moved.\nYour product shouldn’t have to stop.\nConnect a documented API change to the calls that use it. Review a supported endpoint, parameter, or version fix.\nExplore supported sources\n→\nEndpoint deprecated\nExample\n/v1/messages\n/v2/messages\nsrc/integrations/messages.ts\nReview the supported migration\nSmall patch. Clear evidence.\nWe prepare the fix.\nYou have the final say.\nSince.dev\nprepares supported repairs. Your team stays in control of what makes it into production.\nYour checks, already in place.\nDraft PRs use your existing CI.\nA conversation, on the same PR.\nRequest a revision and review the updated patch.\nThe last step is yours.\nNothing is merged or deployed automatically.\nInspect GitHub CI for the current patch, then use human review to decide whether to merge.\nGive your agents\na reality check.\nBefore an agent acts, check its assumptions against the latest recorded observation.\nThat’s world state: external facts, versions, and provider conditions, ready for your agents to check.\nExplore verification\nDoes this still hold?\nexample-sdk.version = 19.0.0\nvalid\nchanged\nunknown\nSomething changed\n20.0.0\nThe observation differs. Your agent gets evidence to review.\nIllustrative results · check observation time and source health. Verification reads recorded evidence, without a fresh fetch.\nUnknown does not mean unchanged.\nShared evidence. Your priorities.\nCheck it once.\nShare what changed.\nA public source is checked once for everyone. Each watch gets the changes it cares about.\nYour watch instructions and notifications stay private.\nHow watches work\nPublic changelog\nOne shared source\nShared evidence\nAPI changes\nPrivate watch\nSecurity fixes\nPrivate watch\nNew releases\nPrivate watch\nLess repeated checking. More useful context.\nOne changing world.\nYour way in.\nGive your agents the changes they need through MCP, HTTP API, or signed webhooks.\nRead\nProcess\nAcknowledge\nA durable cursor keeps your place. Reading does not advance it. Acknowledge after processing, then pick up where you left off.\nRead the docs\nMCP\nHTTP API\nSigned webhooks\nmcp.json\n{\n\"mcpServers\"\n: {\n\"since-dev\"\n: {\n\"type\"\n:\n\"http\"\n,\n\"url\"\n:\n\"https://api.since.dev/mcp\"\n,\n\"headers\"\n: {\n\"Authorization\"\n:\n\"Bearer sc_live_...\"\n} } } }\nWatch subjects, verify facts, inspect coverage, and catch up from the tools your agent already uses.\nIntegration guide\nA little context for every change.\nbreaking\ndeprecated\nbehavioral\nadditive\nadvisory\nStart free.\nBuild from there.\nYour keys. Your choice of where code is processed. Paid plans use your AI provider, billed directly to you.\nFree\nFor developers trying world state and repository impact.\n$0\n/ month\nFree, with no card required\nStart free\n25 hosted AI credits a month\n1 connected repository\n50 repository dependencies monitored\n10 World State watches, every aspect of each\nManual impact previews · no repair PRs\n100 verification calls a month\n1 workspace member\nPro\nWith repairs\nFor developers and small teams maintaining their software.\n$49\n/ month\n$490 a year, save 17%\nStart free\nBring your Anthropic or OpenAI key\n5 connected repositories\nNo repository dependency count limit\n150 World State watches, every aspect of each\nAutomatic repairs and draft PRs\n500 verification calls a month\n3 workspace members\nStudio\nFor agencies and teams maintaining several applications.\n$149\n/ month\n$1,490 a year, save 17%\nStart free\nBring Anthropic, OpenAI, or AWS Bedrock\n15 connected repositories\nNo repository dependency count limit\n500 World State watches, every aspect of each\nAutomatic repairs and draft PRs\n2,000 verification calls a month\n10 workspace members\nEnterprise needs?\nContact us\nGood questions.\nClear answers.\nRead the docs\nWhat does self-repairable software mean?\nSoftware that notices an external dependency change and prepares a supported response. Since.dev connects recorded changes to affected code, prepares small evidence-backed patches, and opens draft PRs when authorized. Your repository runs its checks, and you decide whether to adopt the repair.\nHow often are sources checked?\nSources are checked on a schedule. Each watch uses the slower of its aspect's default cadence and its plan's cadence floor. The watch reports its actual interval. This is scheduled change detection, not a real-time feed.\nWhat does unknown mean?\nUnknown means no known value is available for comparison, for example because a subject has no observations or a source does not publish the requested field. Unknown does not mean unchanged. Verification compares the latest recorded observation; inspect its time and source health before relying on it.\nWhat can I watch?\nStart with a supported package, repository, specification, public page, or status source. Coverage is checked before a watch is created. Private registries, sources behind a login, and sources closed to automated reading are not covered.\nWhat happens while my agent is offline?\nA durable cursor lets your agent resume from acknowledged state and read later changes from its active, attached watches. New watches cover future changes only. Webhooks use at-least-once delivery, so consumers should deduplicate using the event's idempotency key.\nWhat counts toward my plan?\nFree includes one repository and a bounded hosted AI allowance. Pro connects five repositories and Studio connects fifteen. Paid repository work requires your own AI provider; there are no repository AI credit quotas or dependency count limits. World State stays on Since AI with separate watch and monthly verification limits. A watched subject counts once across its aspects and attached agents. Each login includes one Free workspace. Additional owned workspaces need their own paid subscription; invited teams do not consume your Free workspace. There are no per-developer charges.\nHow does bringing my own model work?\nOn Pro, connect your Anthropic or OpenAI API key and select a supported model. Studio and Enterprise also support AWS Bedrock with an AWS access key ID, secret access key, and region. Your provider bills repository AI usage directly; Since charges for the workspace. Free uses Since AI with 25 hosted credits each month, one repository, and no repair PRs. World State always uses Since AI. Provider usage is visible in settings; it is not a Since invoice. If a connection fails, work pauses instead of switching to another provider.\nDo I need to add every repository dependency by hand?\nNo. Automatic dependency monitoring is checked for new GitHub repository connections; review that choice before connecting. Since scans manifests and monitors supported public dependencies, showing coverage gaps and each source's check status. Existing repository choices are preserved. Repository dependency counts are unlimited on paid plans; Free has a bounded allowance. World State watch limits are separate. Free includes manual impact checks; paid plans can investigate compatibility changes and open supported draft PRs when enabled. Initial readings are baselines, not change notifications.\nDoes it repair my code automatically?\nNew paid repository connections default to Automatic draft PRs. Since automatically checks impact, prepares supported repairs, and opens draft PRs; you review and merge. Choose Monitor only to keep repairs manual. Since.dev supports small, documented compatibility fixes in code and configuration. Routine version bumps and work requiring package-manager or lockfile changes are deferred. Insufficient release information means No PR created, with a reason and a background source check when one is scheduled. It does not mean your code is safe or broken. Unsupported work explains the limitation. CI runs in your repository; Since.dev never merges or deploys.\nCan I ask for a different fix?\nYes. Revise the repair in the terminal, or explicitly mention the installed GitHub app in a comment on a PR created by Since, with your instruction. Authorized repository collaborators can request bounded changes to the same repair. The app updates the same PR, preserves earlier versions, and waits for fresh checks. It does not take over other PRs or turn unrelated feature requests into automatic work.\nA little peace of mind.\nKeep building.\nWe’ll keep watch.\nSince.dev\nwatches your dependencies and prepares supported repair PRs. You decide what ships.\nStart free\nWorld state and self-repair for software.\nProduct\nDocs\nPrivacy\nTerms\nContact\nsince\n.dev\n©\n2026\nSince.dev\nSay hello",
+  "links": [
+    {
+      "href": "https://since.dev/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.svg?v=quiet-s-1",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon-192.png?v=quiet-s-1",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.ico?v=quiet-s-1",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png?v=quiet-s-1",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "/assets/index-C0gq6xKO.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/geist-latin-wght-normal-Dm3htQBi.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets/geist-mono-latin-wght-normal-XN7g48iV.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/observatory-hero.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#product",
+      "rel": null
+    },
+    {
+      "href": "/#use-cases",
+      "rel": null
+    },
+    {
+      "href": "/#shared-monitoring",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "/#pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/#product",
+      "rel": null
+    },
+    {
+      "href": "https://theresanaiforthat.com/ai/since-dev/?ref=featured&v=8102058",
+      "rel": "nofollow noopener noreferrer"
+    },
+    {
+      "href": "https://api.since.dev/api/coverage",
+      "rel": null
+    },
+    {
+      "href": "/docs#api",
+      "rel": null
+    },
+    {
+      "href": "/docs#concepts",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "/docs#mcp",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@since.dev",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://app.since.dev/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/#product",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "mailto:hello@since.dev",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "mailto:hello@since.dev",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2742
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-c0fadff54acb974981c2",
+      "source_url": "https://www.heygen.com/",
+      "final_url": "https://www.heygen.com/",
+      "publisher": "www.heygen.com",
+      "retrieved_at": "2026-09-20T21:00:45.946958+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "HeyGen: Create Realistic AI Videos of Yourself in Minutes"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Free AI Video Generator: Create Stunning Videos with AI"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Generate AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "HeyGen"
+        },
+        {
+          "locator": "text characters 0:267",
+          "excerpt": "HeyGen: Create Realistic AI Videos of Yourself in Minutes\n|\nPlatform\nUse cases\nDevelopers\nResources\nEnterprise\nResearch\nPricing\nEN\nSign in\nWe just launched HeyGen for Real Estate. Go check it out\nAI videos starring you, made in minutes\nBe everywhere without being eve"
+        },
+        {
+          "locator": "text characters 126:438",
+          "excerpt": "g\nEN\nSign in\nWe just launched HeyGen for Real Estate. Go check it out\nAI videos starring you, made in minutes\nBe everywhere without being everywhere.\nGet started for free\nSocial Content\nOnline Courses\nLegal\nFinance\nReal Estate\n4.8 / 5 from 1,000+ reviews\nG2 #1 Most realistic avatars\nForbes AI 50 Company\nTrusted"
+        },
+        {
+          "locator": "text characters 347:659",
+          "excerpt": "state\n4.8 / 5 from 1,000+ reviews\nG2 #1 Most realistic avatars\nForbes AI 50 Company\nTrusted by over 1,000,000 developers and leading companies.\nAI Avatar Generator\nThe most lifelike avatars in AI video\nCharacter consistency is what separates a useful avatar from a gimmick. Avatar V delivers it across every angl"
+        },
+        {
+          "locator": "text characters 421:733",
+          "excerpt": "0 Company\nTrusted by over 1,000,000 developers and leading companies.\nAI Avatar Generator\nThe most lifelike avatars in AI video\nCharacter consistency is what separates a useful avatar from a gimmick. Avatar V delivers it across every angle, every expression, and every video you create.\nGet started for free\nChar"
+        },
+        {
+          "locator": "text characters 470:782",
+          "excerpt": "d leading companies.\nAI Avatar Generator\nThe most lifelike avatars in AI video\nCharacter consistency is what separates a useful avatar from a gimmick. Avatar V delivers it across every angle, every expression, and every video you create.\nGet started for free\nCharacter consistency\nAvatar V maintains a single, co"
+        },
+        {
+          "locator": "text characters 1916:2228",
+          "excerpt": "ar V: Scaling video-reference avatar generation\nBuilt on a five-stage AI training pipeline that captures not just how you look, but how you move, gesture, and express yourself.\nRead the report\nOriginal Footage\nAvatar V Generated\nVideo Agent\nFrom idea to finished video with just a prompt\nType your idea. Click ge"
+        },
+        {
+          "locator": "text characters 13206:13553",
+          "excerpt": "ustomers Stories\nAffiliate Program\nWebinars\nHelp Center\nCommunity\nHow To Guides\nAPI Docs\nFAQ\nAI Glossary\nEnterprise\nFor Enterprise\nLocalization\nContact Sales\nCompany\nAbout Us\nCareers\nAlternatives\nAI Research\nSecurity Portal\nTrust & Safety\nPrivacy Policy\nTerms of Service\nModeration Policy\nGDPR Compliance\nCopyright © 2026 HeyGen\n•\nTerms of Service"
+        }
+      ],
+      "capture_path": "discovery/captures/c0fadff54acb974981c2.html",
+      "capture_sha256": "295d67cb4fe24e5d0aa8962b105d5122282305cd00f9e0c76da65ec2962c5649",
+      "record_path": "discovery/records/c0fadff54acb974981c2.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r021-2a8122e765128b19bd7f",
+      "source_url": "https://www.heygen.com/pricing",
+      "publisher": "www.heygen.com",
+      "retrieved_at": "2026-09-20T21:35:31.263358+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.heygen.com/pricing",
+      "capture_path": "cases/021/research/captures/2a8122e765128b19bd7f.html",
+      "capture_sha256": "d4d454d41656997e55c25d27702eacabda2aa1c1b4842ee70aaf95185d6038ff",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/021/research/records/2a8122e765128b19bd7f.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing Plans for Creators and Marketers | HeyGen"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Discover flexible pricing plans for creators and marketers using HeyGen's AI video generator, AI video maker, and more. Start for free at $0/mo with unlimited capabilities. Join over 100,000 businesses today!"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing Plans for Creators and Marketers | HeyGen"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "HeyGen"
+        },
+        {
+          "locator": "text characters 240:2710",
+          "excerpt": "inesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation easier than ever.\nFor Individuals\nFor Businesses\nFree\nCreator\nPro\nMonthly\nYearly\nFree\n$0/mo\nIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$49 / mo\nBuilt for advanced individuals creating premium content at scale. Unlock flexible usage and export in stunning 4K video quality.\nGet started\n1,000 credits\nVideo Generation:\nVideos up to 30 mins\n4K video export\nExtended Avatar IV video generation\nFaster video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Creator, plus:\nCustomizable monthly usage\nEdit & proofread translation script\nAccess to all Advanced AI models\nMonthly\nYearly\nFree\n$0/mo\nIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$49 / mo\nBuilt for advanced individuals creating premium content at scale. Unlock flexible usage and export in stunning 4K video quality.\nGet started\n1,000 credits\nVideo Generation:\nVideos up to 30 min"
+        },
+        {
+          "locator": "text characters 158:427",
+          "excerpt": "tor\nFlexible pricing plans for every creator and team\nHeyGen empowers 100,000+ businesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation easier t"
+        },
+        {
+          "locator": "text characters 558:1276",
+          "excerpt": "oking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$4"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r021-864b9acf783b8dfd35c2",
+      "source_url": "https://www.heygen.com/avatars",
+      "publisher": "www.heygen.com",
+      "retrieved_at": "2026-09-20T21:35:31.332955+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.heygen.com/avatars",
+      "capture_path": "cases/021/research/captures/864b9acf783b8dfd35c2.html",
+      "capture_sha256": "377ebab5ebd1c0fd83d8514fc31778833b8b766579136dbf5cf4027eb055856c",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/021/research/records/864b9acf783b8dfd35c2.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Free AI Avatar Generator"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Choose from 1,100+ realistic AI avatars, turn a photo into a presenter, or create your own. Lip-synced video in 177+ languages."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Free AI Avatar Generator"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "HeyGen"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-5000af18b93b1b2ec157",
+      "source_url": "https://www.synthesia.io/",
+      "final_url": "https://www.synthesia.io/",
+      "publisher": "www.synthesia.io",
+      "retrieved_at": "2026-09-20T21:00:46.061827+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Synthesia: #1 AI Video Platform for Business"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Synthesia: #1 AI Video Platform for Business"
+        },
+        {
+          "locator": "text characters 0:256",
+          "excerpt": "Synthesia: #1 AI Video Platform for Business\nNew release\nA smarter Assistant and our most lifelike Avatars yet\nTry it now\nWhat do you like best about Synthesia?\nHow easy it is to use and get started! The platform is user friendly - anyone can do it! It's a"
+        },
+        {
+          "locator": "text characters 378:690",
+          "excerpt": "elopment Analyst\nOne of 2,000+ 5-star reviews on\nPlatform\nCreate\n240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPubli"
+        },
+        {
+          "locator": "text characters 395:707",
+          "excerpt": "One of 2,000+ 5-star reviews on\nPlatform\nCreate\n240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPublic Video Page\nSSO "
+        },
+        {
+          "locator": "text characters 405:717",
+          "excerpt": "00+ 5-star reviews on\nPlatform\nCreate\n240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPublic Video Page\nSSO Video Page"
+        },
+        {
+          "locator": "text characters 424:736",
+          "excerpt": "on\nPlatform\nCreate\n240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPublic Video Page\nSSO Video Page\nEngage\nInteractivi"
+        },
+        {
+          "locator": "text characters 443:755",
+          "excerpt": "240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPublic Video Page\nSSO Video Page\nEngage\nInteractivity\nRoleplay Session"
+        }
+      ],
+      "capture_path": "discovery/captures/5000af18b93b1b2ec157.html",
+      "capture_sha256": "34dbe39fe72fdc582eae8d7edb6ecec1ca21dc2a35211db5b18beb462f1fa47b",
+      "record_path": "discovery/records/5000af18b93b1b2ec157.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

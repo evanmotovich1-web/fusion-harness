@@ -1,0 +1,30 @@
+{
+  "url": "https://getlinkbunny.com/about",
+  "retrieved_at": "2026-09-20T21:19:18.292929+00:00",
+  "access_method": "credential-free bounded urllib GET",
+  "published_at": null,
+  "error": null,
+  "status": 200,
+  "limit_bytes": 262144,
+  "final_url": "https://getlinkbunny.com/about",
+  "truncated": false,
+  "capture_path": "cases/002/research/79e6dafbfc3b5a89.txt",
+  "capture_sha256": "0a9c03f2270bec451dc96f971497c5f18c4821ed33e5b940ec7c9ae7e96aa24d",
+  "links": [
+    "https://bsky.app/profile/hboon.com",
+    "https://getlinkbunny.com/",
+    "https://getlinkbunny.com/about",
+    "https://getlinkbunny.com/articles/launch-directories",
+    "https://getlinkbunny.com/docs/agents",
+    "https://getlinkbunny.com/faq",
+    "https://getlinkbunny.com/login",
+    "https://getlinkbunny.com/mcp",
+    "https://getlinkbunny.com/pricing",
+    "https://getlinkbunny.com/privacy",
+    "https://getlinkbunny.com/terms",
+    "https://hboon.com/",
+    "https://x.com/hboon"
+  ],
+  "ended_at": "2026-09-20T21:19:18.362365+00:00",
+  "elapsed_seconds": 0.069438959
+}

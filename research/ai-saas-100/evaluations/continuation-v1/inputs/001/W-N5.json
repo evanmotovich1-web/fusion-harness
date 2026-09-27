@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N5",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "Revenue rose from USD 80 to USD 100. Profit was unchanged.",
+        "strength": 3,
+        "method": "rewrite",
+        "protected": [
+          "USD 80",
+          "USD 100"
+        ]
+      }
+    }
+  ]
+}

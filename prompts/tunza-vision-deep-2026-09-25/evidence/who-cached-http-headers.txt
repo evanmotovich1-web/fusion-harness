@@ -1,0 +1,30 @@
+HTTP/2 200 
+date: Thu, 24 Sep 2026 21:03:40 GMT
+content-type: application/pdf
+content-length: 33296408
+server: Apache
+strict-transport-security: max-age=31536000
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self';     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.fundraiseup.com https://*.stripe.com https://m.stripe.network https://partner.googleadservices.com  https://ep2.adtrafficquality.google https://www.google.com https://www.gstatic.com https://cse.google.com https://cdn.dxpr.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;     style-src 'self' 'unsafe-inline' https://www.google.com https://cse.google.com https://cdn.dxpr.com https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com;     img-src 'self' data: blob: https:;     font-src 'self' data: https: https://fonts.gstatic.com;     connect-src 'self' https:;     frame-src 'self' https://*.fundraiseup.com https://*.stripe.com https://www.youtube.com https://www.youtube-nocookie.com https://player.4am.ch https://app.powerbi.com https://www.google.com;     frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://whoafro.newsweaver.com; object-src 'none'; upgrade-insecure-requests;
+x-content-type-options: nosniff
+last-modified: Mon, 13 Apr 2026 10:05:06 GMT
+accept-ranges: bytes
+cache-control: max-age=1209600
+expires: Thu, 08 Oct 2026 21:03:40 GMT
+
+HTTP/2 200 
+date: Thu, 24 Sep 2026 21:04:26 GMT
+content-type: application/pdf
+content-length: 33296408
+server: Apache
+strict-transport-security: max-age=31536000
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self';     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.fundraiseup.com https://*.stripe.com https://m.stripe.network https://partner.googleadservices.com  https://ep2.adtrafficquality.google https://www.google.com https://www.gstatic.com https://cse.google.com https://cdn.dxpr.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com;     style-src 'self' 'unsafe-inline' https://www.google.com https://cse.google.com https://cdn.dxpr.com https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com;     img-src 'self' data: blob: https:;     font-src 'self' data: https: https://fonts.gstatic.com;     connect-src 'self' https:;     frame-src 'self' https://*.fundraiseup.com https://*.stripe.com https://www.youtube.com https://www.youtube-nocookie.com https://player.4am.ch https://app.powerbi.com https://www.google.com;     frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://whoafro.newsweaver.com; object-src 'none'; upgrade-insecure-requests;
+x-content-type-options: nosniff
+last-modified: Mon, 13 Apr 2026 10:05:06 GMT
+accept-ranges: bytes
+cache-control: max-age=1209600
+expires: Thu, 08 Oct 2026 21:04:26 GMT
+

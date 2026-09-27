@@ -1,0 +1,409 @@
+{
+  "evidence_id": "web-b8dc840fe34230025b1f",
+  "source_url": "https://replit.com/",
+  "retrieved_at": "2026-09-20T21:00:55.594077+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://replit.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/b8dc840fe34230025b1f.html",
+  "capture_sha256": "dfc1c5707a0de961e8412fe8afc0503cb9dd58832fc3fe494265ce039c052db3",
+  "bytes_saved": 262144,
+  "title": "AI App and Website Builder | Replit",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "AI App and Website Builder"
+    },
+    {
+      "key": "og:description",
+      "value": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+    },
+    {
+      "key": "og:site_name",
+      "value": "replit"
+    },
+    {
+      "key": "description",
+      "value": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+    }
+  ],
+  "text": "AI App and Website Builder | Replit\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding Pages\nDashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nContact sales\nLog in\nCreate account\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding Pages\nDashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nLog in\nCreate account\nWhat will you build?\nTurn ideas into apps in minutes — no coding needed\nYou can always make changes later.\nYour first prompt is free. No credit consumption.\nTurn ideas into apps in minutes — no coding needed\nStart\nWebsite\nMobile\nDesign\nSlides\nAnimation\nData Visualization\n3D Game\nDocument\nSpreadsheet\nTry an example prompt\nB2B project management app\nFreelance client portal\nAI sales assistant\nMeet\nReplit\nMaximize Making on Replit\nFree mode\nCreate without token costs\nBrainstorm and create at no cost.\nFree\nPower\nMax\nSarah\nGreat! Here's the plan…\nI have an idea to create a mood board.\nSarah\nPerfect! Let's create a project from here!\nReplit chat\nChat that flows\nJust ask what you need, and Replit will take care of the rest.\nInfinite Canvas\nDesign Freely\nIntroducing a new space that allows you to explore and tweak designs visually, and then apply them directly to your app.\nExplore a new vibe\nIntelligent model routing\nThe best model for every task\nIntelligent Model Routing lets you create the same quality output at 65% lower average cost than the previous version of Max Mode.\nTry Free Mode\nRead the documentation\nPowered by the Replit platform\nReplit chat\nDescribe it.\nPublish it.\nMake my idea come true\nPublish\nAgent\nDescribe and publish your project. Replit writes production-ready code, evolves it, and stays out of your way.\nFull stack infrastructure\nBuild & scale your apps easily.\nBuilt-in services with zero setup- Authentication, Database, Hosting, and Monitoring, enabling you to build fully scalable apps easily and securely from day one.\nIntegrations\nConnect to AI & services.\nEnhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\nEnterprise control\nSecure your apps as they scale.\nSecurity controls: SSO/SAML, SOC 2, and admin controls. Screening and secure services keep apps safe.\nReplit chat\nDescribe it.\nPublish it.\nMake my idea come true\nPublish\nAgent\nDescribe and publish your project. Replit writes production-ready code, evolves it, and stays out of your way.\nFull stack infrastructure\nBuild & scale your apps easily.\nBuilt-in services with zero setup- Authentication, Database, Hosting, and Monitoring, enabling you to build fully scalable apps easily and securely from day one.\nIntegrations\nConnect to AI & services.",
+  "links": [
+    {
+      "href": "/public/icons/favicon-prompt-192-rebrand.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/public/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/public/icons/favicon-prompt-192-rebrand.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://replit.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "http://sp.replit.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/public/fonts/ReplitDiatypeVariable.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/public/fonts/ABCDiatypePlusVariable-Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/41ji8_moc_xr2.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/41ji8_moc_xr2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2w5u-hyoll1np.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2w5u-hyoll1np.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2tm5eg2-0_vvl.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2tm5eg2-0_vvl.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fl6zqnu4a-qf.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fl6zqnu4a-qf.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fam56d992a1h.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fam56d992a1h.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2oc2caezpl9lo.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2oc2caezpl9lo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0-63cr_ydu6cu.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0-63cr_ydu6cu.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1l-10iyowwe5a.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1l-10iyowwe5a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1b26dkvz_sfty.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1b26dkvz_sfty.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0_bylh7wzlup4.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0_bylh7wzlup4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/design",
+      "rel": null
+    },
+    {
+      "href": "/products/deployments",
+      "rel": null
+    },
+    {
+      "href": "/slides",
+      "rel": null
+    },
+    {
+      "href": "/products/agent",
+      "rel": null
+    },
+    {
+      "href": "/products/database",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/usecases/founders",
+      "rel": null
+    },
+    {
+      "href": "/usecases/product-managers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/designers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/software-engineers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/operations",
+      "rel": null
+    },
+    {
+      "href": "/usecases/it",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/landing-page-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/dashboards-data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/usecases/rapid-prototyping",
+      "rel": null
+    },
+    {
+      "href": "/usecases/chatbot-builder",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "/enterprise",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://docs.replit.com/getting-started/intro-replit",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "/help",
+      "rel": null
+    },
+    {
+      "href": "https://contra.com/replit",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/gallery",
+      "rel": null
+    },
+    {
+      "href": "https://blog.replit.com/",
+      "rel": null
+    },
+    {
+      "href": "/news",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/design",
+      "rel": null
+    },
+    {
+      "href": "/products/deployments",
+      "rel": null
+    },
+    {
+      "href": "/slides",
+      "rel": null
+    },
+    {
+      "href": "/products/agent",
+      "rel": null
+    },
+    {
+      "href": "/products/database",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/usecases/founders",
+      "rel": null
+    },
+    {
+      "href": "/usecases/product-managers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/designers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/software-engineers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/operations",
+      "rel": null
+    },
+    {
+      "href": "/usecases/it",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/landing-page-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/dashboards-data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/usecases/rapid-prototyping",
+      "rel": null
+    },
+    {
+      "href": "/usecases/chatbot-builder",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://docs.replit.com/getting-started/intro-replit",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "/help",
+      "rel": null
+    },
+    {
+      "href": "https://contra.com/replit",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/gallery",
+      "rel": null
+    },
+    {
+      "href": "https://blog.replit.com/",
+      "rel": null
+    },
+    {
+      "href": "/news",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "https://docs.replit.com",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.119
+}

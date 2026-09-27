@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N6",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "Ivo wrote, \"Do not release batch B7.\" The release remains paused.",
+        "strength": 4,
+        "method": "rewrite",
+        "protected": [
+          "Ivo",
+          "\"Do not release batch B7.\""
+        ]
+      }
+    }
+  ]
+}

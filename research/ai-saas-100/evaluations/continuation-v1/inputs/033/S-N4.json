@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "test_id": "S-N4",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "timezone": "UTC",
+        "day": "2026-09-21",
+        "working_hours": [
+          "09:00",
+          "09:30"
+        ],
+        "meetings": [],
+        "tasks": [
+          {
+            "id": "edge",
+            "minutes": 30,
+            "priority": 1,
+            "deadline": "09:30",
+            "splittable": false
+          }
+        ],
+        "buffer_minutes": 0,
+        "write_to_calendar": false
+      }
+    }
+  ]
+}

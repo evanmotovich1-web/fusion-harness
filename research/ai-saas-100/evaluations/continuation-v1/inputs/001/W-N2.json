@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N2",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "Mira may approve the renewal. Approval has not been confirmed.",
+        "strength": 4,
+        "method": "rewrite",
+        "protected": [
+          "Mira"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "evidence_id": "web-23f02744a69100281688",
+  "source_url": "https://www.saleshandy.com/",
+  "retrieved_at": "2026-09-20T21:00:23.079021+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.saleshandy.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/23f02744a69100281688.html",
+  "capture_sha256": "e704b58d54eba29cd6ed36323b06df039bed0b0afb671bb884d860a695a5986f",
+  "bytes_saved": 262144,
+  "title": "All-in-one Cold Outreach Platform | Saleshandy",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The best cold email outreach software to generate more leads. Automate your outreach with unlimited email accounts, high deliverability, and better open and reply rates."
+    },
+    {
+      "key": "og:title",
+      "value": "All-in-one Cold Outreach Platform | Saleshandy"
+    },
+    {
+      "key": "og:description",
+      "value": "The best cold email outreach software to generate more leads. Automate your outreach with unlimited email accounts, high deliverability, and better open and reply rates."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Saleshandy"
+    }
+  ],
+  "text": "All-in-one Cold Outreach Platform | Saleshandy\nStop Overpaying for Email & Phone Data: Get Real-time Verified Data at Half the Price\nGet up to 50 Credits FREE\nProduct\nSolutions\nFind Leads\nWhy Saleshandy\nPricing\nResources\nLog in\nBook a demo\nTry for free!",
+  "links": [
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/brand/logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/thomas-foley.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/cong-nguyen.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/neo-maulazdi.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/gareth-hayter.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/joshua-lim.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/gino-taka.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/julia-m.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/dan-r.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/huzaifa-f.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-a2c43dd01f2c9365.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/emily-r.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/kritcha-b.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/gino-t.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/testimonials/hermes-l.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.google-analytics.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.saleshandy.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "https://my.saleshandy.com/signup?utm_source=lead_finder_header&utm_medium=direct&utm_campaign=new_product_launch",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/why-saleshandy",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/schedule-demo",
+      "rel": null
+    },
+    {
+      "href": "https://my.saleshandy.com/signup",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2548
+}

@@ -1,0 +1,629 @@
+{
+  "evidence_id": "web-bbba856f6f33851163b0",
+  "source_url": "https://cursor.com/",
+  "retrieved_at": "2026-09-20T21:00:55.571816+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://cursor.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/bbba856f6f33851163b0.html",
+  "capture_sha256": "35b4cab176f0efffb4f4054a7eb55d83b6fd6e81dfbb12468bb6cb1ccc291a9e",
+  "bytes_saved": 262144,
+  "title": "AI Coding Agent for Building Ambitious Software | Cursor",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor."
+    },
+    {
+      "key": "og:title",
+      "value": "AI Coding Agent for Building Ambitious Software | Cursor"
+    },
+    {
+      "key": "og:description",
+      "value": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Cursor"
+    }
+  ],
+  "text": "AI Coding Agent for Building Ambitious Software | Cursor\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nCursor is your coding agent for building ambitious software.\nDownload for macOS\n⤓\nGet started\n→\nRequest a demo\n→\nThis element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.\nCursor Desktop\nGet Cursor\nIn Progress\n2\nBuild Landing Page\nReading docs\nPlan Mission Control\nGenerating plan\nReady for Review\n3\nPyTorch MNIST Experiments\n10m\nPyTorch MNIST Experiments\nSet up Cursor Rules for Dashboard\n30m\nSet up Cursor Rules for Dashboard\nBioinformatics Tools\n45m\n+\n135\n-\n21\n·\nBioinformatics Tools\nhttp://localhost:3000\nAcme Labs\nSoftware creation is changing. We are a group of researchers, engineers, and technologists inventing at the edge of what's useful and possible.\nWe have much to learn, try, and build.\nSee projects\nJoin our team →\n2026\nSecure codebase indexing\nPublished\n2026\nSemantic search\nPublished\n2025\nReinforcement learning\nPublished\n2024\nShadow workspaces\nPublished\n2024\nMulti-agent collaboration\nPublished\n2023\nContext-aware completions\nPublished\n2023\nIntelligent code navigation\nPublished\n2022\nFast inference optimization\nPublished\n2022\nLanguage model fine-tuning\nPublished\nBuild Landing Page\nmake a landing page based on attached docs explaining what we do\nAgent\nGrok 4.6\nCursor CLI\nGet CLI\nCursor Agent\n~/cursor/cursor-web\nBioinformatics Tools\nAdd affine gap alignment. We only have basic NW alignment but I need Gotoh's algorithm for better handling of indels. Also fix the FASTA parser.\n→\nGrok 4.6\n/\nfor commands ·\n@\nfor files\nTrusted every day by teams that build world-class software\nAgents turn ideas into code\nAccelerate development by handing off tasks to Cursor, while you focus on making decisions.\nLearn about agentic development\n→\nThis element contains an interactive demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.\nCursor\nGet Cursor\nfeature-prd.md\npresence.ts\nPlans\nfeature-prd.md\nGrok 4.6\nBuild\nMission Control Interface\nA grid view of all open windows as scaled previews, allowing quick selection to bring any window to front.\nTrigger\nMenu item in MenuBar.tsx (View > Mission Control), hotkey F3, or double-tap desktop.\nView Behavior\nOverlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.\n3\nTasks\nAdd multiplayer mode to useAppStore.ts\nCreate a new MissionControlView.tsx component\nUpdate AppManager.tsx to apply expose modes.\nAdd a task, ⌘K to generate...\nPlan Mission Control\nlet's build a mission control interface, similar to the expose-style window manager on macOS\nPlan\nGrok 4.6\nWorks autonomously, runs in parallel\nAgents use their own computers to build, test, and demo features end to end for you to review.\nLearn about cloud agents →\n\ncursor.com/agent\n\nThis Week\nAcme Research Dashboard\n\nLive Telemetry Pipeline\n\nZero-Downtime Deploys\nThis Month\n\nBinary Protocol Parser\nEdge Cache Invalidation\n\nAuth Token Rotation\nAcme Research Dashboard\nlet's build a dashboard to make our research findings interactive\nExplored\n12 files, 4 searches\nOn it. I'll build the dashboard using your theme config, wire up the research data, and add interactive charts with public access controls.\nWorked for 14m 22s\nProcessed\nscreen recording\nDone! Here's a walkthrough of the dashboard.\nAcme Labs\nSummary\nBuilt the interactive dashboard with realtime charts, data from Snowflake, and shadcn components. Deployed to staging via Vercel.\nAdd a follow up...\nAgent\nOpus 5\nIn every tool, at every step\nCursor runs in your terminal, collaborates in Slack, and reviews PRs in GitHub.\ncurl\nhttps://cursor.com/install\n-fsS\n|\nbash\nThis element contains an interactive demo for sighted users showing multiple Cursor interfaces: the CLI with command-line assistance, Slack integration for team communication. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.\nSlack\nGet Cursor for Slack\n#feature-realtime-sync\n8 members\nswhitmore\n5m\ni wanna be able to go to cursor.com/changelog#1.0 to see 1.0 changelog\neric\n4m\nchecks out\n@cursor\ncan you take a stab?\nCursor\nAPP\n2m\nI added direct linking for changelog entries and updated the Node.js version constraints across the project for better maintainability.\nView PR\nOpen in Cursor\nOpen in Web\ncursor-agent\nGet CLI\n>\nagent\nCursor Agent\n~/anysphere/research · main\n→\nPlan, search, build anything\nGPT-5.6 Sol Extra High Fast\n/\ncommands\n·\n@\nfiles\n·\n!\nshell\nHand work to AI teammates\nBots can sign in to your tools, use them just like you do, and come back with finished work.\nDownload Grok Bot →\nInteractive demo showing Grok Bot. The interface is displayed over a scenic painted landscape wallpaper, giving the demo an artistic backdrop.\nGrok Bot\nDownload\nThe new way to build software.\n“\nIt was night and day from one batch to another, adoption went from single digits to over 80%. It just spread like wildfire, all the best builders were using Cursor.\n”\nDiana Hu\nGeneral Partner\n,\nY Combinator\n“\nMy favorite enterprise AI service is Cursor. Every one of our engineers, some 40,000, are now assisted by AI and our productivity has gone up incredibly.\n”\nJensen Huang\nPresident & CEO\n,\nNVIDIA\n“\nThe best LLM applications have an autonomy slider: you control how much independence to give the AI. In Cursor, you can do Cmd+K for targeted edits, or let it rip with the full autonomy agentic version.\n”\nAndrej Karpathy\nCEO\n,\nEureka Labs\n“\nCursor quickly grew from hundreds to thousands of extremely enthusiastic Stripe employees. We spend more on R&D and software creation than any other undertaking, and there's significant economic outcomes when making that process more efficient.\n”\nPatrick Collison\nCo‑Founder & CEO\n,\nStripe\n“\nThe most useful AI tool that I currently pay for, hands down, is Cursor. It's fast, autocompletes when and where you need it to, handles brackets properly, sensible keyboard shortcuts, bring-your-own-model... everything is well put together.\n”\nshadcn\nCreator of shadcn/ui\n“\nIt's definitely becoming more fun to be a programmer. We are at the 1% of what's possible, and it's in interactive experiences like Cursor where models like GPT-5 shine brightest.\n”\nGreg Brockman\nPresident\n,\nOpenAI\nStay on the frontier\nUse the best model for every task\nChoose between every cutting-edge model from OpenAI, Anthropic, Gemini, SpaceXAI, and Cursor.\nExplore models\n↗\nAsk Cursor to plan or build anything\nAgent\nAuto\nAuto\nSuggested\n✓\nGrok 4.6\nGPT-5.6 Sol\nFable 5.1\nMax\nOpus 5\nGemini 3.1 Pro\nComposer 2.5\nBuild with autonomous agents\nLaunch fleets of agents that work in parallel on ambitious tasks for hours or days.\nLearn about cloud agents\n↗\nAll Repos\nRecents\nFix sign-in redirect on iOS\nWorking\n·\ncursor/mobile\nAdd rate limits to public routes\nWorking\n·\ncursor/api\nCache repository search results\nWorking\n·\ncursor/web\nInvestigate flaky CI shard\nWorking\n·\ncursor/infra\nRetry failed billing webhooks\nWorking\n·\ncursor/backend\nPolish usage chart loading state\nWorking\n·\ncursor/dashboard\nDevelop enduring software\nTrusted by over half of the Fortune 500 to accelerate development, securely and at scale.\nExplore enterprise\n→\nChangelog\nSep 10, 2026\nCursor Projects\nSep 2, 2026\nSelf-hosted machines\nAug 27, 2026\nStart from scratch, without a repo\nAug 19, 2026\nCloud Agents and Cursor Harness Improvements\nSee what's new in Cursor\n→\nCursor is an applied research team focused on building the future of software development.\nJoin us\n→\nRecent highlights\nMar 27, 2026\n·\nResearch\nA technical report on Composer 2\nSasha Rush\n·\n3 min read\nAug 14, 2026\n·\nCompany\nCursor is now a part of SpaceX\nCursor Team\n·\n2 min read\nAug 12, 2026\n·\nResearch\nIntroducing Grok 4.6\nCursor Team\n·\n3 min read\nAug 18, 2026\n·\nResearch\nGit at any scale\nVM\nVicent Martí\n·\n27 min read\nView all blog posts\n→\nTry Cursor now.\nDownload for macOS\n⤓\nGet started\n→\nProduct\nAgents\nTeams\nEnterprise\nPricing\nCode Review\nCLI\nCloud Agents\nComposer\nMarketplace\n↗\nResources\nDownload\nChangelog\nDocs\nLearn\n↗\nValue Calculator\nForum\n↗\nHelp\n↗\nWorkshops\nStatus\n↗\nCompany\nCareers\nBlog\nCommunity\nStudents\nBrand\nFuture\nAnysphere\n↗\nLegal\nTerms of Service\nAcceptable Use Policy\nGrok Bot Terms\nPrivacy Policy\nData Use\nSecurity\nConnect\nX\n↗\nLinkedIn\n↗\nYouTube\n↗\n©\n2026\nAnysphere, Inc.\n🛡\nSOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified\n🌐\nEnglish\n↓\nEnglish\n✓\n简体中文\n日本語\n繁體中文\nEspañol\nFrançais\nPortuguês\n한국어\nDeutsch\nहिन्दी\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nCursor is your coding agent for building ambitious software.\nDownload for macOS\n⤓\nGet started\n→\nRequest a demo\n→\nThis element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.\nCursor Desktop\nGet Cursor\nIn Progress\n2\nBuild Landing Page\nReading docs\nPlan Mission Control\nGenerating plan\nReady for Review\n3\nPyTorch MNIST Experiments\n10m\nPyTorch MNIST Experiments\nSet up Cursor Rules for Dashboard\n30m\nSet up Cursor Rules for Dashboard\nBioinformatics Tools\n45m\n+\n135\n-\n21\n·\nBioinformatics Tools",
+  "links": [
+    {
+      "href": "/marketing-static/_next/static/chunks/15p9_0bg.mv9r.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0-bj.qdghqbe1.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0o8ky-wnj0~2u.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/14h-6p1fgpdgg.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0y6ohv-u0tb1d.js?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cursor.com/an/UfoPFiz3bKlZcL0x/",
+      "rel": "preload"
+    },
+    {
+      "href": "https://0ay7zb.cursor.com/analytics/loader-v1.js?key=6f091e8fd6f3c36209a1e08f140c7a4b334baea548f4702052f0732f8d577990",
+      "rel": "preload"
+    },
+    {
+      "href": "/marketing-static/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://cursor.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cursor.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/cn/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ja/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/zh-Hant/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/es/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/fr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/pt-BR/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ko/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/de/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/hi/",
+      "rel": "alternate"
+    },
+    {
+      "href": "/marketing-static/favicon-light.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/marketing-static/icon-192x192-light.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/apple-touch-icon-light.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=hero_request_demo",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/careers",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/docs/cloud-agent",
+      "rel": null
+    },
+    {
+      "href": "/download/bot?download=1",
+      "rel": null
+    },
+    {
+      "href": "/docs/models",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/docs/cloud-agent",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/changelog/projects",
+      "rel": null
+    },
+    {
+      "href": "/changelog/self-hosted-machines",
+      "rel": null
+    },
+    {
+      "href": "/changelog/start-from-scratch",
+      "rel": null
+    },
+    {
+      "href": "/changelog/08-19-26",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/blog/composer-2-technical-report",
+      "rel": null
+    },
+    {
+      "href": "/blog/joining-spacex",
+      "rel": null
+    },
+    {
+      "href": "/blog/grok-4-6",
+      "rel": null
+    },
+    {
+      "href": "/blog/git-at-any-scale",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/en-US/product",
+      "rel": null
+    },
+    {
+      "href": "/en-US/business/teams",
+      "rel": null
+    },
+    {
+      "href": "/en-US/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/en-US/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en-US/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/cli",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/en-US/composer",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/download",
+      "rel": null
+    },
+    {
+      "href": "/en-US/changelog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/cost-savings",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://status.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/careers",
+      "rel": null
+    },
+    {
+      "href": "/en-US/blog",
+      "rel": null
+    },
+    {
+      "href": "/en-US/community",
+      "rel": null
+    },
+    {
+      "href": "/en-US/students",
+      "rel": null
+    },
+    {
+      "href": "/en-US/brand",
+      "rel": null
+    },
+    {
+      "href": "/en-US/future",
+      "rel": null
+    },
+    {
+      "href": "https://anysphere.inc/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/en-US/acceptable-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/terms/grok-bot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/privacy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/data-use",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/cursorai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://anysphere.inc",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=hero_request_demo",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1889
+}

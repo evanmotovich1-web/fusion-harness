@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "receipt_sha256": "7770830a6fa440adfea5f716a19832ffa99869d3df84d017a957c4e981672ae6",
+  "verified_frozen_artifacts": 31,
+  "component_groups": 25,
+  "explicit_fault_injection_groups": 3,
+  "prohibited_effects_observed": 0,
+  "outside_review_changed_paths": [],
+  "temporary_storage_removed": true,
+  "product_acceptance": false
+}

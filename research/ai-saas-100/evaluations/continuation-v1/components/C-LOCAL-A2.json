@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-LOCAL-A2",
+  "split": "component_only",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "initial_store": {
+        "revision": 1,
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ]
+      },
+      "sequence": [
+        "structured_command",
+        "propose",
+        "apply_without_approval",
+        "fresh_read"
+      ],
+      "structured_request": {
+        "action": "update",
+        "patch": {
+          "id": "c1",
+          "status": "qualified"
+        }
+      }
+    },
+    {
+      "initial_store": {
+        "revision": 1,
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ]
+      },
+      "sequence": [
+        "structured_command",
+        "propose",
+        "deny_exact",
+        "apply_exact",
+        "fresh_read"
+      ],
+      "structured_request": {
+        "action": "update",
+        "patch": {
+          "id": "c1",
+          "status": "qualified"
+        }
+      }
+    }
+  ]
+}

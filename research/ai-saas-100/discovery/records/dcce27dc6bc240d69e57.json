@@ -1,0 +1,117 @@
+{
+  "evidence_id": "web-dcce27dc6bc240d69e57",
+  "source_url": "https://jenni.ai/",
+  "retrieved_at": "2026-09-20T21:00:09.404352+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://jenni.ai/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/dcce27dc6bc240d69e57.html",
+  "capture_sha256": "557378ec422b8dc711151167d50deda17ef225e95da88c0c97c615c8600fa20b",
+  "bytes_saved": 262144,
+  "title": "Jenni | AI Academic Writer & Research Tool for Students & Academics",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+    },
+    {
+      "key": "og:title",
+      "value": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+    },
+    {
+      "key": "og:description",
+      "value": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+    }
+  ],
+  "text": "Jenni | AI Academic Writer & Research Tool for Students & Academics",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/qYjbIznnZuv0AsCQzQJcoyhQI.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/ERRvDx9910nJtxJpyTOUQlmdTY.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://jenni.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://jenni.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/it/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/es/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ar/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/de/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/fr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/hi/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ko/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/pt/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ja/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/zh/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/tr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/zh-hant/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/id/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ru/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 0.1393
+}

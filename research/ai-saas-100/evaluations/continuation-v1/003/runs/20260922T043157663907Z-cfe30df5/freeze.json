@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-22T04:31:58.028387+00:00",
+  "source_snapshot": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+    "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+  },
+  "artifacts": [
+    {
+      "path": "evaluations/continuation-v1/003/execute.py",
+      "sha256": "12a5e8ea6d4065e8b2cdc46e2f9eab5f4db4b7188aedcdcb3dd8d27716353b72",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/execute.py"
+    },
+    {
+      "path": "evaluations/continuation-v1/003/run_component_review.py",
+      "sha256": "66fdda660d5c133a845784ce84180f23c79b3efa286a0ad08b0c064b85248b31",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/run_component_review.py"
+    },
+    {
+      "path": "evaluations/continuation-v1/003/prepare.py",
+      "sha256": "6fe61ddef95bee88a6ec84ae218bbe3fd4886111a045bd66ff0774ba63247206",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/prepare.py"
+    },
+    {
+      "path": "evaluations/continuation-v1/003/component-inputs.json",
+      "sha256": "bac469cbce1e959082f1437896c55e77d028a7c86e7d987d47d02ba66a74b87e",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/component-inputs.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/003/component-oracles.json",
+      "sha256": "ed569b51daeb13aba533e9d2c96f982df9b265d4474462cfbe3b1e44a14b866d",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/component-oracles.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/003/README.md",
+      "sha256": "991adfa9c626d370ab3428dcfb6031e62903cfb04e40cf334b2e10521f7c9ed9",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/003/README.md"
+    },
+    {
+      "path": "evaluations/continuation-v1/adapters.py",
+      "sha256": "216d173890723277224a5f17aeb707ffd42a796a97fa49cb48c3035c598fef3e",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/adapters.py"
+    },
+    {
+      "path": "evaluations/continuation-v1/evaluate.py",
+      "sha256": "1152e6e682950a3b09c29d28d9d6e35a6b9e67291499dd3332ce3cdc6eb15d17",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/evaluate.py"
+    },
+    {
+      "path": "evaluations/continuation-v1/components/C-LOCAL-A2.json",
+      "sha256": "e316c68514e2ebed8017ffaa9cde70b3b97b86039dcedac06ee4c3511e85731c",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/components/C-LOCAL-A2.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/component-oracles/C-LOCAL-A2.json",
+      "sha256": "f29ba2cb34b96806d760de5e904b4d31e35d76f8f99f8b1d92e109f0d932d229",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/component-oracles/C-LOCAL-A2.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/components/C-LOCAL-A3.json",
+      "sha256": "6008993bb2fa33a0948617b2568d5e80b5cac5bc6bbc3e785931ed8d5c1fb263",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/components/C-LOCAL-A3.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/component-oracles/C-LOCAL-A3.json",
+      "sha256": "34ead6334480e644333f239ccd81f46486f3665d3fb096db6c440d8707e66578",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/component-oracles/C-LOCAL-A3.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/components/C-LOCAL-A6.json",
+      "sha256": "39d67d4e164c91f3be0e2db95f014320ac52b2cf65d5106e3d27cc1a0c9df83d",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/components/C-LOCAL-A6.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/component-oracles/C-LOCAL-A6.json",
+      "sha256": "5842b355865a6d340ff5bc2f24cc1c2a5bf5d2d7bea868f9a8263dc16cf94a13",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/component-oracles/C-LOCAL-A6.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/inputs/003/C-A1.json",
+      "sha256": "b7463390dceeae265e3f6d91589511a1e575d0e30b418b601daaddfc80bdbe7c",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/inputs/003/C-A1.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/oracles/003/C-A1.json",
+      "sha256": "606d7fae85fa86a43aafc4d427ef35c94958be384303a7cad7339db100bb6452",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/oracles/003/C-A1.json"
+    },
+    {
+      "path": "capabilities-continuation.json",
+      "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/capabilities-continuation.json"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-summary.json",
+      "sha256": "6a714207008e76f92702643515c44ab00bbe0c579ed5aec721763b86ffe30b00",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/receipts/003-persistence-v1-20260922T033210014938Z-summary.json"
+    },
+    {
+      "path": "evaluations/continuation-v1/selftest-receipts/20260922T040256033925Z-863d211b/freeze.json",
+      "sha256": "f0c0cf1b639cf3b5bdd8b6c00dc02dae490a46ecca20e5ca1350ae157672c079",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/evaluations/continuation-v1/selftest-receipts/20260922T040256033925Z-863d211b/freeze.json"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+      "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/workflow.py",
+      "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/workflow.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/persistence.py",
+      "sha256": "19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/persistence.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py",
+      "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/PERSISTENCE.md",
+      "sha256": "be57d1c80bc87380c3fb7f3bd0dbbdb5dc326bdbde43fb9fe29a88b4140a4d3b",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/PERSISTENCE.md"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/fixtures.json",
+      "sha256": "709362107acff5308488d3282edc13a82ecd2542a95528be218a40ecff037125",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/fixtures.json"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/run.py",
+      "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/run.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/execute.py",
+      "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/execute.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.json",
+      "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.json"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run.py",
+      "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run.py"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.repair-v1.json",
+      "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.repair-v1.json"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run_repair_v1.py",
+      "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8",
+      "retained_copy": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/snapshots/cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run_repair_v1.py"
+    }
+  ],
+  "exposure": "independent_authored_exposed"
+}

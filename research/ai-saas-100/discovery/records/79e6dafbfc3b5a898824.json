@@ -1,0 +1,129 @@
+{
+  "evidence_id": "web-79e6dafbfc3b5a898824",
+  "source_url": "https://getlinkbunny.com/about",
+  "retrieved_at": "2026-09-20T21:02:59.228185+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://getlinkbunny.com/about",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/79e6dafbfc3b5a898824.html",
+  "capture_sha256": "747f054c05c9eb8cb594650ee1ca34d6d7119a589e536f9e62e769fae6e7af21",
+  "bytes_saved": 11094,
+  "title": "About LinkBunny",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Learn why LinkBunny is built for coding agents, how its API-first nofollow backlink marketplace works, and how to contact the independent maker."
+    },
+    {
+      "key": "og:site_name",
+      "value": "LinkBunny"
+    },
+    {
+      "key": "og:title",
+      "value": "About LinkBunny"
+    },
+    {
+      "key": "og:description",
+      "value": "Learn why LinkBunny is built for coding agents, how its API-first nofollow backlink marketplace works, and how to contact the independent maker."
+    }
+  ],
+  "text": "About LinkBunny\nLinkBunny\nAbout\nAgent setup\nPricing\nFAQ\nSign in\nABOUT LINKBUNNY\nLinkBunny is designed to be used by coding agents.\nYour coding agent looks for a suitable spot in the part of your site you declared. You decide whether it gets published and can reject anything that does not fit.\nLinkBunny is built by Hwee-Boon Yar, a solo indie developer who has been writing and delivering software for 30 years.\nContact\nEmail:\nhboon@getlinkbunny.com\n@hboon on X/Twitter\n@hboon.com on Bluesky\nLinkBunny\nMade by Hwee-Boon Yar\nCommit fe0891946216e66fc4f1a278448046e396d5e378\nMCP\nArticles\nFAQ\nPrivacy\nTerms\nAgent setup\n© 2026\n↗\nAsk Boon\nDIRECT LINE TO THE FOUNDER\nQuestions about fit or setup?\n×\nI’m Hwee-Boon, the founder. Ask about LinkBunny, site quality, or setup, and I’ll reply by email.\nEmail for my reply\nQuestion or feedback\n0 / 2,000\n⌘/Ctrl + Enter to send\nSend to Boon",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/assets/index-Ds81ueaH.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://getlinkbunny.com/about",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/docs/agents",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "mailto:hboon@getlinkbunny.com",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/hboon",
+      "rel": null
+    },
+    {
+      "href": "https://bsky.app/profile/hboon.com",
+      "rel": null
+    },
+    {
+      "href": "https://hboon.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/articles/launch-directories",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/docs/agents",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1074
+}

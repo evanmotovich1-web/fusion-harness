@@ -1,0 +1,745 @@
+{
+  "evidence_id": "web-431579ac961017a6b319",
+  "source_url": "https://www.submagic.co/",
+  "retrieved_at": "2026-09-20T21:00:45.857077+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.submagic.co/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/431579ac961017a6b319.html",
+  "capture_sha256": "3f5516b076f35c4a9978f05b71aeec356958dd74bbe114fd31f94379487d92ca",
+  "bytes_saved": 262144,
+  "title": "Submagic - Edit shorts 10x faster with AI share_2_fill share_2_fill",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Submagic makes your short-form videos captivating with AI captions, b-rolls, and smart edits. Save time and grow your social media reach effortlessly."
+    },
+    {
+      "key": "og:title",
+      "value": "Submagic - Edit shorts 10x faster with AI"
+    },
+    {
+      "key": "og:description",
+      "value": "Submagic makes your short-form videos captivating with AI captions, b-rolls, and smart edits. Save time and grow your social media reach effortlessly."
+    }
+  ],
+  "text": "Submagic - Edit shorts 10x faster with AI\nSubmagic API is live! Automate your video editing workflow.\nExplore now →\nTry It Out\nProduct\nFeatures\nAI Captions\nAI Auto Edit\nMagic Clips\nTrimming\nAI Actors Studio\nB-Roll\nSubtitle Generator\nAuto-Zoom\nAI Eye Contact\nAI Video Translator\nImages & GIFs\nTransitions\nAI Video Editor\nSound Effects\nBackground Music\nAuto Description\nClip Maker\nPublishing\nAutomation\nVideo Editing API\nIntegrations\nUse Cases\nBusiness\nMedia\nAgencies\nMarketing\nAdvertisers\nE-commerce\nCoaches\nStartups\nReal Estate\nCreators\nTikTok Video Editor\nYoutube Clip Maker\nYoutube Shorts Maker\nYoutube AI Video Editor\nInstagram Reels Maker\nFacebook Reels Maker\nLinkedIn Video Maker\nAll Use Cases\nSuccess Stories\nSuccess Stories\nHow Sportskeeda scaled to 2,500+ monthly videos with Submagic.\n+40%\nReach growth\nRead full story\nPricing\nAffiliates\nResources\nTools\nYoutube\nTitle Generator\nUsername Generator\nHashtag Generator\nDescription Generator\nTranscript Generator\nInstagram\nUsername Generator\nHashtag Generator\nCaption Generator\nTiktok\nUsername Generator\nHashtag Generator\nCaption Generator\nVideo Downloader\nTranscript Generator\nContent Creation\nAI Video Idea Generator\nVideo Hook Generator\nVideo Script Generator\nBlog\nMake a viral video\nGet more views on TikTok\nHooks for Instagram Reels\nHooks for TikTok\nUpload high quality TikToks\nAdd captions to TikTok\nBest fonts for captions\nBest subtitle generators\nBest AI video editors\nBest AI caption generator\nBest Reel editing apps\nAffiliates\nBecome an affiliate\nContact sales\nLogin\nTry For Free\nProduct\nFeatures\nAI Captions\nPublishing\nAI Auto Edit\nTrimming\nMagic Clips\nB-Roll\nSubtitle Generator\nAI Actors Studio\nAI Video Translator\nAI Eye Contact\nAuto-Zoom\nImages & GIFs\nTransitions\nSound Effects\nBackground Music\nAuto Description\nClip Maker\nAI Video Editor\nAutomation\nVideo Editing API\nIntegrations\nUse Cases\nBusiness\nMedia\nAgencies\nMarketers\nAdvertisers\nE-commerce\nCoaches\nStartups\nReal Estate\nSuccess Stories\nSuccess Stories\nCreators\nTikTok Video Editor\nYoutube Clip Maker\nYoutube Shorts Maker\nYoutube AI Video Editor\nInstagram Reels Maker\nFacebook Reels Maker\nLinkedIn Video Maker\nPricing\nResources\nYoutube\nTitle Generator\nUsername Generator\nHashtag Generator\nDescription Generator\nTranscript Generator\nTiktok\nHashtag Generator\nCaptions Generator\nVideo Downloader\nTranscript Generator\nInstagram\nUsername Generator\nCaptions Generator\nHashtag Generator\nContent Creation\nAi Video Idea Generator\nVideo Hook Generator\nVideo Script Generator\nAffiliates 💸\nWe're Hiring!\nBlog\nCreator Tips\nHow to make a viral video\nHow to get more views on TikTok\nHooks for Instagram Reels\nHooks for TikTok\nUpload high quality TikToks\nTutorial\nAdd captions to Youtube Shorts\nAdd captions to TikTok\nAdd captions to Instagram Reels\nAdd text to videos\nBest fonts for captions and subtitles\nGuide\nBest subtitle generators\nBest AI video editors\nClosed captions vs open captions\nBest AI caption generator\nBest Reel editing apps\nGet a demo\nLogin\nEdit shorts 10x faster with AI\nThe new way to edit videos faster. From raw footage to viral shorts in 1 click.\nGet Started Now\nTry for free\nTrustpilot\nJoin 4M+ businesses that save 10+ hours every week\nFEATURES\nThe new way to edit videos. Edit faster than ever before.\nSubmagic removes the slow, manual parts of editing so you can publish more, faster, without sacrificing quality.\nCaptions styles that keep people watching\nGenerate viral caption styles in 123 languages with 99% accuracy, designed to boost views and improve retention.\nTurn one video into multiple shorts instantly\nAutomatically repurpose videos into shorts with Magic clips. Extract key moments, cuts clips, and post content at scale.\nEdit any video instantly with AI\nEdit videos in one click. Cut, trim, and publish shorts content 10x faster without spending hours in editing.\nSchedule posts and publish video across channels\nPick a date, choose platforms, and publish directly from the editor. Submagic automatically publishes on schedule.\nCreate shorts without filming with AI avatars\nUse AI avatars to create videos without filming or hiring actors. Publish consistent content faster and cheaper.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6469e2294ac68c3d5caea327/css/submagic.shared.1e04a0237.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6469e2294ac68c3d5caea327/649ece3d4eda352389d58043_Icon%20And%20Favicon%400.5x.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6469e2294ac68c3d5caea327/64bfa3c12a5deee2593d92ac_256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.submagic.co",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.submagic.co",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/hi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/el",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/ro",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/da",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/sk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/cs",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/hu",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.submagic.co/bg",
+      "rel": "alternate"
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/ai-caption",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/features/magic-clips",
+      "rel": null
+    },
+    {
+      "href": "/features/trim-video",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-avatar-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/features/b-roll",
+      "rel": null
+    },
+    {
+      "href": "/auto-subtitle-generator",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-zooms",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-eye-contact",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-translator",
+      "rel": null
+    },
+    {
+      "href": "/features/add-images-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/transition-editor",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/features/add-sound-effects-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/add-background-music-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-description-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-clip-maker",
+      "rel": null
+    },
+    {
+      "href": "/social-media-scheduler",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solutions/media",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing",
+      "rel": null
+    },
+    {
+      "href": "/solutions/advertising",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ecommerce",
+      "rel": null
+    },
+    {
+      "href": "/solutions/coaching",
+      "rel": null
+    },
+    {
+      "href": "/solutions/startup",
+      "rel": null
+    },
+    {
+      "href": "/solutions/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/tiktok-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/youtube-clip-maker",
+      "rel": null
+    },
+    {
+      "href": "/youtube-shorts-maker",
+      "rel": null
+    },
+    {
+      "href": "/youtube-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/instagram-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/facebook-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/linkedin-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/case-studies/sportskeeda",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-title-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-username-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-description-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-transcript-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-username-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-caption-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-username-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-caption-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-video-downloader",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-transcript-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-video-idea-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-hook-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-script-generator",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/how-to-make-a-viral-video",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/10-proven-strategies-to-get-more-views-and-followers-on-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-instagram-reel-hooks",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-hooks-for-tiktok-and-instagram",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/high-quality-upload-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/add-captions-on-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-font-for-subtitle",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-subtitle-generators",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-ai-video-editors",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-ai-captions-app-for-videos",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-reel-editing-apps",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.submagic.co",
+      "rel": null
+    },
+    {
+      "href": "https://app.submagic.co/signup",
+      "rel": null
+    },
+    {
+      "href": "/ai-caption",
+      "rel": null
+    },
+    {
+      "href": "/social-media-scheduler",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/features/trim-video",
+      "rel": null
+    },
+    {
+      "href": "/features/magic-clips",
+      "rel": null
+    },
+    {
+      "href": "/features/b-roll",
+      "rel": null
+    },
+    {
+      "href": "/auto-subtitle-generator",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-avatar-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-translator",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-eye-contact",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-zooms",
+      "rel": null
+    },
+    {
+      "href": "/features/add-images-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/transition-editor",
+      "rel": null
+    },
+    {
+      "href": "/features/add-sound-effects-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/add-background-music-to-video",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-description-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-clip-maker",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/solutions/media",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing",
+      "rel": null
+    },
+    {
+      "href": "/solutions/advertising",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ecommerce",
+      "rel": null
+    },
+    {
+      "href": "/solutions/coaching",
+      "rel": null
+    },
+    {
+      "href": "/solutions/startup",
+      "rel": null
+    },
+    {
+      "href": "/solutions/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/tiktok-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/youtube-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/youtube-shorts-maker",
+      "rel": null
+    },
+    {
+      "href": "/youtube-video-editor",
+      "rel": null
+    },
+    {
+      "href": "/instagram-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/facebook-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/linkedin-reels-maker",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-title-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-username-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-description-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/youtube-transcript-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-caption-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-video-downloader",
+      "rel": null
+    },
+    {
+      "href": "/tools/tiktok-transcript-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-username-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-caption-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/instagram-hashtag-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-video-idea-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-hook-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-script-generator",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "https://cord-wall-f76.notion.site/submagic-job-board",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/how-to-make-a-viral-video",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/10-proven-strategies-to-get-more-views-and-followers-on-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-instagram-reel-hooks",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-hooks-for-tiktok-and-instagram",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/high-quality-upload-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/how-to-add-captions-to-youtube-shorts",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/add-captions-on-tiktok",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/how-to-add-subtitles-to-instagram-reels",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/how-to-add-text-to-videos",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-font-for-subtitle",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-subtitle-generators",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-ai-video-editors",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/closed-captions-vs-open-captions",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-ai-captions-app-for-videos",
+      "rel": null
+    },
+    {
+      "href": "https://www.submagic.co/blog/best-reel-editing-apps",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.submagic.co/home",
+      "rel": null
+    },
+    {
+      "href": "https://app.submagic.co/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.submagic.co/signup",
+      "rel": null
+    },
+    {
+      "href": "https://g.page/r/CbyvYMMaLfroEB0",
+      "rel": null
+    },
+    {
+      "href": "https://www.trustpilot.com/review/submagic.co",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.g2.com/products/submagic/reviews",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2278
+}

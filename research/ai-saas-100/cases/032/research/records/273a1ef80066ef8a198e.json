@@ -1,0 +1,502 @@
+{
+  "evidence_id": "r032-273a1ef80066ef8a198e",
+  "source_url": "https://www.qodo.ai/pricing/",
+  "publisher": "www.qodo.ai",
+  "retrieved_at": "2026-09-20T21:35:37.960265+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.qodo.ai/pricing/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "cases/032/research/captures/273a1ef80066ef8a198e.html",
+  "capture_sha256": "2747905471c066c016798aa48d35ad586327446b531850b371bf38ffdf9e3531",
+  "bytes_saved": 155833,
+  "title": "Qodo Plans & Pricing | Free to Start",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Learn more about Qodo pricing and plans. You can start for free as an individual \"Developer\", go for \"Teams\" plan for advanced features and collaboration or explore our \"Enterprise\" option for large code bases and all-in-one intelligent coding platform."
+    },
+    {
+      "key": "og:title",
+      "value": "Pricing"
+    },
+    {
+      "key": "og:description",
+      "value": "Learn more about Qodo pricing and plans. You can start for free as an individual \"Developer\", go for \"Teams\" plan for advanced features and collaboration or explore our \"Enterprise\" option for large code bases and all-in-one intelligent coding platform."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Qodo"
+    }
+  ],
+  "text": "Qodo Plans & Pricing | Free to Start\nSkip to content\nLog in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit integration\nFull codebase intelligence\nContext Engine\nCodebase Quality\nRules, standards, and code health\nAgentic Toolbox\nA CLI-powered quality counterpart for coding agents\nResources\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nExplore\nLearning\nWebinars, tutorials and interviews\nDocs\nGet started with Qodo\nBlog\nTech content and product updates\nAI Code Review Benchmark\nMeasuring issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassador Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love hearing from you\nPricing\nEnterprise\nLog in\nLog in\nBook a Demo\nStart Trial\n904.2K\n648.6K\n13.1K\nCode Quality\nthat\nScales with Your Team\n$.012/credit, pooled across the team\nSwitch packs anytime\nNo annual commitment on Pro Team plan\nNo rate limits\nGet started with unlimited credits\nDesigned for up to 30 users\nPro Team\nExplore Qodo's full code review platform\nPro Team\n$30\nRaise the code quality bar across your team\nstart now\nFree 14 Day Trial\nno credit card\nUnlimited reviews\nUnlimited credits\n~18 Reviews/Mo\n2,500 credits\n~36 Reviews/Mo\n5,000 credits\n~144 Reviews/Mo\n20,000 credits\nSee additional plan options\nAgentic PR code review\nRules system (no limit)\nGit + IDE integrations\nPre-PR review skills\nDashboard & analytics\nEverything in Trial, plus:\nSwitch or add credit packs anytime\nStandard support\nCustomer-set monthly overage cap\nMonthly billing • no commitment\nStrict data retention\nCustom plan\nFor 30+ users\nEnterprise\nDeliver quality and speed across every team and repo\nbook a demo\nEverything in Pro Team, plus:\nSSO / SAML and audit logs\nGovernance analytics dashboard\nAdvanced self-learning\nBYOK (bring your own LLM keys)\nSingle-tenant SaaS or on-prem\nPriority support, dedicated CSM\nCompare plans\nPro Team Plan\nSame as Trial\nEnterprise Plans\ncore\nAgentic PR code review\nPro Team Plan: Included\nEnterprise Plans: Included\nRules system (no limit)\nPro Team Plan: Included\nEnterprise Plans: Included\nGit + IDE integrations\nPro Team Plan: Included\nEnterprise Plans: Included\nShift-left skills\nPro Team Plan: Included\nEnterprise Plans: Included\nStrict data retention\nPro Team Plan: Included\nEnterprise Plans: Included\nadvanced\nSelf-learning system\nPro Team Plan: Not included\nEnterprise Plans: Included\nCross-repo capabilities\nPro Team Plan: Included\nEnterprise Plans: Included\nCustom agentic workflows\nPro Team Plan: Not included\nEnterprise Plans: Included\nGerrit support\nPro Team Plan: Not included\nEnterprise Plans: Included\nAnalytics\nDashboard & Analytics\nPro Team Plan: Included\nEnterprise Plans: Included\nAdvanced Analytics\nPro Team Plan: Not included\nEnterprise Plans: Included\nsecurity & deployment\nSSO / SAML\nPro Team Plan: Not included\nEnterprise Plans: Included\nAudit logs\nPro Team Plan: Not included\nEnterprise Plans: Included\nBYOK (bring your own LLM keys)\nPro Team Plan: Not included\nEnterprise Plans: Included\nSingle-tenant SaaS\nPro Team Plan: Not included\nEnterprise Plans: Included\nOn-prem / air-gapped\nPro Team Plan: Not included\nEnterprise Plans: Included\nsupport\nStandard support\nPro Team Plan: Included\nEnterprise Plans: Included\nPriority support / SLA\nPro Team Plan: Not included\nEnterprise Plans: Included\nDedicated CSM\nPro Team Plan: Not included\nEnterprise Plans: Included\ncommercial\nAnnual contracts & negotiated pricing\nPro Team Plan: Not included\nEnterprise Plans: Included\nMSA / DPA\nPro Team Plan: Not included\nEnterprise Plans: Included\nQ&A\nQuestions?\nWhat is a credit?\nA credit is the unit Qodo uses to meter review activity. Every code review draws credits from your monthly pool. Smaller PRs draw fewer credits, larger or more complex reviews draw more. Your dashboard shows real-time balance and burn rate so you always know where you stand.\nDo I need a credit card to start the trial?\nNo. Sign in with GitHub, Google, or email, install Qodo on your repos, and reviews start running. You will need Admin access to install. A credit card is only required when you pick a paid plan.\nWhat happens when my trial ends?\nReviews pause and the dashboard prompts you to pick a plan. We’ll suggest a credit pack based on the review volume your team generated during the trial. Once you upgrade, reviews resume immediately.\nIs there a free plan?\nWe don’t offer a permanent free tier. After your trial, pick a paid plan to keep reviewing.\nDo you have a free plan for open source projects?\nYes. Qualified open source projects can apply to the\nQodo for Open Source program\nfor free access.\nCan I change plans later?\nYes. Upgrade, downgrade, or switch credit packs from the dashboard at any time. Changes take effect on your next billing cycle.\nWhat happens if I use all my credits before the month ends?\nReviews keep running. Once your base credits are depleted, you enter overage at the same per-credit rate as your base plan, with no premium and no penalty. Overage accrues against a monthly spending cap that you set and can change at any time.\nIs there a limit on the number of repositories, users, or reviews?\nNo limits on repositories or reviews. Add unlimited users during your free trial, and when you upgrade to Pro Teams, the plan supports up to 30 users. Install Qodo on as many repos as you want, run as many reviews as your credit pool supports, and your engineers never need to create Qodo accounts.\nDo unused credits roll over to the next month?\nCredits expire at the end of each monthly cycle. Each cycle starts fresh with a new pool. Pick a plan that fits your typical usage so you’re not leaving credits on the table, and size up if you find yourself in overage every month\nWill my reviews ever stop running unexpectedly?\nNo. You’ll get notifications as you approach your overage cap, well before reviews pause. If you hit the cap, you can raise it from the dashboard and reviews resume immediately. If a payment fails, we’ll notify you before reviews pause so you have time to update your card.\nDo you train AI models on my code?\nNo. Qodo does not train models on your code. Your code is used only to generate reviews for your team.\nWhat kind of support do I get on each plan?\nAll paid self-serve plans include standard support: documentation, in-product help, and ticket-based response from our team. Enterprise plans add priority response, a dedicated SLA, and an assigned Qodo team member for your account.\nsee qodo in action\nLooking for a tailored walk through?\nBook a demo\nQodo is an\nAI code review\nplatform that brings automated, context-aware review into your IDE, pull requests, CLI, and Git workflows. It’s built for complex codebases, with context across multi-repos, to surface critical issues early, enforce standards, shorten feedback cycles, and ship better code faster. In Qodo, AI code review, code quality, and SDLC governance come together in one platform for teams that care as much about\nhow code is reviewed\nas how fast it ships.\nProducts\nGit Integration\nProduct updates\nReport Issues\nResources\nBlog\nDocs\nEvents\nMedia Kit\nQodo Trust Center\nLearn\nCode Review Academy\nAI For Coding\nQodo & Google Cloud\nQodo & Copilot\nQodo & Windsurf\nQodo & Amazon Q\nQodo & Tabnine\nQodo & Cursor\nGlossary\nAbout\nPricing\nOur Mission\nMeet The Team\nCareers\nBacked By\nData Privacy And Security\nWe support all major programming languages\nAvailable now on\n@ 2026 Qodo. All Rights Reserved.\nTerms of Use\nPrivacy Policy\nData Processing Addendum",
+  "links": [
+    {
+      "href": "https://www.qodo.ai/pricing/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.qodo.ai/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/comments/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2Fpricing%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2Fpricing%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-header/style-index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-hero-pricing/style-index.css?ver=1789740378",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-pricing/style-index.css?ver=1789740378",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-compare-plans/style-index.css?ver=1789740378",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-features-slider/style-index.css?ver=1789740378",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-faq/style-index.css?ver=1789740243",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-cta/style-index.css?ver=1789740378",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-footer/style-index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/icons/icons-custom.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/css/index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/wp/v2/pages/10720",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://www.qodo.ai/?p=10720",
+      "rel": "shortlink"
+    },
+    {
+      "href": "https://tag.clearbitscripts.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://tag.clearbitscripts.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#wp--skip-link--target",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai?product_source=login",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://www.qodo.ai/products/",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/ai-code-review-platform/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-git/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-context-engine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-rules/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-agentic-toolbox/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/resources/",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/resources/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/qodo-documentation",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/ai-code-review-benchmark/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/podcasts/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/solutions/open-source/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/events/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/community/super-qodoer/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/careers/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/contact/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai?product_source=login",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://app.qodo.ai/?product_type=qodo-merge&product_source=marketing",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://marketplace.visualstudio.com/items?itemName=Codium.codium",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://plugins.jetbrains.com/plugin/21206-codiumai--meaningful-tests-in-python-powered-by-testgpt",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://github.com/marketplace/qodo-merge-pro",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.qodo.ai/signin",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/solutions/open-source/",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/Codium-ai",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.youtube.com/@QodoAI",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.linkedin.com/company/qodoai",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://x.com/QodoAI",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-git/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/whats-new",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/report-issues/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/qodo-documentation",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/events/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/media-kit/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/academy/",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ai-coding-assistant-tools/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-google-cloud/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-github-copilot/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-windsurf/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-amazon-q/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-tabnine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-cursor/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/glossary/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#our-mission",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#about-team",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/careers/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#backed-by",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/blog/qodo-security-our-commitment-to-data-privacy-and-security/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/terms/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/data-processing-addendum/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.181191
+}

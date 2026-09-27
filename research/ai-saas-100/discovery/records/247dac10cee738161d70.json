@@ -1,0 +1,549 @@
+{
+  "evidence_id": "web-247dac10cee738161d70",
+  "source_url": "https://www.ocoya.com/",
+  "retrieved_at": "2026-09-20T21:00:10.598278+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.ocoya.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/247dac10cee738161d70.html",
+  "capture_sha256": "f1f2efae48e38cd33ced0d841d574e5b4ec6220ded0bf4551395771068afa6bd",
+  "bytes_saved": 262144,
+  "title": "Social media management. Using AI. | Ocoya",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Your AI-powered hub for seamless social media scheduling and content creation. Elevate your digital presence with smart automation and creative tools."
+    }
+  ],
+  "text": "Social media management. Using AI. | Ocoya\nFeatures\nIntegrations\nResources\nPricing\nLogin\nTry free\nPublishing\nPlan and schedule across every network from one calendar.\nCreate\nTurn one idea into a post — or a whole campaign.\nDesign Studio\nThe in-house editor behind every post you publish.\nSocial Inbox\nEvery DM, comment and mention in one place.\nWorkflows\nAutomate posting and replies visually.\nAPI\nBuild social publishing into your product.\nPOST /v1/post\n{ \"caption\": \"…\" }\n201 Created\nMCP\nNew\nRun it all from Claude, ChatGPT & more.\n$ connect ocoya-mcp\n✓ authenticated\n> schedule 3 posts…\nFacebook\nPublish to your Facebook Business Pages.\nInstagram\nFeed, Reels and Stories on schedule.\nX (Twitter)\nSchedule posts and full threads.\nLinkedIn\nProfiles, Pages and PDF carousels.\nPinterest\nSchedule Pins to the right boards.\nBluesky\nPublish to the decentralized network.\nThreads\nText-first updates for your community.\nYouTube Shorts\nUpload and schedule vertical video.\nGoogle Business\nPost updates to your business profile.\nTikTok\nSchedule trending short-form video.\nDiscord\nAnnouncements for your server.\nMastodon\nPublish to any server on the fediverse.\nDribbble\nNew\nPublish shots with titles and tags.\nKick\nNew\nPost to your channel chat on schedule.\nTwitch\nNew\nSchedule messages to your channel chat.\nWhop\nNew\nSchedule posts to your community forums.\nDEV.to\nNew\nPublish articles to your DEV profile.\nWordPress\nNew\nSchedule posts to your own site.\nTumblr\nNew\nSchedule posts to any of your blogs.\nWooCommerce\nNew products become scheduled posts.\nView all integrations\nExplore\nDocumentation\nGuides, reference and a live API playground\nHelp Center\nAnswers, walkthroughs and troubleshooting\nGuides\nAPI reference\nEvery endpoint and schema\nMCP reference\nConnect an AI client to Ocoya\nCompany\nCompare\nOcoya against the alternatives, honestly\nAffiliates\nEarn 30% on the accounts you refer\nStatus\nUptime and incident history\nLive\n637,136\ncustomers\nSocial media management. Using AI.\nDon't hire a social media agency. Content creation and engagement with AI agents and workflows.\nTry free\nWatch intro\nTB\nTasty Bites\nFacebook Page · 12.4k followers\nWarm brownie, cold scoop, caramel on top 🍫 Back on the menu all week.\n#dessert #brunch #eatlocal\nAI image\nThu, 18:00\nBest time\nNew arrivals\nOn\nTrigger\nProduct published\nAction\nUse AI agent\nAction\nCreate social post\nSocial Inbox\n2 new\nSarah K.\n2m\nIs the brownie back today?\nMark T.\n14m\nLove this 🔥\nReply drafted by AI\nTB\nTasty Bites\nFacebook Page · 12.4k followers\nWarm brownie, cold scoop, caramel on top 🍫 Back on the menu all week.\n#dessert #brunch #eatlocal\nAI image\nThu, 18:00\nBest time\nNew arrivals\nOn\nTrigger\nProduct published\nAction\nUse AI agent\nAction\nCreate social post\nPublish everywhere · Drive it from any AI assistant\nFacebook\nInstagram\nX (Twitter)\nLinkedIn\nPinterest\nBluesky\nThreads\nYouTube Shorts\nGoogle Business\nTikTok\nDiscord\nMastodon\nDribbble\nKick\nTwitch\nWhop\nDEV.to\nWordPress\nTumblr\nWooCommerce\nFacebook\nInstagram\nX (Twitter)\nLinkedIn\nPinterest\nBluesky\nThreads\nYouTube Shorts\nGoogle Business\nTikTok\nDiscord\nMastodon\nDribbble\nKick\nTwitch\nWhop\nDEV.to\nWordPress\nTumblr\nWooCommerce\nClaude\nChatGPT\nCursor\nCopilot\nGemini\nPerplexity\nRaycast\nn8n\nClaude\nChatGPT\nCursor\nCopilot\nGemini\nPerplexity\nRaycast\nn8n\nMade for creators & teams\nOne click in. Months of content out.\nYou don't need to be technical — just tell Ocoya what you want. It writes, designs and schedules months of content across every network, ready for you to review.\nCaptions that convert\nOn-brand copy from a one-line idea, then translate it into any of 37 languages.\nVisuals in a click\nGenerate images, carousels and short video that match your brand automatically.\nMonths, auto-scheduled\nOcoya fills your calendar for months ahead at the best times and publishes everywhere for you.\nTry it free\nThis week\nJun 2 – Jun 8\n6 scheduled\n+ New\nMon\n2\nMonday pick-me-up\n09:00\nTue\n3\nNew summer plate\n12:30\nWed\n4\nHappy hour\n17:00\nThu\n5\nDessert drop\n11:00\nFri\n6\nCoffee with friends\n08:30\nSat\n7\n+\nSun\n8\nSunday brunch\n10:00\nPublished\nScheduled\nDrag to reschedule\nFrom brand to published\nFour steps. Zero busywork.\nDescribe your brand once, and every post after it comes out sounding like you — written, designed and scheduled.\n01\nDescribe your brand\nTell Ocoya who you are in a sentence. It builds a brand kit — voice, colours, audience — that every post is written against.\nWe roast small-batch coffee for people who care where it comes from\nBrand kit\nWarm\nExpert\nPlayful\n02\nDescribe the post\nType a prompt, drop a link, or pick a goal. That is genuinely the whole input.\nA week of tips for our coffee brand\nAwareness\nLaunch\nEducate\nGenerate\n03\nAI creates it on-brand\nCaptions, visuals and hashtags — generated together in your voice and colours, with variants to pick from.\nAI\nTip #1: buy whole bean, grind fresh ☕\n#coffeetips #freshroast\n+4\n04\nPublish everywhere\nApprove once and it queues across every network at the times your audience shows up.\nMon\n·\n09:00\nPublished\nTue\n·\n12:30\nScheduled\nWed\n·\n08:15\nScheduled\nAuto-picked best times\nOne suite, fully agent-callable\nEverything a social team needs — operable by AI\nThe same engine powers the app and the API. Whether a human clicks or an agent calls, the result is identical.\nReady-made posts, not just captions\nDescribe what you need and get a complete, ready-to-publish post — caption, visual and hashtags together. Turn one idea into a full multi-post campaign with a single prompt.\nYou write\n“A post about our new summer menu”\ntastybites\nReady\nSummer just landed on the menu ☀️ Fresh, bright, and gone by Sunday.\n#summermenu #freshfood #eatlocal\nAI visuals & video\nGenerate scroll-stopping images and short video from a prompt or your brand.\nGenerated\nSmart scheduling\nAuto-pick best times, fill your calendar, and publish everywhere at once.\nBest time · Thu 18:00\nBrand identity\nFonts, colors and voice applied automatically to every asset the AI makes.\nAa\nPlus Jakarta Sans · Inter\nApplied to every asset\nAnalytics\nTrack performance and let your agent double down on what works.\n12.4k\n+38%\nImpressions · last 7 days\nEvery network\nInstagram, TikTok, LinkedIn, X, Facebook, YouTube, Pinterest, Threads & Bluesky.\nOne post, every feed\nThe Ocoya difference\nPrefer to let your AI drive? It can.\nMost people create right inside Ocoya. But we're also the only social suite an AI assistant can operate end to end — over MCP and API. Same platform, built for the age of AI agents.\nMCP\nRun social media from Claude or ChatGPT\nConnect your AI assistant over the Model Context Protocol. Ask it to create, design and schedule — it uses real, authenticated tools, not copy-paste.\nAPI\nBuild social publishing into your product\nA clean REST API and typed SDKs let you embed AI social publishing into any app, workflow or agent you build.\nExplore MCP & API for developers\nWhy teams switch\nLegacy schedulers bolt on AI. We were built for it.\nCapability\nOcoya\nLegacy tools\nAI captions built in — 37 languages to translate into\nAdd-ons\nAI image & video generation\nAdd-ons\nOne prompt → a full campaign\nAuto-scheduling to every network\nBrand identity applied automatically\nManual\nYour AI assistant can run it (MCP/API)\nCompare Ocoya with\nHootsuite\n,\nBuffer\nand\n15\nmore\nThe real comparison\nDon't hire a social media agency. Replace it — for a fraction of the price.\nA typical agency retainer runs $2,500–$5,000 a month for captions, graphics and a posting schedule. Ocoya gives your team the same output — written, designed and scheduled by AI — starting at $29.\nSocial media agency\n$3,000\nper month, on average\nOcoya\n$29\nper month, to start\nSee plans & pricing\nSimple, honest pricing.\nCompare brand limits, social profiles and shared credits for your social media team. Try any plan free for 7 days.\nMonthly\nYearly (2 months free)\nStarter\nFor independent creators and small brands.\n$\n29\n/\nmonth\nBilled\nmonthly\nStart free trial\nWhat's included\nUsers\n1\nSocial profiles\n5\nCredits\n300\nMost popular\nTeam\nFor growing teams managing a few brands.\n$\n79\n/\nmonth\nBilled\nmonthly\nStart free trial\nWhat's included\nUsers\n5\nSocial profiles\n20\nCredits\n1,500\nAgency\nFor agencies managing many client brands.\n$\n199\n/\nmonth\nBilled\nmonthly\nStart free trial\nWhat's included\nUsers\n20\nSocial profiles\n100\nCredits\n5,000\nAI credits refresh every month\nScale profiles and team members as you grow\nSwitch plans or cancel anytime\nNeed more than Agency?\nFor large businesses with specific needs we offer custom plans.\nLet's talk\nWhy teams switch\nWhat you actually get\nNot another caption generator — a brand that stays consistent while the busywork runs itself.\nIt learns your brand once\nDescribe your brand in a sentence and Ocoya keeps your voice, colours, fonts and audience on file. Every caption and every visual after that comes out already on-brand — no prompt engineering, no restyling.\nBrand kit applied to every post\nWhole posts, not fragments\nOther tools hand you a caption and leave you to find a picture. Ocoya writes the copy, designs the visual in its own editor and picks the hashtags together, so what lands in your calendar is ready to publish.\nCaption + visual + hashtags in one pass\nMonths of calendar in minutes\nTurn one idea into a full campaign and let Ocoya place it across the weeks ahead at the times your audience is actually online. Approve once and it publishes everywhere on its own.\nAuto-scheduled at best times\nYour AI assistant can run it\nConnect Claude or ChatGPT over MCP and your assistant can create, design and schedule for you directly. The same engine powers the app, the API and the agent — the result is identical whoever asks.\nMCP + REST API included\nOne calendar, every network\nPublish to all of them from the same place — Discord announcements, Dribbble shots, Kick chat and WooCommerce products included.\nGive your AI the keys to your social media\nConnect Claude or ChatGPT in under a minute and watch your next campaign build itself.\nStart free\nBook a demo\nNo credit card · Cancel anytime\nSocial media management. Using AI.\nJoin Facebook community →\nFeatures\nPublishing\nCreate\nDesign Studio\nSocial Inbox\nWorkflows\nAPI\nMCP\nNew\nIntegrations\nFacebook\nInstagram\nX (Twitter)\nLinkedIn\nPinterest\nBluesky\nThreads\nYouTube Shorts\nGoogle Business\nTikTok\nDiscord\nMastodon\nDribbble\nKick\nTwitch\nWhop\nDEV.to\nWordPress\nTumblr\nWooCommerce\nCompany\nPricing\nCompare\nGet paid!\nOpen metrics\nBlog\nHelp Center\nService status\nLegal\nTerms of service\nPrivacy policy\nCookie policy\nGDPR\n©\n2026\nUAB Ocoya. All rights reserved.\nMade with 🤍 in 🇪🇺 EU",
+  "links": [
+    {
+      "href": "/_next/static/immutable/media/83afe278b6a6bb3c-s.p.45535valc9rzk.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/fba5a26ea33df6a3-s.p.08ssgmy_tb90r.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/instagram.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/facebook.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/x.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/linkedin.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/pinterest.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/bluesky.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/threads.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/youtube.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/google-business.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/0svewoc5yzkwl.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/1giwd8__3sx32.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/tiktok.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/tiktok-dark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/discord.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/mastodon.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/dribbble.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/kick.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/twitch.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/whop.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/devto.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/devto-dark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/wordpress.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/wordpress-dark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/social/tumblr.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/posts/dessert.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/ecommerce/woocommerce.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/claude.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/chatgpt.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/cursor.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/copilot.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/gemini.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/perplexity.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/raycast.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/icons/clients/n8n.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/icon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.svg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "/features/publish",
+      "rel": null
+    },
+    {
+      "href": "/features/create",
+      "rel": null
+    },
+    {
+      "href": "/features/design",
+      "rel": null
+    },
+    {
+      "href": "/features/engage",
+      "rel": null
+    },
+    {
+      "href": "/features/workflows",
+      "rel": null
+    },
+    {
+      "href": "/features/api",
+      "rel": null
+    },
+    {
+      "href": "/features/mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/facebook",
+      "rel": null
+    },
+    {
+      "href": "/integrations/instagram",
+      "rel": null
+    },
+    {
+      "href": "/integrations/x",
+      "rel": null
+    },
+    {
+      "href": "/integrations/linkedin",
+      "rel": null
+    },
+    {
+      "href": "/integrations/pinterest",
+      "rel": null
+    },
+    {
+      "href": "/integrations/bluesky",
+      "rel": null
+    },
+    {
+      "href": "/integrations/threads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/youtube",
+      "rel": null
+    },
+    {
+      "href": "/integrations/google-business",
+      "rel": null
+    },
+    {
+      "href": "/integrations/tiktok",
+      "rel": null
+    },
+    {
+      "href": "/integrations/discord",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mastodon",
+      "rel": null
+    },
+    {
+      "href": "/integrations/dribbble",
+      "rel": null
+    },
+    {
+      "href": "/integrations/kick",
+      "rel": null
+    },
+    {
+      "href": "/integrations/twitch",
+      "rel": null
+    },
+    {
+      "href": "/integrations/whop",
+      "rel": null
+    },
+    {
+      "href": "/integrations/devto",
+      "rel": null
+    },
+    {
+      "href": "/integrations/wordpress",
+      "rel": null
+    },
+    {
+      "href": "/integrations/tumblr",
+      "rel": null
+    },
+    {
+      "href": "/integrations/woocommerce",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://docs.ocoya.com/welcome",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://help.ocoya.com",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://docs.ocoya.com/api-reference",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://docs.ocoya.com/mcp/get-started",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/affiliates",
+      "rel": null
+    },
+    {
+      "href": "https://status.ocoya.com",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "/features/mcp",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "#pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://ny.io/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://www.app.ocoya.com",
+      "rel": null
+    },
+    {
+      "href": "https://ny.io/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/2585096398449074",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/features/publish",
+      "rel": null
+    },
+    {
+      "href": "/features/create",
+      "rel": null
+    },
+    {
+      "href": "/features/design",
+      "rel": null
+    },
+    {
+      "href": "/features/engage",
+      "rel": null
+    },
+    {
+      "href": "/features/workflows",
+      "rel": null
+    },
+    {
+      "href": "/features/api",
+      "rel": null
+    },
+    {
+      "href": "/features/mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/facebook",
+      "rel": null
+    },
+    {
+      "href": "/integrations/instagram",
+      "rel": null
+    },
+    {
+      "href": "/integrations/x",
+      "rel": null
+    },
+    {
+      "href": "/integrations/linkedin",
+      "rel": null
+    },
+    {
+      "href": "/integrations/pinterest",
+      "rel": null
+    },
+    {
+      "href": "/integrations/bluesky",
+      "rel": null
+    },
+    {
+      "href": "/integrations/threads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/youtube",
+      "rel": null
+    },
+    {
+      "href": "/integrations/google-business",
+      "rel": null
+    },
+    {
+      "href": "/integrations/tiktok",
+      "rel": null
+    },
+    {
+      "href": "/integrations/discord",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mastodon",
+      "rel": null
+    },
+    {
+      "href": "/integrations/dribbble",
+      "rel": null
+    },
+    {
+      "href": "/integrations/kick",
+      "rel": null
+    },
+    {
+      "href": "/integrations/twitch",
+      "rel": null
+    },
+    {
+      "href": "/integrations/whop",
+      "rel": null
+    },
+    {
+      "href": "/integrations/devto",
+      "rel": null
+    },
+    {
+      "href": "/integrations/wordpress",
+      "rel": null
+    },
+    {
+      "href": "/integrations/tumblr",
+      "rel": null
+    },
+    {
+      "href": "/integrations/woocommerce",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/affiliates",
+      "rel": null
+    },
+    {
+      "href": "/open",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://help.ocoya.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://status.ocoya.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/legal/privacy",
+      "rel": null
+    },
+    {
+      "href": "/legal/cookies",
+      "rel": null
+    },
+    {
+      "href": "/legal/data",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2444
+}

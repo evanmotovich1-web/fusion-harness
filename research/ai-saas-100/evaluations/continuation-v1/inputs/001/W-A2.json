@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-A2",
+  "split": "adversarial",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": [
+          "not a paragraph"
+        ],
+        "strength": 3,
+        "method": "rewrite",
+        "protected": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "segment": 0,
+    "start_approx_seconds": 0,
+    "duration_audio_seconds": 20.375875,
+    "subject_box": [
+      40,
+      70,
+      180,
+      345
+    ],
+    "transcript_path": "cases/031/tests/assets/meeting-0.txt"
+  },
+  {
+    "segment": 1,
+    "start_approx_seconds": 20.375875,
+    "duration_audio_seconds": 17.1591875,
+    "subject_box": [
+      370,
+      70,
+      510,
+      345
+    ],
+    "transcript_path": "cases/031/tests/assets/meeting-1.txt"
+  },
+  {
+    "segment": 2,
+    "start_approx_seconds": 37.5350625,
+    "duration_audio_seconds": 18.6045,
+    "subject_box": [
+      210,
+      70,
+      350,
+      345
+    ],
+    "transcript_path": "cases/031/tests/assets/meeting-2.txt"
+  }
+]

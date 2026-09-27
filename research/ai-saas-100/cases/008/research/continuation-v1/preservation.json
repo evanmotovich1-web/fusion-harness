@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "case_id": "008",
+  "recorded_at": "2026-09-22T04:13:09.566104+00:00",
+  "historical_files": {
+    "dossier.json": "e60b877e4fe1a532c4637c641a0d4a58cc5ef468cb0e4389bd46f5c08f861d40",
+    "evidence.json": "847203fde89db63e347d7cc824e9941507cd8dbf2cdc5c6c2273afb1780606e6",
+    "handoff.md": "50997b1bfb60acafd94d1a61c672bc88bd2eeccef94af19b4c27a4a995c12c3d",
+    "research/captures/a21eeb7f9579ca84130d.html": "8f8f6f804211e173ce7a2726db66118b60821ad8348492af00d72cb2708c223f",
+    "research/captures/f284628f2dc8ef64bc00.html": "128f60af6d3ea970fafc1e60c5c782af58b0f59389eec6c0f0fdcf0f4ff3d977",
+    "research/records/a21eeb7f9579ca84130d.json": "292cf6831213beee6bc2e81d605dd849522ccb4a77103a62326c6651a0a34aaf",
+    "research/records/f284628f2dc8ef64bc00.json": "c178f29af105733ee14fe4a56253a45bf421d7b9e93b4c13ade74827c6253beb",
+    "tests/assets/audio-generation.json": "258927c729b8a29eaf612578bca7ec0eaa131622241d663d7b1bdfb0c2e771b6",
+    "tests/assets/meeting-0.txt": "d4102d05ffd6dcde0a525b16ba3b2f5bdeccd63b36903e9ef2fdaa850793f34b",
+    "tests/assets/meeting-0.wav": "067fa94f08515824919ce069e401c22841c2d104fa45d04e1a6668fae0350bef",
+    "tests/assets/meeting-1.txt": "999b69ef491298083bafefa1697d809ac0d3885a686ed3a0b384dcb40e38fc15",
+    "tests/assets/meeting-1.wav": "bb52d68ff9df6c8532e53fcb05739632bc1459fe7578685911f67ca5cb07786e",
+    "tests/assets/meeting-2.txt": "b9cc553c598d9d9f025b479fc49ca633f41e455cc90f717a6f7bd5b7e07e4ef4",
+    "tests/assets/meeting-2.wav": "a049b20ffc41bed79363a87fa4d7c28d707688dad65c60f796330767658f3bc2",
+    "tests/freeze.json": "15f118021380fd47433c665f538080e2ccbdda1fc609eb75952f8bdfae68ffd9",
+    "tests/specification.json": "fa0cf2564e1dd8beab800997a459af8546f86b3e04cd233718daee91ac863c6c"
+  }
+}

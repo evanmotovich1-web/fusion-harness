@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-22T04:25:39.622213+00:00",
+  "status": "passed",
+  "ledger": {
+    "path": "batches/continuation-004-008.json",
+    "sha256": "09462b5791761f9653af3824070dacfd212417856ae070f80bb3a0e7e40f763f"
+  },
+  "case_checks": [
+    {
+      "case_id": "004",
+      "execution": "not_attempted",
+      "reason": "No central capability; research-only continuation, not a wrapper"
+    },
+    {
+      "case_id": "005",
+      "execution": "not_attempted",
+      "reason": "No central capability; research-only continuation, not a wrapper"
+    },
+    {
+      "case_id": "006",
+      "receipt_structurally_valid": true,
+      "snapshots_match_current": true,
+      "component_rows_passed": 32
+    },
+    {
+      "case_id": "007",
+      "receipt_structurally_valid": true,
+      "snapshots_match_current": true,
+      "component_rows_passed": 32
+    },
+    {
+      "case_id": "008",
+      "execution": "not_attempted",
+      "reason": "No central capability; research-only continuation, not a wrapper"
+    }
+  ],
+  "historical_files_preserved": 62,
+  "source_captures_verified": 5,
+  "accepted_products": 0,
+  "scope": "Artifact/hash/schema validation, not independent product acceptance"
+}

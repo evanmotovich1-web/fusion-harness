@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "run_id": "003-repair-v1-20260920T224346368023Z-historical-counterexamples",
+  "system": "B2",
+  "status": "failed",
+  "started_at": "2026-09-20T22:43:46.368209+00:00",
+  "ended_at": "2026-09-20T22:43:46.419906+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/tests/run_repair_v1.py",
+    "--source",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/implementation/source-history/71cbff3059ea041d9e1920dd7767c827ae0b382d13341b6ca033826d43b87135/workflow.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/003/implementation/source-history/71cbff3059ea041d9e1920dd7767c827ae0b382d13341b6ca033826d43b87135/workflow.py",
+    "sha256": "71cbff3059ea041d9e1920dd7767c827ae0b382d13341b6ca033826d43b87135"
+  },
+  "fixtures": {
+    "path": "cases/003/tests/fixtures.repair-v1.json",
+    "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+  },
+  "input_bundle": {
+    "path": "cases/003/tests/fixtures.repair-v1.json",
+    "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+  },
+  "outputs": [
+    {
+      "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-historical-counterexamples.stdout.json",
+      "sha256": "7504396e0081d5c6fd5be2b367ed0a10cef5b3d1643ea6981743f77890532757"
+    },
+    {
+      "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-historical-counterexamples.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "Darwin"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "mode": "local_partial_regression",
+    "model_calls": 0,
+    "timeout_seconds": 15,
+    "concurrency": 1,
+    "runner": {
+      "path": "cases/003/tests/run_repair_v1.py",
+      "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8"
+    },
+    "executor": {
+      "path": "cases/003/tests/execute_repair_v1.py",
+      "sha256": "65b652627443924bec3fbc87de6fe42ad239b947e691da0c8ee523eae9f722ea"
+    }
+  },
+  "baseline_id": null,
+  "exit_status": 1,
+  "test_results": [
+    {
+      "test_id": "exact-interleaved-groups",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "exact-empty",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "exact-no-duplicates",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "exact-casefold",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "exact-update-full-records",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "exact-inert-note",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "request-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "request-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "request-empty-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "request-string",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "action-list",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "action-object",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "action-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "action-boolean",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "action-number",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "action-send",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contacts-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contacts-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contacts-string",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-empty-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-id-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-id-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-id-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-id-whitespace",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "contact-duplicate-id",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "email-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "email-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "email-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "email-empty-local",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-empty-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-missing-id",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-id-only",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-forbidden-field",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "patch-id-list",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-object",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-null",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-boolean",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-number",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-whitespace",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "patch-id-missing-contact",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "status-list",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "status-object",
+      "outcome": "failed"
+    },
+    {
+      "test_id": "status-null",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "status-boolean",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "status-number",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "status-unknown",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "note-list",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "note-object",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "note-null",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [],
+  "latency": {
+    "value": 0.045268709000000004,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "subprocess_wall_time",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "No inference, baseline, or central CRM workflow execution"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible repair regressions, not held-out evaluation"
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "product_acceptance": false,
+  "original_product_status": "not_observed",
+  "expected_exit_status": 1,
+  "repair_check_passed": true
+}

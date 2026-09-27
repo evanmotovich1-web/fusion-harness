@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "016",
+    "name": "Instantly",
+    "canonical_url": "https://instantly.ai/",
+    "category": "C03",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-e13c31a44874bf56ad06"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "instantly.ai",
+    "selection_position": 16,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Sales operators preparing cold-outreach campaigns",
+    "job": "Prepare grounded personalized outreach drafts and a reviewable sequence from supplied opted-in synthetic leads",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "drafts": "array of lead_id/subject/body/fact_refs",
+      "sequence": "array",
+      "send_status": "not_sent"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Prepare grounded personalized outreach drafts and a reviewable sequence from supplied opted-in synthetic leads",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Starter bundle displays $94/monthly for 5,000 emails, 1,000 uploaded contacts and 1,500 credits. Other billing views and separate outreach/credits plans coexist; no flat all-inclusive cost is inferred.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Sales operators preparing cold-outreach campaigns",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "lemlist.com",
+        "name": "Lemlist",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Sales operators preparing cold-outreach campaigns.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        },
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Starter bundle displays $94/monthly for 5,000 emails, 1,000 uploaded contacts and 1,500 credits. Other billing views and separate outreach/credits plans coexist; no flat all-inclusive cost is inferred.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r016-00146e6245dd8557e302"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r016-00146e6245dd8557e302",
+          "locator": "text characters 1187:3658",
+          "excerpt": " Email Bench Report 2026\nExplore the latest trends\nGet a Demo\nLogin\nLogin\nGet a Demo\nGet Started\nGet Started\nGet Started\nSimple Pricing for Everyone\nPricing built for businesses of all sizes. Always know what you’ll pay.\nBundles\nOutreach\nInstantly Credits\nVIP\nStarter\n$94\n/monthly\n5000 emails monthly, 1000 uploaded contacts\n1500 Instantly credits monthly\nDatabase of 450M+ B2B Leads\nAI Sales Agent\nOutreach\nGrowth Plan\n$47/mo\nUnlimited Email Accounts\nUnlimited Email Warmup\n1000 Uploaded Contacts\n5000 Emails Monthly\nChat Support\nCredits\nGrowth Credits\n$47/mo\n1500 Instantly Credits Monthly\nDatabase of 450M+ B2B Leads\n13 Filters including keywords and lookalikes\nWaterfall Work Email Enrichment with 5+ providers\nInstantly Web Researcher Agent\nAccess to 5 Major LLMs (OpenAI, Anthropic & more)\nAccess to AI Email Writer Agent\nUse your own LLM API key\n100+ Community AI Templates\nFull profile enrichment (Company description, headcount & more)\nJob posting, News, Technology & Funding enrichment\nExport to major CRMs & Outreach providers\nBuilt for small teams just getting off the ground.\nGet Starter\nBundle details\nScale\nMost popular\n$194\n/monthly\nEverything in Starter +\n100,000 emails monthly, 25,000 uploaded contacts\n5000 Instantly credits monthly\nAI Reply Agent, Unibox replies & advanced deliverability features\nPremium Live Support\nOutreach\nHypergrowth Plan\n$358/mo\n5000 Instantly Credits Monthly\nEverything in Growth\nCredits\nSupersonic Credits\n$197/mo\n5000 Instantly Credits Monthly\nEverything in Growth\nThe full outreach stack. All AI agents, advanced automation, and nothing left out.\nGet Scale\nBundle details\nAgency\n$555\n/monthly\nEverything in Scale +\n500,000 emails monthly, 100,000 uploaded contacts\n10,000 Instantly credits monthly\nSISR System\nOutreach\nLightspeed Plan\n$358/mo\nEverything in Hyper Growth +\n500 000 Emails Monthly\n100 000 Uploaded Contacts\nSISR System\nCredits\nHyper Credits\n$197/mo\n10K Instantly Credits Monthly\nEverything in Growth\nMore volume, private infrastructure, and the usage limits to back it up.\nGet Agency\nBundle details\nBundle details\nStarter\n$85\n/monthly\n$94/month\nSave 10%\n5000 emails monthly, 1000 uploaded contacts\n1500 Instantly credits monthly\nDatabase of 450M+ B2B Leads\nAI Sales Agent\nOutreach\nGrowth Plan\n$47/mo\nUnlimited Email Accounts\nUnlimited Email Warmup\n1000 Uploaded Contacts\n5000 Emails Monthly\nChat Support\nCredits\nGrowth Credits\n$47/mo\n1500 Instantly Credits Monthly\nDatabase of 450M+ B2B Leads\n13 Filters incl"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r016-00146e6245dd8557e302": "2026-09-20T21:35:30.915324+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: account, use our API and create your PartnerStack account.\nTrusted by\n3M+ Users\nGet Listed\nYour integration receives a profile page, in-app exposure, and co-marketing opportunities.\nUse your 20% discount\nUse code EVENTGIFT\nAt checkout and get 20% off Hypergro",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r016-065a4772bf100df5a494"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r016-065a4772bf100df5a494",
+          "locator": "text characters 4836:5095",
+          "excerpt": "account, use our API and create your PartnerStack account.\nTrusted by\n3M+ Users\nGet Listed\nYour integration receives a profile page, in-app exposure, and co-marketing opportunities.\nUse your 20% discount\nUse code EVENTGIFT\nAt checkout and get 20% off Hypergro"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r016-065a4772bf100df5a494": "2026-09-20T21:35:30.915227+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: Browse 50+ integrations for CRM, enrichment, LinkedIn, AI, and automation. Connect HubSpot, Clay, Zapier, and more in minutes.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r016-065a4772bf100df5a494"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r016-065a4772bf100df5a494",
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 50+ integrations for CRM, enrichment, LinkedIn, AI, and automation. Connect HubSpot, Clay, Zapier, and more in minutes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r016-065a4772bf100df5a494": "2026-09-20T21:35:30.915227+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Lemlist advertises: Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-618fcffd105ae19ff04b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-618fcffd105ae19ff04b",
+          "locator": "metadata[0].description",
+          "excerpt": "Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-618fcffd105ae19ff04b": "2026-09-20T21:00:22.704958+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Lemlist. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06",
+        "web-618fcffd105ae19ff04b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        },
+        {
+          "evidence_id": "web-618fcffd105ae19ff04b",
+          "locator": "metadata[0].description",
+          "excerpt": "Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00",
+          "web-618fcffd105ae19ff04b": "2026-09-20T21:00:22.704958+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Mailbox infrastructure, deliverability, licensed lead data, and workflow integration are not reproduced by drafting messages.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06",
+        "r016-065a4772bf100df5a494"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        },
+        {
+          "evidence_id": "web-e13c31a44874bf56ad06",
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        },
+        {
+          "evidence_id": "r016-065a4772bf100df5a494",
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 50+ integrations for CRM, enrichment, LinkedIn, AI, and automation. Connect HubSpot, Clay, Zapier, and more in minutes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-e13c31a44874bf56ad06": "2026-09-20T21:00:22.704626+00:00",
+          "r016-065a4772bf100df5a494": "2026-09-20T21:35:30.915227+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/016/tests/specification.json",
+    "sha256": "c80729bcfde5300c17356bd3d471ec017e8bef16851ca8a0e3a4c8fabb30144a",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:22.704626+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-e13c31a44874bf56ad06",
+        "r016-00146e6245dd8557e302",
+        "r016-065a4772bf100df5a494",
+        "web-618fcffd105ae19ff04b"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

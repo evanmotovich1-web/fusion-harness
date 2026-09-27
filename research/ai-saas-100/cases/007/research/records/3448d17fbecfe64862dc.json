@@ -1,0 +1,238 @@
+{
+  "evidence_id": "r007-3448d17fbecfe64862dc",
+  "source_url": "https://botsonic.com/integrations/zendesk",
+  "publisher": "botsonic.com",
+  "retrieved_at": "2026-09-20T21:35:25.937979+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://botsonic.com/integrations/zendesk",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/007/research/captures/3448d17fbecfe64862dc.html",
+  "capture_sha256": "a6b638c6f5b02edc9161e1060482662021969a47cc3e4621d790773772f08002",
+  "bytes_saved": 54128,
+  "title": "Zendesk",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "Zendesk"
+    }
+  ],
+  "text": "Zendesk\nAI AGent\nIntegrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nSupercharge Your\nCustomer Support with\nBotsonic + Zendesk Integration\nAI-Powered Support Meets Seamless Ticket Management\nGet Started Free\nBook A Demo\nNo credit card required\nImagine a world where your customer support team never sleeps, yet every inquiry is handled with precision and care. Welcome to the future of customer service with Botsonic's AI Chatbot integrated with Zendesk Ticket Creation.\nOptimize Your Customer\nSupport Workflow\nAI-Powered Chat Support\nTrain Botsonic on your data\nProvide accurate, context-aware responses\nReduce support team load\nMaintain high-quality interactions\nAutomated Ticket Creation\nEliminates manual data entry\nCreates Zendesk tickets automatically\nCaptures all relevant details from chats\nEnsures seamless follow-up\nIntelligent Agent Routing\nSmooth handoff to human agents when needed\nDirects to the right Zendesk agent\nTransfers full chat history and context\nUse Cases That\nMake a Difference\nAfter-Hours Support\nYour AI chatbot handles inquiries when your team is off-duty, creating tickets for complex issues to be addressed during business hours.\nPeak Hour Assistance\nDuring high-volume periods, the chatbot manages initial interactions, creating tickets for your team to handle more efficiently.\nMultilingual Support Botsonic\ncommunicates in multiple languages, creating tickets in your team's preferred language for seamless follow-up.\nHow it Works\n1. Customer Initiates Chat\nA visitor starts a conversation on your website.\n2. AI Provides Instant Answers\nBotsonic's AI chatbot responds with relevant information.\n3. Ticket Creation\nFor complex issues, the bot automatically creates a Zendesk ticket.\n4. Human Handover\nYour support team takes over with full context from the AI interaction.\nBenefits That\nSpeak Volumes\n24/7 Availability\nYour support never sleeps, enhancing customer satisfaction.\nScalable Support\nHandle more inquiries without proportionally increasing staff.\nConsistent Quality\nAI ensures uniform responses aligned with your brand voice.\nReduced Response Times\nImmediate answers for common queries, faster ticket creation for complex issues.\nData-Driven Insights:\nGain valuable insights from AI-customer interactions to improve your support strategy.\nWhether you’re a growing startup\nor an enterprise leader,\nwe have a plan that fits your needs.\nProfessional\nComprehensive AI agents to scale self-service\n$40.83\nper month\nbilled annually\n$49\nbilled monthly\nIncludes 3 team members\nIncludes 3,000 messages / month\nStart a 14-day free trial\nAdvanced (AI Agents)\nIntelligent AI agents to scale self-service and automate tasks.\n$249\nper month\nbilled annually\n$299\nbilled monthly\nIncludes 5 team members\n12,000 messages / month\nStart a 14-day free trial\nEnterprise\nOur most powerful AI agents for advanced workflows and flexibility\nCustom Pricing\nCustom number of team members\nCustom number of messages\nStart a 14-day free trial\nView more about the plans\nReady to\nTransform Your\nCustomer Support?\nTry Botsonic + Zendesk Integration Now\nDiscover how AI-powered chat and automated ticket creation can elevate your customer support experience. Your customers—and your support team—will thank you.\nSchedule a Demo\nLearn More About Botsonic\nEmpower your support team. Delight your customers. Grow your business.\nFrequently Asked\nQuestions\nHow long does it take to set up the Botsonic-Zendesk integration?\nWith our guided setup process, most users are up and running in less than 30 minutes!\nCan Botsonic handle complex customer inquiries?\nAbsolutely! Botsonic can be trained on your specific data to handle a wide range of inquiries. For highly complex issues, it seamlessly hands off to human agents.\nIs the integration secure?\nYes, we prioritize data security. All communications between Botsonic and Zendesk are encrypted and comply with industry-standard security protocols.\nEnterprise-grade security\nSOC 2\nGDPR-compliant\nY-Combinator\nPlatform\nAI Agents\nAI Copilots trained on your Data\n24x7 Customer Support\nAutomated Employee Support\nAI-Enhanced Conversational Commerce\nIntegrations\nModel Agnostic\nRESOURCES\nSecurity\nPricing\nDocumentation\nAPI\nStatus\nCOMPANY\nRequest a Demo\nAbout Us\nCareers\nContact Us\n[New] LinkedIn AI Growth Platform\nCopyright © 2024 Writesonic, Inc.\nTerms\nPrivacy Policy\nSecurity",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6643307d563d3d1613330141/css/botsonic.webflow.shared.f433f7116.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6643307d563d3d1613330141/6647acf4441cb94abf6a0154_favicon-32x32.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e6ec2daf39c088fe6cd402/65e89bc0a967c0e47d3476b8_Frame%201116605940.svg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://botsonic.com/integrations/zendesk",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/integrations/zendesk",
+      "rel": null
+    },
+    {
+      "href": "/integrations/freshdesk",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/get-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://bot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/signup?redirect_url=https%3A%2F%2Fbot.writesonic.com&source=botsonic&callbackUrl=https%3A%2F%2Fbot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/signup?redirect_url=https%3A%2F%2Fbot.writesonic.com&source=botsonic&callbackUrl=https%3A%2F%2Fbot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "/get-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/signup?redirect_url=https%3A%2F%2Fbot.writesonic.com&source=botsonic&callbackUrl=https%3A%2F%2Fbot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/signup?redirect_url=https%3A%2F%2Fbot.writesonic.com&source=botsonic&callbackUrl=https%3A%2F%2Fbot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://app.writesonic.com/signup?redirect_url=https%3A%2F%2Fbot.writesonic.com&source=botsonic&callbackUrl=https%3A%2F%2Fbot.writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/get-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/get-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.com/",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#copilot",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#24",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#employee",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#integration",
+      "rel": null
+    },
+    {
+      "href": "https://www.botsonic.com/#model",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.trustcenter.sprinto.com/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://docs.botsonic.com/docs/quick-start",
+      "rel": null
+    },
+    {
+      "href": "https://docs.botsonic.com/reference/botsonic_api_v1_botsonic_generate_post",
+      "rel": null
+    },
+    {
+      "href": "https://status.botsonic.com/",
+      "rel": null
+    },
+    {
+      "href": "/get-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.com/about-us",
+      "rel": null
+    },
+    {
+      "href": "https://recruitcrm.io/jobs/jobsatwritesonic",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@writesonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://socialsonic.com",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.com/terms",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.com/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "https://writesonic.trustcenter.sprinto.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/writesonic/",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/Writesonic",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/GetWritesonic",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/writesonic/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.250954
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/002/run_market_review.py", line 166, in <module>
+    raise SystemExit(main())
+  File "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/002/run_market_review.py", line 86, in main
+    market = load('marketplace_under_review_002', snapshot)
+  File "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/002/run_market_review.py", line 27, in load
+    module = importlib.util.module_from_spec(spec)
+  File "<frozen importlib._bootstrap>", line 562, in module_from_spec
+AttributeError: 'NoneType' object has no attribute 'loader'

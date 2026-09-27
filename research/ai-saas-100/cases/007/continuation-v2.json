@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "version": 2,
+  "task_id": "2.d-R9-repair",
+  "recorded_at": "2026-09-23T04:15:29.192338+00:00",
+  "scope": "Targeted additional_sources type-validation repair for the existing support-evidence preprocessing component.",
+  "audit_finding": {
+    "id": "R9",
+    "report_path": "/tmp/fusion-harness-1wQDAO/collaborate/reports/3.e-grok.md",
+    "report_sha256": "f10d8bb353bef6ec913c92ae0b3bd06fbe0c980757fa7c937effbe40636aa513",
+    "defect": "Malformed additional_sources could pass prepare() and cause TypeError or incorrect ticket evidence counts."
+  },
+  "pre_repair_source": {
+    "path": "cases/007/implementation/source-history/39fff0b74c8700d40e1d9741268131af0e4278cb209fadbab4a744faaa61d464/manifest.json",
+    "sha256": "5eaa3f4c9ee67c2e704cb84ccc14eb99800d2ac84907d534a82e36997fccc587"
+  },
+  "preserved_original_v1_snapshot": {
+    "path": "cases/007/implementation/source-history/028872f53c4d8fefc661490567884cab81f1a9ebc2ad5ac21a0de6e7b691d30a/manifest.json",
+    "sha256": "3121512618dd0e27e6c58e6b16878a80e990a21dafb70cb4dea5141ae443035c"
+  },
+  "repair": {
+    "implementation": {
+      "path": "cases/007/implementation/support_evidence.py",
+      "sha256": "b04fcca08a6aea33263783e1ee39daec7b788192fb8658751c3f911eefb76c09"
+    },
+    "documentation": {
+      "path": "cases/007/implementation/README.md",
+      "sha256": "e3cb6ab8daa687316535effa27bb85151d259c78b404654a37d0e0f3035c6919"
+    },
+    "behavior": "Absent additional_sources defaults to an empty list. Present values must be lists of at most 200 dict records with nonempty string id/text; malformed values raise ValueError('invalid_additional_sources'). Valid records remain deep-copied unresolved passthrough.",
+    "interfaces_checked": [
+      "run",
+      "prepare",
+      "audit_citations",
+      "draft_ticket"
+    ]
+  },
+  "versioned_tests": {
+    "fixtures": {
+      "path": "cases/007/tests/support-evidence-v2/fixtures.json",
+      "sha256": "5938576b92cb889d1a553e5242afb3ae4df0fbc2e2eee1cb0ddca6948aecae17"
+    },
+    "runner": {
+      "path": "cases/007/tests/support-evidence-v2/run.py",
+      "sha256": "d84ee15c58c3e681c9db1bf9ff7c126566b881c2b352ee9c93d07d59906b60ea"
+    },
+    "freeze": {
+      "path": "cases/007/tests/support-evidence-v2/freeze.json",
+      "sha256": "e315c23ab4df84366d74e8d0c4a02db6243aa89bf54eb38f3d8a343620099538"
+    },
+    "receipt": {
+      "path": "cases/007/receipts/007-support-evidence-v2-20260923T041430081915Z.json",
+      "sha256": "bd131e0a58609c908a4942645f508e2736ff5609e001764db65e911a0d6e3d2f"
+    },
+    "passed": 6,
+    "total": 6,
+    "input_mutations": 0,
+    "io_attempts": 0
+  },
+  "full_v1_regression": {
+    "receipt": {
+      "path": "cases/007/receipts/007-support-evidence-v1-20260923T041335434390Z.json",
+      "sha256": "69a3b79f156682fbf790d4621eaed2231320890b1fda300cf5265526dca05c8c"
+    },
+    "checkpoint": {
+      "path": "cases/007/receipts/007-support-evidence-v1-20260923T041335434390Z-checkpoint.json",
+      "sha256": "75630d2c9fd353b294cf2f058a63fb7133ebf54e600140494228da6e68bfc3aa"
+    },
+    "repaired_source_snapshot": {
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/manifest.json",
+      "sha256": "e5afd42b9ef2c3b0a1bd696b6824f36f35d4f22888b1533eb22fe2a099fa70f1"
+    },
+    "passed": 32,
+    "total": 32,
+    "historical_files_changed": [],
+    "sources_changed_during_run": []
+  },
+  "preserved_artifacts": [
+    {
+      "path": "cases/007/continuation-v1.json",
+      "sha256": "5cb8f36a36318dfbd37a3774b9a16d2223bd08ca19d31de07a654f745f79474a"
+    },
+    {
+      "path": "batches/continuation-004-008.json",
+      "sha256": "09462b5791761f9653af3824070dacfd212417856ae070f80bb3a0e7e40f763f"
+    },
+    {
+      "path": "cases/007/receipts/007-support-evidence-v1-20260922T042353241002Z.json",
+      "sha256": "13870d702544fb09727b25edcd18bfa6aa82571c4de9bf88b8234fae0b9f1158"
+    },
+    {
+      "path": "cases/007/tests/support-evidence-v1/fixtures.json",
+      "sha256": "be53e4d4bebe0c43d95ce5434160feca6ea1a349b5e424fca06b3d2271b3343b"
+    },
+    {
+      "path": "cases/007/tests/support-evidence-v1/freeze.json",
+      "sha256": "30ec5f9bde01d7e42102d859a7127afb34c92d58d88c9e6819a4b7b5c405dd14"
+    },
+    {
+      "path": "cases/007/tests/support-evidence-v1/run.py",
+      "sha256": "ec3431e9b1baba29b0f25d024edbcdb0fcec6c12c61e20b0d215c9d759fe50c0"
+    }
+  ],
+  "execution": {
+    "network_requests": 0,
+    "model_requests": 0,
+    "external_writes": 0,
+    "real_account_writes": 0,
+    "paid_calls": 0,
+    "inference_executed": false
+  },
+  "component_status": "tested",
+  "central_workflow_complete": false,
+  "product_status": "incomplete",
+  "product_accepted": false,
+  "commercial_verdict": "insufficient_evidence",
+  "remaining_limitations": [
+    "No generated support answer or semantic entailment evaluation",
+    "No Zendesk execution or agent routing",
+    "No generic-model comparison",
+    "No independent hidden evaluation or product acceptance"
+  ],
+  "handoff": "Rerun the 004-008 read-only audit against this ledger, the repaired source snapshot, and both fresh receipts. Treat the result as preprocessing-component evidence only."
+}

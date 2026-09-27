@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-dcce27dc6bc240d69e57",
+      "source_url": "https://jenni.ai/",
+      "final_url": "https://jenni.ai/",
+      "publisher": "jenni.ai",
+      "retrieved_at": "2026-09-20T21:00:09.404352+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        },
+        {
+          "locator": "text characters 0:67",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        }
+      ],
+      "capture_path": "discovery/captures/dcce27dc6bc240d69e57.html",
+      "capture_sha256": "557378ec422b8dc711151167d50deda17ef225e95da88c0c97c615c8600fa20b",
+      "record_path": "discovery/records/dcce27dc6bc240d69e57.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r014-0ae4d0c1f13f509abc2f",
+      "source_url": "https://jenni.ai/pricing",
+      "publisher": "jenni.ai",
+      "retrieved_at": "2026-09-20T21:35:26.614086+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://jenni.ai/pricing",
+      "capture_path": "cases/014/research/captures/0ae4d0c1f13f509abc2f.html",
+      "capture_sha256": "ea8cad302f8fd2118fa2786fefa0a2d8e99cd3c38410190581ae3576fcafc336",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/014/research/records/0ae4d0c1f13f509abc2f.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Jenni AI Pricing & Plans | Find the Right Plan for Your Writing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore Jenni AI Plus and Pro plans. Compare features, find the right plan, and improve your academic writing, research, and productivity with AI."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Jenni AI Pricing & Plans | Find the Right Plan for Your Writing"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r014-7be757ddcb09e6f9956c",
+      "source_url": "https://jenni.ai/features",
+      "publisher": "jenni.ai",
+      "retrieved_at": "2026-09-20T21:35:26.655858+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": "failed",
+      "final_url": null,
+      "capture_path": null,
+      "capture_sha256": null,
+      "capture_truncated": null,
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "record_path": "cases/014/research/records/7be757ddcb09e6f9956c.json",
+      "research_role": "workflow",
+      "excerpts": []
+    },
+    {
+      "evidence_id": "web-0c5dcc503ad76cf63ecc",
+      "source_url": "https://paperpal.com/",
+      "final_url": "https://paperpal.com/",
+      "publisher": "paperpal.com",
+      "retrieved_at": "2026-09-20T21:00:09.683272+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal\nFeatures\nChevron down\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submis"
+        },
+        {
+          "locator": "text characters 0:283",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal\nFeatures\nChevron down\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, parap"
+        },
+        {
+          "locator": "text characters 95:407",
+          "excerpt": "\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit"
+        },
+        {
+          "locator": "text characters 129:441",
+          "excerpt": "n\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit card required\n1,500+\nleading jour"
+        },
+        {
+          "locator": "text characters 177:489",
+          "excerpt": "ool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit card required\n1,500+\nleading journals trust Paperpal\n1M+\npapers checked before su"
+        },
+        {
+          "locator": "text characters 997:1309",
+          "excerpt": "rately in 10,000+ styles.\nTry Now >\nSubmit with confidence\nSelf-check AI-generated text and plagiarism, catch reference errors, and confirm journal submission readiness, all in one checker suite built for top journals.\nTry Now >\nTry Paperpal Free\nCatch every risk before you submit\nSpot the problems in your thes"
+        }
+      ],
+      "capture_path": "discovery/captures/0c5dcc503ad76cf63ecc.html",
+      "capture_sha256": "6ac95175a1ad7cb132d2b680d5ee4c768ca9ac6e5b47f0a94d69578120df8774",
+      "record_path": "discovery/records/0c5dcc503ad76cf63ecc.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

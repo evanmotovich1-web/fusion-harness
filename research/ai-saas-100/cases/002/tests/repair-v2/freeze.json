@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "case_id": "002",
+  "fixed_at": "2026-09-20T22:49:43.141541+00:00",
+  "held_out": false,
+  "count": 54,
+  "artifacts": [
+    {
+      "path": "cases/002/tests/repair-v2/comparison-inputs.json",
+      "sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331"
+    },
+    {
+      "path": "cases/002/tests/repair-v2/evaluator.json",
+      "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889"
+    },
+    {
+      "path": "cases/002/tests/repair-v2/adapter.py",
+      "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+    },
+    {
+      "path": "cases/002/tests/repair-v2/materialize.py",
+      "sha256": "e00bba9aa5501fc9d5f428378f84627aad8a0c054fce1fd95ad951169a2c82ef"
+    }
+  ],
+  "historical_suite": "Original tests/fixtures.json and receipts remain immutable."
+}

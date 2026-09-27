@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-A1",
+  "requires_inference": false,
+  "kind": "crm_invalid"
+}

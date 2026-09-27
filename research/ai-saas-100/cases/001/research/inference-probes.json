@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-09-20T21:20:12.028070+00:00",
+  "scope": "Loopback model metadata only. No inference, secrets, installation, or settings changes.",
+  "probes": [
+    {
+      "url": "http://127.0.0.1:11434/api/tags",
+      "error": "URLError: <urlopen error [Errno 61] Connection refused>",
+      "elapsed_seconds": 0.005795416999999997
+    },
+    {
+      "url": "http://127.0.0.1:1234/v1/models",
+      "error": "URLError: <urlopen error [Errno 61] Connection refused>",
+      "elapsed_seconds": 0.0001241250000000027
+    }
+  ],
+  "ended_at": "2026-09-20T21:20:12.034126+00:00",
+  "conclusion": "No callable inference established by these bounded metadata probes; not an exhaustive search."
+}

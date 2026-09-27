@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "005",
+  "source_url": "https://www.frase.io/integrations",
+  "purpose": "Publishing and integration scope beyond draft generation",
+  "retrieved_at": "2026-09-22T04:14:03.675907+00:00",
+  "source_type": "first_party_public_page",
+  "classification": "vendor_claims_only",
+  "method": "Credential-free bounded HTTPS GET",
+  "status": 200,
+  "error": null,
+  "maximum_bytes": 1048576,
+  "total_deadline_seconds": 8,
+  "limitations": "Static vendor content only, not service execution, customer verification or checkout.",
+  "final_url": "https://www.frase.io/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "truncated": false,
+  "bytes_read": 163050,
+  "captures": [
+    {
+      "path": "cases/005/research/continuation-v1/capture-20260922T041403675886Z.html",
+      "sha256": "dadc7812c5305499516954d5527e7b13e468dbf6c62acee5cd2e73985b12ff6d"
+    },
+    {
+      "path": "cases/005/research/continuation-v1/capture-20260922T041403675886Z.txt",
+      "sha256": "342ac3f353bb1ad32883bddcac58171b801496040a9aed7bf99beca5dc796266"
+    }
+  ],
+  "elapsed_seconds": 0.34005045899999997
+}

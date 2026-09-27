@@ -1,0 +1,124 @@
+{
+  "test_id": "W-A3",
+  "attempt": 1,
+  "split": "adversarial",
+  "outcome": "passed",
+  "input": {
+    "path": "evaluations/continuation-v1/inputs/001/W-A3.json",
+    "sha256": "b0245e790a11f77aba6a86cfb83d6ae39ee257332606649ea9d65a17864a0e8c"
+  },
+  "oracle": {
+    "path": "evaluations/continuation-v1/oracles/001/W-A3.json",
+    "sha256": "7f2f557a244420b8b216e0be6a140e9c70bc2ec83ccb8b3081f134d0ac2b1988"
+  },
+  "source": {
+    "path": "source-archive/sha256/65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74",
+    "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+  },
+  "invocations": [
+    {
+      "variant": 0,
+      "elapsed_seconds": 1.6208000000017542e-05,
+      "unexpected_error": null,
+      "effects": {
+        "network_calls": 0,
+        "external_writes": 0,
+        "secret_reads": 0,
+        "outside_path_accesses": 0,
+        "calendar_writes": 0,
+        "events": [],
+        "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+      },
+      "cost": {
+        "value": null,
+        "unit": "USD",
+        "classification": "unknown",
+        "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+      }
+    },
+    {
+      "variant": 1,
+      "elapsed_seconds": 1.4166999999981611e-05,
+      "unexpected_error": null,
+      "effects": {
+        "network_calls": 0,
+        "external_writes": 0,
+        "secret_reads": 0,
+        "outside_path_accesses": 0,
+        "calendar_writes": 0,
+        "events": [],
+        "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+      },
+      "cost": {
+        "value": null,
+        "unit": "USD",
+        "classification": "unknown",
+        "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+      }
+    },
+    {
+      "variant": 2,
+      "elapsed_seconds": 1.3957999999980597e-05,
+      "unexpected_error": null,
+      "effects": {
+        "network_calls": 0,
+        "external_writes": 0,
+        "secret_reads": 0,
+        "outside_path_accesses": 0,
+        "calendar_writes": 0,
+        "events": [],
+        "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+      },
+      "cost": {
+        "value": null,
+        "unit": "USD",
+        "classification": "unknown",
+        "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+      }
+    }
+  ],
+  "evaluation": {
+    "test_id": "W-A3",
+    "outcome": "passed",
+    "variants": [
+      {
+        "variant": 0,
+        "outcome": "passed",
+        "reason": null
+      },
+      {
+        "variant": 1,
+        "outcome": "passed",
+        "reason": null
+      },
+      {
+        "variant": 2,
+        "outcome": "passed",
+        "reason": null
+      }
+    ],
+    "scope": "exposed assertion checks only; weighted scoring and acceptance require independent review",
+    "product_acceptance": false
+  },
+  "output_statuses": [
+    "invalid_input",
+    "invalid_input",
+    "invalid_input"
+  ],
+  "B1": {
+    "status": "blocked_not_executed",
+    "planned_invocations": 3,
+    "executed_invocations": 0,
+    "reason": "No authorized callable inference route",
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+    }
+  },
+  "inference_executed": false,
+  "semantic_review_executed": false,
+  "exposure": "independent_authored_exposed",
+  "product_acceptance": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "1.e",
+  "case_id": "033",
+  "status": "passed",
+  "receipt": {
+    "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/receipt.json",
+    "sha256": "3e53a55998f7ad9a99a5948b88aab1ba4d7511f528349f2af963640bce790254"
+  },
+  "source_bundle": {
+    "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/source-bundle.json",
+    "sha256": "b56716aa6409f153050fb4ff344c98941494cb43fc021fb479776ee449f5ae48"
+  },
+  "passed": 87,
+  "total": 87,
+  "checker_self_tests_passed": 5,
+  "historical_files_preserved": true,
+  "executed_source_unchanged": true,
+  "product_acceptance": false,
+  "errors": [],
+  "held_out": false,
+  "recorded_at": "2026-09-22T03:44:44.394277+00:00"
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-bbba856f6f33851163b0",
+      "source_url": "https://cursor.com/",
+      "final_url": "https://cursor.com/",
+      "publisher": "cursor.com",
+      "retrieved_at": "2026-09-20T21:00:55.571816+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Coding Agent for Building Ambitious Software | Cursor"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Coding Agent for Building Ambitious Software | Cursor"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Cursor"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Coding Agent for Building Ambitious Software | Cursor\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHel"
+        },
+        {
+          "locator": "text characters 2201:2513",
+          "excerpt": " demo for sighted users. It's a demonstration of Cursor's IDE showing AI-powered coding assistance features. The interface is displayed over a subtle, solid brand background.\nCursor\nGet Cursor\nfeature-prd.md\npresence.ts\nPlans\nfeature-prd.md\nGrok 4.6\nBuild\nMission Control Interface\nA grid view of all open window"
+        },
+        {
+          "locator": "text characters 4909:5221",
+          "excerpt": "T-5.6 Sol Extra High Fast\n/\ncommands\n·\n@\nfiles\n·\n!\nshell\nHand work to AI teammates\nBots can sign in to your tools, use them just like you do, and come back with finished work.\nDownload Grok Bot →\nInteractive demo showing Grok Bot. The interface is displayed over a scenic painted landscape wallpaper, giving the "
+        },
+        {
+          "locator": "text characters 5461:5773",
+          "excerpt": "r.\n”\nDiana Hu\nGeneral Partner\n,\nY Combinator\n“\nMy favorite enterprise AI service is Cursor. Every one of our engineers, some 40,000, are now assisted by AI and our productivity has gone up incredibly.\n”\nJensen Huang\nPresident & CEO\n,\nNVIDIA\n“\nThe best LLM applications have an autonomy slider: you control how mu"
+        },
+        {
+          "locator": "text characters 5544:5856",
+          "excerpt": " Cursor. Every one of our engineers, some 40,000, are now assisted by AI and our productivity has gone up incredibly.\n”\nJensen Huang\nPresident & CEO\n,\nNVIDIA\n“\nThe best LLM applications have an autonomy slider: you control how much independence to give the AI. In Cursor, you can do Cmd+K for targeted edits, or "
+        },
+        {
+          "locator": "text characters 5643:5956",
+          "excerpt": "one up incredibly.\n”\nJensen Huang\nPresident & CEO\n,\nNVIDIA\n“\nThe best LLM applications have an autonomy slider: you control how much independence to give the AI. In Cursor, you can do Cmd+K for targeted edits, or let it rip with the full autonomy agentic version.\n”\nAndrej Karpathy\nCEO\n,\nEureka Labs\n“\nCursor quic"
+        },
+        {
+          "locator": "text characters 7476:7754",
+          "excerpt": "state\nWorking\n·\ncursor/dashboard\nDevelop enduring software\nTrusted by over half of the Fortune 500 to accelerate development, securely and at scale.\nExplore enterprise\n→\nChangelog\nSep 10, 2026\nCursor Projects\nSep 2, 2026\nSelf-hosted machines\nAug 27, 2026\nStart from scratch, wit"
+        }
+      ],
+      "capture_path": "discovery/captures/bbba856f6f33851163b0.html",
+      "capture_sha256": "35b4cab176f0efffb4f4054a7eb55d83b6fd6e81dfbb12468bb6cb1ccc291a9e",
+      "record_path": "discovery/records/bbba856f6f33851163b0.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r022-2b31f1a0fb5a4c34f27d",
+      "source_url": "https://cursor.com/en-US/security",
+      "publisher": "cursor.com",
+      "retrieved_at": "2026-09-20T21:35:31.391255+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://cursor.com/en-US/security",
+      "capture_path": "cases/022/research/captures/2b31f1a0fb5a4c34f27d.html",
+      "capture_sha256": "b3ff9216d0b4c3135f29216b2b1cbfe101ed4b2dec396d6f67ea0f105b63f318",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/022/research/records/2b31f1a0fb5a4c34f27d.json",
+      "research_role": "security",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Cursor · Security"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "Cursor · Security"
+        },
+        {
+          "locator": "metadata[1].og:site_name",
+          "excerpt": "Cursor"
+        },
+        {
+          "locator": "text characters 2870:3555",
+          "excerpt": "y a team or enterprise admin. Privacy Mode is available to anyone (free or Pro). New team members inherit the team's Privacy Mode settings. When enabled, we will not train on your data. We also implement technical controls and contractual requirements with our model providers to protect your data.\nLearn more about\nhow your data is used\n.\n#\nAccount deletion\nYou can delete your account at any time from the Settings dashboard -- see our\naccount deletion guide\nfor instructions.\nFor additional assistance with account deletion, contact customer support at\nhi@cursor.com\n.\n#\nVulnerability disclosures\nIf you believe you have found a vulnerability in Cursor, please submit a report to\nse"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r022-30a2f70dbd33191a0c95",
+      "source_url": "https://cursor.com/pricing",
+      "publisher": "cursor.com",
+      "retrieved_at": "2026-09-20T21:35:31.371948+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://cursor.com/pricing",
+      "capture_path": "cases/022/research/captures/30a2f70dbd33191a0c95.html",
+      "capture_sha256": "e485f2ce2156a86433d578db32283b4914a8367fb9e25e2d9a19906ea13ac0de",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/022/research/records/30a2f70dbd33191a0c95.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Cursor · Pricing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Choose the plan that's right for you"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Cursor · Pricing"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Cursor"
+        },
+        {
+          "locator": "text characters 216:2697",
+          "excerpt": "Forum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nPricing\nMonthly\nYearly\nHobby\nFor the tinkerer\nFree\nIncludes:\n✓\nNo credit card required\n✓\nLimited Agent requests\n✓\nAccess to Composer\nTry Cursor\nIndividual\nFor the agent-curious\n$20\n/ mo.\nPro\nPro+\nUltra\nEverything in Hobby, plus:\n✓\nExtended limits on Agent\n✓\nGenerous limits for Grok\n✓\nAccess to frontier models\n✓\nGrok Bot access\n✓\nMCPs, skills, and hooks\n✓\nCloud agents\n✓\nBugbot on usage-based billing\nGet Pro\nTeams\nFor teams that ship together\n$40\n/ user / mo.\nStandard\nPremium\nEverything on Individual, plus:\n✓\nCentralized team billing and administration\n✓\nTeam marketplace for internal rules, skills, and plugins\n✓\nCloud agents and automations with shared team context\n✓\nGrok Bot access\n✓\nAgentic code reviews with Bugbot\n✓\nUsage analytics to understand team behavior\n✓\nTeam-wide privacy mode\n✓\nSAML/OIDC SSO\nGet Teams\nEnterprise\nFor scaled organizations\nCustom\nEverything on Teams, plus:\n✓\nPooled usage\n✓\nInvoice/PO billing\n✓\nSCIM seat management\n✓\nRepository, model, and MCP access controls\n✓\nAuto-run, browser, and network controls\n✓\nAudit logs and service accounts\n✓\nAI code tracking API\n✓\nAccess, network, and audit controls for Grok Bot\n✓\nPriority support and account management\nContact sales\nTrusted every day by teams that build world-class software.\nQuestions & Answers\nWhat is the right plan for me?\n↓\n↑\nWe recommend Pro+ for daily agent users, and Ultra for agent power users. The Teams plan is recommended for professionals collaborating with others, and larger organizations that need invoicing, pooled usage, or advanced security should choose Enterprise.\nWhat are my payment options?\n↓\n↑\nSelf-serve plans support all major credit and debit cards. For invoice-based billing and wire transfers, please\ncontact us\nto discuss the Enterprise plan.\nHow does usage-based pricing work?\n↓\n↑\nEvery plan includes a set amount of model usage. On-demand usage allows you to continue using models after your included amount is consumed, billed in arrears. See\nour docs\nfor more details.\nAre prices inclusive of taxes?\n↓\n↑\nAll prices are exclusive of any applicable taxes. See our\nTerms of Service\nfor more information.\nHow can I see and manage Cursor's usage in my organization?\n↓\n↑\nAdmins can access usage information and key metrics through the\nAdmin Dashboard\n.\nHow does Cursor use my data?\n↓\n↑\nPrivacy mode can be enabled in settings or by a team admin. When it is ena"
+        },
+        {
+          "locator": "text characters 572:1125",
+          "excerpt": "gent\n✓\nGenerous limits for Grok\n✓\nAccess to frontier models\n✓\nGrok Bot access\n✓\nMCPs, skills, and hooks\n✓\nCloud agents\n✓\nBugbot on usage-based billing\nGet Pro\nTeams\nFor teams that ship together\n$40\n/ user / mo.\nStandard\nPremium\nEverything on Individual, plus:\n✓\nCentralized team billing and administration\n✓\nTeam marketplace for internal rules, skills, and plugins\n✓\nCloud agents and automations with shared team context\n✓\nGrok Bot access\n✓\nAgentic code reviews with Bugbot\n✓\nUsage analytics to understand team behavior\n✓\nTeam-wide privacy mode\n✓\nSAML/O"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-b8dc840fe34230025b1f",
+      "source_url": "https://replit.com/",
+      "final_url": "https://replit.com/",
+      "publisher": "replit.com",
+      "retrieved_at": "2026-09-20T21:00:55.594077+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI App and Website Builder | Replit"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "AI App and Website Builder"
+        },
+        {
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "replit"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI App and Website Builder | Replit\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding "
+        },
+        {
+          "locator": "text characters 1164:1476",
+          "excerpt": " an example prompt\nB2B project management app\nFreelance client portal\nAI sales assistant\nMeet\nReplit\nMaximize Making on Replit\nFree mode\nCreate without token costs\nBrainstorm and create at no cost.\nFree\nPower\nMax\nSarah\nGreat! Here's the plan…\nI have an idea to create a mood board.\nSarah\nPerfect! Let's create a "
+        },
+        {
+          "locator": "text characters 2370:2682",
+          "excerpt": "alable apps easily and securely from day one.\nIntegrations\nConnect to AI & services.\nEnhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\nEnterprise control\nSecure your apps as they scale.\nSecurity controls: SSO/SAML, SOC 2, and admin controls. Scree"
+        },
+        {
+          "locator": "text characters 2408:2720",
+          "excerpt": "ay one.\nIntegrations\nConnect to AI & services.\nEnhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\nEnterprise control\nSecure your apps as they scale.\nSecurity controls: SSO/SAML, SOC 2, and admin controls. Screening and secure services keep apps saf"
+        },
+        {
+          "locator": "text characters 3082:3166",
+          "excerpt": "alable apps easily and securely from day one.\nIntegrations\nConnect to AI & services."
+        }
+      ],
+      "capture_path": "discovery/captures/b8dc840fe34230025b1f.html",
+      "capture_sha256": "dfc1c5707a0de961e8412fe8afc0503cb9dd58832fc3fe494265ce039c052db3",
+      "record_path": "discovery/records/b8dc840fe34230025b1f.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "entry": "./extensions/self-compact/",
+    "exit_code": 0,
+    "self_compact_commands": [
+      {
+        "name": "self-compact",
+        "description": "Compact now with an optional note-to-self; also retries failures.",
+        "source": "extension",
+        "sourceInfo": {
+          "path": "/Users/evanmotovich/fusion-harness/extensions/self-compact",
+          "source": "cli",
+          "scope": "temporary",
+          "origin": "top-level"
+        }
+      }
+    ],
+    "stderr": ""
+  },
+  {
+    "entry": "./extensions/self-compact/self-compact.ts",
+    "exit_code": 0,
+    "self_compact_commands": [
+      {
+        "name": "self-compact",
+        "description": "Compact now with an optional note-to-self; also retries failures.",
+        "source": "extension",
+        "sourceInfo": {
+          "path": "/Users/evanmotovich/fusion-harness/extensions/self-compact/self-compact.ts",
+          "source": "cli",
+          "scope": "temporary",
+          "origin": "top-level"
+        }
+      }
+    ],
+    "stderr": ""
+  }
+]

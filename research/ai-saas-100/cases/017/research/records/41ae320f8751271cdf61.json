@@ -1,0 +1,190 @@
+{
+  "evidence_id": "r017-41ae320f8751271cdf61",
+  "source_url": "https://chatling.ai/pricing",
+  "publisher": "chatling.ai",
+  "retrieved_at": "2026-09-20T21:35:30.915093+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://chatling.ai/pricing",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": true,
+  "capture_path": "cases/017/research/captures/41ae320f8751271cdf61.html",
+  "capture_sha256": "714d5c3857bd9eea256ed5394d2af754f6862a32f1ad42a1f668c9aea96bda95",
+  "bytes_saved": 262144,
+  "title": "Pricing | Chatling",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Simple, transparent pricing. Choose the perfect plan for your needs. Start free and scale as you grow."
+    },
+    {
+      "key": "og:title",
+      "value": "Pricing"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Chatling"
+    },
+    {
+      "key": "og:description",
+      "value": "Simple, transparent pricing. Choose the perfect plan for your needs. Start free and scale as you grow."
+    }
+  ],
+  "text": "Pricing | Chatling\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nOpen menu\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nSimple, transparent pricing\nChoose the perfect plan for your needs. Start free and scale as you grow.\nMonthly\nAnnual\nFree\nLaunch your first AI agent and see how AI can reduce your support workload.\n$0\n/month\n200\nAI credits\nCredit usage varies based on the AI model used.\n1\nAI agent\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n1\nSeat\nNumber of team members you can add to your project.\n500,000\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nGet Started\nStarter\nHandle more conversations, customize your AI, and bring your team into the loop.\n$25\n/month\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n2\nSeats\nNumber of team members you can add to your project.\n10 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Free, plus:\n4 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n5 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base weekly\nAutomatically resyncs knowledge base sources to fetch the latest data.\nFull chatbot customization\nCustomize the chatbot's appearance to match your branding.\n29 AI models\nAvailable models: Gemini 3.8 Flash, Mistral Medium 3.5, Gemini 3.6 Flash, Claude Opus 5, Claude Sonnet 5, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.2 (Non-reasoning), Grok 4.1 Fast, DeepSeek V3.2 (US), Mistral Small 4, Mistral Large 3, Gemini 3.1 Pro Preview, Gemini 3.1 Flash-Lite, Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT 5.2, GPT 5.1, Claude Haiku 4.5, Gemini 2.5 Pro, Gemini 2.5 Flash, GPT-4.1, GPT-4.1 Mini, GPT-4o\nAPI access\nChatbot analytics\nView detailed analytics of your AI agents, such as number of new conversations and contacts, peak chat times, top countries, and more.\nVoice input\nAllows users to send messages by voice (speech-to-text transcription).\n$21\n/month\nbilled $250 annually\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n2\nSeats\nNumber of team members you can add to your project.\n10 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Free, plus:\n4 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n5 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base weekly\nAutomatically resyncs knowledge base sources to fetch the latest data.\nFull chatbot customization\nCustomize the chatbot's appearance to match your branding.\n29 AI models\nAvailable models: Gemini 3.8 Flash, Mistral Medium 3.5, Gemini 3.6 Flash, Claude Opus 5, Claude Sonnet 5, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.2 (Non-reasoning), Grok 4.1 Fast, DeepSeek V3.2 (US), Mistral Small 4, Mistral Large 3, Gemini 3.1 Pro Preview, Gemini 3.1 Flash-Lite, Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT 5.2, GPT 5.1, Claude Haiku 4.5, Gemini 2.5 Pro, Gemini 2.5 Flash, GPT-4.1, GPT-4.1 Mini, GPT-4o\nAPI access\nChatbot analytics\nView detailed analytics of your AI agents, such as number of new conversations and contacts, peak chat times, top countries, and more.\nVoice input\nAllows users to send messages by voice (speech-to-text transcription).\nMost Popular\nGrowth\nScale support with more agents, credits, and collaboration for growing teams.\n$75\n/month\nGet Started\n6,000\nAI credits\nCredit usage varies based on the AI model used.\n5\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n5\nSeats\nNumber of team members you can add to your project.\n30 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Starter, plus:\n7 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n10 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base daily\nAutomatically resyncs knowledge base sources to fetch the latest data.\nSatisfaction survey\nDisplay survey at the end of chats to collect user feedback about their interaction with the chatbot.\nRound robin routing\nAutomatically distribute handed-off conversations between eligible agents.\n$63\n/month\nbilled $750 annually\nGet Started\n6,000\nAI credits\nCredit usage varies based on the AI model used.\n5\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n5\nSeats\nNumber of team members you can add to your project.\n30 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Starter, plus:\n7 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n10 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base daily\nAutomatically resyncs knowledge base sources to fetch the latest data.\nSatisfaction survey\nDisplay survey at the end of chats to collect user feedback about their interaction with the chatbot.\nRound robin routing\nAutomatically distribute handed-off conversations between eligible agents.\nScale\nHigh-volume support with the limits larger teams need to run AI across the business.\n$295\n/month\nGet Started\n35,000\nAI credits\nCredit usage varies based on the AI model used.\n7\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n10\nSeats\nNumber of team members you can add to your project.\n100 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Growth, plus:\n12 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\nUnlimited workflows\nAutomate multi-step work when conversation, contact, action, or other events occur.\nRemove \"Powered by Chatling\" branding\nRemove the 'Powered by Chatling' branding from the web widget.\n$246\n/month\nbilled $2,950 annually\nGet Started\n35,000\nAI credits\nCredit usage varies based on the AI model used.\n7\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n10\nSeats\nNumber of team members you can add to your project.\n100 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Growth, plus:\n12 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\nUnlimited workflows\nAutomate multi-step work when conversation, contact, action, or other events occur.\nRemove \"Powered by Chatling\" branding\nRemove the 'Powered by Chatling' branding from the web widget.\nSee all features\nBest choice I've made this year\nBen Sibley\nIndependent Analytics\n4.7\nout of 5 stars\n4.3\nout of 5 stars\nResolved 45% of support questions\nSasha Garcia\nSnapDownloader\nBest AI chatbot on the market\nDiego Castelli\nPlásticos del Plata\nAdds so much value to our customer experience\nAnadi T.\niSportsAnalysis\nAdd-Ons\nCustomize your plan to meet your needs\nExtra AI Credits\nper 1,000 credits\n+$10\n/mo\nExtra Knowledge Base Characters\nper 1,000,000 characters\n+$2\n/mo\nExtra AI Agent\nper AI agent\n+$3\n/mo\nExtra Seat\nper seat\n+$10\n/mo\nRemove \"Powered by Chatling\" branding\n+$35\n/mo\nCustom Domain\nper custom domains\n+$10\n/mo\nCompare our plans and features\nFree\nStarter\nGrowth\nScale\nFree\nStarter\nGrowth\nScale\nUsage\nChats\nUnlimited\nUnlimited\nUnlimited\nUnlimited\nAI credits\nCredit usage varies based on the AI model used.\n200/mo\n1,750/mo\n6,000/mo\n35,000/mo\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\n500,000\n10,000,000\n30,000,000\n100,000,000\nEmail credits\nNumber of emails you can send using the Send Email action. Each email recipient counts as 1 credit.\n25/mo\n1,000/mo\n4,000/mo\n15,000/mo\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n1\n2\n5\n7\nSeats\nNumber of team members you can add to your project.\n1\n2\n5\n10\nAI Actions\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n2 per agent\n4 per agent\n7 per agent\n12 per agent\nVoice input\nNumber of minutes for speech-to-text transcription\n-\n250 min/mo\n1,000 min/mo\n3,000 min/mo\nResync credits\nResync knowledge base sources to fetch the latest data. Each credit is equivalent to 10,000 characters.\n-\n1,000/mo\n10,000/mo\n30,000/mo\nFeatures\nLive chat\nCanned responses\nCreate reusable, pre-written replies that agents can quickly insert into conversations to respond faster and stay consistent.\n10\nUnlimited\nUnlimited\nUnlimited\nWorkflows\nAutomate multi-step work when conversation, contact, action, or other events occur.\n-\n5 per AI agent\n10 per AI agent\nUnlimited\nChatbot customization\nCustomize the chatbot's appearance to match your branding.\nLimited\nFull\nFull\nFull\nKnowledge base file upload limit\nMaximum size of individual files that can be uploaded to the Knowledge Base.\n1 MB\n100 MB\n100 MB\n100 MB\nFile attachments\nAllow agents and end-users to share images, documents, and other files in live chat.\n-\nRouting\nAutomatically route handed-off conversations to a team or agent.\n-\n-\nRound robin\nRound robin\nCopilot\nAI assistant for your agents to draft replies, summarize chats, and find answers from your knowledge base.\n-\n-\nAnalytics\nView detailed analytics of your AI agents, such as number of new conversations and contacts, peak chat times, top countries, and more.\n-\nVoice input\nAllows users to send messages by voice (speech-to-text transcription).\n-\nAuto-sync knowledge\nAutomatically resyncs knowledge base sources to fetch the latest data.\n-\nWeekly/Monthly\nDaily/Weekly/Monthly\nDaily/Weekly/Monthly\nExport chats\n-\n-\nExport leads\n-\n-\nDownload chat transcript\nAllow end-users to download chat transcripts.\n-\n-\nAI chat summary\nWhen a conversation is handed off to a human agent, an AI-generated summary is display so your team has full context before joining the chat.\n-\n-\nSatisfaction survey\nDisplay survey at the end of chats to collect user feedback about their interaction with the chatbot.\n-\n-\n-\nChannels\nWeb\nWhatsApp\n-\nInstagram\n-\nMessenger\n-\nTelegram\n-\nAPI\n-\nIntegrations\nGoogle Sheets\nCal.com\nZapier\n-\nZendesk\n-\n-\nZoho\n-\n-\nHubspot\n-\n-\nSlack\n-",
+  "links": [
+    {
+      "href": "/css/v4/app.css?id=502458fbdb1d2b7673b4aa0df71e0ffb",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-57x57.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-60x60.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-72x72.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-76x76.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-114x114.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-120x120.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-144x144.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-152x152.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-180x180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/android-icon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-96x96.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/go/api-docs",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/go/api-docs",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.347863
+}

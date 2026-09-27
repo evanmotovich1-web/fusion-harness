@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-fb7a16d773659d8bd691",
+      "source_url": "https://mokker.ai/",
+      "final_url": "https://mokker.ai/",
+      "publisher": "mokker.ai",
+      "retrieved_at": "2026-09-20T21:00:44.978192+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "text characters 0:45",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "text characters 0:45",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        }
+      ],
+      "capture_path": "discovery/captures/fb7a16d773659d8bd691.html",
+      "capture_sha256": "b0583664428e255ceeb5e754ce2cfe1ee2ab5139f5c02d9753303c1f0269ba1e",
+      "record_path": "discovery/records/fb7a16d773659d8bd691.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r010-5a776be0421cf59177d8",
+      "source_url": "https://mokker.ai/features",
+      "publisher": "mokker.ai",
+      "retrieved_at": "2026-09-20T21:35:26.204360+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": "failed",
+      "final_url": null,
+      "capture_path": null,
+      "capture_sha256": null,
+      "capture_truncated": null,
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "record_path": "cases/010/research/records/5a776be0421cf59177d8.json",
+      "research_role": "workflow",
+      "excerpts": []
+    },
+    {
+      "evidence_id": "r010-d6800ffff8f008dee7f8",
+      "source_url": "https://mokker.ai/pricing",
+      "publisher": "mokker.ai",
+      "retrieved_at": "2026-09-20T21:35:26.202176+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://mokker.ai/pricing",
+      "capture_path": "cases/010/research/captures/d6800ffff8f008dee7f8.html",
+      "capture_sha256": "4f5ad7e2415c7347d7fdd8863fbd4ebcb7089b715feabc43b551ef879cacf613",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/010/research/records/d6800ffff8f008dee7f8.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-e9372f7f0c8a40d7e329",
+      "source_url": "https://pebblely.com/",
+      "final_url": "https://pebblely.com/",
+      "publisher": "pebblely.com",
+      "retrieved_at": "2026-09-20T21:00:44.977717+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pebblely AI Product Photography | Create beautiful product photos in seconds with AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Boring product photos? Pebblely helps you create beautiful photos in seconds with AI"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pebblely AI Product Photography | Create beautiful product photos in seconds"
+        },
+        {
+          "locator": "text characters 0:251",
+          "excerpt": "Pebblely AI Product Photography | Create beautiful product photos in seconds with AI\nPebblely\nOpen menu\nResources\nPricing\nLog in\nGet started\nCreate AI product photos\nthat help you sell more.\nNo Photoshop skills required.\nLearn how it works.\nGet starte"
+        },
+        {
+          "locator": "text characters 12:324",
+          "excerpt": "Product Photography | Create beautiful product photos in seconds with AI\nPebblely\nOpen menu\nResources\nPricing\nLog in\nGet started\nCreate AI product photos\nthat help you sell more.\nNo Photoshop skills required.\nLearn how it works.\nGet started\nMore than\n25,000,000\n+\nimages generated\nby creative companies globally\n"
+        },
+        {
+          "locator": "text characters 78:390",
+          "excerpt": "ith AI\nPebblely\nOpen menu\nResources\nPricing\nLog in\nGet started\nCreate AI product photos\nthat help you sell more.\nNo Photoshop skills required.\nLearn how it works.\nGet started\nMore than\n25,000,000\n+\nimages generated\nby creative companies globally\nTurn one image into multiple marketing assets with AI\nMarketplace "
+        },
+        {
+          "locator": "text characters 305:617",
+          "excerpt": "companies globally\nTurn one image into multiple marketing assets with AI\nMarketplace listing photos\nSocial media content\nWebsite imagery\nEmail banners\nAd creatives\nAnd more\nSuitable for all marketplaces, platforms, and channels\nGenerate product photos at scale\nAs your business grows, you need more content than "
+        },
+        {
+          "locator": "text characters 557:869",
+          "excerpt": "at scale\nAs your business grows, you need more content than ever. Use AI to help you scale.\nBulk generation with our app\nEasily generate product photos with similar or varied backgrounds.\n100+ templates to get started with\nBrowse all templates →\nEmerging from rippling water, pink background, shallow depth of fi"
+        },
+        {
+          "locator": "text characters 1736:2048",
+          "excerpt": " the window, blue sky\nJoin 1,000,000+ creatives\nwho are creating with AI\nI can't say enough about Pebblely and, just as important, their great customer service. I had a question concerning how to use the new interface and I got an emailed response within the hour! I was a fan of Pebblely before the upgrade, but"
+        }
+      ],
+      "capture_path": "discovery/captures/e9372f7f0c8a40d7e329.html",
+      "capture_sha256": "e48965489850a9c7956d6a57b64a46caf5e9c0ea1ef6ecb8e47215951eb26772",
+      "record_path": "discovery/records/e9372f7f0c8a40d7e329.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

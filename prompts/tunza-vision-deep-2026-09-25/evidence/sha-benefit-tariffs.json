@@ -1,0 +1,21 @@
+{
+  "id": "sha-benefit-tariffs",
+  "requested_url": "https://www.sha.go.ke/benefit-tariffs/",
+  "accessed_utc": "2026-09-25T02:55:00.916764+00:00",
+  "status": 200,
+  "final_url": "https://www.sha.go.ke/benefit-tariffs/",
+  "headers": {
+    "Date": "Fri, 25 Sep 2026 02:55:02 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Link": "<https://www.sha.go.ke/wp-json/>; rel=\"https://api.w.org/\"",
+    "Server": "cloudflare",
+    "cf-cache-status": "DYNAMIC",
+    "CF-RAY": "a406bf5f79e27416-MIA"
+  },
+  "bytes": 284069,
+  "sha256": "06f171d15fdff4f8598d34dc93381b233fa607cd9c05a65a4ea871dd9c299024",
+  "file": "sha-benefit-tariffs.html"
+}
