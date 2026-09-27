@@ -1,0 +1,11 @@
+{
+  "source_snapshot": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+    "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+  },
+  "freeze": {
+    "path": "evaluations/continuation-v1/003/runs/20260922T043157663907Z-cfe30df5/freeze.json",
+    "sha256": "1a03ac607be01579bfa7fa40fab4f00ba8187f6b8df8ade4066ebade4bd864e3"
+  },
+  "inference_enabled": false
+}

@@ -1,0 +1,118 @@
+{
+  "evidence_id": "r029-be41b43470a7949b6b97",
+  "source_url": "https://logically.app/pricing",
+  "publisher": "logically.app",
+  "retrieved_at": "2026-09-20T21:35:37.630926+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://logically.app/pricing/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/029/research/captures/be41b43470a7949b6b97.html",
+  "capture_sha256": "f389f89ed5e8a85f45350859e3c212a9cdefa631ef4ea97c825bf6b5a19ad07d",
+  "bytes_saved": 6555,
+  "title": "Use Logically for Free. No Credit Card Required.",
+  "metadata": [
+    {
+      "key": "application-name",
+      "value": "Logically AI Research Assistant"
+    },
+    {
+      "key": "description",
+      "value": "Use Logically for free today. Upgrade for unlimited storage, unlimited AI usage from advanced and reasoning AI models, and other premium features. 30-day money-back guaranteed."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Logically"
+    },
+    {
+      "key": "og:title",
+      "value": "Use Logically for Free. No Credit Card Required."
+    },
+    {
+      "key": "og:description",
+      "value": "Use Logically for free today. Upgrade for unlimited storage, unlimited AI usage from advanced and reasoning AI models, and other premium features. 30-day money-back guaranteed."
+    }
+  ],
+  "text": "Use Logically for Free. No Credit Card Required.",
+  "links": [
+    {
+      "href": "/favicon.ico?v=4",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.svg?v=4",
+      "rel": "icon"
+    },
+    {
+      "href": "/safari-pinned-tab.svg?v=4",
+      "rel": "mask-icon"
+    },
+    {
+      "href": "/apple-touch-icon.png?v=4",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/site.webmanifest?v=3",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+      "rel": "preload"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/react-vendor-DFxXL2gN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/tiptap-vendor-C7xOw2-Y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mui-vendor-BeBWyWYW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/env-DeGoaagm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BtBpnYIx.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-DCUpMghk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-CV7TONgM.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-D3jd-6mY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://logically.app/pricing",
+      "rel": "canonical"
+    }
+  ],
+  "elapsed_seconds": 0.30222
+}

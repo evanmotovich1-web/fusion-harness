@@ -1,0 +1,32 @@
+{
+  "id": "medic-echis-search",
+  "requested_url": "https://medic.org/wp-json/wp/v2/search?search=echis&per_page=8",
+  "accessed_utc": "2026-09-25T02:54:21.491872+00:00",
+  "status": 200,
+  "final_url": "https://medic.org/wp-json/wp/v2/search?search=echis&per_page=8",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:54:23 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Vary": "Accept-Encoding",
+    "X-hacker": "Want root?  Visit join.a8c.com and mention this header.",
+    "Host-Header": "WordPress.com",
+    "X-Robots-Tag": "noindex",
+    "X-Content-Type-Options": "nosniff",
+    "Access-Control-Expose-Headers": "X-WP-Total, X-WP-TotalPages, Link",
+    "Access-Control-Allow-Headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type",
+    "X-WP-Total": "48",
+    "X-WP-TotalPages": "6",
+    "Link": "<https://medic.org/wp-json/wp/v2/search?search=echis&per_page=8&page=2>; rel=\"next\"",
+    "Allow": "GET",
+    "X-ac": "2.mia _atomic_dca MISS",
+    "Alt-Svc": "clear",
+    "Server-Timing": "a8c-cdn, dc;desc=mia, cache;desc=MISS;dur=1548.0"
+  },
+  "bytes": 4027,
+  "sha256": "3cbf63d728b22e157b9e7988456d6fd940ca21b0171f305dd30fd260c503ad65",
+  "file": "medic-echis-search.html"
+}

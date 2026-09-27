@@ -1,0 +1,453 @@
+{
+  "evidence_id": "web-7b2657db07e04c6f6574",
+  "source_url": "https://www.pixelcut.ai/",
+  "retrieved_at": "2026-09-20T21:00:44.978541+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.pixelcut.ai/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/7b2657db07e04c6f6574.html",
+  "capture_sha256": "930368cb0ccdf3d909653b8eaef39019ee6c43ccf53990ee73797b283805b9d4",
+  "bytes_saved": 226226,
+  "title": "Pixelcut | Free AI Photo Editor",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Easy-to-use AI tools to make your photos stand out!"
+    },
+    {
+      "key": "og:title",
+      "value": "Pixelcut | Free AI Photo Editor"
+    },
+    {
+      "key": "og:description",
+      "value": "Easy-to-use AI tools to make your photos stand out!"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Pixelcut"
+    }
+  ],
+  "text": "Pixelcut | Free AI Photo Editor\nPixelcut\nEdit\nGenerate\nAPI\nPricing\nDownload\nLog in\nSign up\nOpen menu\nCreate Studio-Quality Visuals with AI\nJoin 70 million sellers making images and videos with AI.\nStart creating\nWatch video\nDownload App\nWatch video\nTrusted by creatives at\nCreative Agent\nSmarter than your average tool\nPixelcut understands your prompts, plans and executes tasks on your behalf using the best creative tools available like Nano Banana Pro and Sora 2. No special prompting required.\nImage & Video Workflows That Deliver\nProduct Showcase\nBring your products to life with studio-grade imagery, generated with just a prompt\nAI UGC Ads\nCreate talking videos to promote your brand in seconds\nPersonas\nCreate custom personas that can be consistent across your content\nEveryday Edits,\nWorld-Class Models\nBackground Removal\nUltra-high quality, proprietary background removal for both image and video\nUpscale\nHigh quality upscaling up to 16x resolution, choose from a range of models including Topaz\nExpand\nReframe your images using our proprietary expand tool to extend beyond the edges of your frame\nRetouching\nPrecise AI retouch, can easily erase or edit using generative fill\nShadows\nPrecise shadow generation\nBatch Editing\nPerform edits across hundreds of files at once\nKeep Products On-Brand\nAI Actors\nEvery image and video infused with deep understanding of your character and brand\nAI Product Photos\nGenerate unlimited product images with perfect character consistency across every shot\nOn-Brand Videos\nCreate engaging video content where your character stays consistent from frame to frame\nMillions of images created every day\nJoin 70M+ creators, brands, and businesses\nMy favorite app\nGreat app, easy to use. Helps our small business save time and money to create different marketing materials professionally. Thank you.\nShaelyn D.\nBest background remover\nI need a good background remover for my work and I've been through them all it feels like. This one is the best by far. It's so easy to use and the results always look amazing. Thank you Pixelcut!\nKira H.\nLove it\nIt's amazingly easy and gives the perfect results for my bags and accessories. It looks like it was done by a professional photographer.\nMary J.\nStart creating for free\nPixelcut is the one place for all your creative work. Over 70 million creators, brands and businesses have trusted us to be their creative workspace, and we hope you’re next. We’ve crafted the experience to make creation and editing not only incredibly powerful, but also magically easy. We can’t wait for you to get started.\nStart creating\nTools\nImage Upscaler\nBackground Remover\nVideo Background Remover\nChange Background\nMagic Eraser\nAI Image Generator\nAI Video Generator\nGenerative Fill\nUncrop\nAI Ads\nAI Product Photography\nBulk Image Editor\nProducts\nPixelcut for Claude\niOS\nAndroid\nAPI\nResources\nAbout\nAffiliate\nCareers\nBlog\nAPI Docs\nBrand\nTerms\nAPI Terms\nPrivacy\nCookie Preferences\nWhat's New\nSitemap\nllms.txt\nKeep in touch\nInstagram\nX\nContact Us\nEnglish\nEnglish\nEspañol\nFrançais\nItaliano\nPortuguês (Brasil)\nBahasa Indonesia\nไทย\nDeutsch\nहिन्दी\n日本語\n한국어\nTürkçe\nРусский\nTiếng Việt\nAdd Pixelcut as a preferred source on Google\n© 2026 Pixelcut.\nAll rights reserved.",
+  "links": [
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/remove-background-after.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/remove-background-before.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/upscale-before-1.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/expand-after-1.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/expand-before-1.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/retouch-after.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/retouch-before.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/shadow-after.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/shadow-before.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/new-home-page/batch-edit-before-1.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/home-page-ai-tools/home-page-character-consistency/character_consistency_1.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/home-page-ai-tools/home-page-character-consistency/character_consistency_2.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.pixelcut.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/hi-in",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.pixelcut.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/web/assets/logo192.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://oauth.pixelcut.ai",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/fonts/inter/v20/variable/inter-latin-wght-normal.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/locales/en/common.json",
+      "rel": "preload"
+    },
+    {
+      "href": "/locales/en/landing_marketing.json",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets/entry.client-q83tcnlA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/root-B3IGMiEi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/_lpl-DJEtdwgA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/route-component-Cnk8CSLo.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-DFKV9iFq.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-DFKV9iFq.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://apps.apple.com/us/app/pixelcut-ai-photo-editor/id1534785237",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/agent",
+      "rel": null
+    },
+    {
+      "href": "/product-showcase",
+      "rel": null
+    },
+    {
+      "href": "/ai-ads",
+      "rel": null
+    },
+    {
+      "href": "/ai-actors",
+      "rel": null
+    },
+    {
+      "href": "/background-remover",
+      "rel": null
+    },
+    {
+      "href": "/image-upscaler",
+      "rel": null
+    },
+    {
+      "href": "/uncrop",
+      "rel": null
+    },
+    {
+      "href": "/cleanup-pictures",
+      "rel": null
+    },
+    {
+      "href": "/t/ai-shadows",
+      "rel": null
+    },
+    {
+      "href": "/bulk",
+      "rel": null
+    },
+    {
+      "href": "/ai-actors",
+      "rel": null
+    },
+    {
+      "href": "/ai-product-photography",
+      "rel": null
+    },
+    {
+      "href": "/image-upscaler",
+      "rel": null
+    },
+    {
+      "href": "/background-remover",
+      "rel": null
+    },
+    {
+      "href": "/video-background-remover",
+      "rel": null
+    },
+    {
+      "href": "/background-remover/change-background",
+      "rel": null
+    },
+    {
+      "href": "/cleanup-pictures",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/generative-fill",
+      "rel": null
+    },
+    {
+      "href": "/uncrop",
+      "rel": null
+    },
+    {
+      "href": "/ai-ads",
+      "rel": null
+    },
+    {
+      "href": "/ai-product-photography",
+      "rel": null
+    },
+    {
+      "href": "/bulk",
+      "rel": null
+    },
+    {
+      "href": "/claude",
+      "rel": null
+    },
+    {
+      "href": "https://apps.apple.com/us/app/pixelcut-ai-photo-editor/id1534785237",
+      "rel": null
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=com.circular.pixels",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/about-us",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "https://pixelcut.notion.site/Pixelcut-Careers-1153b550490080e79df3df14edcc6487",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/learn",
+      "rel": null
+    },
+    {
+      "href": "https://www.pixelcut.ai/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cdn3.pixelcut.app/Brand/Pixelcut%20Brand.zip?dl=1",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "https://pixelcut.notion.site/Pixelcut-API-Terms-of-Service-11b3b550490080d89a91e943d010efdf",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/whats-new",
+      "rel": null
+    },
+    {
+      "href": "/sitemap",
+      "rel": null
+    },
+    {
+      "href": "/llms.txt",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/pixelcut/",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/intent/user?screen_name=pixelcutai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/it",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/id",
+      "rel": null
+    },
+    {
+      "href": "/th",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/hi-in",
+      "rel": null
+    },
+    {
+      "href": "/ja",
+      "rel": null
+    },
+    {
+      "href": "/ko",
+      "rel": null
+    },
+    {
+      "href": "/tr",
+      "rel": null
+    },
+    {
+      "href": "/ru",
+      "rel": null
+    },
+    {
+      "href": "/vi",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1208
+}

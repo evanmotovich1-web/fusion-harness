@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-2b1b95c2b5c5ab777a49",
+      "source_url": "https://medicalillustration.app/",
+      "final_url": "https://medicalillustration.app/",
+      "publisher": "medicalillustration.app",
+      "retrieved_at": "2026-09-20T21:01:53.848528+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Medical Illustration Generator for Anatomy & Research"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Draft AI medical illustrations for anatomy teaching, research figures, and patient education. Start from text or reference images and review each output."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Medical Illustration Generator for Anatomy & Research"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Medical Illustration"
+        },
+        {
+          "locator": "text characters 77:389",
+          "excerpt": "Medical Illustration\nNow with multi-view anatomy and workflow prompts\nAI medical illustration generator\nfor teaching, research, and patient education\nCreate anatomy diagrams, research figures, and patient education visuals from a text prompt, then review labels, style, and viewing angle in one workspace.\nGenera"
+        },
+        {
+          "locator": "text characters 1029:1341",
+          "excerpt": "for a journal figure.\" Pick your style, resolution, and detail level.\nAI generates your illustration\nThe model can help you draft clearer medical visuals quickly, but the best results still come from specific prompts and final human review before use.\nReview, download, and adapt\nExport high-resolution drafts fo"
+        },
+        {
+          "locator": "text characters 1564:1876",
+          "excerpt": "for a journal figure.\" Pick your style, resolution, and detail level.\nAI generates your illustration\nThe model can help you draft clearer medical visuals quickly, but the best results still come from specific prompts and final human review before use.\nReview, download, and adapt\nExport high-resolution drafts fo"
+        },
+        {
+          "locator": "text characters 3192:3504",
+          "excerpt": "e across a series of clinic materials\nDraft a patient handout\nGallery\nAI-Generated Medical Illustration Examples\nBrowse real examples of anatomical diagrams, surgical illustrations, and medical visualizations created by our AI — from labeled anatomy to detailed procedural guides.\nAll\nAnatomy\nSurgery\nNeurology\nP"
+        },
+        {
+          "locator": "text characters 3346:3658",
+          "excerpt": "ms, surgical illustrations, and medical visualizations created by our AI — from labeled anatomy to detailed procedural guides.\nAll\nAnatomy\nSurgery\nNeurology\nPathology\nHuman Heart Cross-Section\nDetailed anatomical illustration showing all four chambers, valves, and major vessels with labeled annotations.\nAnatomy"
+        },
+        {
+          "locator": "text characters 7565:7877",
+          "excerpt": "parison. This kind of real-time visual teaching was impossible before AI medical illustration tools.\nMarco Reyes\nAnatomy Professor\nExplaining congenital heart defects to parents is hard. I use this medical illustration tool to create patient education diagrams showing their child's specific condition with clear"
+        }
+      ],
+      "capture_path": "discovery/captures/2b1b95c2b5c5ab777a49.html",
+      "capture_sha256": "f09da2a84db3d9ace3d80796e19ac18f62b8cfef40d76e47c80052d004dc3d61",
+      "record_path": "discovery/records/2b1b95c2b5c5ab777a49.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r020-5321519ad10a277172f7",
+      "source_url": "https://medicalillustration.app/tools",
+      "publisher": "medicalillustration.app",
+      "retrieved_at": "2026-09-20T21:35:31.248390+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://medicalillustration.app/tools",
+      "capture_path": "cases/020/research/captures/5321519ad10a277172f7.html",
+      "capture_sha256": "eb70c6c7ce3f366224b377c3cceea69ead96ea1c0e6515c51f4c040436b9c294",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/020/research/records/5321519ad10a277172f7.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Medical Illustration Tools | Anatomy & Clinical Diagrams"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Browse AI tools for anatomy teaching, mechanism diagrams, research figures, and patient communication. Start from a workflow matched to your use case."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Medical Illustration Tools | Anatomy & Clinical Diagrams"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Medical Illustration"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r020-87e4a7ac64e7fadeb834",
+      "source_url": "https://medicalillustration.app/pricing",
+      "publisher": "medicalillustration.app",
+      "retrieved_at": "2026-09-20T21:35:31.206868+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://medicalillustration.app/pricing",
+      "capture_path": "cases/020/research/captures/87e4a7ac64e7fadeb834.html",
+      "capture_sha256": "cfe473f690c0d80050637a0a134ea2ae35ec5f5678229eb3152046e1d0087558",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/020/research/records/87e4a7ac64e7fadeb834.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Simple Pricing for Medical Illustration"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Choose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Simple Pricing for Medical Illustration"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Medical Illustration"
+        },
+        {
+          "locator": "text characters 46:2541",
+          "excerpt": "n Program\nTools\nCreate\nSign In\nMedical Illustration\nSimple Pricing for Medical Illustration\nChoose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest\nMonthly\nYearly\n50% OFF\nSAVE 50%\nStandard\nGreat for getting started.\n$19\n$9.5\n/ month\nBilled annually — Save $114\n240 credits/month\n≈\n80 figures/month\nGet Started\nIncludes\n240\ncredits / month\nGenerate up to\n80\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nStandard member queue\nSlide & poster friendly layouts\nRun up to 3 generation tasks concurrently\n30-day history storage\nAll illustration styles included\nMost Popular\nSAVE 50%\nUltra\nBuilt for high-volume production.\n$99\n$49.5\n/ month\nBilled annually — Save $594\n1,800 credits/month\n≈\n600 figures/month\nGet Started\nIncludes\n1800\ncredits / month (3× Pro)\nGenerate up to\n600\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nSkip the waiting queue\nEverything in Pro, plus:\nRun up to\n10 generation tasks concurrently\nHighest priority\ngeneration queue\nPermanent history + dedicated support (12h response)\nSAVE 50%\nPro\nBest for regular creation.\n$39\n$19.5\n/ month\nBilled annually — Save $234\n600 credits/month\n≈\n200 figures/month\nGet Started\nIncludes\n600\ncredits / month\nGenerate up to\n200\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nPriority queue\nEverything in Standard, plus:\nRun up to 5 generation tasks concurrently\nPriority generation queue\nduring busy hours\n90-day history + priority support (24h response)\nEarly access to new features\nPay safely and securely with\nCredit Packages\nOne-time purchase. Credits remain available for up to 12 months and do not auto-renew.\nStarter Pack\n240\ncredits\n≈ 80 figures\n$30\nPurchase\nPopular\nGrowth Pack\n900\ncredits\n≈ 300 figures\n$100\nPurchase\nProfessional Pack\n2100\ncredits\n≈ 700 figures\n$200\nPurchase\nFAQ\nPricing & Credits FAQ\nHow do the billing cycles work?\nWhen are credits delivered?\nCan I switch or cancel later?\nDo unused credits expire?\nAre commercial rights included?\nNeed invoices or team billing?\nMedical Illustration\nMedical Illustration is an AI-powered tool for creating professional medical illustrations, anatomy diagrams, and patient education materials. Not affiliated with OpenAI or Google.\nMossAI Tools\nViesearch - The Human-curated Search E"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-1f5d0a73df8df7c2e6ac",
+      "source_url": "https://www.recraft.ai/",
+      "final_url": "https://www.recraft.ai/",
+      "publisher": "www.recraft.ai",
+      "retrieved_at": "2026-09-20T21:00:45.188909+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Recraft | AI for designers, creatives, sellers, and teams"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Recraft is a top-ranked text-to-image model and design platform for photorealism, vector generation, custom styles, mockups, and more"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Recraft | AI for designers, creatives, sellers, and teams"
+        },
+        {
+          "locator": "text characters 0:252",
+          "excerpt": "Recraft | AI for designers, creatives, sellers, and teams\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry"
+        },
+        {
+          "locator": "text characters 3:315",
+          "excerpt": "raft | AI for designers, creatives, sellers, and teams\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nStyle It Once, Every Image Matches: Introducing"
+        },
+        {
+          "locator": "text characters 108:369",
+          "excerpt": "ommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nStyle It Once, Every Image Matches: Introducing V4 Styles\nLearn more\nIntroducing V4 Styles\nLearn more"
+        }
+      ],
+      "capture_path": "discovery/captures/1f5d0a73df8df7c2e6ac.html",
+      "capture_sha256": "2fdd2bbb9af53df0d09f72f019c0191494b3676991f6007c3f992fedca911f32",
+      "record_path": "discovery/records/1f5d0a73df8df7c2e6ac.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

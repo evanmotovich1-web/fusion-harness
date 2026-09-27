@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "recorded_at": "2026-09-22T03:32:51.795364+00:00",
+  "summary": {
+    "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-summary.json",
+    "sha256": "6a714207008e76f92702643515c44ab00bbe0c579ed5aec721763b86ffe30b00"
+  },
+  "snapshot_artifacts": [
+    {
+      "original_path": "cases/003/implementation/workflow.py",
+      "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/implementation/persistence.py",
+      "sha256": "19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/implementation/demo_persistence.py",
+      "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/implementation/PERSISTENCE.md",
+      "sha256": "be57d1c80bc87380c3fb7f3bd0dbbdb5dc326bdbde43fb9fe29a88b4140a4d3b",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/fixtures.json",
+      "sha256": "709362107acff5308488d3282edc13a82ecd2542a95528be218a40ecff037125",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/run.py",
+      "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/persistence-v1/execute.py",
+      "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/fixtures.json",
+      "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/run.py",
+      "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/fixtures.repair-v1.json",
+      "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837",
+      "archive_and_current_match": true
+    },
+    {
+      "original_path": "cases/003/tests/run_repair_v1.py",
+      "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8",
+      "archive_and_current_match": true
+    }
+  ],
+  "receipt_checks": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-persistence-v1-20260922T033210014938Z-persistence.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-persistence-v1-20260922T033210014938Z-legacy.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": ""
+    }
+  ],
+  "product_acceptance": false,
+  "status": "passed"
+}

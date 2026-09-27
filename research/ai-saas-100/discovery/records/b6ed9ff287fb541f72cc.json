@@ -1,0 +1,36 @@
+{
+  "evidence_id": "web-b6ed9ff287fb541f72cc",
+  "source_url": "https://www.google.com/search?q=%22norvjx%22+AI+software",
+  "retrieved_at": "2026-09-20T21:01:31.155280+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.google.com/search?q=%22norvjx%22+AI+software",
+  "content_type": "text/html; charset=ISO-8859-1",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/b6ed9ff287fb541f72cc.html",
+  "capture_sha256": "0d214d8146e2e5d9089da8734a1625bc3901f82dc4611bdd380b8b36cc2205a8",
+  "bytes_saved": 91452,
+  "title": "Google Search",
+  "metadata": [],
+  "text": "Google Search\nIf you're having trouble accessing Google Search, please\nclick here\n, or send\nfeedback\n.",
+  "links": [
+    {
+      "href": "/httpservice/retry/enablejs?sei=q0mwasiHFcah0-kPk-6osAM",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx%22+AI+software&sca_esv=0685ec434f4b2503&ie=UTF-8&emsg=SG_REL&sei=q0mwasiHFcah0-kPk-6osAM",
+      "rel": null
+    },
+    {
+      "href": "https://support.google.com/websearch",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.5822
+}

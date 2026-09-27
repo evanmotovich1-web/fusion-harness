@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "recorded_at": "2026-09-20T22:44:36.388730+00:00",
+  "scope": "Structural validation of the three repair-run receipts, not product acceptance",
+  "summary_path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-summary.json",
+  "summary_sha256": "5b231a3b2cb509a94db6dfc2f06f8094038bb157b6d635bcb33eba903e53c1c5",
+  "results": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-repair-v1-20260920T224346368023Z-historical-counterexamples.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": "",
+      "receipt_sha256": "bd93aa52c95ab251bf98d474780d53fe4770e0a530aac51125f8b66eb12e15ce"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-repair-v1-20260920T224346368023Z-legacy-regression.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": "",
+      "receipt_sha256": "403c8febe135d6989f0e784ec63c78104735f3f35d17fe63e5a084ccc04d31fa"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/tools/validate.py",
+        "receipt",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/receipts/003-repair-v1-20260920T224346368023Z-repair-regression.json",
+        "--root",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"valid\": true, \"kind\": \"receipt\", \"counts\": null}\n",
+      "stderr": "",
+      "receipt_sha256": "aa967b953fb6e047031f2dc755fd605ed5d46819f61849443a0621d95c6f0ea6"
+    }
+  ],
+  "status": "passed",
+  "product_acceptance": false
+}

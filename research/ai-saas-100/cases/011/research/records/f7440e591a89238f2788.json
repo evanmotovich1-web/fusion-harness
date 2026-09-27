@@ -1,0 +1,170 @@
+{
+  "evidence_id": "r011-f7440e591a89238f2788",
+  "source_url": "https://pictory.ai/pricing",
+  "publisher": "pictory.ai",
+  "retrieved_at": "2026-09-20T21:35:26.291756+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://pictory.ai/pricing/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": true,
+  "capture_path": "cases/011/research/captures/f7440e591a89238f2788.html",
+  "capture_sha256": "7f618ee7e74433bd13c2aac6029133df5efc2a348e50018d3bcbb74a8afbe021",
+  "bytes_saved": 262144,
+  "title": "Pictory Pricing | From $25 per Month",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Pricing plans start at just $25/month! Check out the official Pictory pricing for Starter and Enterprise plans here."
+    },
+    {
+      "key": "og:title",
+      "value": "Pricing page for Pictory AI Video Software"
+    },
+    {
+      "key": "og:description",
+      "value": "Pricing plans start at just $25/month! Check out the official Pictory pricing for Starter and Enterprise plans here."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Pictory.ai"
+    }
+  ],
+  "text": "Pictory Pricing | From $25 per Month",
+  "links": [
+    {
+      "href": "https://pictory.ai/pricing/",
+      "rel": "canonical"
+    },
+    {
+      "href": "//www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://pictory.ai/feed",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/comments/feed",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpictory.ai%2Fpricing%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpictory.ai%2Fpricing%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-includes/css/dashicons.min.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/essential-grid/public/includes/builders/gutenberg/build/index.css?ver=1788702695",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/pictory-pricing-slider-final/pictory-slider.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/pictory-pricing-slider-india/pictory-slider-india.css?ver=1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/thrive-ultimatum/tcb-bridge/assets/css/placeholders.css?ver=11.0.0.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/wonderplugin-3dcarousel/engine/wonderplugin3dcarousel.css?ver=4.7.1PRO",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/wonderplugin-carousel/engine/wonderplugincarouselengine.css?ver=19.6.1PRO",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/thrive-leads/editor-layouts/css/frontend.css?ver=11.0.0.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/themes/thrive-theme/style.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/themes/thrive-theme-child/style.css?ver=1.0",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/thrive-ovation/tcb-bridge/frontend/css/frontend.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/themes/thrive-theme/inc/assets/dist/landingpage-front.css?ver=11.0.0.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "//pictory.ai/wp-content/uploads/pum/pum-site-styles.css?generated=1756957419&ver=1.25.0",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/themes/thrive-theme/style.css?ver=11.0.0.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.2.0",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/essential-grid/public/assets/css/settings.css?ver=3.2.0",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.8.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/ubermenu/assets/css/skins/minimal.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css?ver=7.1.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/wp/v2/pages/14538",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://pictory.ai/?p=14538",
+      "rel": "shortlink"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "apple-touch-icon"
+    }
+  ],
+  "elapsed_seconds": 1.441548
+}

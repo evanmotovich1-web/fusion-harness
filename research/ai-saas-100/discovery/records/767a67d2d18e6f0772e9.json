@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-767a67d2d18e6f0772e9",
+  "source_url": "https://mypingenius.com/",
+  "retrieved_at": "2026-09-20T21:01:53.848426+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>",
+  "elapsed_seconds": 0.096
+}

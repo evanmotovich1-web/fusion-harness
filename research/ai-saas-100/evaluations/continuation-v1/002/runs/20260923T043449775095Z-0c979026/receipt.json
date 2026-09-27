@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "status": "passed",
+  "started_at": "2026-09-23T04:34:50.167581+00:00",
+  "ended_at": "2026-09-23T04:34:50.448627+00:00",
+  "elapsed_seconds": 0.281089208,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/002/run_market_review.py",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/002/runs/20260923T043449775095Z-0c979026/config.json"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "timeout_seconds": 40,
+  "exit_status": 0,
+  "error": null,
+  "implementation": {
+    "manifest_binding": {
+      "path": "cases/002/implementation/workflow.py",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    "executed_snapshot": {
+      "path": "source-archive/sha256/4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    "manifest": {
+      "path": "execution-manifest.json",
+      "sha256": "e1bb58591622321e95ee35572c367bfd653ad4c811b6034be18895793f585280"
+    }
+  },
+  "evaluator_freeze": {
+    "path": "evaluations/continuation-v1/selftest-receipts/20260922T040256033925Z-863d211b/freeze.json",
+    "sha256": "f0c0cf1b639cf3b5bdd8b6c00dc02dae490a46ecca20e5ca1350ae157672c079"
+  },
+  "run_freeze": {
+    "path": "evaluations/continuation-v1/002/runs/20260923T043449775095Z-0c979026/freeze.json",
+    "sha256": "3e4c076c64962550b6edda6e712e48b66d6a9202669d46dd5c77c509c70de473"
+  },
+  "outputs": [
+    {
+      "path": "evaluations/continuation-v1/002/runs/20260923T043449775095Z-0c979026/stdout.json",
+      "sha256": "5b0fcccfb7dce481d99a379494a86cae98a4b1cf85c194c84dc56126b038507d"
+    },
+    {
+      "path": "evaluations/continuation-v1/002/runs/20260923T043449775095Z-0c979026/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "counts": {
+    "group_attempts": 20,
+    "invocations": 22,
+    "planned_group_attempts": 20,
+    "planned_invocations": 22,
+    "denominators_complete": true,
+    "passed": 20,
+    "failed": 0,
+    "blocked": 0,
+    "normal_base_passed": 8,
+    "normal_base_total": 8,
+    "adversarial_base_passed": 6,
+    "adversarial_base_total": 6
+  },
+  "threshold_check": {
+    "note": "Informational only. Weighted scoring, usability judgment, and acceptance require independent review.",
+    "normal_pass_min": 7,
+    "adversarial_pass_min": 5,
+    "normal_base_passed": 8,
+    "adversarial_base_passed": 6,
+    "normal_threshold_met": true,
+    "adversarial_threshold_met": true
+  },
+  "local_component_acceptance": true,
+  "arms": {
+    "local_component": "executed",
+    "B1_generic_model": {
+      "status": "blocked_not_executed",
+      "capability_evidence": {
+        "path": "capabilities-continuation.json",
+        "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+      }
+    },
+    "B3_original_product": "not_observed"
+  },
+  "fixed_output_writers": {
+    "never_executed": [
+      "cases/002/tests/repair-v2/execute.py",
+      "cases/002/tests/repair-v2/validate.py"
+    ],
+    "hashes_before": {
+      "cases/002/tests/repair-v2/execute.py": "911b2aaa0d57b27419b4a1f7317854445f3abca56ebeab4ce521570d7b42379c",
+      "cases/002/tests/repair-v2/validate.py": "3d9e393501bf7b98cead769c911db125d6fdd7d732edbe7f672122b7d2605993"
+    },
+    "hashes_after": {
+      "cases/002/tests/repair-v2/execute.py": "911b2aaa0d57b27419b4a1f7317854445f3abca56ebeab4ce521570d7b42379c",
+      "cases/002/tests/repair-v2/validate.py": "3d9e393501bf7b98cead769c911db125d6fdd7d732edbe7f672122b7d2605993"
+    },
+    "byte_identical": true
+  },
+  "inference_executed": false,
+  "model_requests": 0,
+  "exposure": "independent_authored_exposed",
+  "hidden_evaluation_established": false,
+  "product_acceptance": false,
+  "commercial_verdict": "insufficient_evidence",
+  "cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "Local deterministic execution only; no paid or metered calls"
+  },
+  "preservation_manifest": {
+    "path": "evaluations/continuation-v1/002/runs/20260923T043449775095Z-0c979026/preservation-before.json",
+    "sha256": "2ac00eccb1525c00da18a6dd7bb7bdb6b0d309e9cff52260a6fac3e6e750fe37"
+  },
+  "outside_review_files_checked": 1698,
+  "outside_review_changed_paths": [],
+  "source_changes": [],
+  "limitations": [
+    "Local deterministic subset only; editorial judgment and live marketplace behavior unassessed",
+    "Exposed suite; hidden evaluation not established by this run",
+    "Passing assertions establish component correctness, not product acceptance",
+    "Audit hooks are instrumentation, not OS containment",
+    "B1 absence is a missing authorized capability, not a failed comparison"
+  ]
+}

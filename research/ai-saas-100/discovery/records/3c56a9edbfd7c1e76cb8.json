@@ -1,0 +1,377 @@
+{
+  "evidence_id": "web-3c56a9edbfd7c1e76cb8",
+  "source_url": "https://voicenotes.com/",
+  "retrieved_at": "2026-09-20T21:00:36.703556+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://voicenotes.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/3c56a9edbfd7c1e76cb8.html",
+  "capture_sha256": "fc3abebd49634a140dd4806c0217ff1095b55b42d441fcf80e5dd9a3a0c38437",
+  "bytes_saved": 262144,
+  "title": "Voicenotes - AI notetaker that works (magic) in the background",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Voicenotes turns every meeting into perfect notes and instant answers, and works with every meeting app. You'll never write \"quick recap\" again."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Voicenotes"
+    },
+    {
+      "key": "og:title",
+      "value": "Voicenotes - AI notetaker that works (magic) in the background"
+    },
+    {
+      "key": "og:description",
+      "value": "Voicenotes turns every meeting into perfect notes and instant answers, and works with every meeting app. You'll never write \"quick recap\" again."
+    }
+  ],
+  "text": "Voicenotes - AI notetaker that works (magic) in the background\nResources\nIntegrations\nConnect your favourite tools.\nHelp Center\nBrowse guides and FAQs.",
+  "links": [
+    {
+      "href": "/_nuxt/spinnerLoader.Dmcsma5O.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/modal.3wYjMx_Y.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/MeetingsTab.DB6u-EEA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/trustedBy.y4w2RXe_.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/DictationTab.FRlAP__j.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/MemosTab.CLWgMu0k.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/landing-v1/meetings/hero-sky-bg.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/_payload.json?067c8905-2a7f-4d06-9d6b-f89cf465b52f",
+      "rel": "preload"
+    },
+    {
+      "href": "/_nuxt/Wgt0y-d7.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DnfGh9W_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/dYxpQWzJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CZ1iV0ua.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BzbbzmDz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BdW0Tw9s.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/8IQ4ufer.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/R_3sTb4Y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BZUN2Hei.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/6MrgiVNp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/GIeUdJDS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CC8fHYUy.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Yrz7y2Rz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B203qj05.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DlAUqK2U.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bs-xeGQ8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DjCTaEP1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DY1kaxuh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CW8wcBT4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D9bFCRz2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/MFUpXDHp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DF7ze67N.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DX0IdOb5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/-_9-YO1Y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BPICXCNf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CsZA7yvq.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DjZdt0mY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D1S-3Dln.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CDW8AHpe.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CkIqVvat.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/P6QfOZx_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BNQjboZF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CmckQcxC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/tFXo-e78.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/omLoE-G3.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DvT_G0J3.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CSBQytsS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CAhQfd7I.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BoIj7pyq.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/yIRrAvYH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Dka7oamV.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BvgSD2AE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/ByKQKIHX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BG80uMQ5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BJYh_YR2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C0KaNWLg.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Ci7HFb8x.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BoZc75oM.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DL7_nKc1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B8VczZXh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C6rI1C9H.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D563nvrv.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CIn9_50b.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C6lc7eV1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BugVvpPW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CbO5LB37.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BC4pT9lN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CD3ndkoH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/i1kCHRKO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/WDhKoAB1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BAGEW73S.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/PsdHfz9i.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/jo6QAGZd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BoKGjKpD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C9uA9dCP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "https://voicenotes.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://help.voicenotes.com/en/collections/12277349-integrations",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://help.voicenotes.com/en/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://voicenotes.com/blog",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.277
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "output": {
+      "status": "invalid_input",
+      "error": {
+        "code": "path_parameters_forbidden",
+        "field": "request"
+      },
+      "scheduled": [],
+      "unscheduled": [],
+      "constraints_checked": {},
+      "calendar_writes": 0
+    },
+    "error": null,
+    "input_unchanged": true,
+    "effects": {
+      "network_calls": 0,
+      "external_writes": 0,
+      "secret_reads": 0,
+      "outside_path_accesses": 0,
+      "calendar_writes": 0,
+      "measurement_scope": "Python audit events during wrapped schedule calls; not OS containment"
+    },
+    "system": "B2"
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-0c5dcc503ad76cf63ecc",
+      "source_url": "https://paperpal.com/",
+      "final_url": "https://paperpal.com/",
+      "publisher": "paperpal.com",
+      "retrieved_at": "2026-09-20T21:00:09.683272+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal\nFeatures\nChevron down\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submis"
+        },
+        {
+          "locator": "text characters 0:283",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal\nFeatures\nChevron down\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, parap"
+        },
+        {
+          "locator": "text characters 95:407",
+          "excerpt": "\nPricing\nPlugins\nChevron down\nLogin\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit"
+        },
+        {
+          "locator": "text characters 129:441",
+          "excerpt": "n\nGet Started\nGet Started\nMenu\nBest AI Writing Tool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit card required\n1,500+\nleading jour"
+        },
+        {
+          "locator": "text characters 177:489",
+          "excerpt": "ool -\nForbes\nThe only AI workspace you need from\nsearch to submission\nAI-powered writing, citations, paraphrasing, and integrity checks, designed to keep you productive at research, not slow you down.\nSign up with Google\nNo credit card required\n1,500+\nleading journals trust Paperpal\n1M+\npapers checked before su"
+        },
+        {
+          "locator": "text characters 997:1309",
+          "excerpt": "rately in 10,000+ styles.\nTry Now >\nSubmit with confidence\nSelf-check AI-generated text and plagiarism, catch reference errors, and confirm journal submission readiness, all in one checker suite built for top journals.\nTry Now >\nTry Paperpal Free\nCatch every risk before you submit\nSpot the problems in your thes"
+        }
+      ],
+      "capture_path": "discovery/captures/0c5dcc503ad76cf63ecc.html",
+      "capture_sha256": "6ac95175a1ad7cb132d2b680d5ee4c768ca9ac6e5b47f0a94d69578120df8774",
+      "record_path": "discovery/records/0c5dcc503ad76cf63ecc.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r034-03b1ee4b466eefc4ae4b",
+      "source_url": "https://paperpal.com/pricing",
+      "publisher": "paperpal.com",
+      "retrieved_at": "2026-09-20T21:35:38.149350+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://paperpal.com/pricing",
+      "capture_path": "cases/034/research/captures/03b1ee4b466eefc4ae4b.html",
+      "capture_sha256": "f586dcb6a171e958a601c423ded7297c1e6c3b437f0d9df257726558a341dd94",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/034/research/records/03b1ee4b466eefc4ae4b.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Paperpal Pricing & Plans - Find the Right Plan for Your Research"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Find the Paperpal pricing plan that fits your research needs. Upgrade for advanced AI writing, editing, plagiarism detection, citation management, PDF chat, and journal submission checks."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Paperpal Pricing & Plans - Find the Right Plan for Your Research"
+        },
+        {
+          "locator": "metadata[3].og:title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "metadata[4].og:description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "locator": "text characters 241:785",
+          "excerpt": " new tabs. No copy-pasting. Just seamless writing support, right where you are.\nMS Word Add-in\nChrome Extension\nSupports Google Docs and Overleaf\nMicrosoft Edge\nSupports Google Docs and Overleaf\nBring your Enterprise/Institution on board\nSimplify access management, collaborate through shared libraries, and unlock institution-wide pricing for your teams. Contact us to start your free trial.\nGet in Touch\nWhy every academic prefers Paperpal\n\"I can't recommend Paperpal enough for teachers. My students can now\nrefine writing and grammar withou"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r034-ba08d4859bd8927fcb96",
+      "source_url": "https://paperpal.com/data-security",
+      "publisher": "paperpal.com",
+      "retrieved_at": "2026-09-20T21:35:38.169784+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://paperpal.com/data-security",
+      "capture_path": "cases/034/research/captures/ba08d4859bd8927fcb96.html",
+      "capture_sha256": "15764b0a225a34310f00ad838a14d726d74e68ba3862170d05e70e2066d018ea",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/034/research/records/ba08d4859bd8927fcb96.json",
+      "research_role": "security",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Data Security – Secure AI Writing Tool for Researchers | Paperpal"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Write clearly and confidently with Paperpal’s secure AI writing tool. Your data stays private and encrypted. ISO/IEC 27001:2022 certified, GDPR compliant, and trusted by researchers."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Data Security – Secure AI Writing Tool for Researchers | Paperpal"
+        },
+        {
+          "locator": "metadata[3].og:title",
+          "excerpt": "AI Academic Writing Tool - Comprehensive AI Research Assistant | Paperpal"
+        },
+        {
+          "locator": "metadata[4].og:description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "locator": "text characters 999:1673",
+          "excerpt": "ining on security best practices.\nResponsible AI you can rely on\nTransparent and Secure AI Usage\nPaperpal uses advanced AI models—including proprietary and fine-tuned systems—tailored for scholarly writing. Whether you are a Prime member or a free Paperpal user, your data will never be used to train our AI models. With robust guardrails in place to mitigate incorrect or malicious use, our AI provides reliable assistance without security risks.\nTrusted Infrastructure. Total Protection.\nPaperpal’s enterprise-grade security measures protect your data at every step.\nCertified Data Centers\nYour data resides safely in SSAE 18/SOC1-certified facilities that are trusted glo"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-dcce27dc6bc240d69e57",
+      "source_url": "https://jenni.ai/",
+      "final_url": "https://jenni.ai/",
+      "publisher": "jenni.ai",
+      "retrieved_at": "2026-09-20T21:00:09.404352+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        },
+        {
+          "locator": "text characters 0:67",
+          "excerpt": "Jenni | AI Academic Writer & Research Tool for Students & Academics"
+        }
+      ],
+      "capture_path": "discovery/captures/dcce27dc6bc240d69e57.html",
+      "capture_sha256": "557378ec422b8dc711151167d50deda17ef225e95da88c0c97c615c8600fa20b",
+      "record_path": "discovery/records/dcce27dc6bc240d69e57.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

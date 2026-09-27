@@ -1,0 +1,1705 @@
+{
+  "schema_version": 1,
+  "seed": "ai-saas-100:KHPZw6:v1",
+  "algorithm": "sha256-stratified-small-first-v1",
+  "frozen_at_utc": "2026-09-20T21:08:03.588292+00:00",
+  "target": 100,
+  "selection_complete": true,
+  "candidate_pool_path": "discovery/candidate-pool.json",
+  "candidate_pool_sha256": "dc638f82d37dd09a13b2141e3c369bd63fb7b15d9fc590ebc6c819d30de0ddae",
+  "serialization": "UTF-8 json.dumps(ensure_ascii=False,sort_keys=True,separators=(comma,colon)) plus newline. Pool sorted by candidate_id.",
+  "lead_count": 160,
+  "deduplicated_candidate_count": 159,
+  "eligible_count": 125,
+  "excluded_count": 34,
+  "categories": {
+    "C01": "Writing, editing, and translation",
+    "C02": "Marketing, SEO, and social content",
+    "C03": "Sales research, outreach, and proposals",
+    "C04": "Customer support and knowledge assistants",
+    "C05": "Meetings, transcription, and audio processing",
+    "C06": "Documents, extraction, and research",
+    "C07": "Images, design, and product photography",
+    "C08": "Video generation, editing, and repurposing",
+    "C09": "Coding, testing, and developer workflows",
+    "C10": "Vertical business and administrative workflows"
+  },
+  "quotas": {
+    "C01": 10,
+    "C02": 10,
+    "C03": 10,
+    "C04": 10,
+    "C05": 10,
+    "C06": 10,
+    "C07": 10,
+    "C08": 10,
+    "C09": 10,
+    "C10": 10
+  },
+  "eligible_counts": {
+    "C02": 17,
+    "C05": 12,
+    "C04": 12,
+    "C03": 12,
+    "C06": 10,
+    "C08": 13,
+    "C07": 12,
+    "C09": 12,
+    "C01": 12,
+    "C10": 13
+  },
+  "selected_counts": {
+    "C01": 10,
+    "C02": 10,
+    "C03": 10,
+    "C04": 10,
+    "C05": 10,
+    "C06": 10,
+    "C07": 10,
+    "C08": 10,
+    "C09": 10,
+    "C10": 10
+  },
+  "selected_size_tiers": {
+    "E2": 99,
+    "E1": 1
+  },
+  "rank_definition": "SHA256(UTF8(seed + newline + candidate_id)); order by size tier E1,E2,E3, lowercase rank_hex, candidate_id.",
+  "rankings": [
+    {
+      "candidate_id": "getlinkbunny.com",
+      "category": "C02",
+      "size_tier": "E1",
+      "rank_hex": "6d48c7e4818454b0a0172929ff49b9915e12b30e5e72b6938ba5dabc5744607f"
+    },
+    {
+      "candidate_id": "fireflies.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "00d32329a2897d4816b613f9c5190fb819538b55071b8b79f556ae37b147254c"
+    },
+    {
+      "candidate_id": "botsonic.com",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "034997e1d7df8050c0de430d5789456f01175e3f4adbcc6a6f7af03cef18d0d7"
+    },
+    {
+      "candidate_id": "northlight.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "04e65c7da237b00499322e0ac95fddd95a9063db5ecaedf509c23ca5f5eda6f6"
+    },
+    {
+      "candidate_id": "notta.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "0db6e3f68f7da42d7500f1c122d6ced18018aac1fa8040642a7f5ca8bf53a690"
+    },
+    {
+      "candidate_id": "chatling.ai",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "0eb35e62d88a05afe084c12ac371b3b216a7b21da362e10133d01f4db785f9cd"
+    },
+    {
+      "candidate_id": "chatpdf.com",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "0f4a227bac45703fea3848b0e5140084df5db23c30f753ccd483edc641ce0465"
+    },
+    {
+      "candidate_id": "docsumo.com",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "119ed96ba0bdeb0cd3e2e123356b7252c0921e9758360e074ca9c5e7aaf234b7"
+    },
+    {
+      "candidate_id": "pictory.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "120402bcad9f04ab2a7dc7d7a7614a9aed26823a533f957220d99abb7e801c22"
+    },
+    {
+      "candidate_id": "mokker.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "1218eb6dbfa6b76fe902d76cb4f506cb9824aa964a98415b16a6ac2302beb711"
+    },
+    {
+      "candidate_id": "medicalillustration.app",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "171b3b6815ce6bc7155933ac338cefd80e604918dbf18a1a0765dbe7cf586844"
+    },
+    {
+      "candidate_id": "clay.com",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "1957faec12062ada0701daa92219e683e13534f5c20e15d1d9938316a7011437"
+    },
+    {
+      "candidate_id": "flair.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "19e4b2ac5a0b939a4126dc8dfb5dd2646806790fef054bccece57888ccab7c3f"
+    },
+    {
+      "candidate_id": "meetgeek.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "1a82b2d2e30380b83415b7d58e219431f47cf2e12aede3c00630eaf5e8093ef7"
+    },
+    {
+      "candidate_id": "heygen.com",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "1b5d254908a8701774f9244e5004a64a7f8e6a00eadf9eff6161a12322fb9be6"
+    },
+    {
+      "candidate_id": "klap.app",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "1ee0b4ad7147300c47399f599e4760f54fbf907fc6394ccf1015f046f64aa977"
+    },
+    {
+      "candidate_id": "replit.com",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "20d51922b268d98ac12abd2be47eca963eef784adda1264a96f0e92e0ca4500a"
+    },
+    {
+      "candidate_id": "frase.io",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "210ebe37c51439c0619bed581a8f6654dba1fef95cb7238789b214763743ef1f"
+    },
+    {
+      "candidate_id": "cursor.com",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "24b629a862e84b285c9401a21fe63488975682739ebadaddf4220735d979c9f9"
+    },
+    {
+      "candidate_id": "captions.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "2787f847768fe1f7a3c82ed899c16bae6ea3d68373d2705988b1851f1ee53212"
+    },
+    {
+      "candidate_id": "qodo.ai",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "28ebf3490702fd6d89d75d934a862b24fc6c20ca7fe9a5026331757c4f00bfa0"
+    },
+    {
+      "candidate_id": "anyword.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "28f30dd32ee6d45632b3e7cdd8f358dbc3c7291e9d82b0012bd45c7337455be9"
+    },
+    {
+      "candidate_id": "logically.app",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "2ae67da105d91cafe0ef8d79a7cec887c4b969c63d9cf6cc1d5916393ae25caa"
+    },
+    {
+      "candidate_id": "smodin.io",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "2c87f8a82a2a40a833e6c3881628e235cf5025c28c79e9b3c40aad10098902c3"
+    },
+    {
+      "candidate_id": "botpress.com",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "2d221e68264ecb1ae7f61e7201e56f1e1790ed16e640a59f92e3190525c6b7f1"
+    },
+    {
+      "candidate_id": "explainpaper.com",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "2d7424b3f1ec0b82cb21ccc1555fdf2feb6fe3b6b0b23b5667ae148063b3ec7a"
+    },
+    {
+      "candidate_id": "parsio.io",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "32065e25e63abe95b755eec1fe958e9b38c8b946dd451d8ddd61ec61f276193e"
+    },
+    {
+      "candidate_id": "coderabbit.ai",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "33dedc4f665e7bd897f98c412a34cae625fda3151ff956493d115380a97f07f1"
+    },
+    {
+      "candidate_id": "tldv.io",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "3538a95df4c8a451d376ec0a16b0380303cbd95e3580530806813bd3f9c51180"
+    },
+    {
+      "candidate_id": "stockimg.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "35e02dd8ce0f4338970da9beb3a7c858952a3716163f0fcd97c95ea2aef60e2b"
+    },
+    {
+      "candidate_id": "trypencil.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "35f306066a2fd4ad4af053240a7fc6bab32320d0a8a003f87896beec871b3f01"
+    },
+    {
+      "candidate_id": "languagetool.org",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "3868b5c6dd8ca40dfa6ad7d57760f77f81d6958aeecfaca82fb52facee94019e"
+    },
+    {
+      "candidate_id": "copy.ai",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "39a5d4507ae6c49718bfddb111ea077d9c6f44b7205bc3221649bbb5500a830a"
+    },
+    {
+      "candidate_id": "seowriting.ai",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "3a5d512b9f234ef3270f407927002c4b637a2c3c7220e7a89f018adc1ac0b1b0"
+    },
+    {
+      "candidate_id": "recraft.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "3b88292d4e7794ebd082462eb0f8b463fb936ff8acd989b1569b2228aebdc223"
+    },
+    {
+      "candidate_id": "bito.ai",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "442596193dd34c9a6a61ff90e7fde4e3883afbb56914a185936efd2d580597ed"
+    },
+    {
+      "candidate_id": "elicit.com",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "445c4ab8cf040e77243729fb937a688a8cdab433d63b6c285ba55df40191b65d"
+    },
+    {
+      "candidate_id": "ocoya.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "4664495513460ed5a6bfb207fe069b438305244d77fd7ccc6b34f7c28ef7048b"
+    },
+    {
+      "candidate_id": "taskade.com",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "4779ede0625f433fb96b118f1d097ce706bd8a8e5c45715589a55f0d06a17260"
+    },
+    {
+      "candidate_id": "wonsulting.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "47d852d41d52ab3908f01d66c18b5b81482a740390c69f285d446573c8b0729b"
+    },
+    {
+      "candidate_id": "sembly.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "48b2e5e4f8ca963bf257901167eeac021082c9ecbe9be6d496e51d835dbd3d58"
+    },
+    {
+      "candidate_id": "instantly.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "4958030fdcff0814d65b4860f76cf409e14611b2af84f6a5bd4d561771b5322c"
+    },
+    {
+      "candidate_id": "avoma.com",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "4c268be6a2d274435711b55c890d0b51b3b5cf06d80cfe148dd917c82aafc6f7"
+    },
+    {
+      "candidate_id": "jenni.ai",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "4eace003ed423bea629e750b862f90137dda32c732e60077324b40535c4036a1"
+    },
+    {
+      "candidate_id": "askyourpdf.com",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "4f83a9721447be0acf7a03e48feecbc5d32e72a75dd0818370d4ba9a4f36c332"
+    },
+    {
+      "candidate_id": "reclaim.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "502fa6e2d83387885157e23ce7f2950d0033fc8f3f96fac672383a50206ee059"
+    },
+    {
+      "candidate_id": "scalenut.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "50f4f3fc5b3e5e24a50d207550c62d3cb1d03feffb2b0db5773d5ba879940a0e"
+    },
+    {
+      "candidate_id": "picwish.com",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "5185eef7b7e2fe9700503c1d679f47fd1944baedfd7becead66bd993614e08d3"
+    },
+    {
+      "candidate_id": "persana.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "5313ebf25f96ae501b48b11b7ba215b1ba64fd39c4e7c60f7f61de2c60e90ac1"
+    },
+    {
+      "candidate_id": "nanonets.com",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "5429e606dcf65aa24a77d90e7a32e69dbeab5e9005ff93b1ddc628891b8861e0"
+    },
+    {
+      "candidate_id": "otter.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "555589a4fbdfa1db797b9e2a0c2b28de716c0c3bd19f22c3753152999bf1b602"
+    },
+    {
+      "candidate_id": "trevorai.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "5631a17ab5433fb07628cc7ca9933d352f3d10273bf601ec187993c9fcfdb119"
+    },
+    {
+      "candidate_id": "beautiful.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "58a210451009b9f26206486fe2ee069a0b9ca6c19bd5a7d6523d2ce3c52bec40"
+    },
+    {
+      "candidate_id": "consensus.app",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "59ec7156103e9d681a38138680b341ae3706538e99b11471d8eaa614775cb9f6"
+    },
+    {
+      "candidate_id": "compose.ai",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "5a5e54d8d793d4b6041c33722ac4f8156e9934b7f23910ff779dfbbe70f3e4fe"
+    },
+    {
+      "candidate_id": "paperpal.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "679eb0e4e3fd5f844eb875f196c25ccf8c6be362c93a6fe25241f4b0846514f7"
+    },
+    {
+      "candidate_id": "kittl.com",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "69a11ddf94f07ebae4a0833a3a5f2266f1c4e9fb9c3a5b144115d96697649202"
+    },
+    {
+      "candidate_id": "adcreative.ai",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "6b3e534c9fd325eccf49984b461c58129e4fec7c02a0db263a024fb2d5d66848"
+    },
+    {
+      "candidate_id": "tidio.com",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "6b9584f9868a74c578cd435d19cc7b6cf159d7cccefb3dedc96e8a7ded5d9670"
+    },
+    {
+      "candidate_id": "decktopus.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "6cfece5d34cc0ee60f586f1eb43f7c546d530c9180d887b77da8725047fb14de"
+    },
+    {
+      "candidate_id": "submagic.co",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "6e1611fb9c35e8249f5c6d1a7bccd004bdde1d9891bbfe0b0bc0c2f6d9cf13e7"
+    },
+    {
+      "candidate_id": "predis.ai",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "6ea5573658784fd80fd17616d3ccf040423b6de9a9f08be0a229a2ba08fe8df9"
+    },
+    {
+      "candidate_id": "sudowrite.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "7050086323817e787311543bad5e1374bd39e8e09ea44e260ff1b620eacda504"
+    },
+    {
+      "candidate_id": "regie.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "71a8dbc7fe93b65f0881fc4e5bf7abd6c4cba5002792b62e46bd8ef7a8d02b3e"
+    },
+    {
+      "candidate_id": "humata.ai",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "720b66dc9fa6076a6b9dcd402d35ea933f8c8da9a162fa09246f8c9abf2c13e2"
+    },
+    {
+      "candidate_id": "claid.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "73fca057e04b48e0a9ea9784ef81e30857c69fd81968cf4ec2aec9f322b84460"
+    },
+    {
+      "candidate_id": "chatbase.co",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "752e2962f5d04f905b6fe1a2bcb73e64fa9f24771fd20d122ef4e5ee6a12ae86"
+    },
+    {
+      "candidate_id": "pixelcut.ai",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "7d4c134316e0e8d25a43f4c466e676ce81d94a2399252b2b342617da055ce256"
+    },
+    {
+      "candidate_id": "pdf.ai",
+      "category": "C06",
+      "size_tier": "E2",
+      "rank_hex": "87959abbbb7461a065b0c2c448c9943e2200d7e97127b8e6cca6fa77d1106a37"
+    },
+    {
+      "candidate_id": "colossyan.com",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "886b85392a168fc75836f9e33842cca4751b4c07d300b270b734dc8ad7f09a0e"
+    },
+    {
+      "candidate_id": "photoroom.com",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "8b78a56ffbfb560d4517804f4ce7356319e9d644878c9b8458c3d4ab96a28799"
+    },
+    {
+      "candidate_id": "opus.pro",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "8ef10dc77d9bddd0fc127521318848a4ef776cab9db86c6b7a32c3ee79bc8bdc"
+    },
+    {
+      "candidate_id": "jasper.ai",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "8f39a8faec64a9fa830d2a4e848cb65ccd0a0fb27e9941039703e0b22d53c427"
+    },
+    {
+      "candidate_id": "type.ai",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "9394ca9316b21f1bca904472fa248069596e79fe2bf18f716bcdba3c9e3eec6b"
+    },
+    {
+      "candidate_id": "surferseo.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "93a32614fae9f378f7673334c77a85981a0c755c84724c6b090e9be20fa742c9"
+    },
+    {
+      "candidate_id": "lavender.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "9638b162ca0c6e77d48e45d403fb00e3a6405c48c7710979c6f7222cd5186005"
+    },
+    {
+      "candidate_id": "wordtune.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "a0521f4fddb21364dfbbf5e57f8218981b4cbf4ebed3ad15b659af2c0565c55e"
+    },
+    {
+      "candidate_id": "magicstudio.com",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "a49331acf347f214570404095ef63b261c835f88077c1d99dd723cb29aade6cb"
+    },
+    {
+      "candidate_id": "smartlead.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "ae93e61d35da35c26b0e6e6e2e5de370c8c5e933b7cfd158925f789321861975"
+    },
+    {
+      "candidate_id": "steve.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "b1f4eef1d8f4dd78cc8d921911f1a92eab27ed1ae2620b1e935f6dbc1d435a01"
+    },
+    {
+      "candidate_id": "rytr.me",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "b492a5787951283321d51455ac1e68af1faec67b8b59bc76d554673e2d470af6"
+    },
+    {
+      "candidate_id": "sourcegraph.com",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "b870d8972a73a78008b6d7c7da19e5971a3250639e02e851102402fa8478e863"
+    },
+    {
+      "candidate_id": "rezi.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "b897a5155a0916d5bd7cdbb5714adfb2ca78911df0b23811b937257ad75a9aa4"
+    },
+    {
+      "candidate_id": "invideo.io",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "bbd140bcc3678e73c89ba53de4757e8c787c1de6b4a27ddaefc6760c53d2e40a"
+    },
+    {
+      "candidate_id": "prowritingaid.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "bbddd7769e69f23b71b5c8bf1bd0885dbed8e3179edd97b8beb72f7600d3ea9a"
+    },
+    {
+      "candidate_id": "simplified.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "bc1abf5fd58b40c1d75a0f1f5ac1b8f209fb2e944504023d81f832e29153307e"
+    },
+    {
+      "candidate_id": "krisp.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "c014aadab6e77c59168d8cc6a79b4fb84dd2988d8658329465cc3e258da12a5f"
+    },
+    {
+      "candidate_id": "docsbot.ai",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "c04f537ae948f5101efcb271ad759c556bcc6075183489f43f2e954fb40ef3d4"
+    },
+    {
+      "candidate_id": "myaskai.com",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "c1d5539de3c6dc0083fe450838d6edc7a55312d32a3507d0dbd13f081615b664"
+    },
+    {
+      "candidate_id": "customgpt.ai",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "c20173548e8fee9f775d106e6e963d8bbff25690d2da992392624f446e73078e"
+    },
+    {
+      "candidate_id": "synthesia.io",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "c41caac77179746cd224f129c35ebb0e549930ab6476b7a635a7bdaeaf66de32"
+    },
+    {
+      "candidate_id": "voicenotes.com",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "c6227d514ad5575a0ef19e20eda29f769195e826992bc8ecaeab5fe557b147b6"
+    },
+    {
+      "candidate_id": "goldmineai.io",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "ca1f75bef4858bcb864053efe9d10db5f1067c15d26768a5963dd49293c3ee0a"
+    },
+    {
+      "candidate_id": "tabnine.com",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "ca80ac938d5285cd53315c77b4b20bfaf09ad6fe3804c087d9aafce7179f17d2"
+    },
+    {
+      "candidate_id": "usemotion.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "caa3724a8f8334e83bd3651592e53df2cdf44f132bc824ee38ce4a827eee0c51"
+    },
+    {
+      "candidate_id": "neuronwriter.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "cb5049211005285cdf7929b463e5e753822477c36f081068f8e412324093d53a"
+    },
+    {
+      "candidate_id": "grammarly.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "cec5dbb1d24b49a04d284c057da1094675e23736e19c87f02790851bcee596ac"
+    },
+    {
+      "candidate_id": "bardeen.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "d0e57574fb32dd45f32ca6851eb6605ebfa288d11b70c14ca0a26306d147ed59"
+    },
+    {
+      "candidate_id": "hyperwriteai.com",
+      "category": "C01",
+      "size_tier": "E2",
+      "rank_hex": "d494b6b0dc9abbff06ab6d620c31eb58709d268ba7eb34576e0223bcb3ef6120"
+    },
+    {
+      "candidate_id": "prizmi.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "d503e40f269815d554e78c467f87e744514adeb9b3d7123c5c911db8b176d253"
+    },
+    {
+      "candidate_id": "fathom.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "d711367bc561e4cbe5228865e90f38ae74cea7962cd2fab533162d96786a8345"
+    },
+    {
+      "candidate_id": "autobound.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "db1cd25c67a0b796530fd9e6c3828d55e540522e4745b6412a9d13805b35a183"
+    },
+    {
+      "candidate_id": "wisecut.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "db27fdd5a3f0c8d2b5cf89215e61c0138a677ce110ccdf9aa3469e877d9219a4"
+    },
+    {
+      "candidate_id": "kickresume.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "dc826e94d767d62293a178a33bcb676e9e936c6a2fa287094772b0016c826f1c"
+    },
+    {
+      "candidate_id": "fliki.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "ddfbca57da1df810f1f60eee9a261b276aa079200c6f7fb9b7e0f553331eefac"
+    },
+    {
+      "candidate_id": "taskmagic.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "deb8ed2e5fc78f6a652b4ff3f18830c458f525da9fd210825ae6db48ca3bfd84"
+    },
+    {
+      "candidate_id": "blackbox.ai",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "dfd40ed5ab22dc21768d8966320de1b9625df4b5baab772cd37bcfd63a24a196"
+    },
+    {
+      "candidate_id": "writesonic.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "e121afc6695ec9dcf6f097bc5ad690841c7513193751f5036424641564b3e135"
+    },
+    {
+      "candidate_id": "sonix.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "e708e03168e751bf1f8e4868898f676a4c22e71fcd17b8efd2cefb2c70838275"
+    },
+    {
+      "candidate_id": "grain.com",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "e802ef269202c18fb60a816a8ac8cb483af2e8ed943d93d49557b6cd38da2d4e"
+    },
+    {
+      "candidate_id": "pebblely.com",
+      "category": "C07",
+      "size_tier": "E2",
+      "rank_hex": "e8978f1b10976f209251b4c7e501df5926f59a8595cfd3598c129f84bc9692a1"
+    },
+    {
+      "candidate_id": "lemlist.com",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "e9313b6a8088b71f91db251bdd15715964e51d0c0f6f41e59ed73ef796972b7b"
+    },
+    {
+      "candidate_id": "betteranalyst.com",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "eb348a3cd636624ac9c4336b19347da0e9406b9ab286e28d3ee6301ab56b7563"
+    },
+    {
+      "candidate_id": "meetjamie.ai",
+      "category": "C05",
+      "size_tier": "E2",
+      "rank_hex": "ec3695d1f48394b297de78967a5833cb2d5d9c68e588e63b9d9f9477639b9ff7"
+    },
+    {
+      "candidate_id": "automattic.ai",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "ec565a92e2370f12dacf1eec25a0a991403a0b3fe345aecc7d6b81c2cc70325e"
+    },
+    {
+      "candidate_id": "hix.ai",
+      "category": "C10",
+      "size_tier": "E2",
+      "rank_hex": "eced82cf00b1fea82036bdff59e12469021d030237e09c1ad82ba52bc81cf372"
+    },
+    {
+      "candidate_id": "wonderchat.io",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "efc832ebb47f9835655e8b5fc6c557d36ff0f7198e43aa240104cd466c6d6ac1"
+    },
+    {
+      "candidate_id": "munchstudio.com",
+      "category": "C02",
+      "size_tier": "E2",
+      "rank_hex": "f223fd490f33f9e83c9d96e654c66e9de5ef7d8acde6d0f7c752b0644730d86e"
+    },
+    {
+      "candidate_id": "twain.ai",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "f246a8f4ca9732c5295a666947565ad1a0d6c873c1ed23deca7bf562092119bc"
+    },
+    {
+      "candidate_id": "vizard.ai",
+      "category": "C08",
+      "size_tier": "E2",
+      "rank_hex": "f3d0ed08a40912f3ac075dd907d51c88a62a9120445474535dc2c1fc214baf30"
+    },
+    {
+      "candidate_id": "sitegpt.ai",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "f479a808927d81a32f34e62daaf46791276feba87001833d187b0cb7f8047924"
+    },
+    {
+      "candidate_id": "since.dev",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "f7409311d9d507caf472b3eacb00c2e2562112a951e5fae20f09ebe11bcb666d"
+    },
+    {
+      "candidate_id": "apollo.io",
+      "category": "C03",
+      "size_tier": "E2",
+      "rank_hex": "f800954bf91b441d70890ac3fbf948e40131ce2c194a53e190d6f8edebe706a9"
+    },
+    {
+      "candidate_id": "forethought.ai",
+      "category": "C04",
+      "size_tier": "E2",
+      "rank_hex": "f9382fa3b56726dcef42d509dcd18b48985db5536985ad3fec6890e72a054dad"
+    },
+    {
+      "candidate_id": "bolt.new",
+      "category": "C09",
+      "size_tier": "E2",
+      "rank_hex": "fb6636d2e7714beb4af25b0ec8b0fa55ae8d5706d3f2baf4d6d9cd05cb2e5b42"
+    }
+  ],
+  "quota_transfers": [],
+  "pilot_policy": "Rank represented categories by descending selected E1 count, then category code. Take first three categories. Within each, take smallest sort_key. Order these pilots by category code as 001-003. Remaining products use category round-robin, retaining within-category sort order.",
+  "pilot_categories": [
+    "C01",
+    "C02",
+    "C03"
+  ],
+  "pilot_diversity_satisfied": true,
+  "selected_order": [
+    {
+      "id": "001",
+      "candidate_id": "smodin.io",
+      "name": "Smodin",
+      "category": "C01",
+      "pilot": true
+    },
+    {
+      "id": "002",
+      "candidate_id": "getlinkbunny.com",
+      "name": "LinkBunny",
+      "category": "C02",
+      "pilot": true
+    },
+    {
+      "id": "003",
+      "candidate_id": "northlight.ai",
+      "name": "Northlight",
+      "category": "C03",
+      "pilot": true
+    },
+    {
+      "id": "004",
+      "candidate_id": "languagetool.org",
+      "name": "LanguageTool",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "005",
+      "candidate_id": "frase.io",
+      "name": "Frase",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "006",
+      "candidate_id": "clay.com",
+      "name": "Clay",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "007",
+      "candidate_id": "botsonic.com",
+      "name": "Botsonic",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "008",
+      "candidate_id": "fireflies.ai",
+      "name": "Fireflies",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "009",
+      "candidate_id": "chatpdf.com",
+      "name": "ChatPDF",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "010",
+      "candidate_id": "mokker.ai",
+      "name": "Mokker",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "011",
+      "candidate_id": "pictory.ai",
+      "name": "Pictory",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "012",
+      "candidate_id": "replit.com",
+      "name": "Replit",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "013",
+      "candidate_id": "wonsulting.com",
+      "name": "WonsultingAI",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "014",
+      "candidate_id": "jenni.ai",
+      "name": "Jenni",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "015",
+      "candidate_id": "anyword.com",
+      "name": "Anyword",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "016",
+      "candidate_id": "instantly.ai",
+      "name": "Instantly",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "017",
+      "candidate_id": "chatling.ai",
+      "name": "Chatling",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "018",
+      "candidate_id": "notta.ai",
+      "name": "Notta",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "019",
+      "candidate_id": "docsumo.com",
+      "name": "Docsumo",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "020",
+      "candidate_id": "medicalillustration.app",
+      "name": "Medical Illustration",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "021",
+      "candidate_id": "heygen.com",
+      "name": "HeyGen",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "022",
+      "candidate_id": "cursor.com",
+      "name": "Cursor",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "023",
+      "candidate_id": "sembly.ai",
+      "name": "Sembly",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "024",
+      "candidate_id": "compose.ai",
+      "name": "Compose AI",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "025",
+      "candidate_id": "trypencil.com",
+      "name": "Pencil",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "026",
+      "candidate_id": "persana.ai",
+      "name": "Persana",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "027",
+      "candidate_id": "botpress.com",
+      "name": "Botpress",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "028",
+      "candidate_id": "meetgeek.ai",
+      "name": "MeetGeek",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "029",
+      "candidate_id": "logically.app",
+      "name": "Logically",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "030",
+      "candidate_id": "flair.ai",
+      "name": "Flair",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "031",
+      "candidate_id": "klap.app",
+      "name": "Klap",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "032",
+      "candidate_id": "qodo.ai",
+      "name": "Qodo",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "033",
+      "candidate_id": "reclaim.ai",
+      "name": "Reclaim",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "034",
+      "candidate_id": "paperpal.com",
+      "name": "Paperpal",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "035",
+      "candidate_id": "copy.ai",
+      "name": "Copy.ai",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "036",
+      "candidate_id": "regie.ai",
+      "name": "Regie.ai",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "037",
+      "candidate_id": "askyourpdf.com",
+      "name": "AskYourPDF",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "038",
+      "candidate_id": "tldv.io",
+      "name": "tl;dv",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "039",
+      "candidate_id": "explainpaper.com",
+      "name": "Explainpaper",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "040",
+      "candidate_id": "stockimg.ai",
+      "name": "Stockimg",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "041",
+      "candidate_id": "captions.ai",
+      "name": "Captions",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "042",
+      "candidate_id": "coderabbit.ai",
+      "name": "CodeRabbit",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "043",
+      "candidate_id": "trevorai.com",
+      "name": "Trevor",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "044",
+      "candidate_id": "sudowrite.com",
+      "name": "Sudowrite",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "045",
+      "candidate_id": "seowriting.ai",
+      "name": "SEOWriting",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "046",
+      "candidate_id": "lavender.ai",
+      "name": "Lavender",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "047",
+      "candidate_id": "tidio.com",
+      "name": "Tidio",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "048",
+      "candidate_id": "avoma.com",
+      "name": "Avoma",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "049",
+      "candidate_id": "parsio.io",
+      "name": "Parsio",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "050",
+      "candidate_id": "recraft.ai",
+      "name": "Recraft",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "051",
+      "candidate_id": "submagic.co",
+      "name": "Submagic",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "052",
+      "candidate_id": "bito.ai",
+      "name": "Bito",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "053",
+      "candidate_id": "beautiful.ai",
+      "name": "Beautiful.ai",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "054",
+      "candidate_id": "type.ai",
+      "name": "Type",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "055",
+      "candidate_id": "ocoya.com",
+      "name": "Ocoya",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "056",
+      "candidate_id": "smartlead.ai",
+      "name": "Smartlead",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "057",
+      "candidate_id": "chatbase.co",
+      "name": "Chatbase",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "058",
+      "candidate_id": "otter.ai",
+      "name": "Otter",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "059",
+      "candidate_id": "elicit.com",
+      "name": "Elicit",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "060",
+      "candidate_id": "picwish.com",
+      "name": "PicWish",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "061",
+      "candidate_id": "colossyan.com",
+      "name": "Colossyan",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "062",
+      "candidate_id": "taskade.com",
+      "name": "Taskade",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "063",
+      "candidate_id": "decktopus.com",
+      "name": "Decktopus",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "064",
+      "candidate_id": "wordtune.com",
+      "name": "Wordtune",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "065",
+      "candidate_id": "scalenut.com",
+      "name": "Scalenut",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "066",
+      "candidate_id": "bardeen.ai",
+      "name": "Bardeen",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "067",
+      "candidate_id": "docsbot.ai",
+      "name": "DocsBot",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "068",
+      "candidate_id": "krisp.ai",
+      "name": "Krisp",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "069",
+      "candidate_id": "nanonets.com",
+      "name": "Nanonets",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "070",
+      "candidate_id": "kittl.com",
+      "name": "Kittl",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "071",
+      "candidate_id": "opus.pro",
+      "name": "OpusClip",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "072",
+      "candidate_id": "sourcegraph.com",
+      "name": "Sourcegraph",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "073",
+      "candidate_id": "rezi.ai",
+      "name": "Rezi",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "074",
+      "candidate_id": "rytr.me",
+      "name": "Rytr",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "075",
+      "candidate_id": "adcreative.ai",
+      "name": "AdCreative.ai",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "076",
+      "candidate_id": "autobound.ai",
+      "name": "Autobound",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "077",
+      "candidate_id": "myaskai.com",
+      "name": "My AskAI",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "078",
+      "candidate_id": "voicenotes.com",
+      "name": "Voicenotes",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "079",
+      "candidate_id": "consensus.app",
+      "name": "Consensus",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "080",
+      "candidate_id": "claid.ai",
+      "name": "Claid",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "081",
+      "candidate_id": "steve.ai",
+      "name": "Steve AI",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "082",
+      "candidate_id": "tabnine.com",
+      "name": "Tabnine",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "083",
+      "candidate_id": "usemotion.com",
+      "name": "Motion",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "084",
+      "candidate_id": "prowritingaid.com",
+      "name": "ProWritingAid",
+      "category": "C01",
+      "pilot": false
+    },
+    {
+      "id": "085",
+      "candidate_id": "predis.ai",
+      "name": "Predis",
+      "category": "C02",
+      "pilot": false
+    },
+    {
+      "id": "086",
+      "candidate_id": "lemlist.com",
+      "name": "Lemlist",
+      "category": "C03",
+      "pilot": false
+    },
+    {
+      "id": "087",
+      "candidate_id": "customgpt.ai",
+      "name": "CustomGPT",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "088",
+      "candidate_id": "fathom.ai",
+      "name": "Fathom",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "089",
+      "candidate_id": "humata.ai",
+      "name": "Humata",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "090",
+      "candidate_id": "pixelcut.ai",
+      "name": "Pixelcut",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "091",
+      "candidate_id": "invideo.io",
+      "name": "InVideo",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "092",
+      "candidate_id": "blackbox.ai",
+      "name": "Blackbox",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "093",
+      "candidate_id": "prizmi.ai",
+      "name": "Prizmi",
+      "category": "C10",
+      "pilot": false
+    },
+    {
+      "id": "094",
+      "candidate_id": "wonderchat.io",
+      "name": "Wonderchat",
+      "category": "C04",
+      "pilot": false
+    },
+    {
+      "id": "095",
+      "candidate_id": "sonix.ai",
+      "name": "Sonix",
+      "category": "C05",
+      "pilot": false
+    },
+    {
+      "id": "096",
+      "candidate_id": "pdf.ai",
+      "name": "PDF.ai",
+      "category": "C06",
+      "pilot": false
+    },
+    {
+      "id": "097",
+      "candidate_id": "photoroom.com",
+      "name": "Photoroom",
+      "category": "C07",
+      "pilot": false
+    },
+    {
+      "id": "098",
+      "candidate_id": "synthesia.io",
+      "name": "Synthesia",
+      "category": "C08",
+      "pilot": false
+    },
+    {
+      "id": "099",
+      "candidate_id": "automattic.ai",
+      "name": "Telex",
+      "category": "C09",
+      "pilot": false
+    },
+    {
+      "id": "100",
+      "candidate_id": "kickresume.com",
+      "name": "Kickresume",
+      "category": "C10",
+      "pilot": false
+    }
+  ],
+  "alternate_order": [
+    {
+      "alternate_id": "ALT-001",
+      "candidate_id": "jasper.ai",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-002",
+      "candidate_id": "surferseo.com",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-003",
+      "candidate_id": "magicstudio.com",
+      "category": "C07"
+    },
+    {
+      "alternate_id": "ALT-004",
+      "candidate_id": "simplified.com",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-005",
+      "candidate_id": "goldmineai.io",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-006",
+      "candidate_id": "neuronwriter.com",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-007",
+      "candidate_id": "grammarly.com",
+      "category": "C01"
+    },
+    {
+      "alternate_id": "ALT-008",
+      "candidate_id": "hyperwriteai.com",
+      "category": "C01"
+    },
+    {
+      "alternate_id": "ALT-009",
+      "candidate_id": "wisecut.ai",
+      "category": "C08"
+    },
+    {
+      "alternate_id": "ALT-010",
+      "candidate_id": "fliki.ai",
+      "category": "C08"
+    },
+    {
+      "alternate_id": "ALT-011",
+      "candidate_id": "taskmagic.com",
+      "category": "C10"
+    },
+    {
+      "alternate_id": "ALT-012",
+      "candidate_id": "writesonic.com",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-013",
+      "candidate_id": "grain.com",
+      "category": "C05"
+    },
+    {
+      "alternate_id": "ALT-014",
+      "candidate_id": "pebblely.com",
+      "category": "C07"
+    },
+    {
+      "alternate_id": "ALT-015",
+      "candidate_id": "betteranalyst.com",
+      "category": "C10"
+    },
+    {
+      "alternate_id": "ALT-016",
+      "candidate_id": "meetjamie.ai",
+      "category": "C05"
+    },
+    {
+      "alternate_id": "ALT-017",
+      "candidate_id": "hix.ai",
+      "category": "C10"
+    },
+    {
+      "alternate_id": "ALT-018",
+      "candidate_id": "munchstudio.com",
+      "category": "C02"
+    },
+    {
+      "alternate_id": "ALT-019",
+      "candidate_id": "twain.ai",
+      "category": "C03"
+    },
+    {
+      "alternate_id": "ALT-020",
+      "candidate_id": "vizard.ai",
+      "category": "C08"
+    },
+    {
+      "alternate_id": "ALT-021",
+      "candidate_id": "sitegpt.ai",
+      "category": "C04"
+    },
+    {
+      "alternate_id": "ALT-022",
+      "candidate_id": "since.dev",
+      "category": "C09"
+    },
+    {
+      "alternate_id": "ALT-023",
+      "candidate_id": "apollo.io",
+      "category": "C03"
+    },
+    {
+      "alternate_id": "ALT-024",
+      "candidate_id": "forethought.ai",
+      "category": "C04"
+    },
+    {
+      "alternate_id": "ALT-025",
+      "candidate_id": "bolt.new",
+      "category": "C09"
+    }
+  ],
+  "replacement_policy": "Keep initial sample immutable. Next unused ranked alternate in same category, else next global alternate with explicit category transfer. Apply only through registry owner. Preserve replaced evidence; do not count replacements twice or replace because of unfavorable verdicts.",
+  "replacement_history": [],
+  "deduplication_merges": [
+    {
+      "canonical_identity_key": "qodo.ai",
+      "merged_lead_name": "Qodo",
+      "reason": "Same canonical product domain and matching official product identity after observed HTTP redirect.",
+      "evidence_ids": [
+        "web-95d40c0bbe1d5c681841",
+        "web-28c2ac4eb25b53b6a0a6"
+      ]
+    }
+  ],
+  "public_suffix_list": {
+    "source_url": "https://publicsuffix.org/list/public_suffix_list.dat",
+    "retrieved_at": "2026-09-20T21:02:22.274692+00:00",
+    "status": 200,
+    "capture_path": "discovery/public_suffix_list.dat",
+    "capture_sha256": "330c1c710ba29ecb125107b96d16b63878eaefd7afc0de6b4649d2d7e261d261",
+    "bytes_saved": 334229,
+    "complete": true,
+    "version_lines": [
+      "// VERSION: 2026-09-18_18-42-54_UTC",
+      "// COMMIT: ff02362b20e273fbcc66405b9b3c21e5dd3e4367"
+    ]
+  },
+  "discovery_frame_deviations": [
+    "Three directory homepages attempted. Futuretools returned HTTP 308 error, Product Hunt exposed no extractable listing text in bounded static capture, Uneed yielded a small current launch list. Supplementing with 150 explicitly model-knowledge leads (15 per category), each requiring live first-party verification. Not the originally proposed three-source-per-category discovery frame.",
+    "Inspected ten apparently relevant launch leads among the first twenty Uneed homepage entries and followed their linked public official sites. Lead selection was purposive, not random. All 160 leads are retained before canonical-domain deduplication.",
+    "The original target of 20 eligible identities per category was not reached. The recorded pool still permits sampling 100 verified identities plus alternates. No claim of representative or small-company-only sampling.",
+    "Current first-party present-tense solo-developer self-description is treated as dated observation for E1, with publication date explicitly unknown. Founder counts alone do not establish company size."
+  ],
+  "unresolved_name": {
+    "supplied_name": "norvjx ai",
+    "identity_status": "unresolved",
+    "candidate_id": null,
+    "included_in_sample": false,
+    "search_evidence_ids": [
+      "web-169b577dce3cfc1727fa",
+      "web-2e033e62ddbef47fe780",
+      "web-59648d5cb74ac3d360dd",
+      "web-b6ed9ff287fb541f72cc",
+      "web-e2bfb0db80af28ac94eb"
+    ],
+    "findings": "Four exact-name Google queries returned a static access fallback rather than usable results. Bing exact-name query returned unrelated cat-image results. No authoritative name/domain connection found in the inspected responses. This is not proof the product does not exist.",
+    "permitted_next_action": "Ask user for exact URL or screenshot, or inspect an additional authorized public search source. Do not silently substitute similarly spelled products."
+  },
+  "replay_command": "python3 research/ai-saas-100/discovery/build_registry.py --check"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "case_id": "005",
+  "recorded_at": "2026-09-22T04:13:09.558463+00:00",
+  "historical_files": {
+    "dossier.json": "958be69210f18a0c7e5848588218625b67eea38296aa3fca59ea3dd690a6967d",
+    "evidence.json": "60d62ff68f071d715782a4e697ad7280483c4c7e43b655ec328bdcee0850021e",
+    "handoff.md": "2d08163fd26bde669b7b0a0b5decd602eaf2d8ac0e6b619352914dbd1c1fc4ec",
+    "research/captures/0a378604b626fc53c906.html": "dadc7812c5305499516954d5527e7b13e468dbf6c62acee5cd2e73985b12ff6d",
+    "research/captures/ad5027ce3ed22ab33526.html": "e3e54bac3a8617e564639339bf6500e35002ee4e061601985eef64545fbeb617",
+    "research/records/0a378604b626fc53c906.json": "8b33dc73935e0050650d58e2e55d71bdb3f4af9734a13f0f457aa92144e74c12",
+    "research/records/ad5027ce3ed22ab33526.json": "8ae11517ea4f1c3b96b46662279d1a1c99106cb2cba144adf0272557f014e993",
+    "tests/freeze.json": "f90dbfd76d26ab587269c053104554a0a112c396a2b63211d3407ba6ada9f619",
+    "tests/specification.json": "290794286d510b111620b81b562b5803e63a2adde294429022bd180daaf630c8"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "purpose": "pre-R9-repair source preservation",
+  "files": [
+    {
+      "original_path": "cases/007/implementation/support_evidence.py",
+      "path": "cases/007/implementation/source-history/39fff0b74c8700d40e1d9741268131af0e4278cb209fadbab4a744faaa61d464/implementation/support_evidence.py",
+      "sha256": "39fff0b74c8700d40e1d9741268131af0e4278cb209fadbab4a744faaa61d464"
+    }
+  ]
+}

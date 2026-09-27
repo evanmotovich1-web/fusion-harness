@@ -1,0 +1,108 @@
+{
+  "validated_utc": "2026-09-25T03:04:44.084302+00:00",
+  "quote_count": 40,
+  "all_block_quotes_found_in_source_text": true,
+  "missing_quotes": [],
+  "original_hash_checks": [
+    {
+      "path": "/Users/evanmotovich/Downloads/Tunza Vision.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/evanmotovich/output/pdf/Tunza Vision.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/evanmotovich/output/pdf/Tunza Vision.md",
+      "unchanged": true
+    },
+    {
+      "path": "/tmp/tunza-who-annual-report-2025.pdf",
+      "unchanged": true
+    }
+  ],
+  "retrieved_source_hash_checks": [
+    {
+      "id": "cht-sitemap",
+      "matches": true
+    },
+    {
+      "id": "community-health",
+      "matches": true
+    },
+    {
+      "id": "constitution",
+      "matches": true
+    },
+    {
+      "id": "data-protection-act",
+      "matches": true
+    },
+    {
+      "id": "dha-certification",
+      "matches": true
+    },
+    {
+      "id": "digital-health-act-current",
+      "matches": true
+    },
+    {
+      "id": "echis-moh-implementation",
+      "matches": true
+    },
+    {
+      "id": "echis-privacy",
+      "matches": true
+    },
+    {
+      "id": "health-act",
+      "matches": true
+    },
+    {
+      "id": "medic-echis-search",
+      "matches": true
+    },
+    {
+      "id": "moh-echis-search",
+      "matches": true
+    },
+    {
+      "id": "primary-care-act-current",
+      "matches": true
+    },
+    {
+      "id": "primary-care-act-source",
+      "matches": true
+    },
+    {
+      "id": "referral-policy",
+      "matches": true
+    },
+    {
+      "id": "sha-benefit-tariffs",
+      "matches": true
+    },
+    {
+      "id": "sha-home",
+      "matches": true
+    },
+    {
+      "id": "social-health-act-current",
+      "matches": true
+    },
+    {
+      "id": "uhc-reforms",
+      "matches": true
+    }
+  ],
+  "source_locators_in_bounds": true,
+  "locator_count": 17,
+  "pdf_text_matches_markdown": true,
+  "pdfs_byte_equal": true,
+  "base_editorial_words": 839,
+  "base_hyperlink_count": 4,
+  "final_document_hashes": {
+    "source-baseline.md": "bb59bf81f89b303adaa0835def2ee55a1959ede9a12f4bdf9a4d1d2883e5ec56",
+    "kenya-system-facts.md": "898ee99596da1a2edc7ddfb37d23a9674253bae2756e3e395da5865a53dfc78e"
+  }
+}

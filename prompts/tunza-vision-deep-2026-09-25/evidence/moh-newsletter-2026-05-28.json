@@ -1,0 +1,18 @@
+{
+  "id": "moh-newsletter-2026-05-28",
+  "requested_url": "https://health.go.ke/sites/default/files/2026-05/MoH%20Daily%20Newsletter_28th%20May%202026.pdf",
+  "accessed_utc": "2026-09-25T02:56:03.296053+00:00",
+  "status": 200,
+  "final_url": "https://health.go.ke/sites/default/files/2026-05/MoH%20Daily%20Newsletter_28th%20May%202026.pdf",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Date": "Fri, 25 Sep 2026 02:56:04 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "15400778",
+    "Last-Modified": "Fri, 29 May 2026 14:41:35 GMT",
+    "Connection": "close",
+    "ETag": "\"6a19a59f-eaff4a\"",
+    "Accept-Ranges": "bytes"
+  },
+  "error": "8 MiB source limit exceeded; not saved"
+}

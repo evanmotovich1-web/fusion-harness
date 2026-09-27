@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "028",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/028/tests/specification.json",
+  "specification_sha256": "320f5998326a853b14fee4ec3adb70434352de17af89b3fc96a99883aab41fe0",
+  "assets": [
+    {
+      "path": "cases/028/tests/assets/meeting-0.txt",
+      "sha256": "d4102d05ffd6dcde0a525b16ba3b2f5bdeccd63b36903e9ef2fdaa850793f34b",
+      "bytes": 346
+    },
+    {
+      "path": "cases/028/tests/assets/meeting-0.wav",
+      "sha256": "067fa94f08515824919ce069e401c22841c2d104fa45d04e1a6668fae0350bef",
+      "bytes": 656124
+    },
+    {
+      "path": "cases/028/tests/assets/meeting-1.txt",
+      "sha256": "999b69ef491298083bafefa1697d809ac0d3885a686ed3a0b384dcb40e38fc15",
+      "bytes": 285
+    },
+    {
+      "path": "cases/028/tests/assets/meeting-1.wav",
+      "sha256": "bb52d68ff9df6c8532e53fcb05739632bc1459fe7578685911f67ca5cb07786e",
+      "bytes": 553190
+    },
+    {
+      "path": "cases/028/tests/assets/meeting-2.txt",
+      "sha256": "b9cc553c598d9d9f025b479fc49ca633f41e455cc90f717a6f7bd5b7e07e4ef4",
+      "bytes": 313
+    },
+    {
+      "path": "cases/028/tests/assets/meeting-2.wav",
+      "sha256": "a049b20ffc41bed79363a87fa4d7c28d707688dad65c60f796330767658f3bc2",
+      "bytes": 599440
+    }
+  ],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

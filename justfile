@@ -16,34 +16,43 @@ SOTA_BUILDER := "openai/gpt-5.6-sol"
 FH_EXT := "extensions/fusion-harness/fusion-harness.ts"
 SELF_COMPACT_EXT := "extensions/self-compact/self-compact.ts"
 
+# Pass-through recipes use [positional-arguments] + "$@" so an argument with
+# newlines, #, or parens (e.g. --append-system-prompt "$(cat prompt.md)")
+# reaches pi as one word instead of being spliced into the shell line.
+
 # Cheap legacy two-slot pair. Raw chat is the builder.
+[positional-arguments]
 fh-workhorse *ARGS:
     pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
         --model {{WORKHORSE_BUILDER}} \
         --architect {{WORKHORSE_ARCHITECT}} --builder {{WORKHORSE_BUILDER}} \
         --architect-thinking medium --builder-thinking medium \
-        {{ARGS}}
+        "$@"
 
 # Frontier legacy two-slot pair.
+[positional-arguments]
 fh-sota *ARGS:
     pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
         --model {{SOTA_BUILDER}} \
         --architect {{SOTA_ARCHITECT}} --builder {{SOTA_BUILDER}} \
         --architect-thinking medium --builder-thinking medium \
-        {{ARGS}}
+        "$@"
 
 # Explicit 2-5 slot YAML stack. The extension selects configured Main as host.
+[positional-arguments]
 fh-stack CONFIG *ARGS:
-    pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
-        --fh-config {{CONFIG}} {{ARGS}}
+    shift; pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
+        --fh-config {{quote(CONFIG)}} "$@"
 
 # THE fusion stack: rune=Fable 5 architect · flux=Gemini 3.7 Flash Main · drift=DeepSeek V4 Pro
+[positional-arguments]
 fusion *ARGS:
-    just fh-stack .pi/fusion-harness/model-stack-fusion.yaml {{ARGS}}
+    just fh-stack .pi/fusion-harness/model-stack-fusion.yaml "$@"
 
 # 5-slot fusion stack: fusion trio + fire=Kimi K3 + hawk=DeepSeek V4 Flash (both Fireworks)
+[positional-arguments]
 fusion5 *ARGS:
-    just fh-stack .pi/fusion-harness/model-stack-fusion-5.yaml {{ARGS}}
+    just fh-stack .pi/fusion-harness/model-stack-fusion-5.yaml "$@"
 
 # self-compact agent brief shared by Claude Code, Codex CLI, and Pi.
 SELF_COMPACT_BRIEF := "self-compact/SELF_COMPACT_AGENT_BRIEF.md"
@@ -78,33 +87,41 @@ self-compact-copy AGENT="pi":
 compound := "self-compact/prompt.compound.md"
 
 # Start Claude Code with the compound prompt appended to Claude's system prompt.
-compound-claude:
-    claude --append-system-prompt "$(cat {{compound}})"
+# Extra flags pass through: just compound-claude --dangerously-skip-permissions
+[positional-arguments]
+compound-claude *ARGS:
+    claude --append-system-prompt "$(cat {{compound}})" "$@"
 
 # Start Codex CLI with the compound prompt as the initial prompt. Codex has no system-prompt flag in this CLI.
-compound-codex:
-    codex "$(cat {{compound}})"
+[positional-arguments]
+compound-codex *ARGS:
+    codex "$(cat {{compound}})" "$@"
 
 # Start Pi with the compound prompt appended to Pi's system prompt.
-compound-pi:
-    pi --append-system-prompt "$(cat {{compound}})"
+[positional-arguments]
+compound-pi *ARGS:
+    pi --append-system-prompt "$(cat {{compound}})" "$@"
 
 # Start Hermes with the compound prompt as the first interactive turn. Hermes has no system-prompt flag here.
 compound-hermes:
     hermes chat --query-file {{compound}}
 
 # Start the default global fusion stack with the compound prompt appended to Pi's system prompt.
-compound-fusion:
-    fusion pi --append-system-prompt "$(cat {{compound}})"
+[positional-arguments]
+compound-fusion *ARGS:
+    fusion pi --append-system-prompt "$(cat {{compound}})" "$@"
 
 # Alias for the default global fusion stack with the compound prompt.
-compound-fusion-pi:
-    fusion pi --append-system-prompt "$(cat {{compound}})"
+[positional-arguments]
+compound-fusion-pi *ARGS:
+    fusion pi --append-system-prompt "$(cat {{compound}})" "$@"
 
 # Start the local fusion stack with the compound prompt.
-compound-fusion-local:
-    fusion local --append-system-prompt "$(cat {{compound}})"
+[positional-arguments]
+compound-fusion-local *ARGS:
+    fusion local --append-system-prompt "$(cat {{compound}})" "$@"
 
 # Start the repo five-slot fusion stack with the compound prompt.
-compound-fusion5:
-    fusion 5 --append-system-prompt "$(cat {{compound}})"
+[positional-arguments]
+compound-fusion5 *ARGS:
+    fusion 5 --append-system-prompt "$(cat {{compound}})" "$@"

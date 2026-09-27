@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "run_id": "002-repair-v2-20260920T225229146957Z",
+  "system": "B2",
+  "status": "completed",
+  "started_at": "2026-09-20T22:52:29.146968+00:00",
+  "ended_at": "2026-09-20T22:52:29.202525+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/002/tests/repair-v2/run.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/002/source-history/repair-v2-60955b5d289a/implementation/workflow.py",
+    "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+  },
+  "fixtures": {
+    "path": "cases/002/tests/repair-v2/evaluator.json",
+    "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889"
+  },
+  "input_bundle": {
+    "path": "cases/002/tests/repair-v2/comparison-inputs.json",
+    "sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331"
+  },
+  "outputs": [
+    {
+      "path": "cases/002/receipts/002-repair-v2-20260920T225229146957Z.stdout.json",
+      "sha256": "a4b5e3877cbe6af68023093bc47e6fb71171c0943460befe7bfcc7f02029c2ef"
+    },
+    {
+      "path": "cases/002/receipts/002-repair-v2-20260920T225229146957Z.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "network": false,
+    "mode": "repair-v2",
+    "concurrency": 1,
+    "model_calls": 0,
+    "timeout_seconds": 15,
+    "runner": {
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/repair-v2/run.py",
+      "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+    },
+    "source_bundle": {
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/source-bundle.json",
+      "sha256": "dfa232e163a7ddf3c3c1d21ea3ce6d333075436dd2d36e33ad9683fc56d3b3e4"
+    },
+    "interface_transformation": {
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/repair-v2/adapter.py",
+      "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+    },
+    "comparison_inputs_self_contained": true,
+    "legacy_inputs_not_for_model_comparison": false,
+    "oracle_separate_from_input": true
+  },
+  "baseline_id": null,
+  "exit_status": 0,
+  "test_results": [
+    {
+      "test_id": "V01",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V02",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V03",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V04",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V05",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V06",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V07",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V08",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V09",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V10",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V11",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V12",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V13",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V14",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V15",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V16",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V17",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V18",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V19",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V20",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V21",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V22",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V23",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V24",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V25",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V26",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V27",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V28",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V29",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V30",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V31",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V32",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V33",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V34",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V35",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V36",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V37",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V38",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V39",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V40",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V41",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V42",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V43",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V44",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V45",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V46",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V47",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V48",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V49",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V50",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V51",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V52",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V53",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "V54",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [
+    {
+      "value": null,
+      "unit": "points",
+      "classification": "unknown",
+      "category": "semantic_quality",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "latency": {
+    "value": 0.055539750000000006,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "latency",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "Generic-model baseline unavailable",
+    "Independent hidden evaluation unavailable"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible fixed regression; no hidden evaluation or baseline."
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "product_acceptance": false,
+  "original_product_status": "not_observed"
+}

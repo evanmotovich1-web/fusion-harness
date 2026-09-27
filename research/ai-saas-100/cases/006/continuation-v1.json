@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "case_id": "006",
+  "name": "Clay",
+  "recorded_at": "2026-09-22T04:25:39.611680+00:00",
+  "scope": "Bounded follow-up to existing dossier; no rediscovery or accepted product",
+  "research_status": "bounded_followup_completed_commercial_research_incomplete",
+  "research_findings": {
+    "path": "cases/006/research/continuation-v1/findings.md",
+    "sha256": "bc502533e23b6a4664f06bbb279ca47d30e30cec8181bc0bee51015c13e11c9b"
+  },
+  "new_source_record": {
+    "path": "cases/006/research/continuation-v1/capture-20260922T041404016122Z.json",
+    "sha256": "89ba7f83c225823bfe35325a12daa804209801cf512c061fdcdf0531d949fcaa"
+  },
+  "original_dossier": {
+    "path": "cases/006/dossier.json",
+    "sha256": "4aecaf2c435a52260126569fa726a4208dc61fcfea52d12fdf319494f383a5cd"
+  },
+  "frozen_original_specification": {
+    "path": "cases/006/tests/specification.json",
+    "sha256": "8ab9e0f086cbc3dd03331472a9133d9283157403ff32cd8a1278f1a21cd1ff08"
+  },
+  "historical_preservation": {
+    "path": "cases/006/research/continuation-v1/preservation.json",
+    "sha256": "c2db1ba235262bce00912272787a95fa438395857fb4e18404e8ea420437c561"
+  },
+  "historical_files_changed": [],
+  "work_completed": "deterministic_component_and_source_followup",
+  "implementation": {
+    "path": "cases/006/implementation/enrichment.py",
+    "sha256": "8a9798734f965ef83912ea8f5bfc27551e09233c68403e85f72c4276b14bbd37"
+  },
+  "source_snapshot": {
+    "path": "cases/006/implementation/source-history/6f24b856868f71c36afd03f6c22cf041dac5c32c52de2685e358b605bbc58064/manifest.json",
+    "sha256": "3ba21b27163bfebee7a1f8fa6dbb05400ae43ed10724215b39c31cc7e864f592"
+  },
+  "execution_receipt": {
+    "path": "cases/006/receipts/006-enrichment-v1-20260922T042030958167Z.json",
+    "sha256": "f5abe241ebb928b112a5523e6d3e8f9db3d887a01d35acbad52ed90609141a8e"
+  },
+  "component_checks_passed": 32,
+  "original_workflow_tests_passed": null,
+  "test_count_scope": "Builder-visible component rows, including reused historical inputs; not independent product observations",
+  "central_workflow_complete": false,
+  "product_status": "incomplete",
+  "accepted": false,
+  "blockers": [
+    "No learned/fuzzy entity resolution or generated summaries",
+    "Real licensed data coverage and freshness untested",
+    "Generic-model comparison absent",
+    "Independent hidden evaluation and acceptance absent"
+  ],
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "baseline_status": "not_executed",
+  "original_product_status": "not_observed",
+  "inference_executed": false,
+  "commercial_verdict": "insufficient_evidence",
+  "operating_cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "No billing or resource allocation measurement"
+  },
+  "additional_paid_calls": 0,
+  "public_source_requests": 1,
+  "handoff": "Inspect source-bound component receipts where present. Resolve documented capability gaps before central workflow evaluation. Preserve old dossier as historical evidence and integrate this supplement through the campaign owner."
+}

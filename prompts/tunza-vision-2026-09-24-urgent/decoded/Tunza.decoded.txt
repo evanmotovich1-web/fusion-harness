@@ -1,0 +1,594 @@
+SOURCE	/Users/evanmotovich/Downloads/Tunza.pdf
+BYTES	235030
+TITLE	Tunza  The decision before the clinic
+AUTHOR	Tunza
+CREATIONDATE	D:20260910073513-04'00'
+PRODUCER	ReportLab PDF Library - (opensource)
+PAGES_KIDS	17
+
+----- DECODED TEXT -----
+----- PAGE 1 -----
+Tunza
+The decision before the clinic.
+Tunza is being built for the moment when someone is sick, care is far away, and the most
+important question is not what is the diagnosis? but:
+What should happen next?
+In many communities, that decision happens long before a doctor is involved. A parent may be
+deciding whether a child needs to travel. A Community Health Promoter may be standing in a
+home with limited information. The nearest facility may be hours away, transport may cost real
+money, and sending someone to the wrong level of care can be almost as harmful as waiting too
+long.
+Tunza is designed around that gap.
+It takes a patient or health worker from an unstructured description of what is happening to a clear
+next action: what information is still missing, how urgent the situation appears, what warning
+signs matter, whether care should be sought, and where the person should go.
+The long-term system does not end when a referral is created.
+It follows the decision far enough to learn whether it was right.
+
+----- PAGE 2 -----
+Tunza  The decision before the clinic
+2
+The problem
+Most digital health systems are strongest once someone has already entered the healthcare system.
+Tunza starts earlier.
+Home / community
+
+What is happening?
+
+Is important information missing?
+
+Does this person need to move?
+
+How urgently?
+
+What capability is required?
+
+Where should they go?
+
+Did they get there?
+
+What happened?
+That last question matters.
+A recommendation is only useful if the resulting care path works.
+Tunza is being designed to connect the original presentation to the eventual outcome so that the
+system can distinguish:
+
+a clinical decision that was wrong;
+
+a referral that went to the wrong place;
+
+a facility that could not provide the required service;
+
+a patient who could not travel;
+
+a referral that was never acknowledged;
+
+a correct referral whose result never made it back to the community.
+Those are different failures. They require different fixes.
+What exists today
+The current Tunza application already includes a working patient-facing triage path with:
+
+English and Kiswahili support;
+
+text input;
+
+----- PAGE 3 -----
+Tunza  The decision before the clinic
+3
+
+voice input;
+
+image input;
+
+optional vitals;
+
+structured urgency output;
+
+warning signs on every assessment;
+
+nearby facility discovery;
+
+anonymous-first usage;
+
+case history for signed-in users;
+
+coarse community-level case signals;
+
+an early outbreak signal;
+
+verified-clinician workflows;
+
+clinician notifications;
+
+web push;
+
+progressive web app support.
+The current application is intentionally conservative around medical claims. It is built to provide
+triage and health information, not to present itself as a physician, prescribe medication, or claim
+diagnostic certainty.
+The direction
+Tunza is not being built around the assumption that one model should control an entire medical
+workflow.
+
+----- PAGE 4 -----
+Tunza  The decision before the clinic
+4
+The intended architecture separates interpretation, safety, routing, evidence, and external
+health-system integrations.
+Patient / caregiver / CHP
+
+Structured encounter
+
+Clinical safety rules
+
+Missing-information check
+
+Model interpretation
+
+Care decision
+
+Capability-aware referral
+
+Facility / clinician / lab
+
+Outcome
+
+Evaluation and clinical review
+The model is one component inside that system.
+It does not get unrestricted authority over the rest of the product.
+A few rules we intend to keep
+The model does not own the safety boundary
+If a deterministic clinical rule requires urgent escalation, a generative model should not be able to
+downgrade it.
+The system should also be able to say:
+There is not enough information to make this decision safely.
+Forced certainty is a defect.
+The model does not get raw database access
+External systems are normalized into a bounded encounter object containing the information
+necessary for the current decision.
+The model sees that object.
+It does not query the patient database itself.
+That keeps the clinical path smaller, easier to audit, easier to test, and easier to integrate into other
+health systems.
+
+----- PAGE 5 -----
+Tunza  The decision before the clinic
+5
+Production data does not automatically become training data
+A patient interaction is not a training example merely because it happened.
+The intended path is closer to:
+care encounter
+
+eligible for evaluation?
+
+permitted use?
+
+data minimization
+
+quality / abuse checks
+
+clinical adjudication where needed
+
+training candidate
+Separate evaluation sets remain outside training entirely.
+Failure should degrade capability, not erase safety
+Connectivity is unreliable in many of the environments Tunza is meant to support.
+The design goal is:
+Better connectivity makes Tunza richer; poor connectivity should not make the basic
+safety path disappear.
+Critical safety logic, local encounter capture, queued synchronization, and degraded operation
+should remain available independently of the full remote model path.
+Privacy is structural
+Tunzas current data model deliberately separates the full patient record from downstream
+community and clinician-facing projections.
+A clinician-facing or community-facing table should not merely rely on a permission rule to hide
+sensitive patient fields.
+Where possible, those fields should not exist in that projection at all.
+
+----- PAGE 6 -----
+Tunza  The decision before the clinic
+6
+Conceptually:
+cases
+| symptoms, vitals, age, patient context,
+| complete triage output
+|
++-- controlled projection
+|
+v
+case_signals
+| urgency, language, coarse geography,
+| limited summary
+|
++-- controlled projection
+|
+v
+clinician notifications
+The goal is to make whole classes of privacy failures structurally difficult rather than relying
+entirely on application discipline.
+As the system grows, coarse geography alone is not sufficient privacy protection. Sparse
+populations require suppression, adaptive geographic resolution, time bucketing, and other
+controls before downstream data is exposed.
+Referrals are not a boolean
+A referral should not be represented as:
+referral = true
+A real care path has state.
+
+----- PAGE 7 -----
+Tunza  The decision before the clinic
+7
+The intended model is closer to:
+CREATED
+
+SENT
+
+RECEIVED
+
+ACCEPTED
+
+PATIENT_MOVING
+
+ARRIVED
+
+SEEN
+
+COMPLETED
+
+OUTCOME_RETURNED
+And failures need names:
+NO_ACKNOWLEDGEMENT
+WRONG_CARE_LEVEL
+SERVICE_UNAVAILABLE
+CAPACITY_UNAVAILABLE
+TRANSPORT_FAILURE
+PATIENT_DECLINED
+REFERRED_ONWARD
+LOST_TO_FOLLOWUP
+Knowing that a referral failed is useful.
+Knowing why it failed is operationally valuable.
+The facility question
+The nearest facility is not necessarily the correct facility.
+Tunza is being designed toward capability-aware routing:
+clinical need  facility capability  care level  availability
+ distance / travel  referral status
+The longer-term question is even broader:
+What actually needs to move?
+
+----- PAGE 8 -----
+Tunza  The decision before the clinic
+8
+Sometimes the correct answer may be the patient.
+Sometimes it may be a specimen.
+Sometimes it may be an image or clinical information sent for remote review.
+Sometimes the safest action may be local follow-up.
+The objective is not to maximize referrals.
+It is to get the necessary care to the person with the least unnecessary movement.
+Tunza and existing health systems
+Tunza is not intended to replace systems such as eCHIS, KenyaEMR, TaifaCare, OpenMRS, or
+national health information exchanges.
+Those systems already solve important parts of identity, records, facility operations, reporting, and
+interoperability.
+Tunzas intended role is narrower:
+Understand the current encounter, improve the next decision, follow the resulting
+care path, and learn from the outcome.
+The architecture should allow different external systems to feed the same internal contract.
+Tunza app ----+
+|
+eCHIS / CHT ----+
+|
+OpenMRS ----+-----> EncounterContext
+|
+KenyaEMR ----+
+|
+Other systems ---+
+Tunza then produces the same decision representation regardless of where the encounter
+originated.
+That makes external platforms adapters rather than permanent assumptions inside the clinical
+core.
+Event-driven by design
+The useful unit is not simply a database row.
+It is an event in a care path.
+
+----- PAGE 9 -----
+Tunza  The decision before the clinic
+9
+Examples:
+encounter.created
+encounter.updated
+decision.created
+referral.created
+referral.received
+referral.accepted
+patient.arrived
+diagnostic.resulted
+visit.completed
+followup.completed
+Every consequential event should be attributable to:
+
+its source;
+
+its revision;
+
+its timestamp;
+
+its encounter;
+
+its organization;
+
+its schema version;
+
+its processing state.
+External retries must be safe.
+If an upstream system sends the same referral event eight times, Tunza should create one referral,
+not eight.
+Data freshness matters
+A clinical value without time context can be misleading.
+Tunza should distinguish:
+temperature 39.4 C measured 8 minutes ago
+from:
+blood pressure 130 / 80 measured 8 months ago
+Both may exist in a record.
+They should not influence todays decision in the same way.
+Observations should carry provenance and freshness alongside their value.
+
+----- PAGE 10 -----
+Tunza  The decision before the clinic
+10
+The learning loop
+The highest-value cases are often not the ones where everyone agrees.
+They are the disagreements.
+Tunza: see clinic | Clinician: urgent
+
+What happened?
+
+Clinical review
+
+Why did they disagree?
+
+Permanent evaluation case
+Useful disagreement categories include:
+
+missed danger sign;
+
+missing question;
+
+language ambiguity;
+
+transcription error;
+
+stale information;
+
+model failure;
+
+policy failure;
+
+human error;
+
+incorrect facility assumption.
+The system should gradually build a memory of its failures outside the model itself.
+A mistake that has been understood should become increasingly difficult to reintroduce unnoticed.
+Evaluation before deployment
+A model is not promoted because it looks better in a demo.
+
+----- PAGE 11 -----
+Tunza  The decision before the clinic
+11
+The intended model lifecycle is:
+candidate
+
+fixed evaluation
+
+clinical review
+
+approved
+
+shadow deployment
+
+supervised use
+
+production
+Evaluation should include separate collections for:
+
+common field presentations;
+
+clinically dangerous edge cases;
+
+adversarial inputs;
+
+English / Kiswahili parity;
+
+a locked holdout set that is never used for training.
+Every model, prompt, and clinical-policy version should be attributable to the results it produced.
+Shadow mode
+Before Tunza influences real care, it should be possible to run the system invisibly beside the
+existing workflow.
+CHP makes normal decision
+|
++---------+---------+
+| |
+v v
+normal care Tunza shadow
+|
+v
+independent result
+|
+v
+later comparison
+|
+v
+outcome
+
+----- PAGE 12 -----
+Tunza  The decision before the clinic
+12
+That lets the team evaluate real behavior without asking patients to carry the risk of an immature
+system.
+Abuse and trust
+An anonymous user should be able to receive a safe health response.
+That does not mean an anonymous submission should automatically be allowed to:
+
+notify clinicians;
+
+affect a public-health signal;
+
+damage a clinicians reputation;
+
+enter model training;
+
+trigger expensive downstream work.
+Clinical severity and submission trust are separate concepts.
+A low-trust submission can still be medically urgent.
+Tunza should respond safely to the user while independently controlling what effects that
+submission is allowed to have on the rest of the system.
+Clinicians
+Tunzas clinician side is intended to evolve beyond a simple doctor directory.
+Credential verification answers:
+Is this person authorized to practice?
+Routing asks a different question:
+Is this clinician appropriate for this case right now?
+Future routing can consider:
+credential  clinical capability  case type  language
+ service area  availability  workload  reliability
+Patient feedback can help measure communication, respect, clarity, and reliability.
+It should not be reduced to a public star score that pretends popularity equals clinical competence.
+Current implementation
+
+----- PAGE 13 -----
+Tunza  The decision before the clinic
+13
+The verified implementation snapshot uses:
+
+Next.js App Router;
+
+TypeScript;
+
+Tailwind CSS;
+
+Supabase / PostgreSQL;
+
+Supabase Auth and Realtime;
+
+Anthropic for triage;
+
+OpenAI Whisper for voice transcription;
+
+Google Places for facility discovery;
+
+Web Push / VAPID;
+
+geohash-based coarse location handling;
+
+Vitest.
+The application follows an important reliability principle:
+Secondary systems should not break the primary care path.
+For example, persistence or signal-generation failures should not prevent a user from receiving the
+assessment that was successfully generated.
+The remaining major exception is model availability itself; degraded-mode and provider-fallback
+work are part of the next reliability layer.
+Repository shape
+
+----- PAGE 14 -----
+Tunza  The decision before the clinic
+14
+The verified snapshot is organized approximately as:
+app/
+api/
+triage/
+transcribe/
+facilities/
+push-dispatch/
+components/ patient and clinician UI
+lib/
+auth
+cases
+doctor
+facilities
+geohash
+i18n
+nearby
+notifications
+outbreak
+public/ service worker
+supabase/
+migrations/
+tests/
+The exact current structure may have changed since this snapshot.
+Development
+A standard local workflow is:
+npm install
+npm run dev
+Quality gates in the verified snapshot include:
+npx tsc --noEmit
+npm test
+npm run lint
+npm run build
+Environment configuration is required for the backing services and external integrations used by
+the deployment.
+Do not commit production credentials or patient data into the repository.
+
+----- PAGE 15 -----
+Tunza  The decision before the clinic
+15
+Engineering priorities
+The next high-return work is not adding the largest number of visible features.
+It is tightening the spine of the system.
+Near-term priorities include:
+1
+a versioned clinical evaluation harness;
+2
+prompt, model, and clinical-policy provenance;
+3
+an explicit insufficient-information / abstention state;
+4
+a deterministic safety layer around model output;
+5
+event and referral lifecycle modeling;
+6
+outcome capture;
+7
+offline-safe degraded behavior;
+8
+trusted CHP / clinician identity flows;
+9
+adaptive privacy for sparse geographic areas;
+10
+integration contracts for external community and facility systems.
+What Tunza is not
+Tunza is not intended to be:
+
+an autonomous doctor;
+
+a replacement for licensed clinical judgment;
+
+a prescribing engine;
+
+a replacement for national health records;
+
+a general-purpose hospital management system;
+
+a raw health-data collection business;
+
+a model whose safety depends entirely on a system prompt.
+The objective is narrower and harder:
+Make the decision before care safer, make the path into care more effective, and
+preserve enough evidence to know whether the decision worked.
+Status
+Tunza is under active development.
+The current system should be treated as an evolving health-information and triage platform, not as
+independently validated clinical software.
+
+----- PAGE 16 -----
+Tunza  The decision before the clinic
+16
+Clinical evaluation, regulatory work, institutional integration, and deployment evidence remain
+active workstreams.
+Do not use development builds as a substitute for emergency services or professional medical care.
+Why this repository exists
+The problem Tunza is trying to solve is easy to describe:
+A person is sick.
+Qualified care is far away.
+Someone has to decide what happens next.
+The software should help make that decision carefully.
+And when reality tells us the decision was wrong, the system should learn exactly why.
+That is the work.
+

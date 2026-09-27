@@ -1,0 +1,8 @@
+{
+  "validated_at": "2026-09-20T21:32:13.563691+00:00",
+  "ledger_sha256": "9cf20e039483dd40a93f95a41e28afbb831cb0e86247ecc0909fe7924a4ddbf9",
+  "status": "passed",
+  "accepted_products": 0,
+  "blocked_products": 3,
+  "local_assertions_passed": 60
+}

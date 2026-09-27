@@ -1,0 +1,661 @@
+{
+  "evidence_id": "web-e2bfb0db80af28ac94eb",
+  "source_url": "https://www.bing.com/search?q=%22norvjx+ai%22",
+  "retrieved_at": "2026-09-20T21:02:59.330894+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.bing.com/search?q=%22norvjx+ai%22",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/e2bfb0db80af28ac94eb.html",
+  "capture_sha256": "1027861cb4aa799fea5455dc237d031838d6b5711f987a1ea509076403a11a5c",
+  "bytes_saved": 113459,
+  "title": "\"norvjx ai\" - Search",
+  "metadata": [
+    {
+      "key": "og:description",
+      "value": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Bing"
+    },
+    {
+      "key": "og:title",
+      "value": "\"norvjx ai\" - Bing"
+    }
+  ],
+  "text": "\"norvjx ai\" - Search\nSkip to content\nAccessibility Feedback\nAll\nWeb\nSearch\nImages\nVideos\nMaps\nMore\nNews\nShopping\nFlights\nTools\nAbout 54,200 results\nOpen links in new tab\nAny time\npexels.com\nhttps://www.pexels.com\n› search ›\ncat\n50,000+ Best\nCat Photos\n· 100% Free Download - Pexels\nDownload and use 50,000+ Cat stock photos for free. Thousands of new images every day Completely Free to Use High-quality …\npixabay.com\nhttps://pixabay.com\n›\nimages\n› search ›\ncat\n60,000+ Best Free\nCat Pictures\n&\nImages\n[HD] - Pixabay\n60,000+ mischievous, playful and adorable cat photos & pictures. Download your favorite royalty free cat images in HD to 4K quality …\nunsplash.com\nhttps://unsplash.com\n›\nphotos\n›\ncat\n200+\nCat Pictures\n&\nImages\n[HD] | Download Free\nImages\n& Stock\nPhotos\n…\nDownload the perfect cat pictures. Find over 100+ of the best free cat images. Free for commercial use No attribution required …\nvecteezy.com\nhttps://www.\nvecteezy\n.com\n› free-\nphotos\n›\ncat\nCat Stock Photos\n,\nImages\nand Backgrounds for Free Download\nBrowse 4,649 beautiful Cat stock images, photos and wallpaper for royalty-free download from the creative contributors at Vecteezy!\nwallpapercat.com\nhttps://wallpaper\ncat\n.com\n›\ncat\n-wallpapers\nCat\nWallpapers (148\nimages\n) - WallpaperCat\nDownload the best Cat Wallpapers, all available in 4K and Full HD: Siamese, Persian, Himalayan, British Shorthair, Kitten, Nyan...\npexels.com\nhttps://www.pexels.com\n› search ›\ncats\nCats Photos\n, Download The BEST Free\nCats\nStock\nPhotos\n& HD\nImages\n…\nDownload and use 50,000+ Cats stock photos for free. Thousands of new images every day Completely Free to Use High-quality …\npixabay.com\nhttps://pixabay.com\n›\nimages\n› search › cute\ncat\n30,000+ Free Cute\nCat\n&\nCat Images\n- Pixabay\nThousands of cute cat images to choose from. Free high resolution picture download. Find images of Cute Cat Royalty-free No …\nshutterstock.com\nhttps://www.shutterstock.com\n› search ›\ncat\n5,430,413\nCat\nRoyalty-Free\nImages\n, Stock\nPhotos\n&\nPictures\nFind 5,430,413 Cat stock images in HD and millions of other royalty-free stock photos, 3D objects, illustrations and vectors in the …\nrd.com\nhttps://\nwww.rd.com\n› list ›\ncat\n-\npictures\n50\nCat Pictures\nYou Need to See | The Best\nCat Photos\nSep 19, 2024\n· One look at these cute cat pictures and you’ll feel better instantly. Don’t believe us? Give it a try!\nunsplash.com\nhttps://unsplash.com\n›\nphotos\n›\ncats\n270+\nCats Pictures\n| Download Free\nImages\non Unsplash\nDownload the perfect cats pictures. Find over 100+ of the best free cats images. Free for commercial use No attribution required …\nPagination\n1\n2\n3\nNext\nPrivacy\nTerms\nContent was generated with AI.\nLearn more\nAll\nPast 24 hours\nPast week\nPast month\nPast year",
+  "links": [
+    {
+      "href": "/search?format=rss&q=%22norvjx+ai%22",
+      "rel": "alternate"
+    },
+    {
+      "href": "/search?format=rss&q=%22norvjx+ai%22",
+      "rel": "alternate"
+    },
+    {
+      "href": "/sa/simg/favicon-trans-bg-blue-mg.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "https://r.bing.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://r.bing.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://r.bing.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://r.bing.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://th.bing.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://th.bing.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://th.bing.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://th.bing.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/rp/6y3g1AvplV50fO3SwaihoYwx93M.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/WiSRWAlyLXz0rR_dTZ6LWlWTFGk.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/0N_HBvnTKcfckkreAR0tPzZ7lw8.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Gh6HQcI2TOpPlv9-aDJcvjbCLss.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/NBSZiemneY-2sP2Se4JOB5csO2c.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/nYJKN_rTV3iszYQCnmRp398IXlU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/eLXTljGmsVtEZy1ImfxYZA6pATQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/el35tyNOnqmKFh6p-yqzjWEtguw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/8g0bA5e-b-z6Gw0WUZuFNJwHZmI.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/m-0YEH4k9pO5hiSgeZFzh2Ie0bo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/5V/cc,nc/v-ink1ufdbbEmWQ3BU82QC8scyg.css?bu=AbYL&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/5V/cc,nc/wlO4TSp30X_-acjYhMjsnKH_mJ8.css?bu=IW9vzQf7B2-LCLII-Aj_CJIJb2_ECu8NkA5v-w6uEG9vzQ6zBLYEb1F9yQNviBurG29vwwM&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/fdjiNFKV4y88lkWOaS7ogS5SG_4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/5V/cir3,cc,nc/pAEigGKObTC82FIiblx6pyYQt-Y.css?bu=ELQRuxKRE54T3ROwFb0VyBXFFpMWgBPQEW9vb28&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/9HshuFoxlTZ3M-UC3tsU7HehM6A.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/5T/cir3,cc,nc/16xTd8Cl6M8WE5tqrS7y5YLmRi0.css?bu=Bd0VuhX_FbgXhQE&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/QuJdB2tT8bh6fyEnk3vj4aay1gI.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Hgrb7jMDFa47DinximwgoHwr5Fc.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/tF6Em95LX5e9UE5kgPNe63ZtYuY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/n9BHk0WmVm-KoCKnBvQBaU3dJgo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/D3yy9LuNF-tKTehU3adVvDiUVDY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/D1DlpAphVHsoQ8gnSRvEkoH6a3Y.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/5T/cir3,cc,nc/nwiOE4tx2CFEqtJ-U53zoVV3mNw.css?bu=AvEYjRk&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/JnfKpfPlpyaRPcu6Va9rA7skhnI.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/hwWlIfKQPMrsITleaHOkKwQ1cBY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/6j5_NWaKt4-Kc4As4PANaT6j2tY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/4I-q5eblrKvgpnjEh_hRJT9WRyQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/lF6r1PyEgfN1a6wDQkqKy0MLLis.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/kK4BL49BOsulUACE14PTHsaKoVE.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/YNBwfbCTiCcAzH_mzH4LasR6_VU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/mC3b8nYzRj-vr6C_E-bHSEQpor4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Pzb7XCvJELpoh2jav7AGDqkfNtw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/s0DWQSJdiTBCA4KEyk6uw1W3FbE.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/jSni9pPBSyD0adWKh2y9BUKZNL0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/7y0vYw1Dwg2_OErqheFLLK-YGFU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/FE8j9wwOrJHku4gAu4_Y54UV4NA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/BnFLDjY3cQ-yexumfkbqm9r8W_0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/lqNzuXAg0UXgJVBhddp9UAWgmUo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/_QALDTn0Y-nqSKH0DrFFWpK0SKQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/?FORM=Z9FD1",
+      "rel": null
+    },
+    {
+      "href": "javascript:void(0)",
+      "rel": null
+    },
+    {
+      "href": "javascript:void(0)",
+      "rel": null
+    },
+    {
+      "href": "/?scope=web&FORM=HDRSC1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3b554169b39a82682bff25167380cb843cead70b44b836f0e1c94eacd8adcce7JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L3NlYXJjaD9xPSUyMm5vcnZqeCthaSUyMiZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "/copilotsearch?q=%22norvjx+ai%22&FORM=CSSCOP",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3428ba4fe389a7ec925c68bdd539ff34971c3e60bb99a629f1119bd9e285ee7eJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJub3J2angrYWklMjImRk9STT1IRFJTQzI&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=764025022954e6bfadacf9f8537e0c9d86f7d4e153090bd6adb0654d8409fd67JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJub3J2angrYWklMjImRk9STT1IRFJTQzM&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=9d4519088a504d007fc2e926d096305940e8301ec4237a23f661499cd2905130JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L21hcHM_cT0lMjJub3J2angrYWklMjImRk9STT1IRFJTQzQ&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "javascript:void(0);",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=cffd1de3ee06b15e7fa95f5c6b320c3d37a4bebfd6ca202287298cf49d3d3ecbJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L25ld3Mvc2VhcmNoP3E9JTIybm9ydmp4K2FpJTIyJkZPUk09SERSU0M2&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=7767cfd71828cb92d2e2ce5ef7e99c7090cc1e17a6d1adebf8e72ac5f9e3d373JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L3Nob3AvdG9waWNzP3E9JTIybm9ydmp4K2FpJTIyJkZPUk09U0hPUFRC&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=55e440ebefa564f8d27ffb7aa7e771c72cdfbae528517203250974323db75c8fJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1L3RyYXZlbC9zZWFyY2g_cT0lMjJub3J2angrYWklMjImbT1mbGlnaHRzJkZPUk09RkJTQ09Q&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "javascript:void(0)",
+      "rel": null
+    },
+    {
+      "href": "/rp/OqFxtMeU_I85f2iVRULB4HBjFQ4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/mcWL7bzoTOt3akdPOzFKJyaVdl0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/RJAQlu3mLKy9YyG0VxyU-HltW10.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/dXz-HADaTQr9slsGi046et82bmw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/oP4b84H-5rtvVLeq4HX4CqFoFF4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/VoOqV3cpfrHr-uIlRvxOHS8wyxo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/1jebLoMBIptyT2f_BDeNDlNFxQc.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Ju2p1LKCIB6ukxJqwQyWpHViMwU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/k6m2sB5pfcUJ1NimiC6K8QPOuiE.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/3ASg4B-w19b007tQQLpjDn84xK4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/9OcKf_IOssYlRI0uMfTZ7mSfhrk.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Nl0-3uw_VFUTRjDUZN2EQeTV5jg.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/imwkpAMDAf4IyDCB8qQVnxOTJq8.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/we-6zZB8BqSmRVUFSNkqViC5Bqc.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/eJ2rC2ATnKl6rrGJEuzmiU6w8fA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/AOKlk0pGvHTyLUU3ZJwHWoszhjU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/UK6eR80_8HIx-VtzWD-470SeUM0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Y90UbYydBgXzVJKt4aK6HjSGXlA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/enIycsfVsshux_MsRKMK8l5iyXw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/GMw-emKtBI4niBEd1QYct2VdwMA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/T0alytyTRnhWDuOgX_RPliEUL0g.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/x7TuDiAPVfnuc0FfzMoZvXR6PuM.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/OglocdOt9qF981Q27drMWKFPK70.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/EJaf4k-Nd65-usMROCn2HyfnxGs.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/jd_KiktC3sAWYJsOn4s4PoSvu18.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/fZFjXwBemPUyFbguGPtoYROVPMs.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/4S/cc,nc/GHEwM4V1KI75vWOugxKkPzR9RnQ.css?bu=AqYSqRI&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/gDSt4IBOGedUc7P9Jl3o7yi3di0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "javascript:",
+      "rel": null
+    },
+    {
+      "href": "/rp/85SFhsb9jgt4k9sr35SQl2Z1kP0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/AujcxWFf2TipVaYHLGxfgVPNB8k.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/VNlmHnSa5DpSPlKrIlLQzeYxGqM.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/aYdj-D3djAX9HzlaAvOPMTFSgYc.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/xdUHcallH3V0Hu00N9kGnJSFyxE.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/lG7CmQAobYPs9eLmX61eFaOAAMs.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/PiBy1xdaqLTcRW1TgsbBHvmg4Dw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/HSL3ZYP2IN63ZDyokAWle07hERM.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Afbm6SbZ0OBWcejUp48l0iX15wY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/OVhMHAhkq7bCatxdkWpknGOSppw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/mIK5c0fTfxoxLNyIi1MqlMx71MU.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/LJGFgaEYsVK0JXcoB6h0sHstJ7Y.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/3MDtN_1TVO_Umi6DOp6EMHD8CQQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/YWD73Yj3ji4VFtib0dNF5jmlTBA.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/A5VTnQ_LrbZFlApPpfi2JzzgMLQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/P4nVm9cQ78FaxD0VO8pzAuFypbk.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/7uMOfwssIl0_4uNG7hBwtV2GN8U.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/F-IF4wgehfRGX-BIpe9lrxew-Eo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/CWn09HB35Y7Z7N2SwuwCIv4s6eg.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/EpR1iHlQbv86VKrI0rWd8XuDGXg.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/Ke2mId-Ab8DcxtWYARHttp9mKoo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/rp/g7HKo0d5NjaKTQbKV75jIKIAAMQ.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=93b4ee2c2790fe880b7c93201a3972a8d65d76b4c529412068d74141d6f7a10bJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9zZWFyY2gvY2F0Lw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=93b4ee2c2790fe880b7c93201a3972a8d65d76b4c529412068d74141d6f7a10bJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9zZWFyY2gvY2F0Lw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=2d49096cf2265affecde6fee2252c542d8a9ce1aec61ae541fadf372d072a6c6JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly9waXhhYmF5LmNvbS9pbWFnZXMvc2VhcmNoL2NhdC8&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=2d49096cf2265affecde6fee2252c542d8a9ce1aec61ae541fadf372d072a6c6JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly9waXhhYmF5LmNvbS9pbWFnZXMvc2VhcmNoL2NhdC8&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=5a9853b16492a79fd183fc1c499f4fe6c0e899e6dd25f0c619cacc4506c5c395JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly91bnNwbGFzaC5jb20vcy9waG90b3MvY2F0&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=5a9853b16492a79fd183fc1c499f4fe6c0e899e6dd25f0c619cacc4506c5c395JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly91bnNwbGFzaC5jb20vcy9waG90b3MvY2F0&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3636db68d877a531ad0f1489a7b72111d8ef4e698e525fd8dccf1c0125ab5c93JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cudmVjdGVlenkuY29tL2ZyZWUtcGhvdG9zL2NhdA&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3636db68d877a531ad0f1489a7b72111d8ef4e698e525fd8dccf1c0125ab5c93JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cudmVjdGVlenkuY29tL2ZyZWUtcGhvdG9zL2NhdA&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=b2756af542de4a901879ae06512ea6f1280a3cb6b07333fd8ce886a9888f3931JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93YWxscGFwZXJjYXQuY29tL2NhdC13YWxscGFwZXJz&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=b2756af542de4a901879ae06512ea6f1280a3cb6b07333fd8ce886a9888f3931JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93YWxscGFwZXJjYXQuY29tL2NhdC13YWxscGFwZXJz&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3d5a45a81b9e4a52b9c0379bf26ed78ba4629022333303ba4a20c6fdafab0497JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9zZWFyY2gvY2F0cy8&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=3d5a45a81b9e4a52b9c0379bf26ed78ba4629022333303ba4a20c6fdafab0497JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9zZWFyY2gvY2F0cy8&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=7f615afd16fa63136541ee35d41520ab6d38650c2395a1644394be0792931502JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly9waXhhYmF5LmNvbS9pbWFnZXMvc2VhcmNoL2N1dGUlMjBjYXQv&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=7f615afd16fa63136541ee35d41520ab6d38650c2395a1644394be0792931502JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly9waXhhYmF5LmNvbS9pbWFnZXMvc2VhcmNoL2N1dGUlMjBjYXQv&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=01c7c5d5f07505459b6a44db5a63354970647b912585f2575c644ab14ba2ae6aJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cuc2h1dHRlcnN0b2NrLmNvbS9zZWFyY2gvY2F0P21zb2NraWQ9MmZhYmRmYjc4Njc5NjU1NjM3NGNjODZkODc1OTY0NmE&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=01c7c5d5f07505459b6a44db5a63354970647b912585f2575c644ab14ba2ae6aJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cuc2h1dHRlcnN0b2NrLmNvbS9zZWFyY2gvY2F0P21zb2NraWQ9MmZhYmRmYjc4Njc5NjU1NjM3NGNjODZkODc1OTY0NmE&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=8c325976356c57dc4338f07ae1a33acff49b070152d6e7f01bf8faae4b41f26fJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucmQuY29tL2xpc3QvY2F0LXBpY3R1cmVzLw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=8c325976356c57dc4338f07ae1a33acff49b070152d6e7f01bf8faae4b41f26fJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly93d3cucmQuY29tL2xpc3QvY2F0LXBpY3R1cmVzLw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=4c48304eaa1176f14d316d952711d05e41634fc3bbfefef2f40ff6dbed0fe85eJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly91bnNwbGFzaC5jb20vcy9waG90b3MvY2F0cw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=4c48304eaa1176f14d316d952711d05e41634fc3bbfefef2f40ff6dbed0fe85eJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly91bnNwbGFzaC5jb20vcy9waG90b3MvY2F0cw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "/rp/wW3Q74DesGWZzmnySeEOqLWAbT8.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://r.bing.com/rb/3W/cc,nc/r6KjdhIcY0vRnVja4Yojc7Y1VOI.css?bu=Ap0CkQE&or=w",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&FPIG=831ACCB95F54444F8E29D65EA5F4792B&first=11&FORM=PERE",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&FPIG=831ACCB95F54444F8E29D65EA5F4792B&first=21&FORM=PERE1",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&FPIG=831ACCB95F54444F8E29D65EA5F4792B&first=11&FORM=PORE",
+      "rel": null
+    },
+    {
+      "href": "/rp/fYVBfPjqhjimiAgnc-MTWjGV7n0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=57dbefb7b45f3faf6bd2c2eaff48abbf6f1736a5080367994f946b67e35ec697JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=c8d9eaf55d9a6702e39d25e7e37b6aa4123ee8d73ef91117d662d919e1693320JmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "/rp/46u6KPTFH1kNZCrqf1iuQtohCvE.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/rp/Zh6GE_ZVgLV4A-BCaMkB7HeA_nI.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/rp/vVEC_ZScIILKcLpZgGqmCEtZYbg.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://www.bing.com/ck/a?!&&p=42db4b2835232921eb31ead1b4b7be1b069f647bfcf14c857bab01eeb10434bbJmltdHM9MTc4OTg2MjQwMA&ptn=3&ver=2&hsh=4&fclid=2fabdfb7-8679-6556-374c-c86d8759646a&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vdG9waWMvaG93LWJpbmctZGVsaXZlcnMtc2VhcmNoLXJlc3VsdHMtZDE4ZmM4MTUtYWMzNy00NzIzLWJjNjctOTIyOWNlM2ViNmEzPw&ntb=1",
+      "rel": null
+    },
+    {
+      "href": "/copilotsearch?q=\"norvjx ai\"&form=CSBSBX",
+      "rel": null
+    },
+    {
+      "href": "/rp/kH4kxR4XFTGiCebPwKumYy5gZFg.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&FORM=000017&qpvt=%22norvjx+ai%22",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&filters=ex1%3a%22ez1%22&FORM=000017",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&filters=ex1%3a%22ez2%22&FORM=000017",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&filters=ex1%3a%22ez3%22&FORM=000017",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx+ai%22&filters=ex1%3a%22ez5_20351_20716%22&FORM=000017",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2196
+}

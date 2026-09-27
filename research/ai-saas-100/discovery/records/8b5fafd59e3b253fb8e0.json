@@ -1,0 +1,57 @@
+{
+  "evidence_id": "web-8b5fafd59e3b253fb8e0",
+  "source_url": "https://pdf.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.781010+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://pdf.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/8b5fafd59e3b253fb8e0.html",
+  "capture_sha256": "63f7351bf2b9d096b7871b244c005967352cd14645a9000cb30258a2f1924579",
+  "bytes_saved": 5536,
+  "title": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Chat with any PDF using AI: ask questions, get summaries, and find answers. Use our API to parse documents, extract data, and split PDFs in your own workflows."
+    },
+    {
+      "key": "og:title",
+      "value": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)"
+    },
+    {
+      "key": "og:description",
+      "value": "Chat with any PDF using AI: ask questions, get summaries, and find answers. Use our API to parse documents, extract data, and split PDFs in your own workflows."
+    }
+  ],
+  "text": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)",
+  "links": [
+    {
+      "href": "https://pdf.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_next/static/css/ee5a01d832d8f1d6.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/ee5a01d832d8f1d6.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.2575
+}

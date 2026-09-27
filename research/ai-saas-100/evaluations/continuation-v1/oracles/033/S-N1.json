@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "test_id": "S-N1",
+  "requires_inference": false,
+  "kind": "schedule",
+  "scheduled_ids": [
+    "flex",
+    "urgent"
+  ],
+  "conventions": {
+    "priority": "higher_numeric_first_among_equivalent_competing_tasks",
+    "intervals": "half_open",
+    "buffer": "between_tasks_and_between_task_and_meeting_not_at_day_edges",
+    "source": "Retained evaluator E6 clarification; resolve conflicts before scoring."
+  }
+}

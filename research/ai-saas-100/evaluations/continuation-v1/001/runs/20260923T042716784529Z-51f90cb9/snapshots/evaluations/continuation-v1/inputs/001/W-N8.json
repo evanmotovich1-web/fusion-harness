@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N8",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "Lea sent Omar a draft, but Omar did not approve it. Lea will revise the draft after receiving comments.",
+        "strength": 3,
+        "method": "rewrite",
+        "protected": [
+          "Lea",
+          "Omar"
+        ]
+      }
+    }
+  ]
+}

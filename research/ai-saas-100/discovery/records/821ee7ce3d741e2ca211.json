@@ -1,0 +1,65 @@
+{
+  "evidence_id": "web-821ee7ce3d741e2ca211",
+  "source_url": "https://myaskai.com/about",
+  "retrieved_at": "2026-09-20T21:02:59.228763+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://myaskai.com/about-us",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/821ee7ce3d741e2ca211.html",
+  "capture_sha256": "ad76efe92c3003068fdd0c3fb7a2bfb25158babc7d244142bab164a2a3f2827e",
+  "bytes_saved": 43512,
+  "title": "About Us — The Team Behind My AskAI",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The background of the two My AskAI founders, Alex Rainey and Mike Heap."
+    },
+    {
+      "key": "og:title",
+      "value": "About Us — The Team Behind My AskAI"
+    },
+    {
+      "key": "og:site_name",
+      "value": "AI Customer Service Agent for Your Helpdesk | My AskAI"
+    },
+    {
+      "key": "og:description",
+      "value": "The background of the two My AskAI founders, Alex Rainey and Mike Heap."
+    }
+  ],
+  "text": "About Us — The Team Behind My AskAI",
+  "links": [
+    {
+      "href": "https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=128,h=,f=auto,dpr=1,fit=contain/d260/f1762778659096x792805343488060400/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://myaskai.com/about-us",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/d260/f1763568923689x445251342254181950/meta.png",
+      "rel": "image_src"
+    },
+    {
+      "href": "https://d3ne4nhehdgzqi.cloudfront.net/package/run_css/89e726ed36b10367d7a8e144996301a5ec909a08b41f77a08b23c515177b5978/no-code-ai-model-trainer/live/about-us/xfalse/xfalse/run.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "//meta.cdn.bubble.io/f1680271457857x336483009628357300/owl.carousel.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "//meta.cdn.bubble.io/f1680271495251x342890714585694800/owl.theme.default.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.4239
+}

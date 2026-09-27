@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-e13c31a44874bf56ad06",
+      "source_url": "https://instantly.ai/",
+      "final_url": "https://instantly.ai/",
+      "publisher": "instantly.ai",
+      "retrieved_at": "2026-09-20T21:00:22.704626+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Sales Engagement and Lead Intelligence | Instantly"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Sales Engagement and Lead Intelligence | Instantly"
+        },
+        {
+          "locator": "text characters 93:405",
+          "excerpt": "tly’s own growth, set up your business\nLearn more\nLearn more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDelive"
+        },
+        {
+          "locator": "text characters 109:421",
+          "excerpt": ", set up your business\nLearn more\nLearn more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infra"
+        },
+        {
+          "locator": "text characters 124:436",
+          "excerpt": "usiness\nLearn more\nLearn more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infrastructure\nAirMa"
+        },
+        {
+          "locator": "text characters 139:451",
+          "excerpt": "ore\nLearn more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infrastructure\nAirMail\nNew\nEmail Ac"
+        },
+        {
+          "locator": "text characters 149:461",
+          "excerpt": "more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infrastructure\nAirMail\nNew\nEmail Accounts\nDel"
+        },
+        {
+          "locator": "text characters 156:468",
+          "excerpt": "oducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infrastructure\nAirMail\nNew\nEmail Accounts\nDeliverabi"
+        }
+      ],
+      "capture_path": "discovery/captures/e13c31a44874bf56ad06.html",
+      "capture_sha256": "295240847342858b5be45803d9a60fd8ed113530dca5a243567fabc35c0987d4",
+      "record_path": "discovery/records/e13c31a44874bf56ad06.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r016-00146e6245dd8557e302",
+      "source_url": "https://instantly.ai/pricing",
+      "publisher": "instantly.ai",
+      "retrieved_at": "2026-09-20T21:35:30.915324+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://instantly.ai/pricing",
+      "capture_path": "cases/016/research/captures/00146e6245dd8557e302.html",
+      "capture_sha256": "ead86ece9305af54467f81318bc395b0cfc399439b6b97181ea8c5d745e0e2ea",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/016/research/records/00146e6245dd8557e302.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing - Plans for Outreach, Leads, and CRM | Instantly"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Compare plans for cold email outreach, B2B lead database, and CRM. Flexible pricing for freelancers, startups, agencies, and enterprise teams. Start free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing - Plans for Outreach, Leads, and CRM | Instantly"
+        },
+        {
+          "locator": "text characters 1187:3658",
+          "excerpt": " Email Bench Report 2026\nExplore the latest trends\nGet a Demo\nLogin\nLogin\nGet a Demo\nGet Started\nGet Started\nGet Started\nSimple Pricing for Everyone\nPricing built for businesses of all sizes. Always know what you’ll pay.\nBundles\nOutreach\nInstantly Credits\nVIP\nStarter\n$94\n/monthly\n5000 emails monthly, 1000 uploaded contacts\n1500 Instantly credits monthly\nDatabase of 450M+ B2B Leads\nAI Sales Agent\nOutreach\nGrowth Plan\n$47/mo\nUnlimited Email Accounts\nUnlimited Email Warmup\n1000 Uploaded Contacts\n5000 Emails Monthly\nChat Support\nCredits\nGrowth Credits\n$47/mo\n1500 Instantly Credits Monthly\nDatabase of 450M+ B2B Leads\n13 Filters including keywords and lookalikes\nWaterfall Work Email Enrichment with 5+ providers\nInstantly Web Researcher Agent\nAccess to 5 Major LLMs (OpenAI, Anthropic & more)\nAccess to AI Email Writer Agent\nUse your own LLM API key\n100+ Community AI Templates\nFull profile enrichment (Company description, headcount & more)\nJob posting, News, Technology & Funding enrichment\nExport to major CRMs & Outreach providers\nBuilt for small teams just getting off the ground.\nGet Starter\nBundle details\nScale\nMost popular\n$194\n/monthly\nEverything in Starter +\n100,000 emails monthly, 25,000 uploaded contacts\n5000 Instantly credits monthly\nAI Reply Agent, Unibox replies & advanced deliverability features\nPremium Live Support\nOutreach\nHypergrowth Plan\n$358/mo\n5000 Instantly Credits Monthly\nEverything in Growth\nCredits\nSupersonic Credits\n$197/mo\n5000 Instantly Credits Monthly\nEverything in Growth\nThe full outreach stack. All AI agents, advanced automation, and nothing left out.\nGet Scale\nBundle details\nAgency\n$555\n/monthly\nEverything in Scale +\n500,000 emails monthly, 100,000 uploaded contacts\n10,000 Instantly credits monthly\nSISR System\nOutreach\nLightspeed Plan\n$358/mo\nEverything in Hyper Growth +\n500 000 Emails Monthly\n100 000 Uploaded Contacts\nSISR System\nCredits\nHyper Credits\n$197/mo\n10K Instantly Credits Monthly\nEverything in Growth\nMore volume, private infrastructure, and the usage limits to back it up.\nGet Agency\nBundle details\nBundle details\nStarter\n$85\n/monthly\n$94/month\nSave 10%\n5000 emails monthly, 1000 uploaded contacts\n1500 Instantly credits monthly\nDatabase of 450M+ B2B Leads\nAI Sales Agent\nOutreach\nGrowth Plan\n$47/mo\nUnlimited Email Accounts\nUnlimited Email Warmup\n1000 Uploaded Contacts\n5000 Emails Monthly\nChat Support\nCredits\nGrowth Credits\n$47/mo\n1500 Instantly Credits Monthly\nDatabase of 450M+ B2B Leads\n13 Filters incl"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r016-065a4772bf100df5a494",
+      "source_url": "https://instantly.ai/integrations",
+      "publisher": "instantly.ai",
+      "retrieved_at": "2026-09-20T21:35:30.915227+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://instantly.ai/marketplace",
+      "capture_path": "cases/016/research/captures/065a4772bf100df5a494.html",
+      "capture_sha256": "91e405afa4aedc304a8aaf839e4ba6022eea642fa484f095937b607b2cf33c0f",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/016/research/records/065a4772bf100df5a494.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "50+ Sales and Outreach Integrations | Instantly"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 50+ integrations for CRM, enrichment, LinkedIn, AI, and automation. Connect HubSpot, Clay, Zapier, and more in minutes."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "50+ Sales and Outreach Integrations | Instantly"
+        },
+        {
+          "locator": "text characters 4836:5095",
+          "excerpt": "account, use our API and create your PartnerStack account.\nTrusted by\n3M+ Users\nGet Listed\nYour integration receives a profile page, in-app exposure, and co-marketing opportunities.\nUse your 20% discount\nUse code EVENTGIFT\nAt checkout and get 20% off Hypergro"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-618fcffd105ae19ff04b",
+      "source_url": "https://www.lemlist.com/",
+      "final_url": "https://www.lemlist.com/",
+      "publisher": "www.lemlist.com",
+      "retrieved_at": "2026-09-20T21:00:22.704958+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale"
+        },
+        {
+          "locator": "text characters 0:256",
+          "excerpt": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale\nWebinar\nSeptember 23rd | 5 PM CET, 8 AM PST\nHow to Wire Claude into an Outbound Engine. Built live with the lemlist MCP\nRegister\nProduct\nFIND HIGH-INTENT PROSPECTS\nIdentify ICP-fit acc"
+        },
+        {
+          "locator": "text characters 681:993",
+          "excerpt": "es & domains.\nDeliverability Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFo"
+        },
+        {
+          "locator": "text characters 705:1017",
+          "excerpt": "lity Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFounders\nResources\nDEV & S"
+        },
+        {
+          "locator": "text characters 1078:1390",
+          "excerpt": "tomer Stories\nWall of Love\nOUTBOUND LEARNINGS\nWebinars\nPlaybooks\nBlog\nAI RESOURCES\nlemlist MCP\nlemlist CLI\nClaude Skills\nPricing\nWe're hiring!\nLog in\nGet a demo\nSign up for free\nProduct\nFIND HIGH-INTENT PROSPECTS\nIdentify ICP-fit accounts and leads, and enrich with verified contact data.\n650 M+ Lead Database\nEm"
+        },
+        {
+          "locator": "text characters 1736:2048",
+          "excerpt": "es & domains.\nDeliverability Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFo"
+        },
+        {
+          "locator": "text characters 1760:2072",
+          "excerpt": "lity Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFounders\nResources\nDEV & S"
+        }
+      ],
+      "capture_path": "discovery/captures/618fcffd105ae19ff04b.html",
+      "capture_sha256": "7d891d6231d927c83a12bcfe98ae886b562536e1a08102708592d7119c10a281",
+      "record_path": "discovery/records/618fcffd105ae19ff04b.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

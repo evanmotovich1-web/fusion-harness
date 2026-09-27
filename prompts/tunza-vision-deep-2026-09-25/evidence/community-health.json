@@ -1,0 +1,28 @@
+{
+  "id": "community-health",
+  "requested_url": "https://www.health.go.ke/node/2374",
+  "accessed_utc": "2026-09-25T02:53:00.176913+00:00",
+  "status": 200,
+  "final_url": "https://www.health.go.ke/node/2374",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "must-revalidate, no-cache, private",
+    "Date": "Thu, 24 Sep 2026 21:03:49 GMT",
+    "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
+    "Link": "<https://www.health.go.ke/kenya-calls-stronger-collaboration-and-sustainable-investments-community-health-systems-wha79>; rel=\"canonical\"",
+    "X-UA-Compatible": "IE=edge",
+    "Content-language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "interest-cohort=()",
+    "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "X-Generator": "Drupal 9 (https://www.drupal.org)",
+    "X-Drupal-Cache": "HIT"
+  },
+  "bytes": 504560,
+  "sha256": "de0914be7b87bbfc391f1d04612470c88207454a21886832246ef417dd522a7c",
+  "file": "community-health.html"
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-aa6074ffce5b2eefe7c1",
+      "source_url": "https://chatling.ai/",
+      "final_url": "https://chatling.ai/",
+      "publisher": "chatling.ai",
+      "retrieved_at": "2026-09-20T21:00:23.368297+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Customer Service Agent for Web, WhatsApp, Instagram, Telegram, & Messenger | Chatling"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Customer Service Agent for Web, WhatsApp, Instagram, Telegram, & Messenger"
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Chatling"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Customer Service Agent for Web, WhatsApp, Instagram, Telegram, & Messenger | Chatling\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nOpen menu\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In"
+        },
+        {
+          "locator": "text characters 193:505",
+          "excerpt": "cing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\n4.7\nThe AI support platform built for resolution, not deflection\nDeploy AI agents on web, WhatsApp, Instagram, Telegram, and Messenger to resolve real questions, with instant human handoff when needed.\nGet Started Free\nFree plan\nNo credit card\nSet up"
+        },
+        {
+          "locator": "text characters 257:569",
+          "excerpt": "7\nThe AI support platform built for resolution, not deflection\nDeploy AI agents on web, WhatsApp, Instagram, Telegram, and Messenger to resolve real questions, with instant human handoff when needed.\nGet Started Free\nFree plan\nNo credit card\nSet up in minutes\n0:00 / 0:00\nPowering AI support for 1,000+ teams, fr"
+        },
+        {
+          "locator": "text characters 468:780",
+          "excerpt": " Free\nFree plan\nNo credit card\nSet up in minutes\n0:00 / 0:00\nPowering AI support for 1,000+ teams, from solo founders to global brands\nFaster answers for customers. Less stress for your team.\nAnswer customers instantly\nResolve repetitive questions in seconds with accurate, AI-powered responses.\nSeamless human h"
+        },
+        {
+          "locator": "text characters 672:984",
+          "excerpt": "mers instantly\nResolve repetitive questions in seconds with accurate, AI-powered responses.\nSeamless human handoff\nWhen AI can't resolve an issue, conversations are instantly handed off to your team with full context.\nOmnichannel support\nDeploy your AI agent on your website, WhatsApp, Instagram, Telegram, and M"
+        },
+        {
+          "locator": "text characters 722:1034",
+          "excerpt": "onds with accurate, AI-powered responses.\nSeamless human handoff\nWhen AI can't resolve an issue, conversations are instantly handed off to your team with full context.\nOmnichannel support\nDeploy your AI agent on your website, WhatsApp, Instagram, Telegram, and Messenger to manage every conversation from one uni"
+        },
+        {
+          "locator": "text characters 483:745",
+          "excerpt": "\nNo credit card\nSet up in minutes\n0:00 / 0:00\nPowering AI support for 1,000+ teams, from solo founders to global brands\nFaster answers for customers. Less stress for your team.\nAnswer customers instantly\nResolve repetitive questions in seconds with accurate, AI-"
+        }
+      ],
+      "capture_path": "discovery/captures/aa6074ffce5b2eefe7c1.html",
+      "capture_sha256": "d5573c0a63247f8bbb3c189e253708016ed098b4df29620d00c7332a3a38e075",
+      "record_path": "discovery/records/aa6074ffce5b2eefe7c1.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r017-41ae320f8751271cdf61",
+      "source_url": "https://chatling.ai/pricing",
+      "publisher": "chatling.ai",
+      "retrieved_at": "2026-09-20T21:35:30.915093+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://chatling.ai/pricing",
+      "capture_path": "cases/017/research/captures/41ae320f8751271cdf61.html",
+      "capture_sha256": "714d5c3857bd9eea256ed5394d2af754f6862a32f1ad42a1f668c9aea96bda95",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/017/research/records/41ae320f8751271cdf61.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing | Chatling"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Simple, transparent pricing. Choose the perfect plan for your needs. Start free and scale as you grow."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing"
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Chatling"
+        },
+        {
+          "locator": "text characters 42:2524",
+          "excerpt": "sources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nOpen menu\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nSimple, transparent pricing\nChoose the perfect plan for your needs. Start free and scale as you grow.\nMonthly\nAnnual\nFree\nLaunch your first AI agent and see how AI can reduce your support workload.\n$0\n/month\n200\nAI credits\nCredit usage varies based on the AI model used.\n1\nAI agent\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n1\nSeat\nNumber of team members you can add to your project.\n500,000\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nGet Started\nStarter\nHandle more conversations, customize your AI, and bring your team into the loop.\n$25\n/month\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n2\nSeats\nNumber of team members you can add to your project.\n10 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Free, plus:\n4 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n5 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base weekly\nAutomatically resyncs knowledge base sources to fetch the latest data.\nFull chatbot customization\nCustomize the chatbot's appearance to match your branding.\n29 AI models\nAvailable models: Gemini 3.8 Flash, Mistral Medium 3.5, Gemini 3.6 Flash, Claude Opus 5, Claude Sonnet 5, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.2 (Non-reasoning), Grok 4.1 Fast, DeepSeek V3.2 (US), Mistral Small 4, Mistral Large 3, Gemini 3.1 Pro Preview, Gemini 3.1 Flash-Lite, Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT 5.2, GPT 5.1, Claude Haiku 4.5, Gemini 2.5 Pro, Gemini 2.5 Flash, GPT-4.1, GPT-4.1 Mini, GPT-4o\nAPI access\nChatbot analytics\nView detailed analytics of your AI agents, such as number of new conversations and contacts, peak chat times, top countries, and more.\nVoice input\nAllows users to send messages by voice (speech-to-text transcription).\n$21\n/month\nbilled $250 annually\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create."
+        }
+      ]
+    },
+    {
+      "evidence_id": "r017-644ce6321b83b7f546a7",
+      "source_url": "https://chatling.ai/integrations",
+      "publisher": "chatling.ai",
+      "retrieved_at": "2026-09-20T21:35:30.915498+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://chatling.ai/integrations",
+      "capture_path": "cases/017/research/captures/644ce6321b83b7f546a7.html",
+      "capture_sha256": "7baff4f4ce1c5e870500b78377ff2716fd683c9ac653969f6cd9fd97977ef76d",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/017/research/records/644ce6321b83b7f546a7.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Integrations | Chatling"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Integrations"
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Chatling"
+        },
+        {
+          "locator": "text characters 287:825",
+          "excerpt": "tomate conversations and respond faster across every touchpoint.\nStart for free\nWhatsApp\nLearn more\nInstagram\nLearn more\nTelegram\nMessenger\nZapier\nLearn more\nCal.com\nGoogle Sheets\nHubSpot\nZendesk\nSlack\nAirtable\nZoho\nWordPress\nLearn more\nBubble\nLearn more\nPrestaShop\nLearn more\nShopify\nLearn more\nSquarespace\nLearn more\nWebflow\nLearn more\nWix\nLearn more\n\"It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website plat"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-0f29a9502ee75fa707c9",
+      "source_url": "https://www.chatbase.co/",
+      "final_url": "https://www.chatbase.co/",
+      "publisher": "www.chatbase.co",
+      "retrieved_at": "2026-09-20T21:00:23.183677+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Agents for Customer Experience & Support | Chatbase Chatbase Expandable Expandable Expandable Expandable Diamond row divider Thinking"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses."
+        },
+        {
+          "locator": "metadata[1].application-name",
+          "excerpt": "Chatbase: The Leading AI Customer Support Agent Platform"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "AI Agents for Customer Experience & Support | Chatbase"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Agents for Customer Experience & Support | Chatbase\nProduct\nSolutions\nResources\nCustomers\nEnterprise\nPricing\n4.8\nThe leading AI agent for CX\nConversational\nagents\nfor\ncustomer\nexperience\nAI agents that meet customers at every stage of thei"
+        },
+        {
+          "locator": "text characters 58:370",
+          "excerpt": "duct\nSolutions\nResources\nCustomers\nEnterprise\nPricing\n4.8\nThe leading AI agent for CX\nConversational\nagents\nfor\ncustomer\nexperience\nAI agents that meet customers at every stage of their journey, across chat, email, and voice, to resolve issues end to end and increase revenue.\nStart free trial\nGet a demo\nOne age"
+        },
+        {
+          "locator": "text characters 120:432",
+          "excerpt": "leading AI agent for CX\nConversational\nagents\nfor\ncustomer\nexperience\nAI agents that meet customers at every stage of their journey, across chat, email, and voice, to resolve issues end to end and increase revenue.\nStart free trial\nGet a demo\nOne agent for every customer interaction,\nruns support, sales, and pr"
+        },
+        {
+          "locator": "text characters 500:812",
+          "excerpt": "y about that — a free replacement is on its way and arrives Thursday.\nAI Agent\nSupport agent\nResolve complex support queries accurately across live chat, email, phone, Slack, and more.\nIs Pro worth it for my team?\nFor a team, yes — Pro adds five seats, and yearly billing saves you 20%.\nAI Agent\nSales agent\nEnga"
+        },
+        {
+          "locator": "text characters 717:1029",
+          "excerpt": " a team, yes — Pro adds five seats, and yearly billing saves you 20%.\nAI Agent\nSales agent\nEngage prospects, answer product questions, and guide conversations toward revenue.\nWhat's your brand about?\nWe make gear built to last — for people who love the outdoors.\nAI Agent\nProduct guidance agent\nHelp customers fi"
+        },
+        {
+          "locator": "text characters 910:1222",
+          "excerpt": "about?\nWe make gear built to last — for people who love the outdoors.\nAI Agent\nProduct guidance agent\nHelp customers find info and understand your products with a clear, on-brand voice.\n\"Chatbase is a strong signal of how customer support will evolve. It is an early adopter of the agentic approach, which will b"
+        }
+      ],
+      "capture_path": "discovery/captures/0f29a9502ee75fa707c9.html",
+      "capture_sha256": "a97366b00428ad543522321ebbb8080c69a02b279c36dc3eb2c80c23fad33d18",
+      "record_path": "discovery/records/0f29a9502ee75fa707c9.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

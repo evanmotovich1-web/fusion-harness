@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N1",
+  "requires_inference": true,
+  "kind": "rewrite",
+  "semantic_requirements": [
+    "Orion delivered 18 on the stated date; delivery remains not late.",
+    "No added unsupported claims."
+  ],
+  "requires_changed_readable_text": true,
+  "semantic_review_required": true
+}

@@ -1,0 +1,28 @@
+{
+  "url": "https://getlinkbunny.com/",
+  "retrieved_at": "2026-09-20T21:19:18.165352+00:00",
+  "access_method": "credential-free bounded urllib GET",
+  "published_at": null,
+  "error": null,
+  "status": 200,
+  "limit_bytes": 262144,
+  "final_url": "https://getlinkbunny.com/",
+  "truncated": false,
+  "capture_path": "cases/002/research/c1788014a4b4c0d6.txt",
+  "capture_sha256": "481d4be1a0a922538d7d6b73dbcff632fbe34a9147192d5e3777214c3b45842b",
+  "links": [
+    "https://getlinkbunny.com/",
+    "https://getlinkbunny.com/about",
+    "https://getlinkbunny.com/articles/launch-directories",
+    "https://getlinkbunny.com/docs/agents",
+    "https://getlinkbunny.com/faq",
+    "https://getlinkbunny.com/login",
+    "https://getlinkbunny.com/mcp",
+    "https://getlinkbunny.com/pricing",
+    "https://getlinkbunny.com/privacy",
+    "https://getlinkbunny.com/terms",
+    "https://hboon.com/"
+  ],
+  "ended_at": "2026-09-20T21:19:18.292730+00:00",
+  "elapsed_seconds": 0.127265083
+}

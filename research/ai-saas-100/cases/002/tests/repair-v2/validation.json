@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "task_id": "1.c",
+  "status": "passed",
+  "started_at": "2026-09-20T22:57:44.334767+00:00",
+  "ended_at": "2026-09-20T22:57:44.774687+00:00",
+  "elapsed_seconds": 0.439803291,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/002/tests/repair-v2/validate.py"
+  ],
+  "counts": {
+    "original_artifacts_archived": 25,
+    "original_artifacts_preserved_in_place": 23,
+    "pre_repair_passed": 41,
+    "pre_repair_failed": 13,
+    "repaired_cases_passed": 54,
+    "legacy_cases_passed": 20,
+    "independent_repeat_passed": 54,
+    "accepted_products": 0
+  },
+  "checks": [
+    "All original source-history bytes and immutable current artifacts match pre-edit manifest",
+    "Original receipt references resolve to exact archived sources/inputs/outputs without rewriting receipt",
+    "Frozen complete input/state/request/clock bundles contain no evaluator answer fields",
+    "Every post-repair receipt and nested source-bundle member hash validates",
+    "Current dossier is structurally valid and remains unaccepted",
+    "Same v2 suite independently reinvoked in foreground; no model or live-marketplace test claimed"
+  ],
+  "preserved_paths": [
+    "cases/002/evidence.json",
+    "cases/002/implementation/README.md",
+    "cases/002/receipts/002-local-20260920T212619053188Z.json",
+    "cases/002/receipts/002-local-20260920T212619053188Z.stderr.txt",
+    "cases/002/receipts/002-local-20260920T212619053188Z.stdout.json",
+    "cases/002/receipts/002-local-474630f31ae64eaaafcf36bab97568a2.json",
+    "cases/002/receipts/002-local-474630f31ae64eaaafcf36bab97568a2.stderr.bin",
+    "cases/002/receipts/002-local-474630f31ae64eaaafcf36bab97568a2.stdout.bin",
+    "cases/002/receipts/baseline-blocked.json",
+    "cases/002/research/5aa93945dcc9ca51.json",
+    "cases/002/research/5aa93945dcc9ca51.txt",
+    "cases/002/research/79e13c11d1509761.json",
+    "cases/002/research/79e13c11d1509761.txt",
+    "cases/002/research/79e6dafbfc3b5a89.json",
+    "cases/002/research/79e6dafbfc3b5a89.txt",
+    "cases/002/research/c1788014a4b4c0d6.json",
+    "cases/002/research/c1788014a4b4c0d6.txt",
+    "cases/002/tests/fixtures.json",
+    "cases/002/tests/freeze.json",
+    "cases/002/tests/run.py",
+    "cases/002/tests/specification-freeze.json",
+    "cases/002/tests/specification.md",
+    "cases/002/verdict.json"
+  ],
+  "repeat": {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "-B",
+      "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/002/tests/repair-v2/run.py"
+    ],
+    "exit_status": 0,
+    "stdout_path": "cases/002/tests/repair-v2/validation-repeat.stdout.json",
+    "stdout_sha256": "8485045289ca4d6e0880315858142a508817e24917500e1c60f3f849e6f70792",
+    "stderr": ""
+  },
+  "held_out": false,
+  "model_baseline_executed": false,
+  "original_product_observed": false,
+  "scope": "Local repair and provenance validation only. Independent review still required."
+}

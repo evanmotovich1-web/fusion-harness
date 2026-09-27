@@ -1,0 +1,121 @@
+{
+  "evidence_id": "web-1f5d0a73df8df7c2e6ac",
+  "source_url": "https://www.recraft.ai/",
+  "retrieved_at": "2026-09-20T21:00:45.188909+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.recraft.ai/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/1f5d0a73df8df7c2e6ac.html",
+  "capture_sha256": "2fdd2bbb9af53df0d09f72f019c0191494b3676991f6007c3f992fedca911f32",
+  "bytes_saved": 262144,
+  "title": "Recraft | AI for designers, creatives, sellers, and teams",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Recraft is a top-ranked text-to-image model and design platform for photorealism, vector generation, custom styles, mockups, and more"
+    },
+    {
+      "key": "og:title",
+      "value": "Recraft | AI for designers, creatives, sellers, and teams"
+    },
+    {
+      "key": "og:description",
+      "value": "Recraft is a top-ranked text-to-image model and design platform for photorealism, vector generation, custom styles, mockups, and more"
+    }
+  ],
+  "text": "Recraft | AI for designers, creatives, sellers, and teams\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nRecraft Studio\nAI models\nUse сases\nAPI\nResources\nCommunity\nPricing\nEnterprise\nSign in\nTry Recraft Studio\nStyle It Once, Every Image Matches: Introducing V4 Styles\nLearn more\nIntroducing V4 Styles\nLearn more",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/id5ZjKRfENkLEfAMrnKLKJfqfE.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/id5ZjKRfENkLEfAMrnKLKJfqfE.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/abL15N3UiE3oDA6S807KUBarXrQ.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.recraft.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.recraft.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/community",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/auth/login",
+      "rel": null
+    },
+    {
+      "href": "/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/community",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/auth/login",
+      "rel": null
+    },
+    {
+      "href": "/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/v4styles",
+      "rel": null
+    },
+    {
+      "href": "https://www.recraft.ai/v4styles",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1468
+}

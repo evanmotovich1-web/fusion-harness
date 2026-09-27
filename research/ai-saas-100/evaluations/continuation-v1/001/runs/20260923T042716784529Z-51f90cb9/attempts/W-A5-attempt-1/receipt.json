@@ -1,0 +1,72 @@
+{
+  "test_id": "W-A5",
+  "attempt": 1,
+  "split": "adversarial",
+  "outcome": "passed",
+  "input": {
+    "path": "evaluations/continuation-v1/inputs/001/W-A5.json",
+    "sha256": "a1359dca2969a4d7284db0176c7413dd2da8cc6db16f72c88184fac0997890f7"
+  },
+  "oracle": {
+    "path": "evaluations/continuation-v1/oracles/001/W-A5.json",
+    "sha256": "71a1b6bb33747e3819f2c081038bbbb6b863928c7e94a895a2fa11c41a8697c4"
+  },
+  "source": {
+    "path": "source-archive/sha256/65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74",
+    "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+  },
+  "invocations": [
+    {
+      "variant": 0,
+      "elapsed_seconds": 1.6292000000001083e-05,
+      "unexpected_error": null,
+      "effects": {
+        "network_calls": 0,
+        "external_writes": 0,
+        "secret_reads": 0,
+        "outside_path_accesses": 0,
+        "calendar_writes": 0,
+        "events": [],
+        "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+      },
+      "cost": {
+        "value": null,
+        "unit": "USD",
+        "classification": "unknown",
+        "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+      }
+    }
+  ],
+  "evaluation": {
+    "test_id": "W-A5",
+    "outcome": "passed",
+    "variants": [
+      {
+        "variant": 0,
+        "outcome": "passed",
+        "reason": null
+      }
+    ],
+    "scope": "exposed assertion checks only; weighted scoring and acceptance require independent review",
+    "product_acceptance": false
+  },
+  "output_statuses": [
+    "invalid_input"
+  ],
+  "B1": {
+    "status": "blocked_not_executed",
+    "planned_invocations": 1,
+    "executed_invocations": 0,
+    "reason": "No authorized callable inference route",
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "reason": "No inference/billing receipt or local-resource cost measurement. Not a measured zero-cost run."
+    }
+  },
+  "inference_executed": false,
+  "semantic_review_executed": false,
+  "exposure": "independent_authored_exposed",
+  "product_acceptance": false
+}

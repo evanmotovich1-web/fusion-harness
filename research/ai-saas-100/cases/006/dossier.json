@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "006",
+    "name": "Clay",
+    "canonical_url": "https://www.clay.com/",
+    "category": "C03",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-908f513779080968a695"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "clay.com",
+    "selection_position": 6,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "GTM operations and sales research teams",
+    "job": "Resolve and enrich a company list from provided source records, retaining provenance and unknowns",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "records": "array of company, fields, source_ids, confidence, missing_fields",
+      "conflicts": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version",
+      "Controlled fixture providers are synthetic. Real-world enrichment quality needs separately authorized data sources."
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Resolve and enrich a company list from provided source records, retaining provenance and unknowns",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Captured pricing page exposes navigation and marketing content, not usable current plan amounts. A valuation headline is not a subscription price."
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "GTM operations and sales research teams",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "persana.ai",
+        "name": "Persana",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [
+      {
+        "claim_ids": [
+          "provider-count-metadata",
+          "provider-count-navigation"
+        ],
+        "type": "scope_or_freshness_ambiguity",
+        "finding": "Different advertised lower bounds can both be true. Do not treat them as a proven contradiction or one audited integration count."
+      }
+    ],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Infrastructure to get any data, run agentic workflows, and launch GTM plays.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: GTM operations and sales research teams.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        },
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: ces\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form descrip",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r006-efc7c1c3dcb4c9d73daa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r006-efc7c1c3dcb4c9d73daa",
+          "locator": "text characters 361:919",
+          "excerpt": "ces\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form descrip"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r006-efc7c1c3dcb4c9d73daa": "2026-09-20T21:35:25.748784+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Persana advertises: Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-139e71c6a26394f273d8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-139e71c6a26394f273d8",
+          "locator": "metadata[0].description",
+          "excerpt": "Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-139e71c6a26394f273d8": "2026-09-20T21:00:23.162200+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Persana. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-908f513779080968a695",
+        "web-139e71c6a26394f273d8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        },
+        {
+          "evidence_id": "web-139e71c6a26394f273d8",
+          "locator": "metadata[0].description",
+          "excerpt": "Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00",
+          "web-139e71c6a26394f273d8": "2026-09-20T21:00:23.162200+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Licensed third-party data coverage, freshness, waterfall orchestration, and existing CRM workflows may dominate the value of the UI.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-908f513779080968a695",
+        "r006-efc7c1c3dcb4c9d73daa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        },
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        },
+        {
+          "evidence_id": "r006-efc7c1c3dcb4c9d73daa",
+          "locator": "text characters 361:919",
+          "excerpt": "ces\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form descrip"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00",
+          "r006-efc7c1c3dcb4c9d73daa": "2026-09-20T21:35:25.748784+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "provider-count-metadata",
+      "statement": "Integrations metadata refers to 50+ built-in data providers.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r006-efc7c1c3dcb4c9d73daa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r006-efc7c1c3dcb4c9d73daa",
+          "locator": "metadata[0].description",
+          "excerpt": "Discover what data you can find with Clay's 50+ built-in data providers from title to work email address to department headcount growth."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r006-efc7c1c3dcb4c9d73daa": "2026-09-20T21:35:25.748784+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "provider-count-navigation"
+      ]
+    },
+    {
+      "claim_id": "provider-count-navigation",
+      "statement": "Navigation refers to buying data from 200+ providers.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-908f513779080968a695",
+          "locator": "text characters 368:1082",
+          "excerpt": "Audiences\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long form description will go in this slot here.\nAI formatting\nLink long form description will go in th"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-908f513779080968a695": "2026-09-20T21:00:22.705084+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "provider-count-metadata"
+      ]
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/006/tests/specification.json",
+    "sha256": "8ab9e0f086cbc3dd03331472a9133d9283157403ff32cd8a1278f1a21cd1ff08",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review",
+      "Controlled fixture providers are synthetic. Real-world enrichment quality needs separately authorized data sources."
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review",
+      "Controlled fixture providers are synthetic. Real-world enrichment quality needs separately authorized data sources."
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:22.705084+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-908f513779080968a695"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-908f513779080968a695",
+        "r006-5bed13c2b0c170f24ec5",
+        "r006-efc7c1c3dcb4c9d73daa",
+        "web-139e71c6a26394f273d8"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

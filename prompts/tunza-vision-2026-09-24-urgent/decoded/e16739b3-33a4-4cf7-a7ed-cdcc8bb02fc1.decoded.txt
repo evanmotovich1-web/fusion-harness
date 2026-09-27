@@ -1,0 +1,113 @@
+SOURCE	/Users/evanmotovich/Downloads/e16739b3-33a4-4cf7-a7ed-cdcc8bb02fc1.pdf
+BYTES	9127
+TITLE	Tunza - Kenya Clinical Vision Brief
+AUTHOR	Tunza Labs
+CREATIONDATE	D:20260924151959+00'00'
+PRODUCER	ReportLab PDF Library - (opensource)
+PAGES_KIDS	3
+
+----- DECODED TEXT -----
+----- PAGE 1 -----
+TUNZA
+CLINICAL VISION BRIEF | KENYA | SEPT 2026
+Discussion draft - no clinical-performance claim or patient-data request; any patient-facing use requires validation and applicable approvals.
+1
+A NEW LAYER FOR THE MOMENT BEFORE FORMAL CARE
+From uncertainty to the right next step.
+Tunza is being built around a simple clinical reality: for many people, the hardest part of care is not what
+happens inside a hospital - it is deciding what should happen before arrival, preserving the right context
+through the transition, and knowing whether the care path actually resolved.
+Tunza is not intended to replace clinicians, hospitals, community health systems, or Kenya's national digital infrastructure. It is
+designed to strengthen decision quality and continuity around the transition into care.
+WHY THIS MOMENT MATTERS
+Kenya is not starting from zero. The country is rapidly strengthening community health, referral coordination, digital infrastructure
+and national interoperability. More than 107,000 Community Health Promoters are being supported with digital devices and
+medical kits; the Ministry of Health is developing a national referral policy focused on continuity, digital interoperability and
+accountability; and the Digital Health Agency now certifies digital health systems against security, functionality and
+information-exchange standards.
+That creates a narrow strategic window: the rails are becoming more connected. The next question is whether those rails simply
+record care - or help each transition become safer, faster and more accountable.
+01 Earlier clarity
+Help surface the next clinically appropriate action while uncertainty is still high - before travel, delay
+or escalation.
+02 Stronger continuity
+Preserve the essential context as a person moves between household, community health and
+facility-based care.
+03 Measurable learning
+Treat resolved care journeys as evidence: what worked, what did not, and where safety or
+coordination should improve.
+THE BIGGER PICTURE
+The ambition is not to create another destination app. It is to build a clinically disciplined layer that can work with the systems
+Kenya is already investing in - community health, facility systems, registries, referral pathways and health-information exchange -
+while remaining useful in the realities of intermittent connectivity, limited resources and uneven access.
+If done correctly, Tunza becomes more valuable as the health system becomes more
+connected - not less.
+Public context: Kenya MoH reports 107,000+ CHPs supported with digital devices and kits; its 2026 referral-policy process emphasizes continuity, digital interoperability and
+accountability; DHA certification evaluates digital health systems for functionality, security/privacy, reporting and interoperability. MoH - Community Health, May 2026 | MoH -
+Referral Policy, Mar 2026 | DHA Certification
+
+----- PAGE 2 -----
+TUNZA
+CLINICAL VISION BRIEF | KENYA | SEPT 2026
+Discussion draft - no clinical-performance claim or patient-data request; any patient-facing use requires validation and applicable approvals.
+2
+WHAT EARLY CLINICAL PARTNERS CAN SHAPE
+Clinical credibility before scale.
+We believe the most valuable early collaborators are not endorsers. They are clinicians willing to
+pressure-test the assumptions before the product hardens - especially where textbook logic and real
+Kenyan practice diverge.
+OUR OPERATING PRINCIPLES
+Safety over forced certainty.
+When information is insufficient, the system should say so
+rather than manufacture confidence.
+Clinician-guided, model-bounded.
+AI should support structured reasoning and prioritization;
+critical safety constraints should not depend on model
+confidence alone.
+Measure before scale.
+We want predefined evaluation criteria, local review, and
+evidence from real workflows before broad clinical influence.
+Kenya-first, interoperable.
+Build with the direction of national digital health - not around
+it - and avoid duplicating systems that already have
+institutional authority.
+WHERE A KENYAN CLINICIAN ADDS
+OUTSIZED VALUE
+Pressure-test clinical assumptions.
+Where does a technically correct pathway fail in actual
+practice?
+Define unacceptable failure.
+Which misses, delays or false reassurances should
+automatically stop a pilot?
+Expose workflow reality.
+What information is actually available before referral, and
+what is routinely missing?
+Shape evaluation.
+Which outcomes would make a medical director, county
+team or facility leader trust the evidence?
+A DISCIPLINED PATH TO PROOF
+1
+Clinical design review
+Narrow the first use case, define the safety boundaries, and identify where current assumptions break in practice.
+2
+Silent evaluation
+Compare Tunza's recommendations against normal care without changing patient management; adjudicate disagreements locally.
+3
+Narrow pilot
+Only after predefined thresholds are met: a tightly scoped cohort, defined facilities, explicit escalation rules and measurable
+endpoints.
+4
+Evidence package
+Document safety, workflow fit, failure modes, and operational outcomes before expanding scope.
+Why engage early?
+The earliest clinical collaborators will have disproportionate influence over the safety criteria, evaluation design and workflow
+assumptions before they become expensive to change. We are intentionally keeping the first clinical circle small until the
+evidence framework is strong.
+THE CONVERSATION WE WANT TO HAVE
+Not: "Would you use this?"
+Instead: Where would you distrust it? What would make it clinically valuable? What evidence would you require before
+allowing it near a real care decision? Which part of the current journey creates the most avoidable risk or friction?
+The question is not whether Kenya will digitize care - it already is. The question is
+whether the next generation of digital health will merely document care, or help make
+each transition more clinically coherent.
+

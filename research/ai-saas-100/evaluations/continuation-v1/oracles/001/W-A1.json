@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-A1",
+  "requires_inference": false,
+  "kind": "reject_before_inference"
+}

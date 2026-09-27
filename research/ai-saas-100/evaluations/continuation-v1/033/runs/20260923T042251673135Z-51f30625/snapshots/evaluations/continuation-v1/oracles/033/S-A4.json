@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "test_id": "S-A4",
+  "requires_inference": false,
+  "kind": "schedule_reject"
+}

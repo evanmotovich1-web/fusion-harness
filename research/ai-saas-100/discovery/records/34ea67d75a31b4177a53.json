@@ -1,0 +1,1117 @@
+{
+  "evidence_id": "web-34ea67d75a31b4177a53",
+  "source_url": "https://bolt.new/",
+  "retrieved_at": "2026-09-20T21:00:55.713426+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://bolt.new/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/34ea67d75a31b4177a53.html",
+  "capture_sha256": "2026c08f622d8c69b096cc71cd6a03b8f4b05f35ab501fc01e22cc40d6515feb",
+  "bytes_saved": 121559,
+  "title": "Bolt AI builder: Websites, apps & prototypes",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Build and scale high-performing websites & apps using your words. Join millions and start building today."
+    },
+    {
+      "key": "og:site_name",
+      "value": "bolt.new"
+    },
+    {
+      "key": "og:title",
+      "value": "Bolt AI builder: Websites, apps & prototypes"
+    },
+    {
+      "key": "og:description",
+      "value": "Build and scale high-performing websites & apps using your words. Join millions and start building today."
+    }
+  ],
+  "text": "Bolt AI builder: Websites, apps & prototypes\nBack\nSolutions\nResources\nCareers\nPricing\nSign in\nGet Started\nGet Started\nSolutions\nResources\nCareers\nPricing\nAI for Small Business\n→\nCustom apps for your business, built in an afternoon — no code, no developer, no $100K project.\nTop Use Cases\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nBusiness Type\nSmall Business\nEnterprise\nBolt Templates\n→\nProduction-ready starting points — dashboards, storefronts, portfolios, and more. Fork one and make it yours.\nSupport\nCommunity\nHelp Center\nSecurity & Trust\nBuild and Learn\nBlog\nTemplates\nGet Started\nGet Started\nSign in\nWhat will you build today?\nCreate stunning apps & websites by chatting with AI.\nLet's build a prototype...\nPlan\nBuild now\nWebsite\nNew\nSlides\nApp\nPrototype\nor start from\nFigma\nGitHub\nTeam template\nTrusted by Google, Microsoft, Salesforce, AWS, Meta, HubSpot, Accenture, TikTok, Shopify, Chegg, Cloudflare, Netlify, FactSet, ByteDance, PwC, Mozilla, Intel, Xano, Stripe\nEmpowering product builders\nwith the\nmost powerful coding agents\nBolt does the heavy lifting for you, so you can focus on your vision instead of fighting errors.\nThe best model, every time\nBolt automatically routes to the right model for each task, balancing quality and cost. No more juggling platforms or guessing which agent to use.\nBolt Agent\nStandard\nAll users\nMax\nPro only\nStandard\nRecommended for general development.\nSpeed\nHigh\nIntelligence\nHigh\nToken cost\nBalanced\n98%\nless errors\nBolt automatically tests, refactors, and iterates reducing errors so you keep building instead of fixing.\nBuild big without breaking\nBolt handles\nprojects 1,000 times larger\nthan before. Its improved built-in context management can handle complexity and keep your projects running smoothly.\nBuild with\ndesign system\nStop building from scratch. Start building on-brand.\nEverything you need to scale\nBuilt in.\nStop stitching together platforms. Bolt Cloud gives you enterprise-grade backend infrastructure including hosting, databases, integrations and more.\nUnlimited databases\nEnterprise-grade\nUser Management & Authentication\nSEO optimization so your project ranks from day one.\nHosting with analytics & custom domains\nBolt gives you everything you need inside one familiar interface no extra accounts, no steep learning curve.\nWhatever your role\nBolt gives you superpowers\nFrom idea to live product, Bolt adapts to the way you work turning every vision into something real & fast\nProduct managers\nGo from insight to prototype in hours and test ideas with your team before the day is over.\nEntrepreneurs\nLaunch a full business in days, not months. From landing page to product, all in one flow.\nMarketers\nSpin up high-performing campaign pages in hours, with SEO and hosting built in.\nAgencies\nMultiply your impact: deliver more projects, faster, without scaling headcount.\nStudents & builders\nLearn by doing. Take ideas from class or side projects and turn them into fully working apps.\nReady to build something amazing?\nTry it out and start building for free\nLet's build a prototype...\nPlan\nBuild now\nSolutions\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nSmall Business\nEnterprise\nResources\nBlog\nCommunity\nHelp Center\nSecurity & Trust\nTemplates\nMore\nCareers\nPricing\nTerms of Use\nAcceptable Use Policy\nPrivacy Policy\nConnect",
+  "links": [
+    {
+      "href": "/assets/EmptyState-DhZFw4D6.css#",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/root-Cv6So83A.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/HomepageBackground-Bm5dAf1K.css#",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/static/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/static/favicon-48x48.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/static/favicon-96x96.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/static/favicon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/static/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/assets/tailwind-compat-DeJTMLhw.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-ChNoKQRy.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/static/fonts/inter-display-semibold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/static/fonts/inter-display-bold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/static/fonts/fonts.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/Chat-DYiXiHnY.css#",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/Markdown-DOeOYkw8.css#",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/Prompt-ChEBFlnY.css#",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bolt.new",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@300;900&family=Silkscreen:wght@400;700&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-for-small-business",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/custom-crm-software",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-prototyping-tools",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-for-small-business",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/resources/templates",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/stackblitz",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://support.bolt.new",
+      "rel": "noopener"
+    },
+    {
+      "href": "/platform/security",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/templates",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/custom-crm-software",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/ai-prototyping-tools",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-for-small-business",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/stackblitz",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://support.bolt.new",
+      "rel": "noopener"
+    },
+    {
+      "href": "/platform/security",
+      "rel": null
+    },
+    {
+      "href": "/resources/templates",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://stackblitz.com/terms-of-service",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://stackblitz.com/acceptable-use-policy",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://stackblitz.com/privacy-policy",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://x.com/boltdotnew",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.linkedin.com/company/boltdotnew/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://discord.com/invite/stackblitz",
+      "rel": "noopener"
+    },
+    {
+      "href": "/assets/entry.client-DNkXLAaM.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/react-vendor-FBArgJI-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/app-version-Dui2kOPk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index.esm-CiK6-LPk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/sentry.client-DYCPgnjn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/breadcrumbs-B2kPsiao.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Toast-DCkDnUG8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/EmptyState-CUjdgELX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/constants-D88vbcCH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BNq_RiNE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/bundle-mjs-5MOacnAK.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/root-Cx1NZ6ys.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/client-CxVMd2_6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BQlXsxGD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/stripIndents-pFh2tRUP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/compare-IkewsJlg-CQglnBhJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/client-only-fXDAepCS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/analytics-D1N9fPr5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/registration-Dzi_zgg9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ErrorBoundary-DqZE2EZO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/growthbook-B5SAWwLJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/theme-IdjaAdHm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-UJSMjGbD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/login-908F0m9D.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/settings-X88-0wia.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Alert-6yaQdaj9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/cello-attribution-P7P49-FU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/login-CofnrLCP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/preload-helper-BajDbBSX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/authFlowRoutes-0PvSSBdp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/cello-config-BXEYGcji.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/queryClient-DIpRj3kO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/QueryClientProvider-CeYTaBZg.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/urls-CgWnMlgH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/database-tabs-DvZimEH-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-C90NQ4Sw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/logger-DeZH32Hk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/lifecycle-events-BKBzkx5V.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Header-Cz-7GZBI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/config-S-mdHLS1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/url-BKkbTrzF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BwBwXA76.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/classNames-CvIIy9UH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/plan-info-T0bu7E2e.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/theme-CaxmedKW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useProjectCollaborationV2-BiViGBi9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/menu-DysTVg-Z.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/animationVariants-C5v3Lmva.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/easings-Du68u7bt.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Link-C4X3bcqq.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BprA7Yvi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ai-CrmMeVt5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/page-visibility-BC3ORuJ_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/noops-TSSrUl-c.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/text_line_stream-DtdTslVH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/network-diagnostics-Cvpg6fsR.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/path-C47uQrgn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/workDir-udIrzYT6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/store-BhxjIiy2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/chat-hooks-D5upWT1v.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/download-rUGbmDk0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/retry-CtrJhXaF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/debounce-D7WadHiE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-ZDSyKkIY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/pricing-C4ZRUBs2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/artifacts-Bqu3SX4M.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/unreachable-dJ0nIuQ4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/AccountDisplay-Oky7XtQH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ClippedTextTooltip-BiKY_xEA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useQuery-DaC4hJil.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/query-DoSgOmAl.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/organizations-CtJ6e038.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/scroll-5PZQ8cWz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useMutation-bj3ay3om.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mutation-TJcdC7wB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/proctor-D6SesJ4-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/errors-CxiSTRCm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/projects-tFpAoyqK.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/user-MHK4mZ3-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/github-branch-switch-9MV0BBiQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/init-ref-Be5PTfcf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/withSpinner-DGE-K6ya.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/client-error-DejbHZY5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/confetti-DuJ2TM_W.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/confetti.module-W9IyG_S9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useProjectsOwnerContext-BbgJEeJW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useProjectRename-Cp4OrNMD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/teamTemplates-DndGMO_N.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/queryOptions-dfte2Pzq.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mutationOptions-DuEc1oJu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/site-protection-BZ5CJdmv.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/teamPlans-DlmP_1VF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/team-fpVdKfYA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/format-CZ3S6TW9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/UpgradePlanDialogs-BKf8pFtX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useFreeTrialOffer-AfxWsd3L.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useFeatureFlags-BOrJ028Z.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/LoadingDots-B4FJxcU6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/formatDistance-BRnAe4fK.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/differenceInMilliseconds-DOFWIQxF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/agent-pAQKtSyl.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useApplications-Dufl8ugC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/unpublish-project-zH756uQC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ConfirmationDialog.client-Cq9O_3bE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/sites-Dj9oVBe5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/domains-Bsl7v7kw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/domains-DOCGg5Qr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/local-storage-D3fvnq3W.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/has-real-preview-Cl7LMj2k.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/LazyLoadWrapper-DpzdwJ0m.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/HomepageBackground-H8OBjoiP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/BoltLogoSimple-DWENviSC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/infiniteQueryBehavior-BHFUFLMk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/_chat-Bl3jt8HQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/AgentSwitchDialog-IEVzi_iB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useV1AgentRetired-DKfSG4FP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/MembersTable-DcFnTw7U.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/designSystemStepper-CK7D3G0n.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/persistentBanner-D_3O370o.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/project-open-CotYL_my.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/availableDomains-DX6sR9zf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useDesignSystemMutationHelpers-DtGrIl0R.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useDesignSystemDraft-CMhOJvva.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useDesignSystems-DGREKNSP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/StripeLogo-DzZH-qch.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/organizations-DclRcCiF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/constants-C7zqZw6w.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/user-data-rights-vEnxa2gH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/IndexLayout-Cs1bsaav.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/meta-BXcyEv4F.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/MemberDescription-D8PqN31y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/SearchInput-CAWU1M64.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ActionMenu-6UW7T37d.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useRequestUpgrade-B2sBUNyj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Pagination-DbniNlGF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/usePaginatedData-D7pHj9G5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/netlify-C_bofAwN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/AccountSelectMenu-m4R79sDS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/designSystems-BccUlhcc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Logo-CnxBwaTr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-CpLKVaDV.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-Dvmm-e9L.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-CCdMIr8Z.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/formatDistanceToNow-BphXHRC1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/constructNow-BSioNRBn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/access-code-9A1_0E9k.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/AccountSelector.client-GxK3lPhY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useDashboardLayout-DxGvAoAk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Sheet-DlHjv0d1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/subscription-BRbQ6iLs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/domainPurchases-DdfV038I.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useInitializeUserStore-DLFRUys2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useApplicationOAuthError-sx_9K0w2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/_chat._index-ii-NBqpL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Chat.client-BKPfA743.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/marketing-font-links-jTjny1ql.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BTGmwBB4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Markdown-BfsTGwUh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-C3adzsXj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/stripe-F_QEnPcp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/UpgradeLink-Boafz4AO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Prompt-C4JTgvN2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-BPDdDIgv.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mcp-DNNUGvSL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-B8nRJUga.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/skill-frontmatter-DAlfhW11.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/jszip.min-XecpNc31.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/store-Co3yYu8o.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/selectors-IDS1Fc1Q.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useForgeResetLabel-BBX52dWQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/isSameDay-CjOFY4YP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useSelectedDesignSystem-4KxUmnOz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mcp-known-servers-s4MHH_H2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/scroll-overflow-mask-BknSZkKY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useEnsureSkillsLoaded-BKqX7SvQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/forge-pricing-copy-0kdqrJCN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useForgePlanCheckout-Cb8GblLc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/use-default-forge-model-e41I7wZh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/import-figma-DECxUEV4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/figma-DA3kepSx.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/parseISO-Cf5eFRvi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/DesignSources-C6jr3c36.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/zod-jeejZILz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index.esm-Hj5NZI-K.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-DiqLAugd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/getDefaultOptions-BDPcQZU-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/TextArea-D5rdJ3Nc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ProgressBar-CiFmkisu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/DiscordSupportModal.client-DXzhOWF7.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/utils-BaJb-5iC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ProjectGridSkeleton-CBmKQ-dr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/differenceInDays-BIUH3fPd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/isYesterday-B9PtKN9O.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/addDays-CV8MZckB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/sso-CiSugIuf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/AllProjects-BGJLJWP2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/FiltersBar-C2K7_eHI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/RecentProjects-DYJjKuRb.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/SiteFooter-CGO98-dU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/csv-LY4so07N.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/sheetNavigation-BQVK4sxU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/command-CNBXBY-P.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/chart-CUQFOOGE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-bWn0PNfF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/organizationMembers-DQswvze-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mcp-oauth-listener-DnDByWkU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index-C_s9gSTi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/prepare-body-7_2JMNjj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/serialize-messages-BK0d1LBf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/usePaymentIntentStatusMessage-CmWfcgqm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/prettyEncodeComponent-Bh8gm2Qa.js",
+      "rel": "modulepreload"
+    }
+  ],
+  "elapsed_seconds": 0.1816
+}

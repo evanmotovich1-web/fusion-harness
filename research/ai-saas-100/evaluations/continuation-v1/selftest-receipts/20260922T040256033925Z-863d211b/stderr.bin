@@ -1,0 +1,31 @@
+test_crm_missing_interpreter_is_blocked_not_filled_from_oracle (__main__.AdapterTests) ... ok
+test_handles_resolve_only_returned_values (__main__.AdapterTests) ... ok
+test_market_adapter_handles_are_not_expected_identifiers (__main__.AdapterTests) ... ok
+test_workflow_adapter_never_loads_product_or_oracle (__main__.AdapterTests) ... ok
+test_component_approval_denial_stale_and_tamper_checks (__main__.CRMTests) ... ok
+test_normal_state_oracles (__main__.CRMTests) ... ok
+test_parameterized_invalid_inputs (__main__.CRMTests) ... ok
+test_structured_preview_not_conversation (__main__.CRMTests) ... ok
+test_unauthorized_preapproval_write (__main__.CRMTests) ... ok
+test_wrong_contact_and_fresh_read (__main__.CRMTests) ... ok
+test_frozen_hashes_and_separation (__main__.IntegrityTests) ... ok
+test_input_exposure_and_crm_separation (__main__.IntegrityTests) ... ok
+test_all_symbolic_traces (__main__.MarketTests) ... ok
+test_anchor_script_injection (__main__.MarketTests) ... ok
+test_invalid_matching_and_transition (__main__.MarketTests) ... ok
+test_rejection_must_not_mutate (__main__.MarketTests) ... ok
+test_all_invalid_input_groups (__main__.RewriteTests) ... ok
+test_missing_inference_and_stale_review (__main__.RewriteTests) ... ok
+test_no_fabricated_success_or_unmeasured_effects (__main__.RewriteTests) ... ok
+test_semantics_never_inferred_from_tokens (__main__.RewriteTests) ... ok
+test_swapped_roles_fail_despite_all_literals (__main__.RewriteTests) ... ok
+test_all_adversarial_groups (__main__.ScheduleTests) ... ok
+test_all_feasibility_witnesses (__main__.ScheduleTests) ... ok
+test_buffers_cannot_be_self_certified (__main__.ScheduleTests) ... ok
+test_deadline_priority_and_split_checks (__main__.ScheduleTests) ... ok
+test_overlap_and_incomplete_work_rejected (__main__.ScheduleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.028s
+
+OK

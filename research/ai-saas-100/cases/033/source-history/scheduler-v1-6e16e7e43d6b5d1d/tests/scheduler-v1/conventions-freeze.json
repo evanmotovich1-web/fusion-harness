@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "fixed_at": "2026-09-22T03:37:35.216062+00:00",
+  "implementation_existed": false,
+  "artifacts": [
+    {
+      "path": "cases/033/dossier.json",
+      "sha256": "e99a06b051762e38b994dc64c6ae822474e1d741f16a03e054aadd73643a2031"
+    },
+    {
+      "path": "cases/033/evidence.json",
+      "sha256": "90655f4b756c0b9975eec16f21f9c72e10946d7f3623e0a80afcd7e9a5eceb51"
+    },
+    {
+      "path": "cases/033/handoff.md",
+      "sha256": "f0d552c026b45b42d2f561726720870a05b0d2a6dc14e1794115c333a0023146"
+    },
+    {
+      "path": "cases/033/research/captures/891a63a2a99254d77f87.html",
+      "sha256": "1e0bd5ab04a11540275e2f0063a7f603a14e9927f6fb597bdeef207d8119d1f9"
+    },
+    {
+      "path": "cases/033/research/captures/f814834bc129086cb2d0.html",
+      "sha256": "2fdf73f426fb51923be3e60fc8ff99fd069c262fb4e159ead8cbfff30a99f268"
+    },
+    {
+      "path": "cases/033/research/records/891a63a2a99254d77f87.json",
+      "sha256": "d497ea1c2237c39f568f1d273b1a4c9a66daa9cfdc1198d0bd9b421327a67a3a"
+    },
+    {
+      "path": "cases/033/research/records/f814834bc129086cb2d0.json",
+      "sha256": "ff6d2b57cb5601f25b78b6c8ebecb16974ffeb2e80aa7277a23f31dee3b0bdd3"
+    },
+    {
+      "path": "cases/033/tests/freeze.json",
+      "sha256": "29fb756bde7beecac1c0148223f57b37143b9af78625aba74189c9bbf0e07f4d"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/conventions.md",
+      "sha256": "d85ef2677fced44cdbb3a66f744021d143feb8569d237a30f4d9459afed069c4"
+    },
+    {
+      "path": "cases/033/tests/specification.json",
+      "sha256": "8a0db6ab5bdd487ee4ab14d46529660baf0e3a4046d61666aa5ae2334fabdbc0"
+    }
+  ],
+  "retained_evaluator": {
+    "path": "/tmp/fusion-harness-plXwRt/collaborate/reports/1.d-glm.md",
+    "sha256": "fe90c5f4499e6fe7297cd00583b8002d30d5d7d0a857c644693c93c76d549a6c"
+  },
+  "exposure": "builder_visible"
+}

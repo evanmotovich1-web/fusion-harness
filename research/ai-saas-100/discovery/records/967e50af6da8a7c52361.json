@@ -1,0 +1,313 @@
+{
+  "evidence_id": "web-967e50af6da8a7c52361",
+  "source_url": "https://nanonets.com/",
+  "retrieved_at": "2026-09-20T21:00:37.388106+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://nanonets.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/967e50af6da8a7c52361.html",
+  "capture_sha256": "13294fd06c54986450a9afc202a5220a7a86b00755860e7c463999f87381774f",
+  "bytes_saved": 262144,
+  "title": "Nanonets: AI Agents for Enterprise Data Processing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Nanonets automates messy manual processes including accounts payable, claims processing, order management, and more, and delivers clean data to systems of record like SAP, Salesforce, and more. Trusted by 10,000+ enterprises."
+    },
+    {
+      "key": "og:title",
+      "value": "Nanonets: AI Agents for Enterprise Data Processing"
+    },
+    {
+      "key": "og:description",
+      "value": "Nanonets automates messy manual processes including accounts payable, claims processing, order management, and more, and delivers clean data to systems of record like SAP, Salesforce, and more. Trusted by 10,000+ enterprises."
+    }
+  ],
+  "text": "Nanonets: AI Agents for Enterprise Data Processing\nNanonets\nProducts\nSolutions\nCustomers\nPricing\nResources\nGet started for free\nBook a demo\nTurn your business processes\ninto AI agents\nNanonets converts policies, procedures, systems, knowledge into AI agents that run your\nbusiness.\nbusiness processes.\nBook a demo\nGet started for free\n$50 free credits, no card required.\nUsed by\n35% of the Fortune 500\nand\n10,000+ enterprises\ncase study ↗\ncase study ↗\ncase study ↗\ncase study ↗\nAI agents work tirelessly,\nso your team doesn't have to.\nEdge cases undermine agent ROI. Deploy agents that accurately follow business rules, learn from every correction, and work transparently.\nAccounts Payable\n/ 0\n1\n6 seconds per invoice, not 6 minutes\nKit’s Catering\n$854\nJun 6\nStaples\n$70.00\nJun 9\nR. State\n$25,000\nJun 12\nSweetgreen\n$18.40\nJun 14\nSAP\n27\nGmail\n25\nNetsuite\n15\nQuickBooks\n32\nReconciliation\n/ 0\n2\nEvery line matched before you open the file\nChase\n$4,820.00\nBank feed ·\nACH-2291\nQuickBooks\n$4,820.00\nLedger ·\nJE-5523\nChase\n$11,375.50\nBank feed ·\nWIRE-0847\nQuickBooks\n$11,375.50\nLedger ·\nJE-5512\nChase\n$960.00\nBank feed ·\nACH-2304\nQuickBooks\n$1,045.00\nLedger ·\nJE-5529\nChase\n$2,150.00\nBank feed ·\nACH-2318\nQuickBooks\n$2,150.00\nLedger ·\nJE-5534\nOrder Management\n/ 0\n3\nOrders in, from any format\nEmail\norders@brightco.com\nPO attached — need by Friday\nSales order\nCreated\n$18,640.00\nPO-52114 · 3 SKUs\nPDF\nMeridian Supply\nPO-48192.pdf\nSales order\nCreated\n$7,210.00\nPO-48192 · 5 SKUs\nEDI\nNorthline Retail\n850 · 27 line items\nSales order\nCreated\n$112,480.00\nPO-52130 · 27 SKUs\nScan\nFax · Delta Mfg\nPO_scan_004.tif\nSales order\nHeld — price mismatch\n$3,150.00\nPO-52131 · 2 SKUs\nCash Application\n/ 0\n4\nCash applied the day it lands\nRemittance\n$47,900.00\nNorthbrook Foods\nINV-70214\n$22,400.00\nINV-70228\n$19,600.00\nINV-70233\n$6,200.00\n$300.00 short\n$22,400.00\n$19,600.00\n$5,900.00\nSupplier Onboarding\n/ 0\n5\n22,000+ suppliers onboarded, zero chase emails\nW-9\nEllement Foods · Tax ID\nVerified\nInsurance certificate\nExpires 04 Feb 2027\nVerified\nBank details\nAccount ****4471\nAccount doesn’t match the W-9\nBlocked\nAddress proof\nMatches company records\nVerified\nClaims Processing\n/ 0\n6\nMost claims never touch an adjuster\nCLM-88342\n$3,410.00\nPolicy HO-6621 · active\nWater damage · covered\nInvoice attached\nApproved · paid\nCLM-88347\n$920.00\nPolicy AU-2280 · active\nWindshield · covered\nInvoice attached\nApproved · paid\nCLM-88361\n$12,900.00\nPolicy HO-6640 · active\nStorm damage · covered\nInvoice missing\nTo adjuster\nAccounts Payable\n/ 0\n1\n6 seconds per invoice, not 6 minutes\nKit’s Catering\n$854\nJun 6\nStaples\n$70.00\nJun 9\nR. State\n$25,000\nJun 12\nSweetgreen\n$18.40\nJun 14\nSAP\n27\nGmail\n25\nNetsuite\n15\nQuickBooks\n32\nReconciliation\n/ 0\n2\nEvery line matched before you open the file\nChase\n$4,820.00\nBank feed ·\nACH-2291\nQuickBooks\n$4,820.00\nLedger ·\nJE-5523\nChase\n$11,375.50\nBank feed ·\nWIRE-0847\nQuickBooks\n$11,375.50\nLedger ·\nJE-5512\nChase\n$960.00\nBank feed ·\nACH-2304\nQuickBooks\n$1,045.00\nLedger ·\nJE-5529\nChase\n$2,150.00\nBank feed ·\nACH-2318\nQuickBooks\n$2,150.00\nLedger ·\nJE-5534\nOrder Management\n/ 0\n3\nOrders in, from any format\nEmail\norders@brightco.com\nPO attached — need by Friday\nSales order\nCreated\n$18,640.00\nPO-52114 · 3 SKUs\nPDF\nMeridian Supply\nPO-48192.pdf\nSales order\nCreated\n$7,210.00\nPO-48192 · 5 SKUs\nEDI\nNorthline Retail\n850 · 27 line items\nSales order\nCreated\n$112,480.00\nPO-52130 · 27 SKUs\nScan\nFax · Delta Mfg\nPO_scan_004.tif\nSales order\nHeld — price mismatch\n$3,150.00\nPO-52131 · 2 SKUs\nCash Application\n/ 0\n4\nCash applied the day it lands\nRemittance\n$47,900.00\nNorthbrook Foods\nINV-70214\n$22,400.00\nINV-70228\n$19,600.00\nINV-70233\n$6,200.00\n$300.00 short\n$22,400.00\n$19,600.00\n$5,900.00\nSupplier Onboarding\n/ 0\n5\n22,000+ suppliers onboarded, zero chase emails\nW-9\nEllement Foods · Tax ID\nVerified\nInsurance certificate\nExpires 04 Feb 2027\nVerified\nBank details\nAccount ****4471\nAccount doesn’t match the W-9\nBlocked\nAddress proof\nMatches company records\nVerified\nClaims Processing\n/ 0\n6\nMost claims never touch an adjuster\nCLM-88342\n$3,410.00\nPolicy HO-6621 · active\nWater damage · covered\nInvoice attached\nApproved · paid\nCLM-88347\n$920.00\nPolicy AU-2280 · active\nWindshield · covered\nInvoice attached\nApproved · paid\nCLM-88361\n$12,900.00\nPolicy HO-6640 · active\nStorm damage · covered\nInvoice missing\nTo adjuster\nAccounts Payable\n/ 0\n1\n6 seconds per invoice, not 6 minutes\nKit’s Catering\n$854\nJun 6\nStaples\n$70.00\nJun 9\nR. State\n$25,000\nJun 12\nSweetgreen\n$18.40\nJun 14\nSAP\n27\nGmail\n25\nNetsuite\n15\nQuickBooks\n32\nReconciliation\n/ 0\n2\nEvery line matched before you open the file\nChase\n$4,820.00\nBank feed ·\nACH-2291\nQuickBooks\n$4,820.00\nLedger ·\nJE-5523\nChase\n$11,375.50\nBank feed ·\nWIRE-0847\nQuickBooks\n$11,375.50\nLedger ·\nJE-5512\nChase\n$960.00\nBank feed ·\nACH-2304\nQuickBooks\n$1,045.00\nLedger ·\nJE-5529\nChase\n$2,150.00\nBank feed ·\nACH-2318\nQuickBooks\n$2,150.00\nLedger ·\nJE-5534\nOrder Management\n/ 0\n3\nOrders in, from any format\nEmail\norders@brightco.com\nPO attached — need by Friday\nSales order\nCreated\n$18,640.00\nPO-52114 · 3 SKUs\nPDF\nMeridian Supply\nPO-48192.pdf\nSales order\nCreated\n$7,210.00\nPO-48192 · 5 SKUs\nEDI\nNorthline Retail\n850 · 27 line items\nSales order\nCreated\n$112,480.00\nPO-52130 · 27 SKUs\nScan\nFax · Delta Mfg\nPO_scan_004.tif\nSales order\nHeld — price mismatch\n$3,150.00\nPO-52131 · 2 SKUs\nCash Application\n/ 0\n4\nCash applied the day it lands\nRemittance\n$47,900.00\nNorthbrook Foods\nINV-70214\n$22,400.00\nINV-70228\n$19,600.00\nINV-70233\n$6,200.00\n$300.00 short\n$22,400.00\n$19,600.00\n$5,900.00\nSupplier Onboarding\n/ 0\n5\n22,000+ suppliers onboarded, zero chase emails\nW-9\nEllement Foods · Tax ID\nVerified\nInsurance certificate\nExpires 04 Feb 2027\nVerified\nBank details\nAccount ****4471\nAccount doesn’t match the W-9\nBlocked\nAddress proof\nMatches company records\nVerified\nClaims Processing\n/ 0\n6\nMost claims never touch an adjuster\nCLM-88342\n$3,410.00\nPolicy HO-6621 · active\nWater damage · covered\nInvoice attached\nApproved · paid\nCLM-88347\n$920.00\nPolicy AU-2280 · active\nWindshield · covered\nInvoice attached\nApproved · paid\nCLM-88361\n$12,900.00\nPolicy HO-6640 · active\nStorm damage · covered\nInvoice missing\nTo adjuster\nMonth-End Close\nContract Review\nLegal Intake\nTrade Deductions\nProof of Delivery\nFreight Audit\nKYC Review\nData Extraction\nall other business processes\nand all your other business processes\nContext graph\nTrail\nHelp agents solve the most complex problems with\ncontext graphs.\nA customer send an email asking to\nreturn an order past the 30-day window\n, bought under\nan enterprise agreement\n, after\nthree prior returns this quarter\n, and\ntheir rep promised an exception on a call\n.\nDo we accept it?\nOne single email requires five different kinds of context, each owned by a different team. The returns policy doesn’t know the call, the ERP doesn’t know the agreement, and so on.\nOur context graph, Trail, holds every rule cited to the document it came from.\nHow Trail, our context graph, works →\nReturns policy\nPolicy context\n➔\nWhat is allowed?\n30 days, so exceptions need a manager.\nERP order record\nSystem-of-record context\n➔\nWhat did they buy?\nSO-4471 is the enterprise agreement, dated 62 days ago.\nReturn history\nComputed context\n➔\nHow often is this?\nThere were 3 returns this quarter, $84K in total.\nCall notes & email\nConversation context\n➔\nWhat was promised?\nRep agreed an exception on 4 Aug.\nException SOP\nSOP context\n➔\nWho approves, in what order?\nSupport lead → finance, logged on the order.\nMost teams have already automated 20-40%.\nNanonets takes you to 95%.\n40%\n95%\nTrail:\nContext Graphs\nTrail converts your enterprise policies, procedures, systems, and institutional knowledge into a governed graph for AI.\n01\nImport your documentation\nDrop in the SOP, policy docs, and other forms of documentation of your business processes. A PDF / DOCX upload or simply a set of instructions.\nclaims-adjudication-SOP.pdf\nClaims Adjudication — Auto & Property\nConfidential\nStandard Operating Procedure\nPurpose\nAdjudicate each first-notice-of-loss claim against the active policy. Return a decision, the payable amount, and a rationale.\n1. Coverage & eligibility\nThe deductible is applied before any payable amount is calculated.\n2. Documentation requirements\nWater damage — dated photos and a plumber's report.\nBodily injury — an itemized medical bill.\n3. Escalation matrix\nClaim value\nRoute to\nSign-off\nSLA\nUnder $2,500\nAuto-adjudicate\nNone\nInstant\n$2,500 – $10,000\nDesk adjuster\n1 reviewer\n24 h\n$10,000 – $50,000\nField adjuster\n1 reviewer\n72 h\nOver $50,000\nSenior adjuster\n2 reviewers\n5 days\n02\nParsed into a context graph\nNanonets extracts rules and parses them into a context graph. Every business rule is traceable to its source, giving AI agents a consistent, auditable source of truth across teams, systems, geographies.\nSOP · page 15\n“…the deductible is applied before any payable amount is calculated…”\nExtracted rule\nApply the\ndeductible first\n, then compute the payout.\nApprove\nEdit\nReject\nSlack · #claims-desk\n“hurricane-season FL claims — skip the inspection if photos are timestamped within 48h”\nExtracted rule\nSkip inspection when photos are\nwithin 48 h\nof the event.\nApprove\nEdit\nReject\nEmail · claims lead\n“nothing over $50k should ever go out without two sign-offs”\nExtracted rule\nRoute claims over $50,000 to\ntwo reviewers\n.\nApprove\nEdit\nReject\n03\nReview, approve, run\nNanonets outlines the agent's role and tools, and then auto-builds it. Agents run in the context graph and take decisions strictly based on the encoded rules.\nClaims processing agent\n01\nImport your documentation\nDrop in the SOP, policy docs, and other forms of documentation of your business processes. A PDF / DOCX upload or simply a set of instructions.\n02\nParsed into a context graph\nNanonets extracts rules and parses them into a context graph. Every business rule is traceable to its source, giving AI agents a consistent, auditable source of truth across teams, systems, geographies.\n03\nReview, approve, run\nNanonets outlines the agent's role and tools, and then auto-builds it. Agents run in the context graph and take decisions strictly based on the encoded rules.\nclaims-adjudication-SOP.pdf\nClaims Adjudication — Auto & Property\nConfidential\nStandard Operating Procedure\nPurpose\nAdjudicate each first-notice-of-loss claim against the active policy. Return a decision, the payable amount, and a rationale.\n1. Coverage & eligibility\nThe deductible is applied before any payable amount is calculated.\n2. Documentation requirements\nWater damage — dated photos and a plumber's report.\nBodily injury — an itemized medical bill.\n3. Escalation matrix\nClaim value\nRoute to\nSign-off\nSLA\nUnder $2,500\nAuto-adjudicate\nNone\nInstant\n$2,500 – $10,000\nDesk adjuster\n1 reviewer\n24 h\n$10,000 – $50,000\nField adjuster\n1 reviewer\n72 h\nOver $50,000\nSenior adjuster\n2 reviewers\n5 days\nSOP · page 15\n“…the deductible is applied before any payable amount is calculated…”\nExtracted rule\nApply the\ndeductible first\n, then compute the payout.\nApprove\nEdit\nReject\nSlack · #claims-desk\n“hurricane-season FL claims — skip the inspection if photos are timestamped within 48h”\nExtracted rule\nSkip inspection when photos are\nwithin 48 h\nof the event.\nApprove\nEdit\nReject\nEmail · claims lead\n“nothing over $50k should ever go out without two sign-offs”\nExtracted rule\nRoute claims over $50,000 to\ntwo reviewers\n.\nApprove\nEdit\nReject\nClaims processing agent",
+  "links": [
+    {
+      "href": "/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/nanonets.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/schneider.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/volkswagen.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/mondelez.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/pg.webp?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/ryanair.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/novo-nordisk.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/roche.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/bayer.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/unipro.webp?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/0tf~fce4sf~08.css?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0u-gt7kmbag7d.css?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0t1et0tty8o9s.js?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&f[]=erode@400,500,600&display=swap",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.calendly.com/assets/external/widget.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/mondelez.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/schneider.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/roche.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/asian-paints.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/unipro.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/jti.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/schaeffler.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/publicis.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/elli.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/pmi-crest.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/dr-reddys.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/cke.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/topgolf.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/te-connectivity.png?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/customers/juniper.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/slack.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/teams.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/gmail.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/claude.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/chatgpt.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/aws.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/google-cloud.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/sap.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/salesforce.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/brand/logos/langchain.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.fontshare.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.fontshare.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://nanonets.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "/icon.png?icon.0nqxf4k4e__mk.png?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.svg?icon.08zai12kz8owj.svg?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?apple-icon.01j-4josku-y7.png?dpl=dpl_EqUUaEQQH9qxjRNb1FeXGwcHnXjB",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&f[]=erode@400,500,600&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://assets.calendly.com/assets/external/widget.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#products",
+      "rel": null
+    },
+    {
+      "href": "/#use-cases",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://accounts.nanonets.com/signup",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://accounts.nanonets.com/signup",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/schneider-electric",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/schneider-electric",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/mondelez",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/mondelez",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/roche",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/roche",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/unipro",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/customers/unipro",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://trailhq.com",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.4337
+}

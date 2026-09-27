@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-64b95443903509549a13",
+      "source_url": "https://reclaim.ai/",
+      "final_url": "https://reclaim.ai/",
+      "publisher": "reclaim.ai",
+      "retrieved_at": "2026-09-20T21:00:55.763595+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Reclaim – AI Calendar for Work & Life"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Reclaim is an AI-powered app that creates 40% more time for teams — auto-schedule tasks, habits, meeting & breaks – free on Google Calendar & Outlook Calendar."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Reclaim – AI Calendar for Work & Life"
+        },
+        {
+          "locator": "text characters 0:252",
+          "excerpt": "Reclaim – AI Calendar for Work & Life\nSave 30% today-only\non Starter & Business plans (special new user offer) →\nProduct\nSolutions\nTeams\nResources\nEnterprise\nPricing\nLog In\nBook a Demo\nBook a Demo\nGet Started\nGet started\nProduct\nHabits\nTasks\nSmart Meet"
+        },
+        {
+          "locator": "text characters 475:787",
+          "excerpt": "s\nLog In\nGet Started\nPrivacy Policy\nTerms & Conditions\n© 2025 Reclaim.ai\n20% off with code\nMEETINGS\nProduct\nGet the free Google Calendar add-on\n→\nAI Focus Time\nSet a Focus Time goal, and let AI defend time to get stuff done.\nAI Scheduling Links\nShare your availability using smart meeting controls.\nAI Buffer Tim"
+        },
+        {
+          "locator": "text characters 551:863",
+          "excerpt": " off with code\nMEETINGS\nProduct\nGet the free Google Calendar add-on\n→\nAI Focus Time\nSet a Focus Time goal, and let AI defend time to get stuff done.\nAI Scheduling Links\nShare your availability using smart meeting controls.\nAI Buffer Time\nAuto-schedule breaks & travel across your meetings & work sessions.\nAI Hab"
+        },
+        {
+          "locator": "text characters 596:908",
+          "excerpt": "Google Calendar add-on\n→\nAI Focus Time\nSet a Focus Time goal, and let AI defend time to get stuff done.\nAI Scheduling Links\nShare your availability using smart meeting controls.\nAI Buffer Time\nAuto-schedule breaks & travel across your meetings & work sessions.\nAI Habits\nFind the best times for your recurring ro"
+        },
+        {
+          "locator": "text characters 630:942",
+          "excerpt": "Time\nSet a Focus Time goal, and let AI defend time to get stuff done.\nAI Scheduling Links\nShare your availability using smart meeting controls.\nAI Buffer Time\nAuto-schedule breaks & travel across your meetings & work sessions.\nAI Habits\nFind the best times for your recurring routines.\nAI Smart Meetings\nFind the"
+        },
+        {
+          "locator": "text characters 704:1016",
+          "excerpt": "cheduling Links\nShare your availability using smart meeting controls.\nAI Buffer Time\nAuto-schedule breaks & travel across your meetings & work sessions.\nAI Habits\nFind the best times for your recurring routines.\nAI Smart Meetings\nFind the best time to meet across all attendees' schedules.\nAI Time Tracking\nAnaly"
+        },
+        {
+          "locator": "text characters 5413:5677",
+          "excerpt": "r friends also sign up, even if they’re on free Lite plan.\nTrusted by +600,000 users across 70,000 companies\nWhat if AI could optimize your time?\n7.6h\nmore focus time/week\n2.3\nfewer meetings/week\n49%\nless time waste\n7.6h\nmore focus time/week\n2.3\nfewer meetings/wee"
+        }
+      ],
+      "capture_path": "discovery/captures/64b95443903509549a13.html",
+      "capture_sha256": "5207bccb1c57e1b4c9e6429b205856d82627c3aefe46bec68c5c7b6b5e56c943",
+      "record_path": "discovery/records/64b95443903509549a13.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r033-891a63a2a99254d77f87",
+      "source_url": "https://reclaim.ai/pricing",
+      "publisher": "reclaim.ai",
+      "retrieved_at": "2026-09-20T21:35:38.142368+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://reclaim.ai/pricing",
+      "capture_path": "cases/033/research/captures/891a63a2a99254d77f87.html",
+      "capture_sha256": "1e0bd5ab04a11540275e2f0063a7f603a14e9927f6fb597bdeef207d8119d1f9",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/033/research/records/891a63a2a99254d77f87.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing - Pick the right plan for you"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Get started with Reclaim for free (no credit card required), and learn more about our Starter and Business plans to make your calendar smarter."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Reclaim Pricing | Free forever, Starter, and Business plans"
+        },
+        {
+          "locator": "text characters 6434:8918",
+          "excerpt": "in Starter: $8/month\n•\nAdditional 6 AUs in Starter: $16/month\n•\nAdditional 9 AUs in Starter: $24/month\n•\nAdditional 12 AUs in Starter: $32/month\nEach additional 3-pack of AUs you purchase includes a free Starter seat you can assign to a member of your team.\n‍\nStarter\nFor small teams.\n$10\nper seat/month\nGet Started\nStarter features\n10 AI Agents/seat\ni\nCreate specialized agents to continuously optimize your schedule across Focus Time, Habits, Buffer Time, Smart Meeting, and Meeting Quality agents.\nFocus Time\ni\nSet a weekly Focus Time goal, and automatically defend time to get stuff done around your existing calendar events.\nHabits\ni\nAI-powered recurring events that automatically find the best time within your smart schedule windows.\nBuffer Time\ni\nDefend breaks automatically after video call events so you have time to reset & prepare for your next meeting.\nSmart Meetings\ni\nConvert your recurring meetings to Smart Meetings in one click to automatically monitor, prioritize, and resolve scheduling conflicts across your meetings.\nMeeting Quality\ni\nFlag invites that still need your response and nudge you to accept, decline, or propose a new time—so organizers can plan and your calendar stays accurate.\nPlus:\nUp to 10 seats\ni\nThe max number of users you can have in your Reclaim team.\n8 week scheduling range (exc. Scheduling Links)\ni\nFuture time range for automated scheduling optimizations.\n3 Calendar Syncs\ni\nSync & copy events between calendars to defend your availability across multiple schedules.\n3 Scheduling Links\ni\nShare your availability for meetings with Scheduling Links that offer smart priority settings to book the right meetings sooner.\nUnlimited integrations\ni\nGet Google Tasks, Slack, Zoom, and Google Meet support in the free Lite plan, and unlimited support for these plus Todoist, Asana, ClickUp, Jira, and Linear in all paid plans.\nTask recommendations\ni\nAutomatically generate recommended tasks through action items from your meetings so you don't fall behind on deliverables and opportunities between meetings.\nLAUNCH PROMO: Attendee Users (AUs) are 100% free through July 31st.\n‍\nAUs are attendees without a paid Reclaim seat for Smart Meetings with 3+ people (2-person meetings do not require AUs), and are cumulative for a team account.\n•\nAdditional 6 AUs in Business: $12/month\n•\nAdditional 12 AUs in Business: $24/month\n•\nAdditional 18 AUs in Business: $36/month\n•\nAdditional 24 AUs in Business: $48/month\nEach additional 6-pack of AUs you purc"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r033-f814834bc129086cb2d0",
+      "source_url": "https://reclaim.ai/features/tasks",
+      "publisher": "reclaim.ai",
+      "retrieved_at": "2026-09-20T21:35:38.146641+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://reclaim.ai/features/tasks",
+      "capture_path": "cases/033/research/captures/f814834bc129086cb2d0.html",
+      "capture_sha256": "2fdf73f426fb51923be3e60fc8ff99fd069c262fb4e159ead8cbfff30a99f268",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/033/research/records/f814834bc129086cb2d0.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Task Manager App – Free | Reclaim.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "AI scheduling for Tasks – defend time to get stuff done. Integrate your project management app. Get started, free on Google Calendar & Outlook Calendar."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Task Manager App – Free | Reclaim.ai"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-a13599ea9645427dd308",
+      "source_url": "https://www.trevorai.com/",
+      "final_url": "https://www.trevorai.com/",
+      "publisher": "www.trevorai.com",
+      "retrieved_at": "2026-09-20T21:00:55.895709+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Trevor AI: Start Your Day with a Plan"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Trevor AI is the one AI Planner for your tasks and calendars. Trusted by thousands of ambitious humans to schedule their daily tasks with Trevor's AI time blocking technology. Regain control, clarity and focus throughout your day, by signing up, today!"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Trevor AI: Start Your Day with a Plan"
+        },
+        {
+          "locator": "text characters 0:249",
+          "excerpt": "Trevor AI: Start Your Day with a Plan\nHome\nIntegrations\nTodoist\nGoogle Calendar\nOutlook & Microsoft 365 Calendars\nGoogle Tasks\nMicrosoft To Do\nUse Cases\nAcademics\nC-Level Executives\nCreative Pros\nEntrepreneurs\nFreelancers\nProject Managers\nRemote Wor"
+        },
+        {
+          "locator": "text characters 335:647",
+          "excerpt": "rt Your Day with a Plan\nRegain control, clarity and focus with Trevor AI - the one AI planner for all your tasks and calendars.\nMEET TREVOR AI\nAvailable on Web for mobile and desktop.\n\"Really loving Trevor. It's a daily habit for me now and my mind clutter had reduced significantly.\"\n— Denis Cutura, Managing Di"
+        },
+        {
+          "locator": "text characters 348:660",
+          "excerpt": "ith a Plan\nRegain control, clarity and focus with Trevor AI - the one AI planner for all your tasks and calendars.\nMEET TREVOR AI\nAvailable on Web for mobile and desktop.\n\"Really loving Trevor. It's a daily habit for me now and my mind clutter had reduced significantly.\"\n— Denis Cutura, Managing Director at Dec"
+        },
+        {
+          "locator": "text characters 405:717",
+          "excerpt": "AI - the one AI planner for all your tasks and calendars.\nMEET TREVOR AI\nAvailable on Web for mobile and desktop.\n\"Really loving Trevor. It's a daily habit for me now and my mind clutter had reduced significantly.\"\n— Denis Cutura, Managing Director at Decocorp\n\"I wanted to reach out and just comment on how much"
+        },
+        {
+          "locator": "text characters 1210:1522",
+          "excerpt": "edule tasks with real-time sync\nPlan with intuitive \"drag & drop\" and AI\n“In a world of complexity and overload, the path to peace of mind is through simplification and integration.”\nNo more hunting for scattered to-dos or forgotten appointments. Trevor brings all your tasks and calendars together—so you can fi"
+        },
+        {
+          "locator": "text characters 1873:2185",
+          "excerpt": "possible, but if you schedule it, it's real.” – Tony Robbins\nTrevor’s AI does what traditional to-do lists can’t: it estimates how long tasks will take, suggests when to do them, and time-blocks everything right into your calendar. While old-school lists add more work and only get 40% completion rates, Trevor’s"
+        }
+      ],
+      "capture_path": "discovery/captures/a13599ea9645427dd308.html",
+      "capture_sha256": "e8d0f852f958e0c12780a07a43a029c192684772f8cd3ff85391f2a0ff557ce8",
+      "record_path": "discovery/records/a13599ea9645427dd308.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "evidence_id": "web-8b4e62a584db49bf22df",
+  "source_url": "https://www.humata.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.913620+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.humata.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/8b4e62a584db49bf22df.html",
+  "capture_sha256": "702ca08a46afe6d4a0261f10ed4ab0257d77408ff9a8e52aa40eebba15f1b8f7",
+  "bytes_saved": 262144,
+  "title": "Humata: AI meets your knowledge base",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Humata is an AI agent that turns your documents into a fast, intelligent knowledge base for instant analysis, insights, and answers."
+    },
+    {
+      "key": "og:title",
+      "value": "Humata: AI meets your knowledge base"
+    },
+    {
+      "key": "og:description",
+      "value": "Humata is an AI agent that turns your documents into a fast, intelligent knowledge base for instant analysis, insights, and answers."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Humata"
+    }
+  ],
+  "text": "Humata: AI meets your knowledge base\nPricing\nCompany\nSecurity\nResources\nAPI\nLog in\nSign up\nYour browser does not support the video tag.\nHumata\nAI meets your knowledge base\nAsk me\nAsk me\nAI meets your knowledge base\nLog in\nSign up\nHumata\nHumata AI Secures $3.5M led by Google's Gradient Ventures\nAsk questions across all of your files\nGet answers you can trust. Command our AI to do your work.\nTry for free\nTrusted by top investors\nFeatures\nYour team can't read it all. But Humata can.\nSkip through long technical papers with ease. Tell our PDF AI to summarize findings, compare documents, and search for answers so you don't have to.\nUnlimited files\nUpload as many documents as you want. Our PDF AI answers questions faster than you read this sentence.\nHighlights citations\nBuild trust with cited links into your source files. Our document AI answers come with citation so you can trace where your insight came from.\nUnlimited questions\nNeed a shorter summary? Just ask for it. You can order the PDF AI to rewrite your summary until you're satisfied. Humata is like ChatGPT for PDFs. Ask again and again until you're happy.\nEmbeds in any webpage\nInclude our PDF AI in your webpage with a single click. Connect your customers with answers locked away in your docs.\nJoin millions of experts already going faster with Humata.\nView pricing\nGet started\nSecurity\nEverything for teams. Safe and sound.\nOur enterprise-grade data rooms keep your files open to your team. And no one else.\nSecured private cloud\nShared team files keep everyone on the same page. Control user access so only your trusted contacts can ask questions on your documents.\nEncrypted at rest\nWe use enterprise-grade 256 bit SHA encryption to lock your files as soon as you add them to Humata.\nRole-based security\nLimit access to your files per role on your team. Set up roles with limited privileges to see or change docs.\nSingle sign-on\nKeep your passwords safe in your team's identity provider. Humata SSO functionality with Okta, Google, or SAML is coming soon.\nPricing\nFree to start. Cheap to scale.\nSimple pricing that grows with you. Start for free and upgrade as needed.\nLearn more\nFree\n$\n0\nAccess to basic features\nUp to 60 pages\nUp to 10 answers\nGet started\nMost popular plan\nExpert\n$\n9.99\nper month\nAccess to basic features\nUp to 500 free pages\n$0.02 per additional page\n3 users included\nPremium chat support\nGet started\nTeam\n$\n49\nper user per month\nAccess to basic features\nUp to 5,000 free pages\n$0.01 per additional page\n10 users included\nPremium chat support\nDepartment & folder level permissions\nOCR images & scanned text\nResponse personalization\nGet started\nLooking to scale past 10 users? Ask our Sales team about Enterprise pricing.\nChat with Sales\nFrequently asked questions\nEasy answers to the product questions we get most often.\nWhat are the benefits of using Humata over ChatGPT?\nUnlike ChatGPT, Humata is built to work with files. Humata will read every file you upload and will generate answers based on the content of your documents. Each answer Humata generates will cite relevant sections from your uploaded documents.\nDoes Humata Offer A Free Trial?\nAbsolutely! Humata is pleased to offer a complimentary version of our platform, allowing you to explore the range of functionalities we provide. For a detailed breakdown of what's included in the free version, visit our pricing page:\nhttps://www.humata.ai/pricing\nCan I Modify My Humata Subscription After I've Started Using It?\nCertainly! Flexibility is one of our key strengths. You can effortlessly adjust your subscription plan to better align with your needs, whether that means upgrading to accommodate a growing team or downgrading as circumstances change. Feel free to switch plans at your convenience.\nWhat Is Humata's Cancellation Policy?\nWe believe in a hassle-free experience for our users. You have the freedom to cancel your subscription at any time, no strings attached. Your satisfaction is our priority, and we're here to make your journey as smooth as possible.\nCan Additional Information Be Included In Humata's Invoice?\nOf course! We partner with Stripe to ensure that invoicing is as straightforward as possible. Should you require any extra details in your invoice, we're more than happy to accommodate your specific needs.\nHow Does Billing Work For Humata?\nBilling with Humata operates on a straightforward monthly subscription model. We offer a range of plans including Free, Student, Expert, and Team options—all designed to be self-serve. Some plans also include pay-as-you-go features, which are based on your usage, such as the number of pages accessed and questions asked per month. For a full understanding of our billing procedures, please check out our detailed pricing guide here:\nhttps://www.humata.ai/pricing\nStill have questions?\nCan't find the answer you're looking for? Just chat with our friendly team.\nGet in touch\nHumata has helped transform our research business model. We love the simplicity of Humata and the major efficiency boost it provides. We can't imagine working without it.\nPhil Fersht\nCEO and Chief Analyst, HFS Research\nHumata is set to revolutionize how we teach students. With Humata in the classroom, students are realizing they can build and train their own AI tools to advance projects...in virtually all domains.\nIan Straughn\nAssociate Professor, Department of Anthropology, UC Irvine\nIts user-friendly interface ensures accessibility for everyone, making critical information available when every second counts.\nTom Jackson\nInnovation Project Manager, SGN\nHumata AI makes reading papers easier and faster.\nMushtaq Bilal, PhD\nPostdoctoral Researcher\nGet started for free\nNo credit card required. Try our PDF AI by chatting for free.\nView pricing\nGet started\nCompany\nPricing\nTerms\nPrivacy\n©\n2026\nTilda Technologies Inc. All rights reserved.",
+  "links": [
+    {
+      "href": "/_next/static/media/1e33ceb572a03151.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/355f2437475169c2.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/38ef713c675cc668.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/3d53fd4b28d9fc73.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/3f4fe154df39bdb8.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/60d81b5d113356ec.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/9bbcd47157844b04.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/ad11ba524db5f08c.p.otf",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/af7dbb0532597745.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/8890152a1c5ec749.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/6045657482c6f26f.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/9f3535856306a849.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/aa56075737c602e7.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/567ed90c070892f1.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-d4756ec227c147ef.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtag/js?id=G-98M4H1DSL3",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.humata.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/company",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.humata.ai/guides/humata-api",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signin",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signin",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/blog/humata-secures-35m-in-funding",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "https://calendly.com/cyruskhaj/enterprise-call-with-humata",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@humata.ai",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.humata.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/company",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.humata.ai/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "https://www.humata.ai/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/HumataAI",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/humata",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@HumataAI",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.727
+}

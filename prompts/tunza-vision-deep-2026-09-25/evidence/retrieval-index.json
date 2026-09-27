@@ -1,0 +1,258 @@
+{
+  "generated_utc": "2026-09-25T03:03:30.512656+00:00",
+  "sources": [
+    {
+      "id": "cht-sitemap",
+      "manifest": "cht-sitemap.json",
+      "url": "https://docs.communityhealthtoolkit.org/sitemap.xml",
+      "final_url": "https://docs.communityhealthtoolkit.org/sitemap.xml",
+      "accessed_utc": "2026-09-25T02:53:48.543633+00:00",
+      "status": 200,
+      "file": "cht-sitemap.html",
+      "sha256": "71471a76e4db658b9b579ef232f4cf40530b56bde27eefb66bab45c35303971a",
+      "error": null
+    },
+    {
+      "id": "community-health",
+      "manifest": "community-health.json",
+      "url": "https://www.health.go.ke/node/2374",
+      "final_url": "https://www.health.go.ke/node/2374",
+      "accessed_utc": "2026-09-25T02:53:00.176913+00:00",
+      "status": 200,
+      "file": "community-health.html",
+      "sha256": "de0914be7b87bbfc391f1d04612470c88207454a21886832246ef417dd522a7c",
+      "error": null
+    },
+    {
+      "id": "constitution",
+      "manifest": "constitution.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03",
+      "accessed_utc": "2026-09-25T02:51:54.055928+00:00",
+      "status": 200,
+      "file": "constitution.html",
+      "sha256": "103c5fa2e713556fabf8d421e8560df6e84bd9c7213d4c57495765ce82274923",
+      "error": null
+    },
+    {
+      "id": "data-protection-act",
+      "manifest": "data-protection-act.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng@2022-12-31",
+      "accessed_utc": "2026-09-25T02:52:36.062470+00:00",
+      "status": 200,
+      "file": "data-protection-act.html",
+      "sha256": "20734d5a55b7603aeb4af8e8b6ce74f193223d02e65127d8f891df228527cf9d",
+      "error": null
+    },
+    {
+      "id": "dha-certification",
+      "manifest": "dha-certification.json",
+      "url": "https://certification.dha.go.ke/",
+      "final_url": "https://certification.dha.go.ke/",
+      "accessed_utc": "2026-09-25T02:52:38.252284+00:00",
+      "status": 200,
+      "file": "dha-certification.html",
+      "sha256": "cadf3b556d70afeba5fc5fe99bb0dbbf72db9815ff044a9f811bbdd0e43df556",
+      "error": null
+    },
+    {
+      "id": "digital-health-act-current",
+      "manifest": "digital-health-act-current.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/15/eng",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/15/eng@2023-11-24",
+      "accessed_utc": "2026-09-25T02:52:11.991307+00:00",
+      "status": 200,
+      "file": "digital-health-act-current.html",
+      "sha256": "130a16aba177ad03f04b77197a41886c12990f361f9fdc38191db589ff15bc70",
+      "error": null
+    },
+    {
+      "id": "echis-implementation",
+      "manifest": "echis-implementation.json",
+      "url": "https://docs.communityhealthtoolkit.org/apps/examples/echis-kenya/",
+      "final_url": null,
+      "accessed_utc": "2026-09-25T02:53:18.794234+00:00",
+      "status": null,
+      "file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "echis-moh-implementation",
+      "manifest": "echis-moh-implementation.json",
+      "url": "https://www.health.go.ke/advancing-implementation-electronic-community-health-information-system-e-chis",
+      "final_url": "https://www.health.go.ke/advancing-implementation-electronic-community-health-information-system-e-chis",
+      "accessed_utc": "2026-09-25T02:54:56.230034+00:00",
+      "status": 200,
+      "file": "echis-moh-implementation.html",
+      "sha256": "674438e5aa6dcc1e1596c87d0ddf4b9ab4208f0fe1021b1737b27decb29086c8",
+      "error": null
+    },
+    {
+      "id": "echis-privacy",
+      "manifest": "echis-privacy.json",
+      "url": "https://www.health.go.ke/privacy-policy-electronic-community-health-information-system-echis",
+      "final_url": "https://www.health.go.ke/privacy-policy-electronic-community-health-information-system-echis",
+      "accessed_utc": "2026-09-25T02:54:51.165585+00:00",
+      "status": 200,
+      "file": "echis-privacy.html",
+      "sha256": "213ea9f5bd97c2a8cf5273204ee64b9b147711f666409e7dcc7fd04712698c4c",
+      "error": null
+    },
+    {
+      "id": "health-act",
+      "manifest": "health-act.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2017/21/eng",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2017/21/eng@2026-07-10",
+      "accessed_utc": "2026-09-25T02:53:55.520679+00:00",
+      "status": 200,
+      "file": "health-act.html",
+      "sha256": "033617e6ccb9f48152992803cafb9f32419d7eb450ce05b6cf5481d12b70be07",
+      "error": null
+    },
+    {
+      "id": "medic-echis-search",
+      "manifest": "medic-echis-search.json",
+      "url": "https://medic.org/wp-json/wp/v2/search?search=echis&per_page=8",
+      "final_url": "https://medic.org/wp-json/wp/v2/search?search=echis&per_page=8",
+      "accessed_utc": "2026-09-25T02:54:21.491872+00:00",
+      "status": 200,
+      "file": "medic-echis-search.html",
+      "sha256": "3cbf63d728b22e157b9e7988456d6fd940ca21b0171f305dd30fd260c503ad65",
+      "error": null
+    },
+    {
+      "id": "moh-echis-search",
+      "manifest": "moh-echis-search.json",
+      "url": "https://www.health.go.ke/search/node?keys=eCHIS",
+      "final_url": "https://www.health.go.ke/search/node?keys=eCHIS",
+      "accessed_utc": "2026-09-25T02:54:26.691113+00:00",
+      "status": 200,
+      "file": "moh-echis-search.html",
+      "sha256": "e158d0f63e9d5b0a5cfad3330629e2b16a89954729975651fc30902021225996",
+      "error": null
+    },
+    {
+      "id": "moh-newsletter-2026-05-28",
+      "manifest": "moh-newsletter-2026-05-28.json",
+      "url": "https://health.go.ke/sites/default/files/2026-05/MoH%20Daily%20Newsletter_28th%20May%202026.pdf",
+      "final_url": "https://health.go.ke/sites/default/files/2026-05/MoH%20Daily%20Newsletter_28th%20May%202026.pdf",
+      "accessed_utc": "2026-09-25T02:56:03.296053+00:00",
+      "status": 200,
+      "file": null,
+      "sha256": null,
+      "error": "8 MiB source limit exceeded; not saved"
+    },
+    {
+      "id": "primary-care-act-current",
+      "manifest": "primary-care-act-current.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24",
+      "accessed_utc": "2026-09-25T02:52:08.467854+00:00",
+      "status": 200,
+      "file": "primary-care-act-current.html",
+      "sha256": "c9fa8386d1e6aacc4bbd40f7c1d3530fad9862e15d989b8208db6e11004d13d1",
+      "error": null
+    },
+    {
+      "id": "primary-care-act-source",
+      "manifest": "primary-care-act-source.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24/source.pdf",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24/source.pdf",
+      "accessed_utc": "2026-09-25T02:52:49.202965+00:00",
+      "status": 200,
+      "file": "primary-care-act-source.pdf",
+      "sha256": "0d602bc6dfeccad023de07021b9cf91976c218f95fdb6dea3842da623a0434ef",
+      "error": null
+    },
+    {
+      "id": "primary-care-act",
+      "manifest": "primary-care-act.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-02",
+      "final_url": null,
+      "accessed_utc": "2026-09-25T02:51:59.894571+00:00",
+      "status": null,
+      "file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "referral-policy",
+      "manifest": "referral-policy.json",
+      "url": "https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy",
+      "final_url": "https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy",
+      "accessed_utc": "2026-09-25T02:52:58.203759+00:00",
+      "status": 200,
+      "file": "referral-policy.html",
+      "sha256": "f595b5e432c9e342aa70792c86f03664e66535ea4917567aca8a8f2c1f8ffdfa",
+      "error": null
+    },
+    {
+      "id": "sha-benefit-tariffs",
+      "manifest": "sha-benefit-tariffs.json",
+      "url": "https://www.sha.go.ke/benefit-tariffs/",
+      "final_url": "https://www.sha.go.ke/benefit-tariffs/",
+      "accessed_utc": "2026-09-25T02:55:00.916764+00:00",
+      "status": 200,
+      "file": "sha-benefit-tariffs.html",
+      "sha256": "06f171d15fdff4f8598d34dc93381b233fa607cd9c05a65a4ea871dd9c299024",
+      "error": null
+    },
+    {
+      "id": "sha-home",
+      "manifest": "sha-home.json",
+      "url": "https://sha.go.ke/",
+      "final_url": "https://www.sha.go.ke/",
+      "accessed_utc": "2026-09-25T02:54:23.274715+00:00",
+      "status": 200,
+      "file": "sha-home.html",
+      "sha256": "8ba9b7b8683aefb0b310e605e6cbb7597b1de116d6996d953e54c2d8159341b3",
+      "error": null
+    },
+    {
+      "id": "sha-resources",
+      "manifest": "sha-resources.json",
+      "url": "https://sha.go.ke/resources",
+      "final_url": null,
+      "accessed_utc": "2026-09-25T02:53:49.343211+00:00",
+      "status": null,
+      "file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "social-health-act-current",
+      "manifest": "social-health-act-current.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/16/eng",
+      "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/16/eng@2023-11-24",
+      "accessed_utc": "2026-09-25T02:52:09.954530+00:00",
+      "status": 200,
+      "file": "social-health-act-current.html",
+      "sha256": "f9ee409213f0f5d1a1e4f7823dcb3e9fe13472573501209924a2fb677556d0af",
+      "error": null
+    },
+    {
+      "id": "social-health-act",
+      "manifest": "social-health-act.json",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2023/16/eng@2023-11-22",
+      "final_url": null,
+      "accessed_utc": "2026-09-25T02:52:00.577984+00:00",
+      "status": null,
+      "file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "uhc-reforms",
+      "manifest": "uhc-reforms.json",
+      "url": "https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat",
+      "final_url": "https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat",
+      "accessed_utc": "2026-09-25T02:53:13.991599+00:00",
+      "status": 200,
+      "file": "uhc-reforms.html",
+      "sha256": "a46ccfbe07cd0d20b8ebe290c5eb86aa2a48388fb58a3be9ea50abbc92e95181",
+      "error": null
+    }
+  ]
+}

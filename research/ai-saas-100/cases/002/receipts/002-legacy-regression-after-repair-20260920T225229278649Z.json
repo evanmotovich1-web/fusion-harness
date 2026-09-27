@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "run_id": "002-legacy-regression-after-repair-20260920T225229278649Z",
+  "system": "B2",
+  "status": "completed",
+  "started_at": "2026-09-20T22:52:29.278673+00:00",
+  "ended_at": "2026-09-20T22:52:29.317329+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/002/tests/run.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/002/source-history/repair-v2-60955b5d289a/implementation/workflow.py",
+    "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+  },
+  "fixtures": {
+    "path": "cases/002/tests/fixtures.json",
+    "sha256": "2919e717d7ba065a2330639b9fa88b031d62e7a183fccd218a85afb0a27c16ad"
+  },
+  "input_bundle": {
+    "path": "cases/002/tests/fixtures.json",
+    "sha256": "2919e717d7ba065a2330639b9fa88b031d62e7a183fccd218a85afb0a27c16ad"
+  },
+  "outputs": [
+    {
+      "path": "cases/002/receipts/002-legacy-regression-after-repair-20260920T225229278649Z.stdout.json",
+      "sha256": "e6f0ee13a2702c6bbbe8c1f17303252be3c69c63b63bd1d56550fefaed1c0ae3"
+    },
+    {
+      "path": "cases/002/receipts/002-legacy-regression-after-repair-20260920T225229278649Z.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "network": false,
+    "mode": "legacy-regression-after-repair",
+    "concurrency": 1,
+    "model_calls": 0,
+    "timeout_seconds": 15,
+    "runner": {
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/run.py",
+      "sha256": "12afaa11048879f3b92e439e9451b7c72cd77df5f644a9520fab75cccb3280b9"
+    },
+    "source_bundle": {
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/source-bundle.json",
+      "sha256": "dfa232e163a7ddf3c3c1d21ea3ce6d333075436dd2d36e33ad9683fc56d3b3e4"
+    },
+    "interface_transformation": null,
+    "comparison_inputs_self_contained": false,
+    "legacy_inputs_not_for_model_comparison": true,
+    "oracle_separate_from_input": false
+  },
+  "baseline_id": null,
+  "exit_status": 0,
+  "test_results": [
+    {
+      "test_id": "L01",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L02",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L03",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L04",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L05",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L06",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L07",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L08",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L09",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L10",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L11",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L12",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L13",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L14",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L15",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L16",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L17",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L18",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L19",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "L20",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [
+    {
+      "value": null,
+      "unit": "points",
+      "classification": "unknown",
+      "category": "semantic_quality",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "latency": {
+    "value": 0.03863750000000002,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "latency",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "Generic-model baseline unavailable",
+    "Independent hidden evaluation unavailable"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible fixed regression; no hidden evaluation or baseline."
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "product_acceptance": false,
+  "original_product_status": "not_observed"
+}

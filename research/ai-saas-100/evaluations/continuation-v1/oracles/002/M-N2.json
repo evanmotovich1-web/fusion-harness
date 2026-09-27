@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "test_id": "M-N2",
+  "requires_inference": false,
+  "kind": "market",
+  "scenario": 2
+}

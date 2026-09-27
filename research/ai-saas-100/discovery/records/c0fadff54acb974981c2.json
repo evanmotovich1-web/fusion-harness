@@ -1,0 +1,661 @@
+{
+  "evidence_id": "web-c0fadff54acb974981c2",
+  "source_url": "https://www.heygen.com/",
+  "retrieved_at": "2026-09-20T21:00:45.946958+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.heygen.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/c0fadff54acb974981c2.html",
+  "capture_sha256": "295d67cb4fe24e5d0aa8962b105d5122282305cd00f9e0c76da65ec2962c5649",
+  "bytes_saved": 262144,
+  "title": "HeyGen: Create Realistic AI Videos of Yourself in Minutes",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+    },
+    {
+      "key": "og:title",
+      "value": "Free AI Video Generator: Create Stunning Videos with AI"
+    },
+    {
+      "key": "og:description",
+      "value": "Generate AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+    },
+    {
+      "key": "og:site_name",
+      "value": "HeyGen"
+    }
+  ],
+  "text": "HeyGen: Create Realistic AI Videos of Yourself in Minutes\n|\nPlatform\nUse cases\nDevelopers\nResources\nEnterprise\nResearch\nPricing\nEN\nSign in\nWe just launched HeyGen for Real Estate. Go check it out\nAI videos starring you, made in minutes\nBe everywhere without being everywhere.\nGet started for free\nSocial Content\nOnline Courses\nLegal\nFinance\nReal Estate\n4.8 / 5 from 1,000+ reviews\nG2 #1 Most realistic avatars\nForbes AI 50 Company\nTrusted by over 1,000,000 developers and leading companies.\nAI Avatar Generator\nThe most lifelike avatars in AI video\nCharacter consistency is what separates a useful avatar from a gimmick. Avatar V delivers it across every angle, every expression, and every video you create.\nGet started for free\nCharacter consistency\nAvatar V maintains a single, coherent identity across every video you create. The same face, the same micro-expressions, the same presence across a 30-second clip or a 10-minute course module. No drift. No artifacts. No uncanny valley.\nExplore Avatar V\n→\nTrained on your behavior\nAvatar V learns how you talk, gesture, and move, then generates video that's convincingly you. The same micro-expressions, the same presence, all from a single prompt.\nExplore Avatar V\n→\nMultiple angles\nWide shots, medium frames, and close-ups, all consistent, all from one recording. The angles that make a single avatar work across every format.\nExplore Avatar V\n→\nAccurate lip-sync\nPhoneme-level accuracy across every supported language. What you hear and what you see are in perfect agreement at any speed, in 175+ languages and dialects.\nExplore Avatar V\n→\nVoice-synced emotion\nFluid upper-body motion, responsive gestures, and consistent movement across scene changes. The difference between an avatar that presents and one that performs.\nExplore Avatar V\n→\nRated #1 most realistic on G2\n1,000+ reviews. Trusted by 85% of the Fortune 100\nGet started for free\nHeyGen Research\nAvatar V: Scaling video-reference avatar generation\nBuilt on a five-stage AI training pipeline that captures not just how you look, but how you move, gesture, and express yourself.\nRead the report\nOriginal Footage\nAvatar V Generated\nVideo Agent\nFrom idea to finished video with just a prompt\nType your idea. Click generate. Get a share-ready video faster than you can think. No camera, editing software, or production skills needed. Download it, edit it, and share it instantly.\n←\n→\nFully editable\nEvery motion element stays fully editable after generation. Adjust text, color, timing, or layout instantly in AI Studio without rendering the video again from scratch.\nExplore Video Agent\n→\nVisuals that connect\nGenerate motion graphics that work as part of a cohesive narrative. Visual overlays, explanatory animations, and B-roll footage all combine to tell your story.\nExplore Video Agent\n→\nLifelike A-roll\nAI-generated presenter footage anchors every narrative. Talking heads deliver your message with natural performance, serving as the foundation of your video.\nExplore Video Agent\n→\nRated #1 most realistic on G2\n1,000+ reviews. Trusted by 85% of the Fortune 100\nGet started for free\nAI Studio\nAll your creative needs in one environment\nThe text-based editor makes\nAI video generation\nas easy as writing a document. Control tone, delivery, gestures, and emotion in one seamless platform built for human-first storytelling.\nScript-driven control\nDirect every word, gesture, and emotion through a text-based editor that works like writing a document. Tone, delivery, and pacing all respond to your script.\nExplore AI Studio\n→\nStudio-grade realism\nVoice Director, Voice Mirroring, Gesture Control, and Realistic Previews work together to eliminate the gap between AI-generated and human-recorded video.\nExplore AI Studio\n→\nTeam-ready workflow\nComments, tagging, and multi-user editing keep collaboration in one platform. Brand Kit, auto captions, and B-roll deliver finished videos without switching tools.\nExplore AI Studio\n→\nRated #1 most realistic on G2\n1,000+ reviews. Trusted by 85% of the Fortune 100\nGet started for free\nVideo Translation\nBreak language barriers in one click\nAI video translation that preserves your tone, syncs your lips, and reaches global audiences across 175+ languages and dialects.\nEnglish\nGerman\nKorean\nSpanish\nEffortless translation\nUpload a file or paste a YouTube link to translate videos with one click. No reshoots, no manual dubbing. Just fast, affordable localization for any creators or business.\nExplore Video Translation\n→\nPerfect lip-sync\nVoice cloning preserves your unique tone and delivery in 175+ languages and dialects, while precise lip-sync aligns translated speech with facial movements.\nExplore Video Translation\n→\nBuilt for global scale\nTranslate existing footage or generate multilingual avatar videos from a single script. Brand glossary and a multi-lingual player give you full control across markets.\nExplore Video Translation\n→\nRated #1 most realistic on G2\n1,000+ reviews. Trusted by 85% of the Fortune 100\nGet started for free\nAI Tools\nPowerful AI tools for any creator\nHeyGen's AI video tools handle everything from avatar generation and voice cloning to captions, translation, and turning any input into polished video.\nGet started for free\nText to Video\nCreate complete videos from a script using Text to Video. Our generator handles end-to-end editing and produces videos with voiceovers, visuals, and avatars.\nExplore Tool\n→\nImage to Video\nTransform any image into a dynamic AI video in seconds. Add a script for realistic lip-sync, natural speech timing, and expressive voices.\nExplore Tool\n→\nAudio to Video\nTurn podcasts, voiceovers, or any audio file into engaging video with AI avatars, subtitles, and animations. No editing required.\nExplore Tool\n→\nAI Video Generator\nType your idea and click generate to get a finished video in minutes. No camera, editing software, or production skills needed. Download, edit, or share it.\nExplore Tool\n→\nAI Avatars\nCreate business presenters, talking avatars, or custom characters with studio-quality results. Type, upload, and generate to design, edit, and animate avatars.\nExplore Tool\n→\nPPT/PDF to Video\nImport your PPT or PDF and turn each slide into a scene with lifelike AI avatars and natural voiceovers. Transform static decks into engaging videos for any audience.\nExplore Tool\n→\nFast, secure, and ethical by design\nBuilt on verification, grounded in trust\nAI video has a trust problem. We built HeyGen to solve it with verified identity at the core, enforced moderation, and security stress-tested against the highest standards.\nLearn more\nVerified identity, every avatar\nEvery custom avatar requires on-camera identity verification from the person depicted. No verification, no avatar. Removal requests are always honored.\nModeration that holds up\nML scanning flags violations the moment content is generated. Trained human reviewers handle the edge cases. No violence, no political campaigning, no harm to minors. Enforced, not just promised.\nSecurity, stress-tested\nAnnual penetration testing, continuous vulnerability management, and around-the-clock monitoring. We treat compliance as the floor, not the ceiling.\nGDPR\nSOC 2 TYPE II\nCCPA\nAI ACT\nDPF\nUpdates\nWhat's new at HeyGen\nStay up to date with the latest from HeyGen, from new product releases and integrations to awards and milestones.\nAll updates\nJune 25, 2026\nHeyGen doubles to $200M ARR in eight months\nMore than 30 million users, customers across 196 countries, and adoption across 85% of the Fortune 100 signal the rise of identity-first AI video.\nLearn more\n→\nApril 28, 2026\nMeet HyperFrames, a new way of prompting\nHyperFrames is an open-source video rendering framework from HeyGen that lets AI agents create videos using HTML, CSS, and JavaScript.\nLearn more\n→\nApril 15, 2026\nAvatar V, the most realistic AI avatars ever\nIntroducing Avatar V, HeyGen’s most advanced AI avatar model. It delivers unmatched realism and identity consistency.\nLearn more\n→\nApril 13, 2026\nIntroducing HeyGen for Developers\nHeyGen for Developers offers production-ready, scalable APIs, including Video Agent, Video Generation, Translation, and Lipsync models.\nLearn more\n→\nApril 2, 2026\nSeedance 2.0 is now inside HeyGen\nSeedance 2.0 is now fully integrated into HeyGen, bringing cinematic AI video generation, realistic digital twins, and complete video creation workflows into one platform.\nLearn more\n→\nEvents\nHeyGen Community\nJoin us for our upcoming meetups. Whether you're a beginner or an experienced user, there's something for everyone. Don't miss out on the opportunity to learn, grow, and be inspired by the Geniverse community!\nView all events\nCommunity Meetup in Prague\nMeetup in Miami\nHeyGen × Seedance Demo in Barcelona\nMeetup in Barcelona\nHands on Lab in San Francisco\nMeetup in Accra, Ghana\nCustomer Stories\nPowering ambitious teams worldwide\nFrom solo creators to global enterprises, see the stories people are telling with HeyGen and the new possibilities AI video unlocks for every kind of creator.\n40%\nincrease in video watch time\n25%\nboost in course completion rates\n\"This space moves quickly. If you’re not experimenting now, you’ll be behind later. HeyGen has become a critical part of our infrastructure.\"\nMustafa Furniturewala\nCTO at Coursera\nFAQs\nHow to create an AI video of yourself?\nUpload a short clip or reference image, then type your script in HeyGen. The platform will generate a video with realistic AI motion and voice. You can animate, adjust format, and make explainer videos or social clips with AI-powered editing tools.\nIs HeyGen free? What You Actually Get on the Free Plan\nYes. HeyGen offers a free plan that supports text-to-video and AI-generated video creation. Paid plans include advanced AI-powered video creation, video editor options, and support for multiple formats, depending on the AI product and model you choose.\nWhat types of input can I use to create videos in HeyGen?\nYou can generate AI videos using text and images, stock images, or audio. HeyGen can transform text into explainer or explainer videos with templates that make it easy to create and publish impactful content in multiple formats and styles.\nCan I convert audio to video with HeyGen?\nYes, you can convert\naudio to video\nwith HeyGen.\nUpload your audio and HeyGen’s AI-powered system will generate videos automatically. It syncs speech and visuals to create realistic AI avatars and video clips, ideal for podcasts, explainer videos, and educational content that need visual context.\nCan I use text to video for business presentations on HeyGen?\nYes. With HeyGen’s text-to-video feature, you can create engaging explainer videos and slides from any text prompt. The AI image generator and video templates help you instantly create and publish videos in your preferred format for marketing, training, or product demos.\nCan AI videos replace traditional video production?\nYes. AI videos made with HeyGen can absolutely replace traditional production for most business, marketing, and training needs.\nYou can animate scenes, add motion, and generate a video that looks polished. It helps creators publish videos faster, keeping all edits within one video workflow, simple, scalable, and cost-effective.\nHow to make AI videos using HeyGen?\nTo make an AI video in HeyGen, pick an avatar, paste in what you want it to say (or upload a deck), and choose a voice and language. Then tweak the visuals and branding to match your style, hit generate, and export the finished video.\nCan I create AI videos using a reference image with HeyGen?\nYes. Upload a reference image to HeyGen and generate AI videos that look natural. You can use the AI to animate avatars or adjust expressions, creating personalized explainer videos or branded clips with realistic AI motion and audio sync.\nWhat types of videos can I create with the HeyGe?\nHeyGen’s\nAI Video Generator\nlets you create explainer videos, marketing and sales promos, product demos, training and onboarding content, personalized outreach videos, and social media clips, using realistic AI avatars, natural AI voices, and multilingual translation to produce videos quickly at scale.\nHow long does it take to generate an AI video?\nHeyGen is really fast, and many videos generate within a minute. If your video is longer, uses more scenes, or has heavier effects, it may take a little longer but still typically finishes in just a few minutes.\nIs HeyGen secure and ethical?\nYes. HeyGen keeps your data safe and creates avatars responsibly. You own your AI-generated videos and visuals, allowing you to publish content for marketing or training with confidence, knowing your materials are produced ethically and securely.\nStart creating videos with AI\nSee how businesses like yours scale content creation and drive growth with the most innovative AI video.\nGet started for free\nHome\nEnglish\nPricing\nPricing Plans\nAPI Pricing\nProducts\nVideo Avatar\nTalking Photo AI\nAPI\nVideo Translator\nLocalization\nLiveAvatar\nAI Video Generator\nAI Avatar Generator\nAI Voice Cloning\nAI Podcast Generator\nText to Video\nImage to Video\nAudio to Video\nLip Sync AI\nAI Tools\nAI Dubbing\nIndustry\nAgencies\nE-Learning\nMarketing\nLearning & Development\nLocalization\nSales Outreach\nResources\nBlog\nCustomers Stories\nAffiliate Program\nWebinars\nHelp Center\nCommunity\nHow To Guides\nAPI Docs\nFAQ\nAI Glossary\nEnterprise\nFor Enterprise\nLocalization\nContact Sales\nCompany\nAbout Us\nCareers\nAlternatives\nAI Research\nSecurity Portal\nTrust & Safety\nPrivacy Policy\nTerms of Service\nModeration Policy\nGDPR Compliance\nCopyright © 2026 HeyGen\n•\nTerms of Service",
+  "links": [
+    {
+      "href": "https://www-static-assets.heygen.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://dynamic.heygen.ai",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://auth.heygen.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://app.heygen.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://accounts.google.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/fonts/solar-display/ABCSolarDisplay-Bold.latin.6ff709c5.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/tt-norms/TT_Norms_Pro_Normal.latin.30154419.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/tt-norms/TT_Norms_Pro_Bold.latin.ce4f166c.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://dynamic.heygen.ai/tr:w-560,q-60,f-auto/www/2026-08-19_17-10.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets_2025_redesign/_next/static/immutable/chunks/2xa9leth9e30g.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets_2025_redesign/_next/static/immutable/chunks/2oyl32lrgshxi.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets_2025_redesign/_next/static/immutable/chunks/3oj146h4rmfqj.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets_2025_redesign/_next/static/immutable/chunks/387-umki57s96.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets_2025_redesign/_next/static/immutable/chunks/3-f1blqjvuyu9.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://dynamic.heygen.ai/tr:so-2,w-560,q-70/www/video/WWDC_Apple_Intelligence_Recap_3lU7E4eG7.mp4/ik-thumbnail.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://dynamic.heygen.ai/tr:so-2,w-560,q-70/www/video/tracy_cc_4_k_VZAWRZwFN.mp4/ik-thumbnail.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://dynamic.heygen.ai/tr:so-6,w-560,q-70/www/video/financial_tracy_xnu0e0Y-l.mp4/ik-thumbnail.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://dynamic.heygen.ai/tr:so-14,w-560,q-70/www/video/East_Austin_Home_Tour_UGC_FINAL_5hMfC7TKq.mp4/ik-thumbnail.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://accounts.google.com/gsi/client",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://www.heygen.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.heygen.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/fr-fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/tr-tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/nl-nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/uk-ua",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/vi-vn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/id-id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/sv-se",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/en-gb",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/ar-sa",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/ja-jp",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/de-de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/ko-kr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/es-es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/en-in",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/it-it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/es-mx",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/pl-pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/tl-ph",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/en-au",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/ar-eg",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/zh-tw",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/es-co",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/ur-pk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/zh-hk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/he-il",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/es-ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/en-ca",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.heygen.com/th-th",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico?favicon.2m321y0geyyfh.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/research",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://auth.heygen.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.heygen.com/real-estate",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/research/avatar-v-model",
+      "rel": null
+    },
+    {
+      "href": "/agent",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/agent",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/agent",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/tool/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-studio",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/ai-studio",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/ai-studio",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/translate",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/translate",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/translate",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://auth.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/tool/text-to-video",
+      "rel": null
+    },
+    {
+      "href": "/tool/image-to-video",
+      "rel": null
+    },
+    {
+      "href": "/tool/audio-to-video-converter",
+      "rel": null
+    },
+    {
+      "href": "/tool/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/avatars/ai-video-avatar",
+      "rel": null
+    },
+    {
+      "href": "/tool/pdf-to-video",
+      "rel": null
+    },
+    {
+      "href": "/trust-and-safety",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog/heygen-surpasses-200m-arr",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://hyperframes.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/avatar-v",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://developers.heygen.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/models/seedance-2",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://luma.com/heygencommunityevents",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/tool/audio-to-video-converter",
+      "rel": null
+    },
+    {
+      "href": "/tool/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "https://auth.heygen.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.heygen.com",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.heygen.com/developers/api?modal=pricing",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/avatars/ai-video-avatar",
+      "rel": null
+    },
+    {
+      "href": "/avatars/ai-photo-avatar",
+      "rel": null
+    },
+    {
+      "href": "https://developers.heygen.com/docs/quick-start",
+      "rel": null
+    },
+    {
+      "href": "/translate",
+      "rel": null
+    },
+    {
+      "href": "/localization",
+      "rel": null
+    },
+    {
+      "href": "https://www.liveavatar.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/tool/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/avatars",
+      "rel": null
+    },
+    {
+      "href": "/tool/ai-voice-cloning",
+      "rel": null
+    },
+    {
+      "href": "/tool/ai-podcast-generator",
+      "rel": null
+    },
+    {
+      "href": "/tool/text-to-video",
+      "rel": null
+    },
+    {
+      "href": "/tool/image-to-video",
+      "rel": null
+    },
+    {
+      "href": "/tool/audio-to-video-converter",
+      "rel": null
+    },
+    {
+      "href": "/tool/create-ai-lip-sync-videos",
+      "rel": null
+    },
+    {
+      "href": "/tool",
+      "rel": null
+    },
+    {
+      "href": "/translate/ai-dubbing",
+      "rel": null
+    },
+    {
+      "href": "/agencies",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/learning-courses",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/learning-and-development",
+      "rel": null
+    },
+    {
+      "href": "/translate",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/sales-outreach",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/geniverse/social-creator-program",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "https://help.heygen.com/en/",
+      "rel": null
+    },
+    {
+      "href": "https://community.heygen.com/",
+      "rel": null
+    },
+    {
+      "href": "https://community.heygen.com/public/content",
+      "rel": null
+    },
+    {
+      "href": "https://developers.heygen.com/docs/quick-start",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/ai-glossary",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/localization",
+      "rel": null
+    },
+    {
+      "href": "/contact-us/sales",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/alternatives",
+      "rel": null
+    },
+    {
+      "href": "/research",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/trust-and-safety",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/moderation-policy",
+      "rel": null
+    },
+    {
+      "href": "/gdpr-compliant",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.heygen.com/terms",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/heygen",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@heygen_official",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://x.com/HeyGen",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/heygen",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/heygen_official/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.tiktok.com/@heygen.com",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.1257
+}

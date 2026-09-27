@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "run_id": "007-support-evidence-v2-20260923T041430081915Z",
+  "execution_kind": "real",
+  "status": "completed",
+  "started_at": "2026-09-23T04:14:30.093052+00:00",
+  "ended_at": "2026-09-23T04:14:30.154291+00:00",
+  "elapsed_seconds": 0.061274499999999996,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "research/ai-saas-100/cases/007/tests/support-evidence-v2/run.py"
+  ],
+  "timeout_seconds": 15,
+  "exit_status": 0,
+  "implementation": {
+    "path": "cases/007/implementation/support_evidence.py",
+    "sha256": "b04fcca08a6aea33263783e1ee39daec7b788192fb8658751c3f911eefb76c09"
+  },
+  "fixtures": {
+    "path": "cases/007/tests/support-evidence-v2/fixtures.json",
+    "sha256": "5938576b92cb889d1a553e5242afb3ae4df0fbc2e2eee1cb0ddca6948aecae17"
+  },
+  "freeze": {
+    "path": "cases/007/tests/support-evidence-v2/freeze.json",
+    "sha256": "e315c23ab4df84366d74e8d0c4a02db6243aa89bf54eb38f3d8a343620099538"
+  },
+  "runner": {
+    "path": "cases/007/tests/support-evidence-v2/run.py",
+    "sha256": "d84ee15c58c3e681c9db1bf9ff7c126566b881c2b352ee9c93d07d59906b60ea"
+  },
+  "source_files_unchanged_during_run": true,
+  "outputs": [
+    {
+      "path": "cases/007/receipts/007-support-evidence-v2-20260923T041430081915Z.stdout.json",
+      "sha256": "e14dd9ec92277a507a5115c0138359cd4a8bb560f16c5677888532d2db9bc4e3"
+    },
+    {
+      "path": "cases/007/receipts/007-support-evidence-v2-20260923T041430081915Z.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "test_results": [
+    {
+      "test_id": "additional-sources-null",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-string",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-number",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-absent",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-empty",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-nonempty-unresolved",
+      "outcome": "passed",
+      "input_unchanged": true,
+      "io_attempts": []
+    }
+  ],
+  "passed": 6,
+  "total": 6,
+  "inference_executed": false,
+  "external_calls": 0,
+  "network": false,
+  "central_workflow_complete": false,
+  "product_acceptance": false,
+  "scope": "R9 additional-source type validation only; builder-visible preprocessing component checks.",
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "Darwin"
+  }
+}

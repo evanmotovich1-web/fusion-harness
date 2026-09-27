@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "case_id": "019",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/019/tests/specification.json",
+  "specification_sha256": "aa5511f4866bf396be465c36443ea0aba95caab7118c3ada37a6acd7b23c64d0",
+  "assets": [
+    {
+      "path": "cases/019/tests/assets/corrupt.pdf",
+      "sha256": "d8493ed5221233a853e33e23a9699ef7526709f34a2e9d41cf591573e26bbd7c",
+      "bytes": 26
+    },
+    {
+      "path": "cases/019/tests/assets/document-0.pdf",
+      "sha256": "0a125de2737fb756342ea9983be8cd3475ab4e3c2ec41920bec27eee3be102f7",
+      "bytes": 1578
+    },
+    {
+      "path": "cases/019/tests/assets/document-1.pdf",
+      "sha256": "b5159adab6ba0402c3ca66c8b244eff8102456c27fed204eb515b04ae4ca3532",
+      "bytes": 1583
+    },
+    {
+      "path": "cases/019/tests/assets/document-2.pdf",
+      "sha256": "c5f8967caac5aa73f1ad9ff28634418dbcb25684aca5f1e3e644accfbfeca9dc",
+      "bytes": 1578
+    },
+    {
+      "path": "cases/019/tests/assets/invoice-scan.png",
+      "sha256": "2983a36b7fa3e6cde1e970b36e9e110d42e88636778ab1a8ba5db194bc9a9061",
+      "bytes": 11004
+    }
+  ],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

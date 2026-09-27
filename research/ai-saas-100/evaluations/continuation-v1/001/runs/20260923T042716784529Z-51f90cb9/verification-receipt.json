@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-I",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/001/validate.py",
+    "20260923T042716784529Z-51f90cb9"
+  ],
+  "timeout_seconds": 40,
+  "elapsed_seconds": 0.138138792,
+  "exit_status": 0,
+  "validator_sha256": "15b2719eabc5d46ff4bad84a2b21847b886c552084bb53e584ea19c528df42cf",
+  "stdout_sha256": "00f94ac327f5107d15659e59085b9bb4e7ea1c603255ed75eeaaa2c6c0e917f9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "product_acceptance": false
+}
