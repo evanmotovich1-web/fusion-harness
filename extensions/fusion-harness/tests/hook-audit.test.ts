@@ -7,15 +7,22 @@ import { join } from "node:path";
 import {
 	CONTRACT_BEGIN,
 	CONTRACT_END,
+	DEFAULT_KNOWN_GATES,
 	HOOK_DOCTOR_JSON_KEYS,
 	auditContract,
 	auditHookSurfaces,
 	auditHooks,
 	buildHookReport,
+	classifyCodexPlugin,
 	classifyPiExtension,
+	envVarsReferenced,
+	envVarsUnprovided,
+	isKnownGate,
 	probeHook,
+	resolveKnownGates,
 	type HookSurface,
 } from "../modules/hook-audit.ts";
+import { parseDoctorArgs, probeCommandMatrix } from "../tools/hooks-doctor.ts";
 
 const fixtureHome = join(import.meta.dir, "fixtures", "hooks");
 const uiOnlyHome = join(import.meta.dir, "fixtures", "hooks-ui-only");
@@ -90,7 +97,7 @@ describe("hook-audit enumeration", () => {
 	test("enumerates every surface kind and never throws on a missing home", () => {
 		const surfaces = auditHooks({ home: fixtureHome });
 		const kinds = new Set(surfaces.map((surface) => surface.kind));
-		expect(kinds).toEqual(new Set(["pi-extension", "pi-package", "claude-hook", "codex-hook", "hermes-hook"]));
+		expect(kinds).toEqual(new Set(["pi-extension", "pi-package", "claude-hook", "codex-hook", "hermes-hook", "codex-plugin-hook"]));
 		expect(() => auditHooks({ home: join(fixtureHome, "does-not-exist") })).not.toThrow();
 		expect(auditHooks({ home: join(fixtureHome, "does-not-exist") })).toEqual([]);
 	});
@@ -383,5 +390,190 @@ describe("fixture hygiene", () => {
 	test("the hooks fixture root holds only the intended surfaces and no bun cache", () => {
 		expect(readdirSync(fixtureHome).sort()).toEqual([".claude", ".codex", ".gitignore", ".hermes", ".pi"]);
 		expect(existsSync(join(fixtureHome, "Library"))).toBe(false);
+	});
+});
+
+describe("codex plugin hook coverage", () => {
+	test("enumerates enabled plugins from config.toml and classifies a Stop gate as can-block", () => {
+		const surfaces = auditHooks({ home: fixtureHome });
+		const plugin = surfaces.filter((surface) => surface.kind === "codex-plugin-hook");
+		const base = surfaces.filter((surface) => surface.kind === "codex-hook");
+
+		// The point of the fix: base hooks.json is 3 entries; plugins add more.
+		expect(base.length).toBe(3);
+		expect(plugin.length).toBeGreaterThanOrEqual(3);
+		expect(base.length + plugin.length).toBeGreaterThan(3);
+
+		const stop = plugin.find((surface) => surface.id === "codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0");
+		expect(stop?.verdict).toBe("can-block");
+		expect(stop?.blocking).toBe(true);
+		expect(stop?.probe).toBe(false);
+		expect(stop?.trust?.status).toBe("present");
+		expect(stop?.source).toContain("fixture-plugin");
+
+		const mcp = plugin.find((surface) => surface.id === "codex-plugin:browser-plugin@fixture-marketplace:Stop:0:0");
+		expect(mcp?.verdict).toBe("can-block");
+		expect(mcp?.command).toBeNull();
+		expect(mcp?.meta?.type).toBe("mcp_tool");
+		expect(mcp?.trust?.status).toBe("present");
+
+		const start = plugin.find((surface) => surface.id === "codex-plugin:fixture-plugin@fixture-marketplace:SessionStart:0:0");
+		expect(start?.verdict).toBe("fail-open");
+		expect(start?.probe).toBe(true);
+
+		// enabled=false plugins and their trust keys are not enumerated.
+		expect(surfaces.some((surface) => surface.id.includes("disabled-plugin"))).toBe(false);
+	});
+
+	test("a Stop that demonstrably fails open is fail-open; a bare Stop is can-block", () => {
+		expect(classifyCodexPlugin("Stop", "command", "node ./gate.mjs", "").verdict).toBe("can-block");
+		expect(classifyCodexPlugin("Stop", "command", "node ./gate.mjs", "try { main(); } catch { process.exitCode = 0; }").verdict).toBe("fail-open");
+		expect(classifyCodexPlugin("SessionEnd", "mcp_tool", null, "").verdict).toBe("can-block");
+		expect(classifyCodexPlugin("SessionStart", "command", "node ./ctx.mjs", "").verdict).toBe("fail-open");
+	});
+
+	test("the doctor reports plugin Stop gates as can-block and still exits 0", () => {
+		const run = runDoctor(["--json", "--home", fixtureHome, "--no-probe"]);
+		expect(run.status).toBe(0);
+		const report = JSON.parse(run.stdout);
+		expect(report.checks.codexPluginHooks).toBeGreaterThanOrEqual(3);
+		expect(report.canBlock).toContain("codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0");
+		expect(report.canBlock).toContain("codex-plugin:browser-plugin@fixture-marketplace:Stop:0:0");
+		expect(report.checks.findings.join(" ")).toContain("codex plugin Stop/SessionEnd gate(s)");
+	});
+});
+
+describe("host-provided environment lint", () => {
+	test("flags a variable the host does not provide and ignores provided / non-namespaced ones", () => {
+		// The reproduced defect: Codex injects CLAUDE_PLUGIN_ROOT but not CLAUDE_PROJECT_DIR.
+		expect(envVarsUnprovided(`node "$CLAUDE_PROJECT_DIR/.claude/hooks/distill-check.cjs"`, "codex")).toEqual(["CLAUDE_PROJECT_DIR"]);
+		expect(envVarsUnprovided(`node "\${CLAUDE_PLUGIN_ROOT}/scripts/context.mjs"`, "codex")).toEqual([]);
+		expect(envVarsUnprovided(`node "$CLAUDE_PROJECT_DIR/x.mjs"`, "claude")).toEqual([]);
+		expect(envVarsUnprovided(`node "$HOME/x.mjs" "$PWD/y.mjs"`, "codex")).toEqual([]);
+		expect(envVarsUnprovided(`CLAUDE_PROJECT_DIR=/w node "$CLAUDE_PROJECT_DIR/x.mjs"`, "codex")).toEqual([]);
+		expect(envVarsUnprovided(null, "codex")).toEqual([]);
+		expect(envVarsReferenced(`node "\${CLAUDE_PLUGIN_ROOT}/a.mjs" "$HOME/b"`)).toEqual(["CLAUDE_PLUGIN_ROOT", "HOME"]);
+	});
+
+	test("the env-plugin fixture flags its Stop hook and leaves the SessionStart clean", () => {
+		const surfaces = auditHooks({ home: fixtureHome });
+		const stop = surfaces.find((surface) => surface.id === "codex-plugin:env-plugin@fixture-marketplace:Stop:0:0");
+		const start = surfaces.find((surface) => surface.id === "codex-plugin:env-plugin@fixture-marketplace:SessionStart:0:0");
+		expect(stop?.meta?.unprovidedVars).toBe("CLAUDE_PROJECT_DIR");
+		expect(start?.meta?.unprovidedVars).toBeUndefined();
+	});
+
+	test("buildHookReport raises a host-unprovided variable as an unexpected finding", () => {
+		const report = buildHookReport(auditHooks({ home: fixtureHome }), [], { home: fixtureHome, timeoutMs: 400 });
+		expect(report.ok).toBe(false);
+		expect(report.checks.findings.join(" ")).toContain("host-unprovided variable");
+		expect(report.checks.findings.join(" ")).toContain("codex-plugin:env-plugin@fixture-marketplace:Stop:0:0 (CLAUDE_PROJECT_DIR)");
+	});
+});
+
+describe("known-gates allowlist", () => {
+	test("the default list holds the two deliberate guards and matches exact ids or prefixes", () => {
+		expect(DEFAULT_KNOWN_GATES).toContain("pi:extension:plan-mode");
+		expect(DEFAULT_KNOWN_GATES).toContain("claude:PreToolUse:1:0");
+		expect(isKnownGate("claude:PreToolUse:1:0", DEFAULT_KNOWN_GATES)).toBe(true);
+		expect(isKnownGate("claude:PreToolUse:2:0", DEFAULT_KNOWN_GATES)).toBe(false);
+		expect(isKnownGate("claude:PreToolUse:1:0", ["claude:PreToolUse:"])).toBe(true);
+		expect(isKnownGate("pi:extension:plan-mode-extra", ["pi:extension:plan-mode"])).toBe(false);
+		expect(resolveKnownGates()).toContain("pi:extension:plan-mode");
+		expect(resolveKnownGates(["custom:gate:0:0"])).toContain("custom:gate:0:0");
+	});
+
+	test("an accepted gate leaves the unexpected findings but stays in the raw canBlock list", () => {
+		const surfaces = auditHooks({ home: fixtureHome });
+		const all = buildHookReport(surfaces, [], { home: fixtureHome, timeoutMs: 400 });
+		const accepted = [
+			"codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0",
+			"codex-plugin:env-plugin@fixture-marketplace:Stop:0:0",
+		];
+		const relaxed = buildHookReport(surfaces, [], { home: fixtureHome, timeoutMs: 400, knownGates: accepted });
+
+		// Never hidden: the raw list is identical and the accepted ids are reported explicitly.
+		expect(relaxed.canBlock).toEqual(all.canBlock);
+		expect(relaxed.canBlock).toContain("codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0");
+		expect(relaxed.checks.acceptedGates).toContain("codex-plugin:env-plugin@fixture-marketplace:Stop:0:0");
+		// The env finding for an accepted gate is no longer unexpected.
+		expect(all.checks.findings.join(" ")).toContain("env-plugin@fixture-marketplace:Stop:0:0 (CLAUDE_PROJECT_DIR)");
+		expect(relaxed.checks.findings.join(" ")).not.toContain("env-plugin@fixture-marketplace:Stop:0:0 (CLAUDE_PROJECT_DIR)");
+	});
+
+	test("ok flips true only when every can-block surface is accepted", () => {
+		const surfaces = auditHooks({ home: fixtureHome });
+		const everyGate = surfaces.filter((surface) => surface.blocking || surface.verdict === "can-block").map((surface) => surface.id);
+		const accepted = buildHookReport(surfaces, [], { home: fixtureHome, timeoutMs: 400, knownGates: everyGate });
+		expect(accepted.canBlock.length).toBeGreaterThan(0);
+		expect(accepted.checks.acceptedGates).toEqual([...everyGate].sort());
+		expect(accepted.checks.findings).toEqual([]);
+		expect(accepted.ok).toBe(true);
+	});
+});
+
+describe("doctor --probe-all matrix", () => {
+	test("parseDoctorArgs reads --probe-all and repeated --known-gate", () => {
+		const opts = parseDoctorArgs(["--probe-all", "--known-gate", "a:0:0", "--known-gate=b:0:0"]);
+		expect(opts.probeAll).toBe(true);
+		expect(opts.knownGates).toEqual(["a:0:0", "b:0:0"]);
+	});
+
+	test("the matrix replays probeable command hooks across four stdin classes and never executes probe:false", () => {
+		const base: HookSurface = {
+			id: "probe:command",
+			kind: "claude-hook",
+			source: "fixture",
+			event: "SessionStart",
+			command: 'node -e "process.stdin.resume()"',
+			path: null,
+			verdict: "fail-open",
+			blocking: false,
+			reason: "",
+			probe: true,
+		};
+		const gate: HookSurface = { ...base, id: "probe:blocking-gate", event: "Stop", command: 'node -e "process.exit(1)"', verdict: "can-block", blocking: true, probe: false };
+		const mcp: HookSurface = { ...base, id: "probe:mcp-tool", command: null, probe: false };
+
+		const matrix = probeCommandMatrix([base, gate, mcp], { timeoutMs: 3_000, cwd: fixtureHome, env: spawnEnv });
+		expect(matrix.rows.map((row) => row.id)).toEqual(["probe:command"]);
+		expect(matrix.rows[0]!.results.map((r) => r.class)).toEqual(["closed", "empty", "malformed", "valid"]);
+		expect(matrix.rows[0]!.results.every((r) => r.status === "ok" && r.exitCode === 0)).toBe(true);
+		expect(matrix.excluded).toEqual(["probe:blocking-gate", "probe:mcp-tool"]);
+	});
+
+	test("--probe-all emits knownGates and probeMatrix and still exits 0", () => {
+		const run = spawnSync("bun", [doctorPath, "--json", "--home", fixtureHome, "--probe-all", "--timeout", "300"], {
+			cwd: repoRoot,
+			encoding: "utf8",
+			timeout: 30_000,
+			env: spawnEnv,
+		});
+		expect(run.status).toBe(0);
+		const report = JSON.parse(run.stdout);
+		expect(Object.keys(report)).toEqual([...HOOK_DOCTOR_JSON_KEYS, "knownGates", "probeMatrix"]);
+		expect(report.knownGates).toContain("pi:extension:plan-mode");
+		expect(Array.isArray(report.probeMatrix.rows)).toBe(true);
+		expect(report.probeMatrix.rows.length).toBeGreaterThan(0);
+		for (const row of report.probeMatrix.rows) expect(row.results.map((r: any) => r.class)).toEqual(["closed", "empty", "malformed", "valid"]);
+		// Blocking-event and mcp_tool surfaces stay out of the matrix by construction.
+		expect(report.probeMatrix.rows.some((row: any) => String(row.id).endsWith(":Stop:0:0"))).toBe(false);
+		expect(report.probeMatrix.excluded).toContain("codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0");
+		expect(report.probeMatrix.excluded).toContain("codex-plugin:browser-plugin@fixture-marketplace:Stop:0:0");
+	});
+
+	test("--known-gate moves a can-block id into acceptedGates without hiding it", () => {
+		const id = "codex-plugin:fixture-plugin@fixture-marketplace:Stop:0:0";
+		const run = spawnSync("bun", [doctorPath, "--json", "--home", fixtureHome, "--no-probe", "--known-gate", id], {
+			cwd: repoRoot,
+			encoding: "utf8",
+			timeout: 20_000,
+			env: spawnEnv,
+		});
+		expect(run.status).toBe(0);
+		const report = JSON.parse(run.stdout);
+		expect(report.canBlock).toContain(id);
+		expect(report.checks.acceptedGates).toContain(id);
+		expect(report.checks.findings.join(" ")).not.toContain(id);
 	});
 });

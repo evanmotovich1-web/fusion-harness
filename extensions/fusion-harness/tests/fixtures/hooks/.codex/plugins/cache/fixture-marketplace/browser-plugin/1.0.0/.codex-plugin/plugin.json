@@ -1,0 +1,19 @@
+{
+  "name": "browser-plugin",
+  "hooks": {
+    "hooks": {
+      "Stop": [
+        {
+          "hooks": [
+            {
+              "type": "mcp_tool",
+              "server": "node_repl",
+              "tool": "turn_ended",
+              "input": {}
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

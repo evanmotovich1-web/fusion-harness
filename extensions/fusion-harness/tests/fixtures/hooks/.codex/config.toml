@@ -1,7 +1,28 @@
 [features]
 hooks = true
 
+[plugins."fixture-plugin@fixture-marketplace"]
+enabled = true
+
+[plugins."browser-plugin@fixture-marketplace"]
+enabled = true
+
+[plugins."env-plugin@fixture-marketplace"]
+enabled = true
+
+[plugins."disabled-plugin@fixture-marketplace"]
+enabled = false
+
 [hooks.state]
 
 [hooks.state."/fixture/.codex/hooks.json:session_start:0:0"]
 trusted_hash = "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[hooks.state."fixture-plugin@fixture-marketplace:hooks/hooks.json:stop:0:0"]
+trusted_hash = "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[hooks.state."browser-plugin@fixture-marketplace:plugin.json#hooks[0]:stop:0:0"]
+trusted_hash = "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+
+[hooks.state."env-plugin@fixture-marketplace:hooks/hooks.json:stop:0:0"]
+trusted_hash = "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"

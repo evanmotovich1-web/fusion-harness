@@ -32,7 +32,7 @@ const MODULE_DIR: string =
 		? __dirname
 		: path.dirname(new URL(import.meta.url).pathname);
 
-export type HookSurfaceKind = "pi-extension" | "pi-package" | "claude-hook" | "codex-hook" | "hermes-hook" | "knowledge-module" | "knowledge-contract";
+export type HookSurfaceKind = "pi-extension" | "pi-package" | "claude-hook" | "codex-hook" | "hermes-hook" | "codex-plugin-hook" | "knowledge-module" | "knowledge-contract";
 export type HookVerdict = "fail-open" | "can-block" | "unknown";
 export type HookTrustStatus = "present" | "missing" | "not-applicable";
 export type HookTrustVerification = "present" | "missing" | "stale-suspect" | "unknown";
@@ -54,12 +54,121 @@ export const MAX_PROBE_TIMEOUT_MS = 30_000;
 const BLOCKING_CLAUDE_EVENTS = new Set(["PreToolUse", "Stop", "SubagentStop", "PermissionRequest"]);
 /** Codex events whose hooks can refuse the session end. */
 const BLOCKING_CODEX_EVENTS = new Set(["Stop"]);
+/**
+ * Codex PLUGIN Stop/SessionEnd surfaces gate the end of a turn or session by default.
+ * They are classified can-block unless the command demonstrably wraps failures to exit 0.
+ */
+const BLOCKING_CODEX_PLUGIN_EVENTS = new Set(["Stop", "SessionEnd"]);
 /** Hermes treats only pre_tool_call as blocking (hermes-agent/agent/shell_hooks.py:43). */
 const BLOCKING_HERMES_EVENTS = new Set(["pre_tool_call"]);
 
 const BLOCK_JSON_RE = /["'](?:decision|permissionDecision)["']\s*:\s*["'](?:block|deny)["']/;
 const CONTINUE_FALSE_RE = /["']continue["']\s*:\s*false/;
 const SCRIPT_TOKEN_RE = /(?:^|[\s"'])([^\s"']*\.(?:py|sh|bash|mjs|cjs|js|ts))(?=[\s"']|$)/;
+/** Explicit swallow-to-zero evidence that a Stop/SessionEnd command cannot gate a run. */
+const CODEX_PLUGIN_FAIL_OPEN_PATTERNS = [/\|\|\s*true/, /process\.exitCode\s*=\s*0/, /sys\.exit\(0\)/];
+
+// ── host-provided environment ────────────────────────────────────────────────
+// A hook command that interpolates a variable its host does not provide expands to an empty
+// prefix and fails. Measured 2026-09-27: Codex injects ${PLUGIN_ROOT}/${CLAUDE_PLUGIN_ROOT}
+// and ${PLUGIN_DATA}/${CLAUDE_PLUGIN_DATA} but NOT CLAUDE_PROJECT_DIR — which is exactly why
+// ~/code/flatfiles-harness/.codex/hooks.json's Stop hook exits 1 with MODULE_NOT_FOUND. Only
+// namespaced variables are checked, so ${HOME} / ${PWD} / arbitrary templates are never flagged,
+// and a `VAR=…` assignment inside the command itself counts as provided.
+
+export type HookHost = "pi" | "claude" | "codex" | "hermes";
+
+export const HOST_PROVIDED_ENV: Record<HookHost, { provided: readonly string[]; prefixes: readonly string[] }> = {
+	pi: {
+		provided: ["PI_SESSION_ID", "PI_SESSION_FILE", "PI_PROVIDER", "PI_MODEL", "PI_REASONING_LEVEL", "PI_AGENT_PACKAGE"],
+		prefixes: ["PI_"],
+	},
+	claude: {
+		provided: [
+			"CLAUDE_PROJECT_DIR",
+			"CLAUDE_PLUGIN_ROOT",
+			"CLAUDE_PLUGIN_DATA",
+			"CLAUDE_SESSION_ID",
+			"CLAUDE_TRANSCRIPT_PATH",
+			"CLAUDE_TOOL_NAME",
+			"CLAUDE_TOOL_INPUT",
+			"CLAUDE_HOOK_EVENT",
+		],
+		prefixes: ["CLAUDE_"],
+	},
+	codex: {
+		provided: ["PLUGIN_ROOT", "CLAUDE_PLUGIN_ROOT", "PLUGIN_DATA", "CLAUDE_PLUGIN_DATA", "CODEX_HOME"],
+		prefixes: ["CLAUDE_", "PLUGIN_", "CODEX_"],
+	},
+	// Hermes sets no CLAUDE_* variables that were measured, but only HERMES_* is asserted here:
+	// a false positive on a machine-wide lint is worse than a missed case.
+	hermes: {
+		provided: ["HERMES_HOME", "HERMES_SESSION_ID"],
+		prefixes: ["HERMES_"],
+	},
+};
+
+/** `$VAR` and `${VAR}` references inside a hook command. */
+const ENV_VAR_RE = /\$(?:\{([A-Za-z_][A-Za-z0-9_]*)\}|([A-Za-z_][A-Za-z0-9_]*))/g;
+/** `VAR=…` assignments that supply the variable for this command only. */
+const ENV_ASSIGN_RE = /(?:^|[\s;|&(])([A-Za-z_][A-Za-z0-9_]*)=/g;
+
+/** Every `$VAR` / `${VAR}` name referenced by a hook command, sorted and deduped. */
+export function envVarsReferenced(command: string | null): string[] {
+	if (!command) return [];
+	const names = new Set<string>();
+	for (const match of command.matchAll(ENV_VAR_RE)) names.add(match[1] ?? match[2]!);
+	return [...names].sort();
+}
+
+/**
+ * Namespaced variables a hook command interpolates that its host does not provide. Returns []
+ * when the command is absent, when every reference is provided, or when the only references are
+ * self-assigned in the command itself.
+ */
+export function envVarsUnprovided(command: string | null, host: HookHost): string[] {
+	if (!command) return [];
+	const spec = HOST_PROVIDED_ENV[host];
+	const provided = new Set<string>(spec.provided);
+	for (const assign of command.matchAll(ENV_ASSIGN_RE)) provided.add(assign[1]!);
+	const missing = new Set<string>();
+	for (const name of envVarsReferenced(command)) {
+		if (provided.has(name)) continue;
+		if (!spec.prefixes.some((prefix) => name.startsWith(prefix))) continue;
+		missing.add(name);
+	}
+	return [...missing].sort();
+}
+
+/** Surface meta with `unprovidedVars` set only when the lint finds something. */
+function withEnvMeta(
+	host: HookHost,
+	command: string | null,
+	meta: Record<string, string | number | boolean>,
+): Record<string, string | number | boolean> {
+	const unprovided = envVarsUnprovided(command, host);
+	return unprovided.length ? { ...meta, unprovidedVars: unprovided.join(",") } : meta;
+}
+
+/**
+ * Can-block surfaces the operator has accepted on purpose. They stay in `canBlock` and are
+ * listed in `checks.acceptedGates`; they are excluded only from the "unexpected" findings that
+ * drive `ok`. Extend with the `knownGates` report option or FH_HOOK_KNOWN_GATES (comma list).
+ */
+export const DEFAULT_KNOWN_GATES: readonly string[] = ["pi:extension:plan-mode", "claude:PreToolUse:1:0"];
+
+export function resolveKnownGates(explicit?: readonly string[]): string[] {
+	const fromEnv = (process.env.FH_HOOK_KNOWN_GATES ?? "")
+		.split(",")
+		.map((entry) => entry.trim())
+		.filter(Boolean);
+	return [...new Set<string>([...DEFAULT_KNOWN_GATES, ...fromEnv, ...(explicit ?? [])])].sort();
+}
+
+/** Exact id, or a `<gate>:…` prefix (a trailing colon is optional). */
+export function isKnownGate(id: string, gates: readonly string[]): boolean {
+	return gates.some((gate) => id === gate || id.startsWith(gate.endsWith(":") ? gate : `${gate}:`));
+}
 
 export interface HookTrust {
 	status: HookTrustStatus;
@@ -114,8 +223,13 @@ export interface HookAuditChecks {
 	knowledgeGuard: "fail-open" | "can-block" | "absent";
 	stopGateInstalledByUs: "none" | "present";
 	codexTrust: "pass" | "warn" | "absent" | "unknown";
+	/** Count of Codex plugin hook surfaces discovered (beyond the base hooks.json). */
+	codexPluginHooks: number;
 	canBlockCount: number;
+	/** Unexpected findings only (these drive `ok`). */
 	findings: string[];
+	/** Can-block surfaces matched against the known-gates allowlist; reported, never hidden. */
+	acceptedGates?: string[];
 }
 
 export interface HookAuditReport {
@@ -434,10 +548,10 @@ function enumerateClaude(home: string): HookSurface[] {
 					blocking: cls.blocking,
 					reason: cls.reason,
 					probe: !BLOCKING_CLAUDE_EVENTS.has(event),
-					meta: {
+					meta: withEnvMeta("claude", hook.command, {
 						timeout: typeof hook.timeout === "number" ? hook.timeout : 0,
 						matcher: typeof group.matcher === "string" ? group.matcher : "",
-					},
+					}),
 				});
 			});
 		});
@@ -491,10 +605,150 @@ function enumerateCodex(home: string): HookSurface[] {
 						: "no persisted trusted_hash; the hook silently skips until approved (never blocks)",
 					probe: !BLOCKING_CODEX_EVENTS.has(event),
 					trust: { status: storedHash ? "present" : "missing", key, storedHash, verification },
-					meta: { timeout: typeof hook.timeout === "number" ? hook.timeout : 0 },
+					meta: withEnvMeta("codex", hook.command, { timeout: typeof hook.timeout === "number" ? hook.timeout : 0 }),
 				});
 			});
 		});
+	}
+	return surfaces;
+}
+
+// ── Codex PLUGIN hooks ───────────────────────────────────────────────────────
+// The base ~/.codex/hooks.json is only part of what Codex runs. Enabled plugins
+// declare their own hooks in <cache>/<marketplace>/<plugin>/<version>/hooks/hooks.json
+// or, for bundled plugins (browser@openai-bundled), in .codex-plugin/plugin.json under
+// a nested `hooks.hooks` map with `type: mcp_tool` entries.
+
+export interface CodexPluginRef {
+	id: string;
+	name: string;
+	marketplace: string;
+}
+
+/** Enabled plugins from `[plugins."name@marketplace"]` blocks. */
+export function parseCodexPlugins(configToml: string): CodexPluginRef[] {
+	const plugins: CodexPluginRef[] = [];
+	const re = /\[plugins\."([^"]+)"\]([\s\S]*?)(?=\n\[|$)/g;
+	for (const match of configToml.matchAll(re)) {
+		if (!/enabled\s*=\s*true/.test(match[2] ?? "")) continue;
+		const id = match[1]!;
+		const at = id.lastIndexOf("@");
+		if (at <= 0) continue;
+		plugins.push({ id, name: id.slice(0, at), marketplace: id.slice(at + 1) });
+	}
+	return plugins;
+}
+
+/** The installed version dir for a plugin, preferring one that actually carries hooks. */
+export function resolvePluginDir(home: string, plugin: CodexPluginRef): string | null {
+	const base = path.join(home, ".codex", "plugins", "cache", plugin.marketplace, plugin.name);
+	let entries: fs.Dirent[];
+	try {
+		entries = fs.readdirSync(base, { withFileTypes: true });
+	} catch {
+		return null;
+	}
+	const versions = entries.filter((entry) => entry.isDirectory() && !entry.name.startsWith(".")).map((entry) => entry.name).sort().reverse();
+	if (!versions.length) return null;
+	for (const version of versions) {
+		const dir = path.join(base, version);
+		if (fs.existsSync(path.join(dir, "hooks", "hooks.json")) || fs.existsSync(path.join(dir, ".codex-plugin", "plugin.json"))) return dir;
+	}
+	return path.join(base, versions[0]!);
+}
+
+/** A plugin's event → hook-group map, from hooks/hooks.json or plugin.json#hooks. */
+export function pluginHookMap(pluginDir: string): { file: string; hooks: Record<string, unknown> } | null {
+	const hooksJson = path.join(pluginDir, "hooks", "hooks.json");
+	if (fs.existsSync(hooksJson)) {
+		const parsed = readJsonSafe(hooksJson);
+		const hooks = parsed && typeof parsed === "object" && parsed.hooks && typeof parsed.hooks === "object" ? parsed.hooks : {};
+		return { file: hooksJson, hooks };
+	}
+	const pluginJson = path.join(pluginDir, ".codex-plugin", "plugin.json");
+	if (fs.existsSync(pluginJson)) {
+		const parsed = readJsonSafe(pluginJson);
+		const hooks = parsed?.hooks?.hooks;
+		return { file: pluginJson, hooks: hooks && typeof hooks === "object" ? hooks : {} };
+	}
+	return null;
+}
+
+/** Stop/SessionEnd plugin surfaces are can-block unless the command demonstrably fails open. */
+export function classifyCodexPlugin(event: string, hookType: string, command: string | null, content: string): Classification {
+	if (!BLOCKING_CODEX_PLUGIN_EVENTS.has(event)) {
+		return { verdict: "fail-open", blocking: false, reason: `${event} is non-blocking; an error is logged and the run continues` };
+	}
+	if (hookType === "mcp_tool") {
+		return { verdict: "can-block", blocking: true, reason: `${event} mcp_tool gate: a failed tool call can refuse the end of the turn; no fail-open evidence` };
+	}
+	if (content && CODEX_PLUGIN_FAIL_OPEN_PATTERNS.some((pattern) => pattern.test(content))) {
+		return { verdict: "fail-open", blocking: false, reason: `${event} command demonstrably wraps failures to exit 0` };
+	}
+	return { verdict: "can-block", blocking: true, reason: `${event} command hook: a non-zero exit can gate the turn; no fail-open evidence` };
+}
+
+function enumerateCodexPlugins(home: string): HookSurface[] {
+	const configPath = path.join(home, ".codex", "config.toml");
+	const configText = readTextSafe(configPath);
+	const trust = parseCodexTrust(configText);
+	const plugins = parseCodexPlugins(configText);
+	const configMtime = statMtimeMs(configPath);
+	const trustToleranceMs = 2_000;
+	const surfaces: HookSurface[] = [];
+	for (const plugin of plugins) {
+		const dir = resolvePluginDir(home, plugin);
+		if (!dir) continue;
+		const loaded = pluginHookMap(dir);
+		if (!loaded) continue;
+		const hooksMtime = statMtimeMs(loaded.file);
+		for (const [event, rawGroups] of Object.entries(loaded.hooks)) {
+			if (!Array.isArray(rawGroups)) continue;
+			rawGroups.forEach((group: any, gi: number) => {
+				const list = Array.isArray(group?.hooks) ? group.hooks : [];
+				list.forEach((hook: any, hi: number) => {
+					if (!hook || typeof hook !== "object") return;
+					const hookType = typeof hook.type === "string" ? hook.type : "command";
+					const command = typeof hook.command === "string" ? hook.command : null;
+					if (hookType !== "mcp_tool" && !command) return;
+					const suffix = `:${snakeEvent(event)}:${gi}:${hi}`;
+					const key = [...trust.keys()].find((candidate) => candidate.includes(plugin.id) && candidate.endsWith(suffix));
+					const storedHash = key ? trust.get(key) : undefined;
+					const verification: HookTrustVerification = !storedHash
+						? "missing"
+						: hooksMtime === undefined || configMtime === undefined
+							? "unknown"
+							: hooksMtime > configMtime + trustToleranceMs
+								? "stale-suspect"
+								: "present";
+					const script = command ? resolveScriptFromCommand(command, dir) : null;
+					const content = script ? readTextSafe(script) : "";
+					const cls = classifyCodexPlugin(event, hookType, command, content);
+					surfaces.push({
+						id: `codex-plugin:${plugin.id}:${event}:${gi}:${hi}`,
+						kind: "codex-plugin-hook",
+						source: loaded.file,
+						event,
+						command,
+						path: script,
+						verdict: cls.verdict,
+						blocking: cls.blocking,
+						reason: storedHash
+							? `${cls.reason}${verification === "stale-suspect" ? "; plugin hooks.json edited after the trusted_hash record — re-trust required" : ""}`
+							: `${cls.reason}; no persisted trusted_hash for this plugin hook`,
+						probe: !BLOCKING_CODEX_PLUGIN_EVENTS.has(event) && command !== null,
+						trust: { status: storedHash ? "present" : "missing", key, storedHash, verification },
+						meta: withEnvMeta("codex", command, {
+							plugin: plugin.id,
+							type: hookType,
+							timeout: typeof hook.timeout === "number" ? hook.timeout : 0,
+							server: typeof hook.server === "string" ? hook.server : "",
+							tool: typeof hook.tool === "string" ? hook.tool : "",
+						}),
+					});
+				});
+			});
+		}
 	}
 	return surfaces;
 }
@@ -531,7 +785,7 @@ function enumerateHermes(home: string): HookSurface[] {
 				blocking: cls.blocking,
 				reason,
 				probe: !BLOCKING_HERMES_EVENTS.has(event) && !failClosed,
-				meta: { allowlisted, timeout: typeof hook.timeout === "number" ? hook.timeout : 0 },
+				meta: withEnvMeta("hermes", hook.command, { allowlisted, timeout: typeof hook.timeout === "number" ? hook.timeout : 0 }),
 			});
 		});
 	}
@@ -547,6 +801,7 @@ export function auditHooks(options: AuditHooksOptions = {}): HookSurface[] {
 		surfaces.push(...enumeratePiPackages(home));
 		surfaces.push(...enumerateClaude(home));
 		surfaces.push(...enumerateCodex(home));
+		surfaces.push(...enumerateCodexPlugins(home));
 		surfaces.push(...enumerateHermes(home));
 	} catch {
 		/* enumeration is best-effort; the report shows whatever was collected */
@@ -835,6 +1090,8 @@ export interface BuildReportOptions {
 	home?: string;
 	timeoutMs?: number;
 	contract?: ContractCheck;
+	/** Extra can-block surface ids the operator accepts; merged with DEFAULT_KNOWN_GATES. */
+	knownGates?: readonly string[];
 }
 
 function emptyContract(): ContractCheck {
@@ -848,7 +1105,7 @@ function knowledgeModuleStatus(surfaces: HookSurface[], id: string): HookAuditCh
 }
 
 function codexTrustCheck(surfaces: HookSurface[]): HookAuditChecks["codexTrust"] {
-	const codex = surfaces.filter((surface) => surface.kind === "codex-hook");
+	const codex = surfaces.filter((surface) => surface.kind === "codex-hook" || surface.kind === "codex-plugin-hook");
 	if (!codex.length) return "absent";
 	if (codex.some((surface) => surface.trust?.verification === "stale-suspect")) return "warn";
 	if (codex.every((surface) => surface.trust?.verification === "unknown" || surface.trust?.verification === "missing")) return "unknown";
@@ -856,7 +1113,9 @@ function codexTrustCheck(surfaces: HookSurface[]): HookAuditChecks["codexTrust"]
 }
 
 export function buildHookReport(surfaces: HookSurface[], probes: HookProbeResult[], options: BuildReportOptions = {}): HookAuditReport {
-	const canBlock = surfaces.filter((s) => s.blocking || s.verdict === "can-block").map((s) => s.id);
+	// canBlock stays the RAW list: accepted gates are reported, never removed from it.
+	const canBlockSurfaces = surfaces.filter((s) => s.blocking || s.verdict === "can-block");
+	const canBlock = canBlockSurfaces.map((s) => s.id);
 	const failOpen = surfaces.filter((s) => s.verdict === "fail-open").map((s) => s.id);
 	const notProbed = surfaces.filter((s) => !s.probe).map((s) => s.id);
 	const blockHint = probes.some((p) => p.blockHint);
@@ -864,9 +1123,22 @@ export function buildHookReport(surfaces: HookSurface[], probes: HookProbeResult
 	const knowledgeInject = knowledgeModuleStatus(surfaces, "knowledge:module:knowledge-inject");
 	const knowledgeGuard = knowledgeModuleStatus(surfaces, "knowledge:module:knowledge-guard");
 	const codexTrust = codexTrustCheck(surfaces);
+	const codexPluginSurfaces = surfaces.filter((surface) => surface.kind === "codex-plugin-hook");
+	const codexPluginGates = codexPluginSurfaces.filter((surface) => surface.blocking || surface.verdict === "can-block").map((surface) => surface.id);
+	const envSurfaces = surfaces.filter((s) => typeof s.meta?.unprovidedVars === "string" && s.meta.unprovidedVars !== "");
+
+	// The allowlist removes a surface from the *unexpected* findings only. Everything accepted is
+	// listed in checks.acceptedGates and stays visible in canBlock and in its own surface row.
+	const knownGates = resolveKnownGates(options.knownGates);
+	const unexpected = (id: string): boolean => !isKnownGate(id, knownGates);
+	const acceptedGates = [...new Set<string>([...canBlock, ...envSurfaces.map((s) => s.id)].filter((id) => !unexpected(id)))].sort();
+
+	const unexpectedCanBlock = canBlock.filter(unexpected);
+	const unexpectedPluginGates = codexPluginGates.filter(unexpected);
+	const unexpectedEnv = envSurfaces.filter((s) => unexpected(s.id));
 
 	const findings: string[] = [];
-	if (canBlock.length) findings.push(`can-block surface(s): ${canBlock.join(", ")}`);
+	if (unexpectedCanBlock.length) findings.push(`can-block surface(s): ${unexpectedCanBlock.join(", ")}`);
 	if (blockHint) findings.push("a probe emitted a block/deny decision");
 	if (contract.status === "duplicate") findings.push("knowledge contract marker block appears more than once");
 	if (contract.status === "missing") findings.push("knowledge contract marker block missing on an installed surface");
@@ -875,6 +1147,11 @@ export function buildHookReport(surfaces: HookSurface[], probes: HookProbeResult
 	if (knowledgeGuard === "can-block") findings.push("knowledge-guard is can-block (must be fail-open)");
 	if (contract.stopGate === "present") findings.push("a blocking Stop/hook config was installed by us");
 	if (codexTrust === "warn") findings.push("codex hooks.json changed after the trusted_hash record; re-trust required");
+	if (unexpectedPluginGates.length) findings.push(`codex plugin Stop/SessionEnd gate(s): ${unexpectedPluginGates.join(", ")}`);
+	if (unexpectedEnv.length) {
+		const detail = unexpectedEnv.map((s) => `${s.id} (${String(s.meta?.unprovidedVars)})`).join(", ");
+		findings.push(`hook command interpolates a host-unprovided variable: ${detail}`);
+	}
 
 	const checks: HookAuditChecks = {
 		contractBlock: contract.status,
@@ -883,8 +1160,10 @@ export function buildHookReport(surfaces: HookSurface[], probes: HookProbeResult
 		knowledgeGuard,
 		stopGateInstalledByUs: contract.stopGate,
 		codexTrust,
+		codexPluginHooks: codexPluginSurfaces.length,
 		canBlockCount: canBlock.length,
 		findings,
+		acceptedGates,
 	};
 
 	return {
@@ -906,10 +1185,11 @@ export function formatHookReport(report: HookAuditReport): string {
 	const checks = report.checks;
 	const lines: string[] = [
 		`hooks: ${report.scanned} surface(s) · ${report.canBlock.length} can-block · ${report.failOpen.length} fail-open · ${report.notProbed.length} not probed`,
-		`checks: contract=${checks.contractBlock} · inject=${checks.knowledgeInject} · guard=${checks.knowledgeGuard} · stopGate=${checks.stopGateInstalledByUs} · codexTrust=${checks.codexTrust}`,
+		`checks: contract=${checks.contractBlock} · inject=${checks.knowledgeInject} · guard=${checks.knowledgeGuard} · stopGate=${checks.stopGateInstalledByUs} · codexTrust=${checks.codexTrust} · codexPlugins=${checks.codexPluginHooks}`,
 		`verdict: ${report.ok ? "ok" : "NOT OK"} · timeout ${report.timeoutMs}ms · home ${report.home}`,
 	];
 	for (const finding of checks.findings) lines.push(`finding: ${finding}`);
+	for (const gate of checks.acceptedGates ?? []) lines.push(`accepted gate: ${gate}`);
 	for (const surface of report.surfaces) {
 		const probe = report.probes.find((p) => p.id === surface.id);
 		const probeText = probe ? `${probe.status}${probe.status === "skipped" ? "" : ` exit=${probe.exitCode ?? "?"} ${probe.durationMs}ms`}` : "no probe";
