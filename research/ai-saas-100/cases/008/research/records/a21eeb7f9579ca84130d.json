@@ -1,0 +1,194 @@
+{
+  "evidence_id": "r008-a21eeb7f9579ca84130d",
+  "source_url": "https://fireflies.ai/pricing",
+  "publisher": "fireflies.ai",
+  "retrieved_at": "2026-09-20T21:35:26.073752+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://fireflies.ai/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "cases/008/research/captures/a21eeb7f9579ca84130d.html",
+  "capture_sha256": "8f8f6f804211e173ce7a2726db66118b60821ad8348492af00d72cb2708c223f",
+  "bytes_saved": 262144,
+  "title": "Pricing & Plans | Fireflies.ai AI App for Smarter Meeting Notes",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Fireflies.ai Pricing & Plans | Fireflies.ai offers flexible AI App plans for an efficient AI Assistant, helping you capture and organize meetings effortlessly and stay productive."
+    },
+    {
+      "key": "application-name",
+      "value": "Fireflies.ai"
+    },
+    {
+      "key": "og:title",
+      "value": "Pricing & Plans | Fireflies.ai AI App for Smarter Meeting Notes"
+    },
+    {
+      "key": "og:description",
+      "value": "Fireflies.ai Pricing & Plans | Fireflies.ai offers flexible AI App plans for an efficient AI Assistant, helping you capture and organize meetings effortlessly and stay productive."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Fireflies.ai"
+    }
+  ],
+  "text": "Pricing & Plans | Fireflies.ai AI App for Smarter Meeting Notes\nNEW\nMeet Email Assistant: Your inbox triaged and replies auto-drafted.\nSee Now\nProduct\nSolutions\nIntegration\nResources\nEnterprise\nPricing\nLogin\nRequest demo\nGet Started\nGet Started\nSupercharge\nYour Meetings\nFlexible plans for teams of all sizes. Upgrade to get unlimited transcripts, summaries, and video recordings.\nMonthly\nAnnual\nSave up to 44%\nFree\nFor individuals starting out\n$0\n$0\nFree forever\nGet Started\nUnlimited transcription*\nLimited AI summaries\n400 mins of storage/team\n20 AI credits\nKey Features\nZoom, GMeet, Teams,\n+more\nTranscription in 100+ languages\nReal-time notes & live transcriptions\nMeeting search\nAskFred: AI assistant\nUpload audio/video file\nDesktop app (\nDownload\n)\nMobile app (\nAndroid\n,\niOS\n)\nChrome extension\nAPI access\nPro\nFor professional individuals and small teams\n$18\n$10\nper seat / month, billed annually\nGet Started\nUnlimited transcription\nUnlimited AI summaries\n8,000 mins of storage/seat\n20 AI credits\nEverything in Free, plus..\nVideo recording\nDownload transcripts, summaries, recordings\nPersonal Assistant\nEmail Assistant\nAI Skills\nVoice Agents\nAction items & task Manager\nUnlimited integrations\nRate Limits\nMOST POPULAR\nBusiness\nFor fast growing businesses\n$29\n$19\nper seat / month, billed annually\nGet Started\nUnlimited transcription\nUnlimited AI summaries\nUnlimited storage\n30 AI credits\nEverything in Pro, plus..\nMulti-language Mode\nConversation intelligence\nTeam analytics (for admins)\nPublic meeting access\nUser groups\nRate Limits\nEnterprise\nFor large scale enterprises\n$39\n$39\nANNUAL ONLY\nper seat / month, billed annually\nContact Us\nUnlimited transcription\nUnlimited AI summaries\nUnlimited storage\n50 AI credits\nEverything in Business, plus..\nRules engine\nSSO + SCIM\nAudit Logs (\nAPI\n)",
+  "links": [
+    {
+      "href": "/_next/static/chunks/webpack-49d8c932e8d7816d.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/logo-full-color.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://fireflies.ai/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fireflies.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/fr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/pt-BR/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico?22cbfa51f42d5e95",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.png?8ca41d3ade63e552",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?81a7679a0c7e6094",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fireflies.ai/email-assistant",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "#request-demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/plan?ref=free&utm_content=pricing_hero",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits#ai-credit-pricing",
+      "rel": null
+    },
+    {
+      "href": "/integrations/videoconferencing",
+      "rel": null
+    },
+    {
+      "href": "https://fireflies.ai/desktop",
+      "rel": null
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=ai.fireflies.mobile&utm_source=landing&pli=1",
+      "rel": null
+    },
+    {
+      "href": "https://apps.apple.com/us/app/fireflies-ai-notetaker/id6463164203?utm_source=landing",
+      "rel": null
+    },
+    {
+      "href": "https://chromewebstore.google.com/detail/fireflies-ai-meeting-note/meimoidfecamngeoanhnpdjjdcefoldn?utm_source=landing",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/plan?ref=pro&utm_content=pricing_hero",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits#ai-credit-pricing",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/hc/en-us/articles/360020248558-Learn-about-transcription-credits-storage-and-rate-limits-for-meetings",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/plan?ref=business&utm_content=pricing_hero",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits#ai-credit-pricing",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/hc/en-us/articles/360020248558-Learn-about-transcription-credits-storage-and-rate-limits-for-meetings",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits#ai-credit-pricing",
+      "rel": null
+    },
+    {
+      "href": "https://docs.fireflies.ai/graphql-api/query/audit-events#audit-events",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.123961
+}

@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-01bf3064065c027d075c",
+  "source_url": "https://ideogram.ai/",
+  "retrieved_at": "2026-09-20T21:00:45.226353+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 403: Forbidden",
+  "elapsed_seconds": 0.0788
+}

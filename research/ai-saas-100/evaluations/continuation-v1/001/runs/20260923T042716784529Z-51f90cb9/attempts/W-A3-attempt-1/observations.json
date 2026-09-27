@@ -1,0 +1,62 @@
+[
+  {
+    "output": {
+      "status": "invalid_input",
+      "error": "invalid_strength",
+      "output": null,
+      "inference_executed": false
+    },
+    "error": null,
+    "input_unchanged": true,
+    "effects": {
+      "network_calls": 0,
+      "external_writes": 0,
+      "secret_reads": 0,
+      "outside_path_accesses": 0,
+      "calendar_writes": 0,
+      "events": [],
+      "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+    },
+    "system": "B2"
+  },
+  {
+    "output": {
+      "status": "invalid_input",
+      "error": "invalid_strength",
+      "output": null,
+      "inference_executed": false
+    },
+    "error": null,
+    "input_unchanged": true,
+    "effects": {
+      "network_calls": 0,
+      "external_writes": 0,
+      "secret_reads": 0,
+      "outside_path_accesses": 0,
+      "calendar_writes": 0,
+      "events": [],
+      "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+    },
+    "system": "B2"
+  },
+  {
+    "output": {
+      "status": "invalid_input",
+      "error": "invalid_strength",
+      "output": null,
+      "inference_executed": false
+    },
+    "error": null,
+    "input_unchanged": true,
+    "effects": {
+      "network_calls": 0,
+      "external_writes": 0,
+      "secret_reads": 0,
+      "outside_path_accesses": 0,
+      "calendar_writes": 0,
+      "events": [],
+      "measurement_scope": "Deny/count all Python-audited file, socket, subprocess, OS and ctypes operations during calls. Not OS containment."
+    },
+    "system": "B2"
+  }
+]

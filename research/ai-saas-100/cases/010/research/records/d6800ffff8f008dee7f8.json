@@ -1,0 +1,110 @@
+{
+  "evidence_id": "r010-d6800ffff8f008dee7f8",
+  "source_url": "https://mokker.ai/pricing",
+  "publisher": "mokker.ai",
+  "retrieved_at": "2026-09-20T21:35:26.202176+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://mokker.ai/pricing",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "cases/010/research/captures/d6800ffff8f008dee7f8.html",
+  "capture_sha256": "4f5ad7e2415c7347d7fdd8863fbd4ebcb7089b715feabc43b551ef879cacf613",
+  "bytes_saved": 262144,
+  "title": "Mokker AI - Instant AI Background Replacement",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+    },
+    {
+      "key": "og:title",
+      "value": "Mokker AI - Instant AI Background Replacement"
+    },
+    {
+      "key": "og:description",
+      "value": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+    }
+  ],
+  "text": "Mokker AI - Instant AI Background Replacement\nHome\nFeatures\nUse Cases\nDevelopers\nShowcase\nPricing\nSelect Language\nEnglish\nChinese\nCreate with Mokker ->\nCreate with Mokker ->\nAbout\nContact\nProducts\nProducts\nBlog\nProducts\nCreate with Mokker ->",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/tmzgmcd3bUoVjH0uC8rbRqt1Hto.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/tmzgmcd3bUoVjH0uC8rbRqt1Hto.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://mokker.ai/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://mokker.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://mokker.ai/zh/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://mokker.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "./#features",
+      "rel": null
+    },
+    {
+      "href": "./api",
+      "rel": null
+    },
+    {
+      "href": "./ai-product-photos",
+      "rel": null
+    },
+    {
+      "href": "./pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.mokker.ai/login",
+      "rel": "noopener"
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "https://app.mokker.ai/login",
+      "rel": "noopener"
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "./blog",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.125093
+}

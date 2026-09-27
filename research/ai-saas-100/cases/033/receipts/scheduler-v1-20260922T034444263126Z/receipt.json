@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "run_id": "033-scheduler-v1-20260922T034444263126Z",
+  "system": "B2",
+  "status": "completed",
+  "started_at": "2026-09-22T03:44:44.263362+00:00",
+  "ended_at": "2026-09-22T03:44:44.372454+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-I",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/run.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/implementation/workflow.py",
+    "sha256": "846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825"
+  },
+  "fixtures": {
+    "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/oracles.json",
+    "sha256": "85f2bd272b32323cb7d4d533e83852d0967f0c04792eba27b05470736ec22bc7"
+  },
+  "input_bundle": {
+    "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/inputs.json",
+    "sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5"
+  },
+  "outputs": [
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/stdout.json",
+      "sha256": "5135543867a60b5cf319f1912150d8fdfc13bed5f187a626e7a9eae97616dc20"
+    },
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "mode": "exposed_local_scheduler_regression",
+    "network": false,
+    "model_calls": 0,
+    "timeout_seconds": 20,
+    "source_bundle": {
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/source-bundle.json",
+      "sha256": "b56716aa6409f153050fb4ff344c98941494cb43fc021fb479776ee449f5ae48"
+    },
+    "runner": {
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/run.py",
+      "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+    },
+    "checker": {
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/checks.py",
+      "sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b"
+    },
+    "orchestrator": {
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/execute.py",
+      "sha256": "e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441"
+    },
+    "interface_transformation": "Direct schedule(request, node_limit=...) call, bound in runner source"
+  },
+  "baseline_id": null,
+  "exit_status": 0,
+  "test_results": [
+    {
+      "test_id": "S001",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S002",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S003",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S004",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S005",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S006",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S007",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S008",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S009",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S010",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S011",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S012",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S013",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S014",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S015",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S016",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S017",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S018",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S019",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S020",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S021",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S022",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S023",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S024",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S025",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S026",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S027",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S028",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S029",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S030",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S031",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S032",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S033",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S034",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S035",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S036",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S037",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S038",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S039",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S040",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S041",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S042",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S043",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S044",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S045",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S046",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S047",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S048",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S049",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S050",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S051",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S052",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S053",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S054",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S055",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S056",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S057",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S058",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S059",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S060",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S061",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S062",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S063",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S064",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S065",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S066",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S067",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S068",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S069",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S070",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S071",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S072",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S073",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S074",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S075",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S076",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S077",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S078",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S079",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S080",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S081",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S082",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S083",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S084",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S085",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S086",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "S087",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-overlap",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-missing_minutes",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-invented_task",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-duplicate_work",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-calendar_write_claim",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [
+    {
+      "value": null,
+      "unit": "points",
+      "classification": "unknown",
+      "category": "semantic_quality",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "latency": {
+    "value": 0.10911599999999999,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "latency",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "Generic-model comparison not executed",
+    "Hidden evaluation missing",
+    "Original product not observed"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible fixtures and evaluator report. No hidden-suite claim."
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "product_acceptance": false,
+  "original_product_status": "not_observed"
+}

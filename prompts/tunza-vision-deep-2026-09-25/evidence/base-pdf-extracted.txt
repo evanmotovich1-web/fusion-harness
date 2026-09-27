@@ -1,0 +1,69 @@
+PAGES	2
+
+----- PDF PAGE 1 -----
+Tunza is being designed to help people get the care they need: understand what is happening,
+choose the next step, and make sure it happens. A family needs clear advice. A community health
+promoter, a health worker serving local households, needs to know who needs help. The clinic
+needs enough information to respond.
+Kenya is connecting health services and improving how they share records. But information alone
+does not get someone to a clinic, confirm a place for them, or bring a test result back. Tunza would
+help connect those steps.
+WHO's 2025 Kenya report cites an estimated 355 maternal deaths per 100,000 live births and a
+92% shortage of doctors. These figures describe Kenya's health challenges, not Tunza's results.
+When care is stretched, getting people to the right service without delay matters even more.
+The Ministry of Health reported 10,277 facilities connected to national systems in January 2026 and
+more than 107,000 community health promoters deployed in May. Tunza would need to work with
+this network; we do not yet have the access or agreements to claim that connection.
+The Ministry's March 2026 work on referral policy calls for better communication and clearer
+responsibility between services. It also covers moving test samples and sharing specialist
+expertise. Working with local health workers early would help Tunza fit the way care is actually
+delivered.
+Tunza could also help arrange for a blood sample to reach the right lab, get results back to a doctor,
+or find a clinic with the vaccine someone needs. The aim is to connect people, samples, results,
+and services. Availability would need confirmation from the provider.
+A nearby address is not enough. Can the clinic provide the service? Can the person get there? Has
+the clinic agreed to receive them? A request, an acceptance, an arrival, and completed care are
+separate steps. Each needs confirmation, with someone responsible for following up.
+Today, the public demo offers English and Kiswahili screens, guided questions, and a sample
+referral journey saved on the user's device. Its assessment rules have not been proven safe for real
+care. Shared records, real clinic responses, and follow-up are still things we intend to build and test.
+Families would see warning signs and clear instructions. Health workers would see who needs
+attention and follow-up. Clinics would receive a useful summary and could accept a request,
+suggest another service, or ask a question. Each person would see only the information they need.
+1
+
+----- PDF PAGE 2 -----
+JEV / TypeSafe is our planned set of rules for how Tunza uses AI.
+The AI would ask useful questions and flag missing or unclear information.
+Safety rules approved by doctors would always take priority.
+If the AI cannot answer or the connection fails, Tunza would show how to get help.
+Each decision would be recorded so we can find mistakes and improve.
+Someone needing emergency care must not wait for an app notification. Tunza would flag
+unanswered requests and show the health worker how to get help. Questions should never delay
+urgent care, and a guess should never look like a confirmed fact.
+We would start with one small problem chosen with local doctors and health workers. They would
+help define the safety rules, the information needed, and which mistakes are unacceptable. Before
+a trial, we would agree on what success looks like and when to stop.
+At first, Tunza would run alongside normal care without changing it. Doctors would compare its
+suggestions with actual decisions and review disagreements. Only after passing agreed checks
+would we consider a small, supervised trial. Someone would be responsible for watching for
+problems and acting on them.
+Tests would check missed urgent cases, unnecessary referrals, warning signs, and whether the AI
+admits uncertainty. English and Kiswahili would be tested separately. We would keep some cases
+out of training so the final test checks more than what the AI has already been taught.
+We would also check whether the next step happened: did the person receive care, did the lab get
+the sample, and did the doctor receive the result? Follow-up would include people who never
+completed their referral, not just those who return to the app. If we cannot find out what happened,
+the result stays unknown.
+A wrong assessment, failed transport, and outdated clinic information need different fixes. We
+would use reviewed cases to identify the problem before changing the AI. Patient records would be
+used for training only with permission and review.
+We would test existing AI models before training them further. Any training would need a clear
+purpose, consistent checks, a saved record, and a spending limit. Progress would mean better
+decisions and completed next steps, not simply more computing power.
+People will not use an app that makes care harder. Tunza is being designed to make it as easy as
+possible: fewer buttons, less typing, and clear next steps. We want people to enjoy using it and get
+what they need without extra effort.
+We will win by moving faster, keeping things simple, and learning from every failure to make Tunza
+better.
+2

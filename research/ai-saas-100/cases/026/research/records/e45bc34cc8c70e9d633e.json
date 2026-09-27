@@ -1,0 +1,58 @@
+{
+  "evidence_id": "r026-e45bc34cc8c70e9d633e",
+  "source_url": "https://persana.ai/integrations",
+  "publisher": "persana.ai",
+  "retrieved_at": "2026-09-20T21:35:37.399545+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://persana.ai/integrations",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "cases/026/research/captures/e45bc34cc8c70e9d633e.html",
+  "capture_sha256": "bf93c7b03aefa7884905b0b2690dbbbc914f358127994f66288dec027d1696b4",
+  "bytes_saved": 262144,
+  "title": "Persana AI Integrations with Other Tools",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Checkout Persana AI integrations with other tools to streamline workflows, enhance sales prospecting, and improve efficiency with seamless automation."
+    },
+    {
+      "key": "og:title",
+      "value": "Persana AI Integrations with Other Tools"
+    },
+    {
+      "key": "og:description",
+      "value": "Checkout Persana AI integrations with other tools to streamline workflows, enhance sales prospecting, and improve efficiency with seamless automation."
+    }
+  ],
+  "text": "Persana AI Integrations with Other Tools",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://persana.ai/integrations",
+      "rel": "canonical"
+    }
+  ],
+  "elapsed_seconds": 0.309687
+}

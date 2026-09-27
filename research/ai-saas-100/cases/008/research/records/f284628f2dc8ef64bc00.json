@@ -1,0 +1,234 @@
+{
+  "evidence_id": "r008-f284628f2dc8ef64bc00",
+  "source_url": "https://fireflies.ai/integrations",
+  "publisher": "fireflies.ai",
+  "retrieved_at": "2026-09-20T21:35:26.099518+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://fireflies.ai/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "cases/008/research/captures/f284628f2dc8ef64bc00.html",
+  "capture_sha256": "128f60af6d3ea970fafc1e60c5c782af58b0f59389eec6c0f0fdcf0f4ff3d977",
+  "bytes_saved": 262144,
+  "title": "Fireflies.ai Integrations | AI Apps for Automating Work",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Connect Fireflies.ai AI Assistant to the apps you already use with powerful integrations that sync notes, tasks, crm entries and updates automatically."
+    },
+    {
+      "key": "application-name",
+      "value": "Fireflies.ai"
+    },
+    {
+      "key": "og:title",
+      "value": "Fireflies.ai Integrations | AI Apps for Automating Work"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect Fireflies.ai AI Assistant to the apps you already use with powerful integrations that sync notes, tasks, crm entries and updates automatically."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Fireflies.ai"
+    }
+  ],
+  "text": "Fireflies.ai Integrations | AI Apps for Automating Work\nNEW\nMeet Email Assistant: Your inbox triaged and replies auto-drafted.\nSee Now\nProduct\nSolutions\nIntegration\nResources\nEnterprise\nPricing\nLogin\nRequest demo\nGet Started\nGet Started\nSeamless Integrations With\n100+ Apps You Love\nAutomatically send your meeting notes, deal information, candidates to your work apps.\nSearch\nSkyvia\nLatenode\nMindStudio\nKeragon\nPopular Apps\nEasily transcribe and summarize your meetings from most popular apps.\nGoogle Meet\nCapture, Transcribe, and Organize Google Meet Conversations Seamlessly\nDropbox\nSeamlessly Sync and Retrieve Meeting Notes with Dropbox and Fireflies.ai\nHubspot\nAutomate Your CRM Workflow with HubSpot and Fireflies.ai\nMicrosoft Teams\nRecord, transcribe, search Teams meetings\nSalesforce\nSeamlessly Sync Meeting Notes with Salesforce and Fireflies.ai\nZoom\nAutomate Zoom Transcriptions with Fireflies.ai for Effortless Note-Taking\nSlack\nSend transcripts, recordings, notes from meetings to a Slack channel\nSearch\nAll Categories\nCalendaring\nApplicant Tracking System\nNote Taking\nEmail\nCustom\nProject Management\nVideoconferencing\nStorage\nAudio Recording\nCollaboration\nDialer\nCRM\nCalendaring\nApplicant Tracking System\nBambooHR\nRevolutionize Your Hiring Workflow with Fireflies.ai and BambooHR\nGreenhouse\nEnhance Your Hiring Process Today with Fireflies and Greenhouse\nLever\nEnhance Your Recruitment Process Today with Fireflies.ai and Lever Integration\nNote Taking\nOneNote\nStay Organized with Fireflies.ai and OneNote\nGoogle Docs\nKeep Your Meetings Organized Today with Fireflies.ai and Google Docs\nNotion\nKeep Your Meetings Organized Today with Fireflies.ai and Notion",
+  "links": [
+    {
+      "href": "/_next/static/chunks/webpack-49d8c932e8d7816d.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/logo-full-color.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://fireflies.ai/integrations",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fireflies.ai/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/es/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/de/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/fr/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/pt-BR/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/integrations",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico?22cbfa51f42d5e95",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.png?8ca41d3ade63e552",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?81a7679a0c7e6094",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fireflies.ai/email-assistant",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "#request-demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "/integrations/videoconferencing/google-meet",
+      "rel": null
+    },
+    {
+      "href": "/integrations/storage/dropbox",
+      "rel": null
+    },
+    {
+      "href": "/integrations/crm/hubspot",
+      "rel": null
+    },
+    {
+      "href": "/integrations/videoconferencing/microsoft-teams",
+      "rel": null
+    },
+    {
+      "href": "/integrations/crm/salesforce",
+      "rel": null
+    },
+    {
+      "href": "/integrations/audio-recording/zoom",
+      "rel": null
+    },
+    {
+      "href": "/integrations/collaboration/slack",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/integrations/calendaring",
+      "rel": null
+    },
+    {
+      "href": "/integrations/applicant-tracking-system",
+      "rel": null
+    },
+    {
+      "href": "/integrations/note-taking",
+      "rel": null
+    },
+    {
+      "href": "/integrations/email",
+      "rel": null
+    },
+    {
+      "href": "/integrations/custom",
+      "rel": null
+    },
+    {
+      "href": "/integrations/project-management",
+      "rel": null
+    },
+    {
+      "href": "/integrations/videoconferencing",
+      "rel": null
+    },
+    {
+      "href": "/integrations/storage",
+      "rel": null
+    },
+    {
+      "href": "/integrations/audio-recording",
+      "rel": null
+    },
+    {
+      "href": "/integrations/collaboration",
+      "rel": null
+    },
+    {
+      "href": "/integrations/dialer",
+      "rel": null
+    },
+    {
+      "href": "/integrations/crm",
+      "rel": null
+    },
+    {
+      "href": "/integrations/applicant-tracking-system/bamboohr",
+      "rel": null
+    },
+    {
+      "href": "/integrations/applicant-tracking-system/greenhouse",
+      "rel": null
+    },
+    {
+      "href": "/integrations/applicant-tracking-system/lever",
+      "rel": null
+    },
+    {
+      "href": "/integrations/note-taking/onenote",
+      "rel": null
+    },
+    {
+      "href": "/integrations/note-taking/google-doc",
+      "rel": null
+    },
+    {
+      "href": "/integrations/note-taking/notion",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.654264
+}

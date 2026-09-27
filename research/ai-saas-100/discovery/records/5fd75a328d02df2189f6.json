@@ -1,0 +1,161 @@
+{
+  "evidence_id": "web-5fd75a328d02df2189f6",
+  "source_url": "https://tldv.io/",
+  "retrieved_at": "2026-09-20T21:00:36.299322+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://tldv.io/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/5fd75a328d02df2189f6.html",
+  "capture_sha256": "fa9366b0360679d5189ef700947c002a49303a6b7c8f30407504b7264fa7126b",
+  "bytes_saved": 262144,
+  "title": "tl;dv - AI Meeting Notetaker for Zoom, Google Meet & Teams",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "AI meeting notes — record, transcribe, and summarize meetings automatically. tl;dv turns Zoom, Google Meet, and Microsoft Teams calls into actionable insights with AI-powered summaries."
+    },
+    {
+      "key": "og:title",
+      "value": "tl;dv - AI Meeting Notetaker for Zoom, Google Meet & Teams"
+    },
+    {
+      "key": "og:description",
+      "value": "AI meeting notes — record, transcribe, and summarize meetings automatically. tl;dv turns Zoom, Google Meet, and Microsoft Teams calls into actionable insights with AI-powered summaries."
+    }
+  ],
+  "text": "tl;dv - AI Meeting Notetaker for Zoom, Google Meet & Teams\nProduct & Integrations\nUsecases\ntl;dv for Sales\nPricing\nLogin\nBook a Demo\nGet tl;dv - Free forever\nLogin\nBook a Demo\nThe AI Notetaker built for Team Collaboration\ntl;dv is where your team captures knowledge, finds answers, and automates meeting workflows. Any meeting insight, instantly sent to your favourite apps.\nGet tl;dv - Free forever\nBook a Demo\n4.7\n(450)\n2M+\nusers\nGDPR & SOC2\n✅\nNO BOT REQUIRED\nAction Items\nProduct demo\n01/15/26\nDiscovery call\n02/08/26\nEngineering Sync\n03/12/26\nSprint Planning\n04/20/26\nDaily Standup\n05/05/26\n\"The forefront of AI-driven meeting Intelligence\"\nAs seen in",
+  "links": [
+    {
+      "href": "https://tldv.io/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://tldv.io/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/ja/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/es/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/fr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/de/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/ko/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/ru/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/pt-br/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/tr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/it/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/uk/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/pl/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://tldv.io/",
+      "rel": "alternate"
+    },
+    {
+      "href": "/faviconV2.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/fonts/work-sans-600.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/work-sans-400.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.tldv.io",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.cr-relay.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/teams/sales/sales-managers/",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/app/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/app/login",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/contact-sales?utm_source=landing-header",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/app/login?cta=header-get-tldv",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/app/login",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/contact-sales?utm_source=landing-header",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/app/login?cta=large-get-tldv",
+      "rel": null
+    },
+    {
+      "href": "https://tldv.io/contact-sales?utm_source=landing-hero",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/tl-dv/reviews",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.1418
+}

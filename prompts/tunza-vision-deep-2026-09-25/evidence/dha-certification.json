@@ -1,0 +1,21 @@
+{
+  "id": "dha-certification",
+  "requested_url": "https://certification.dha.go.ke/",
+  "accessed_utc": "2026-09-25T02:52:38.252284+00:00",
+  "status": 200,
+  "final_url": "https://certification.dha.go.ke/",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Date": "Fri, 25 Sep 2026 02:52:38 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Content-Length": "4480",
+    "Connection": "close",
+    "accept-ranges": "bytes",
+    "cache-control": "no-cache, no-store, must-revalidate",
+    "last-modified": "Wed, 23 Sep 2026 05:58:29 GMT",
+    "etag": "W/\"1060425-4480-2026-09-23T05:58:29.885Z\""
+  },
+  "bytes": 4480,
+  "sha256": "cadf3b556d70afeba5fc5fe99bb0dbbf72db9815ff044a9f811bbdd0e43df556",
+  "file": "dha-certification.html"
+}

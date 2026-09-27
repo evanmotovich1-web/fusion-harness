@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "case_id": "021",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/021/tests/specification.json",
+  "specification_sha256": "6d0047f9adea5fd9a428942e8c6d351a4df0c19d5f4cfde135b2df688cffbd42",
+  "assets": [
+    {
+      "path": "cases/021/tests/assets/avatar.png",
+      "sha256": "8c29ae6cb89a5132a708f95a8e6bb2e3af919c10a8ae64a359499eace4367b1c",
+      "bytes": 4767
+    },
+    {
+      "path": "cases/021/tests/assets/corrupt-image.png",
+      "sha256": "2ac7b534f302171d3db3705592501026e79fbb2b93a6e01cd8a8c5107a2316c2",
+      "bytes": 10
+    },
+    {
+      "path": "cases/021/tests/assets/product-0-mask.png",
+      "sha256": "aed4103d5e8439771299c74b6acb7ee89f7fb3ba3db8f7286fcecb82671b1953",
+      "bytes": 974
+    },
+    {
+      "path": "cases/021/tests/assets/product-0.png",
+      "sha256": "a8b58dc9f6da6a16d1c26a7b7fe1500b834726e2e12f15dc8b5426ce16e2532e",
+      "bytes": 4337
+    },
+    {
+      "path": "cases/021/tests/assets/product-1-mask.png",
+      "sha256": "7cf3fe68af766b52e809266732e6c6840f35c872fa58ffc8ca8c204483433156",
+      "bytes": 981
+    },
+    {
+      "path": "cases/021/tests/assets/product-1.png",
+      "sha256": "30e2fddaaad3c764b1e6608dd6721f56b2fcf15d970e88591828ff9f67299c02",
+      "bytes": 4319
+    },
+    {
+      "path": "cases/021/tests/assets/product-2-mask.png",
+      "sha256": "cfb99d64984e223984f230ec5604d900469ac21cff10558baeec43cd72ce0c84",
+      "bytes": 983
+    },
+    {
+      "path": "cases/021/tests/assets/product-2.png",
+      "sha256": "b1f2727c2a48a82218a6d22c4b85649b6b2817b53e3116345a71950343655064",
+      "bytes": 4312
+    }
+  ],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

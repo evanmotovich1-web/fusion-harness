@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-95d40c0bbe1d5c681841",
+      "source_url": "https://www.codium.ai/",
+      "final_url": "https://www.qodo.ai/",
+      "publisher": "www.codium.ai",
+      "retrieved_at": "2026-09-20T21:00:55.314044+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Code Review – Qodo: Deploy with confidence"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Qodo is an AI code review tool giving teams deep codebase context to move faster and improve code quality, with 15+ agentic workflows for IDEs, PRs and security."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Qodo | AI Agents for Code, Review & Workflows"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Qodo is an agentic code review and integrity platform for improving code quality at every stage."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Qodo"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Code Review – Qodo: Deploy with confidence\nSkip to content\nLog in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit"
+        },
+        {
+          "locator": "text characters 65:377",
+          "excerpt": " in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit integration\nFull codebase intelligence\nContext Engine\nCodebase Quality\nRules, standards, and code health\nAgentic Toolbox\nA CLI-powered"
+        },
+        {
+          "locator": "text characters 521:833",
+          "excerpt": "iews\nDocs\nGet started with Qodo\nBlog\nTech content and product updates\nAI Code Review Benchmark\nMeasuring issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassado"
+        },
+        {
+          "locator": "text characters 626:938",
+          "excerpt": "issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassador Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love h"
+        },
+        {
+          "locator": "text characters 834:1151",
+          "excerpt": " Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love hearing from you\nPricing\nEnterprise\nLog in\nLog in\nBook a Demo\nStart Trial\n904.2K\n648.6K\n13.1K\nCode review for agents.\nGovernance for humans.\nShip trusted software at agent speed, reduce review bottlenecks, and hold"
+        },
+        {
+          "locator": "text characters 1452:1764",
+          "excerpt": "trols\nDeterministic, enforceable rules every developer, reviewer, and AI agent follows.\nGive coding agents a quality counterpart\nMake review, organizational context and rules available wherever coding agents work.\nBring independent review across the SDLC\nHigh-precision multi-agent code review across the SDLC, w"
+        }
+      ],
+      "capture_path": "discovery/captures/95d40c0bbe1d5c681841.html",
+      "capture_sha256": "bb777b3e11ccdae6114d8298316c29ce0812d93cc0d44f45f0261860b97ed202",
+      "record_path": "discovery/records/95d40c0bbe1d5c681841.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "web-28c2ac4eb25b53b6a0a6",
+      "source_url": "https://www.qodo.ai/",
+      "final_url": "https://www.qodo.ai/",
+      "publisher": "www.qodo.ai",
+      "retrieved_at": "2026-09-20T21:00:55.569934+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Code Review – Qodo: Deploy with confidence"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Qodo is an AI code review tool giving teams deep codebase context to move faster and improve code quality, with 15+ agentic workflows for IDEs, PRs and security."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Qodo | AI Agents for Code, Review & Workflows"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Qodo is an agentic code review and integrity platform for improving code quality at every stage."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Qodo"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Code Review – Qodo: Deploy with confidence\nSkip to content\nLog in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit"
+        },
+        {
+          "locator": "text characters 65:377",
+          "excerpt": " in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit integration\nFull codebase intelligence\nContext Engine\nCodebase Quality\nRules, standards, and code health\nAgentic Toolbox\nA CLI-powered"
+        },
+        {
+          "locator": "text characters 521:833",
+          "excerpt": "iews\nDocs\nGet started with Qodo\nBlog\nTech content and product updates\nAI Code Review Benchmark\nMeasuring issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassado"
+        },
+        {
+          "locator": "text characters 626:938",
+          "excerpt": "issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassador Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love h"
+        },
+        {
+          "locator": "text characters 834:1151",
+          "excerpt": " Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love hearing from you\nPricing\nEnterprise\nLog in\nLog in\nBook a Demo\nStart Trial\n904.2K\n648.6K\n13.1K\nCode review for agents.\nGovernance for humans.\nShip trusted software at agent speed, reduce review bottlenecks, and hold"
+        },
+        {
+          "locator": "text characters 1452:1764",
+          "excerpt": "trols\nDeterministic, enforceable rules every developer, reviewer, and AI agent follows.\nGive coding agents a quality counterpart\nMake review, organizational context and rules available wherever coding agents work.\nBring independent review across the SDLC\nHigh-precision multi-agent code review across the SDLC, w"
+        }
+      ],
+      "capture_path": "discovery/captures/28c2ac4eb25b53b6a0a6.html",
+      "capture_sha256": "bb777b3e11ccdae6114d8298316c29ce0812d93cc0d44f45f0261860b97ed202",
+      "record_path": "discovery/records/28c2ac4eb25b53b6a0a6.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r032-273a1ef80066ef8a198e",
+      "source_url": "https://www.qodo.ai/pricing/",
+      "publisher": "www.qodo.ai",
+      "retrieved_at": "2026-09-20T21:35:37.960265+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.qodo.ai/pricing/",
+      "capture_path": "cases/032/research/captures/273a1ef80066ef8a198e.html",
+      "capture_sha256": "2747905471c066c016798aa48d35ad586327446b531850b371bf38ffdf9e3531",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/032/research/records/273a1ef80066ef8a198e.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Qodo Plans & Pricing | Free to Start"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Learn more about Qodo pricing and plans. You can start for free as an individual \"Developer\", go for \"Teams\" plan for advanced features and collaboration or explore our \"Enterprise\" option for large code bases and all-in-one intelligent coding platform."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Qodo"
+        },
+        {
+          "locator": "text characters 802:3274",
+          "excerpt": " Qodoer\nQodo Ambassador Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love hearing from you\nPricing\nEnterprise\nLog in\nLog in\nBook a Demo\nStart Trial\n904.2K\n648.6K\n13.1K\nCode Quality\nthat\nScales with Your Team\n$.012/credit, pooled across the team\nSwitch packs anytime\nNo annual commitment on Pro Team plan\nNo rate limits\nGet started with unlimited credits\nDesigned for up to 30 users\nPro Team\nExplore Qodo's full code review platform\nPro Team\n$30\nRaise the code quality bar across your team\nstart now\nFree 14 Day Trial\nno credit card\nUnlimited reviews\nUnlimited credits\n~18 Reviews/Mo\n2,500 credits\n~36 Reviews/Mo\n5,000 credits\n~144 Reviews/Mo\n20,000 credits\nSee additional plan options\nAgentic PR code review\nRules system (no limit)\nGit + IDE integrations\nPre-PR review skills\nDashboard & analytics\nEverything in Trial, plus:\nSwitch or add credit packs anytime\nStandard support\nCustomer-set monthly overage cap\nMonthly billing • no commitment\nStrict data retention\nCustom plan\nFor 30+ users\nEnterprise\nDeliver quality and speed across every team and repo\nbook a demo\nEverything in Pro Team, plus:\nSSO / SAML and audit logs\nGovernance analytics dashboard\nAdvanced self-learning\nBYOK (bring your own LLM keys)\nSingle-tenant SaaS or on-prem\nPriority support, dedicated CSM\nCompare plans\nPro Team Plan\nSame as Trial\nEnterprise Plans\ncore\nAgentic PR code review\nPro Team Plan: Included\nEnterprise Plans: Included\nRules system (no limit)\nPro Team Plan: Included\nEnterprise Plans: Included\nGit + IDE integrations\nPro Team Plan: Included\nEnterprise Plans: Included\nShift-left skills\nPro Team Plan: Included\nEnterprise Plans: Included\nStrict data retention\nPro Team Plan: Included\nEnterprise Plans: Included\nadvanced\nSelf-learning system\nPro Team Plan: Not included\nEnterprise Plans: Included\nCross-repo capabilities\nPro Team Plan: Included\nEnterprise Plans: Included\nCustom agentic workflows\nPro Team Plan: Not included\nEnterprise Plans: Included\nGerrit support\nPro Team Plan: Not included\nEnterprise Plans: Included\nAnalytics\nDashboard & Analytics\nPro Team Plan: Included\nEnterprise Plans: Included\nAdvanced Analytics\nPro Team Plan: Not included\nEnterprise Plans: Included\nsecurity & deployment\nSSO / SAML\nPro Team Plan: Not included\nEnterprise Plans: Included\nAudit logs\nPro Team Plan: Not included\nEnterprise Plans: Included\nBYOK (bring your own LLM keys)\nPro Team Plan: Not included\nEnterprise Plans: Included\nSingle-tenant S"
+        },
+        {
+          "locator": "text characters 1506:2058",
+          "excerpt": "dits\nSee additional plan options\nAgentic PR code review\nRules system (no limit)\nGit + IDE integrations\nPre-PR review skills\nDashboard & analytics\nEverything in Trial, plus:\nSwitch or add credit packs anytime\nStandard support\nCustomer-set monthly overage cap\nMonthly billing • no commitment\nStrict data retention\nCustom plan\nFor 30+ users\nEnterprise\nDeliver quality and speed across every team and repo\nbook a demo\nEverything in Pro Team, plus:\nSSO / SAML and audit logs\nGovernance analytics dashboard\nAdvanced self-learning\nBYOK (bring your own LLM key"
+        },
+        {
+          "locator": "text characters 1044:1752",
+          "excerpt": "es with Your Team\n$.012/credit, pooled across the team\nSwitch packs anytime\nNo annual commitment on Pro Team plan\nNo rate limits\nGet started with unlimited credits\nDesigned for up to 30 users\nPro Team\nExplore Qodo's full code review platform\nPro Team\n$30\nRaise the code quality bar across your team\nstart now\nFree 14 Day Trial\nno credit card\nUnlimited reviews\nUnlimited credits\n~18 Reviews/Mo\n2,500 credits\n~36 Reviews/Mo\n5,000 credits\n~144 Reviews/Mo\n20,000 credits\nSee additional plan options\nAgentic PR code review\nRules system (no limit)\nGit + IDE integrations\nPre-PR review skills\nDashboard & analytics\nEverything in Trial, plus:\nSwitch or add credit packs anytime\nStandard support\nCustomer-set monthly "
+        }
+      ]
+    },
+    {
+      "evidence_id": "r032-e70fca0623ded71b5c71",
+      "source_url": "https://www.qodo.ai/features/qodo-git/",
+      "publisher": "www.qodo.ai",
+      "retrieved_at": "2026-09-20T21:35:37.963865+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.qodo.ai/features/qodo-git/",
+      "capture_path": "cases/032/research/captures/e70fca0623ded71b5c71.html",
+      "capture_sha256": "54c242edb3e8c261d576113725427c4b30e0b5747db1adfd2bc3af2b1c5c5a5d",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/032/research/records/e70fca0623ded71b5c71.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Git Plugin | AI Code Review Agent for Confident Commits | Qodo"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Qodo Git Plugin is an AI-powered code review tool that helps developers catch bugs early, auto-generate PR descriptions, and streamline reviews right in Git. Trusted by thousands of developers daily."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Git Plugin"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Qodo"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-7116a5ca057bd2ccc532",
+      "source_url": "https://www.coderabbit.ai/",
+      "final_url": "https://www.coderabbit.ai/",
+      "publisher": "www.coderabbit.ai",
+      "retrieved_at": "2026-09-20T21:00:55.314181+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Code Reviews | CodeRabbit | Try for Free."
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Agentic Change Management | CodeRabbit"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "The future isn't writing code. It's understanding it. Review, prioritize, understand, and secure agent outputs with CodeRabbit."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "CodeRabbit"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Code Reviews | CodeRabbit | Try for Free.\nSkip to content\nIntroducing CodeRabbit Triage. Prioritize PRs by impact.\nExplore Triage\n:\nIntroducing CodeRabbit Triage. Prioritize PRs by impact.\nEnterprise\nTriage\nSecurity\nCustomers\nPricing\nBlog\n"
+        },
+        {
+          "locator": "text characters 358:670",
+          "excerpt": "t\n.\ns\ne\nc\nu\nr\ni\nn\ng\ni\nt\n.\np\nr\ni\no\nr\ni\nt\ni\nz\ni\nn\ng\ni\nt\n.\nreviewing it.\nAI-driven code now outpaces human capacity.\nWe help teams ship code, not surprises.\nTry it for free\n01\nReview\nevery PR automatically\ncoderabbitai\nbot\ncommented 2 minutes ago\nPotential issue\n|\nMajor\nReject expired refresh tokens before issuing"
+        },
+        {
+          "locator": "text characters 2208:2520",
+          "excerpt": "SA-4w2v-q235-vp99\nDetected on PR #482\nFix ready\nSeverity distribution\nAI Deep Scan and Dependencies\n1,999\nfindings\nCritical\n2%\nHigh\n12%\nUnscanned\n40%\nHealthy\n46%\nRead the\nSwiggy\ncase study in a new tab\nRead the\nVisma\ncase study in a new tab\nRead the\nSwiggy\ncase study in a new tab\nRead the\nVisma\ncase study in a "
+        },
+        {
+          "locator": "text characters 2639:2951",
+          "excerpt": " in a new tab\nTrusted by\n17K\ncustomers\n6M\nRepositories\nMost installed AI App on\nGitHub\nGitLab\n“\nWe're using CodeRabbit all over NVIDIA\nJensen Huang\n,\nFounder & CEO\n,\nWatch the NVIDIA customer story in a new tab\n#123 fix(auth)\nrefresh tokens\n#204 feat(api)\nretry queue\n#318 chore(ci)\npin runner\n#421 fix(cache)\nst"
+        },
+        {
+          "locator": "text characters 3639:3951",
+          "excerpt": "e, prioritize, understand, or secure them.\n01 Review\nIndustry-leading AI code reviews.\nWe pioneered AI code reviews and have best-in-class context. Our automated reviews are the central validation layer for AI code.\nacme/platform\n#482\n1\n/\n3\ncoderabbitai\nbot\nreviewed 2m ago\nInvalidate the cache after the mutatio"
+        },
+        {
+          "locator": "text characters 3669:3981",
+          "excerpt": "secure them.\n01 Review\nIndustry-leading AI code reviews.\nWe pioneered AI code reviews and have best-in-class context. Our automated reviews are the central validation layer for AI code.\nacme/platform\n#482\n1\n/\n3\ncoderabbitai\nbot\nreviewed 2m ago\nInvalidate the cache after the mutation.\nThe record updates, but the"
+        }
+      ],
+      "capture_path": "discovery/captures/7116a5ca057bd2ccc532.html",
+      "capture_sha256": "db5f48445e9c13a85022359832c25ce5e7c6843843b7ec97d62c7b0e2c1352e4",
+      "record_path": "discovery/records/7116a5ca057bd2ccc532.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

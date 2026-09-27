@@ -1,0 +1,149 @@
+{
+  "evidence_id": "web-c0cbc29e8ae51300c13c",
+  "source_url": "https://prizmi.ai/",
+  "retrieved_at": "2026-09-20T21:01:54.270604+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://prizmi.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/c0cbc29e8ae51300c13c.html",
+  "capture_sha256": "5e45d10839bd75a8553c959e12e2afafc61baf531b1a98a47e2d5a0c8829d4ae",
+  "bytes_saved": 49873,
+  "title": "Prizmi — Your Proactive AI Assistant Chat bubble Computer Shield with checkmark Lock End-to-end encryption User controls",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Prizmi is your proactive AI assistant that actually does things for you — across all your devices. Manage email, send reminders, organize files, and hundreds more tasks."
+    },
+    {
+      "key": "og:title",
+      "value": "Prizmi — Your Proactive AI Assistant"
+    },
+    {
+      "key": "og:description",
+      "value": "Prizmi is your proactive AI assistant that actually does things for you — across all your devices. Manage email, send reminders, organize files, and hundreds more tasks."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Prizmi"
+    }
+  ],
+  "text": "Prizmi — Your Proactive AI Assistant\nVideos\nDocs\nPricing\nContact\nLog in\nSign up\nYour AI assistant that\nactually does things\nfor you\nPrizmi connects to your phone and computers to handle everyday tasks — proactively.\nStart free — no credit card required.\nStart Free\nSee Plans\nChat from any device; add the desktop app (Linux, Windows, macOS) to let Prizmi work on your computer\nHow it works\nMessage Prizmi\nSend a message through a messaging app. Just tell Prizmi what you need.\nIt works on your devices\nPrizmi carries out the task on your connected computers — or answers directly from the cloud.\nYou stay in control\nApprove actions before they run. Enable or disable any skill. Your data, your rules.\nBuilt with your privacy in mind\nYour data is encrypted\nYour information is encrypted and kept private. We never sell it, and we never use it to train AI.\nEnd-to-end when it matters\nMark anything Prizmi does on your computer as sensitive, and its result is encrypted end-to-end. Only your device can open it. Not even Prizmi can see your data.\nYou are always in control\nYou decide what Prizmi can do and what it can reach. Prizmi does the work for you, but it never clicks Submit, Pay, or Send. You make the final call.\nYour information is encrypted and used only to help you. You're always in control, and you can delete your account and personal data anytime.\nLearn more →\nYour inbox, handled\nPrizmi checks your email every day, identifies the messages that need a reply, and drafts responses in\nyour\nstyle. You just review and send.\nSet it up once and never fall behind on email again.\nCare for your loved ones, effortlessly\nTell Prizmi to remind your mom to take her medications every day. Send good-morning messages to your family. Send or Receive a funny joke every day to brighten your and your loved ones' day.\nStay connected with the people who matter, without the mental load.\nYour coding companion, across devices\nSpot a puzzle or coding question on your work computer? Send Prizmi a message and get the answer on any device. Set up quick command shortcuts to capture your screen, solve a problem, or explain an error, from anywhere.\nYour devices work together so you don't have to switch between them.\nThe web, handled for you\nPrizmi can use your browser just like you would, filling out forms, navigating websites, and getting everything ready. Just tell it what you need, and you make the final call.\nNo more wrestling with clunky websites or tedious forms.\nYour files, organized\nAsk Prizmi to sort your downloads, find that document you saved last week, or clean up your desktop. It works on any of your connected computers: Linux, Windows, or macOS.\nSpend less time searching and more time doing.\nAnd so much more\nFrom weather updates to calendar management, from web research to to-do lists, from stock prices to daily jokes, Prizmi handles hundreds of tasks across all your devices.\nYou are only limited by your imagination.\nReady to let Prizmi handle the busy work?\nStart free, no credit card required — upgrade only if you want more.\nStart Free\nSee Plans\nNot sure yet?\nWatch it handle a few real tasks first.\n© 2026 Prizmi. Your proactive AI assistant, for everyday life.\n|\nPricing\n|\nVideos\n|\nTerms\n|\nPrivacy\n|\nContact\n|\nAI Transparency",
+  "links": [
+    {
+      "href": "/static/agent/images/favicon.578ef47d8b4b.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/static/agent/images/app_icon_400.83f11f3410de.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://prizmi.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/static/agent/css/prizmi.58b8186c4075.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/videos/",
+      "rel": null
+    },
+    {
+      "href": "/docs/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/contact/",
+      "rel": null
+    },
+    {
+      "href": "/accounts/login/",
+      "rel": null
+    },
+    {
+      "href": "/accounts/signup/",
+      "rel": null
+    },
+    {
+      "href": "/accounts/signup/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/docs/#is-prizmi-safe",
+      "rel": null
+    },
+    {
+      "href": "/accounts/signup/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/videos/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/videos/",
+      "rel": null
+    },
+    {
+      "href": "/terms/",
+      "rel": null
+    },
+    {
+      "href": "/privacy/",
+      "rel": null
+    },
+    {
+      "href": "/contact/",
+      "rel": null
+    },
+    {
+      "href": "/ai-transparency/",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/prizmi-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://x.com/prizmi_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@PrizmiAI",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.3058
+}

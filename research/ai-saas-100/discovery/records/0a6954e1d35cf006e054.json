@@ -1,0 +1,80 @@
+{
+  "evidence_id": "web-0a6954e1d35cf006e054",
+  "source_url": "https://www.compose.ai/",
+  "retrieved_at": "2026-09-20T21:00:09.989004+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.compose.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/0a6954e1d35cf006e054.html",
+  "capture_sha256": "379bc58ad39793ccee1ab4c949e7016ee3e80bbfcc6406c78b88d211d19475e6",
+  "bytes_saved": 16124,
+  "title": "Compose AI: Automated Your Writing",
+  "metadata": [],
+  "text": "Compose AI: Automated Your Writing\nPricing\nFeatures\nTestimonials\nFAQ\nSign In\nInstall Extension\nAI-Powered Writing Tool\nGenerate any text using AI. Autocomplete your sentences where you type. With Compose AI, you can write emails, create documents, and chat faster.\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your tools & accelerate your writing.\nPersonalization Of Your Writing Style\nOur platform learns your \"voice\" & suggests personalized phrases.\nUnobtrusive Universal Integration\nOur system seamlessly integrates with your existing platforms & tools.\nLoved by Everybody\nA recent study found that $100k+ earners spend 87% of their workweek typing.\nOur platform is changing that: consider Compose AI as your personal writing assistant.\nFrequently Asked Questions\nWhat is Compose AI?\nCompose AI is a free Chrome plugin that accelerates your writing, lets you use auto complete anywhere, and will decrease your time spent typing.\nWhat is the cost?\nThe plugin is free to use forever, and there is a premium version with some advanced features including use of some of our personalization features.\nHow do I contact support?\nWe can be contacted with any questions at support (at) Compose AI, and we'd love to help you in any way that we can.\nWhat about my privacy?\nWe take your privacy extremely seriously. Your text is only used to provide you with the best autocompletions possible. We will never sell your data. View our privacy policy for more details.\nGuide\nWatch guide\nJobs\nJoin the team\nSocial Links\nTwitter\nLinkedin\nTikTok\nInstagram\nFacebook\nLegal\nPrivacy Policy\nTerms of Use\nCopyright © 2024 Compose AI, INC. All rights reserved.",
+  "links": [
+    {
+      "href": "/compose_logo_128.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/_next/static/css/d8cad556be2f051b.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/d8cad556be2f051b.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/20720a659c31249d.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/20720a659c31249d.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://welcome.compose.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://composeai.notion.site/Work-at-Compose-AI-f9259f8867b74b0ea8431e872ee9908f",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/c_omposeai",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/compose-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.tiktok.com/@composeai",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/c_omposeai",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/getcomposeai",
+      "rel": null
+    },
+    {
+      "href": "https://www.compose.ai/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "https://www.compose.ai/terms-of-service",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2431
+}

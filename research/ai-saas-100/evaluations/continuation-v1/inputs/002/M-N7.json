@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "test_id": "M-N7",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "initial_state": {
+        "gap": 10,
+        "profiles": [
+          {
+            "id": "src",
+            "target": "https://source.invalid/",
+            "area": "https://source.invalid/blog",
+            "dr": 30,
+            "review": "approved"
+          },
+          {
+            "id": "b",
+            "target": "https://b.invalid/",
+            "area": "https://b.invalid/blog",
+            "dr": 35,
+            "review": "approved"
+          }
+        ],
+        "assignments": []
+      },
+      "contract": {
+        "gap": 10,
+        "deadline_seconds": 604800,
+        "matching": "Approved profiles only, exclude self and equal host, absolute DR distance <= gap, order by distance then ID.",
+        "state": "Reuse pending outgoing assignment; forbid reverse pair while pending or reported_local; expire at now >= deadline.",
+        "report": "Explicit boolean approval, in-scope HTTPS page and exact target link with nofollow token. Expired/rejected assignments may be reported. No publication or live verification."
+      },
+      "steps": [
+        {
+          "operation": "check_in",
+          "arguments": {
+            "profile_id": "src"
+          },
+          "clock": 1000,
+          "save_as": "a1"
+        },
+        {
+          "operation": "expire",
+          "arguments": {},
+          "clock": 605800
+        },
+        {
+          "operation": "report_local",
+          "arguments": {
+            "assignment_id": {
+              "$ref": "a1"
+            },
+            "page_url": "https://source.invalid/blog/post",
+            "html": "<a href=\"https://b.invalid/\" rel=\"external nofollow\">B</a>",
+            "approved": true
+          },
+          "clock": 605800
+        }
+      ]
+    }
+  ]
+}

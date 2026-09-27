@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scope": "Evaluator self-tests only using synthetic observations and test doubles",
+  "started_at": "2026-09-22T04:01:01.681566+00:00",
+  "ended_at": "2026-09-22T04:01:01.885898+00:00",
+  "duration_seconds": 0.20434670900000007,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/evaluations/continuation-v1/test_evaluator.py"
+  ],
+  "timeout_seconds": 40,
+  "exit_status": 0,
+  "error": null,
+  "status": "passed",
+  "freeze": {
+    "path": "selftest-receipts/20260922T040101342708Z-d3eb613b/freeze.json",
+    "sha256": "7ee3af4d6cf6aac2d3523e63104117c2ea1c701e1f717f6cfe6ef611dd129500"
+  },
+  "outputs": [
+    {
+      "path": "selftest-receipts/20260922T040101342708Z-d3eb613b/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "selftest-receipts/20260922T040101342708Z-d3eb613b/stderr.bin",
+      "sha256": "265d10d903cdcec58e4993fc170d78ae998954b04a8b59513696cbbf4a84ca7f"
+    }
+  ],
+  "preservation_before": {
+    "path": "selftest-receipts/20260922T040101342708Z-d3eb613b/preservation-before.json",
+    "sha256": "d0681f6322fb27e8b8361d5392361d9b9b54daa9fd067af5fda2f1799f282147"
+  },
+  "outside_evaluator_files_checked": 1105,
+  "outside_evaluator_changed_paths": [],
+  "frozen_artifacts_changed": [],
+  "product_modules_executed": false,
+  "inference_executed": false,
+  "product_acceptance": false,
+  "held_out": false
+}

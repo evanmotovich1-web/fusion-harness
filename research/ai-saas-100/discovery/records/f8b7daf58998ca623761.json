@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-f8b7daf58998ca623761",
+  "source_url": "https://warmer.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.883995+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 403: Forbidden",
+  "elapsed_seconds": 0.0876
+}

@@ -1,0 +1,269 @@
+{
+  "evidence_id": "web-68f0d43ed275bc721624",
+  "source_url": "https://www.outranking.io/",
+  "retrieved_at": "2026-09-20T21:00:10.335058+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://outranking.io/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/68f0d43ed275bc721624.html",
+  "capture_sha256": "3450356304f4f181b055be0231afe8b15791da7d24ef6101cb884047548f4edf",
+  "bytes_saved": 8353,
+  "title": "Best SEO Content Writing AI Software And Optimization Tools",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Make SEO content writing easy with software and tools boosted by AI Experience. See instant recommendations and optimization to outperform in search rankings."
+    }
+  ],
+  "text": "Best SEO Content Writing AI Software And Optimization Tools",
+  "links": [
+    {
+      "href": "/wp-content/uploads/cropped-outranking_icon-192x192-1.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,800&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&family=Roboto+Slab:wght@100;300;400;500;600;700;900&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/betheme/css/base﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/betheme/css/layout﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/betheme/css/shortcodes﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/betheme/css/responsive﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/betheme/assets/animations/animations.min﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/custom-frontend.min﹖ver=1737056851.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2320﹖ver=1737056851.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-38971﹖ver=1737057738.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-39578﹖ver=1737057873.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-11150﹖ver=1737063240.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-32909﹖ver=1737067394.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-32911﹖ver=1737071849.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-11812﹖ver=1737057081.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2752﹖ver=1737059918.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2318﹖ver=1697526308.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-25849﹖ver=1713797422.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-25876﹖ver=1697526304.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-25881﹖ver=1697526304.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-25889﹖ver=1697526304.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2337﹖ver=1737069210.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2476﹖ver=1737069807.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-2478﹖ver=1737072939.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-3563﹖ver=1737061758.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-49466.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-49471.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-34026﹖ver=1737057083.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-6503﹖ver=1737056852.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-34432﹖ver=1737056852.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-40905﹖ver=1737057083.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/post-39896﹖ver=1737057083.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/themes/outranking/style﹖ver=21.9.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min﹖ver=6.1.0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/essential-addons-elementor/eael-38971﹖ver=1698390657.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/essential-addons-elementor/eael-39578﹖ver=1697601487.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/essential-addons-elementor/eael-11150﹖ver=1726058663.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/essential-addons-elementor/eael-11812﹖ver=1726058927.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles﹖ver=3.4.4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementskit/widgets/init/assets/css/widget-styles-pro﹖ver=3.6.1.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive﹖ver=3.4.4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/widget-heading.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/widget-text-editor.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/widget-image.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/widget-video.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/mfn-header-builder/functions/assets/style﹖ver=6.7.2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/uploads/elementor/css/custom-widget-image-box.min﹖ver=1737056851.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min﹖ver=8.4.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/css/widget-image-carousel.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min﹖ver=3.26.5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min﹖ver=5.34.0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons﹖ver=3.4.4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/contact-form-7/includes/css/styles﹖ver=5.6.2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-includes/css/dist/block-library/style.min﹖ver=6.7.1.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/wp-content/plugins/easy-table-of-contents/assets/css/screen.min﹖ver=2.0.33.2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-CVARBYEd.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.4506
+}

@@ -1,0 +1,61 @@
+{
+  "evidence_id": "web-00abd81ad42aae405812",
+  "source_url": "https://claid.ai/",
+  "retrieved_at": "2026-09-20T21:00:44.978331+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://claid.ai/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/00abd81ad42aae405812.html",
+  "capture_sha256": "14d1dbb5bd1dbe5e86a01057156f62a746299341c4938e7be4db9bb5fec57343",
+  "bytes_saved": 262144,
+  "title": "",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Turn simple shots into photoshoot-quality images. Realistic lifestyle scenes, on-model photos, clean cutouts. Detail-first results. Start free."
+    },
+    {
+      "key": "og:title",
+      "value": "Claid: AI product photography and fashion photo editor | Backgrounds & AI models in 4K"
+    },
+    {
+      "key": "og:description",
+      "value": "Turn simple shots into photoshoot-quality images. Realistic lifestyle scenes, on-model photos, clean cutouts. Detail-first results. Start free."
+    }
+  ],
+  "text": "",
+  "links": [
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://challenges.cloudflare.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.amplitude.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://assets.customer.io",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.3012
+}

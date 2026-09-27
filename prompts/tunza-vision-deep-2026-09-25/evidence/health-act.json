@@ -1,0 +1,27 @@
+{
+  "id": "health-act",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2017/21/eng",
+  "accessed_utc": "2026-09-25T02:53:55.520679+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2017/21/eng@2026-07-10",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:53:56 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "449783",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Expires": "Fri, 25 Sep 2026 03:23:56 GMT",
+    "Cache-Control": "max-age=1800",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 449783,
+  "sha256": "033617e6ccb9f48152992803cafb9f32419d7eb450ce05b6cf5481d12b70be07",
+  "file": "health-act.html"
+}

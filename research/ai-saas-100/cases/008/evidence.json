@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-0055b0b1d22da7891be2",
+      "source_url": "https://fireflies.ai/",
+      "final_url": "https://fireflies.ai/",
+      "publisher": "fireflies.ai",
+      "retrieved_at": "2026-09-20T21:00:36.299182+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place."
+        },
+        {
+          "locator": "metadata[1].application-name",
+          "excerpt": "Fireflies.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM\nNEW\nMeet Email Assistant: Your inbox triaged and replies auto-drafted.\nSee Now\nProduct\nSolutions\nIntegration\nResources\nEnterprise\nPricing\nLogin\nRequest demo\nGet Started\nGet Started"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM\nNEW\nMeet Email Assistant: Your inbox triaged and replies auto-drafted.\nSee Now\nProduct\nSolutions\nIntegration\nResources\nEnterprise\nPricing\nLogin\nRequest demo\nGet Started\nGet Started"
+        }
+      ],
+      "capture_path": "discovery/captures/0055b0b1d22da7891be2.html",
+      "capture_sha256": "1eb899992643e8429909eded92af463d4e7c7530db97b4bdafe51ce81b9e402c",
+      "record_path": "discovery/records/0055b0b1d22da7891be2.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r008-a21eeb7f9579ca84130d",
+      "source_url": "https://fireflies.ai/pricing",
+      "publisher": "fireflies.ai",
+      "retrieved_at": "2026-09-20T21:35:26.073752+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://fireflies.ai/pricing",
+      "capture_path": "cases/008/research/captures/a21eeb7f9579ca84130d.html",
+      "capture_sha256": "8f8f6f804211e173ce7a2726db66118b60821ad8348492af00d72cb2708c223f",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/008/research/records/a21eeb7f9579ca84130d.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing & Plans | Fireflies.ai AI App for Smarter Meeting Notes"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Fireflies.ai Pricing & Plans | Fireflies.ai offers flexible AI App plans for an efficient AI Assistant, helping you capture and organize meetings effortlessly and stay productive."
+        },
+        {
+          "locator": "metadata[1].application-name",
+          "excerpt": "Fireflies.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Pricing & Plans | Fireflies.ai AI App for Smarter Meeting Notes"
+        },
+        {
+          "locator": "text characters 553:1797",
+          "excerpt": "credits\nKey Features\nZoom, GMeet, Teams,\n+more\nTranscription in 100+ languages\nReal-time notes & live transcriptions\nMeeting search\nAskFred: AI assistant\nUpload audio/video file\nDesktop app (\nDownload\n)\nMobile app (\nAndroid\n,\niOS\n)\nChrome extension\nAPI access\nPro\nFor professional individuals and small teams\n$18\n$10\nper seat / month, billed annually\nGet Started\nUnlimited transcription\nUnlimited AI summaries\n8,000 mins of storage/seat\n20 AI credits\nEverything in Free, plus..\nVideo recording\nDownload transcripts, summaries, recordings\nPersonal Assistant\nEmail Assistant\nAI Skills\nVoice Agents\nAction items & task Manager\nUnlimited integrations\nRate Limits\nMOST POPULAR\nBusiness\nFor fast growing businesses\n$29\n$19\nper seat / month, billed annually\nGet Started\nUnlimited transcription\nUnlimited AI summaries\nUnlimited storage\n30 AI credits\nEverything in Pro, plus..\nMulti-language Mode\nConversation intelligence\nTeam analytics (for admins)\nPublic meeting access\nUser groups\nRate Limits\nEnterprise\nFor large scale enterprises\n$39\n$39\nANNUAL ONLY\nper seat / month, billed annually\nContact Us\nUnlimited transcription\nUnlimited AI summaries\nUnlimited storage\n50 AI credits\nEverything in Business, plus..\nRules engine\nSSO + SCIM\nAudit Logs (\nAPI\n)"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r008-f284628f2dc8ef64bc00",
+      "source_url": "https://fireflies.ai/integrations",
+      "publisher": "fireflies.ai",
+      "retrieved_at": "2026-09-20T21:35:26.099518+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://fireflies.ai/integrations",
+      "capture_path": "cases/008/research/captures/f284628f2dc8ef64bc00.html",
+      "capture_sha256": "128f60af6d3ea970fafc1e60c5c782af58b0f59389eec6c0f0fdcf0f4ff3d977",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/008/research/records/f284628f2dc8ef64bc00.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Fireflies.ai Integrations | AI Apps for Automating Work"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Fireflies.ai AI Assistant to the apps you already use with powerful integrations that sync notes, tasks, crm entries and updates automatically."
+        },
+        {
+          "locator": "metadata[1].application-name",
+          "excerpt": "Fireflies.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Fireflies.ai Integrations | AI Apps for Automating Work"
+        },
+        {
+          "locator": "text characters 184:732",
+          "excerpt": "e\nPricing\nLogin\nRequest demo\nGet Started\nGet Started\nSeamless Integrations With\n100+ Apps You Love\nAutomatically send your meeting notes, deal information, candidates to your work apps.\nSearch\nSkyvia\nLatenode\nMindStudio\nKeragon\nPopular Apps\nEasily transcribe and summarize your meetings from most popular apps.\nGoogle Meet\nCapture, Transcribe, and Organize Google Meet Conversations Seamlessly\nDropbox\nSeamlessly Sync and Retrieve Meeting Notes with Dropbox and Fireflies.ai\nHubspot\nAutomate Your CRM Workflow with HubSpot and Fireflies.ai\nMicrosof"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-6a4d1160d27064b29a54",
+      "source_url": "https://meetgeek.ai/",
+      "final_url": "https://meetgeek.ai/",
+      "publisher": "meetgeek.ai",
+      "retrieved_at": "2026-09-20T21:00:36.299453+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "MeetGeek | AI Meeting Notetaker & Automation Platform"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "MeetGeek | AI Meeting Notetaker & Automation Platform"
+        },
+        {
+          "locator": "text characters 0:253",
+          "excerpt": "MeetGeek | AI Meeting Notetaker & Automation Platform\nBy clicking\n“Accept All Cookies”\n, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our\nPrivacy Policy\nfor "
+        },
+        {
+          "locator": "text characters 2194:2506",
+          "excerpt": "very meeting\nTeam meetings\nOnline classes\nTemplate directory\nYour new AI Recorder for in-person meetings and calls!\nMeetGeek Wave captures conversations wherever they happen and turns them into searchable transcripts, summaries, and AI notes.\nJoin the waitlist\nJoin the waitlist\nProduct\nCORE FEATURES\nRecord & Tr"
+        },
+        {
+          "locator": "text characters 2357:2669",
+          "excerpt": "hey happen and turns them into searchable transcripts, summaries, and AI notes.\nJoin the waitlist\nJoin the waitlist\nProduct\nCORE FEATURES\nRecord & Transcribe Meetings\nAI Meeting Notes\nMeeting Analytics\nMeeting Templates\nAUTOMATION & PRODUCTIVITY\nAI Chat\nVoice Agents\nMeeting Skills\nNEW\nWorkflows & Automations\nTe"
+        },
+        {
+          "locator": "text characters 2454:2766",
+          "excerpt": "\nJoin the waitlist\nProduct\nCORE FEATURES\nRecord & Transcribe Meetings\nAI Meeting Notes\nMeeting Analytics\nMeeting Templates\nAUTOMATION & PRODUCTIVITY\nAI Chat\nVoice Agents\nMeeting Skills\nNEW\nWorkflows & Automations\nTeam Collaboration\nMeeting Library\nPLATFORMS & DEVICES\nDesktop App\nAccess meetings, notes, and AI i"
+        },
+        {
+          "locator": "text characters 2533:2845",
+          "excerpt": "g Notes\nMeeting Analytics\nMeeting Templates\nAUTOMATION & PRODUCTIVITY\nAI Chat\nVoice Agents\nMeeting Skills\nNEW\nWorkflows & Automations\nTeam Collaboration\nMeeting Library\nPLATFORMS & DEVICES\nDesktop App\nAccess meetings, notes, and AI insights from your desktop.\nSlack Agent\nFind meeting answers and insights withou"
+        },
+        {
+          "locator": "text characters 2692:3004",
+          "excerpt": "g Library\nPLATFORMS & DEVICES\nDesktop App\nAccess meetings, notes, and AI insights from your desktop.\nSlack Agent\nFind meeting answers and insights without leaving Slack.\nMobile App\nAvailable on both iOs and Android.\nWave\nSOON\nAI hardware to record phone calls and in-person meetings.\nBrowser Extension\nCapture an"
+        }
+      ],
+      "capture_path": "discovery/captures/6a4d1160d27064b29a54.html",
+      "capture_sha256": "72130b3c03726a60ce2c16602c972d19280e9c3491d9559dd89b001e54aa9f55",
+      "record_path": "discovery/records/6a4d1160d27064b29a54.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

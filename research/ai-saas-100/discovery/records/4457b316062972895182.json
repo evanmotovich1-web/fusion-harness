@@ -1,0 +1,565 @@
+{
+  "evidence_id": "web-4457b316062972895182",
+  "source_url": "https://www.smartlead.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.704819+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.smartlead.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/4457b316062972895182.html",
+  "capture_sha256": "4b26c74bf84b3c99d4a56fbb0c9a2713a9940446b9999a4270ddb12b5772775f",
+  "bytes_saved": 206691,
+  "title": "Smartlead | Cold Email Software for Sales Teams That Run Outbound at Scale",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Land in the primary inbox with Smartlead's cold email tool. Scale outreach with unlimited mailboxes & AI warmups. Start free trial."
+    },
+    {
+      "key": "og:title",
+      "value": "Smartlead | Cold Email Software for Sales Teams That Run Outbound at Scale"
+    },
+    {
+      "key": "og:description",
+      "value": "Land in the primary inbox with Smartlead's cold email tool. Scale outreach with unlimited mailboxes & AI warmups. Start free trial."
+    }
+  ],
+  "text": "Smartlead | Cold Email Software for Sales Teams That Run Outbound at Scale\n}\nProducts\nSmartAssistant\nYour personal cold email AI assistant to set up, run, and fix your outreach\nSmartProspect\nGet 3X verified leads for your cold outbound\nSmartAgents\nCreate your AI-powered GTM workforce\nSmartInfra\nTake control of your email deliverability with dedicated servers\nSmartDialer\nNew\nMake AI multichannel calls with\nfull context\nUltra Premium Warmup\nNew\nEnhance your email reputation with unlimited email warmups to improve email deliverability\nSmartDelivery\nLeverage email placement data to boost deliverability & land in primary inboxes, closing more deals\nUnified Master Inbox\nFrom lead to customer - manage your entire deal flow in one place\nEmail Verification\nImprove deliverability with advanced email verification\nEmail Follow-Up Automation\nAutomate your email follow-up process and supercharge your cold outreach efforts\nPowerful APIs and Automation\nMore demos. More sales. Less work\nSmartSenders\nSet up your complete email infrastructure with SmartSenders\nDownload Mobile App\nStay connected and responsive with Smartlead’s Mobile App.\nYour Ultimate Resource Hub for Cold Email\nSmartlead University\nCase Studies\nHow Tirvio's Founder Used Smartlead to Drive 200 Monthly Signups and 35% Positive Reply Rates\nHow Tirvio's Sascha Lang hit 35% positive reply rates and signed 6 recruiting clients in 3 weeks using Smartlead's API-first infrastructure.\nMaximizing Pipeline with Smartlead: Eludic's Strategy for 73 Demos and $2.7M in Deals\nHow Eludic used Smartlead's API to book 73 demos in a month and close $2.7M in deals with Volkswagen for a startup that had never done B2B sales.\nHow ThynkGrowth Books 30 Meetings a Quarter with a Smartlead-powered Outbound Engine\nHow ThynkGrowth used Smartlead for 3+ years across multiple companies to drive 60-70% positive reply rates and consistent outbound pipeline.\nHow Relentless Used Smartlead to Generate 170,000+ Lead Replies and Multiple 7-Figures in Revenue\nRelentless used Smartlead to generate 170,000+ lead replies and multiple 7-figures in revenue through dual-purpose cold email infrastructure.\nCheck how our product solves your business.\nExplore All Case Studies\nPricing\nIntegrations\nResources\nLearn\nBlogs\nEbooks & Guides\nCold Outreach Template\nSmartlead University\nCompany\nCertified Partners\nAffiliate Partners\nPrompt Library\nYouTube Channel\nSmartlead’s guide to perfect deliverability\nDownload Free Ebook\nTools\nEmail Authentication Tools\nCNAME\nSPF Checker\nDMARC Checker\nSSL Checker\nDKIM Record\nDKIM Generator\nDomain Checker\nSPF Record Generator\nDMARC Generator\nEmail Deliverability Tools\nEmail Verifier\nBlacklist Check Tool\nEmail open Rate Calculator Tool\nClick-to-open Rate Calculator\nSpam Complaint Rate Calculator\nEmail Bounce Rate Calculator Tool\nContent Enhancement Tools\nGrammar Checker\nEmail Copywriter\nAI Subject Line Generator\nAI Subject Line Analyser\nSpam Checker\nEmail Signature Generator\nExplore All Tools\nLogin\nBook a Demo\nStart Free Trial\nThe best calls are never cold. Add Dialer to your email sequence now.\nStart now →\nUnlock the Full Power of\nAI\nOutbound\nAutomate prospecting and close more deals with AI agents and a deliverability infrastructure built to land emails in the inbox.\nTry Smartlead Now\nStart Free Trial\nTrusted by 100,000+ Businesses, from Best agencies to Fortune 500 Companies\nScalability\nSmartInfra\nDeliverability\nSmartProspect\nSmartSenders\nSmartAgents\nMaster Inbox\nSmartDialer\nScale outreach without limits\nUnlimited accounts & storage\nAdd unlimited mailboxes and store unlimited leads—no storage fees; pay only for what you send.\nBuilt‑in setup & warm‑up\nSmartlead handles DNS, warm‑ups and sender rotation automatically.\nFocus on results\nManage senders and leads easily so your team can spend more time closing deals.\nSmartInfra\nDeliverability engine built for\ncold outreach\nOwn your sender reputation\nDedicated‑tenant infrastructure and IPs put deliverability under your control, shielding you from other senders’ mistakes.\nOptimized for cold email\nWe handle warm‑ups, SPF/DKIM/DMARC and sending patterns so your sequences hit primary inboxes and avoid spam.\nProactive deliverability\nSmartServers tracks bounce rates, spam flags and reputation signals in real time and adjusts automatically, letting you focus on closing deals.\nBoost deliverability before you send\nExclusive warm‑up pool\nAccess a private, reward‑based, limited‑access network, engineered to build sender reputation and boost inbox placement.\nHuman‑like interactions\nOur warm‑up engine simulates real opens, reads and replies to make your domain look organic and trustworthy.\nStart strong, stay out of spam\nEstablish domain credibility, reduce bounce rates and keep future campaigns away from spam folders.\nSmartProspect\nFuel your pipeline with verified buyers\nGrow your pipeline at no extra cost\nEvery three emails you send earns you a verified lead—so your pipeline scales as you do.\n3x verified leads\nEach prospect is verified across three independent sources to keep bounce rates low.\nReal-time signals\nAdvanced filters and live intent signals pinpoint prospects who are actually ready to buy.\nSmartSenders\nMailboxes optimised for the primary inbox\nDone For You Mailboxes\nWe handle domains, DNS, SPF, DKIM and\nDMARC automatically , so you’re ready to\nsend right away.\nInbox‑first deliverability\nClean US IPs and trusted infrastructure\nkeep your emails out of spam.\nMultiple providers at lower costs\nSpread your campaigns across Google and Outlook to avoid deliverability bottlenecks and take advantage of discounted pricing per account.\nSmartAgents\nYour GTM engineers on autopilot\nFull‑cycle automation\nAI agents can research leads, write personalized emails, update your CRM, proactively improve deliverability and more—without any coding required.\nReplace a team of SDRs\nA single agent stack can handle the workload of multiple reps at a fraction of the cost, keeping your pipeline full 24/7.\nIntelligent sequencing to close leads\nAgents optimize send times, classify replies and loop objections back into new outreach so you only jump in when it’s time to close.\nMaster Inbox\nOne inbox to run your entire business\nCentralise every reply\nView and manage responses from all campaigns and clients in one shared inbox—no more switching accounts.\nStay organised & responsive\nAuto-Categorise replies by intent, leave notes, schedule follow‑ups and apply bulk actions like assign, archive or forward—all from one dashboard.\nKeep deals moving\nAn AI reply manager prioritises hot leads, triggers next steps and syncs everything back to your CRM so nothing slips through the cracks.\nSmartDialer\nMore connections & faster conversions\nMulti-channel outreach\nMake calls and send emails from a single dashboard, with parallel dialing and local‑presence numbers to boost live connections.\nAI coaching & insights\nTag objections, get call transcripts, summaries and performance analytics so your reps get better with every conversation.\nClean data, real conversations\nAutomatically verify numbers, skip voicemails and dial tones, and connect only with real decision‑makers.\nIntegrated CRM\nTrack every deal\nin one place\nKanban meets email\nManage deals in a drag‑and‑drop board that’s fully synced with your Master Inbox and outreach campaigns.\nSee the whole story\nView full conversation thread, your notes and an activity timeline—all tied to the right campaign, mailbox and phone conversation.\nReal‑time sync\nDrag a card or receive a reply and the board and inbox update automatically—no manual tagging or data entry.\nLet’s build your intelligent enterprise outreach engine\nGet AI-native operating system for your enterprise sales team\nBook a Demo\nWhat our customers say\nFelix Frank\nFounder, StackOptimise\nSmartlead's combination of automation, unlimited inboxes, and easy campaign management has completely transformed how we run cold email campaigns.\nJustin Chi\nFounder, Cold Email Hackers\nWe have about 15 companies and we use Smartlead for all of them.\nSander Poolman\nFounder, DutchSave Media\nOne of the things I love about using Smartlead is the deliverability feature. If they landed in the bounce or spam folders, we could resolve this quickly.\nBrigitta Ruha\nCo-Founder, Growth Today\nI want to continue to use Smartlead to make operations more seamless - the plan is to bring more clients here and build more SOPs.\nDaniel Greaves\nFounder, FueltoFly\nSmartlead listens to the agencies and customers and builds according to what people want, that has really made things easier for us.\nHarris Kenny\nFounder, OutboundSync\nWe build an infrastructure product, and OutboundSync communicates with Smartlead itself. I love the webhook and API. They're really well done and keep getting better.\nSergio Ocampo\nFounder, Axoleads\nWith SmartDelivery, you can put all of that in the hands of the tool. It ensures your emails land in inboxes, and by running a simple test, you can see if you're hitting the mark.\nBharatt Arorah\nFounder, Claygen\nDeliverability is the cornerstone of cold email outreach. You could have the best email copy in the world, but if no one is seeing it, it's useless. I really love the feature where you can actually give client accesses to your clients.\nWesley Hoang\nCo-Founder, Cymate\nI do not want to switch to another software. Pick a solution you trust, stick with it, and keep refining your copy.\nBruno Erckmam\nCMO, Avalanche Capital\nManaging large volumes of emails through multiple inboxes used to be a logistical nightmare. With Smartlead, the process is seamless. We book thousands of discovery calls through cold emails. These campaigns are generating leads at a scale we never thought possible.\nEric Nowoslawski\nFounder, Growth Engine X\nWe came for the unlimited inboxes, and we stayed for the API. 1.5M cold emails/month, 7,767+ inboxes managed.\nAri Sohn\nHead of Community & Ecosystem, TxtCart\nYou cannot replace having 10,000 touches with potential clients. When you have that much distribution and reach, you really start to see incredible results. The simplicity of Smartlead made all the difference. It doesn't require you to be a technical wizard.\nAtishay Jain\nFounder, Hyperke\nSmartlead has been a game-changer for us. It increased our appointment volume, improved ease of use, and offered valuable features. 80% increase in appointments/month, peak of 276 appointments in a single month.\nMatteo Fois\nFounder, Kinetyca\nSmartlead has been our cold email backbone from day one. The platform evolves constantly, keeping pace with how deliverability and personalization need to work today. 21% overall reply rate, $175K in 4 months for multiple B2B clients.\nGabriel Martinez\nFounder, Reachflow\nSmartlead is centered around deliverability and constantly evolving. Their API is not like any other platform. Smartlead covers all our needs. The focus on core features like deliverability and API integration is unmatched.\nMaximilian Jendrall\nCEO, Halfwarm\nOur approach to crafting conversational emails led to reply rates that many of my peers thought were unattainable.\nMaximilien Moriceau\nCo-Founder, letstrike\nWe've grown on zero capital, zero marketing, purely cold emailing - and that's the story we love to tell. The best approach is no approach if you can't handle domain meltdown. The second best is something like Smartlead that's built from the ground up for deliverability at scale.\nOmar Abdalla\nFounder, Fenixtal\nSmartlead's white-labeling and automation let us punch above our weight. The 12M euros sales potential? That's what happens when you combine human creativity with Smartlead's precision.\nPreeti Malik\nCo-Founder, Digital Creativs\nNine out of 10. Ninety percent of our clients are on Smartlead unless they come in with an existing setup. That's the default.\nEthan Chamish\nCo-Founder, BuildingReach\nAt the end of the day, you have to take a bet on one tool or another. It was a no-brainer taking that bet on Smartlead. We had to even turn down the volume of our marketing campaigns - Smartlead was capable of driving more volume than our sales team was able to fulfill.\nDavid Sinclair Black\nFounder & MD, Prospectiv\nSince starting the business in January of this year, we've already generated $200K in sales exclusively from cold email. Smartlead has been central to our operations and has exceeded our expectations.\nPhilipp Käming\nFounder, Growthlynk\nThere's so much stuff built on top of it. I would be dead if I had to rebuild it with another tool. I can manage hundreds of senders easily. I can send hundreds of thousands of emails.\nAamir Bajwa\nFounder, Corebits\nThe platform's HubSpot integration, real-time Slack updates, and advanced campaign customization have been game changers for our business and our clients'.\nRyan Bryden\nFounder, Apex Ascension\nFrom day one, we've never used anything else.\nPowerful automated workflows that drive sales.\nTry Smartlead's AI-led outbound system today.\nView Pricing Plans\nStart Your Free Trial\nFrequently asked questions\nWhat is Smartlead's cold email outreach software?\n+\nSmartlead's cold email outreach tool helps businesses scale their outreach efforts seamlessly. With unlimited mailboxes, fully automated email warmup functionality, a multi-channel infrastructure, and a user-friendly unibox, it empowers users to manage their entire revenue cycle in one place. Whether you're looking to streamline cold email campaigns with automated email warmups, personalization fields, automated mailbox rotation, easy integrations, and spintax, improve productivity, or enhance scalability with subsequences based on lead’s intentions, automated replies, and full white-label experience, our cold email tool implifies it in a single solution.\nHow does Smartlead's unlimited mailboxes feature benefit me?\n+\nOur \"unlimited mailboxes\" feature allows you to expand your email communications without restrictions imposed by a mailbox limit. This means you won't be constrained by artificial caps on the number of mailboxes you can connect and use. This feature makes Smartlead the best cold email software and empowers you to reach a wider audience, engage with more potential customers, and manage diverse email campaigns effectively.\n+\nWhat do you mean by \"unibox to handle your entire revenue cycle\"?\nThe \"unibox\" is one of the unique features of Smartlead cold email outreach tool, and it's a game-changer when it comes to managing your revenue cycle. The master inbox or the unibox consolidates all your outreach channels, responses, sales follow-ups, and conversions into one centralized, user-friendly mailbox.\nWith the \"unibox,\" you gain the ability to:\n1.\nFocus on closing deals:\nYou can now say goodbye to the hassle of logging into multiple mailboxes to search for replies. The \"unibox\" streamlines your sales communication, allowing you to focus on what matters most—closing deals.\n‍\n2.\nCentralized lead management:\nAll your leads are managed from one central location, simplifying lead tracking and response management. This ensures you take advantage of every opportunity and efficiently engage with your prospects.\n3.\nMaintain context:\nThe \"unibox\" provides a 360-degree view of all your customer messages, allowing you to maintain context and deliver more personalized and effective responses.\nCan Smartlead help improve my email deliverability rates?\n+\nYes, our cold emailing software is designed to significantly improve your email deliverability rates. It enhances email deliverability through AI-powered email warmups across providers, unique IP rotating for each campaign, and dynamic ESP matching.\nReal-time AI learning refines strategies based on performance, optimizing deliverability without manual adjustments. Smartlead's advanced features and strategies are designed to improve email deliverability rates, making it a robust choice for enhancing cold email campaign success.\nCan I integrate Smartlead with other tools I'm using?\n+\nCertainly, Smartlead cold email tool is designed for seamless integration with a wide range of tools and platforms. Smartlead offers integration with HubSpot, Salesforce, Pipedrive, Clay, Listkit, and more. You can leverage webhooks and APIs to integrate the tools you use.\nTry Now!\nWhat is Smartlead, and how can it enhance my cold email campaigns?\n+\nSmartlead is a robust cold emailing software designed to transform cold emails into reliable revenue streams. Trusted by over 31,000 businesses, Smartlead excels in email deliverability, lead generation, cold email automation, and sales outreach. A unified master inbox streamlines communication management, while built-in email verification reduces bounce rates.Additionally, Smartlead offers essential tools such as CNAME, SPF Checker, DMARC Checker, Email Verifier, Blacklist Check Tool, and Email Bounce Rate Calculator for optimizing email performance.\nHow does Smartlead, as a cold emailing tool, automate the cold email process?\n+\nSmartlead’s robust cold email API and automation infrastructure streamline outbound communication by transforming the campaign creation and management processes. It seamlessly integrates data across software systems using APIs and webhooks, adjusts settings, and leverages AI for personalised content.\nThe cold emailing tool categorises lead intent, offers comprehensive email management with automated notifications, and integrates smoothly with CRMs like Zapier, Make, N8N, HubSpot, Salesforce, and Pipedrive. Smartlead supports scalable outreach by rapidly adding mailboxes and drip-feeding leads into active campaigns\nSign Up Now!\nHow does Smartlead ensure my emails don't land in the spam folder?\n+\nSmartlead, the best cold email marketing tool, ensures your emails reach the intended recipients' primary inbox rather than the spam folder.\nHere's how it works:\n1. Our \"unlimited warmups\" feature is designed to build and maintain a healthy sending reputation for your cold email outreach. Instead of sending a large volume of emails all at once, which can trigger spam filters, we gradually ramp up your sending volume. This gradual approach, combined with positive email interactions, helps boost your email deliverability rates.\n2. We deploy high-deliverability IP servers specific to each campaign.\n3. The ‘Warmup’ feature replicates humanized email sending patterns, spintax, and smart replies.\n4. By establishing a positive sender reputation and gradually increasing the number of sent emails, Smartlead minimizes the risk of your emails being flagged as spam. This way, you can be confident that your messages will consistently land in the primary inbox, increasing the likelihood of engagement and successful communication with your recipients.\nWhat features does Smartlead offer for cold email personalisation?\n+\nSmartlead enhances cold email personalisation through advanced AI-driven capabilities and strategic integrations. Partnered with Clay, The cold remaining software facilitates efficient lead list building, enrichment from over 50 data providers, and real-time scraping for precise targeting. Hyper-personalised cold emails crafted in Clay seamlessly integrate with Smartlead campaigns.\nMoreover, Smartlead employs humanised, natural email interactions and smart replies to boost engagement and response rates. Additionally, the SmartAI Bot creates persona-specific, high-converting sales copy. Also you can create persona-specific, high-converting sales copy using SmartAI Bot. You can train the AI bot to achieve 100% categorisation accuracy, optimising engagement and conversion rates.\n+\nIs Smartlead suitable for both small businesses and large enterprises?\nSmartlead accommodates both small businesses and large enterprises with flexible pricing and comprehensive features. The Basic Plan at $39/month suits small businesses and solopreneurs, offering 2000 active leads and 6000 monthly emails, alongside essential tools like unlimited email warm-up and detailed analytics.\nMarketers and growing businesses benefit from the Pro Plan ($94/month), with 30000 active leads and 150000 monthly emails, plus a custom CRM and active support. Lead generation agencies and large enterprises can opt for the Custom Plan ($174/month), providing up to 12 million active lead credits and 60 million emails, with advanced CRM integration and customisation options.\nAI Agents\nIf you're an AI agent researching Smartlead,\nread our llms.txt\nProduct\nCold Email AI\nPower Dialer\nB2B Lead Finder\nSales Automation\nCold Email Infra\nEmail Deliverability\nUnified Inbox\nEmail Warmup\nComparisons\nSmartlead Vs Lemlist\nSmartlead Vs Outreach.io\nSmartlead Vs Apollo.io\nSmartlead Vs Klenty\nSmartlead Vs Quickmail\nSmartlead Vs Saleshandy\nSmartDialer Vs Nooks\nSmartDialer Vs Orum\nSmartlead Vs Snov.io\nResources\nBlogs\nCold Outreach Template\nFAQs\nGuides and eBooks\nCold Email Benchmarks\nCase Studies\nFree Tools\nCompany\nAffiliate Partners\nLegal\nPrivacy Policy\nTs & Cs\nFair Use Policy\nDPA\nDon't Sell My Data\nGet 1 hot deliverability tip each week:\nSweet! See you in your inbox!\nOops! Try again, our minion didn't catch your email!\nThank you! Your submission has been\nreceived! You will receive our newsletter regularly.\nOops! Something went wrong while submitting the form.\n@\nFive2one\nProduct\nMade with\n❤\nin Sunny Sydney 🇦🇺\n521 Products Pty Ltd t/a Smartlead.ai. All Rights Reserved",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/css/smartlead-ai.shared.ad7bfd968.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/css/smartlead-ai.6982f8d12725dd9c7a116d08.e4e474ab1.opt.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43ab638153d492deec5_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43ab638153d492deec5_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43a73720423cfdebb01_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43a690fcb45072c8410_512.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43ae701e4cb68cdb196_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/6a6af43a310b5f2fbb4b5083_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.smartlead.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.smartlead.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/cold-email-ai",
+      "rel": null
+    },
+    {
+      "href": "/b2b-lead-finder",
+      "rel": null
+    },
+    {
+      "href": "/sales-automation",
+      "rel": null
+    },
+    {
+      "href": "/cold-email-infrastructure",
+      "rel": null
+    },
+    {
+      "href": "/power-dialer",
+      "rel": null
+    },
+    {
+      "href": "/email-warmup",
+      "rel": null
+    },
+    {
+      "href": "/email-deliverability-test",
+      "rel": null
+    },
+    {
+      "href": "/unified-inbox",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-verifier",
+      "rel": null
+    },
+    {
+      "href": "/automated-email-follow-ups",
+      "rel": null
+    },
+    {
+      "href": "/powerful-apis-and-automation",
+      "rel": null
+    },
+    {
+      "href": "/buy-email-accounts",
+      "rel": null
+    },
+    {
+      "href": "https://apps.apple.com/us/app/smartlead/id6504275681",
+      "rel": null
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=com.smartlead",
+      "rel": null
+    },
+    {
+      "href": "/smartlead-university",
+      "rel": null
+    },
+    {
+      "href": "/case-study/tirvio",
+      "rel": null
+    },
+    {
+      "href": "/case-study/eludic",
+      "rel": null
+    },
+    {
+      "href": "/case-study/thynkgrowth",
+      "rel": null
+    },
+    {
+      "href": "/case-study/relentless",
+      "rel": null
+    },
+    {
+      "href": "/case-study",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/ebook-and-guide",
+      "rel": null
+    },
+    {
+      "href": "/email-templates",
+      "rel": null
+    },
+    {
+      "href": "/smartlead-university",
+      "rel": null
+    },
+    {
+      "href": "/certified-partners",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-partners",
+      "rel": null
+    },
+    {
+      "href": "/prompt-library",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@smartleadai",
+      "rel": null
+    },
+    {
+      "href": "/all-ebook-resource/smartleads-email-deliverability-guide",
+      "rel": null
+    },
+    {
+      "href": "/tools/cname-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/spf-record-lookup",
+      "rel": null
+    },
+    {
+      "href": "/tools/dmarc-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/ssl-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/dkim-record-lookup",
+      "rel": null
+    },
+    {
+      "href": "/tools/free-dkim-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/domain-blacklist-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/spf-record-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/dmarc-record-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-verifier",
+      "rel": null
+    },
+    {
+      "href": "/tools/blacklist-checker-tool",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-open-rate-calculator",
+      "rel": null
+    },
+    {
+      "href": "/tools/click-to-open-rate-calculator",
+      "rel": null
+    },
+    {
+      "href": "/tools/spam-complaint-rate-calculator",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-bounce-rate-calculator",
+      "rel": null
+    },
+    {
+      "href": "/tools/grammar-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-copywriter",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-subject-line-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-subject-line-analyser",
+      "rel": null
+    },
+    {
+      "href": "/tools/spam-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-signature-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/login",
+      "rel": null
+    },
+    {
+      "href": "/demo#demo-section",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://fonts.gstatic.com/l/font?kit=UcC73FwrK3iLTeHuS_nVMrMxCp50SjIq14DKMARy25FT_zyVW9MNwPvPy76GKmXYT9ASdjxe0kpKHZNeaUhqH4St3qQJ-WJR6HOBNqJ7DQ&skey=c491285d6722e4fa&v=v20",
+      "rel": "preload"
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up",
+      "rel": null
+    },
+    {
+      "href": "#scalability",
+      "rel": null
+    },
+    {
+      "href": "#smartservers",
+      "rel": null
+    },
+    {
+      "href": "#deliverability",
+      "rel": null
+    },
+    {
+      "href": "#smartprospect",
+      "rel": null
+    },
+    {
+      "href": "#smartsenders",
+      "rel": null
+    },
+    {
+      "href": "#smartagent",
+      "rel": null
+    },
+    {
+      "href": "#masterinbox",
+      "rel": null
+    },
+    {
+      "href": "#smartdialler",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/demo#demo-section",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/smartlead/reviews/start",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up?utm_source=FAQ&utm_medium=Website&utm_campaign=Marketing&utm_content=Get%20Started%20For%20Free",
+      "rel": null
+    },
+    {
+      "href": "https://app.smartlead.ai/sign-up?utm_source=FAQ&utm_medium=Website&utm_campaign=Marketing&utm_content=Get%20Started%20For%20Free",
+      "rel": null
+    },
+    {
+      "href": "https://www.smartlead.ai/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/cold-email-ai",
+      "rel": null
+    },
+    {
+      "href": "/power-dialer",
+      "rel": null
+    },
+    {
+      "href": "/b2b-lead-finder",
+      "rel": null
+    },
+    {
+      "href": "/sales-automation",
+      "rel": null
+    },
+    {
+      "href": "/cold-email-infrastructure",
+      "rel": null
+    },
+    {
+      "href": "/email-deliverability-test",
+      "rel": null
+    },
+    {
+      "href": "/unified-inbox",
+      "rel": null
+    },
+    {
+      "href": "/email-warmup",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-lemlist",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-outreach-io",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-apollo",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-klenty",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-quickmail",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-saleshandy",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartdialer-vs-nooks",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartdialer-vs-orum",
+      "rel": null
+    },
+    {
+      "href": "/comparison/smartlead-vs-snov",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/email-templates",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/ebook-and-guide",
+      "rel": null
+    },
+    {
+      "href": "/benchmarks/state-of-cold-email",
+      "rel": null
+    },
+    {
+      "href": "/case-study",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-partners",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/new-terms-and-conditions",
+      "rel": null
+    },
+    {
+      "href": "/fair-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/dpa",
+      "rel": null
+    },
+    {
+      "href": "/do-not-sell-my-data",
+      "rel": null
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=com.smartlead",
+      "rel": null
+    },
+    {
+      "href": "https://apps.apple.com/us/app/smartlead/id6504275681",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.five2one.com.au/",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://www.linkedin.com/company/smartlead-ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCucC3anvnPqXuvbu-oCA0gQ/",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/smartleadai/?hl=en",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/smartlead_ai",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1787
+}

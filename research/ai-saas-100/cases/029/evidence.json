@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-a7e54560909bb67b2925",
+      "source_url": "https://afforai.com/",
+      "final_url": "https://logically.app/",
+      "publisher": "afforai.com",
+      "retrieved_at": "2026-09-20T21:00:37.294969+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Logically | Research, Cite, and Write With AI"
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "Logically AI Research Assistant"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Logically is the AI-powered workspace for citation-backed research, managing references, conducting literature reviews, annotating PDFs, and writing amazing papers."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Logically"
+        },
+        {
+          "locator": "metadata[3].og:title",
+          "excerpt": "Logically | Research, Cite, and Write With AI"
+        },
+        {
+          "locator": "text characters 0:45",
+          "excerpt": "Logically | Research, Cite, and Write With AI"
+        }
+      ],
+      "capture_path": "discovery/captures/a7e54560909bb67b2925.html",
+      "capture_sha256": "58d62ec282ef1ab06dd6d3bdd6b3409c092ddce6daf209d682d450aaacbf382a",
+      "record_path": "discovery/records/a7e54560909bb67b2925.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r029-5d017a6dbd367f725dc4",
+      "source_url": "https://logically.app/features",
+      "publisher": "logically.app",
+      "retrieved_at": "2026-09-20T21:35:37.633070+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://logically.app/features",
+      "capture_path": "cases/029/research/captures/5d017a6dbd367f725dc4.html",
+      "capture_sha256": "58d62ec282ef1ab06dd6d3bdd6b3409c092ddce6daf209d682d450aaacbf382a",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/029/research/records/5d017a6dbd367f725dc4.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Logically | Research, Cite, and Write With AI"
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "Logically AI Research Assistant"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Logically is the AI-powered workspace for citation-backed research, managing references, conducting literature reviews, annotating PDFs, and writing amazing papers."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Logically"
+        },
+        {
+          "locator": "metadata[3].og:title",
+          "excerpt": "Logically | Research, Cite, and Write With AI"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r029-be41b43470a7949b6b97",
+      "source_url": "https://logically.app/pricing",
+      "publisher": "logically.app",
+      "retrieved_at": "2026-09-20T21:35:37.630926+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://logically.app/pricing/",
+      "capture_path": "cases/029/research/captures/be41b43470a7949b6b97.html",
+      "capture_sha256": "f389f89ed5e8a85f45350859e3c212a9cdefa631ef4ea97c825bf6b5a19ad07d",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/029/research/records/be41b43470a7949b6b97.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Use Logically for Free. No Credit Card Required."
+        },
+        {
+          "locator": "metadata[0].application-name",
+          "excerpt": "Logically AI Research Assistant"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Use Logically for free today. Upgrade for unlimited storage, unlimited AI usage from advanced and reasoning AI models, and other premium features. 30-day money-back guaranteed."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "Logically"
+        },
+        {
+          "locator": "metadata[3].og:title",
+          "excerpt": "Use Logically for Free. No Credit Card Required."
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-4473fde2a4db1ff86014",
+      "source_url": "https://elicit.com/",
+      "final_url": "https://elicit.com/",
+      "publisher": "elicit.com",
+      "retrieved_at": "2026-09-20T21:00:37.070131+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Elicit: AI for scientific research"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Use AI to search, summarize, extract data from, and chat with over 125 million papers. Used by over 2 million researchers in academia and industry."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Elicit: AI for scientific research"
+        },
+        {
+          "locator": "text characters 0:34",
+          "excerpt": "Elicit: AI for scientific research"
+        }
+      ],
+      "capture_path": "discovery/captures/4473fde2a4db1ff86014.html",
+      "capture_sha256": "c28068e8aa0f0caa3c18bb0cfb1b0f0d32ccba4310343bd09ff83ca39e919328",
+      "record_path": "discovery/records/4473fde2a4db1ff86014.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

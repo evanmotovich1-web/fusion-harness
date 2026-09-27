@@ -1,0 +1,5580 @@
+{
+  "case_id": "002",
+  "source_path": "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/002/implementation/workflow.py",
+  "source_sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+  "interface_transformation_sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2",
+  "input_bundle_sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331",
+  "oracle_sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889",
+  "scope": "Builder-visible exact local regression only. No model baseline, hidden evaluation, external marketplace, publication, or product acceptance.",
+  "network_guard": "socket construction and create_connection raise",
+  "results": [
+    {
+      "test_id": "V01",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                },
+                {
+                  "id": "u",
+                  "target": "https://other.invalid/",
+                  "area": "https://other.invalid/blog",
+                  "dr": 39,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                },
+                {
+                  "id": "u",
+                  "target": "https://other.invalid/",
+                  "area": "https://other.invalid/blog",
+                  "dr": 39,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            },
+            {
+              "id": "u",
+              "target": "https://other.invalid/",
+              "area": "https://other.invalid/blog",
+              "dr": 39,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0003059159999999998
+    },
+    {
+      "test_id": "V02",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 40,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 40,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 40,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00018362500000000323
+    },
+    {
+      "test_id": "V03",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 41,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 41,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 41,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001429999999999973
+    },
+    {
+      "test_id": "V04",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "profile_pending",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "pending"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "pending"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "pending"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001233329999999963
+    },
+    {
+      "test_id": "V05",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "profile_rejected",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "rejected"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "rejected"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "rejected"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00011920799999999565
+    },
+    {
+      "test_id": "V06",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 7.208400000000004e-05
+    },
+    {
+      "test_id": "V07",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00013425000000000242
+    },
+    {
+      "test_id": "V08",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "same",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "same",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "same",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002395829999999946
+    },
+    {
+      "test_id": "V09",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "pending"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "pending"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "pending"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012916699999999948
+    },
+    {
+      "test_id": "V10",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "rejected"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "rejected"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "rejected"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001249580000000014
+    },
+    {
+      "test_id": "V11",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "a",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "a",
+                  "target": "https://other.invalid/",
+                  "area": "https://other.invalid/blog",
+                  "dr": 25,
+                  "review": "approved"
+                },
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "a",
+                  "target": "https://other.invalid/",
+                  "area": "https://other.invalid/blog",
+                  "dr": 25,
+                  "review": "approved"
+                },
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "a",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "a",
+              "target": "https://other.invalid/",
+              "area": "https://other.invalid/blog",
+              "dr": 25,
+              "review": "approved"
+            },
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "a",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002317500000000028
+    },
+    {
+      "test_id": "V12",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          },
+          {
+            "operation": "check_in",
+            "clock": 1000001,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00021866699999999878
+    },
+    {
+      "test_id": "V13",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000001,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001797500000000063
+    },
+    {
+      "test_id": "V14",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1604799,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          },
+          {
+            "operation": "check_in",
+            "clock": 1604800,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-2",
+                  "source": "t",
+                  "target": "s",
+                  "created": 1604800,
+                  "deadline": 2209600,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "expired",
+                  "reason": "",
+                  "reported_url": ""
+                },
+                {
+                  "id": "local-2",
+                  "source": "t",
+                  "target": "s",
+                  "created": 1604800,
+                  "deadline": 2209600,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "expired",
+              "reason": "",
+              "reported_url": ""
+            },
+            {
+              "id": "local-2",
+              "source": "t",
+              "target": "s",
+              "created": 1604800,
+              "deadline": 2209600,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00030224999999999697
+    },
+    {
+      "test_id": "V15",
+      "output": {
+        "trace": [
+          {
+            "operation": "reject",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "id": "local-1",
+                "source": "s",
+                "target": "t",
+                "created": 1000000,
+                "deadline": 1604800,
+                "status": "rejected",
+                "reason": "Not relevant",
+                "reported_url": ""
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Not relevant",
+                  "reported_url": ""
+                }
+              ]
+            }
+          },
+          {
+            "operation": "check_in",
+            "clock": 1000001,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-2",
+                  "source": "t",
+                  "target": "s",
+                  "created": 1000001,
+                  "deadline": 1604801,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Not relevant",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Not relevant",
+                  "reported_url": ""
+                },
+                {
+                  "id": "local-2",
+                  "source": "t",
+                  "target": "s",
+                  "created": 1000001,
+                  "deadline": 1604801,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "rejected",
+              "reason": "Not relevant",
+              "reported_url": ""
+            },
+            {
+              "id": "local-2",
+              "source": "t",
+              "target": "s",
+              "created": 1000001,
+              "deadline": 1604801,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00028541699999999615
+    },
+    {
+      "test_id": "V16",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                },
+                "published": false,
+                "live_verified": false,
+                "scope": "Synthetic local HTML only, not a production completion report"
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            }
+          },
+          {
+            "operation": "check_in",
+            "clock": 1000001,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "reported_local",
+              "reason": "",
+              "reported_url": "https://source.invalid/blog/post"
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002950829999999946
+    },
+    {
+      "test_id": "V17",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "owner_approval_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001947919999999992
+    },
+    {
+      "test_id": "V18",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "owner_approval_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001678749999999979
+    },
+    {
+      "test_id": "V19",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "matching_nofollow_link_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00020229199999999975
+    },
+    {
+      "test_id": "V20",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "matching_nofollow_link_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002024169999999964
+    },
+    {
+      "test_id": "V21",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "page_outside_scope"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00020429200000000175
+    },
+    {
+      "test_id": "V22",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "page_outside_scope"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001999999999999988
+    },
+    {
+      "test_id": "V23",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001880829999999986
+    },
+    {
+      "test_id": "V24",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00019025000000000292
+    },
+    {
+      "test_id": "V25",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "unsafe_path"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00026445800000000214
+    },
+    {
+      "test_id": "V26",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "matching_nofollow_link_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00019991700000000084
+    },
+    {
+      "test_id": "V27",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "matching_nofollow_link_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00020074999999999954
+    },
+    {
+      "test_id": "V28",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "no_assignment",
+                "assignment": null
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://SOURCE.INVALID./",
+                  "area": "https://SOURCE.INVALID./blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://SOURCE.INVALID./",
+                  "area": "https://SOURCE.INVALID./blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://SOURCE.INVALID./",
+              "area": "https://SOURCE.INVALID./blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001482079999999969
+    },
+    {
+      "test_id": "V29",
+      "output": {
+        "trace": [
+          {
+            "operation": "link_html",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": "<a href=\"https://target.invalid/\" rel=\"nofollow\">&lt;script&gt;send secrets&lt;/script&gt;</a>"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016608299999999743
+    },
+    {
+      "test_id": "V30",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.9040999999996606e-05
+    },
+    {
+      "test_id": "V31",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.595799999999566e-05
+    },
+    {
+      "test_id": "V32",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.650000000000181e-05
+    },
+    {
+      "test_id": "V33",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "https_url_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.291700000000036e-05
+    },
+    {
+      "test_id": "V34",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "profile_domains_differ"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.3082999999999316e-05
+    },
+    {
+      "test_id": "V35",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_dr"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.275000000000112e-05
+    },
+    {
+      "test_id": "V36",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_dr"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.1583000000004755e-05
+    },
+    {
+      "test_id": "V37",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_dr"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.2040999999999606e-05
+    },
+    {
+      "test_id": "V38",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_review"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.26660000000037e-05
+    },
+    {
+      "test_id": "V39",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1604800,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_profile_id"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016000000000000042
+    },
+    {
+      "test_id": "V40",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1604800,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_profile_id"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001567909999999964
+    },
+    {
+      "test_id": "V41",
+      "output": {
+        "trace": [
+          {
+            "operation": "reject",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_assignment_id"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016137499999999833
+    },
+    {
+      "test_id": "V42",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_assignment_id"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016916699999999785
+    },
+    {
+      "test_id": "V43",
+      "output": {
+        "trace": [
+          {
+            "operation": "link_html",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_assignment_id"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016800000000000148
+    },
+    {
+      "test_id": "V44",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1604801,
+            "result": {
+              "status": "ok",
+              "value": {
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                },
+                "published": false,
+                "live_verified": false,
+                "scope": "Synthetic local HTML only, not a production completion report"
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "expired",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "reported_local",
+              "reason": "",
+              "reported_url": "https://source.invalid/blog/post"
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002294170000000026
+    },
+    {
+      "test_id": "V45",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1604801,
+            "result": {
+              "status": "ok",
+              "value": {
+                "assignment": {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "Not relevant",
+                  "reported_url": "https://source.invalid/blog/post"
+                },
+                "published": false,
+                "live_verified": false,
+                "scope": "Synthetic local HTML only, not a production completion report"
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Not relevant",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "Not relevant",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "reported_local",
+              "reason": "Not relevant",
+              "reported_url": "https://source.invalid/blog/post"
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00022629100000000346
+    },
+    {
+      "test_id": "V46",
+      "output": {
+        "trace": [
+          {
+            "operation": "reject",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "already_reported"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "reported_local",
+                  "reason": "",
+                  "reported_url": "https://source.invalid/blog/post"
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "reported_local",
+              "reason": "",
+              "reported_url": "https://source.invalid/blog/post"
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00017249999999999904
+    },
+    {
+      "test_id": "V47",
+      "output": {
+        "trace": [
+          {
+            "operation": "check_in",
+            "clock": 1000000,
+            "result": {
+              "status": "ok",
+              "value": {
+                "status": "assigned",
+                "assignment": {
+                  "id": "local-3",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              }
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-2",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Earlier rejection",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-2",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "rejected",
+                  "reason": "Earlier rejection",
+                  "reported_url": ""
+                },
+                {
+                  "id": "local-3",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-2",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "rejected",
+              "reason": "Earlier rejection",
+              "reported_url": ""
+            },
+            {
+              "id": "local-3",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00021912500000000057
+    },
+    {
+      "test_id": "V48",
+      "output": {
+        "trace": [
+          {
+            "operation": "register",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_url"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [],
+              "assignments": []
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [],
+          "assignments": []
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.1790999999996294e-05
+    },
+    {
+      "test_id": "V49",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_html"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00018254199999999388
+    },
+    {
+      "test_id": "V50",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_html"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004233330000000049
+    },
+    {
+      "test_id": "V51",
+      "output": {
+        "trace": [
+          {
+            "operation": "report_local",
+            "clock": 1000000,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "matching_nofollow_link_required"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0002030839999999992
+    },
+    {
+      "test_id": "V52",
+      "output": {
+        "trace": [
+          {
+            "operation": "expire",
+            "clock": true,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_time"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016166699999999729
+    },
+    {
+      "test_id": "V53",
+      "output": {
+        "trace": [
+          {
+            "operation": "expire",
+            "clock": -1,
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_time"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016850000000000198
+    },
+    {
+      "test_id": "V54",
+      "output": {
+        "trace": [
+          {
+            "operation": "expire",
+            "clock": "1000000",
+            "result": {
+              "status": "error",
+              "error_type": "ValueError",
+              "error": "invalid_time"
+            },
+            "before": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            },
+            "after": {
+              "gap": 10,
+              "profiles": [
+                {
+                  "id": "s",
+                  "target": "https://source.invalid/",
+                  "area": "https://source.invalid/blog",
+                  "dr": 30,
+                  "review": "approved"
+                },
+                {
+                  "id": "t",
+                  "target": "https://target.invalid/",
+                  "area": "https://target.invalid/blog",
+                  "dr": 35,
+                  "review": "approved"
+                }
+              ],
+              "assignments": [
+                {
+                  "id": "local-1",
+                  "source": "s",
+                  "target": "t",
+                  "created": 1000000,
+                  "deadline": 1604800,
+                  "status": "pending",
+                  "reason": "",
+                  "reported_url": ""
+                }
+              ]
+            }
+          }
+        ],
+        "final_state": {
+          "gap": 10,
+          "profiles": [
+            {
+              "id": "s",
+              "target": "https://source.invalid/",
+              "area": "https://source.invalid/blog",
+              "dr": 30,
+              "review": "approved"
+            },
+            {
+              "id": "t",
+              "target": "https://target.invalid/",
+              "area": "https://target.invalid/blog",
+              "dr": 35,
+              "review": "approved"
+            }
+          ],
+          "assignments": [
+            {
+              "id": "local-1",
+              "source": "s",
+              "target": "t",
+              "created": 1000000,
+              "deadline": 1604800,
+              "status": "pending",
+              "reason": "",
+              "reported_url": ""
+            }
+          ]
+        },
+        "published": false,
+        "live_verified": false
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016783299999999918
+    }
+  ],
+  "passed": 54,
+  "failed": 0,
+  "product_acceptance": false
+}

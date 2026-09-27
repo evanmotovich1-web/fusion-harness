@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-bc4c1c7f4ad0f905c866",
+  "source_url": "https://www.chatsimple.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.703478+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 308: Permanent Redirect",
+  "elapsed_seconds": 0.249
+}

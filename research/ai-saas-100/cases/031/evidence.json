@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-fb14d730a3d5b0aefcac",
+      "source_url": "https://klap.app/",
+      "final_url": "https://klap.app/",
+      "publisher": "klap.app",
+      "retrieved_at": "2026-09-20T21:00:45.712979+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Klap | Turn videos into viral TikToks, Reels & Shorts"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Klap turns long videos, podcasts and webinars into ready-to-post TikToks, Reels and YouTube Shorts in one click — with AI captions, smart reframing and viral-score insights."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Klap | Turn videos into viral TikToks, Reels & Shorts"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Klap"
+        },
+        {
+          "locator": "text characters 295:607",
+          "excerpt": "y for free. No credit card required.\nUsed by teams at\nNew\nIntroducing\nAI Reframe 2\nResize your videos for any platform with our most advanced AI yet. It analyzes your scenes and applies the perfect layout—Split Screen, Screencasts, Gaming, and more—turning long videos into pro-quality clips in just one click.\n8"
+        },
+        {
+          "locator": "text characters 367:679",
+          "excerpt": " Reframe 2\nResize your videos for any platform with our most advanced AI yet. It analyzes your scenes and applies the perfect layout—Split Screen, Screencasts, Gaming, and more—turning long videos into pro-quality clips in just one click.\n8.5M clips made by\n3.5M creators\nGrow your audience like the top creators"
+        },
+        {
+          "locator": "text characters 866:1178",
+          "excerpt": "in\nKlap will turn all your videos into many viral vertical clips. Our AI-powered tool will create engaging video clips from your content in just a few clicks.\nAutomatically create\nviral worthy content\nDon’t trust us, trust the algorithm. Klap will instantly turn each video clip into viral worthy content. Our AI"
+        },
+        {
+          "locator": "text characters 1106:1418",
+          "excerpt": "ap will instantly turn each video clip into viral worthy content. Our AI-powered tool will create engaging video clips and score their potential to go viral. And yes, we provide AI generated captions to post alongside the videos too.\nGrow your audience by\nrepurposing your videos\nDon’t limit yourself to just one"
+        },
+        {
+          "locator": "text characters 1214:1526",
+          "excerpt": "ideo clips and score their potential to go viral. And yes, we provide AI generated captions to post alongside the videos too.\nGrow your audience by\nrepurposing your videos\nDon’t limit yourself to just one channel, when you can repurpose your content to fit them all. Expand the reach of your long form content wi"
+        },
+        {
+          "locator": "text characters 1801:2113",
+          "excerpt": "stantly share your new videos across your social media platforms. One AI video editor tool that does it all!\nWondering\nhow Klap works?\nStart by uploading a video\nSimply paste a link to your Youtube video, or upload a video file, into Klap. Our rule of thumb: a one-minute long video produces about 5 video clips."
+        },
+        {
+          "locator": "text characters 555:818",
+          "excerpt": "g videos into pro-quality clips in just one click.\n8.5M clips made by\n3.5M creators\nGrow your audience like the top creators by sharing short-form content daily. Klap will help you create engaging video clips from your long videos in just a few clicks.\nMade with\n"
+        }
+      ],
+      "capture_path": "discovery/captures/fb14d730a3d5b0aefcac.html",
+      "capture_sha256": "b14148d00ad09a06591c21a81b17c3c285c790bc69404967a0ee6c1d25b94939",
+      "record_path": "discovery/records/fb14d730a3d5b0aefcac.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r031-62bc2407f0377ebabccd",
+      "source_url": "https://klap.app/api",
+      "publisher": "klap.app",
+      "retrieved_at": "2026-09-20T21:35:37.933840+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://klap.app/api",
+      "capture_path": "cases/031/research/captures/62bc2407f0377ebabccd.html",
+      "capture_sha256": "94bf71c6a333a6ee7c4d9e3254c003578e5e45df85d095f05cc6abf8ad085567",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/031/research/records/62bc2407f0377ebabccd.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Klap API | Automate AI Video Clipping, Captions & Reframing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Integrate Klap's AI video editing into your product. Generate short-form videos, dynamic captions and smart reframing at scale via the Klap REST API."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Klap API | Automate AI Video Clipping, Captions & Reframing"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Klap"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r031-a9aff8c5b03c96744bb0",
+      "source_url": "https://klap.app/pricing",
+      "publisher": "klap.app",
+      "retrieved_at": "2026-09-20T21:35:37.842052+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://klap.app/pricing",
+      "capture_path": "cases/031/research/captures/a9aff8c5b03c96744bb0.html",
+      "capture_sha256": "df9c8baebf6e314f0cceec6ee025c8b5c42882980799201afd94e402e3f3be7b",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/031/research/records/a9aff8c5b03c96744bb0.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Klap Pricing | Plans for Creators, Teams & API Users"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore Klap's pricing — flexible plans for creators, teams and developers. Compare features, free trial, fair-use credits and the Klap REST API for AI video clipping at scale."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Klap Pricing | Plans for Creators, Teams & API Users"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Klap"
+        },
+        {
+          "locator": "text characters 0:870",
+          "excerpt": "Klap Pricing | Plans for Creators, Teams & API Users\nResources\nPricing\nResources\nPricing\nPlans\nOnly pay for clips you generate.\nMonthly\nYearly\nSave 50%\nBasic\nFor individuals\n100 clips\n/mo\n$14\n/mo\nBilled yearly\nGet started\nPro\nPopular\nFor professionals\n300 clips\n/mo\n$39\n/mo\nBilled yearly\nGet started\nPro+\nFor teams\n1000 clips\n/mo\n$94\n/mo\nBilled yearly\nGet started\nAll plans include:\nAI Clipping\nUnlimited social accounts\nAnalytics\nNeed more?\nLet's talk!\n8.5M clips\nmade by\n3.5M creators\nMade with ♥ by\n@theo\nand\n@victor\nZIGG SAS doing business as Klap\nTerms of services\nPrivacy policy\nTurn videos into viral shorts\nResources\nBlog\nTools\nAPI Docs\nDiscord\nServices\nBecome an affiliate\nAPI\nAlternatives\n2short AI\nDumme\nMunch\nOpus Clip\nQlip\nSpikes Studio\nVidyo\nVizard AI\nSsemble\nVeed.io\nSubmagic\nZubtitle\nWisecut\nLiveLink\nSendShort\nShort.ai\nNexus Clips\nWayin\nClipGoat\nCutLabs"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-cdcc7e7e39c250940e79",
+      "source_url": "https://www.opus.pro/",
+      "final_url": "https://www.opus.pro/",
+      "publisher": "www.opus.pro",
+      "retrieved_at": "2026-09-20T21:00:45.600842+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "OpusClip: #1 AI video clipping and editing tool"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "OpusClip turns long videos into high-quality viral clips, and publishes them to all social platforms in one click. We help 10M+ creators create and grow faster."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "OpusClip: #1 AI video clipping tool to create viral shorts"
+        },
+        {
+          "locator": "text characters 0:255",
+          "excerpt": "OpusClip: #1 AI video clipping and editing tool\nOpusClip\nEasily edit clips\nOpen app\nFeatures\nFeatures\nAI Producer\nNew\nTurn your raw footage into a polished, ready to post video\nAnimated captions\nThe fastest way to add animated captions\nAI Reframe\nUpdated\n"
+        },
+        {
+          "locator": "text characters 32:344",
+          "excerpt": "nd editing tool\nOpusClip\nEasily edit clips\nOpen app\nFeatures\nFeatures\nAI Producer\nNew\nTurn your raw footage into a polished, ready to post video\nAnimated captions\nThe fastest way to add animated captions\nAI Reframe\nUpdated\nResize any video for every platform in 1 click\nClipAnything\nThe fastest way to turn any v"
+        },
+        {
+          "locator": "text characters 166:478",
+          "excerpt": "post video\nAnimated captions\nThe fastest way to add animated captions\nAI Reframe\nUpdated\nResize any video for every platform in 1 click\nClipAnything\nThe fastest way to turn any video into viral shorts\nSocial scheduler\nSchedule a month’s posts to all platforms in 10 minutes\nBrand template\nEasily create and add b"
+        },
+        {
+          "locator": "text characters 434:746",
+          "excerpt": "nutes\nBrand template\nEasily create and add brand templates in 1 click\nAI B-Roll\nGet relevant AI B-Roll in 1 click, under 1 minute\nExport to XML\nEdit in Adobe Premiere Pro or DaVinci Resolve at ease\nTeam workspace\nMaximize your team's productivity with AI\nEditor\nUpdated\nAll-in-one AI editor. No editing skills re"
+        },
+        {
+          "locator": "text characters 457:769",
+          "excerpt": "sily create and add brand templates in 1 click\nAI B-Roll\nGet relevant AI B-Roll in 1 click, under 1 minute\nExport to XML\nEdit in Adobe Premiere Pro or DaVinci Resolve at ease\nTeam workspace\nMaximize your team's productivity with AI\nEditor\nUpdated\nAll-in-one AI editor. No editing skills required\nThumbnail genera"
+        },
+        {
+          "locator": "text characters 616:928",
+          "excerpt": "Resolve at ease\nTeam workspace\nMaximize your team's productivity with AI\nEditor\nUpdated\nAll-in-one AI editor. No editing skills required\nThumbnail generator\nNew\nDrop a link & get YouTube thumbnail in 1 click\nAgentic workflows\nAPI\nThe video API every AI agent can call\nMCP\nNew\nVideo MCP any AI agent workflow can "
+        }
+      ],
+      "capture_path": "discovery/captures/cdcc7e7e39c250940e79.html",
+      "capture_sha256": "6a95059c6566191bca83f45c83f53edc77abab2b8263d550d8691c04a03d36e4",
+      "record_path": "discovery/records/cdcc7e7e39c250940e79.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

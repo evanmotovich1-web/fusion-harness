@@ -1,0 +1,546 @@
+{
+  "evidence_id": "r023-53959c979f43772cecda",
+  "source_url": "https://www.sembly.ai/pricing/",
+  "publisher": "www.sembly.ai",
+  "retrieved_at": "2026-09-20T21:35:31.528119+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.sembly.ai/pricing/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "cases/023/research/captures/53959c979f43772cecda.html",
+  "capture_sha256": "bb96fd834ad09cea4be5a1c62f925ec573551268698bed320029c2342bb06f5c",
+  "bytes_saved": 105125,
+  "title": "Pricing and Plans | Sembly AI",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore subscription options for freelancers, growing teams, and enterprises. Compare features, user limits, and production capacity."
+    },
+    {
+      "key": "og:title",
+      "value": "Pricing and Plans | Sembly AI"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore subscription options for freelancers, growing teams, and enterprises. Compare features, user limits, and production capacity."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Sembly AI"
+    }
+  ],
+  "text": "Pricing and Plans | Sembly AI\nSembly 3.0 pricing\nClients, brandings, and AI deliverables on every paid plan\n→\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nAffiliate Program\nReseller Program\nTrust Center\nHelp Center\nPricing\nSign in\nStart free\n→\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nAffiliate Program\nReseller Program\nTrust Center\nHelp Center\nPricing\nSign in\nStart free\n→\nPricing\nChoose your production capacity\nEvery plan runs the same agentic platform. Plans differ by the clients you manage, the brandings you apply, and the deliverables you generate.\nMonthly\nAnnual\n· lower price\nBasic\nFor one practitioner running a full client roster.\n$10\nper month, billed annually\nChoose Basic Plan\n✓ 1 user, 25 clients, 50 brand packages\n✓ 2,500 credits per user each month\n✓ Unlimited capture and transcription in 45+ languages\n✓ Notes, summaries, tasks, and basic AI chat\n✓ 1 year of history\nMost popular\nPro\nFor teams up to 40 with several active client accounts.\n$20\nper user / month, billed annually\nChoose Pro Plan →\n✓ Up to 40 users, 100 clients, 200 brand packages\n✓ 3,000 credits per user each month\n✓ Multi-meeting AI chat and advanced search\n✓ Workspace automations, webhooks, and MCP access\n✓ Everything in Basic, plus 2 years of history\nMAX\nFor organizations up to 500 with high production volume.\n$30\nper user / month, billed annually\nChoose MAX Plan\n✓ 3 to 500 users, 500 clients, 1,000 brand packages\n✓ 3,500 credits per user\n✓ HD video capture and unlimited history\n✓ Custom SSO, audit log, and HIPAA compliance\n✓ Everything in Pro, plus priority support\nHow do the plans compare?\nCompare our plans and choose the best fit.\nFree Trial\n$0\nStart free\nBasic\n$10 / month\nChoose Basic\nPro\n$20 / user / month\nChoose Pro\nMAX\n$30 / user / month\nChoose MAX\nEnterprise\nCustom\nTalk to sales\nWorkspace\nMaximum users\n1\n1\n40\n500\nUnlimited\nMinimum users\n1\n1\n1\n3\n10\nCredits\nMonthly credits per user\n750\n2,500\n3,000\n3,500\n3,500\nOne-time bonus credits (new workspace)\n1,750\n2,500\n2,500\n2,500\nCustom\nAdditional Credits for Purchase\n—\n✓\n✓\n✓\n✓\nStudio\nClients per workspace\n5\n25\n100\n500\nCustom\nBrand packages per workspace\n5\n50\n200\n1,000\nCustom\nChat history\n2 months\n1 year\n2 years\nUnlimited\nUnlimited\nArtifact history\n2 months\n1 year\n2 years\nUnlimited\nUnlimited\nIntegrations, per user\n3\n3\n5\n20\n20\nIntegrations, workspace-wide\n—\n—\n5\n20\n20\nNotes\nMeeting transcription\n✓\n✓\n✓\n✓\n✓\nTranscript search\n✓\n✓\n✓\n✓\n✓\nMeeting notes and summaries\n✓\n✓\n✓\n✓\n✓\nTasks\n✓\n✓\n✓\n✓\n✓\nBasic AI chat\n✓\n✓\n✓\n✓\n✓\nCustom meeting notes templates\n—\n—\n✓\n✓\n✓\nMulti-meeting AI chat\n—\n—\n✓\n✓\n✓\nAdvanced transcript search\n—\n—\n✓\n✓\n✓\nSentiment analysis\n—\n—\n✓\n✓\n✓\nCollections of meetings\n—\n—\n✓\n✓\n✓\nRisks, issues, and notable events\n—\n—\n✓\n✓\n✓\nAuto-sharing\n—\n—\n✓\n✓\n✓\nRetention settings\n—\n—\n✓\n✓\n✓\nAnalytics dashboard\n—\n—\n✓\n✓\n✓\nMeeting capture\nGoogle Meet, Teams, Zoom, and Webex\n✓\n✓\n✓\n✓\n✓\nMeeting hours, per user each month\n1 hour\nUnlimited\nUnlimited\nUnlimited\nUnlimited\nMicrophone recordings\n✓\n✓\n✓\n✓\n✓\nVideo capture\n—\n—\nStandard\nHD\nHD\nMedia uploads\n✓\n✓\n✓\n✓\n✓\nCalendar sync\n✓\n✓\n✓\n✓\n✓\nSupported languages\n45+\n45+\n45+\n45+\n45+\nMixed-language meetings\n✓\n✓\n✓\n✓\n✓\nMeeting agent customization\nLimited\nLimited\n✓\n✓\n✓\nNotification and consent tracking\n—\n—\n✓\n✓\n✓\nCustom vocabulary\n—\n—\n✓\n✓\n✓\nMeeting history\n2 months\n1 year\n2 years\nUnlimited\nUnlimited\nNotes Automations\nAutomations, per user\n3\n3\n5\n20\n20\nWebhooks, per user\n—\n—\n5\n20\n20\nZapier automations\n✓\n✓\n✓\n✓\n✓\nMCP access\n—\n—\n✓\n✓\n✓\nAutomations, workspace-wide\n—\n—\n5\n20\n20\nWebhooks, workspace-wide\n—\n—\n5\n20\n20\nLarge teams and compliance\nAutomation access controls\n—\n—\n—\n✓\n✓\nAudit log\n—\n—\n—\n✓\n✓\nCustom SSO\n—\n—\n—\n✓\n✓\nCustom SMTP relay\n—\n—\n—\n✓\n✓\nAuto-sharing groups\n—\n—\n—\n✓\n✓\nHIPAA compliance\n—\n—\n—\n✓\n✓\nPriority support\n—\n—\n—\n✓\n✓\nDedicated Success Manager\n—\n—\n—\n—\n✓\nCustomized Onboarding and Workshops\n—\n—\n—\n—\n✓\nCustom Agreements (DPA, etc.)\n—\n—\n—\n—\n✓\nWorkspace\nMaximum users\nFree Trial\n1\nBasic\n1\nPro\n40\nMAX\n500\nEnterprise\nUnlimited\nMinimum users\nFree Trial\n1\nBasic\n1\nPro\n1\nMAX\n3\nEnterprise\n10\nCredits\nMonthly credits per user\nFree Trial\n750\nBasic\n2,500\nPro\n3,000\nMAX\n3,500\nEnterprise\n3,500\nOne-time bonus credits (new workspace)\nFree Trial\n1,750\nBasic\n2,500\nPro\n2,500\nMAX\n2,500\nEnterprise\nCustom\nAdditional Credits for Purchase\nFree Trial\n—\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nStudio\nClients per workspace\nFree Trial\n5\nBasic\n25\nPro\n100\nMAX\n500\nEnterprise\nCustom\nBrand packages per workspace\nFree Trial\n5\nBasic\n50\nPro\n200\nMAX\n1,000\nEnterprise\nCustom\nChat history\nFree Trial\n2 months\nBasic\n1 year\nPro\n2 years\nMAX\nUnlimited\nEnterprise\nUnlimited\nArtifact history\nFree Trial\n2 months\nBasic\n1 year\nPro\n2 years\nMAX\nUnlimited\nEnterprise\nUnlimited\nIntegrations, per user\nFree Trial\n3\nBasic\n3\nPro\n5\nMAX\n20\nEnterprise\n20\nIntegrations, workspace-wide\nFree Trial\n—\nBasic\n—\nPro\n5\nMAX\n20\nEnterprise\n20\nNotes\nMeeting transcription\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nTranscript search\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMeeting notes and summaries\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nTasks\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nBasic AI chat\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nCustom meeting notes templates\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMulti-meeting AI chat\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nAdvanced transcript search\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nSentiment analysis\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nCollections of meetings\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nRisks, issues, and notable events\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nAuto-sharing\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nRetention settings\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nAnalytics dashboard\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\n1\n/ 14\nMeeting capture\nGoogle Meet, Teams, Zoom, and Webex\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMeeting hours, per user each month\nFree Trial\n1 hour\nBasic\nUnlimited\nPro\nUnlimited\nMAX\nUnlimited\nEnterprise\nUnlimited\nMicrophone recordings\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nVideo capture\nFree Trial\n—\nBasic\n—\nPro\nStandard\nMAX\nHD\nEnterprise\nHD\nMedia uploads\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nCalendar sync\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nSupported languages\nFree Trial\n45+\nBasic\n45+\nPro\n45+\nMAX\n45+\nEnterprise\n45+\nMixed-language meetings\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMeeting agent customization\nFree Trial\nLimited\nBasic\nLimited\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nNotification and consent tracking\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nCustom vocabulary\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMeeting history\nFree Trial\n2 months\nBasic\n1 year\nPro\n2 years\nMAX\nUnlimited\nEnterprise\nUnlimited\n1\n/ 12\nNotes Automations\nAutomations, per user\nFree Trial\n3\nBasic\n3\nPro\n5\nMAX\n20\nEnterprise\n20\nWebhooks, per user\nFree Trial\n—\nBasic\n—\nPro\n5\nMAX\n20\nEnterprise\n20\nZapier automations\nFree Trial\n✓\nBasic\n✓\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nMCP access\nFree Trial\n—\nBasic\n—\nPro\n✓\nMAX\n✓\nEnterprise\n✓\nAutomations, workspace-wide\nFree Trial\n—\nBasic\n—\nPro\n5\nMAX\n20\nEnterprise\n20\nWebhooks, workspace-wide\nFree Trial\n—\nBasic\n—\nPro\n5\nMAX\n20\nEnterprise\n20\nLarge teams and compliance\nAutomation access controls\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nAudit log\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nCustom SSO\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nCustom SMTP relay\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nAuto-sharing groups\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nHIPAA compliance\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nPriority support\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n✓\nEnterprise\n✓\nDedicated Success Manager\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n—\nEnterprise\n✓\nCustomized Onboarding and Workshops\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n—\nEnterprise\n✓\nCustom Agreements (DPA, etc.)\nFree Trial\n—\nBasic\n—\nPro\n—\nMAX\n—\nEnterprise\n✓\n1\n/ 10\nEvery paid plan includes unlimited capture on Google Meet, Teams, Zoom, and Webex, transcription in 45+ languages, notes, tasks, transcript search, calendar sync, and Zapier access. The free trial covers 1 meeting hour. Credits are allocated per user each month. MAX requires a minimum of 3 users; Enterprise starts at 10.\nWhat about security on my plan?\nRun any plan on the same security foundation.\nCertified compliance\nSembly holds SOC 2 Type II certification and operates in line with GDPR. HIPAA compliance is available on Max and Enterprise.\nModel training control\nEvery plan manages model training through opt-out settings, so your audio, video, and text stay excluded from training on your terms.\nVerified trust\nSecurity documentation, subprocessor lists, and audit reports live in the Sembly Trust Center for your review before purchase.\nWhat do I need to know before I choose?\nAnswer the last questions between you and a plan.\nWhich plan fits my team?\n+\nBasic fits one practitioner managing up to 25 clients from a single seat. Pro fits teams up to 40 that produce branded deliverables across a roster of up to 100 clients. Max fits organizations from 3 to 500 users that run high deliverable volume and need audit trails, SSO, and HIPAA.\nHow do credits work?\n+\nCredits meter the AI work Sembly performs for you. Each user receives a monthly allowance: 2,500 on Basic, 3,000 on Pro, and 3,500 on Max. Every new workspace also starts with a one-time bonus of 2,500 credits. Unused credits expire at month end on Basic and Pro.\nWhat counts as a client?\n+\nA client is a dedicated space inside your workspace that holds one customer's context, meetings, and knowledge. Each client carries its own branding, so every deliverable you generate for that customer arrives in their visual identity.\nWhat is an AI artifact?\n+\nAn AI artifact is a finished, branded deliverable Sembly generates from your accumulated knowledge: a presentation, report, case study, or sales pitch. Artifacts export as .pptx and .docx files ready to send under your name.\nIs there a free trial?\n+\nYes. Start with our Free Trial plan to experience slide deck generation, meeting notes, and other features. Upgrade to the plan that fits your needs best when ready. Still have questions? Reach out to our support team for plan recommendations:\n[email protected]\nHow does annual billing change the price?\n+\nAnnual billing lowers the monthly rate on every self-serve plan: Basic drops from $17 to $10, Pro from $29 to $20, and Max from $39 to $30 per user. You pay for the year upfront at the lower rate.\nAre there user minimums or maximums?\n+\nBasic covers exactly one user. Pro scales from 1 to 40 users. MAX starts at 3 users and scales to 500. Enterprise starts at 10 users with no upper limit.\nWhere do I start?\nGenerate your first branded deliverable in minutes\nStart on the Free Trial plan and explore the full production system. Load a client, apply their brand, and review the first deliverable the same day.\nStart Free Trial\n→\nBook a Demo\nThe system behind every deliverable — branded, accurate, and approved by your team.\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nPricing\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nHelp Center\nAffiliate Program\nTrust Center\nReseller Program\n© 2026 Sembly AI. All rights reserved.\nTerms of Service\nPrivacy Policy\n234 5th Ave, New York, NY 10001",
+  "links": [
+    {
+      "href": "https://www.sembly.ai/pricing/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/sitemap.xml",
+      "rel": "sitemap"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-256x256.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-256x256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/_astro/privacy-policy.D4VUlsqm.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_astro/pricing.DxhwFUu6.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "#plans",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/notes/login",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/notes/login",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=BASIC",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=PRO",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=MAX",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=BASIC",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=PRO",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar?servicePlan=MAX",
+      "rel": null
+    },
+    {
+      "href": "https://www.sembly.ai/form/",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://www.sembly.ai/form/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service/",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://discord.gg/QhT6JaEFmm",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.reddit.com/r/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://x.com/sembly_ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.instagram.com/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.facebook.com/SemblyAI/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCC2SojuAyLz9rlFtpExDFBQ",
+      "rel": "noopener"
+    }
+  ],
+  "elapsed_seconds": 0.351106
+}

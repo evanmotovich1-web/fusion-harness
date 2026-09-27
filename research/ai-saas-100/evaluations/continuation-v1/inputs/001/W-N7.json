@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N7",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "The survey found an association between sleep and attendance. It did not establish that sleep caused better attendance.",
+        "strength": 2,
+        "method": "rewrite",
+        "protected": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-4ea418c9d9802181cfe8",
+      "source_url": "https://www.chatpdf.com/",
+      "final_url": "https://www.chatpdf.com/",
+      "publisher": "www.chatpdf.com",
+      "retrieved_at": "2026-09-20T21:00:36.849714+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "ChatPDF AI | Chat with any PDF | Free"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "ChatPDF AI | Chat with any PDF | Free"
+        },
+        {
+          "locator": "text characters 0:250",
+          "excerpt": "ChatPDF AI | Chat with any PDF | Free\nNew\nEN\nEN\nPlus\nSign up\nSign up\nNew\nSign up\nPlus upgrade\nChange language\nChats\nStart your first chat\nFolders\nNew folder\nTools\nAI Writer\nAI Detector\nYouTube Chat\nResearch\nDesktop app\nMobile app\nSign up for free to "
+        },
+        {
+          "locator": "text characters 93:405",
+          "excerpt": "\nChange language\nChats\nStart your first chat\nFolders\nNew folder\nTools\nAI Writer\nAI Detector\nYouTube Chat\nResearch\nDesktop app\nMobile app\nSign up for free to save your chat history\nSign up\nBest-in-class AI tools\nfor\nstudents and researchers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Dete"
+        },
+        {
+          "locator": "text characters 103:415",
+          "excerpt": "nguage\nChats\nStart your first chat\nFolders\nNew folder\nTools\nAI Writer\nAI Detector\nYouTube Chat\nResearch\nDesktop app\nMobile app\nSign up for free to save your chat history\nSign up\nBest-in-class AI tools\nfor\nstudents and researchers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Detector\nAI Wr"
+        },
+        {
+          "locator": "text characters 225:537",
+          "excerpt": " app\nSign up for free to save your chat history\nSign up\nBest-in-class AI tools\nfor\nstudents and researchers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nupload\nLoved by\n10M+ Researchers\nQ's answered every d"
+        },
+        {
+          "locator": "text characters 277:589",
+          "excerpt": " up\nBest-in-class AI tools\nfor\nstudents and researchers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nupload\nLoved by\n10M+ Researchers\nQ's answered every day\n1,000,000+\nGen AI apps of 2024\nTop 50\nChat\nSummar"
+        },
+        {
+          "locator": "text characters 328:640",
+          "excerpt": "hers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nupload\nLoved by\n10M+ Researchers\nQ's answered every day\n1,000,000+\nGen AI apps of 2024\nTop 50\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\n"
+        },
+        {
+          "locator": "text characters 720:980",
+          "excerpt": "\nCTRL\nV\nto paste text or links\nDaily answered Q's\n1,000,000+\nLoved by\n10M+ users\nGen AI 2024\nTop 50\n”\nIt's like ChatGPT,\nbut for\nresearch papers\n.\n”\nMushtaq Bilal, PhD\n@MushtaqBilalPhD\nChatPDF in a\nNutshell\nYour PDF AI - like ChatGPT but for PDFs. Summarize an"
+        }
+      ],
+      "capture_path": "discovery/captures/4ea418c9d9802181cfe8.html",
+      "capture_sha256": "b4efad46bb00354dda39a27388ff847c843065376712f8ca5a91b430ae242049",
+      "record_path": "discovery/records/4ea418c9d9802181cfe8.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r009-8fb350249b48a8cb1aea",
+      "source_url": "https://www.chatpdf.com/pricing",
+      "publisher": "www.chatpdf.com",
+      "retrieved_at": "2026-09-20T21:35:26.183345+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": "failed",
+      "final_url": null,
+      "capture_path": null,
+      "capture_sha256": null,
+      "capture_truncated": null,
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "record_path": "cases/009/research/records/8fb350249b48a8cb1aea.json",
+      "research_role": "pricing",
+      "excerpts": []
+    },
+    {
+      "evidence_id": "r009-e42a9af18b82a3afae88",
+      "source_url": "https://www.chatpdf.com/docs/api/backend",
+      "publisher": "www.chatpdf.com",
+      "retrieved_at": "2026-09-20T21:35:26.189444+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.chatpdf.com/docs/api/backend",
+      "capture_path": "cases/009/research/captures/e42a9af18b82a3afae88.html",
+      "capture_sha256": "5f70f8b89c21a9aa0c2b851455979c8c53cdc5f32257e2b28bcbc2a4dc8c56a0",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/009/research/records/e42a9af18b82a3afae88.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "ChatPDF Backend API - extract information and chat with PDFs"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "ChatPDF AI | Chat with any PDF | Free"
+        },
+        {
+          "locator": "text characters 21:569",
+          "excerpt": " extract information and chat with PDFs\nBack to ChatPDF\nChatPDF API\nThe ChatPDF backend API allows you to programmatically extract information from PDF files and create custom chatbots based on your PDFs.\nSources\nBefore asking questions to a PDF, you need to add it to ChatPDF as a source. There are three ways to do so:\nUpload the PDF on ChatPDF.com manually\nAdd a PDF from a publicly accessible URL via API\nUpload a PDF file from your computer via API\nPDFs are limited to 2,000 pages or 32 MB per file.\nChats\nTo ask questions to a PDF, use the ch"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-8b5fafd59e3b253fb8e0",
+      "source_url": "https://pdf.ai/",
+      "final_url": "https://pdf.ai/",
+      "publisher": "pdf.ai",
+      "retrieved_at": "2026-09-20T21:00:36.781010+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Chat with any PDF using AI: ask questions, get summaries, and find answers. Use our API to parse documents, extract data, and split PDFs in your own workflows."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)"
+        },
+        {
+          "locator": "text characters 0:57",
+          "excerpt": "PDF.ai | Chat with PDFs & PDF API (parse, extract, split)"
+        }
+      ],
+      "capture_path": "discovery/captures/8b5fafd59e3b253fb8e0.html",
+      "capture_sha256": "63f7351bf2b9d096b7871b244c005967352cd14645a9000cb30258a2f1924579",
+      "record_path": "discovery/records/8b5fafd59e3b253fb8e0.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-0f5852c2ad6c484569f0",
+  "source_url": "https://lyne.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.971965+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>",
+  "elapsed_seconds": 0.1899
+}

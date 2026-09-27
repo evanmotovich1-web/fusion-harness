@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "kind": "execution_provenance_note_not_a_product_receipt",
+  "status": "failed_executor_attempt",
+  "command": ["python3", "research/ai-saas-100/cases/002/tests/repair-v2/execute.py"],
+  "outer_exit_status": 1,
+  "error": "TypeError: 'PosixPath' object is not subscriptable at the post-run source-integrity assertion. Corrected ROOT[m['active_path']] to ROOT/m['active_path'] and reran using a new immutable source bundle.",
+  "faulty_executor_archive": "cases/002/source-history/repair-v2-4f53995db9a3/tests/repair-v2/execute.py",
+  "source_bundle_archive": "cases/002/source-history/repair-v2-4f53995db9a3/source-bundle.json",
+  "retained_stdout": "cases/002/receipts/002-repair-v2-20260920T225201883373Z.stdout.json",
+  "retained_stderr": "cases/002/receipts/002-repair-v2-20260920T225201883373Z.stderr.txt",
+  "started_at": null,
+  "ended_at": null,
+  "timing_unknown_reason": "Outer executor timestamps were not saved before its exception. No timestamps are reconstructed from filenames or file modification times.",
+  "acceptance_use": "None. Use the subsequent successful source-bound receipts listed in tests/repair-v2/execution-index.json. Preserve these failed-attempt artifacts rather than silently deleting them."
+}

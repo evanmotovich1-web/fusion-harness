@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "004",
+  "source_url": "https://languagetool.org/premium",
+  "purpose": "Previously unavailable pricing and plan limits",
+  "retrieved_at": "2026-09-22T04:14:01.433098+00:00",
+  "source_type": "first_party_public_page",
+  "classification": "vendor_claims_only",
+  "method": "Credential-free bounded HTTPS GET",
+  "status": 200,
+  "error": null,
+  "maximum_bytes": 1048576,
+  "total_deadline_seconds": 8,
+  "limitations": "Static vendor content only, not service execution, customer verification or checkout.",
+  "final_url": "https://languagetool.org/premium",
+  "content_type": "text/html; charset=UTF-8",
+  "truncated": false,
+  "bytes_read": 514740,
+  "captures": [
+    {
+      "path": "cases/004/research/continuation-v1/capture-20260922T041401432516Z.html",
+      "sha256": "bf5d2f993fc36aab211ec838b25338f0519236ed0a2cb28b828004aa9b2b7749"
+    },
+    {
+      "path": "cases/004/research/continuation-v1/capture-20260922T041401432516Z.txt",
+      "sha256": "9ed40a86664b8a88c10473abae04e2f18113164af121258ea25769c351fb80e3"
+    }
+  ],
+  "elapsed_seconds": 2.242513625
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-A1",
+  "split": "adversarial",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "action": [],
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ]
+      },
+      "mode": "structured_preview"
+    },
+    {
+      "request": {
+        "action": "update",
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ],
+        "patch": {
+          "id": [],
+          "status": "qualified"
+        }
+      },
+      "mode": "structured_preview"
+    },
+    {
+      "request": {
+        "action": "update",
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ],
+        "patch": {
+          "id": "c1",
+          "status": {}
+        }
+      },
+      "mode": "structured_preview"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "flags": {
+    "compact-soft-at": "10",
+    "compact-at": "20",
+    "compact-buffer": "10"
+  },
+  "extensions": 1,
+  "registeredFlags": [
+    "compactions-soft-at",
+    "compactions-at",
+    "compact-buffer",
+    "compact-prompt",
+    "compact-soft-at",
+    "compact-at"
+  ],
+  "summaryCalls": 1,
+  "resumed": true,
+  "modelCalls": 3,
+  "errors": [],
+  "widget": [
+    "self-compact [|-------------------] [0% used] soft 0% (10) · warning 0% (20) · force 0% (30)",
+    "FORCED · ordinary tools blocked; call self_compaction(note_to_self)"
+  ],
+  "finalWidget": [
+    "self-compact [|-------------------] [0% used] soft 0% (10) · warning 0% (20) · force 0% (30)",
+    "FORCED · ordinary tools blocked; call self_compaction(note_to_self) · failed: Compacted context still exceeds the hard cutoff. Automatic compaction paused; raise thresholds or explicitly retry /self-compact.; retry self_compaction or /self-compact"
+  ]
+}

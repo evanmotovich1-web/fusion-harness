@@ -1,0 +1,31 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 720,
+      "height": 1280,
+      "duration": "8.000000"
+    },
+    {
+      "codec_name": "aac",
+      "duration": "8.000000"
+    }
+  ],
+  "format": {
+    "duration": "8.000000"
+  },
+  "sha256": "bbd4fe3f2e26fe2e9e41be4880a76006d1e590f0442892be3e16faa35c98b4bc",
+  "decode_check": "passed",
+  "visual_review_seconds": [
+    0.8,
+    3.2,
+    5.0,
+    6.4,
+    7.5
+  ],
+  "transcript_words_verified": 19,
+  "website": "specialistsincare.com",
+  "source_resolution": "480x854; scaled to 720x1280"
+}

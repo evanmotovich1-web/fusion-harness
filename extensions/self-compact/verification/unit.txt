@@ -1,0 +1,71 @@
+bun test v1.4.0 (34cbb9a40)
+
+extensions/self-compact/self-compact.test.ts:
+(pass) thresholds > parses 250000 [0.25ms]
+(pass) thresholds > parses 350K [0.02ms]
+(pass) thresholds > parses 0.25m
+(pass) thresholds > parses 1M
+(pass) thresholds > rejects "" [0.11ms]
+(pass) thresholds > rejects " "
+(pass) thresholds > rejects "-1"
+(pass) thresholds > rejects "0"
+(pass) thresholds > rejects "0k"
+(pass) thresholds > rejects "0%"
+(pass) thresholds > rejects "100%"
+(pass) thresholds > rejects "Infinity"
+(pass) thresholds > rejects "1.2"
+(pass) thresholds > rejects "0.0001k"
+(pass) thresholds > rejects "9007199254740992"
+(pass) thresholds > rejects "99999999999999999m"
+(pass) thresholds > rejects "10%%"
+(pass) thresholds > defaults 250k/350k/400k [0.17ms]
+(pass) thresholds > percentage thresholds [0.02ms]
+(pass) thresholds > mixed units
+(pass) thresholds > token launch on 1M
+(pass) thresholds > zero buffer 0 [0.01ms]
+(pass) thresholds > zero buffer 0%
+(pass) thresholds > zero buffer 0k
+(pass) thresholds > zero buffer 0M
+(pass) thresholds > small window defaults and partially overridden defaults stay ordered [0.04ms]
+(pass) thresholds > rejects over cap, order and rounding to zero [0.04ms]
+(pass) thresholds > aliases reject conflicts [0.04ms]
+(pass) thresholds > exact boundaries [0.05ms]
+(pass) 20-cell meter > 40% with half cached and markers ahead [0.07ms]
+(pass) 20-cell meter > token markers at 10/20/25% [0.07ms]
+(pass) 20-cell meter > zero-buffer marker always visible [0.02ms]
+(pass) 20-cell meter > 0% stays 20 cells [0.01ms]
+(pass) 20-cell meter > 10% stays 20 cells [0.01ms]
+(pass) 20-cell meter > 20% stays 20 cells
+(pass) 20-cell meter > 25% stays 20 cells
+(pass) 20-cell meter > 40% stays 20 cells
+(pass) 20-cell meter > 50% stays 20 cells
+(pass) 20-cell meter > 60% stays 20 cells
+(pass) 20-cell meter > 100% stays 20 cells
+(pass) 20-cell meter > unknown usage and cache [0.03ms]
+(pass) agent lifecycle > tool and flags load; flags populated after factory take effect [1.21ms]
+(pass) agent lifecycle > invalid settings block ordinary tools and surface error [0.44ms]
+(pass) agent lifecycle > soft and warning are live model messages without compaction or blocking [1.01ms]
+(pass) agent lifecycle > force is checked at tool call and blocks every ordinary tool [0.71ms]
+(pass) agent lifecycle > tool saves note, queues after result, compacts once and resumes once [0.56ms]
+(pass) agent lifecycle > failed forced compaction retains fence and note, no retry storm [0.39ms]
+(pass) agent lifecycle > forced unattended fallback attempts once when settled [0.38ms]
+(pass) agent lifecycle > manual command preserves note [0.57ms]
+(pass) agent lifecycle > empty note rejected [0.34ms]
+(pass) agent lifecycle > session switch clears cache and old completion cannot resume [0.37ms]
+(pass) agent lifecycle > model change moves thresholds and clears stale force [0.55ms]
+(pass) replacement summary > literal exactly replaces system prompt; note separate from saved file [0.04ms]
+(pass) replacement summary > summary sends full handoff data and preserves Pi metadata [0.54ms]
+(pass) replacement summary > rejects error [0.47ms]
+(pass) replacement summary > rejects aborted [0.23ms]
+(pass) replacement summary > rejects length [0.27ms]
+(pass) replacement summary > empty summary fails [0.47ms]
+(pass) replacement summary > already aborted makes no provider call [0.51ms]
+(pass) replacement summary > hook cancels failure instead of falling back to built-in prompt [0.50ms]
+(pass) compaction without sufficient relief does not create automatic loop [0.49ms]
+(pass) default thresholds at 40% with half the used context cached [0.02ms]
+(pass) empty explicit prompt is rejected rather than silently using the file [0.30ms]
+
+ 63 pass
+ 0 fail
+ 124 expect() calls
+Ran 63 tests across 1 file. [36.00ms]

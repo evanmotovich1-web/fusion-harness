@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-c9fed23aafd932844c7c",
+      "source_url": "https://botpress.com/",
+      "final_url": "https://botpress.com/",
+      "publisher": "botpress.com",
+      "retrieved_at": "2026-09-20T21:00:24.045109+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Botpress | The enterprise-grade AI agent platform for customer support"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Botpress | The enterprise-grade AI agent platform for customer support"
+        },
+        {
+          "locator": "text characters 0:274",
+          "excerpt": "Botpress | The enterprise-grade AI agent platform for customer support\nBotpress\nPlatform\nBuild\nBotpress Viber\nNatural language builder\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore compone"
+        },
+        {
+          "locator": "text characters 88:400",
+          "excerpt": "\nBuild\nBotpress Viber\nNatural language builder\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZen"
+        },
+        {
+          "locator": "text characters 134:446",
+          "excerpt": "\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsAp"
+        },
+        {
+          "locator": "text characters 171:483",
+          "excerpt": "der\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations"
+        },
+        {
+          "locator": "text characters 259:571",
+          "excerpt": "Explore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not j"
+        },
+        {
+          "locator": "text characters 434:746",
+          "excerpt": "chat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation"
+        },
+        {
+          "locator": "text characters 308:846",
+          "excerpt": "e\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolutio"
+        }
+      ],
+      "capture_path": "discovery/captures/c9fed23aafd932844c7c.html",
+      "capture_sha256": "a3dc0d49952af7e7ab656893c573c4a187011b31c95e8268fa30b9356fbb6927",
+      "record_path": "discovery/records/c9fed23aafd932844c7c.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r027-6343b8a98f79c1a9a643",
+      "source_url": "https://botpress.com/features/knowledge-bases",
+      "publisher": "botpress.com",
+      "retrieved_at": "2026-09-20T21:35:37.399366+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://botpress.com/features/knowledge-bases",
+      "capture_path": "cases/027/research/captures/6343b8a98f79c1a9a643.html",
+      "capture_sha256": "26aa7e6b1bf37cb5c7f0e23d87c84e494924f79b8a86d43be6452557b359e997",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/027/research/records/6343b8a98f79c1a9a643.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Botpress Knowledge Bases: centralize your organizational knowledge"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Botpress Knowledge Bases: centralize your organizational knowledge"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r027-63c4fd128278f3008a5d",
+      "source_url": "https://botpress.com/pricing",
+      "publisher": "botpress.com",
+      "retrieved_at": "2026-09-20T21:35:37.399049+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://botpress.com/pricing",
+      "capture_path": "cases/027/research/captures/63c4fd128278f3008a5d.html",
+      "capture_sha256": "6764f8c00fc93e4bfd2a2f7234dc3c0b235c19ccecc1e282decfade73254f7db",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/027/research/records/63c4fd128278f3008a5d.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Botpress Pricing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "With a generous free tier and no upfront commitment, getting started with Botpress is easy. Our pay-per-usage pricing scales with your growth. Start building for free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Botpress Pricing"
+        },
+        {
+          "locator": "text characters 1002:3469",
+          "excerpt": "Support in 2026\nDocs\nEnterprise\nPricing\nLog in\nGet a demo\nTry for free\nPriced for the work it does, not the seats it fills.\nUnlimited AI agents and AI spend included.\nAnnual ·\nSave 20%\nMonthly\n1200\nconversations/mo\n100\n1.2k\n3k\n10k\nWe recommend\nEnterprise Plan\nFree\n$0\n25 conversations\nNo top-ups or overages\nGet started free\nIncludes:\n3 seats\nSeats are the number of people who can access and work in your workspace.\n3 AI agents\nAutomated agents that handle conversations on your behalf.\nResolution SLA\nYour customer resolution guarantee.\nHelp Center\nA public-facing knowledge base for your customers to self-serve.\nCommunity support\nAn active Discord community of bot builders, plus resources like documentation, Botpress Academy and our YouTube channel.\nPlus\n$150/mo\nbilled annually\n250 conversations/mo included\npacks of 100 for $65 ($0.65/convo)\nGet started\nIncludes everything in Free, and:\n$25 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited AI agents\nAutomated agents that handle conversations on your behalf.\nWhitelabel webchat\nRemove Botpress branding from your chat widget.\nHelp Center + custom domain\nA public-facing knowledge base for your customers to self-serve, complete with your branding.\nTechnical support via live chat\nGet help from Botpress support engineers through live chat.\nTeam\nYour best fit\n$750/mo\nbilled annually\n1,500 conversations/mo included\npacks of 100 for $50 ($0.50/convo)\nGet started\nIncludes everything in Plus, and:\n$150 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited seats\nSeats are the number of people who can access and work in your workspace.\nTeams, routing & RBAC\nGroup your agents into teams, set routing rules, and manage permissions across your workspace.\nTeam analytics\nPerformance metrics broken down by team and agent.\nReal-time collaboration\nMultiple team members can build and edit bots simultaneously in the Studio.\nEnterprise\nCustom\nCustom conversation volume\nCustom pricing\nTalk to sales\nIncludes everything in Team, plus:\nDedicated support\nDirect access to a Botpress support engineer for your team.\nUptime SLA\nPlatform availability guarantee.\nSecurity review\nDedicated security review for your organization.\nC"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-cd8a3ed4ed8c6bb767b4",
+      "source_url": "https://docsbot.ai/",
+      "final_url": "https://docsbot.ai/",
+      "publisher": "docsbot.ai",
+      "retrieved_at": "2026-09-20T21:00:23.334023+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "DocsBot - AI Agents for Business | AI Customer Support & Team Automation"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Build AI agents that combine trusted knowledge with real actions for customers and teams across your business tools and workflows."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "DocsBot - AI Agents for Business | AI Customer Support & Team Automation"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "DocsBot"
+        },
+        {
+          "locator": "text characters 0:252",
+          "excerpt": "DocsBot - AI Agents for Business | AI Customer Support & Team Automation\nNEW\nData Explorer: See What Your Bot Is Missing\n→\nDocsBot\nOpen main menu\nUse Cases\nCustomer Success\nInternal Knowledge\nDocumentation Chatbot\nHelp Desk AI Integrations\nFeatures\nAI "
+        },
+        {
+          "locator": "text characters 0:277",
+          "excerpt": "DocsBot - AI Agents for Business | AI Customer Support & Team Automation\nNEW\nData Explorer: See What Your Bot Is Missing\n→\nDocsBot\nOpen main menu\nUse Cases\nCustomer Success\nInternal Knowledge\nDocumentation Chatbot\nHelp Desk AI Integrations\nFeatures\nAI Actions\nVoice Agents\nFor "
+        },
+        {
+          "locator": "text characters 154:466",
+          "excerpt": "s\nCustomer Success\nInternal Knowledge\nDocumentation Chatbot\nHelp Desk AI Integrations\nFeatures\nAI Actions\nVoice Agents\nFor AI Agents\nSkills Library\nPricing\nDocs\nDevelopers\nBlog\nNews\nCase Studies\nArticles\nLog in\nTry Free\nCustom AI Agents\nfor your business!\nInstant Answers & Actions\nfor\nCustomers and Your Team\nDo"
+        },
+        {
+          "locator": "text characters 179:491",
+          "excerpt": "al Knowledge\nDocumentation Chatbot\nHelp Desk AI Integrations\nFeatures\nAI Actions\nVoice Agents\nFor AI Agents\nSkills Library\nPricing\nDocs\nDevelopers\nBlog\nNews\nCase Studies\nArticles\nLog in\nTry Free\nCustom AI Agents\nfor your business!\nInstant Answers & Actions\nfor\nCustomers and Your Team\nDocsBot turns your knowledg"
+        },
+        {
+          "locator": "text characters 207:519",
+          "excerpt": "hatbot\nHelp Desk AI Integrations\nFeatures\nAI Actions\nVoice Agents\nFor AI Agents\nSkills Library\nPricing\nDocs\nDevelopers\nBlog\nNews\nCase Studies\nArticles\nLog in\nTry Free\nCustom AI Agents\nfor your business!\nInstant Answers & Actions\nfor\nCustomers and Your Team\nDocsBot turns your knowledge base into AI agents that d"
+        },
+        {
+          "locator": "text characters 311:623",
+          "excerpt": "ocs\nDevelopers\nBlog\nNews\nCase Studies\nArticles\nLog in\nTry Free\nCustom AI Agents\nfor your business!\nInstant Answers & Actions\nfor\nCustomers and Your Team\nDocsBot turns your knowledge base into AI agents that deliver instant, accurate answers and take action across your tools, workflows, and support operations.\nT"
+        }
+      ],
+      "capture_path": "discovery/captures/cd8a3ed4ed8c6bb767b4.html",
+      "capture_sha256": "39611c40169b852b794273700f2a9034727176571654479907a4e1cfc011317e",
+      "record_path": "discovery/records/cd8a3ed4ed8c6bb767b4.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

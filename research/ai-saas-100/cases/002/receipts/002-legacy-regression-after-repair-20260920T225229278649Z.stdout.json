@@ -1,0 +1,309 @@
+{
+  "scope": "Local marketplace regression only; no baseline, live publication, or hidden evaluation",
+  "results": [
+    {
+      "test_id": "L01",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 0.00011804200000000223,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L02",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 4.5375000000000276e-05,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L03",
+      "outcome": "passed",
+      "output": {
+        "status": "no_assignment",
+        "assignment": null
+      },
+      "elapsed_seconds": 3.525000000000056e-05,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L04",
+      "outcome": "passed",
+      "output": {
+        "status": "profile_pending",
+        "assignment": null
+      },
+      "elapsed_seconds": 2.770900000000076e-05,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L05",
+      "outcome": "passed",
+      "output": {
+        "status": "profile_rejected",
+        "assignment": null
+      },
+      "elapsed_seconds": 2.6374999999998622e-05,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L06",
+      "outcome": "passed",
+      "output": {
+        "status": "no_assignment",
+        "assignment": null
+      },
+      "elapsed_seconds": 1.4041999999998833e-05,
+      "split": "development",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L07",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 4.820800000000097e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L08",
+      "outcome": "passed",
+      "output": {
+        "expected_error": "owner_approval_required"
+      },
+      "elapsed_seconds": 4.716600000000126e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L09",
+      "outcome": "passed",
+      "output": {
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "reported_local",
+          "reason": "",
+          "reported_url": "https://source.invalid/blog/post"
+        },
+        "published": false,
+        "live_verified": false,
+        "scope": "Synthetic local HTML only, not a production completion report"
+      },
+      "elapsed_seconds": 9.925000000000211e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L10",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 6.441700000000064e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L11",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 4.845800000000122e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L12",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 5.5249999999999744e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L13",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "t",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 3.9624999999997995e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L14",
+      "outcome": "passed",
+      "output": {
+        "status": "assigned",
+        "assignment": {
+          "id": "local-1",
+          "source": "s",
+          "target": "a",
+          "created": 1000000,
+          "deadline": 1604800,
+          "status": "pending",
+          "reason": "",
+          "reported_url": ""
+        }
+      },
+      "elapsed_seconds": 5.941700000000258e-05,
+      "split": "normal_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L15",
+      "outcome": "passed",
+      "output": {
+        "expected_error": "profile_domains_differ"
+      },
+      "elapsed_seconds": 1.2708000000000164e-05,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L16",
+      "outcome": "passed",
+      "output": {
+        "expected_error": "https_url_required"
+      },
+      "elapsed_seconds": 4.916000000000642e-06,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L17",
+      "outcome": "passed",
+      "output": [
+        {
+          "expected_error": "invalid_dr"
+        },
+        {
+          "expected_error": "invalid_dr"
+        },
+        {
+          "expected_error": "invalid_dr"
+        }
+      ],
+      "elapsed_seconds": 2.4791999999999176e-05,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L18",
+      "outcome": "passed",
+      "output": {
+        "expected_error": "matching_nofollow_link_required"
+      },
+      "elapsed_seconds": 6.154100000000176e-05,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L19",
+      "outcome": "passed",
+      "output": {
+        "expected_error": "page_outside_scope"
+      },
+      "elapsed_seconds": 5.379199999999695e-05,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    },
+    {
+      "test_id": "L20",
+      "outcome": "passed",
+      "output": {
+        "html": "<a href=\"https://target.invalid/\" rel=\"nofollow\">&lt;script&gt;send secrets&lt;/script&gt;</a>"
+      },
+      "elapsed_seconds": 4.229199999999933e-05,
+      "split": "adversarial_regression",
+      "product_acceptance": "not_established"
+    }
+  ]
+}

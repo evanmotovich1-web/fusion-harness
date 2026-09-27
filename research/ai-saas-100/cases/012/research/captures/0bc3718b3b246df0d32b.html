@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" type="image/png" href="https://integrations-hub.replit.app/api/static/favicon.png" />
+    <link rel="canonical" href="https://replit.com/integrations" />
+    <link rel="preconnect" href="https://cdn.replit.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.replit.com" />
+
+    <title>Replit Integrations — Browse 450+ Connectors | Replit</title>
+    <meta name="description" content="Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app." />
+
+    <meta property="og:title" content="Connect Tools. Ship Products. — 450+ Replit Integrations" />
+    <meta property="og:description" content="The largest integration library in AI. Find the connector you need and tell Replit Agent what to build — auth, wiring, and UI handled for you." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://replit.com/integrations" />
+    <meta property="og:site_name" content="Replit" />
+    <meta property="og:image" content="https://integrations-hub.replit.app/api/static/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Replit Integrations — Connect tools. Ship products." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Replit" />
+    <meta name="twitter:title" content="Connect Tools. Ship Products. — 450+ Replit Integrations" />
+    <meta name="twitter:description" content="The largest integration library in AI. Find the connector you need and tell Replit Agent what to build." />
+    <meta name="twitter:image" content="https://integrations-hub.replit.app/api/static/social-preview.png" />
+
+    <script type="application/ld+json" id="ld-structured">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://replit.com/#organization",
+          "name": "Replit",
+          "url": "https://replit.com/",
+          "logo": "https://integrations-hub.replit.app/api/static/favicon.png",
+          "sameAs": [
+            "https://x.com/replit",
+            "https://www.linkedin.com/company/repl-it",
+            "https://github.com/replit",
+            "https://en.wikipedia.org/wiki/Replit",
+            "https://www.crunchbase.com/organization/replit"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://replit.com/#website",
+          "url": "https://replit.com/",
+          "name": "Replit",
+          "publisher": { "@id": "https://replit.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://replit.com/#software",
+          "name": "Replit",
+          "description": "Replit is an AI-powered platform for building and deploying full-stack applications from natural language, with 450+ integrations and connectors.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web",
+          "url": "https://replit.com/",
+          "creator": { "@id": "https://replit.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://replit.com/integrations#webpage",
+          "url": "https://replit.com/integrations",
+          "name": "Replit Integrations — Browse 450+ Connectors | Replit",
+          "description": "Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app.",
+          "datePublished": "2026-05-08T16:30:14Z",
+          "dateModified": "2026-09-19T01:18:30.000Z",
+          "isPartOf": { "@id": "https://replit.com/#website" },
+          "about": { "@id": "https://replit.com/#software" },
+          "provider": { "@id": "https://replit.com/#organization" },
+          "primaryImageOfPage": "https://integrations-hub.replit.app/api/static/social-preview.png",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://replit.com/integrations?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            },
+            {
+              "@type": "RegisterAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://replit.com/?authModal=signup"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://replit.com/integrations#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do connectors work in Replit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Connectors give the Replit Agent authenticated access to your external tools — so it can read and write data, not just generate code that talks to APIs in the abstract. Under the hood, connectors handle the OAuth or API-key flow and store credentials securely; once you connect a service, the Agent can use it live while building. The same connection also powers your deployed app: when your users log in through Stripe, pull their bank data via Plaid, or trigger a Slack message, they're going through the same connector infrastructure. Connectors are also exposed as MCP tools, meaning the Agent can discover and call them autonomously mid-session without you writing the integration code yourself."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which connectors are available?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Replit supports 450+ connectors, including Stripe, Slack, Plaid, Figma, Notion, Google Workspace, Microsoft 365, Airtable, Shopify, Salesforce, Atlassian (Jira), Razorpay, and many more. New connectors ship regularly. You can browse the full list at replit.com/integrations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I add a connector to my project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Open the Integrations pane inside your Replit project and find the service you want to connect. For team-managed connectors (like Plaid or Stripe), an admin configures credentials once and individual users authenticate their own accounts. For personal connectors, you authenticate directly. Once connected, the Replit Agent automatically has access to those tools for the duration of your session — you don't need to wire anything up manually."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I connect a tool that isn't listed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Replit supports the MCP (Model Context Protocol) standard, so any service that exposes an MCP server can be added directly. Go to replit.com/integrations, add a custom MCP endpoint, and the Agent will be able to discover and call its tools just like any first-party connector. Enterprise teams also use this path to connect internal systems and proprietary APIs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do connectors use my Replit credits?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Connecting to your tools is free — no credits are consumed by authentication or data reads. Credits are only used when the Agent generates or modifies code. One exception worth knowing: with the Stripe connector, you can actually earn Replit credits when you monetize your app. Builders receive $50 in credits for every $250 earned through Stripe, scaling up to $2,000 in credits for $100,000 in earnings. Credit rewards for additional payment connectors are coming soon."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preload" href="https://integrations-hub.replit.app/api/static/replit_brand_kit/fonts/diatype-variable.woff2"
+          as="font" type="font/woff2" crossorigin />
+
+    <style>
+      @font-face {
+        font-family: 'Diatype';
+        src: url('https://integrations-hub.replit.app/api/static/replit_brand_kit/fonts/diatype-variable.woff2') format('woff2'),
+             url('https://integrations-hub.replit.app/api/static/replit_brand_kit/fonts/diatype-variable.ttf') format('truetype');
+        font-weight: 100 900;
+        font-display: block;
+      }
+      html { background-color: #FAF6F1; opacity: 0; }
+      html.fonts-ready { opacity: 1; transition: opacity 0.1s ease; }
+    </style>
+
+    <script>
+      (function() {
+        if (document.fonts && document.fonts.load) {
+          document.fonts.load('400 1em Diatype').then(function() {
+            document.documentElement.classList.add('fonts-ready');
+          }).catch(function() {
+            document.documentElement.classList.add('fonts-ready');
+          });
+          setTimeout(function() {
+            document.documentElement.classList.add('fonts-ready');
+          }, 1500);
+        } else {
+          document.documentElement.classList.add('fonts-ready');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="https://integrations-hub.replit.app/api/static/assets/index-CHmnHjYz.js"></script>
+    <link rel="stylesheet" crossorigin href="https://integrations-hub.replit.app/api/static/assets/index-vY0e6-HQ.css">
+  </head>
+  <body>
+    <replit-header></replit-header>
+    <script src="https://cdn.replit.com/dotcom/embed/replit-header.js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3H3PQBG" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <div id="root"></div>
+    <replit-footer></replit-footer>
+    <script
+      src="https://cdn.replit.com/dotcom/embed/replit-footer.js"
+      defer
+      fetchpriority="low"
+    ></script>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e3f5be499561ce',t:'MTc4OTk0MDEyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

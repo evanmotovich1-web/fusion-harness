@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "025",
+    "name": "Pencil",
+    "canonical_url": "https://trypencil.com/",
+    "category": "C02",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-35263a4d9893739c0efa"
+    ],
+    "aliases": [
+      "https://www.trypencil.com/"
+    ]
+  },
+  "selection": {
+    "candidate_id": "trypencil.com",
+    "selection_position": 25,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Marketing teams generating branded ad creatives",
+    "job": "Generate an image-ad variant from an original product image and strict brand/copy constraints",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "image_path": "PNG or JPEG",
+      "copy": "string",
+      "constraint_report": "object",
+      "generation_receipt": "object"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Generate an image-ad variant from an original product image and strict brand/copy constraints",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Core shows $14/month billed monthly or $11 billed annually for 50 generations. Growth shows $55 monthly or $44 annually for 250 generations. Enterprise pricing is custom.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Marketing teams generating branded ad creatives",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "adcreative.ai",
+        "name": "AdCreative.ai",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Marketing teams generating branded ad creatives.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        },
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Core shows $14/month billed monthly or $11 billed annually for 50 generations. Growth shows $55 monthly or $44 annually for 250 generations. Enterprise pricing is custom.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r025-18cf1328038c23ec5b17"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r025-18cf1328038c23ec5b17",
+          "locator": "text characters 130:2617",
+          "excerpt": "ws\nCanvas\nContent Hub\nArticles\nNews\nCase Studies\nThe Help Center\nCompany\nPricing\nCommunity\nLogin\nPencil\nPencil Pro\nLogin\nPencil\nPencil Pro\nSimple, scalable AI pricing\nJoin 35,000+ teams making 2,000,000+ ads with Pencil\nMonthly Billing\nAnnual Billing\nsave 20%\nCore\nFor solo entrepreneurs\n$\n14\nper month, billed monthly\n50 generations\nper month\nGet Started\nEssential Features:\nSelf-serve AI Agents to generate text, images, video, ad creatives and more\nRealtime AI insights and Scores\nLaunch & track ads on Facebook, Instagram, TikTok, YouTube, Google Display, DV360 & LinkedIn\n1 workspace\nChat support\nMost Popular\nGrowth\nFor fast-growing teams\n$\n55\nper month, billed monthly\n250 generations\nper month\nGet Started\nEverything in Core, plus:\nMore generations at lower generations cost\nUnlimited workspaces\nDirect access to product team & roadmap\nMost Popular\nPro\nSelf-serve for enterprises\nCustom pricing\nUnlimited generations\nGet a Demo\nEverything in Growth, plus:\nCommitted consumption pricing for generations across AI models and modalities\nBulk AI generation using feeds across audiences, markets & products\nUnlimited users, brands & markets with entity & role access controls\nEnterprise-ready terms of service including IP assignment, “no train”, indemnification, data ringfencing & AI governance controls\nComplete GenAI training curriculum\nDedicated customer success\nMost Popular\nCore\nFor solo entrepreneurs\n$\n11\nper month, billed annually\n50 generations\nper month\nGet Started\nEssential Features:\nSelf-serve AI Agents to generate text, images, video, ad creatives and more\nRealtime AI insights and Scores\nLaunch & track ads on Facebook, Instagram, TikTok, YouTube, Google Display, DV360 & LinkedIn\n1 workspace\nChat support\nMost Popular\nGrowth\nFor fast-growing teams\n$\n44\nper month, billed annually\n250 generations\nper month\nGet Started\nEverything in Core, plus:\nMore generations at lower\ngenerations cost\nUnlimited workspaces\nDirect access to product team & roadmap\nMost Popular\nPro\nSelf-serve for enterprises\nCustom pricing\nUnlimited generations\nGet a Demo\nEverything in Growth, plus:\nCommitted consumption pricing for generations across AI models and modalities\nBulk AI generation using feeds across audiences, markets & products\nUnlimited users, brands & markets with entity & role access controls\nEnterprise-ready terms of service including IP assignment, “no train”, indemnification, data ringfencing & AI governance controls\nComplete GenAI training curriculum\nDedicated custome"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r025-18cf1328038c23ec5b17": "2026-09-20T21:35:31.858255+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: l\nPencil Pro\nLogin\nPencil\nPencil Pro\nSimple, scalable AI pricing\nJoin 35,000+ teams making 2,000,000+ ads with Pencil\nMonthly Billing\nAnnual Billing\nsave 20%\nCore\nFor solo entrepreneurs\n$\n14\nper month, billed monthly\n50 generations\nper month\nGet Started\nEssential",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r025-18cf1328038c23ec5b17"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r025-18cf1328038c23ec5b17",
+          "locator": "text characters 232:495",
+          "excerpt": "l\nPencil Pro\nLogin\nPencil\nPencil Pro\nSimple, scalable AI pricing\nJoin 35,000+ teams making 2,000,000+ ads with Pencil\nMonthly Billing\nAnnual Billing\nsave 20%\nCore\nFor solo entrepreneurs\n$\n14\nper month, billed monthly\n50 generations\nper month\nGet Started\nEssential"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r025-18cf1328038c23ec5b17": "2026-09-20T21:35:31.858255+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r025-7bb651f7681f2fe35728"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r025-7bb651f7681f2fe35728",
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r025-7bb651f7681f2fe35728": "2026-09-20T21:35:31.879827+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "AdCreative.ai advertises: Generate high-performing ad creatives, images, videos, and copy with AI. Built for marketers to scale campaigns and improve ROAS.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-cf668e938c509fba5d12"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-cf668e938c509fba5d12",
+          "locator": "metadata[0].description",
+          "excerpt": "Generate high-performing ad creatives, images, videos, and copy with AI. Built for marketers to scale campaigns and improve ROAS."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-cf668e938c509fba5d12": "2026-09-20T21:00:10.607310+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: AdCreative.ai. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa",
+        "web-cf668e938c509fba5d12"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        },
+        {
+          "evidence_id": "web-cf668e938c509fba5d12",
+          "locator": "metadata[0].description",
+          "excerpt": "Generate high-performing ad creatives, images, videos, and copy with AI. Built for marketers to scale campaigns and improve ROAS."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00",
+          "web-cf668e938c509fba5d12": "2026-09-20T21:00:10.607310+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Brand governance, model orchestration, ad-platform integrations, performance feedback, and licensing may remain advantages after basic image generation is recreated.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa",
+        "r025-7bb651f7681f2fe35728"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        },
+        {
+          "evidence_id": "web-35263a4d9893739c0efa",
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        },
+        {
+          "evidence_id": "r025-7bb651f7681f2fe35728",
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-35263a4d9893739c0efa": "2026-09-20T21:00:10.779603+00:00",
+          "r025-7bb651f7681f2fe35728": "2026-09-20T21:35:31.879827+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/025/tests/specification.json",
+    "sha256": "41211f95192dfbcd303a7e66d95aab0988ae531f3b0c9bc1f39b04ec41b12a06",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:10.779603+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-35263a4d9893739c0efa",
+        "r025-18cf1328038c23ec5b17",
+        "r025-7bb651f7681f2fe35728",
+        "web-cf668e938c509fba5d12"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

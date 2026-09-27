@@ -1,0 +1,58 @@
+{
+  "case_id": "003",
+  "checks": [
+    {
+      "check": "persistence",
+      "passed": true,
+      "passed_rows": 23,
+      "receipt": {
+        "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-persistence.json",
+        "sha256": "704a7f8cbe86ed593e5a807b8278ff8ee29b9158cfe8f5ea17561ef2be56aa13"
+      },
+      "total_rows": 23
+    },
+    {
+      "check": "demo",
+      "passed": true,
+      "passed_rows": 1,
+      "receipt": {
+        "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.json",
+        "sha256": "4d20f6616f9df232aa952a06e8e7889b3d34ddb72d428a9c0b468f4077203ac9"
+      },
+      "total_rows": 1
+    },
+    {
+      "check": "legacy",
+      "passed": true,
+      "passed_rows": 20,
+      "receipt": {
+        "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-legacy.json",
+        "sha256": "77c2250463eece751f09b14e0ce02f2f3d35aabf6dfa179a814c374212e06301"
+      },
+      "total_rows": 20
+    },
+    {
+      "check": "repair",
+      "passed": true,
+      "passed_rows": 53,
+      "receipt": {
+        "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.json",
+        "sha256": "01aef832f4bef39de6d2470b8b5db2ae5b15dd0bfe09aa507775e17cf30c718b"
+      },
+      "total_rows": 53
+    }
+  ],
+  "historical_files_changed": [],
+  "inference_executed": false,
+  "preview_api_source_unchanged": true,
+  "product_acceptance": false,
+  "recorded_at": "2026-09-22T03:32:10.278471+00:00",
+  "schema_version": 1,
+  "source_snapshot": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+    "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+  },
+  "sources_changed_during_execution": [],
+  "status": "passed",
+  "task_scope": "Synthetic persistence component only"
+}

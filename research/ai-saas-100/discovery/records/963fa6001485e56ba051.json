@@ -1,0 +1,1141 @@
+{
+  "evidence_id": "web-963fa6001485e56ba051",
+  "source_url": "https://www.uneed.best/tool/flipworth",
+  "retrieved_at": "2026-09-20T21:01:30.739959+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.uneed.best/tool/flipworth",
+  "content_type": "text/html;charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/963fa6001485e56ba051.html",
+  "capture_sha256": "87028af02c1c03a0c30d9baccb29fe8a4a2b0d4c03776de7868e4ee7fc50e2b3",
+  "bytes_saved": 130324,
+  "title": "FLIPWORTH: Reviews, Pricing and Alternatives | Uneed",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "Discover FLIPWORTH on Uneed"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Uneed"
+    },
+    {
+      "key": "description",
+      "value": "SNAP IT. CHECK IT. FLIP IT. See ratings, pricing and the best alternatives to FLIPWORTH on Uneed."
+    },
+    {
+      "key": "og:description",
+      "value": "SNAP IT. CHECK IT. FLIP IT. See ratings, pricing and the best alternatives to FLIPWORTH on Uneed."
+    }
+  ],
+  "text": "FLIPWORTH: Reviews, Pricing and Alternatives | Uneed\nLaunchpad\nCommunity\nPricing\nProducts\nMore\nFLIPWORTH\nSNAP IT. CHECK IT. FLIP IT.\nVisit website\nSave\n1 Upvote\nOverview\nReviews\nRewards\nDeals\nFlipWorth\nhelps you make smarter resale decisions by analyzing eBay market data. Compare sold listings, value items accurately, and identify profitable opportunities before you purchase inventory.\nPerfect for resellers, flippers, and anyone looking to maximize returns on secondhand goods. Get data-driven insights to buy right and sell smart.\nAbout FLIPWORTH\nFLIPWORTH is\na\npersonal life\nproduct\nlisted on Uneed, with a free tier and paid plans.\nIt's tagged with\nE-Commerce\n,\nResearch\n.\nSee the\nbest E-Commerce products\nfor related options.\nFrequently asked questions about FLIPWORTH\nWhat is FLIPWORTH?\nFLIPWORTH is sNAP IT. CHECK IT. FLIP IT.\nIs FLIPWORTH free?\nFLIPWORTH offers a free tier with paid plans available for additional features.\nWhat are alternatives to FLIPWORTH?\nDiscover similar e-commerce, research, ai products in the Uneed directory.\nWhat category does FLIPWORTH belong to?\nFLIPWORTH is listed under Personal Life on Uneed.\nUser reviews\nNo reviews yet\nBe the first to review FLIPWORTH and help other makers discover it.\nLog in to leave a review\nThis product has no rewards yet.\nThis product has no deals yet.\n1 Upvote\nVisit website\nSave\nPublisher\nfcuk112\nFollow\nIs this your product? Claim it\nLaunch Date\n2026-09-20\nCategory\nPersonal Life\nPricing\nFreemium\nSocials\nTags\n#E-Commerce\n#Research\n#AI\nBest products in the same categories\nE-Commerce\nResearch\nAI\nUpvoted by\nRelated tools\nGrabbit\nAll your favorite marketplaces. One simple search.\nFrom The Labels\n#1 Independent Fashion Brands Directory\nChecksout\nEliminate the Guessing\ntripvexa\nAI-powered travel planning and booking with budget & visa Intelligence\nAipricesearch\nFind verified retailers, compare prices, and avoid overpriced products with AI.\nBest E-Commerce products\nUneed is a social launchpad for tech products. Get guaranteed homepage visibility, powerful SEO juice with a 75 DR backlink, and feedback from a community that actually cares\nMade in EU 🇪🇺\nCategories\nDevelopment products\nDesign products\nMarketing products\nBusiness products\nPersonal life products\nProducts For Sale\nAlternatives\nSupabase alternatives\nStripe alternatives\nVercel alternatives\nNuxt alternatives\nAhrefs alternatives\nSemrush alternatives\nZapier alternatives\nMailchimp alternatives\nFlippa alternatives\nAll our alternatives\nBest tags\nAI Products\nAnalytics Tools\nSEO Tools\nProductivity\nOpen Source\nAll tags\nUneed\nHow it works\nFeatures\nLaunch Guide\nOur blog\nAdvertise on Uneed\nPricing\nPro perks\nAdd your product\nMCP for AI agents\nBecome an affiliate\nFAQs\nContact\nChangelog\nCommunity Leaderboard\nFree tools\nProduct Launch Checklist\nFake Notification Generator\nStartup Name Generator\nFake Analytics Generator\nReaction Time Test\nYouTube Playlist Length Calculator\nTwitter (X) Carousel Maker\nNPS Calculator\nSaaS Valuation Calculator\nAll free tools\nBest products\nBest AI products\nBest Analytics tools\nBest SEO tools\nBest Productivity tools\nAsk AI about Uneed\nAsk ChatGPT\nAsk Claude\nAsk Perplexity\nAsk Grok\n© 2019-2026 Uneed™. All Rights Reserved.\nPrivacy Policy\n-\nTerms of Use\nWe use cookies\nEssential and analytics cookies keep Uneed running and help us understand usage. Marketing and affiliate cookies are optional.\nPrivacy policy\nReject\nAccept",
+  "links": [
+    {
+      "href": "https://www.youtube-nocookie.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://backend.uneed.best",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://img.youtube.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_nuxt/entry.Z8uhv7R2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/_virtual_public.CS7Moa8A.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/StarRating.CiHVem0Z.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_nuxt/D7MdrhLL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/kjsH4l9N.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C--aEJ7y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CNUR-ja0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B4DD8KLn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Da3AdDL-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CJ2j0ccM.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BJ_4tQ28.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BnVMdG9Z.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/1dFdYcU6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BjnUg0rA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/TX32FFhf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BQ29hzhV.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CnZIH8Zj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C1sZY2xn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DD3HqLbF.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BUOAXgWP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CZ6Xs2dO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/eDSb4G5L.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BUDLPX_m.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DBiqrFnG.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bzpj-AA-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DGdDKbW2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BbEmQ-Ur.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CPrFhtMr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BUAhdpWm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CB624dcZ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BKoIiRLb.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/GE1pfv5z.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Dn28HurD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/n32XC7sA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CymPixh_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/zoJLCvg9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DyOBd6BY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CcR-kWHX2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/vttKbSrR2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/oF9gjTU42.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CFxRaLsP2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B1CIJ5bx2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/mz99GdMm2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BcyIBy4s2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/SS8EfnKN2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D9kQKcjq2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BpU4Hj8i2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/rhxkpIOR2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BlHRzYVH2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DEfWNVDd2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/5ouIGGDo2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DjAxLAVH2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B97MvLnD2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B16V1dOj2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bvkz8dwx.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BOQfLnmJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BAu08ydX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CXc5dWJz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/I98Gm3Dp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DTA4LJg2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BXjTWU38.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D6VLXTlo.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/WrObBYVG.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BLA6efD6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CYg-LR6f.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/b0M3Gn6Y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/ezBTJ2ST.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/V_qI7AIa.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D8ackKxI2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B6YpsTci.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CFbaZkl-2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Cux9pp2A2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/ypL9_FLM2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/COiiPCHI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CXtN92t8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D1Ja5934.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BlFTfWGP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/B73I6I2U.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/cEECRcHk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/K9rsuiWd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bfl5Bwdm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Dk4bEnwo.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BWlsumot.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Cu6bLBly.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BsPWoK8G.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C2HXJxhO2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/qeWSofNW2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CY67RQxK2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BGPzhiTj2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DeiAMu4z2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CaSgYlGO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CWJULidL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DUb83jCo2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CfWnzsou.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/0tB-8Ml5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DeOi_ryJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CBXLF0_7.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/-XBM9MfY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C5-EQnBB2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/D3KFwfEx2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C1rxhPGa.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Czwyznr_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C1cAn-Ip.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/HoRa5ehr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/-kdPMgpf2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DiI0k3eP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CzIYk7C32.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CMpcM5zq2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/KiumUjzh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BGR1m7HM.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/phtGhjEA2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Dx7QiNi3.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/45Ohq0Ut.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DDwXmY9l.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DzOQVofg.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Biwib2HT2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C1QQW7y2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Cl0TVItd2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C-H9ai3V2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CVoEROeX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/COUQfC7C.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BsWMS5lx2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DQuzs9Qt.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BEpL-7y-2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CRgnGgqQ2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CYijIqkt2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CGt3sm6w.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/bFExAilb2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CAKftFZg2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DxfW7PEJ2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BuCXfc662.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BNIuga_42.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BdqmFZ7p2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/e8G4X3r82.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DJtfNMVo2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BE4bCp9o2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bnm11qbP2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BjC9uHCa2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/8Kc4TMLy2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Bv_KPlPl.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DQX1zg-t2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/CwAgV7Rm2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/Dtp23-F72.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DuLYBIs9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/RbTzbav72.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C6IKil932.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BLYcdT_q2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/X8aGpJlr2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/DEV_FDDT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/BZeo4pXH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/_nuxt/C37eX_uh.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/DrsKSjnR.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/W1UVB68V2.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CnjIpUZf.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CcEpBrMP.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/uoA8vKJe.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/rpt81IFF.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/B4vnTU3H.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/columns.Bp-9y19b.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/DatePicker.BdMHxDxk.css",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/BRiRy8cn.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/DKdWq-pU.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/B1TxkuKo.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/fBBfzM49.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/Dj37SI5H.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/B7VgmWJs.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/Dp1L4Bi-.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/BMPY3rVF.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CnMcUQwK.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CG3VbbFL.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/Ds7Vhsl-.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/BU8qoZie2.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CWhrFrhS.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/vpy0TePl.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/obwXqTcJ.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/BATxtts-.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/_nuxt/CF0kSys6.js",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "/safari-pinned-tab.svg",
+      "rel": "mask-icon"
+    },
+    {
+      "href": "https://www.uneed.best/tool/flipworth",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://flipworth.app/?ref=uneed.best&ref_type=adv",
+      "rel": "noopener"
+    },
+    {
+      "href": "/login?redirectTo=/tool/flipworth",
+      "rel": null
+    },
+    {
+      "href": "/categories/personal-life",
+      "rel": null
+    },
+    {
+      "href": "/tags/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/tags/research",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/login?redirectTo=%2Ftool%2Fflipworth%3Ftab%3Dcomments%26review%3D1",
+      "rel": null
+    },
+    {
+      "href": "https://flipworth.app/?ref=uneed.best&ref_type=adv",
+      "rel": "noopener"
+    },
+    {
+      "href": "/login?redirectTo=/tool/flipworth",
+      "rel": null
+    },
+    {
+      "href": "/profile/fcuk112",
+      "rel": null
+    },
+    {
+      "href": "/claim?tool=20510",
+      "rel": null
+    },
+    {
+      "href": "/categories/personal-life",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/fcuk112",
+      "rel": "noopener noreferrer nofollow"
+    },
+    {
+      "href": "/tags/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/tags/research",
+      "rel": null
+    },
+    {
+      "href": "/tags/ai",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/research",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/ai",
+      "rel": null
+    },
+    {
+      "href": "/profile/fcuk112",
+      "rel": null
+    },
+    {
+      "href": "/tool/grabbit",
+      "rel": null
+    },
+    {
+      "href": "/tool/from-the-labels",
+      "rel": null
+    },
+    {
+      "href": "/tool/checksout",
+      "rel": null
+    },
+    {
+      "href": "/tool/tripvexa",
+      "rel": null
+    },
+    {
+      "href": "/tool/aipricesearch",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/e-commerce",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://bsky.app/profile/uneed.best",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/UneedLists",
+      "rel": null
+    },
+    {
+      "href": "/categories/development",
+      "rel": null
+    },
+    {
+      "href": "/categories/design",
+      "rel": null
+    },
+    {
+      "href": "/categories/marketing",
+      "rel": null
+    },
+    {
+      "href": "/categories/business",
+      "rel": null
+    },
+    {
+      "href": "/categories/personal-life",
+      "rel": null
+    },
+    {
+      "href": "/for-sale",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/supabase",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/stripe",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/vercel",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/nuxt",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/ahrefs",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/semrush",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/zapier",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/mailchimp",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/flippa",
+      "rel": null
+    },
+    {
+      "href": "/alternatives",
+      "rel": null
+    },
+    {
+      "href": "/tags/ai",
+      "rel": null
+    },
+    {
+      "href": "/tags/analytics",
+      "rel": null
+    },
+    {
+      "href": "/tags/seo",
+      "rel": null
+    },
+    {
+      "href": "/tags/productivity",
+      "rel": null
+    },
+    {
+      "href": "/tags/open-source",
+      "rel": null
+    },
+    {
+      "href": "/tags",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/launch-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/advertise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/perks",
+      "rel": null
+    },
+    {
+      "href": "/submit-a-tool",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/affiliates",
+      "rel": null
+    },
+    {
+      "href": "/faqs",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/streaks-leaderboard",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/product-launch-checklist",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/fake-notification-generator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/startup-name-generator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/fake-analytics-generator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/reaction-time-test",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/youtube-playlist-length-calculator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/twitter-carousel-maker",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/nps-calculator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/saas-valuation-calculator",
+      "rel": null
+    },
+    {
+      "href": "/free-tools",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/ai",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/analytics",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/seo",
+      "rel": null
+    },
+    {
+      "href": "/best-products-by-tag/productivity",
+      "rel": null
+    },
+    {
+      "href": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20free%20waiting%20line%20compares%20to%20the%20paid%20options%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20including%20the%20launch-day%20upvote%20score%20a%20free%20launch%20needs%20to%20stay%20published%20and%20keep%20its%20do-follow%20backlink%20(upvotes%20weighted%20by%20each%20voter's%20multiplier)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20free%20waiting%20line%20compares%20to%20the%20paid%20options%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20including%20the%20launch-day%20upvote%20score%20a%20free%20launch%20needs%20to%20stay%20published%20and%20keep%20its%20do-follow%20backlink%20(upvotes%20weighted%20by%20each%20voter's%20multiplier)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20free%20waiting%20line%20compares%20to%20the%20paid%20options%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20including%20the%20launch-day%20upvote%20score%20a%20free%20launch%20needs%20to%20stay%20published%20and%20keep%20its%20do-follow%20backlink%20(upvotes%20weighted%20by%20each%20voter's%20multiplier)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20free%20waiting%20line%20compares%20to%20the%20paid%20options%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20including%20the%20launch-day%20upvote%20score%20a%20free%20launch%20needs%20to%20stay%20published%20and%20keep%20its%20do-follow%20backlink%20(upvotes%20weighted%20by%20each%20voter's%20multiplier)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-use",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 1.4212
+}

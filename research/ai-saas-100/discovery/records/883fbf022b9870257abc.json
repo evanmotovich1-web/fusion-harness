@@ -1,0 +1,173 @@
+{
+  "evidence_id": "web-883fbf022b9870257abc",
+  "source_url": "https://www.colossyan.com/",
+  "retrieved_at": "2026-09-20T21:00:46.073221+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.colossyan.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/883fbf022b9870257abc.html",
+  "capture_sha256": "0d759afeb5234fcaac72776bd89cdb6818f581766679f91ed85d07c9144c9096",
+  "bytes_saved": 262144,
+  "title": "Colossyan Creator - AI Video Generator",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Colossyan Creator makes video creation simple and stress-free. Discover our AI video generator with real actors. Create AI videos in less than 5 minutes."
+    },
+    {
+      "key": "og:title",
+      "value": "Colossyan Creator - AI Video Generator"
+    },
+    {
+      "key": "og:description",
+      "value": "Colossyan Creator makes video creation simple and stress-free. Discover our AI video generator with real actors. Create AI videos in less than 5 minutes."
+    }
+  ],
+  "text": "Colossyan Creator - AI Video Generator\nBe the first to try our new AI Video Generator, powered by Cora.\nLearn more →\nSupport\nLogin\nPlatform\nCreate\nAI video generator\nNew\nText to video\nCourses\nAI Presenters\nVoiceovers\nCustomize\nCustom avatars\nCloned voices\nBrand kits\nScreen recorder\nEngage\nInteractive video\nConversational avatars\nBranching\nAssessments\nScale\nLocalization\nDelivery & SCORM\nCollaboration\nAPI\nVideo · Agent · Course\nEvery Colossyan feature in one place.\nSee all features\nEnterprise-grade security\nBuilt into the platform — SOC 2 Type II, GDPR and SAML SSO out of the box.\nLearn more →\nNew · AI Agent\nAI speed. Human-quality control\nNew · AI Agent\nMeet Cora — AI speed, human-quality control\nSolutions",
+  "links": [
+    {
+      "href": "https://lp-assets.colossyan.com/website-images/images/images/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://lp-assets.colossyan.com/website-images/images/images/webclip-256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Mr+Dafoe&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap",
+      "rel": "preload"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Mr+Dafoe&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Mr+Dafoe&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.colossyan.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/features/ai-video-generator/",
+      "rel": null
+    },
+    {
+      "href": "https://colossyan.zendesk.com/hc/en-us",
+      "rel": null
+    },
+    {
+      "href": "https://app.colossyan.com/auth/signin",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-generator/",
+      "rel": null
+    },
+    {
+      "href": "/features/text-to-video/",
+      "rel": null
+    },
+    {
+      "href": "/features/course-creator/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-avatars/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-voices-and-languages/",
+      "rel": null
+    },
+    {
+      "href": "/features/custom-avatar/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-voice-cloning/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/#brand-kits",
+      "rel": null
+    },
+    {
+      "href": "/features/screen-recording/",
+      "rel": null
+    },
+    {
+      "href": "/features/interactive-video/",
+      "rel": null
+    },
+    {
+      "href": "https://conversational-avatar.colossyan.com/",
+      "rel": null
+    },
+    {
+      "href": "/features/interactive-video/#branching-scenarios",
+      "rel": null
+    },
+    {
+      "href": "/features/interactive-video/#quizzes",
+      "rel": null
+    },
+    {
+      "href": "/features/video-translator/",
+      "rel": null
+    },
+    {
+      "href": "/features/scorm/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/features/api/",
+      "rel": null
+    },
+    {
+      "href": "/features/",
+      "rel": null
+    },
+    {
+      "href": "/features/",
+      "rel": null
+    },
+    {
+      "href": "/security/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-generator/",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-generator/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2453
+}

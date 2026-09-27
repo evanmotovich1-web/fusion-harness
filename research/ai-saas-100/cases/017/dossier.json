@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "017",
+    "name": "Chatling",
+    "canonical_url": "https://chatling.ai/",
+    "category": "C04",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-aa6074ffce5b2eefe7c1"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "chatling.ai",
+    "selection_position": 17,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Businesses supporting customers across chat channels",
+    "job": "Answer an approved-policy question and route unsupported or sensitive requests to a human",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "answer": "string",
+      "citations": "array of source_id and supporting span",
+      "escalate": "boolean",
+      "action_preview": "object or null"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Answer an approved-policy question and route unsupported or sensitive requests to a human",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Free displays $0 with 200 AI credits; Starter displays $25/month with 1,750 credits. Credit consumption depends on model. Annual-toggle state and taxes were not checked.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Businesses supporting customers across chat channels",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "chatbase.co",
+        "name": "Chatbase",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Businesses supporting customers across chat channels.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        },
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Free displays $0 with 200 AI credits; Starter displays $25/month with 1,750 credits. Credit consumption depends on model. Annual-toggle state and taxes were not checked.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r017-41ae320f8751271cdf61"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r017-41ae320f8751271cdf61",
+          "locator": "text characters 42:2524",
+          "excerpt": "sources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nOpen menu\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nSimple, transparent pricing\nChoose the perfect plan for your needs. Start free and scale as you grow.\nMonthly\nAnnual\nFree\nLaunch your first AI agent and see how AI can reduce your support workload.\n$0\n/month\n200\nAI credits\nCredit usage varies based on the AI model used.\n1\nAI agent\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n1\nSeat\nNumber of team members you can add to your project.\n500,000\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nGet Started\nStarter\nHandle more conversations, customize your AI, and bring your team into the loop.\n$25\n/month\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create. Add additional AI agents with add-ons.\n2\nSeats\nNumber of team members you can add to your project.\n10 million\nKnowledge base characters\nTotal number of characters for your AI knowledge base.\nEverything in Free, plus:\n4 actions per AI agent\nActions empower your AI agent to execute tasks seamlessly and in real-time while it converses with customers.\n5 workflows per AI agent\nAutomate multi-step work when conversation, contact, action, or other events occur.\nAuto-sync knowledge base weekly\nAutomatically resyncs knowledge base sources to fetch the latest data.\nFull chatbot customization\nCustomize the chatbot's appearance to match your branding.\n29 AI models\nAvailable models: Gemini 3.8 Flash, Mistral Medium 3.5, Gemini 3.6 Flash, Claude Opus 5, Claude Sonnet 5, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.2 (Non-reasoning), Grok 4.1 Fast, DeepSeek V3.2 (US), Mistral Small 4, Mistral Large 3, Gemini 3.1 Pro Preview, Gemini 3.1 Flash-Lite, Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT 5.2, GPT 5.1, Claude Haiku 4.5, Gemini 2.5 Pro, Gemini 2.5 Flash, GPT-4.1, GPT-4.1 Mini, GPT-4o\nAPI access\nChatbot analytics\nView detailed analytics of your AI agents, such as number of new conversations and contacts, peak chat times, top countries, and more.\nVoice input\nAllows users to send messages by voice (speech-to-text transcription).\n$21\n/month\nbilled $250 annually\nGet Started\n1,750\nAI credits\nCredit usage varies based on the AI model used.\n2\nAI agents\nNumber of AI agents and chatbots that you can create."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r017-41ae320f8751271cdf61": "2026-09-20T21:35:30.915093+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: \nNo credit card\nSet up in minutes\n0:00 / 0:00\nPowering AI support for 1,000+ teams, from solo founders to global brands\nFaster answers for customers. Less stress for your team.\nAnswer customers instantly\nResolve repetitive questions in seconds with accurate, AI-",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "text characters 483:745",
+          "excerpt": "\nNo credit card\nSet up in minutes\n0:00 / 0:00\nPowering AI support for 1,000+ teams, from solo founders to global brands\nFaster answers for customers. Less stress for your team.\nAnswer customers instantly\nResolve repetitive questions in seconds with accurate, AI-"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: tomate conversations and respond faster across every touchpoint.\nStart for free\nWhatsApp\nLearn more\nInstagram\nLearn more\nTelegram\nMessenger\nZapier\nLearn more\nCal.com\nGoogle Sheets\nHubSpot\nZendesk\nSlack\nAirtable\nZoho\nWordPress\nLearn more\nBubble\nLearn more\nPrestaShop\nLearn more\nShopify\nLearn more\nSquarespace\nLearn more\nWebflow\nLearn more\nWix\nLearn more\n\"It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website plat",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r017-644ce6321b83b7f546a7"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r017-644ce6321b83b7f546a7",
+          "locator": "text characters 287:825",
+          "excerpt": "tomate conversations and respond faster across every touchpoint.\nStart for free\nWhatsApp\nLearn more\nInstagram\nLearn more\nTelegram\nMessenger\nZapier\nLearn more\nCal.com\nGoogle Sheets\nHubSpot\nZendesk\nSlack\nAirtable\nZoho\nWordPress\nLearn more\nBubble\nLearn more\nPrestaShop\nLearn more\nShopify\nLearn more\nSquarespace\nLearn more\nWebflow\nLearn more\nWix\nLearn more\n\"It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website plat"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r017-644ce6321b83b7f546a7": "2026-09-20T21:35:30.915498+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Chatbase advertises: Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0f29a9502ee75fa707c9"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0f29a9502ee75fa707c9",
+          "locator": "metadata[0].description",
+          "excerpt": "Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0f29a9502ee75fa707c9": "2026-09-20T21:00:23.183677+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Chatbase. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1",
+        "web-0f29a9502ee75fa707c9"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        },
+        {
+          "evidence_id": "web-0f29a9502ee75fa707c9",
+          "locator": "metadata[0].description",
+          "excerpt": "Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00",
+          "web-0f29a9502ee75fa707c9": "2026-09-20T21:00:23.183677+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Multi-channel delivery, human handoff, synchronization, and support analytics may matter beyond a simple chatbot.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1",
+        "r017-644ce6321b83b7f546a7"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        },
+        {
+          "evidence_id": "web-aa6074ffce5b2eefe7c1",
+          "locator": "metadata[0].description",
+          "excerpt": "Deploy AI agents that resolve customer questions instantly across your website, WhatsApp, and Instagram. Seamless human handoff, 80+ languages, no code. Free plan available."
+        },
+        {
+          "evidence_id": "r017-644ce6321b83b7f546a7",
+          "locator": "text characters 287:825",
+          "excerpt": "tomate conversations and respond faster across every touchpoint.\nStart for free\nWhatsApp\nLearn more\nInstagram\nLearn more\nTelegram\nMessenger\nZapier\nLearn more\nCal.com\nGoogle Sheets\nHubSpot\nZendesk\nSlack\nAirtable\nZoho\nWordPress\nLearn more\nBubble\nLearn more\nPrestaShop\nLearn more\nShopify\nLearn more\nSquarespace\nLearn more\nWebflow\nLearn more\nWix\nLearn more\n\"It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website plat"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-aa6074ffce5b2eefe7c1": "2026-09-20T21:00:23.368297+00:00",
+          "r017-644ce6321b83b7f546a7": "2026-09-20T21:35:30.915498+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/017/tests/specification.json",
+    "sha256": "ad9954eed682c31eaca7af4445fb3e7770e576d7fb2f5c394a1e2d15c05e4455",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:23.368297+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-aa6074ffce5b2eefe7c1",
+        "r017-41ae320f8751271cdf61",
+        "r017-644ce6321b83b7f546a7",
+        "web-0f29a9502ee75fa707c9"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

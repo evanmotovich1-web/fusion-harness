@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "case_id": "012",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/012/tests/specification.json",
+  "specification_sha256": "2ca3433519d24f5d462e618111e4467363ae9bd6b83affc6ab314d3b29634cb9",
+  "assets": [
+    {
+      "path": "cases/012/tests/assets/repository.json",
+      "sha256": "ea79e93e8228fd50881c02eabe12f857a74202427cbe745568af65bf7acd396f",
+      "bytes": 516
+    }
+  ],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

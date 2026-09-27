@@ -1,0 +1,27 @@
+{
+  "id": "digital-health-act-current",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2023/15/eng",
+  "accessed_utc": "2026-09-25T02:52:11.991307+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/15/eng@2023-11-24",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:52:13 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "336755",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Expires": "Fri, 25 Sep 2026 03:22:13 GMT",
+    "Cache-Control": "max-age=1800",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 336755,
+  "sha256": "130a16aba177ad03f04b77197a41886c12990f361f9fdc38191db589ff15bc70",
+  "file": "digital-health-act-current.html"
+}

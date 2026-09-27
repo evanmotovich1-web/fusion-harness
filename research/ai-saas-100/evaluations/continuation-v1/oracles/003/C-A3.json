@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-A3",
+  "requires_inference": true,
+  "kind": "crm_reject",
+  "expected_contacts": [
+    {
+      "id": "c1",
+      "name": "Mira",
+      "email": "MIRA@example.invalid",
+      "status": "new",
+      "note": ""
+    },
+    {
+      "id": "c2",
+      "name": "Mira",
+      "email": "mira@example.invalid",
+      "status": "qualified",
+      "note": "Existing note"
+    },
+    {
+      "id": "c3",
+      "name": "Noor",
+      "email": "noor@example.invalid",
+      "status": "new",
+      "note": "Independent authorized edit"
+    }
+  ]
+}

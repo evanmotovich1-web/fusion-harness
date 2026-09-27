@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "receipt_sha256": "40944fc8d6f9cb8d9a521a74df59a6bb1587a8b1be47ea5a6194e8388844eb15",
+  "verified_frozen_artifacts": 48,
+  "group_attempts": 20,
+  "planned_invocations": 20,
+  "algorithm_correctness": true,
+  "prohibited_effects_observed": 0,
+  "outside_review_changed_paths": [],
+  "source_members_verified_after": true,
+  "product_acceptance": false
+}

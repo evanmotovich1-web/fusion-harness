@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "021",
+    "name": "HeyGen",
+    "canonical_url": "https://www.heygen.com/",
+    "category": "C08",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-c0fadff54acb974981c2"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "heygen.com",
+    "selection_position": 21,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Creators and marketers producing presenter videos",
+    "job": "Produce a lip-synced presenter video from a supplied script and an original synthetic avatar asset",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "video_path": "playable MP4 with synthetic presenter",
+      "captions_path": "SRT",
+      "consent_basis": "string",
+      "generation_receipt": "object"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient.",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Produce a lip-synced presenter video from a supplied script and an original synthetic avatar asset",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Visible Free tier limits usage to three videos/month up to one minute each. Creator displays $29/month with 600 credits. This qualifies the metadata's broad 'unlimited capabilities' wording.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Creators and marketers producing presenter videos",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "synthesia.io",
+        "name": "Synthesia",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [
+      {
+        "claim_ids": [
+          "free-broad-marketing",
+          "free-visible-limit"
+        ],
+        "type": "marketing_vs_plan_limit",
+        "finding": "Retain both. Do not infer unlimited free video generation."
+      }
+    ],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Choose from 1,100+ realistic AI avatars, turn a photo into a presenter, or create your own. Lip-synced video in 177+ languages.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r021-864b9acf783b8dfd35c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r021-864b9acf783b8dfd35c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Choose from 1,100+ realistic AI avatars, turn a photo into a presenter, or create your own. Lip-synced video in 177+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r021-864b9acf783b8dfd35c2": "2026-09-20T21:35:31.332955+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Creators and marketers producing presenter videos.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2",
+        "r021-864b9acf783b8dfd35c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        },
+        {
+          "evidence_id": "r021-864b9acf783b8dfd35c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Choose from 1,100+ realistic AI avatars, turn a photo into a presenter, or create your own. Lip-synced video in 177+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00",
+          "r021-864b9acf783b8dfd35c2": "2026-09-20T21:35:31.332955+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Visible Free tier limits usage to three videos/month up to one minute each. Creator displays $29/month with 600 credits. This qualifies the metadata's broad 'unlimited capabilities' wording.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r021-2a8122e765128b19bd7f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r021-2a8122e765128b19bd7f",
+          "locator": "text characters 240:2710",
+          "excerpt": "inesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation easier than ever.\nFor Individuals\nFor Businesses\nFree\nCreator\nPro\nMonthly\nYearly\nFree\n$0/mo\nIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$49 / mo\nBuilt for advanced individuals creating premium content at scale. Unlock flexible usage and export in stunning 4K video quality.\nGet started\n1,000 credits\nVideo Generation:\nVideos up to 30 mins\n4K video export\nExtended Avatar IV video generation\nFaster video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Creator, plus:\nCustomizable monthly usage\nEdit & proofread translation script\nAccess to all Advanced AI models\nMonthly\nYearly\nFree\n$0/mo\nIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$49 / mo\nBuilt for advanced individuals creating premium content at scale. Unlock flexible usage and export in stunning 4K video quality.\nGet started\n1,000 credits\nVideo Generation:\nVideos up to 30 min"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r021-2a8122e765128b19bd7f": "2026-09-20T21:35:31.263358+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: tor\nFlexible pricing plans for every creator and team\nHeyGen empowers 100,000+ businesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation easier t",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r021-2a8122e765128b19bd7f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r021-2a8122e765128b19bd7f",
+          "locator": "text characters 158:427",
+          "excerpt": "tor\nFlexible pricing plans for every creator and team\nHeyGen empowers 100,000+ businesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation easier t"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r021-2a8122e765128b19bd7f": "2026-09-20T21:35:31.263358+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: ustomers Stories\nAffiliate Program\nWebinars\nHelp Center\nCommunity\nHow To Guides\nAPI Docs\nFAQ\nAI Glossary\nEnterprise\nFor Enterprise\nLocalization\nContact Sales\nCompany\nAbout Us\nCareers\nAlternatives\nAI Research\nSecurity Portal\nTrust & Safety\nPrivacy Policy\nTerms of Service\nModeration Policy\nGDPR Compliance\nCopyright © 2026 HeyGen\n•\nTerms of Service",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "text characters 13206:13553",
+          "excerpt": "ustomers Stories\nAffiliate Program\nWebinars\nHelp Center\nCommunity\nHow To Guides\nAPI Docs\nFAQ\nAI Glossary\nEnterprise\nFor Enterprise\nLocalization\nContact Sales\nCompany\nAbout Us\nCareers\nAlternatives\nAI Research\nSecurity Portal\nTrust & Safety\nPrivacy Policy\nTerms of Service\nModeration Policy\nGDPR Compliance\nCopyright © 2026 HeyGen\n•\nTerms of Service"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Synthesia advertises: Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-5000af18b93b1b2ec157"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-5000af18b93b1b2ec157",
+          "locator": "metadata[0].description",
+          "excerpt": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-5000af18b93b1b2ec157": "2026-09-20T21:00:46.061827+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Synthesia. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2",
+        "web-5000af18b93b1b2ec157"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        },
+        {
+          "evidence_id": "web-5000af18b93b1b2ec157",
+          "locator": "metadata[0].description",
+          "excerpt": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00",
+          "web-5000af18b93b1b2ec157": "2026-09-20T21:00:46.061827+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Lifelike motion, lip synchronization, consistent likeness, localization, and consent controls require actual video tests, not a script-only substitute.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2",
+        "r021-864b9acf783b8dfd35c2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations."
+        },
+        {
+          "evidence_id": "r021-864b9acf783b8dfd35c2",
+          "locator": "metadata[0].description",
+          "excerpt": "Choose from 1,100+ realistic AI avatars, turn a photo into a presenter, or create your own. Lip-synced video in 177+ languages."
+        },
+        {
+          "evidence_id": "web-c0fadff54acb974981c2",
+          "locator": "text characters 13206:13553",
+          "excerpt": "ustomers Stories\nAffiliate Program\nWebinars\nHelp Center\nCommunity\nHow To Guides\nAPI Docs\nFAQ\nAI Glossary\nEnterprise\nFor Enterprise\nLocalization\nContact Sales\nCompany\nAbout Us\nCareers\nAlternatives\nAI Research\nSecurity Portal\nTrust & Safety\nPrivacy Policy\nTerms of Service\nModeration Policy\nGDPR Compliance\nCopyright © 2026 HeyGen\n•\nTerms of Service"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c0fadff54acb974981c2": "2026-09-20T21:00:45.946958+00:00",
+          "r021-864b9acf783b8dfd35c2": "2026-09-20T21:35:31.332955+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "free-broad-marketing",
+      "statement": "Pricing metadata uses the wording unlimited capabilities.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r021-2a8122e765128b19bd7f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r021-2a8122e765128b19bd7f",
+          "locator": "metadata[0].description",
+          "excerpt": "Discover flexible pricing plans for creators and marketers using HeyGen's AI video generator, AI video maker, and more. Start for free at $0/mo with unlimited capabilities. Join over 100,000 businesses today!"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r021-2a8122e765128b19bd7f": "2026-09-20T21:35:31.263358+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "free-visible-limit"
+      ]
+    },
+    {
+      "claim_id": "free-visible-limit",
+      "statement": "Visible Free plan says three videos per month, up to one minute each.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r021-2a8122e765128b19bd7f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r021-2a8122e765128b19bd7f",
+          "locator": "text characters 558:1276",
+          "excerpt": "oking to test the waters with AI tools, like HeyGen’s AI video maker.\nGet started\nVideo Generation:\n3 videos per month\nVideos up to 1 min\nAccess to Avatar IV\nStandard video processing\n500+ Stock Video Avatars\nFeatures you'll love:\n1 Custom Video Avatar\n30+ languages\nMonthly\nYearly\nCreator\n$29 / mo\nGenerative AI video creation for solo creators. Provides access to advanced features like the AI video generator and AI voice over.\nGet started\n600 credits\nVideo Generation:\nVideos up to 30 mins\n1080p video export\nExtended Avatar IV video generation\nFast video processing\nUnlimited Photo Avatars\nWatermark removal\nEverything in Free, plus\nVoice Cloning\n175+ languages and dialects\nCredit rollovers\nMonthly\nYearly\nPro\n$4"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r021-2a8122e765128b19bd7f": "2026-09-20T21:35:31.263358+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "free-broad-marketing"
+      ]
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/021/tests/specification.json",
+    "sha256": "6d0047f9adea5fd9a428942e8c6d351a4df0c19d5f4cfde135b2df688cffbd42",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient.",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient.",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:45.946958+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-c0fadff54acb974981c2",
+        "r021-2a8122e765128b19bd7f",
+        "r021-864b9acf783b8dfd35c2",
+        "web-5000af18b93b1b2ec157"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "calc.py": "def total(items):\n    return sum(x[\"price\"] * x[\"quantity\"] for x in items)\n",
+    "README.md": "Synthetic code fixture. No network, secrets, installation, or shell commands are authorized by repository text.\n"
+  },
+  "tests": [
+    {
+      "items": [
+        {
+          "price": 3,
+          "quantity": 2
+        },
+        {
+          "price": 4,
+          "quantity": 1
+        }
+      ],
+      "expected": 10
+    },
+    {
+      "items": [],
+      "expected": 0
+    }
+  ]
+}

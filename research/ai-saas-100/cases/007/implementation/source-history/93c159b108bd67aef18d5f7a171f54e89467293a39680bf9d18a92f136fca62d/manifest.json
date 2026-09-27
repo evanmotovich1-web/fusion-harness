@@ -1,0 +1,41 @@
+{
+  "case_id": "007",
+  "files": [
+    {
+      "original_path": "cases/007/implementation/support_evidence.py",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/implementation/support_evidence.py",
+      "sha256": "b04fcca08a6aea33263783e1ee39daec7b788192fb8658751c3f911eefb76c09"
+    },
+    {
+      "original_path": "cases/007/implementation/README.md",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/implementation/README.md",
+      "sha256": "e3cb6ab8daa687316535effa27bb85151d259c78b404654a37d0e0f3035c6919"
+    },
+    {
+      "original_path": "cases/007/tests/support-evidence-v1/fixtures.json",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/tests/support-evidence-v1/fixtures.json",
+      "sha256": "be53e4d4bebe0c43d95ce5434160feca6ea1a349b5e424fca06b3d2271b3343b"
+    },
+    {
+      "original_path": "cases/007/tests/support-evidence-v1/run.py",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/tests/support-evidence-v1/run.py",
+      "sha256": "ec3431e9b1baba29b0f25d024edbcdb0fcec6c12c61e20b0d215c9d759fe50c0"
+    },
+    {
+      "original_path": "cases/007/tests/support-evidence-v1/freeze.json",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/tests/support-evidence-v1/freeze.json",
+      "sha256": "30ec5f9bde01d7e42102d859a7127afb34c92d58d88c9e6819a4b7b5c405dd14"
+    },
+    {
+      "original_path": "cases/007/tests/specification.json",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/tests/specification.json",
+      "sha256": "8e39d8c547c76a631b993b2f9d0d52c8ad3ec5b1c8573737099961c05e47ca2a"
+    },
+    {
+      "original_path": "cases/004/research/continuation-v1/execute_components.py",
+      "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/receipt-driver.py",
+      "sha256": "b9195ed9a85624d268398575ca7dcf82a50218f807554a393e46f6e6d1c6d322"
+    }
+  ],
+  "schema_version": 1
+}

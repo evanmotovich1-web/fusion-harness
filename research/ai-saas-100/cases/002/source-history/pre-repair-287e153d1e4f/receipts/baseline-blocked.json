@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "run_id": "002-baseline-blocked",
+  "system": "B1",
+  "status": "blocked",
+  "started_at": null,
+  "ended_at": null,
+  "command": [],
+  "cwd": null,
+  "implementation": null,
+  "fixtures": null,
+  "input_bundle": null,
+  "outputs": [],
+  "runtime": {},
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {},
+  "baseline_id": null,
+  "exit_status": null,
+  "test_results": [],
+  "quality": [],
+  "latency": {
+    "value": null,
+    "unit": "seconds",
+    "classification": "unknown",
+    "category": "unknown",
+    "assumptions": [],
+    "unknown_reason": "Not measured"
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "No authorized callable generic-model endpoint verified; no model invocation attempted"
+  ],
+  "redactions": [],
+  "human_interventions": [],
+  "execution_kind": "unknown",
+  "inference_executed": false
+}

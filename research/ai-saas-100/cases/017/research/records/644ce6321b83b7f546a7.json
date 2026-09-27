@@ -1,0 +1,298 @@
+{
+  "evidence_id": "r017-644ce6321b83b7f546a7",
+  "source_url": "https://chatling.ai/integrations",
+  "publisher": "chatling.ai",
+  "retrieved_at": "2026-09-20T21:35:30.915498+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://chatling.ai/integrations",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "cases/017/research/captures/644ce6321b83b7f546a7.html",
+  "capture_sha256": "7baff4f4ce1c5e870500b78377ff2716fd683c9ac653969f6cd9fd97977ef76d",
+  "bytes_saved": 71622,
+  "title": "Integrations | Chatling",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required."
+    },
+    {
+      "key": "og:title",
+      "value": "Integrations"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Chatling"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required."
+    }
+  ],
+  "text": "Integrations | Chatling\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nOpen menu\nIntegrations\nPricing\nResources\nBlog\nDocumentation\nAPI Docs\nLog In\nGet Started\nConnect once.\nSupport everywhere.\nBring all your channels and tools into one place, so you can automate conversations and respond faster across every touchpoint.\nStart for free\nWhatsApp\nLearn more\nInstagram\nLearn more\nTelegram\nMessenger\nZapier\nLearn more\nCal.com\nGoogle Sheets\nHubSpot\nZendesk\nSlack\nAirtable\nZoho\nWordPress\nLearn more\nBubble\nLearn more\nPrestaShop\nLearn more\nShopify\nLearn more\nSquarespace\nLearn more\nWebflow\nLearn more\nWix\nLearn more\n\"It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website platforms.\"\nRobert Meli\nWIX partner\nTransform customer interactions with AI agents that actually work\nDeploy AI agents that respond to queries, take actions, and deliver results - no coding required\nBuild AI agent\nProduct\nPricing\nIntegrations\nReviews\nAlternatives\nSign Up\nLogin\nResources\nBlog\nFree Tools\nWebsite Chatbot\nAffiliate Program\nDocumentation\nAPI Docs\nChangelog\nRoadmap\nLegal & Privacy\nDPA\nCookie Policy\nCookie Preferences\nPrivacy Policy\nTerms of Service\nEU Data Protection\nGot questions? Drop us a line at\n[email protected]\nWe use cookies to make our site work. By clicking \"Accept,\" you agree to our website's cookie use as described in our\nCookie Policy\n. You can change your cookie settings at any time by clicking\nPreferences\n.\nAccept\nPreferences\nCookie Preferences\nControl which cookies power your Chatling experience.\nWe use different types of cookies to optimize your experience on our website. Click on the categories below to learn more about their purposes. You may choose which types of cookies to allow and can change your preferences at any time. Remember that disabling cookies may affect your experience on the website.\nTo learn more about how we use cookies, visit our\nCookie Policy\n.\nEssential Cookies\nEssential cookies are necessary for our website to function properly. These cookies ensure basic functionalities and security features of the website. As such, essential cookies cannot be disabled.\nAnalytics Cookies\nAnalytical cookies are used to understand how visitors interact with our website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.\nMarketing Cookies\nTo deliver marketing campaigns and track their performance on our website.\nDecline All\nAllow Selection\nAllow All",
+  "links": [
+    {
+      "href": "/css/v4/app.css?id=502458fbdb1d2b7673b4aa0df71e0ffb",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-57x57.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-60x60.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-72x72.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-76x76.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-114x114.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-120x120.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-144x144.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-152x152.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/apple-icon-180x180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/android-icon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-96x96.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://static.chatling.ai/img/website/v4/favicon/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/go/api-docs",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/go/api-docs",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai/whatsapp/overview",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai/instagram/overview",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/zapier",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/wordpress",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/bubble",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/prestashop",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/shopify",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/squarespace",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/webflow",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/docs/integrations/wix",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/chatling/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/alternatives",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/register",
+      "rel": null
+    },
+    {
+      "href": "https://app.chatling.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/blog",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/tools",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/ai-chatbot-website",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/affiliate",
+      "rel": null
+    },
+    {
+      "href": "https://docs.chatling.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/go/api-docs",
+      "rel": null
+    },
+    {
+      "href": "https://feedback.chatling.ai/changelog",
+      "rel": null
+    },
+    {
+      "href": "https://feedback.chatling.ai/roadmap",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/dpa",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/cookie-policy",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/eu-data-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection#6b181e1b1b04191f2b08030a1f0702050c450a02",
+      "rel": null
+    },
+    {
+      "href": "https://chatling.ai/cookie-policy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://chatling.ai/cookie-policy",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.214676
+}

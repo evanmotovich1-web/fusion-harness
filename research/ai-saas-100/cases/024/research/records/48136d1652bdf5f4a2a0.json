@@ -1,0 +1,15 @@
+{
+  "evidence_id": "r024-48136d1652bdf5f4a2a0",
+  "source_url": "https://www.compose.ai/features",
+  "publisher": "www.compose.ai",
+  "retrieved_at": "2026-09-20T21:35:31.824180+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 404: Not Found",
+  "elapsed_seconds": 0.12756
+}

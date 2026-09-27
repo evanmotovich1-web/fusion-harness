@@ -1,0 +1,986 @@
+{
+  "evidence_id": "r022-2b31f1a0fb5a4c34f27d",
+  "source_url": "https://cursor.com/en-US/security",
+  "publisher": "cursor.com",
+  "retrieved_at": "2026-09-20T21:35:31.391255+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "security",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://cursor.com/en-US/security",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/022/research/captures/2b31f1a0fb5a4c34f27d.html",
+  "capture_sha256": "b3ff9216d0b4c3135f29216b2b1cbfe101ed4b2dec396d6f67ea0f105b63f318",
+  "bytes_saved": 147262,
+  "title": "Cursor · Security",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "Cursor · Security"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Cursor"
+    }
+  ],
+  "text": "Cursor · Security\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nSecurity\nLast updated\nAugust 25, 2026\nTable of Contents\n↑\nCertifications and third-party assessments\nInfrastructure security\nClient and agent security\nSecuring our own codebase\nPrivacy Mode\nAccount deletion\nVulnerability disclosures\nKeeping your source code and developer environment secure is important to us. This page outlines how we approach security for Cursor.\nPlease submit potential vulnerabilities via email to\nsecurity-reports@cursor.com\n. For any other security-related questions, contact us at\nsecurity@cursor.com\n.\n#\nCertifications and third-party assessments\nCursor holds AIUC-1, ISO/IEC 27001:2022, and ISO/IEC 42001:2023 certifications, along with a SOC 2 Type II attestation. Certificates and reports are available on request at\ntrust.cursor.com\n.\nWe commit to at-least-annual penetration testing by reputable third parties. An executive summary of the latest report is also available on request via our trust portal.\n#\nInfrastructure security\nOur list of subprocessors is published on our\ntrust portal\n. Each subprocessor is evaluated under our vendor risk management program and re-reviewed annually. Cursor respects model blocklists and will not send requests to models on a blocklist.\nCursor does not use or maintain any infrastructure in China. We do not use any companies headquartered in China as subprocessors, and to our knowledge none of our subprocessors do either.\nInfrastructure access is granted according to the principle of least privilege. We enforce multi-factor authentication, deploy cybersecurity tools, and monitor system logs and activity.\n#\nClient and agent security\nWe assess upstream security patches based on risk and impact and, where warranted, merge and release immediately.\nOur app makes requests to Cursor backend domains to deliver API, update, and marketplace functionality. If you're behind a corporate proxy, please\nallowlist these domains\n.\nBest practices for using Cursor agents securely are documented in our\ndeveloper docs\n:\nAgent and developer security:\nAgent security\nLLM safety and controls\nCloud Agent network security\nHooks\nSecurity considerations for MCP\nData Encryption and CMEK\nSecurity and Privacy Hardening\nEnterprise administration:\nEnterprise security features\nPrivacy and data governance\nCompliance logging\nMDM deployment\nSSO\nand\nSCIM\n#\nSecuring our own codebase\nWe use our own products to help secure our codebase, including\nBugBot\nand\nCloud Agent automations\n. See our\nsecurity agents blog post\nfor more information.\n#\nPrivacy Mode\nPrivacy Mode\ncan be enabled in settings or by a team or enterprise admin. Privacy Mode is available to anyone (free or Pro). New team members inherit the team's Privacy Mode settings. When enabled, we will not train on your data. We also implement technical controls and contractual requirements with our model providers to protect your data.\nLearn more about\nhow your data is used\n.\n#\nAccount deletion\nYou can delete your account at any time from the Settings dashboard -- see our\naccount deletion guide\nfor instructions.\nFor additional assistance with account deletion, contact customer support at\nhi@cursor.com\n.\n#\nVulnerability disclosures\nIf you believe you have found a vulnerability in Cursor, please submit a report to\nsecurity-reports@cursor.com\n. We acknowledge vulnerability reports within 5 business days and address them as soon as we are able. Critical incidents are communicated via email to affected users.\nProduct\nAgents\nTeams\nEnterprise\nPricing\nCode Review\nCLI\nCloud Agents\nComposer\nMarketplace\n↗\nResources\nDownload\nChangelog\nDocs\nLearn\n↗\nValue Calculator\nForum\n↗\nHelp\n↗\nWorkshops\nStatus\n↗\nCompany\nCareers\nBlog\nCommunity\nStudents\nBrand\nFuture\nAnysphere\n↗\nLegal\nTerms of Service\nAcceptable Use Policy\nGrok Bot Terms\nPrivacy Policy\nData Use\nSecurity\nConnect\nX\n↗\nLinkedIn\n↗\nYouTube\n↗\n©\n2026\nAnysphere, Inc.\n🛡\nSOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified\n🌐\nEnglish\n↓\nEnglish\n✓\n简体中文\n日本語\n繁體中文\nEspañol\nFrançais\nPortuguês\n한국어\nDeutsch\nहिन्दी\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nSecurity\nLast updated\nAugust 25, 2026\nTable of Contents\n↑\nCertifications and third-party assessments\nInfrastructure security\nClient and agent security\nSecuring our own codebase\nPrivacy Mode\nAccount deletion\nVulnerability disclosures\nKeeping your source code and developer environment secure is important to us. This page outlines how we approach security for Cursor.\nPlease submit potential vulnerabilities via email to\nsecurity-reports@cursor.com\n. For any other security-related questions, contact us at\nsecurity@cursor.com\n.\n#\nCertifications and third-party assessments\nCursor holds AIUC-1, ISO/IEC 27001:2022, and ISO/IEC 42001:2023 certifications, along with a SOC 2 Type II attestation. Certificates and reports are available on request at\ntrust.cursor.com\n.\nWe commit to at-least-annual penetration testing by reputable third parties. An executive summary of the latest report is also available on request via our trust portal.\n#\nInfrastructure security\nOur list of subprocessors is published on our\ntrust portal\n. Each subprocessor is evaluated under our vendor risk management program and re-reviewed annually. Cursor respects model blocklists and will not send requests to models on a blocklist.\nCursor does not use or maintain any infrastructure in China. We do not use any companies headquartered in China as subprocessors, and to our knowledge none of our subprocessors do either.\nInfrastructure access is granted according to the principle of least privilege. We enforce multi-factor authentication, deploy cybersecurity tools, and monitor system logs and activity.\n#\nClient and agent security\nWe assess upstream security patches based on risk and impact and, where warranted, merge and release immediately.\nOur app makes requests to Cursor backend domains to deliver API, update, and marketplace functionality. If you're behind a corporate proxy, please\nallowlist these domains\n.\nBest practices for using Cursor agents securely are documented in our\ndeveloper docs\n:\nAgent and developer security:\nAgent security\nLLM safety and controls\nCloud Agent network security\nHooks\nSecurity considerations for MCP\nData Encryption and CMEK\nSecurity and Privacy Hardening\nEnterprise administration:\nEnterprise security features\nPrivacy and data governance\nCompliance logging\nMDM deployment\nSSO\nand\nSCIM\n#\nSecuring our own codebase\nWe use our own products to help secure our codebase, including\nBugBot\nand\nCloud Agent automations\n. See our\nsecurity agents blog post\nfor more information.\n#\nPrivacy Mode\nPrivacy Mode\ncan be enabled in settings or by a team or enterprise admin. Privacy Mode is available to anyone (free or Pro). New team members inherit the team's Privacy Mode settings. When enabled, we will not train on your data. We also implement technical controls and contractual requirements with our model providers to protect your data.\nLearn more about\nhow your data is used\n.\n#\nAccount deletion\nYou can delete your account at any time from the Settings dashboard -- see our\naccount deletion guide\nfor instructions.\nFor additional assistance with account deletion, contact customer support at\nhi@cursor.com\n.\n#\nVulnerability disclosures\nIf you believe you have found a vulnerability in Cursor, please submit a report to\nsecurity-reports@cursor.com\n. We acknowledge vulnerability reports within 5 business days and address them as soon as we are able. Critical incidents are communicated via email to affected users.\nProduct\nAgents\nTeams\nEnterprise\nPricing\nCode Review\nCLI\nCloud Agents\nComposer\nMarketplace\n↗\nResources\nDownload\nChangelog\nDocs\nLearn\n↗\nValue Calculator\nForum\n↗\nHelp\n↗\nWorkshops\nStatus\n↗\nCompany\nCareers\nBlog\nCommunity\nStudents\nBrand\nFuture\nAnysphere\n↗\nLegal\nTerms of Service\nAcceptable Use Policy\nGrok Bot Terms\nPrivacy Policy\nData Use\nSecurity\nConnect\nX\n↗\nLinkedIn\n↗\nYouTube\n↗\n©\n2026\nAnysphere, Inc.\n🛡\nSOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified\n🌐\nEnglish\n↓\nEnglish\n✓\n简体中文\n日本語\n繁體中文\nEspañol\nFrançais\nPortuguês\n한국어\nDeutsch\nहिन्दी",
+  "links": [
+    {
+      "href": "/marketing-static/_next/static/chunks/15p9_0bg.mv9r.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0-bj.qdghqbe1.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/14h-6p1fgpdgg.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0y6ohv-u0tb1d.js?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cursor.com/an/UfoPFiz3bKlZcL0x/",
+      "rel": "preload"
+    },
+    {
+      "href": "https://0ay7zb.cursor.com/analytics/loader-v1.js?key=6f091e8fd6f3c36209a1e08f140c7a4b334baea548f4702052f0732f8d577990",
+      "rel": "preload"
+    },
+    {
+      "href": "/marketing-static/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://cursor.com/security",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cursor.com/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/cn/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ja/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/zh-Hant/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/es/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/fr/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/pt-BR/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ko/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/de/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/hi/security",
+      "rel": "alternate"
+    },
+    {
+      "href": "/marketing-static/favicon-light.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/marketing-static/icon-192x192-light.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/apple-touch-icon-light.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "#certifications-and-third-party-assessments",
+      "rel": null
+    },
+    {
+      "href": "#infrastructure-security",
+      "rel": null
+    },
+    {
+      "href": "#client-and-agent-security",
+      "rel": null
+    },
+    {
+      "href": "#securing-our-own-codebase",
+      "rel": null
+    },
+    {
+      "href": "#privacy-mode",
+      "rel": null
+    },
+    {
+      "href": "#account-deletion",
+      "rel": null
+    },
+    {
+      "href": "#vulnerability-disclosures",
+      "rel": null
+    },
+    {
+      "href": "mailto:security-reports@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "mailto:security@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#certifications-and-third-party-assessments",
+      "rel": null
+    },
+    {
+      "href": "https://trust.cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#infrastructure-security",
+      "rel": null
+    },
+    {
+      "href": "https://trust.cursor.com/subprocessors",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#client-and-agent-security",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/network-configuration#ip-allowlisting",
+      "rel": null
+    },
+    {
+      "href": "https://docs.cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/docs/agent/security",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/llm-safety-and-controls",
+      "rel": null
+    },
+    {
+      "href": "/docs/cloud-agent/security-network",
+      "rel": null
+    },
+    {
+      "href": "/docs/hooks",
+      "rel": null
+    },
+    {
+      "href": "/docs/mcp#security-considerations",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/privacy-and-data-governance#data-encryption",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/security-hardening",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/privacy-and-data-governance",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/compliance-and-monitoring#audit-logs",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/deployment-patterns#mdm-configuration",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/sso",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/scim",
+      "rel": null
+    },
+    {
+      "href": "#securing-our-own-codebase",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/bugbot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/docs/cloud-agent/automations",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog/security-agents",
+      "rel": null
+    },
+    {
+      "href": "#privacy-mode",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help/security-and-privacy/privacy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/data-use",
+      "rel": null
+    },
+    {
+      "href": "#account-deletion",
+      "rel": null
+    },
+    {
+      "href": "/help/account-and-billing/delete-account",
+      "rel": null
+    },
+    {
+      "href": "mailto:hi@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#vulnerability-disclosures",
+      "rel": null
+    },
+    {
+      "href": "mailto:security-reports@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/product",
+      "rel": null
+    },
+    {
+      "href": "/en-US/business/teams",
+      "rel": null
+    },
+    {
+      "href": "/en-US/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/en-US/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en-US/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/cli",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/en-US/composer",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/download",
+      "rel": null
+    },
+    {
+      "href": "/en-US/changelog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/cost-savings",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://status.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/careers",
+      "rel": null
+    },
+    {
+      "href": "/en-US/blog",
+      "rel": null
+    },
+    {
+      "href": "/en-US/community",
+      "rel": null
+    },
+    {
+      "href": "/en-US/students",
+      "rel": null
+    },
+    {
+      "href": "/en-US/brand",
+      "rel": null
+    },
+    {
+      "href": "/en-US/future",
+      "rel": null
+    },
+    {
+      "href": "https://anysphere.inc/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/en-US/acceptable-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/terms/grok-bot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/privacy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/data-use",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/cursorai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://anysphere.inc",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "#certifications-and-third-party-assessments",
+      "rel": null
+    },
+    {
+      "href": "#infrastructure-security",
+      "rel": null
+    },
+    {
+      "href": "#client-and-agent-security",
+      "rel": null
+    },
+    {
+      "href": "#securing-our-own-codebase",
+      "rel": null
+    },
+    {
+      "href": "#privacy-mode",
+      "rel": null
+    },
+    {
+      "href": "#account-deletion",
+      "rel": null
+    },
+    {
+      "href": "#vulnerability-disclosures",
+      "rel": null
+    },
+    {
+      "href": "mailto:security-reports@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "mailto:security@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#certifications-and-third-party-assessments",
+      "rel": null
+    },
+    {
+      "href": "https://trust.cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#infrastructure-security",
+      "rel": null
+    },
+    {
+      "href": "https://trust.cursor.com/subprocessors",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#client-and-agent-security",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/network-configuration#ip-allowlisting",
+      "rel": null
+    },
+    {
+      "href": "https://docs.cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/docs/agent/security",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/llm-safety-and-controls",
+      "rel": null
+    },
+    {
+      "href": "/docs/cloud-agent/security-network",
+      "rel": null
+    },
+    {
+      "href": "/docs/hooks",
+      "rel": null
+    },
+    {
+      "href": "/docs/mcp#security-considerations",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/privacy-and-data-governance#data-encryption",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/security-hardening",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/privacy-and-data-governance",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/compliance-and-monitoring#audit-logs",
+      "rel": null
+    },
+    {
+      "href": "/docs/enterprise/deployment-patterns#mdm-configuration",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/sso",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/scim",
+      "rel": null
+    },
+    {
+      "href": "#securing-our-own-codebase",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/bugbot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/docs/cloud-agent/automations",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog/security-agents",
+      "rel": null
+    },
+    {
+      "href": "#privacy-mode",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help/security-and-privacy/privacy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/data-use",
+      "rel": null
+    },
+    {
+      "href": "#account-deletion",
+      "rel": null
+    },
+    {
+      "href": "/help/account-and-billing/delete-account",
+      "rel": null
+    },
+    {
+      "href": "mailto:hi@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "#vulnerability-disclosures",
+      "rel": null
+    },
+    {
+      "href": "mailto:security-reports@cursor.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/product",
+      "rel": null
+    },
+    {
+      "href": "/en-US/business/teams",
+      "rel": null
+    },
+    {
+      "href": "/en-US/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/en-US/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en-US/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/cli",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/en-US/composer",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/download",
+      "rel": null
+    },
+    {
+      "href": "/en-US/changelog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/cost-savings",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://status.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/careers",
+      "rel": null
+    },
+    {
+      "href": "/en-US/blog",
+      "rel": null
+    },
+    {
+      "href": "/en-US/community",
+      "rel": null
+    },
+    {
+      "href": "/en-US/students",
+      "rel": null
+    },
+    {
+      "href": "/en-US/brand",
+      "rel": null
+    },
+    {
+      "href": "/en-US/future",
+      "rel": null
+    },
+    {
+      "href": "https://anysphere.inc/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/en-US/acceptable-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/terms/grok-bot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/privacy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/data-use",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/cursorai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://anysphere.inc",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.135905
+}
