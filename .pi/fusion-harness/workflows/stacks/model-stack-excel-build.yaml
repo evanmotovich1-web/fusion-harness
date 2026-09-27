@@ -1,0 +1,17 @@
+# Dedicated excel-build stack. Not referenced by model-stack-fusion*.yaml.
+# loadModelStack rejects a one-slot file (model-stack.ts floor: one architect + one primary).
+# Exactly one builder. The vendored prompt is appended only on that builder.
+- name: architect
+  model: anthropic/claude-fable-5
+  thinking: medium
+  architect: true
+  color: "#7DD3FC"
+
+- name: builder
+  model: google/gemini-3.7-flash
+  thinking: high
+  primary: true
+  color: "#F59E0B"
+  append_system_prompt:
+    - ../../excel-agent/AGENT_SYSTEM_PROMPT.md
+    - "Harness tools and this bridge take precedence over the vendored Excel prompt. The 15 excel_*.py tools are installed. Invoke them only through /Users/evanmotovich/fusion-harness/.pi/fusion-harness/excel-agent/excel-tool <script.py>. Do not run uv python. Do not pass --allow-external. Do not background processes. Do not replace Fusion Harness role prompts. Do not install LibreOffice."

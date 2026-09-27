@@ -1,0 +1,23 @@
+{
+  "sheets": ["Assumptions", "Model"],
+  "assumptions": [
+    {
+      "sheet": "Assumptions",
+      "cell": "B2",
+      "value": 1000000,
+      "description": "Baseline revenue"
+    },
+    {
+      "sheet": "Assumptions",
+      "cell": "B3",
+      "value": 0.20,
+      "description": "Annual growth rate"
+    }
+  ],
+  "cells": [
+    {"sheet": "Model", "cell": "A1", "value": "Year"},
+    {"sheet": "Model", "cell": "B1", "value": "Revenue"},
+    {"sheet": "Model", "cell": "A2", "value": 2024},
+    {"sheet": "Model", "cell": "B2", "formula": "=Assumptions!B2"}
+  ]
+}

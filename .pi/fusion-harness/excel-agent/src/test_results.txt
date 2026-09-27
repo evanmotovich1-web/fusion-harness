@@ -1,0 +1,42 @@
+$ pytest test_tools.py -v
+=================================================== test session starts ====================================================
+platform linux -- Python 3.12.3, pytest-8.4.2, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+PySide6 6.9.2 -- Qt runtime 6.9.2 -- Qt compiled 6.9.2
+rootdir: /home/project/Excel-Agent-Tool
+plugins: qt-4.5.0, cov-6.3.0, Faker-37.6.0, mock-3.15.0, asyncio-1.1.0, anyio-4.10.0
+asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 30 items                                                                                                         
+
+test_tools.py::TestCreationTools::test_create_new_basic PASSED                                                       [  3%]
+test_tools.py::TestCreationTools::test_create_new_invalid_sheet_names PASSED                                         [  6%]
+test_tools.py::TestCreationTools::test_create_new_dry_run PASSED                                                     [ 10%]
+test_tools.py::TestCreationTools::test_create_from_structure_basic PASSED                                            [ 13%]
+test_tools.py::TestCreationTools::test_create_from_structure_with_inputs PASSED                                      [ 16%]
+test_tools.py::TestCreationTools::test_clone_template PASSED                                                         [ 20%]
+test_tools.py::TestCellOperations::test_set_value_string PASSED                                                      [ 23%]
+test_tools.py::TestCellOperations::test_set_value_number PASSED                                                      [ 26%]
+test_tools.py::TestCellOperations::test_add_formula_valid PASSED                                                     [ 30%]
+test_tools.py::TestCellOperations::test_add_formula_cross_sheet PASSED                                               [ 33%]
+test_tools.py::TestCellOperations::test_add_formula_invalid_sheet_reference PASSED                                   [ 36%]
+test_tools.py::TestCellOperations::test_add_formula_security_error PASSED                                            [ 40%]
+test_tools.py::TestCellOperations::test_add_financial_input PASSED                                                   [ 43%]
+test_tools.py::TestCellOperations::test_add_assumption PASSED                                                        [ 46%]
+test_tools.py::TestCellOperations::test_get_value PASSED                                                             [ 50%]
+test_tools.py::TestCellOperations::test_get_value_formula PASSED                                                     [ 53%]
+test_tools.py::TestRangeOperations::test_apply_range_formula PASSED                                                  [ 56%]
+test_tools.py::TestRangeOperations::test_format_range_currency PASSED                                                [ 60%]
+test_tools.py::TestRangeOperations::test_format_range_custom PASSED                                                  [ 63%]
+test_tools.py::TestSheetManagement::test_add_sheet PASSED                                                            [ 66%]
+test_tools.py::TestSheetManagement::test_add_sheet_at_index PASSED                                                   [ 70%]
+test_tools.py::TestSheetManagement::test_export_sheet_csv PASSED                                                     [ 73%]
+test_tools.py::TestValidationTools::test_validate_formulas_success PASSED                                            [ 76%]
+test_tools.py::TestValidationTools::test_get_info PASSED                                                             [ 80%]
+test_tools.py::TestValidationTools::test_repair_dry_run PASSED                                                       [ 83%]
+test_tools.py::TestErrorHandling::test_file_not_found PASSED                                                         [ 86%]
+test_tools.py::TestErrorHandling::test_invalid_sheet_name PASSED                                                     [ 90%]
+test_tools.py::TestErrorHandling::test_invalid_cell_reference PASSED                                                 [ 93%]
+test_tools.py::TestWorkflows::test_create_financial_model_workflow PASSED                                            [ 96%]
+test_tools.py::TestPerformance::test_large_range_formula PASSED                                                      [100%]
+
+=================================================== 30 passed in 38.92s ====================================================
