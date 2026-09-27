@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "013",
+    "name": "WonsultingAI",
+    "canonical_url": "https://www.wonsulting.com/wonsultingai",
+    "category": "C10",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-dcb8bfb89e43c86dc42e"
+    ],
+    "aliases": [
+      "https://www.wonsulting.ai/"
+    ]
+  },
+  "selection": {
+    "candidate_id": "wonsulting.com",
+    "selection_position": 13,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Job seekers tailoring resumes to a role",
+    "job": "Rewrite resume bullets against a supplied job description using only the applicant's supplied facts",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "bullets": "array of strings",
+      "fact_mapping": "array",
+      "unsupported_requirements": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Rewrite resume bullets against a supplied job description using only the applicant's supplied facts",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Premium is advertised at $19.99/month. Basic is shown at $0 with limited generations. No purchase or employment-outcome validation was performed.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Job seekers tailoring resumes to a role",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "rezi.ai",
+        "name": "Rezi",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Available homepage, pricing and follow-up captures did not establish specific working integration details. No authenticated connection or API call was attempted."
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Build the perfect resume for free with ResumAI, the first AI resume builder from WonsultingAI. Trusted by career and job search experts, it's the fastest way to craft a professional resume that gets you a job.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r013-93443b0076d9926ecf6c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r013-93443b0076d9926ecf6c",
+          "locator": "metadata[0].description",
+          "excerpt": "Build the perfect resume for free with ResumAI, the first AI resume builder from WonsultingAI. Trusted by career and job search experts, it's the fastest way to craft a professional resume that gets you a job."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r013-93443b0076d9926ecf6c": "2026-09-20T21:35:26.535382+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Job seekers tailoring resumes to a role.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e",
+        "r013-93443b0076d9926ecf6c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        },
+        {
+          "evidence_id": "r013-93443b0076d9926ecf6c",
+          "locator": "metadata[0].description",
+          "excerpt": "Build the perfect resume for free with ResumAI, the first AI resume builder from WonsultingAI. Trusted by career and job search experts, it's the fastest way to craft a professional resume that gets you a job."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00",
+          "r013-93443b0076d9926ecf6c": "2026-09-20T21:35:26.535382+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Premium is advertised at $19.99/month. Basic is shown at $0 with limited generations. No purchase or employment-outcome validation was performed.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r013-aed3b72e8c1d49399f14"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r013-aed3b72e8c1d49399f14",
+          "locator": "text characters 3162:5628",
+          "excerpt": "r letter generations\n3 networking messages\n1 interview prep\nHigh level resume score\n2 cold emails\n30 Jobs Tracked\nAccess to JobBoardAI\nGet Started For $0\nNo credit card required (ever!)\nPREMIUM\nGet full access to the ultimate AI powered job search platform.\n‍\n$19.99\n/month\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\n‍\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\nEverything on the Basic plan\nUnlimited tracked jobs\nUnlimited resume uploads\nUnlimited learning hub accesss\nUnlimited Resume score and breakdown\nUnlimited bullet point generations\nUnlimited networking messages\nUnlimited tailoring resumes and cover letter\nUnlimited cold email generations\nUsed by grads from Google, Amazon, and Meta\nUnlimited company emails\nFuture releases included\nUnlimited interview prep\nUnlimited cover letter generations\nUnlimited bullet point generations\nStart Landing More Job Offers Now\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\n10,000+ SUCCESS STORIES\nOur users get interviews and job offers\nWonsultingAI turned out to be exactly what I needed...\nBefore WonsultingAI, my biggest challenge was creating a resume that truly showcased my skills and achievements in a professional, tailored way. ResumAI helped me build a clear, impactful resume that got results, In fact, the resume I submitted to Vistra Corp, where I now work full-time as a Supply Chain Diversity Data Analyst, was built using ResumAI. I also used NetworkAI to support my job search.\nShirin S.\nVistra Corp\nWonsultingAI helped me land my dream internship...\nI’m grateful to WonsultingAI for helping me land an internship at PayPal as an Anti-Phishing Intern. I began with their free tools, then upgraded to premium and accessed the Learning Hub. Even though I never interacted directly with the team, their guidance made a real difference. Though I had the skills, I struggled with how to present myself. Their guidance taught me to confidently share my story and turn potential into opportunity.\nAaryan R.\nPaypal\nNetworking has been easy with wonsulting...\nI was worried about my resume meeting ATS standards. I was finding it difficult to construct a good cover letter. Networking on LinkedIn was challenging for me.\nMy resume was modified to quantify my research experiences. I also made use of the cover letter"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r013-aed3b72e8c1d49399f14": "2026-09-20T21:35:26.457694+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording:  to the ultimate AI powered job search platform.\n‍\n$19.99\n/month\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\n‍\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\nEverything on the Basic plan\nUnlimite",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "text characters 14385:14653",
+          "excerpt": " to the ultimate AI powered job search platform.\n‍\n$19.99\n/month\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\n‍\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\nEverything on the Basic plan\nUnlimite"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Rezi advertises: Land More Interviews with the #1 AI Resume Builder. Rezi's AI builds ATS-proof resumes that actually get callbacks. 4.5M+ job seekers trust it, Forbes ranks it #1. Free, done in minutes.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-8d344204765ed9b22865"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-8d344204765ed9b22865",
+          "locator": "metadata[0].description",
+          "excerpt": "Land More Interviews with the #1 AI Resume Builder. Rezi's AI builds ATS-proof resumes that actually get callbacks. 4.5M+ job seekers trust it, Forbes ranks it #1. Free, done in minutes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-8d344204765ed9b22865": "2026-09-20T21:00:56.226025+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Rezi. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e",
+        "web-8d344204765ed9b22865"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        },
+        {
+          "evidence_id": "web-8d344204765ed9b22865",
+          "locator": "metadata[0].description",
+          "excerpt": "Land More Interviews with the #1 AI Resume Builder. Rezi's AI builds ATS-proof resumes that actually get callbacks. 4.5M+ job seekers trust it, Forbes ranks it #1. Free, done in minutes."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00",
+          "web-8d344204765ed9b22865": "2026-09-20T21:00:56.226025+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Career coaching distribution, application tracking, and applicant-specific feedback may matter beyond resume prose.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e",
+        "r013-93443b0076d9926ecf6c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcb8bfb89e43c86dc42e",
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        },
+        {
+          "evidence_id": "r013-93443b0076d9926ecf6c",
+          "locator": "metadata[0].description",
+          "excerpt": "Build the perfect resume for free with ResumAI, the first AI resume builder from WonsultingAI. Trusted by career and job search experts, it's the fastest way to craft a professional resume that gets you a job."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcb8bfb89e43c86dc42e": "2026-09-20T21:00:56.243202+00:00",
+          "r013-93443b0076d9926ecf6c": "2026-09-20T21:35:26.535382+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/013/tests/specification.json",
+    "sha256": "6116234a1f4aaccdc8e7cd389ca355b59973f124d81a255a1d7f5cbc22781644",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:56.243202+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-dcb8bfb89e43c86dc42e",
+        "r013-93443b0076d9926ecf6c",
+        "r013-aed3b72e8c1d49399f14",
+        "web-8d344204765ed9b22865"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

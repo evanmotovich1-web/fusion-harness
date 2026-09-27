@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "case_id": "008",
+  "name": "Fireflies",
+  "recorded_at": "2026-09-22T04:25:39.621515+00:00",
+  "scope": "Bounded follow-up to existing dossier; no rediscovery or accepted product",
+  "research_status": "bounded_followup_completed_commercial_research_incomplete",
+  "research_findings": {
+    "path": "cases/008/research/continuation-v1/findings.md",
+    "sha256": "da098c3ab6b490b1a8e8dbd4f71e51325f0b0997507447db529459a8ea7c5d85"
+  },
+  "new_source_record": {
+    "path": "cases/008/research/continuation-v1/capture-20260922T041405752844Z.json",
+    "sha256": "a4fe38fb9a6922f98e3d815e39ec4cf5d7caf57e36427aecbe221c15431585f0"
+  },
+  "original_dossier": {
+    "path": "cases/008/dossier.json",
+    "sha256": "e60b877e4fe1a532c4637c641a0d4a58cc5ef468cb0e4389bd46f5c08f861d40"
+  },
+  "frozen_original_specification": {
+    "path": "cases/008/tests/specification.json",
+    "sha256": "fa0cf2564e1dd8beab800997a459af8546f86b3e04cd233718daee91ac863c6c"
+  },
+  "historical_preservation": {
+    "path": "cases/008/research/continuation-v1/preservation.json",
+    "sha256": "7491b002f2629d2fda766836e9e3d2ad6a2b01f0b998249327d092ef2fa622cb"
+  },
+  "historical_files_changed": [],
+  "work_completed": "source_followup_only",
+  "implementation": null,
+  "source_snapshot": null,
+  "execution_receipt": null,
+  "component_checks_passed": 0,
+  "original_workflow_tests_passed": null,
+  "test_count_scope": "Builder-visible component rows, including reused historical inputs; not independent product observations",
+  "central_workflow_complete": false,
+  "product_status": "incomplete",
+  "accepted": false,
+  "blockers": [
+    "No speech transcription engine executed",
+    "No audio-derived summary, diarization, or action extraction",
+    "Generic-model comparison absent",
+    "Independent hidden evaluation and acceptance absent"
+  ],
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "baseline_status": "not_executed",
+  "original_product_status": "not_observed",
+  "inference_executed": false,
+  "commercial_verdict": "insufficient_evidence",
+  "operating_cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "No billing or resource allocation measurement"
+  },
+  "additional_paid_calls": 0,
+  "public_source_requests": 1,
+  "handoff": "Inspect source-bound component receipts where present. Resolve documented capability gaps before central workflow evaluation. Preserve old dossier as historical evidence and integrate this supplement through the campaign owner."
+}

@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-c111fa2b2058b6bd02a1",
+  "source_url": "https://www.futuretools.io/",
+  "retrieved_at": "2026-09-20T20:58:27.381894+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 308: Permanent Redirect",
+  "elapsed_seconds": 0.2656
+}

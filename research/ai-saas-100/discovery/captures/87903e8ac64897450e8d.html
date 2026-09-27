@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js): GA4 G-30J01590HN + Google Ads GT-PZM4P9HG (AW-18413309663). One loader, two configs. Keep on EVERY page. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30J01590HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-30J01590HN');
+    gtag('config', 'GT-PZM4P9HG');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMagic — Automate Any App, Any Website, in Plain English</title>
+  <meta name="description" content="TaskMagic connects to thousands of apps AND automates anything in your browser. Describe what you want in plain English. No code, no complex workflows, no limits.">
+  <meta property="og:title" content="TaskMagic — Automate Any App, Any Website, in Plain English">
+  <meta property="og:description" content="Connect to thousands of apps AND automate anything in your browser. One platform. Plain English. No code.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taskmagic.com">
+  <link rel="canonical" href="https://taskmagic.com/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1a;
+      --surface: #111827;
+      --surface-alt: #0d1928;
+      --border: #1e2a3a;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #09d578;
+      --accent-dim: rgba(9, 213, 120, 0.08);
+      --accent-border: rgba(9, 213, 120, 0.25);
+      --accent-glow: rgba(9, 213, 120, 0.3);
+      --blue: #60a5fa;
+      --purple: #a78bfa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══ ANIMATIONS ═══ */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-stagger {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+      transition-delay: calc(var(--delay,0) * 120ms);
+    }
+    .reveal-stagger.visible { opacity: 1; transform: translateY(0); }
+    .reveal-scale {
+      opacity: 0; transform: scale(0.95);
+      transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal-scale.visible { opacity: 1; transform: scale(1); }
+    @keyframes gradient-shift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    @keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(9,213,120,0.1)} 50%{box-shadow:0 0 40px rgba(9,213,120,0.2)} }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+    /* ═══ ICONS ═══ */
+    .icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; background: var(--accent-dim); border: 1px solid var(--accent-border); flex-shrink: 0;
+    }
+    .icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-blue { background: rgba(96,165,250,0.08); border-color: rgba(96,165,250,0.25); }
+    .icon-blue svg { stroke: var(--blue); }
+    .icon-purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.25); }
+    .icon-purple svg { stroke: var(--purple); }
+
+    /* ═══ LAYOUT ═══ */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 120px 0; }
+    .section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .section-title { font-size: 48px; font-weight: 800; line-height: 1.12; margin-bottom: 20px; }
+    .section-subtitle { font-size: 20px; color: var(--text-secondary); line-height: 1.6; max-width: 640px; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header .section-subtitle { margin: 0 auto; }
+
+    /* ═══ HEADER ═══ */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,15,26,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border); transition: background 0.3s, box-shadow 0.3s;
+    }
+    .site-header.scrolled { background: rgba(10,15,26,0.95); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-size: 20px; font-weight: 800; color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo-img { height: 28px; width: auto; }
+    .header-nav { display: flex; align-items: center; gap: 32px; }
+    .header-nav a { color: var(--text-secondary); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+    .header-nav a:hover { color: var(--text-primary); }
+    .header-nav a.header-login { color: var(--text-primary); font-weight: 600; }
+    .header-nav a.header-cta {
+      background: var(--accent); color: #000; padding: 8px 20px; border-radius: 8px;
+      font-size: 15px; font-weight: 700; transition: all 0.2s;
+    }
+    .header-nav a.header-cta:hover { background: #0be882; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(9,213,120,0.3); }
+    .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 24px; cursor: pointer; padding: 4px; }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden;
+    }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(9,213,120,0.06) 0%, transparent 70%); pointer-events: none; }
+    #heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.6; }
+    .hero-content { position: relative; z-index: 1; max-width: 860px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
+      background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 100px;
+      font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 32px;
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: float 2s ease-in-out infinite; }
+    .hero h1 { font-size: 72px; font-weight: 900; line-height: 1.05; margin-bottom: 28px; letter-spacing: -0.03em; }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent) 0%, #34d399 50%, var(--accent) 100%);
+      background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; animation: gradient-shift 4s ease infinite;
+    }
+    .hero-sub { font-size: 22px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 44px; max-width: 660px; margin-left: auto; margin-right: auto; }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .trial-note { font-size: 14px; color: var(--text-secondary); margin-top: 16px; }
+    .btn-primary {
+      background: var(--accent); color: #000; padding: 16px 36px; border-radius: 10px;
+      font-size: 17px; font-weight: 700; text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: #0be882; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(9,213,120,0.3); }
+    .btn-secondary {
+      background: transparent; color: var(--text-primary); padding: 16px 36px; border-radius: 10px;
+      font-size: 17px; font-weight: 600; text-decoration: none; border: 1px solid var(--border);
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { border-color: var(--accent-border); background: var(--accent-dim); transform: translateY(-2px); }
+
+    /* ═══ SOCIAL PROOF ═══ */
+    .social-proof { padding: 56px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+    .proof-inner { display: flex; align-items: center; justify-content: center; gap: 56px; flex-wrap: wrap; }
+    .proof-stat { text-align: center; }
+    .proof-stat .stat-num { font-size: 40px; font-weight: 900; color: var(--accent); line-height: 1; }
+    .proof-stat .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .proof-divider { width: 1px; height: 44px; background: var(--border); }
+    .proof-logos { display: flex; align-items: center; gap: 36px; opacity: 0.4; }
+    .proof-logos span { font-size: 15px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+    .trust-logos-section { padding: 56px 0; border-bottom: 1px solid var(--border); background: var(--bg); text-align: center; }
+    .trust-logos-label { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 36px; }
+    .trust-logos-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 32px 24px;
+      max-width: 960px; margin: 0 auto; align-items: center; justify-items: center;
+    }
+    .trust-logo {
+      font-size: 17px; font-weight: 800; color: #e2e8f0; opacity: 0.3;
+      letter-spacing: 0.01em; transition: opacity 0.3s; white-space: nowrap;
+      padding: 12px 0;
+    }
+    .trust-logo:hover { opacity: 0.55; }
+    .trust-logo.tier1 { font-size: 20px; opacity: 0.35; }
+    .trust-logos-press { margin-top: 32px; font-size: 13px; color: var(--text-muted); opacity: 0.4; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .trust-logos-press img { height: 40px; width: auto; opacity: 0.6; margin: 0 20px; }
+
+    /* ═══ COMPLETE STACK ═══ */
+    .stack-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stack-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; margin-top: 56px; align-items: stretch; }
+    .stack-card {
+      padding: 40px 36px; border-radius: 16px; border: 1px solid var(--border); background: var(--bg);
+    }
+    .stack-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .stack-card .stack-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+    .stack-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .stack-list li {
+      font-size: 15px; color: var(--text-secondary); padding: 10px 16px; background: var(--surface);
+      border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; gap: 10px;
+    }
+    .stack-list li svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .stack-plus {
+      display: flex; align-items: center; justify-content: center; padding: 0 32px;
+      font-size: 40px; font-weight: 900; color: var(--accent); opacity: 0.4;
+    }
+    .stack-card.highlight { border-color: var(--accent-border); }
+    .stack-card.highlight h3 { color: var(--accent); }
+    .stack-callout {
+      text-align: center; margin-top: 40px; padding: 24px 32px; background: var(--accent-dim);
+      border: 1px solid var(--accent-border); border-radius: 12px;
+    }
+    .stack-callout p { font-size: 18px; color: var(--text-secondary); }
+    .stack-callout strong { color: var(--accent); }
+
+    /* ═══ HOW IT WORKS ═══ */
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 56px; }
+    .step-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 40px 32px; position: relative; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .step-card:hover { border-color: var(--accent-border); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(9,213,120,0.08); }
+    .step-num { font-size: 52px; font-weight: 900; color: var(--accent); opacity: 0.12; position: absolute; top: 24px; right: 28px; line-height: 1; }
+    .step-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .step-card p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+    .step-example {
+      margin-top: 16px; padding: 14px 18px; background: var(--accent-dim); border-radius: 8px;
+      font-size: 15px; color: var(--accent); font-style: italic; border-left: 3px solid var(--accent);
+    }
+
+    /* ═══ DEMO (prompt → build animation, ported from /meet-v2) ═══ */
+    .demo-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .demo-anim {
+      max-width: 900px; margin: 0 auto; border-radius: 16px; border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3); background: var(--bg); padding: 44px 36px;
+    }
+    .demo-caption { text-align: center; font-size: 15px; color: var(--text-muted); margin-top: 24px; }
+    .prompt-cols { display: flex; gap: 40px; align-items: center; justify-content: center; position: relative; }
+    .connector { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 1; }
+    .connector path { fill: none; stroke: rgba(9,213,120,0.55); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .prompt-col { flex: 1; min-width: 0; }
+    .chat-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 22px 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.45); max-width: 440px; margin: 0 auto;
+    }
+    .chat-label { font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+    .chat-text { font-size: 16px; line-height: 1.6; color: var(--text-primary); min-height: 4.8em; }
+    .caret { display: inline-block; width: 2px; height: 1.05em; background: var(--accent); vertical-align: -0.15em; margin-left: 2px; }
+    html.anim .caret { animation: blink 1s step-end infinite; }
+    html:not(.anim) .caret { display: none; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .chat-send { margin-top: 16px; display: flex; justify-content: flex-end; }
+    .chat-send span {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); color: var(--accent);
+      font-weight: 700; font-size: 13px; border: 1px solid var(--accent-border); border-radius: 100px; padding: 6px 16px;
+    }
+    .wf { max-width: 360px; margin: 0 auto; }
+    .wf .node {
+      display: flex; align-items: center; gap: 14px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 12px; padding: 13px 16px;
+    }
+    .wf .dot {
+      width: 30px; height: 30px; border-radius: 9px; flex: none; display: flex; align-items: center; justify-content: center;
+      background: var(--accent-dim); border: 1px solid var(--accent-border);
+    }
+    .wf .dot svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .wf .kind { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-muted); line-height: 1.3; }
+    .wf .name { font-size: 14.5px; font-weight: 700; color: var(--text-primary); line-height: 1.35; }
+    .wf .link { width: 2px; height: 22px; background: linear-gradient(180deg, rgba(9,213,120,0.7), rgba(9,213,120,0.35)); margin: 0 auto; border-radius: 2px; }
+    html.anim .wf .node { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+    html.anim .wf .link { transform: scaleY(0); transform-origin: top; transition: transform .4s ease; }
+    html.anim .wf.built .node { opacity: 1; transform: none; }
+    html.anim .wf.built .link { transform: none; }
+    html.anim .wf.built .node:nth-of-type(1) { transition-delay: .05s; }
+    html.anim .wf.built .link:nth-of-type(2) { transition-delay: .5s; }
+    html.anim .wf.built .node:nth-of-type(3) { transition-delay: .75s; }
+    html.anim .wf.built .link:nth-of-type(4) { transition-delay: 1.2s; }
+    html.anim .wf.built .node:nth-of-type(5) { transition-delay: 1.45s; }
+    html.anim .wf.built .link:nth-of-type(6) { transition-delay: 1.9s; }
+    html.anim .wf.built .node:nth-of-type(7) { transition-delay: 2.15s; }
+    html.anim .wf.built .link:nth-of-type(8) { transition-delay: 2.6s; }
+    html.anim .wf.built .node:nth-of-type(9) { transition-delay: 2.85s; }
+    .wf-done { text-align: center; font-size: 13px; color: var(--accent); font-weight: 700; margin-top: 18px; letter-spacing: .4px; }
+    html.anim .wf-done { opacity: 0; transition: opacity .6s ease 3.5s; }
+    html.anim .wf.built + .wf-done { opacity: 1; }
+
+    /* ═══ PAIN POINTS ═══ */
+    .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+    .pain-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 32px 28px; transition: border-color 0.3s, transform 0.3s;
+    }
+    .pain-card:hover { border-color: var(--accent-border); transform: translateY(-3px); }
+    .pain-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .pain-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .pain-card .pain-old { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+
+    /* ═══ USE CASES ═══ */
+    .usecase-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+    .usecase-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 32px 28px; transition: border-color 0.3s, transform 0.3s;
+    }
+    .usecase-card:hover { border-color: var(--accent-border); transform: translateY(-3px); }
+    .usecase-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .usecase-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ═══ PRICING (credit slider, mirrors app.taskmagic.com/subscription-tiers) ═══ */
+    .price-widget { max-width: 760px; margin: 56px auto 0; }
+    .pw-top { display: flex; align-items: center; gap: 36px; margin-bottom: 32px; }
+    .pw-for { text-align: left; flex-shrink: 0; }
+    .pw-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+    .pw-credits { font-size: 46px; font-weight: 900; line-height: 1.1; letter-spacing: -1px; color: var(--text-primary); font-variant-numeric: tabular-nums; min-width: 160px; }
+    .pw-slider { flex: 1; }
+    .pw-slider input[type=range] {
+      -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 6px;
+      background: var(--border); outline: none; cursor: pointer;
+    }
+    .pw-slider input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--accent); cursor: pointer; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+    }
+    .pw-slider input[type=range]::-moz-range-thumb {
+      width: 16px; height: 16px; border-radius: 50%; background: var(--accent);
+      cursor: pointer; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+    }
+    .pw-ticks { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11px; color: var(--text-muted); }
+    .pw-bands { display: flex; margin-top: 10px; border-radius: 6px; overflow: hidden; height: 20px; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 800; }
+    .pw-bands div { display: flex; align-items: center; justify-content: center; color: #0a0f1a; }
+    .pwb-solo { background: #94a3b8; flex: 2; }
+    .pwb-pro { background: #60a5fa; flex: 2; }
+    .pwb-biz { background: var(--accent); flex: 4; }
+    .pwb-scale { background: #a78bfa; flex: 2; }
+    .pw-card {
+      background: var(--surface); border: 1px solid var(--accent-border); border-radius: 16px;
+      padding: 40px 36px; text-align: center; box-shadow: 0 0 40px rgba(9,213,120,0.08);
+    }
+    .pw-band { display: inline-block; padding: 3px 14px; border-radius: 100px; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; background: rgba(148,163,184,0.15); color: #94a3b8; }
+    .pw-band.b-pro { background: rgba(96,165,250,0.15); color: #60a5fa; }
+    .pw-band.b-biz { background: var(--accent-dim); color: var(--accent); }
+    .pw-band.b-scale { background: rgba(167,139,250,0.15); color: #a78bfa; }
+    .pw-price { font-size: 56px; font-weight: 900; color: var(--text-primary); line-height: 1; margin-bottom: 4px; }
+    .pw-price .pw-mo { font-size: 20px; font-weight: 500; color: var(--text-muted); }
+    .pw-rate { font-size: 14px; color: var(--text-muted); margin-bottom: 26px; }
+    .pw-features { list-style: none; text-align: left; max-width: 460px; margin: 0 auto 30px; }
+    .pw-features li { font-size: 15.5px; color: var(--text-secondary); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: baseline; }
+    .pw-features li:last-child { border-bottom: none; }
+    .pw-features .fmark { font-weight: 800; color: var(--accent); flex-shrink: 0; }
+    .pw-features li.locked { color: var(--text-muted); }
+    .pw-features li.locked .fmark { color: var(--text-muted); }
+    .pw-btn {
+      display: block; max-width: 460px; margin: 0 auto; padding: 16px; border-radius: 10px; font-size: 16px; font-weight: 700;
+      text-decoration: none; text-align: center; transition: all 0.2s; background: var(--accent); color: #000;
+    }
+    .pw-btn:hover { background: #0be882; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(9,213,120,0.3); }
+    .pw-enterprise { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 28px; }
+    .pw-enterprise a { color: var(--accent); }
+    .credit-context { max-width: 640px; margin: 36px auto 0; text-align: center; padding: 24px 28px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 12px; }
+    .credit-context p { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+    .credit-context strong { color: var(--accent); }
+
+    /* ═══ FAQ ═══ */
+    .faq-list { max-width: 720px; margin: 56px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; color: var(--text-primary); font-size: 18px;
+      font-weight: 600; text-align: left; padding: 24px 44px 24px 0; cursor: pointer;
+      position: relative; font-family: inherit; line-height: 1.5; transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-question::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 24px; font-weight: 300; color: var(--text-muted); }
+    .faq-item.open .faq-question::after { content: "\2212"; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer-inner { padding: 0 0 24px; font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ═══ FINAL CTA ═══ */
+    .final-cta { text-align: center; background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%); border-top: 1px solid var(--border); }
+    .final-cta h2 { font-size: 48px; font-weight: 800; margin-bottom: 20px; line-height: 1.12; }
+    .final-cta h2 span { color: var(--accent); }
+    .final-cta p { font-size: 20px; color: var(--text-secondary); max-width: 560px; margin: 0 auto 44px; line-height: 1.6; }
+    .final-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .trust-row { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 44px; flex-wrap: wrap; }
+    .trust-item { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+    .trust-item svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.6; }
+
+    /* ═══ FOOTER ═══ */
+    .site-footer { padding: 48px 0; border-top: 1px solid var(--border); background: var(--bg); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-secondary); }
+    .footer-copy { font-size: 14px; color: var(--text-muted); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 46px; }
+      .hero-sub { font-size: 19px; }
+      .section-title { font-size: 36px; }
+      .steps-grid, .usecase-grid, .pain-grid { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; gap: 16px; }
+      .stack-plus { padding: 8px 0; font-size: 32px; }
+      .pw-top { flex-direction: column; align-items: stretch; gap: 20px; }
+      .pw-for { text-align: center; }
+      .pw-credits { min-width: 0; }
+      .prompt-cols { flex-direction: column; gap: 26px; }
+      .chat-text { min-height: 3.6em; font-size: 14.5px; }
+      .demo-anim { padding: 28px 20px; }
+      .wf .node { padding: 10px 13px; }
+      .wf .name { font-size: 13.5px; }
+      .wf .link { height: 14px; }
+      .header-nav { display: none; }
+      .header-nav.open {
+        display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0;
+        background: rgba(10,15,26,0.98); backdrop-filter: blur(16px); padding: 24px; gap: 16px; border-bottom: 1px solid var(--border);
+      }
+      .mobile-menu-btn { display: block; }
+      .proof-inner { gap: 28px; }
+      .proof-divider { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 36px; }
+      section { padding: 80px 0; }
+      .pw-price { font-size: 48px; }
+      .pw-credits { font-size: 38px; }
+      .section-title { font-size: 30px; }
+    }
+  </style>
+  <script>
+    // Motion flag — set before first paint so animated scenes start hidden
+    // only when animation will actually run (mirrors /meet-v2).
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('anim');
+    }
+  </script>
+  <!-- Mixpanel analytics -->
+  <script type="text/javascript">
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+    mixpanel.init("23660f35ce3ef1a24f882dd7c1957373", { track_pageview: true });
+  </script>
+  <!-- Meta Pixel -->
+  <script defer src="/js/mpx.js"></script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1135206498514579&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/taskmagic_logo_light.png" alt="TaskMagic" class="logo-img">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://help.taskmagic.com/" target="_blank">Help</a>
+        <a href="https://app.taskmagic.com/" class="header-login">Log In</a>
+        <a href="https://app.taskmagic.com/sign-up" class="header-cta">Start Free Trial</a>
+      </nav>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Now Live</div>
+      <h1>Connect Your Apps.<br>Automate Your Browser.<br><span>Just Describe It.</span></h1>
+      <p class="hero-sub">TaskMagic connects to thousands of apps and automates anything you do in a browser. Tell it what you want in plain English. No code. No complex setup.</p>
+      <div class="hero-ctas">
+        <a href="https://app.taskmagic.com/sign-up" class="btn-primary">Start Free Trial</a>
+        <a href="#demo" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          See It Build
+        </a>
+      </div>
+      <p class="trial-note">7-day free trial &middot; 1,000 credits included &middot; $0 today, cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <div class="social-proof">
+    <div class="container">
+      <div class="proof-inner">
+        <div class="proof-stat reveal">
+          <div class="stat-num" data-count="30000">0</div>
+          <div class="stat-label">Users</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat reveal">
+          <div class="stat-num" data-count="4000">0</div>
+          <div class="stat-label">Paying Customers</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat reveal">
+          <div class="stat-num" style="font-size: 28px;">#263</div>
+          <div class="stat-label">Inc. 5000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST LOGOS -->
+  <div class="trust-logos-section">
+    <div class="container">
+      <div class="trust-logos-label reveal">Trusted by teams at</div>
+      <div class="trust-logos-grid reveal">
+        <span class="trust-logo tier1">Microsoft</span>
+        <span class="trust-logo tier1">Amazon</span>
+        <span class="trust-logo tier1">Salesforce</span>
+        <span class="trust-logo tier1">Cisco</span>
+        <span class="trust-logo tier1">Deloitte</span>
+        <span class="trust-logo tier1">Accenture</span>
+        <span class="trust-logo">SAP</span>
+        <span class="trust-logo">Gartner</span>
+        <span class="trust-logo">Canva</span>
+        <span class="trust-logo">ClickUp</span>
+        <span class="trust-logo">Monday.com</span>
+        <span class="trust-logo">Webflow</span>
+      </div>
+      <div class="trust-logos-press reveal">As seen in <img src="/images/techcrunch-logo-white.png" alt="TechCrunch"> <img src="/images/yahoo-logo-white.webp" alt="Yahoo"> <img src="/images/product-hunt-logo-horizontal-white.avif" alt="Product Hunt"></div>
+    </div>
+  </div>
+
+  <!-- THE COMPLETE STACK -->
+  <section class="stack-section" id="complete-stack">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">The Complete Stack</div>
+        <h2 class="section-title reveal">Everything Zapier Does.<br>Plus Everything It Can't.</h2>
+        <p class="section-subtitle reveal">Other tools make you choose: API integrations or browser automation. TaskMagic does both in one platform.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card reveal-stagger" style="--delay: 0;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3>App Integrations</h3>
+          <p class="stack-desc">Connect to the tools you already use, just like Zapier or Make. Move data between apps automatically.</p>
+          <ul class="stack-list">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Google Sheets, Gmail, Slack</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Stripe, HubSpot, Salesforce</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Thousands more via API</li>
+          </ul>
+        </div>
+        <div class="stack-plus reveal">+</div>
+        <div class="stack-card highlight reveal-stagger" style="--delay: 1;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3>Browser Automation</h3>
+          <p class="stack-desc">Automate anything you do in Chrome. If a website doesn't have an API, TaskMagic still works.</p>
+          <ul class="stack-list">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Scrape data from any site</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Fill forms, click buttons, navigate</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> No API or integration needed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stack-callout reveal">
+        <p><strong>One platform. Both worlds.</strong> Stop paying for Zapier AND an RPA tool AND manual labor. TaskMagic replaces all three.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">How It Works</div>
+        <h2 class="section-title reveal">Describe It. Run It.<br>Done.</h2>
+        <p class="section-subtitle reveal">No workflow builders. No node diagrams. No learning curve. Just say what you need.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal-stagger" style="--delay: 0;">
+          <div class="step-num">01</div>
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h3>Describe Your Goal</h3>
+          <p>Tell TaskMagic what you want to automate in everyday language. No technical knowledge needed.</p>
+          <div class="step-example">"Every morning, check my competitors' pricing and update my spreadsheet."</div>
+        </div>
+        <div class="step-card reveal-stagger" style="--delay: 1;">
+          <div class="step-num">02</div>
+          <div class="icon icon-blue">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          </div>
+          <h3>Review the Plan</h3>
+          <p>TaskMagic shows you every step before it builds anything. You approve, adjust, or ask for changes. You're always in control.</p>
+        </div>
+        <div class="step-card reveal-stagger" style="--delay: 2;">
+          <div class="step-num">03</div>
+          <div class="icon icon-purple">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h3>Run It Forever</h3>
+          <p>Once built, your automation runs for pennies. Schedule it, trigger it, or run it on demand. It just works, every single time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO — prompt → build animation (ported from /meet-v2) -->
+  <section class="demo-section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">See It In Action</div>
+        <h2 class="section-title reveal">From Prompt to<br>Automation in Seconds</h2>
+      </div>
+      <div class="demo-anim reveal-scale">
+        <div class="prompt-cols" id="promptCols">
+          <svg class="connector" id="connector" aria-hidden="true"></svg>
+          <div class="prompt-col">
+            <div class="chat-card">
+              <div class="chat-label">Tell the agent what you want</div>
+              <div class="chat-text"><span id="type-target">Every morning, pull new leads from my form into a Google Sheet and send me a Slack summary.</span><span class="caret" id="type-caret"></span></div>
+              <div class="chat-send"><span>Build it &rarr;</span></div>
+            </div>
+          </div>
+          <div class="prompt-col">
+            <div class="wf" id="wf">
+              <div class="node">
+                <span class="dot"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+                <span><span class="kind">Trigger</span><br><span class="name">New form submission</span></span>
+              </div>
+              <div class="link"></div>
+              <div class="node">
+                <span class="dot"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></svg></span>
+                <span><span class="kind">Step</span><br><span class="name">Extract lead fields</span></span>
+              </div>
+              <div class="link"></div>
+              <div class="node">
+                <span class="dot"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></span>
+                <span><span class="kind">Google Sheets</span><br><span class="name">Add row</span></span>
+              </div>
+              <div class="link"></div>
+              <div class="node">
+                <span class="dot"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5z"/></svg></span>
+                <span><span class="kind">Step</span><br><span class="name">Compose summary</span></span>
+              </div>
+              <div class="link"></div>
+              <div class="node">
+                <span class="dot"><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+                <span><span class="kind">Slack</span><br><span class="name">Send message</span></span>
+              </div>
+            </div>
+            <p class="wf-done">Built in seconds. Every step editable by hand.</p>
+          </div>
+        </div>
+      </div>
+      <p class="demo-caption reveal">TaskMagic builds a complete automation from a single sentence &mdash; then it runs forever without an AI charge.</p>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS / WHY SWITCH -->
+  <section id="why-switch">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">Why People Switch</div>
+        <h2 class="section-title reveal">Automation Shouldn't<br>Require a PhD.</h2>
+        <p class="section-subtitle reveal">If you've ever stared at a workflow builder wondering where to start, you're not alone.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal-stagger" style="--delay: 0;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="pain-old">The old way: pricing that spirals as you scale</div>
+          <h4>Predictable Pricing</h4>
+          <p>No per-task billing that explodes when your automations actually work. One monthly price, predictable credits, no surprises.</p>
+        </div>
+        <div class="pain-card reveal-stagger" style="--delay: 1;">
+          <div class="icon icon-blue">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div class="pain-old">The old way: node diagrams and webhook configs</div>
+          <h4>Plain English, Not Flowcharts</h4>
+          <p>No drag-and-drop nodes. No webhook setup. No JSON parsing. Just describe what you want in everyday language and TaskMagic handles the rest.</p>
+        </div>
+        <div class="pain-card reveal-stagger" style="--delay: 2;">
+          <div class="icon icon-purple">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div class="pain-old">The old way: "sorry, that app isn't supported"</div>
+          <h4>No App Left Behind</h4>
+          <p>Other tools only work with apps that have API integrations. TaskMagic automates any website, whether it has an API or not. If you can see it in your browser, it's automatable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">Use Cases</div>
+        <h2 class="section-title reveal">What People Automate</h2>
+        <p class="section-subtitle reveal">From solopreneurs to agencies, here's what people build with TaskMagic every day.</p>
+      </div>
+      <div class="usecase-grid">
+        <div class="usecase-card reveal-stagger" style="--delay: 0;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+          </div>
+          <h4>Competitor Monitoring</h4>
+          <p>Track pricing, inventory, and product changes across competitor sites daily. Updates land in your spreadsheet automatically.</p>
+        </div>
+        <div class="usecase-card reveal-stagger" style="--delay: 1;">
+          <div class="icon icon-blue">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Lead Generation</h4>
+          <p>Scrape leads from any directory or website, enrich the data, and push it to your CRM. No more hours of manual research.</p>
+        </div>
+        <div class="usecase-card reveal-stagger" style="--delay: 2;">
+          <div class="icon icon-purple">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h4>Data Entry and Sync</h4>
+          <p>Move data between apps, spreadsheets, and websites automatically. New Stripe customer? It's in your CRM in seconds.</p>
+        </div>
+        <div class="usecase-card reveal-stagger" style="--delay: 3;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          </div>
+          <h4>Recurring Reports</h4>
+          <p>Pull data from dashboards, ad platforms, and analytics tools into unified reports. Schedule it daily, weekly, whatever you need.</p>
+        </div>
+        <div class="usecase-card reveal-stagger" style="--delay: 4;">
+          <div class="icon icon-blue">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h4>Web Scraping</h4>
+          <p>Extract structured data from any website. Product listings, job boards, real estate, research data. No code needed.</p>
+        </div>
+        <div class="usecase-card reveal-stagger" style="--delay: 5;">
+          <div class="icon icon-purple">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <h4>Email and Outreach</h4>
+          <p>Automate personalized outreach, follow-ups, and email workflows across platforms that don't talk to each other natively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">Pricing</div>
+        <h2 class="section-title reveal">Simple, Predictable Pricing</h2>
+        <p class="section-subtitle reveal">Slide to choose your monthly credits. Every plan builds without limits &mdash; bigger plans unlock BYOK, teams &amp; MCP.</p>
+      </div>
+      <div class="price-widget reveal-scale">
+        <div class="pw-top">
+          <div class="pw-for">
+            <div class="pw-lbl">For</div>
+            <div class="pw-credits" id="pwCredits">5,000</div>
+            <div class="pw-lbl">credits / month</div>
+          </div>
+          <div class="pw-slider">
+            <input type="range" id="pwRange" min="0" max="9" step="1" value="0" aria-label="Select monthly credits">
+            <div class="pw-ticks"><span>5k</span><span>15k</span><span>25k</span><span>35k</span><span>50k</span></div>
+            <div class="pw-bands" aria-hidden="true"><div class="pwb-solo">Solo</div><div class="pwb-pro">Pro</div><div class="pwb-biz">Business</div><div class="pwb-scale">Scale</div></div>
+          </div>
+        </div>
+        <div class="pw-card">
+          <span class="pw-band" id="pwBand">Solo</span>
+          <div class="pw-price"><span id="pwPrice">$29</span><span class="pw-mo">/mo</span></div>
+          <div class="pw-rate" id="pwRate">Includes 5,000 credits / month</div>
+          <ul class="pw-features" id="pwFeatures"></ul>
+          <a href="https://app.taskmagic.com/sign-up" class="pw-btn">Start Free Trial</a>
+          <div class="trial-note" style="text-align:center;">7-day free trial &middot; 1,000 credits &middot; $0 today</div>
+        </div>
+      </div>
+      <div class="credit-context reveal">
+        <p><strong>How credits work:</strong> The AI builds your automation once &mdash; a typical build uses about 150&ndash;250 credits. After that, every run costs just a few app credits, and browser automations run free. Even the $29 plan covers ~25 builds a month.</p>
+      </div>
+      <p class="pw-enterprise reveal">Need more than 50,000 credits a month? <a href="https://app.taskmagic.com/subscription-tiers">Talk to sales</a> about Enterprise volume &amp; pricing.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal">FAQ</div>
+        <h2 class="section-title reveal">Common Questions</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">What is TaskMagic?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">TaskMagic is an AI automation platform that connects to thousands of apps AND automates anything you do in a browser. Describe what you want in plain English, and TaskMagic builds, runs, and maintains the automation for you. No code, no complex workflow builders.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is this different from Zapier or Make?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Zapier and Make only work with apps that have API integrations. If a website or tool doesn't have one, you're out of luck. TaskMagic does everything they do (app-to-app connections) plus automates anything in your browser, whether it has an API or not. And instead of building complex node diagrams, you just describe what you want in plain English.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do I need to know how to code?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. You describe what you want in everyday language. No coding, no technical setup, no node diagrams, no webhook configuration. If you can explain what you do manually, TaskMagic can automate it.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do credits work?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Credits are the one thing you pay for. The AI thinks hard once, while it builds — a typical build uses about 150&ndash;250 credits. After that, each run costs just a few app credits, never an AI charge, and hand-built browser automations run on zero credits. Plans start at $29/mo for 5,000 credits and slide up to 50,000.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do all plans have the same features?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Every plan includes the full builder, unlimited app connections, and unlimited active flows — you never hit a wall on what you can build. Bigger plans unlock more: MCP access and more tables from Pro ($79), team seats and bring-your-own-API-key from Business ($119), and unlimited everything on Scale.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why is running so much cheaper than building?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most AI tools run everything through expensive AI models on every execution. TaskMagic uses AI during the build phase, but the resulting automation runs deterministically without AI. You get the intelligence of an AI agent with the efficiency of traditional automation.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does it work on any website?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. TaskMagic automates the browser directly. It works on any website you can open in Chrome. No APIs, integrations, or special access required.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is my data private?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">TaskMagic runs locally on your machine via the desktop app and Chrome extension. Your automations execute in your own browser, not in the cloud. Your data never leaves your machine unless you explicitly send it somewhere.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How does the free trial work?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Every new account starts with a 7-day free trial that includes 1,000 credits &mdash; enough for roughly 4&ndash;6 automation builds. You add a card at signup but pay $0 today. After 7 days your plan continues at $29/mo unless you cancel, and we email you a reminder 2 days before your trial ends. Cancel anytime during the trial and you won't be charged.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I cancel anytime?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Every plan is month-to-month with no commitment. Cancel anytime from your account settings.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="final-cta">
+    <div class="container">
+      <div class="section-label reveal">Ready?</div>
+      <h2 class="reveal">Stop Settling for <span>Half a Solution.</span></h2>
+      <p class="reveal">App integrations. Browser automation. Plain English. One platform. TaskMagic is the only automation tool that does it all.</p>
+      <div class="final-ctas reveal">
+        <a href="https://app.taskmagic.com/sign-up" class="btn-primary">Start Your Free Trial</a>
+        <a href="#demo" class="btn-secondary">See It Build</a>
+      </div>
+      <div class="trust-row reveal">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          No per-task fees
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          No long-term contracts
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Cancel anytime
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="https://www.skool.com/taskmagic" target="_blank" rel="noopener">Community (4k+ members)</a>
+          <a href="https://help.taskmagic.com/" target="_blank" rel="noopener">Help</a>
+          <a href="/scrapers">Web Scrapers</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/fair-use">Fair Use</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 TaskMagic. Built with care in LA.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+    }, observerOptions);
+    document.querySelectorAll('.reveal, .reveal-stagger, .reveal-scale').forEach(el => revealObserver.observe(el));
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target; const target = parseInt(el.dataset.count); if (!target) return;
+          const duration = 1500; const start = performance.now();
+          const animate = (now) => { const elapsed = now - start; const progress = Math.min(elapsed / duration, 1); const eased = 1 - Math.pow(1 - progress, 3); el.textContent = Math.round(eased * target).toLocaleString() + '+'; if (progress < 1) requestAnimationFrame(animate); };
+          requestAnimationFrame(animate); counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const headerNav = document.getElementById('headerNav');
+    menuBtn.addEventListener('click', () => { headerNav.classList.toggle('open'); menuBtn.innerHTML = headerNav.classList.contains('open') ? '&#x2715;' : '&#9776;'; });
+    headerNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { headerNav.classList.remove('open'); menuBtn.innerHTML = '&#9776;'; }); });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => { const item = btn.parentElement; const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!wasOpen) item.classList.add('open'); });
+    });
+
+    // — Pricing slider widget (mirrors app.taskmagic.com/subscription-tiers) —
+    (() => {
+      const range = document.getElementById('pwRange');
+      if (!range) return;
+      const STOPS = [
+        {c:5000,p:29,band:'Solo'},{c:10000,p:55,band:'Solo'},
+        {c:15000,p:79,band:'Pro'},{c:20000,p:99,band:'Pro'},
+        {c:25000,p:119,band:'Business'},{c:30000,p:139,band:'Business'},
+        {c:35000,p:159,band:'Business'},{c:40000,p:179,band:'Business'},
+        {c:45000,p:199,band:'Scale'},{c:50000,p:219,band:'Scale'}
+      ];
+      const BANDS = {
+        Solo:     {cls:'',        tables:'3 tables', mcp:false, seats:'Single seat (just you)', byok:false, support:'Standard support'},
+        Pro:      {cls:'b-pro',   tables:'10 tables', mcp:true, seats:'2 team seats', byok:false, support:'Standard support'},
+        Business: {cls:'b-biz',   tables:'Unlimited tables', mcp:true, seats:'10 team seats', byok:true, support:'Priority support'},
+        Scale:    {cls:'b-scale', tables:'Unlimited tables', mcp:true, seats:'Unlimited team seats', byok:true, support:'Priority support + onboarding'}
+      };
+      const el = id => document.getElementById(id);
+      function render() {
+        const s = STOPS[+range.value], b = BANDS[s.band];
+        el('pwCredits').textContent = s.c.toLocaleString();
+        el('pwPrice').textContent = '$' + s.p;
+        el('pwRate').textContent = 'Includes ' + s.c.toLocaleString() + ' credits / month';
+        const pill = el('pwBand');
+        pill.textContent = s.band;
+        pill.className = 'pw-band ' + b.cls;
+        const rows = [
+          [true, 'Full access to builder'],
+          [true, 'Unlimited connections — apps & browser automations'],
+          [true, 'Unlimited active flows'],
+          [true, b.tables],
+          b.mcp ? [true, 'MCP access'] : [false, 'MCP access — unlocks at Pro ($79)'],
+          [true, b.seats],
+          b.byok ? [true, 'Bring your own API key (BYOK)'] : [false, 'Bring your own API key — unlocks at Business ($119)'],
+          [true, b.support]
+        ];
+        el('pwFeatures').innerHTML = rows.map(([ok, t]) =>
+          `<li${ok ? '' : ' class="locked"'}><span class="fmark">${ok ? '✓' : '✕'}</span> ${t}</li>`).join('');
+      }
+      range.addEventListener('input', render);
+      render();
+    })();
+
+    // — Demo: prompt → build animation (ported from /meet-v2 scene 2) —
+    (() => {
+      const typeTarget = document.getElementById('type-target');
+      if (!typeTarget) return;
+      const anim = document.documentElement.classList.contains('anim');
+      const caret = document.getElementById('type-caret');
+      const wf = document.getElementById('wf');
+      const connector = document.getElementById('connector');
+      const promptCols = document.getElementById('promptCols');
+      const sendPill = document.querySelector('.chat-send span');
+      const fullText = typeTarget.textContent;
+      if (!anim) { wf.classList.add('built'); return; }
+
+      const smallScreen = window.matchMedia('(max-width:900px)');
+      let typingState = 'idle';
+      let sceneTimers = [];
+      const later = (fn, ms) => sceneTimers.push(setTimeout(fn, ms));
+      const SVGNS = 'http://www.w3.org/2000/svg';
+
+      function drawConnector(done) {
+        while (connector.firstChild) connector.removeChild(connector.firstChild);
+        const base = promptCols.getBoundingClientRect();
+        const pill = sendPill.getBoundingClientRect();
+        const node1 = wf.querySelector('.node').getBoundingClientRect();
+        let x1, y1, x2, y2, d;
+        if (!smallScreen.matches) {
+          x1 = pill.right - base.left + 10;
+          y1 = pill.top - base.top + pill.height / 2;
+          x2 = node1.left - base.left - 10;
+          y2 = node1.top - base.top + node1.height / 2;
+          if (x2 - x1 < 24) { done(); return; }
+          const dx = Math.max(40, (x2 - x1) * .5);
+          d = `M${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+        } else {
+          x1 = pill.left - base.left + pill.width / 2;
+          y1 = pill.bottom - base.top + 6;
+          x2 = node1.left - base.left + node1.width / 2;
+          y2 = node1.top - base.top - 6;
+          if (y2 - y1 < 26) { done(); return; }
+          const dy = Math.max(18, (y2 - y1) * .5);
+          d = `M${x1} ${y1} C ${x1} ${y1 + dy}, ${x2} ${y2 - dy}, ${x2} ${y2}`;
+        }
+        const path = document.createElementNS(SVGNS, 'path');
+        path.setAttribute('d', d);
+        connector.appendChild(path);
+        const len = path.getTotalLength();
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+        path.style.transition = 'stroke-dashoffset .6s ease';
+        path.getBoundingClientRect();
+        path.style.strokeDashoffset = '0';
+        later(() => {
+          const tip = path.getPointAtLength(len);
+          const back = path.getPointAtLength(Math.max(0, len - 8));
+          const ang = Math.atan2(tip.y - back.y, tip.x - back.x);
+          const s = 7;
+          const wing = a => (tip.x - s * Math.cos(ang - a)).toFixed(1) + ' ' + (tip.y - s * Math.sin(ang - a)).toFixed(1);
+          const chev = document.createElementNS(SVGNS, 'path');
+          chev.setAttribute('d', `M${wing(.5)} L${tip.x.toFixed(1)} ${tip.y.toFixed(1)} L${wing(-.5)}`);
+          chev.style.opacity = '0';
+          chev.style.transition = 'opacity .25s ease';
+          connector.appendChild(chev);
+          chev.getBoundingClientRect();
+          chev.style.opacity = '1';
+        }, 480);
+        later(done, 700);
+      }
+
+      function startTyping() {
+        if (typingState !== 'idle') return;
+        typingState = 'playing';
+        typeTarget.textContent = '';
+        caret.style.display = '';
+        let i = 0;
+        (function step() {
+          if (i <= fullText.length) {
+            typeTarget.textContent = fullText.slice(0, i);
+            i++;
+            later(step, 26);
+          } else {
+            later(() => {
+              caret.style.display = 'none';
+              drawConnector(() => wf.classList.add('built'));
+            }, 300);
+          }
+        })();
+      }
+
+      function resetScene() {
+        if (typingState === 'idle') return;
+        sceneTimers.forEach(clearTimeout);
+        sceneTimers = [];
+        typingState = 'idle';
+        typeTarget.textContent = fullText;
+        caret.style.display = '';
+        wf.classList.remove('built');
+        while (connector.firstChild) connector.removeChild(connector.firstChild);
+      }
+
+      function check() {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const r = promptCols.getBoundingClientRect();
+        if (typingState === 'idle' && r.top < vh * .72 && r.bottom > 0) {
+          startTyping();
+        } else if (typingState !== 'idle' && (r.bottom < -40 || r.top > vh + 40)) {
+          resetScene(); // fully out of view: arm the scene to replay
+        }
+      }
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => { check(); ticking = false; });
+      }, { passive: true });
+      // Layout shifts invalidate the connector's coordinates — re-arm and replay.
+      let resizeT;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeT);
+        resizeT = setTimeout(() => { resetScene(); check(); }, 200);
+      });
+      check();
+    })();
+
+    // — Hero network animation —
+    (() => {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h, nodes = [], mouse = { x: -1000, y: -1000 };
+      const NODE_COUNT = 70;
+      const CONNECT_DIST = 180;
+      const MOUSE_DIST = 200;
+      const ACCENT = { r: 9, g: 213, b: 120 };
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        w = canvas.width = rect.width;
+        h = canvas.height = rect.height;
+      }
+
+      function createNodes() {
+        nodes = [];
+        for (let i = 0; i < NODE_COUNT; i++) {
+          nodes.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 2 + 1
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+
+        // Update positions
+        for (const n of nodes) {
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < 0 || n.x > w) n.vx *= -1;
+          if (n.y < 0 || n.y > h) n.vy *= -1;
+        }
+
+        // Draw connections
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < CONNECT_DIST) {
+              const alpha = (1 - dist / CONNECT_DIST) * 0.5;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${alpha})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+
+          // Mouse proximity lines
+          const mdx = nodes[i].x - mouse.x;
+          const mdy = nodes[i].y - mouse.y;
+          const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+          if (mDist < MOUSE_DIST) {
+            const alpha = (1 - mDist / MOUSE_DIST) * 0.5;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${alpha})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+
+          // Draw node
+          ctx.beginPath();
+          ctx.arc(nodes[i].x, nodes[i].y, nodes[i].r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},0.7)`;
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      const heroEl = document.getElementById('hero');
+      heroEl.addEventListener('mousemove', (e) => {
+        const rect = heroEl.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+      heroEl.addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
+
+      window.addEventListener('resize', () => { resize(); createNodes(); });
+      resize();
+      createNodes();
+      draw();
+    })();
+  </script>
+</body>
+</html>

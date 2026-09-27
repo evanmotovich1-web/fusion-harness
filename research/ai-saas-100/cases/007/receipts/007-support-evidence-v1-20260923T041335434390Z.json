@@ -1,0 +1,228 @@
+{
+  "baseline_id": null,
+  "case_id": "007",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/007/tests/support-evidence-v1/run.py"
+  ],
+  "component_check_passed": true,
+  "configuration": {
+    "input_bundle_scope": "Source/fixture manifest, not model input",
+    "mode": "builder_visible_local_component",
+    "model_calls": 0,
+    "network": false,
+    "timeout_seconds": 15
+  },
+  "costs": [
+    {
+      "assumptions": [],
+      "category": "unknown",
+      "classification": "unknown",
+      "unit": "USD",
+      "unknown_reason": "Not measured",
+      "value": null
+    }
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "ended_at": "2026-09-23T04:13:35.481898+00:00",
+  "errors": [],
+  "execution_kind": "real",
+  "exit_status": 0,
+  "fixtures": {
+    "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/tests/support-evidence-v1/fixtures.json",
+    "sha256": "be53e4d4bebe0c43d95ce5434160feca6ea1a349b5e424fca06b3d2271b3343b"
+  },
+  "human_interventions": [
+    "Component tests authored and visible to builder, not hidden evaluation"
+  ],
+  "implementation": {
+    "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/manifest.json",
+    "sha256": "e5afd42b9ef2c3b0a1bd696b6824f36f35d4f22888b1533eb22fe2a099fa70f1"
+  },
+  "inference_executed": false,
+  "input_bundle": {
+    "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/manifest.json",
+    "sha256": "e5afd42b9ef2c3b0a1bd696b6824f36f35d4f22888b1533eb22fe2a099fa70f1"
+  },
+  "latency": {
+    "assumptions": [
+      "Full component suite wall time, not SaaS latency"
+    ],
+    "category": "latency",
+    "classification": "measured",
+    "unit": "seconds",
+    "unknown_reason": null,
+    "value": 0.04689070799999999
+  },
+  "missing_capabilities": [
+    "Central model-dependent behavior",
+    "Generic-model baseline",
+    "Independent hidden review"
+  ],
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "original_product_status": "not_observed",
+  "outputs": [
+    {
+      "path": "cases/007/receipts/007-support-evidence-v1-20260923T041335434390Z.stdout.json",
+      "sha256": "3bfae434434fef23256a137f1b2870745b952babebd0867016c95ba41208281e"
+    },
+    {
+      "path": "cases/007/receipts/007-support-evidence-v1-20260923T041335434390Z.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "product_acceptance": false,
+  "quality": [],
+  "redactions": [],
+  "retries": [],
+  "run_id": "007-support-evidence-v1-20260923T041335434390Z",
+  "runtime": {
+    "platform": "Darwin",
+    "python": "3.9.6"
+  },
+  "schema_version": 1,
+  "started_at": "2026-09-23T04:13:35.434686+00:00",
+  "status": "completed",
+  "system": "B2",
+  "test_results": [
+    {
+      "outcome": "passed",
+      "test_id": "effective-supersession"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "future-successor-keeps-current"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "unknown-successor-quarantine"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "unapproved-content"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "cyclic-supersession"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "backdated-successor"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "duplicate-source-id"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "external-execution-denied"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "unsafe-source-path"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "bad-as-of"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "inert-instruction-and-unresolved-evidence"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "approval-not-boolean"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N01"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N02"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N03"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N04"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N05"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N06"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N07"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N08"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N09"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N10"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N11"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N12"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N13"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-N14"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E01"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E02"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E03"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E04"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E05"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "007-E06"
+    }
+  ],
+  "timeouts": [],
+  "usage": {
+    "unknown_reason": "Not measured",
+    "value": null
+  }
+}

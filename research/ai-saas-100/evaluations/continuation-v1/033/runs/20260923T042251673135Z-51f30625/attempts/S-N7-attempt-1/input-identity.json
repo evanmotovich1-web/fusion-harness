@@ -1,0 +1,7 @@
+{
+  "test_id": "S-N7",
+  "attempt": 1,
+  "input_sha256": "72bd1b064f4d431bf5a7c160cd6ecbe0c769950cbb346e65a0fb79ba0a1b34b7",
+  "oracle_sha256": "b04873a376895842b55ad4ddb73036bb3641deb7f6c6e98fe81bd9709b8a7434",
+  "oracle_supplied_to_scheduler": false
+}

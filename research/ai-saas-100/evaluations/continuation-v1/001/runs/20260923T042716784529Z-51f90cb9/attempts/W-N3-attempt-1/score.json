@@ -1,0 +1,13 @@
+{
+  "test_id": "W-N3",
+  "outcome": "blocked",
+  "variants": [
+    {
+      "variant": 0,
+      "outcome": "blocked",
+      "reason": "Actual rewrite inference has not been established"
+    }
+  ],
+  "scope": "exposed assertion checks only; weighted scoring and acceptance require independent review",
+  "product_acceptance": false
+}

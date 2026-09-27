@@ -1,0 +1,28 @@
+{
+  "id": "echis-privacy",
+  "requested_url": "https://www.health.go.ke/privacy-policy-electronic-community-health-information-system-echis",
+  "accessed_utc": "2026-09-25T02:54:51.165585+00:00",
+  "status": 200,
+  "final_url": "https://www.health.go.ke/privacy-policy-electronic-community-health-information-system-echis",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "must-revalidate, no-cache, private",
+    "Date": "Fri, 25 Sep 2026 02:54:55 GMT",
+    "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
+    "Link": "<https://www.health.go.ke/privacy-policy-electronic-community-health-information-system-echis>; rel=\"canonical\"",
+    "X-UA-Compatible": "IE=edge",
+    "Content-language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "interest-cohort=()",
+    "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "X-Generator": "Drupal 9 (https://www.drupal.org)",
+    "X-Drupal-Cache": "MISS"
+  },
+  "bytes": 108105,
+  "sha256": "213ea9f5bd97c2a8cf5273204ee64b9b147711f666409e7dcc7fd04712698c4c",
+  "file": "echis-privacy.html"
+}

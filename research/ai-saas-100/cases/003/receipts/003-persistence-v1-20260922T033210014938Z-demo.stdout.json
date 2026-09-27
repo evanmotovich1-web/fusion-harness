@@ -1,0 +1,137 @@
+{
+  "results": [
+    {
+      "test_id": "synthetic-roundtrip-demo",
+      "outcome": "passed",
+      "output": {
+        "before": {
+          "store_id": "98969aa118de487c8c4a271aa1581e40",
+          "revision": 1,
+          "contacts": [
+            {
+              "email": "demo@example.invalid",
+              "id": "demo-1",
+              "note": "",
+              "status": "new"
+            },
+            {
+              "email": "other@example.invalid",
+              "id": "demo-2",
+              "note": "Keep unchanged",
+              "status": "new"
+            }
+          ]
+        },
+        "proposal": {
+          "schema_version": 1,
+          "proposal_id": "02afe9a70cf740fa81136edb4f3c36d7",
+          "store_id": "98969aa118de487c8c4a271aa1581e40",
+          "source_revision": 1,
+          "source_contacts_sha256": "9c2743ebd46244551359dc899f26573fc088aeb2d134808e5c51a10ad522a55c",
+          "before": [
+            {
+              "email": "demo@example.invalid",
+              "id": "demo-1",
+              "note": "",
+              "status": "new"
+            },
+            {
+              "email": "other@example.invalid",
+              "id": "demo-2",
+              "note": "Keep unchanged",
+              "status": "new"
+            }
+          ],
+          "after": [
+            {
+              "email": "demo@example.invalid",
+              "id": "demo-1",
+              "note": "",
+              "status": "qualified"
+            },
+            {
+              "email": "other@example.invalid",
+              "id": "demo-2",
+              "note": "Keep unchanged",
+              "status": "new"
+            }
+          ],
+          "changes": [
+            {
+              "operation": "update",
+              "id": "demo-1",
+              "before": {
+                "email": "demo@example.invalid",
+                "id": "demo-1",
+                "note": "",
+                "status": "new"
+              },
+              "after": {
+                "email": "demo@example.invalid",
+                "id": "demo-1",
+                "note": "",
+                "status": "qualified"
+              }
+            }
+          ],
+          "no_op": false
+        },
+        "approval": {
+          "approval_id": "69e7b0add58e419ea225b8deea8b4705",
+          "proposal_id": "02afe9a70cf740fa81136edb4f3c36d7",
+          "store_id": "98969aa118de487c8c4a271aa1581e40",
+          "source_revision": 1,
+          "proposal_sha256": "265635a728c930c9c147bd88017baec31e2855272c76027e73bf3b3772c4ba2c"
+        },
+        "application": {
+          "status": "applied",
+          "store": {
+            "store_id": "98969aa118de487c8c4a271aa1581e40",
+            "revision": 2,
+            "contacts": [
+              {
+                "email": "demo@example.invalid",
+                "id": "demo-1",
+                "note": "",
+                "status": "qualified"
+              },
+              {
+                "email": "other@example.invalid",
+                "id": "demo-2",
+                "note": "Keep unchanged",
+                "status": "new"
+              }
+            ]
+          },
+          "readback_verified": true,
+          "synthetic_store_written": true,
+          "real_crm_written": false,
+          "messages_sent": 0,
+          "inference_executed": false,
+          "central_workflow_status": "blocked_natural_language_unavailable"
+        },
+        "fresh_read": {
+          "store_id": "98969aa118de487c8c4a271aa1581e40",
+          "revision": 2,
+          "contacts": [
+            {
+              "email": "demo@example.invalid",
+              "id": "demo-1",
+              "note": "",
+              "status": "qualified"
+            },
+            {
+              "email": "other@example.invalid",
+              "id": "demo-2",
+              "note": "Keep unchanged",
+              "status": "new"
+            }
+          ]
+        },
+        "storage": "Temporary case-local directory, removed after demo",
+        "natural_language": "unavailable",
+        "product_acceptance": false
+      }
+    }
+  ]
+}

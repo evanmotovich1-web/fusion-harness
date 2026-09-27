@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "version": "support-evidence-v2",
+  "fixed_at": "2026-09-23T04:13:21.642093+00:00",
+  "held_out": false,
+  "implementation_exists_at_freeze": true,
+  "artifacts": [
+    {
+      "path": "fixtures.json",
+      "sha256": "5938576b92cb889d1a553e5242afb3ae4df0fbc2e2eee1cb0ddca6948aecae17"
+    },
+    {
+      "path": "run.py",
+      "sha256": "d84ee15c58c3e681c9db1bf9ff7c126566b881c2b352ee9c93d07d59906b60ea"
+    }
+  ]
+}

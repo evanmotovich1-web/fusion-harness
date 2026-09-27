@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "archived_at": "2026-09-22T03:23:02.407220+00:00",
+  "members": [
+    {
+      "active_path": "cases/002/implementation/workflow.py",
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/implementation/workflow.py",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/adapter.py",
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/repair-v2/adapter.py",
+      "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/run.py",
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/repair-v2/run.py",
+      "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/execute.py",
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/repair-v2/execute.py",
+      "sha256": "911b2aaa0d57b27419b4a1f7317854445f3abca56ebeab4ce521570d7b42379c"
+    },
+    {
+      "active_path": "cases/002/tests/run.py",
+      "path": "cases/002/source-history/repair-v2-60955b5d289a/tests/run.py",
+      "sha256": "12afaa11048879f3b92e439e9451b7c72cd77df5f644a9520fab75cccb3280b9"
+    },
+    {
+      "active_path": "cases/002/tests/recovery-v1/run.py",
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/recovery-runner.py",
+      "sha256": "b8ead4fdc12785757a4704094cf39a1b131dfa53e053715a8cff2500779a2ce1"
+    }
+  ],
+  "recovered_from": {
+    "path": "cases/002/source-history/repair-v2-60955b5d289a/source-bundle.json",
+    "sha256": "dfa232e163a7ddf3c3c1d21ea3ce6d333075436dd2d36e33ad9683fc56d3b3e4"
+  }
+}

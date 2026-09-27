@@ -1,0 +1,15 @@
+{
+  "normalized_equal": true,
+  "normalization": "Remove extraction header, page markers, standalone numeric page footers, Markdown HTML page-break comment; collapse whitespace. No words or punctuation changed.",
+  "pdf_editorial_words": 839,
+  "markdown_editorial_words": 839,
+  "differences": [],
+  "pdf_pages": 2,
+  "pdf_hyperlinks": [
+    "https://www.afro.who.int/sites/default/files/2026-04/WHO%20Kenya%20Annual%20Report%202025.pdf",
+    "https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat",
+    "https://health.go.ke/sites/default/files/2026-05/MoH%20Daily%20Newsletter_28th%20May%202026.pdf",
+    "https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy"
+  ],
+  "pdfs_byte_equal": true
+}

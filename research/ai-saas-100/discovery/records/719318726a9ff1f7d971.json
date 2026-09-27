@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-719318726a9ff1f7d971",
+  "source_url": "https://mutable.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.314393+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "elapsed_seconds": 0.2795
+}

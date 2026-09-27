@@ -1,0 +1,265 @@
+{
+  "evidence_id": "web-4ea418c9d9802181cfe8",
+  "source_url": "https://www.chatpdf.com/",
+  "retrieved_at": "2026-09-20T21:00:36.849714+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.chatpdf.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/4ea418c9d9802181cfe8.html",
+  "capture_sha256": "b4efad46bb00354dda39a27388ff847c843065376712f8ca5a91b430ae242049",
+  "bytes_saved": 262144,
+  "title": "ChatPDF AI | Chat with any PDF | Free",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+    },
+    {
+      "key": "og:title",
+      "value": "ChatPDF AI | Chat with any PDF | Free"
+    },
+    {
+      "key": "og:description",
+      "value": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+    }
+  ],
+  "text": "ChatPDF AI | Chat with any PDF | Free\nNew\nEN\nEN\nPlus\nSign up\nSign up\nNew\nSign up\nPlus upgrade\nChange language\nChats\nStart your first chat\nFolders\nNew folder\nTools\nAI Writer\nAI Detector\nYouTube Chat\nResearch\nDesktop app\nMobile app\nSign up for free to save your chat history\nSign up\nBest-in-class AI tools\nfor\nstudents and researchers\nBest-in-class AI tools\nfor\nstudents and researchers\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nupload\nLoved by\n10M+ Researchers\nQ's answered every day\n1,000,000+\nGen AI apps of 2024\nTop 50\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nDrop a file or\nupload\n|\nAsk to start a chat\nCTRL\nV\nto paste text or links\nDaily answered Q's\n1,000,000+\nLoved by\n10M+ users\nGen AI 2024\nTop 50\n”\nIt's like ChatGPT,\nbut for\nresearch papers\n.\n”\nMushtaq Bilal, PhD\n@MushtaqBilalPhD\nChatPDF in a\nNutshell\nYour PDF AI - like ChatGPT but for PDFs. Summarize and answer questions for free.\nFor Researchers\nExplore scientific papers, academic articles, and books to get the information you need for your research.\nFor Students\nStudy for exams, get help with homework, and answer multiple choice questions faster than your classmates.\nFor Professionals\nNavigate legal contracts, financial reports, manuals, and training material. Ask questions to any PDF to stay ahead.\nCited Sources\nBuilt-in citations anchor responses to PDF references. No more page-by-page searching.\nMulti-File Chats\nCreate folders to organize your files and chat with multiple PDFs in one single conversation.\nAny Language\nWorks worldwide! ChatPDF accepts PDFs in any language and can chat in any language.\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nupload\nChat\nSummary\nAI Detector\nAI Writer\nFlashcards\nSlides\nResearch\nChat with any\nfile,\nvideo or\nwebsite\nDrop a file or\nupload\n|\nAsk to start a chat\nCTRL\nV\nto paste text or links\nWall of\nLove\nAcross borders, beyond languages: AI is revolutionizing the understanding of research worldwide.",
+  "links": [
+    {
+      "href": "/_next/static/chunks/webpack-9402ed2bcd3bb81e.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtm.js?id=GTM-NKMXBKDL",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtag/js?id=G-9TMP1WFPRN",
+      "rel": "preload"
+    },
+    {
+      "href": "https://webapi.chatpdf.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/icon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://www.chatpdf.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.chatpdf.com/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/bg",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/bn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/cs",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/da",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/el",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/fi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/he",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hu",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/kn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ms",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/no",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pa",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pt-PT",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ro",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/sk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/sv",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ta",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/tl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/uk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/zh-TW",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/static_styles_variant_css2",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/writer",
+      "rel": null
+    },
+    {
+      "href": "/ai-detector/check",
+      "rel": null
+    },
+    {
+      "href": "/youtube",
+      "rel": null
+    },
+    {
+      "href": "/scholar",
+      "rel": null
+    },
+    {
+      "href": "https://download.chatpdf.com/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.3787
+}

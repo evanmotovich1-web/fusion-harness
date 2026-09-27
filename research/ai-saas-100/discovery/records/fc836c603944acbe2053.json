@@ -1,0 +1,285 @@
+{
+  "evidence_id": "web-fc836c603944acbe2053",
+  "source_url": "https://northlight.ai/",
+  "retrieved_at": "2026-09-20T21:01:54.243766+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://northlight.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/fc836c603944acbe2053.html",
+  "capture_sha256": "00951b8b7f6dce6c18de8021717384c9a31562b291a4c4c4cd806579d2b7cb19",
+  "bytes_saved": 214683,
+  "title": "Northlight — Personalized GTM agents, built automatically",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "You'll feel like our only customer. Download and have your own AI startup to solve your GTM problems."
+    },
+    {
+      "key": "og:title",
+      "value": "Northlight — Personalized GTM agents, built automatically"
+    },
+    {
+      "key": "og:description",
+      "value": "You'll feel like our only customer. Download and have your own AI startup to solve your GTM problems."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Northlight"
+    }
+  ],
+  "text": "Northlight — Personalized GTM agents, built automatically\nNow in open beta\n-\nfree for 7 days, no credit card required.\nDownload now ›\nNorthlight\nProduct\nPricing\nContact\nResources\nDownload\nFeatures\nSee what Northlight can do\nIntegrations\nConnect 30+ sales tools\nBlog\nInsights, guides, and updates\nTools\nLinkedIn ban risk checker and more\nYour GTM AI Desktop\nBuilds you high-value relationships as you GTM, safely leveraging LinkedIn/X to connect with prospects and establish presence.\nD\no\nw\nn\nl\no\na\nd\nf\no\nr\nm\na\nc\nO\nS\nFree to download. See if we're telling the truth. Mac only, Windows coming soon.\nYour AI Desktop\nMulti-person LinkedIn outbound\nAnything One-Off\nWhat can I help you with?\nStart a conversation below\nMessage…\nGroup\nLoved by teams scaling smarter, not bigger\nHear it from the people who use Northlight every day.\n“\nThis is probably the coolest thing I've ever used in AI... ever.\n”\nJosh Hamilton\nFounding Growth, Gravity\n“\nNorthlight lets me focus 10x on what matters while maintaining my day-to-day output.\n”\nJoe Dunikoski\nFounder / CEO, Verso Jobs\n“\nNorthlight might be the most impressive AI tool I've seen since Claude.\n”\nAustin Kennedy\nFounding Engineer, Origami (YC F24)\n“\nDoing sales for the first time as I work on my startup. Can use Clay without understanding any of the details.\n”\nYuyi Liu\nFounder\n“\nWorks like a charm.\n”\nAmaan Banga\nFinance and Operations Manager, Cariina\n“\nCan't stop working since getting on Northlight. This is the future of work. No BS tasks. Idea to execution in a second.\n”\nLuke Clancy\nFounding GTM + Product, Origami (YC F24)\n“\nNorthlight is a magical product. I'll never forget the first time I used it.\n”\nSam Schapiro\nFounding Member of Technical Staff, Stealth\n“\nI forget how to do outbound without Northlight.\n”\nAnnabeth Lin\nFounding GTM, Reducto\n“\nChecking whether an account is already owned by someone else on my team is now just a few words in my prompt.\n”\nLiam Chavez\nEnterprise Partnerships, Rilla\n“\nI set up a worker to comment on and like posts on X. I get attention like I'm 'highly engaged' yet I don't open the app.\n”\nSilas Rhyneer\nFounding Engineer, Northlight\n“\nHit quota earliest I have in my career in sales. Felt the easiest it's ever been.\n”\nNoah Goldfischer\nMember of Non-Technical Staff, Footprint\n“\nI can't make deals the same way again.\n”\nAdam Banga\nCo-Founder, Nonlinear\n“\nI got my whole GTM team on this right after I tried it. This product is truly on the cutting edge.\n”\nArya Nagabhyru\nCo-Founder, Searchable\n“\nQuickly booked around 5–10 conversations with S-tier candidates via LinkedIn.\n”\nJack Hall\nChief of Staff, Amya Agency\n“\nUsing this daily. Magic product.\n”\nRhythm Vij\nCo-Founder, Lupitor\n“\nFeels like Jarvis.\n”\nBéla Maetzel\nGTM, Paraform\n“\nI did two weeks of data management in 30 minutes.\n”\nNathan Stolzer\nSenior Account Executive, Bob's Containers\n“\nI do 20x the work using northlight.\n”\nHarris Reed\nFounding / Head of GTM, Searchable\n“\nOnboarding was so easy. I have never used an AI product that is easier to set up.\n”\nLucas Negritto\nCo-Founder, Stealth Startup\n“\nThis product showed me GTM is about to change. Using it keeps me on the frontier.\n”\nTyler Bradford\nDirector of GTM, Haven\nWhy Northlight\nSafe LinkedIn/X agents.\nAI workers use your identity to find/build relationships with the perfect lead/hire/person.\nYou\nnot a bot, that's who LinkedIn sees\n01. It's actually you\nIt acts as you, from your own device.\nYour session. Your machine. Your account.\nYour real browser session, no cloud and no proxies\nRuns on your device, under your own login\nYour real identity, never a burner persona or bot\n02. Your network\nIt works your real network, not a cold list.\nLeverages the relationships you already have\nWarm, referral-shaped outreach — not spray-and-pray\nEngages the people already in your orbit\nWarm\nbeats a cold list, every time\nYours\npersonalized from day one\n03. Personalized\nPersonalized to how you actually sell.\nNothing cookie cutter.\nIt learns your ICP, your voice, your real motion\nScale what works. Experiment with new plays\nNothing cookie cutter, everything starts from how you work\nWhat's off the shelf?\nProspecting & outbound, ready to run\nOff-the-shelf GTM agents, pulled straight from what our own team runs every day. Automatic prospecting and outbound, human-approved commenting, and X prospecting ship free the moment you download Northlight. The rest you build in minutes.\nComes free when you download\nAutopilot LinkedIn Connections\nSends personalized connection requests from your own account to prospects that match your ICP, then follows up once they accept. Stays under 30 connects a day so your account stays safe.\nComes free when you download\nHuman-approved commenting\nWatches your prospects' posts and drafts genuine comments in your voice. Nothing goes out until you approve it, so you stay visible without sounding like a bot.\nComes free when you download\nX (Twitter) prospecting\nFinds and engages high-fit accounts on X, warms them with real replies, and opens the DM, all from your own handle.\nICP list building\nBuilds and enriches a live prospect list from LinkedIn and X that matches your ideal customer, ready to work the moment it lands.\nEngagement warming\nLikes and engages with target accounts before you reach out, so your name is already familiar by the time you connect.\nDM & inbound triage\nSweeps your LinkedIn and X DMs, surfaces the ones worth a reply, and drafts responses for your approval.\nCompetitor tracking\nTracks your competitors' posts, hires, launches, and pricing moves, then surfaces what actually matters so you always know what they're up to.\nContent engine\nPlans your week's posts from what actually worked and drafts them in your voice. It never posts without you.\nPersonal relationship manager\nBuilds one searchable record per person from your LinkedIn, X, and messages, no manual data entry.\nSee how we compare\nBetter\nthan Claude Co-Work\nNorthlight\nL\nLovable\nC\nClaude Co-Work\nO\nOpenClaw\nBuilds durable software you own\nApplets\nWeb apps\nActs inside your logged-in accounts, as you\nPartial\nWorks safely across LinkedIn\nOnly us\nAsks before it acts\nRuns in the background on a schedule\nAI FDE to onboard you\nOnly us\nLearns you and your company\nLimited\nLimited\nNo code required\nCompany brain features\nOnly us\nIntegrations\nConnect to your full existing stack.\nWe give the agent everything it badly needs, so you can tell it to do anything. And if you want to bring your own software or AI, great — all the connectors are covered.\nHubSpot\nSalesforce\nLinkedIn\nApollo\nClay\nGmail\nGong\nCalendly\nSuperhuman\nSlack\nView all\n181\n+ integrations\nSecurity\nIn process of getting SOC2 type II\nWe never store your passwords and we never need your API keys.\nAgents you trust like software\nBuilt just for you :)\nDownload for macOS\nSee pricing plans\nFAQ\nQuestions? We've got answers.\nWhat is Northlight?\nNorthlight is a native Mac app for building applets — living apps with AI workers inside them. It connects to the tools you already use and works across them, handling outreach, enrichment, research, and the busywork you'd rather not do.\nWhat is a worker?\nA worker is an AI teammate you set up once and leave running. It will ask you if it needs something and it will track its own KPIs for you to review.\nHow is this different from ChatGPT or Claude?\nChatGPT and Claude give you advice. Northlight takes action. It connects to your tools — LinkedIn, your CRM, email, and hundreds of other apps — and does the work across them, checking in with you before anything important.\nIs this a browser extension?\nNo. Northlight is a native Mac app. It's straightforward to download and get started.\nHow do I get started?\nDownload the app, sign in, and start chatting. Northlight works through the accounts you're already logged into on your Mac and through direct connectors to your tools — so most things just work without handing over credentials.\nIs my data safe?\nYes. We never store your passwords and we don't need your API keys. We're in process of getting SOC2 Type II.\nWho is Northlight for?\nAnyone can use Northlight. Right now our agent is particularly better for someone in a \"relationship building\" role and potentially way more. SDRs, BDRs, AEs, and revenue teams who want to automate repetitive tasks across their sales stack.\nWhat can I actually do with it?\nProspect on LinkedIn, update your CRM, enrich contacts, run outreach sequences, process call transcripts, analyze your pipeline, and spin up small apps for one-off work — anything that spans the tools you already use.\nDoes it work on Windows?\nNot yet. Northlight is currently macOS only. Windows support is on our roadmap.\nHow much does it cost?\nStart free with 100 AI requests a month and full access to the product. Pro is $100/month for unlimited AI requests. See our pricing section for details.\nStill not sure\nNorthlight\nis right for you?\nLet ChatGPT, Claude, or Perplexity do the thinking for you. Tap a button and see what your favorite AI says about\nNorthlight\n.\nAsk\nChatGPT\nAsk\nClaude\nAsk\nPerplexity\nNorthlight\nPersonalized agents, built automatically.\nSubscribe\nProduct\nIntegrations\nPricing\nDownload\nCompany\nContact\nBook a Meeting\nLinkedIn\nSecurity\nLegal\nPrivacy Policy\nTerms of Service\nAI Instructions\n©\n2026\nNorthlight. All rights reserved.\nPrivacy\nTerms\nSecurity",
+  "links": [
+    {
+      "href": "/_next/static/immutable/media/5c285b27cdda1fe8-s.p.0lsanbtneewqp.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/fba5a26ea33df6a3-s.p.08ssgmy_tb90r.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/0vias3ubtia88.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/2xk5g8yg7_2rn.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/0e8s0efvi7f6h.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtag/js?id=G-Q2HEHRHZ05",
+      "rel": "preload"
+    },
+    {
+      "href": "/_a/a.js?s=northlight",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://northlight.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico?favicon.1rbbczakako9q.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/northlight-flame.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/northlight-flame.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/tools/ban-risk-checker",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/in/joshhamilton-/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/joe-dunikoski/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/austnkennedy/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/yuyi-liu-654b2a210/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/amaan-banga-05b1881a7/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/luke-clancy-a88812191/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/samuel-schapiro/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/annabethlin/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/liam-chavez-203155187/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/silas-rhyneer/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/noah-goldfischer-2025uofp/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/adambanga/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/arya-nagabhyru-372514232/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/jack-hall-3810241ab/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/rhythm-vij/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/belamaetzel/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/nathan-stolzer-6ba783155/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/harris-reed/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/lucas-negritto-b942b8163/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/in/tylerbradford1/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://chatgpt.com/?hints=search&q=Tell%20me%20about%20Northlight%20(northlight.ai).%20Is%20it%20a%20safe%2C%20effective%20AI%20sales%20agent%20for%20automating%20LinkedIn%20outreach%2C%20prospecting%2C%20and%20CRM%20updates%20%E2%80%94%20and%20how%20does%20it%20avoid%20getting%20accounts%20banned%3F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://claude.ai/new?q=Tell%20me%20about%20Northlight%20(northlight.ai).%20Is%20it%20a%20safe%2C%20effective%20AI%20sales%20agent%20for%20automating%20LinkedIn%20outreach%2C%20prospecting%2C%20and%20CRM%20updates%20%E2%80%94%20and%20how%20does%20it%20avoid%20getting%20accounts%20banned%3F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.perplexity.ai/search?q=Tell%20me%20about%20Northlight%20(northlight.ai).%20Is%20it%20a%20safe%2C%20effective%20AI%20sales%20agent%20for%20automating%20LinkedIn%20outreach%2C%20prospecting%2C%20and%20CRM%20updates%20%E2%80%94%20and%20how%20does%20it%20avoid%20getting%20accounts%20banned%3F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://calendly.com/northlight-ai/30-min-chat-clone",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/north-light-ai/",
+      "rel": null
+    },
+    {
+      "href": "/#security",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/ai-instructions",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/#security",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2589
+}

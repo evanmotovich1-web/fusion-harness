@@ -1,0 +1,461 @@
+{
+  "evidence_id": "web-989c1bdb89c2364ae240",
+  "source_url": "https://magicstudio.com/",
+  "retrieved_at": "2026-09-20T21:00:45.136506+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://magicstudio.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/989c1bdb89c2364ae240.html",
+  "capture_sha256": "feb43e5c17ec6a52df9c27beba5fb2c12f7b797bb05d7b411112f7a9af023aa3",
+  "bytes_saved": 234047,
+  "title": "Magic Studio",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Your personal AI photographer. Upload a few photos once — the AI learns how you look and creates any photo of you in seconds."
+    },
+    {
+      "key": "og:title",
+      "value": "Magic Studio"
+    },
+    {
+      "key": "og:description",
+      "value": "Your personal AI photographer. Upload a few photos once — the AI learns how you look and creates any photo of you in seconds."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Magic Studio"
+    }
+  ],
+  "text": "Magic Studio\nInstaHeadshots is\nMa\ng\nic Studio\nLog in\nMenu\nProfessional headshots\nHeadshots for teams\nHeadshot types\nPhoto & AI tools\nBlog\nAlready have an account?\nLogin\nCreate your photos for free\nHeadshot types\nLinkedIn Headshots\nLinkedIn headshots that grab attention and build connections instantly\nCorporate Headshots\nIncredible corporate headshots that speak for you\nCEO Headshots\nAmazing CEO headshots that make you look one instantly\nExecutive Headshots\nExecutive headshots that radiate confidence and leadership\nWomen Headshots\nEmpowering women headshots that radiate confidence and professionalism\nReal Estate Headshots\nEye-catching realtor headshots that make you stand out in the property market\nDoctor Headshots\nModern headshots tailored for doctors and medical professionals that inspire trust\nLawyer Headshots\nPolished lawyer headshots that radiate credibility and win clients\nFree AI Headshot Generator\nInstant, 100% free, no signup way to get polished headshots\nFree ERAS Photo Checker\nCheck your photo against the official ERAS rules in seconds\nPhoto & AI tools\nMagic Eraser\nRemove objects, people, text from photos\nBackground Remover\nRemove backgrounds, add coloured backgrounds\nAI Image Generator\nCreate pictures from text, with AI\nImage Upscaler\nIncrease size up to 4K without loosing quality\nBackground Blur\nProfessional looking photos with blur effect\nAI Art Generator\nCreate Art and Graphics with AI\nHEIC to JPG Converter\nConvert HEIC (iPhone) photos to JPG\nWEBP to PNG Converter\nConvert WEBP Files to PNG\n4th of July Photo Generator\nFree AI photos of you across 250 years of American history\nYour p\ne\nrsonal\nAI photo\ng\nrapher\nUpload a few photos once. After the AI learns how you look, create any photo of you in seconds.\nCreate your photos for free\nHan\nn\nah\n’s\nphotos\nhow it w\no\nrks\n0\n1\nUpload a few photos, once\nPhotos you already have, that show the AI what you look like.\n0\n2\nYour personal AI learns how you look\nThe AI extracts your features, your hair, eyes, face from the photos you upload.\n0\n3\nCreate any photo of you in seconds\nWe’ll start you off with 50 great photos of you.\nBe the best Y\no\nu\nOn LinkedIn\nFor a customer\nOn Instagram\nOn a date\nOn a Friday night\nFor your website\nOn LinkedIn\nFor a customer\nOn Instagram\nOn a date\nOn a Friday night\nFor your website\nCreate your photos for free\nLimit\ne\nd only by your im\na\ngination\nAny photo of you\nTry on outfits\nExplore hairstyles\nCreate your photos for free\nRated a perfect 5 / 5 on Trustpilot\n16,946 reviews\nWow! My headshots are amazing. They look like I went to a photo studio.\nP. Lee\nThe shots came out amazing. I would have spent a fortune with a photographer to get this quality.\nJeff Mere\nFast. Simple. Outstanding quality. I was simply blown away.\nSharon Keif\nShockingly good results. I look like the best version of myself.\nMelody Todd\nSeriously blown away by the quality and speed to create high-resolution photographs.\nLauren L.\nAmazing, true to person images nearly instantly. Not sure I’ll ever hire a real photographer again!\nPatricia Miser\nSuccessful teams choose Ma\ng\nic Studio\nOn-brand headshots, without expensive, complicated photoshoots.\nCreate a team for free\nYour data is yo\nu\nrs,\na\nn\nd\ny\no\nu\nr\ns\no\nn\nl\ny\nYour photos stay private, protected, and under your control.\nCreate your photos for free\nYour photos, your model\nYour photos are used only to create your personal AI model and generate photos of you. They’re never used to train our general AI models or anyone else’s.\nDelete anytime\nDelete a photo, a set of photos, or your entire account whenever you want. Your personal AI model is also automatically deleted after 90 days.\nNever shared. Never sold.\nWe don't share your photos with anyone. We don't sell your data. We don't run ads with your information.\nYour questions,\na\nn\nswered.\nQ\n1\nWhat is Magic Studio?\nMagic Studio is your personal AI photographer. Upload a set of everyday photos and we’ll create a personal AI model that can generate new photos of you—from professional headshots to social and dating photos.\nQ\n2\nIs InstaHeadshots now Magic Studio?\nYes. InstaHeadshots is now Magic Studio, and the headshot service lives at\nmagicstudio.com/headshots\n. It’s the same product and account experience under a new name.\nQ\n3\nWhere can I find and download my existing photos?\nLog in at\napp.magicstudio.com\nusing the same email and sign-in method you originally used. Open a photo and select\nDownload\nto save one image, or use\nSelect to Download\nin your gallery to download several at once. If you have multiple profiles, you can switch between them from the profile menu.\nQ\n4\nHow does Magic Studio create photos of me?\nYou upload a selection of clear, recent photos that show what you look like. Magic Studio uses them to create your personal AI model, then generates 50 watermarked photos for you to preview. We’ll email you when they’re ready.\nQ\n5\nWhat kinds of photos can I create?\nYou’ll start with a set of professional headshots. After purchasing a pack, you can use credits to explore more looks from our professional, social and dating collections, or create more photos in a look you already like.\nQ\n6\nDo I need professional photos to get started?\nNo—ordinary photos and selfies work well. Upload at least 10 clear, recent solo photos, including mostly close-ups and at least two waist-up shots. Use a mix of outfits, backgrounds and lighting, face the camera directly, and keep your appearance consistent across the photos.\nQ\n7\nHow long does it take to create my photos?\nMost sets are ready in around 15 minutes, although it can take longer during busy periods. You don’t need to keep the page open—we’ll email you as soon as your photos are ready.\nQ\n8\nCan I try Magic Studio for free? Is it a subscription?\nYou can create and preview your first set of 50 watermarked photos without paying. You only purchase a pack when you want to download photos without watermarks or start editing them. Personal AI photo packs are one-time purchases, not subscriptions.\nQ\n9\nWhat do I get when I purchase a pack?\nThe Starter pack lets you download three standard-resolution headshots and includes three credits. Standard unlocks all 50 standard-resolution headshots and includes three credits. Premium unlocks all 50 in 4K, 300 DPI and includes 50 credits. Prices vary by location, so you can find the current options on our\nheadshot pricing page\n.\nQ\n10\nWhat if I don’t like the results?\nBefore paying, you can retry once for free using a new set of uploaded photos. The retry creates a completely new set of 50 photos and replaces the previous set. Because you can review the entire set before deciding to purchase, payments are non-refundable except where required by law.\nQ\n11\nCan I edit my photos after they’re generated?\nYes. Editing becomes available after you purchase a pack. Open any photo to change its outfit, backdrop, hairstyle, hair colour, glasses, expression, eye colour or gaze, reduce wrinkles, remove jewellery and more. You can also use Magic Edit to describe a change in your own words or Magic Eraser to remove small distractions.\nQ\n12\nHow do credits work?\nStarter and Standard include three credits, while Premium includes 50. Most editing tools use one credit each; Magic Eraser doesn’t use credits. Creating five photos in a new look, generating five “More like this” photos, or upscaling one photo to 4K each uses five credits. Additional credits can be purchased after you’ve bought a base pack.\nQ\n13\nCan I get high-resolution photos for printing?\nStandard photos are 1024 × 1024 pixels and work well for websites, profiles and most digital use. Premium includes every photo in 4K at 4096 × 4096 pixels and 300 DPI. Starter and Standard customers can also upscale individual photos to 4K using five credits per photo.\nQ\n14\nCan I use my photos commercially?\nYes. You have full rights to use your purchased photos for personal or commercial purposes, including websites, LinkedIn, resumes, advertisements, business cards and printed materials. Purchased downloads have no watermark and require no attribution.\nQ\n15\nCan I generate photos for my company or team?\nYes. Magic Studio for Teams lets you invite members by email, create professional headshots for everyone and manage progress and downloads from one dashboard. Each person gets their own individual headshots, while the team admin manages payment and access.\nQ\n16\nWhat happened to the original Magic Studio photo editor and tools?\nThey’re still available. The original photo editor now lives at\nmagicstudio.com/photo-editor\n, and the other Magic Studio tools remain at their existing URLs. Accounts for those tools remain separate from accounts that originated with InstaHeadshots.\nLanguage\nEnglish\nCreate your photos for free\nHeadshots\nHeadshots for Professionals\nHeadshots for Teams\nHeadshots for LinkedIn\nHeadshots for Executives\nHeadshots for Women\nHeadshots for CEOs\nHeadshots for Corporates\nHeadshots for Doctors\nHeadshots for Lawyers\nHeadshots for Realtors\nHeadshots for ERAS\nPhoto & AI Tools\nMagic Eraser\nBackground Remover\nImage Upscaler\nBackground Blur\nAI Image Generator\nAI Art Generator\n4th of July Photo Generator\nHEIC to JPG Converter\nWEBP to PNG Converter\nFree ERAS Photo Checker\nCompany\nBlog\nPrivacy Policy\nTerms of Service\nLanguage\nEnglish\n©\n2026\nMagic Studio\n©\n2026\nMagic Studio\nCreate your photos for free",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://magicstudio.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/de/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/es/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/fr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/it/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/nl/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/pl/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/pt/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/pt-BR/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/ru/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/zh/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/tr/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/ja/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/ko/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://magicstudio.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/fonts/greed-variable/GreedStandardVF.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/libreBaskerville-variable/LibreBaskerville-Italic-VariableFont_wght.ttf",
+      "rel": "preload"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://rsms.me/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/fonts/inter-var/inter.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_next/static/css/af8efa394e438103.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/af8efa394e438103.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/instaheadshots/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/login",
+      "rel": null
+    },
+    {
+      "href": "/headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/teams/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "/headshots/linkedin-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/corporate-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/ceo-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/executive-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/women-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/realtor-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/doctor-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/lawyer-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/free-ai-headshot-generator/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/eras-photo-checker/",
+      "rel": null
+    },
+    {
+      "href": "/magiceraser/",
+      "rel": null
+    },
+    {
+      "href": "/background-remover/",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-generator/",
+      "rel": null
+    },
+    {
+      "href": "/image-upscaler/",
+      "rel": null
+    },
+    {
+      "href": "/backgroundblur/",
+      "rel": null
+    },
+    {
+      "href": "/ai-art-generator/",
+      "rel": null
+    },
+    {
+      "href": "/heic-to-jpg/",
+      "rel": null
+    },
+    {
+      "href": "/webp-to-png/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/4th-of-july-ai-photo-generator/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/67e054a2c50c5ca9a0befe06",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/67c65239f12073e4297701bc",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/69aadc78aaa0c70fb3931a42",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/6a272097aa95ca6a5d3f93d8",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/69f269a2fbc9ea8dbdcb0daf",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.trustpilot.com/reviews/69f63c5caddd1a6db039384a",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/headshots/teams/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "/headshots/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/login",
+      "rel": null
+    },
+    {
+      "href": "/headshots/#pricing",
+      "rel": null
+    },
+    {
+      "href": "/photo-editor/",
+      "rel": null
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    },
+    {
+      "href": "/headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/teams/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/linkedin-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/executive-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/women-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/ceo-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/corporate-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/doctor-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/lawyer-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/realtor-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/eras-headshots/",
+      "rel": null
+    },
+    {
+      "href": "/magiceraser/",
+      "rel": null
+    },
+    {
+      "href": "/background-remover/",
+      "rel": null
+    },
+    {
+      "href": "/image-upscaler/",
+      "rel": null
+    },
+    {
+      "href": "/backgroundblur/",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-generator/",
+      "rel": null
+    },
+    {
+      "href": "/ai-art-generator/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/4th-of-july-ai-photo-generator/",
+      "rel": null
+    },
+    {
+      "href": "/heic-to-jpg/",
+      "rel": null
+    },
+    {
+      "href": "/webp-to-png/",
+      "rel": null
+    },
+    {
+      "href": "/headshots/eras-photo-checker/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service/",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://twitter.com/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.tiktok.com/@insta.headshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://twitter.com/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/instaheadshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.tiktok.com/@insta.headshots",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.magicstudio.com/create",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2425
+}

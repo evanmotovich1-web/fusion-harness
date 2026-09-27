@@ -1,0 +1,334 @@
+{
+  "evidence_id": "r015-4b7e05fa659241de57fb",
+  "source_url": "https://www.anyword.com/integrations",
+  "publisher": "www.anyword.com",
+  "retrieved_at": "2026-09-20T21:35:30.915421+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.anyword.com/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/015/research/captures/4b7e05fa659241de57fb.html",
+  "capture_sha256": "15cbe769fb71ba53075cd4729812743f44b2a2a1a4194ea6961caa82564929a7",
+  "bytes_saved": 124268,
+  "title": "Integrations",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Connect Anyword to your tech stack to create data-driven content that delivers measurable results."
+    },
+    {
+      "key": "og:title",
+      "value": "Integrations"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect Anyword to your tech stack to create data-driven content that delivers measurable results."
+    }
+  ],
+  "text": "Integrations\nWhy Anyword?\nSolutions\nBy Solution\nPlatform\nDiscover how leading marketing teams are transforming their marketing game with Anyword Business\nAPI\nEmpower Your Users to Create More Content that converts\nEnterprise\nExplore Anyword's custom-built, secure enterprise solution\nBy Use Case\nDemand Gen\nInstantly create high-performing ads and predict success before publishing\nProduct Marketing\nStreamline workflows, resonate with your users, and elevate your brand's voice\nSEO Experts\nCreate SEO-optimized, On-Brand blogs at scale\nBy Use Case\nCMO\nBoost your marketing performance and streamline workflows while keeping your brand's voice\nContent Marketing\nGenerate high performing, on-brand content for ads, social, blogs, emails, LPs and more\nBy Use Case\nSocial Media\nCreate on-brand social media content that drives engagment\nMarketing Ops\nEnhance emails, streamline processes, boost performance, and elevate your brand\nProduct\nContent intelligence\nUnderstand, analyze and improve content across every channel in one powerful platform\nData-driven editor\nGenerate AI-powered content using performance prediction scores to know which assets will perform best before you go live\nWebsite Automation\nHyper-personalize messaging on your website at scale\nBlog Wizard\nConsistently produce high-quality, engaging blog content in half the time\nChrome Extension\nBoost engagement, sign-ups, conversions and leads like never before with Anyword's Chrome Extension\nPrivate Model\nSecure your enterprise data with Anyword's private LLMs\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nBlog\nHuman Insights on Artificial Intelligence\nQuickstart Guide\nYour essential guide to understanding and getting started with generative AI\nSign in\nRequest demo\nTry it now\nWhy Anyword?\nSolutions\nSome title\nPlatform\nCopy analytics built for the post-generative AI world.\nAPI\nCopy analytics built for the post-generative AI world.\nEnterprise\nCopy analytics built for the post-generative AI world.\nBy Use Case\nDemand Gen\nCopy analytics built for the post-generative AI world.\nProduct Marketing\nCopy analytics built for the post-generative AI world.\nSEO Experts\nCopy analytics built for the post-generative AI world.\nCMO\nCopy analytics built for the post-generative AI world.\nContent Marketing\nCopy analytics built for the post-generative AI world.\nSocial Media\nCopy analytics built for the post-generative AI world.\nMarketing Ops\nCopy analytics built for the post-generative AI world.\nProduct\nPlatform\nContent Intelligence\nCopy analytics built for the post-generative AI world.\nBlog Wizard\nCopy analytics built for the post-generative AI world.\nPrivate Model\nCopy analytics built for the post-generative AI world.\nData-driven editor\nCopy analytics built for the post-generative AI world.\nChrome Extension\nCopy analytics built for the post-generative AI world.\nIntegrations\nCopy analytics built for the post-generative AI world.\nWebsite Automation\nCopy analytics built for the post-generative AI world.\nSecurity\nCopy analytics built for the post-generative AI world.\nPricing\nResources\nLearn\nBlog\nCopy analytics built for the post-generative AI world.\nQuarkstart Guide\nCopy analytics built for the post-generative AI world.\nStart for free\nRequest demo\nAnyword Integrations\nConnect your tech stack to Anyword and go from Gen-AI\nto Gen-AI that drives results.\nPerformance Context RAG\nInject audience data, channel-specific data, and high-performing talking points into any prompt, ensuring that your Gen-AI content outperforms your baseline prompts by 20%.\nPerformance Prediction\nSet your target audience, distribution channels, and business goals and get performance predictions for any content.\nData Import\nCreate hyper-personalized content by connecting your CRM to Anyword. Import contact, account, or opportunity information into any prompt.\nPerformance Data Training\nTrain Anyword on your historical content performance (ads, social, email, and website) to enhance future content generation and identify opportunities for improvement.\nContent Export\nPush ready-to-use content directly into your CRM, CMS or marketing channels, for seamless workflows.\nBy functionality\nBy use case\nPerformance Context RAG\nPerformance Prediction\nData Import\nPerformance Data Training\nContent Export\nAds\nSocial\nCRM\nEmail Marketing\nSales\nCo-Pilot\nMarketing Automation\nCollboration\nCMS\nCXM\nPIM\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nCXM\nSprinklr\nEnhance customer experience on Sprinklr and create data-driven, optimized content across all your communication channels by integrating your account\nBeta\nContent Export\nData Import\nPerformance Data Training\nPIM\nInRiver\nTransform your product catalog into engaging descriptions, metadata, and SEO-optimized content by connecting your InRiver account.\nBeta\nData Import\nPerformance Data Training\nContent Export\nCRM\nSalesforce\nLeverage Salesforce insights from accounts, opportunities, and contacts to power high-performing content.\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nCollboration\nWrike\nExport generated marketing assets to Wrike, automating content approval workflows\nBeta\nPerformance Context RAG\nPerformance Prediction\nContent Export\nSocial\nLinkedIn Page\nEnhance the performance of LinkedIn posts and boost content creation across all your channels by connecting your account.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nCo-Pilot\nChatGPT\nGenerate content tailored to your brand voice and goals, with AI-powered performance predictions to ensure high-impact messaging.\nPerformance Prediction\nPerformance Context RAG\nCo-Pilot\nGemini\nEnhance Gemini by integrating Anyword’s performance predictions and brand voice capabilities to ensure content aligns with your goals and audience.\nPerformance Prediction\nPerformance Context RAG\nCMS\nSitecore\nConnect your Sitecore account to enrich prompts and templates with your Sitecore account data, including information from accounts, contacts, and more.\nBeta\nContent Export\nData Import\nPerformance Context RAG\nPerformance Data Training\nPerformance Prediction\nSales\nSalsify\nTransform your product catalog into optimized descriptions, metadata, and SEO content with a connected Salsify account.\nBeta\nContent Export\nPerformance Context RAG\nPerformance Prediction\nMarketing Automation\nIterable\nImprove multi-channel campaign efficiency by accessing Iterable insights for enhanced content performance.\nBeta\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nSales\nOutreach\nEnhance outbound campaigns by integrating Outreach to access data-driven performance metrics for content.\nBeta\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nMarketing Automation\nEloqua Marketing Automation\nAccess Eloqua’s historical data to design highly personalized and effective content strategies.\nBeta\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nMarketing Automation\nBraze\nCreate more relevant customer experiences by integrating Braze and leveraging campaign performance insights.\nNew\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nSocial\nFacebook Page\nBoost engagement on Facebook and enhance content generation across all your marketing channels by connecting your account.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nAds\nMeta Ads\nDrive better performance with Meta Ads while enhancing your content strategy across marketing channels.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nEmail Marketing\nMarketo\nEnhance email campaign effectiveness by connecting your Marketo account to access performance metrics.\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nCRM\nOktopost\nPublish content directly to Oktopost for smoother workflow alignment.\nBeta\nData Import\nContent Export\nPerformance Prediction\nPerformance Context RAG\nSales\nGong\nAnalyze Gong call recordings to generate higher-performing content across all marketing channels.\nBeta\nData Import\nPerformance Context RAG\nPerformance Prediction\nCMS\nDrupal\nSeamlessly integrate Anyword with Drupal to enhance content creation and optimization directly within your CMS, tailored for your audience and goals.\nBeta\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nSocial\nInstagram\nDrive more impactful Instagram engagement by connecting your account to enhance multi-channel content.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nCRM\nHubSpot\nEnhance email campaign effectiveness by connecting your HubSpot account to access performance metrics.\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nMarketing Automation\nSalesforce ExactTarget\nEnhance email campaign effectiveness by connecting your Salesforce ExactTarget account to access performance metrics.\nNew\nData Import\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nAds\nLinkedIn Ads\nOptimize LinkedIn ads' effectiveness and enhance content creation across all marketing channels by connecting your account.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nCRM\nMicrosoft Dynamic 365 sales\nUnlock personalized content creation by integrating Dynamics CRM data like customer insights and pipelines\nBeta\nData Import\nPerformance Data Training\nContent Export\nCollboration\nMicrosoft Word\nCreate, refine, and align documents with your brand’s voice while leveraging performance insights to optimize content effectiveness.\nContent Export\nPerformance Context RAG\nPerformance Prediction\nAds\nGoogle Ads\nMaximize the ROI of your Google Ads and streamline content creation across all campaigns by connecting your account.\nContent Export\nPerformance Prediction\nPerformance Context RAG\nPerformance Data Training\nCollboration\nGoogle Drive\nStreamline collaboration by centralizing brand-aligned content while enabling performance-driven content improvements across teams.\nContent Export\nPerformance Data Training\nData Import\nSocial\nX (Twitter)\nBoost visibility and interaction on X by integrating your account with your content planning tools.\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nAds\nX ads\nUnlock higher engagement for your X Ads campaigns and optimize content workflows with a connected account.\nData Import\nPerformance Context RAG\nContent Export\nPerformance Prediction\nPerformance Data Training\nMarketers using Anyword see an average of\n30\n%\nincrease in\nconversion rates\nRequest demo\nCompany\nPricing\nCareers\nContact us\nResources\nHelp Center\nBlog\nGlossary\nUse Case\n368 9th Ave, New York, NY 10001, United States.\nCopyright 2025\nKeywee Inc. (d.b.a. Anyword)\ninfo@anyword.com\nPrivacy Policy\nTerms of Use\nDPA Agreement",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/css/anyword-3b0adc.webflow.shared.d3572f847.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65e05bb0fa8c35f3c2c9fa58_Faf-icon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/gen-ai-content-platform",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/performance-marketers",
+      "rel": null
+    },
+    {
+      "href": "/product-marketing",
+      "rel": null
+    },
+    {
+      "href": "/seo-experts",
+      "rel": null
+    },
+    {
+      "href": "/marketing-strategy",
+      "rel": null
+    },
+    {
+      "href": "/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/marketing-ops",
+      "rel": null
+    },
+    {
+      "href": "/copy-intelligence-platform",
+      "rel": null
+    },
+    {
+      "href": "/data-driven-editor",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog-wizard",
+      "rel": null
+    },
+    {
+      "href": "/performance-boost-ai",
+      "rel": null
+    },
+    {
+      "href": "/private-models",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/quick-start-guide",
+      "rel": null
+    },
+    {
+      "href": "https://go.anyword.com/login",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-demo",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/gen-ai-content-platform",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/performance-marketers",
+      "rel": null
+    },
+    {
+      "href": "/product-marketing",
+      "rel": null
+    },
+    {
+      "href": "/seo-experts",
+      "rel": null
+    },
+    {
+      "href": "/marketing-strategy",
+      "rel": null
+    },
+    {
+      "href": "/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/marketing-ops",
+      "rel": null
+    },
+    {
+      "href": "/copy-intelligence-platform",
+      "rel": null
+    },
+    {
+      "href": "/blog-wizard",
+      "rel": null
+    },
+    {
+      "href": "/private-models",
+      "rel": null
+    },
+    {
+      "href": "/data-driven-editor",
+      "rel": null
+    },
+    {
+      "href": "/performance-boost-ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/quick-start-guide",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-demo",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://support.anyword.com/",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/getanyword/",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/getanyword?lang=en",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/getanyword/",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/anyword-terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/anyword-dpa-agreement",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.24195
+}

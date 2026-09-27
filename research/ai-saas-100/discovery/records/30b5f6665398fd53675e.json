@@ -1,0 +1,57 @@
+{
+  "evidence_id": "web-30b5f6665398fd53675e",
+  "source_url": "https://www.getmunch.com/",
+  "retrieved_at": "2026-09-20T21:00:45.713063+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.munchstudio.com/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/30b5f6665398fd53675e.html",
+  "capture_sha256": "770b2779170326612dd5cbdcd5782a11fb274acf87409f2464b0e113c64898ae",
+  "bytes_saved": 262144,
+  "title": "Munch Studio - Social Media For Businesses",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Munch studio creates done-for-you social media content that’s on-brand, on-time, and hands-free. Try the AI-powered way today."
+    },
+    {
+      "key": "og:title",
+      "value": "Munch Studio - Social Media For Businesses"
+    },
+    {
+      "key": "og:description",
+      "value": "Munch studio creates done-for-you social media content that’s on-brand, on-time, and hands-free. Try the AI-powered way today."
+    }
+  ],
+  "text": "Munch Studio - Social Media For Businesses",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/I0lLGHrhQfPBUoXLqlw7CKLg2Bo.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/I0lLGHrhQfPBUoXLqlw7CKLg2Bo.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/oBrKh6XuqcRUMCN9WPmBXKbY1RY.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.munchstudio.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    }
+  ],
+  "elapsed_seconds": 0.3984
+}

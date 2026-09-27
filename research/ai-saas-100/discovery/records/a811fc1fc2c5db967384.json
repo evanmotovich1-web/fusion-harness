@@ -1,0 +1,637 @@
+{
+  "evidence_id": "web-a811fc1fc2c5db967384",
+  "source_url": "https://www.taskade.com/",
+  "retrieved_at": "2026-09-20T21:00:55.912921+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.taskade.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/a811fc1fc2c5db967384.html",
+  "capture_sha256": "5364d5bea53ffb28503edb501e7a200b1ae90a4cfdbf0b17f3003a687ee94c3e",
+  "bytes_saved": 262144,
+  "title": "AI Apps, Agents, Workflows - Build, Train, Automate | Taskade",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "One prompt to a live app - CRMs, dashboards, client portals run by AI agents and workflow automations. Build free with Taskade Genesis, no credit card."
+    },
+    {
+      "key": "og:title",
+      "value": "Build, Train, Automate - AI Apps, Agents & Workflows | Taskade Genesis"
+    },
+    {
+      "key": "og:description",
+      "value": "One prompt to a live app - CRMs, dashboards, client portals run by AI agents and workflow automations. Build free with Taskade Genesis, no credit card."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Taskade"
+    }
+  ],
+  "text": "AI Apps, Agents, Workflows - Build, Train, Automate | Taskade\nSkip to main content\ntaskade\nCreate\nConnect\nClone\nPricing\nHelp\nDashboard →\nDashboard →\nPricing\nLogin\nSign up for free →\nSign up for free →\nDashboard →\nDashboard →\nSign up →\nSign up →\ntaskade\nCreate an app\nCreate\nBuild a Client Portal\nYour clients log in to their own space\nBuild a CRM\nCustomers, jobs and invoices in one place\nBuild a Dashboard\nLive data that updates itself\nAI Agents\nPre-built agent templates\nAutomations\nWorkflow automation templates\nTemplates\nReady-to-use project templates\nGenesis Kits\nLiving workspace kits\nConnect\nIntegrations\nConnect 100+ apps\nDownload Apps\nWeb, mobile, desktop\nDeveloper API\nBuild custom integrations\nHelp Center\nDocs and guides\nBlog\nLatest insights\nCustomer Reviews\nSee what users say\nClone\nFeatured Apps\nCurated app showcase\nDashboards\nAnalytics and reporting\nWorkflows\nAutomation workflows\nTools\nProductivity utilities\nChangelog\nPricing\nContact\nSign up for free →\nAlready have an account?\nLog in\nAI Business App Builder — Taskade turns one prompt into apps, AI agents, and automated workflows in one living workspace.\nApps. Agents. Automations. All in one workspace. Your business, on autopilot.\nOne prompt.\nOne live app.\nApps. Agents. Automations. All in one workspace. Your business, on autopilot.\nApps\nAgents\nWorkflows\nPrompts\nTools\nConnect\nModels\nFiles\nSales CRM\nClone app free\nSales CRM\nCRM\n·\n3 projects · 1 agent · 2 flows\nSales pipeline dashboard\nClone app free\nSales pipeline dashboard\nDASHBOARD\n·\n3 projects · 1 agent\nClient portal\nClone app free\nClient portal\nPORTAL\n·\n3 projects · 1 agent · 4 flows\nGrowth dashboard\nClone app free\nGrowth dashboard\nDASHBOARD\n·\n3 projects · 1 agent · 1 flow\nLead pipeline tracker\nClone app free\nLead pipeline tracker\nCRM\n·\n4 projects · 2 agents · 3 flows\nInvestor metrics dashboard\nClone app free\nInvestor metrics dashboard\nDASHBOARD\n·\n5 projects · 2 agents · 4 flows\nClient pipeline CRM\nClone app free\nClient pipeline CRM\nCRM\n·\n2 projects · 1 agent · 2 flows\nStore command center\nClone app free\nStore command center\nOPS\n·\n34 projects · 1 agent · 2 flows\nInvoice tracker\nClone app free\nInvoice tracker\nTOOL\n·\n1 project · 1 agent · 2 flows\nProduct launch dashboard\nClone app free\nProduct launch dashboard\nDASHBOARD\n·\n1 project · 1 agent · 1 flow\nOrder and stock tracker\nClone app free\nOrder and stock tracker\nTRACKER\n·\n2 projects · 1 agent · 3 flows\nHotel operations dashboard\nClone app free\nHotel operations dashboard\nDASHBOARD\n·\n4 projects · 1 agent · 3 flows\nSales CRM\nClone app free\nSales CRM\nCRM\n·\n3 projects · 1 agent · 2 flows\nSales pipeline dashboard\nClone app free\nSales pipeline dashboard\nDASHBOARD\n·\n3 projects · 1 agent\nClient portal\nClone app free\nClient portal\nPORTAL\n·\n3 projects · 1 agent · 4 flows\nGrowth dashboard\nClone app free\nGrowth dashboard\nDASHBOARD\n·\n3 projects · 1 agent · 1 flow\nLead pipeline tracker\nClone app free\nLead pipeline tracker\nCRM\n·\n4 projects · 2 agents · 3 flows\nInvestor metrics dashboard\nClone app free\nInvestor metrics dashboard\nDASHBOARD\n·\n5 projects · 2 agents · 4 flows\nClient pipeline CRM\nClone app free\nClient pipeline CRM\nCRM\n·\n2 projects · 1 agent · 2 flows\nStore command center\nClone app free\nStore command center\nOPS\n·\n34 projects · 1 agent · 2 flows\nInvoice tracker\nClone app free\nInvoice tracker\nTOOL\n·\n1 project · 1 agent · 2 flows\nProduct launch dashboard\nClone app free\nProduct launch dashboard\nDASHBOARD\n·\n1 project · 1 agent · 1 flow\nOrder and stock tracker\nClone app free\nOrder and stock tracker\nTRACKER\n·\n2 projects · 1 agent · 3 flows\nHotel operations dashboard\nClone app free\nHotel operations dashboard\nDASHBOARD\n·\n4 projects · 1 agent · 3 flows\nPick a system. Make it yours.\nReal command centers, client portals, CRMs, and trackers with agents and automations wired in. Clone one, add your data, and ship yours in minutes.\nCommand Centers\nCRMs\nClient Portals\nTrackers & Inspections\nTools\nBrowse all\nStore command center\nClone app free\nStore command center\nManage orders, stock, and customers.\nSales pipeline dashboard\nClone app free\nSales pipeline dashboard\nSee revenue, stages, and next steps.\nLead pipeline tracker\nClone app free\nLead pipeline tracker\nQualify leads and move deals forward.\nFinance dashboard\nClone app free\nFinance dashboard\nMonitor revenue, expenses, and cash flow.\nRevenue analytics dashboard\nClone app free\nRevenue analytics dashboard\nTrack revenue trends and key metrics.\nCustomer health dashboard\nClone app free\nCustomer health dashboard\nSpot churn risk and customer health.\nInvestor metrics dashboard\nClone app free\nInvestor metrics dashboard\nTrack KPIs and fundraising updates.\nHotel operations dashboard\nClone app free\nHotel operations dashboard\nMonitor bookings, revenue, and guests.\nFleet tracking dashboard\nClone app free\nFleet tracking dashboard\nTrack vehicles, routes, and upkeep.\nBrowse All Apps\nYour workspace, alive.\nRemember. Reason. Run. One living system for your business.\nApps\nProjects\nAgents\nWorkflows\nOne Prompt, One App\nDescribe your idea. Ship a living app with memory, agents, and automations wired in.\nPortals & Sign-In\nPublish branded portals with built-in sign-in. Users land where the work is.\nLive Dashboards\nKPI trackers that update in real time. The numbers find you, not the other way around.\nClone & Remix\nEvery great app is a seed. Clone one. Make it yours. Ship in minutes.\nCRMs, Trackers, Tools\nCRMs. Trackers. Calculators. Whatever your business needs, built from a prompt.\nStripe-Wired Payments\nSell what you build. Stripe checkout wired into every Taskade Genesis app — no plumbing.\nShow All Features\nPrompt it. Run it. Share it.\nPrompt it. Run it.\nShare it.\nTurn one prompt into a real app with agents and automations included. No code, no setup.\nPrompt It\nDesign It\nAutomate It\nAdd Agents\nShare It\nYour browser does not support the video tag.\nBuild my app free →",
+  "links": [
+    {
+      "href": "/_next/static/media/0b78ff376f6b9734-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/723e11e5093b8e80.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/static_images/icons/agent_taskade.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/64fccb79e2d625ed.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/5af8b4434e9a70d1.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/10cf60eab6c96a9a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/82a665901955edaf.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/d3287b09d201746a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/ec0f347c20061165.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/533c015c6c83472f.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/743dd65b296b1269.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/c558b7df2f50da73.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/a768f6580578e76c.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/eef542688633b4f0.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-7539b97ef88777aa.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://pa.taskade.com/js/plausible.outbound-links.revenue.tagged-events.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/0b78ff376f6b9734-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.taskade.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://files.taskade.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://ph.taskade.cloud",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://pa.taskade.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "//www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "//ph.taskade.cloud",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "//pa.taskade.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/static_images/taskade-mascot-2026-192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-light.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-dark.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/static_images/taskade-mascot-2026-180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/llms.txt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.taskade.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/kits",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/downloads",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/apps/dashboards",
+      "rel": null
+    },
+    {
+      "href": "/apps/workflows",
+      "rel": null
+    },
+    {
+      "href": "/apps/tools",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/deal-flow-crm-7iyc4shyd1f9eo1k",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/deal-flow-crm-7iyc4shyd1f9eo1k",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-dashboard-j1n0746e1z0olf6r",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-dashboard-j1n0746e1z0olf6r",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/client-portal-hvtxle0ywh5dqtt2",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/client-portal-hvtxle0ywh5dqtt2",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/growth-dashboard-h42is85vu180almu",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/growth-dashboard-h42is85vu180almu",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-workflow-dry36084slddvvrh",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-workflow-dry36084slddvvrh",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/investor-dashboard-5q9h9ufuofnx1agv",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/investor-dashboard-5q9h9ufuofnx1agv",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/neon-crm-dashboard-nsrm12wns3e1cgni",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/neon-crm-dashboard-nsrm12wns3e1cgni",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/simple-store-manager-ujtqojrsimcct6io",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/simple-store-manager-ujtqojrsimcct6io",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/invoice-tracker-rsltpd5cegha5ulc",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/invoice-tracker-rsltpd5cegha5ulc",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/product-launch-dashboard-q0o0x1v413818rkg",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/product-launch-dashboard-q0o0x1v413818rkg",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/inventory-management-dashboard-94o8cjl33yz7z8ke",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/inventory-management-dashboard-94o8cjl33yz7z8ke",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/hospitality-insight-dashboard-5ajqdljgdm5jmxjl",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/hospitality-insight-dashboard-5ajqdljgdm5jmxjl",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/deal-flow-crm-7iyc4shyd1f9eo1k",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/deal-flow-crm-7iyc4shyd1f9eo1k",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-dashboard-j1n0746e1z0olf6r",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-dashboard-j1n0746e1z0olf6r",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/client-portal-hvtxle0ywh5dqtt2",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/client-portal-hvtxle0ywh5dqtt2",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/growth-dashboard-h42is85vu180almu",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/growth-dashboard-h42is85vu180almu",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-workflow-dry36084slddvvrh",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-workflow-dry36084slddvvrh",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/investor-dashboard-5q9h9ufuofnx1agv",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/investor-dashboard-5q9h9ufuofnx1agv",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/neon-crm-dashboard-nsrm12wns3e1cgni",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/neon-crm-dashboard-nsrm12wns3e1cgni",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/simple-store-manager-ujtqojrsimcct6io",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/simple-store-manager-ujtqojrsimcct6io",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/invoice-tracker-rsltpd5cegha5ulc",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/invoice-tracker-rsltpd5cegha5ulc",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/product-launch-dashboard-q0o0x1v413818rkg",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/product-launch-dashboard-q0o0x1v413818rkg",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/inventory-management-dashboard-94o8cjl33yz7z8ke",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/inventory-management-dashboard-94o8cjl33yz7z8ke",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/hospitality-insight-dashboard-5ajqdljgdm5jmxjl",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/hospitality-insight-dashboard-5ajqdljgdm5jmxjl",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/simple-store-manager-ujtqojrsimcct6io",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/simple-store-manager-ujtqojrsimcct6io?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-dashboard-j1n0746e1z0olf6r",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-dashboard-j1n0746e1z0olf6r?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/sales-pipeline-workflow-dry36084slddvvrh",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/sales-pipeline-workflow-dry36084slddvvrh?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/finance-tracker-dashboard-tmnju1vsp3ggajo7",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/finance-tracker-dashboard-tmnju1vsp3ggajo7?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/analytics-dashboard-ackjtx9mtk3ysatj",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/analytics-dashboard-ackjtx9mtk3ysatj?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/customer-health-dashboard-564685gvoq7j7oua",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/customer-health-dashboard-564685gvoq7j7oua?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/investor-dashboard-5q9h9ufuofnx1agv",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/investor-dashboard-5q9h9ufuofnx1agv?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/hospitality-insight-dashboard-5ajqdljgdm5jmxjl",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/hospitality-insight-dashboard-5ajqdljgdm5jmxjl?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps/featured/fleet-management-dashboard-4q6dihgsjc5sttbr",
+      "rel": null
+    },
+    {
+      "href": "https://www.taskade.com/app/fleet-management-dashboard-4q6dihgsjc5sttbr?action=clone",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/ai/apps",
+      "rel": null
+    },
+    {
+      "href": "/learn/projects",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/learn/genesis/publishing",
+      "rel": null
+    },
+    {
+      "href": "/learn/genesis/crm",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/apps",
+      "rel": null
+    },
+    {
+      "href": "/learn/genesis/storefront",
+      "rel": null
+    },
+    {
+      "href": "/create",
+      "rel": null
+    },
+    {
+      "href": "/signup?ref=landing",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2024
+}

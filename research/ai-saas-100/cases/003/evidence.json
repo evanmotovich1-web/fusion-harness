@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "p003-fc836c603944acbe",
+      "source_url": "https://northlight.ai/",
+      "publisher": "Northlight",
+      "retrieved_at": "2026-09-20T21:19:23.386682+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/003/research/fc836c603944acbe.txt",
+      "capture_sha256": "0d480c7727df951d3d97b5a486b1d2534be0bbdd17a3d4b065804d9e18b87dfe",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/003/research/fc836c603944acbe.txt:20-20",
+          "excerpt": "Your GTM AI Desktop"
+        },
+        {
+          "locator": "cases/003/research/fc836c603944acbe.txt:46-46",
+          "excerpt": "Loved by teams scaling smarter, not bigger"
+        },
+        {
+          "locator": "cases/003/research/fc836c603944acbe.txt:154-154",
+          "excerpt": "It acts as you, from your own device."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p003-b07c5236fed19199",
+      "source_url": "https://northlight.ai/pricing",
+      "publisher": "Northlight",
+      "retrieved_at": "2026-09-20T21:19:23.608224+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/003/research/b07c5236fed19199.txt",
+      "capture_sha256": "55d0282adbd04d924cea79a71b5dd63f621e67ab5d84b53b5ee168228dd4ce2b",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:32-32",
+          "excerpt": "100 AI requests / month"
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:41-41",
+          "excerpt": "80"
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:43-43",
+          "excerpt": "Unlimited AI requests"
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:58-58",
+          "excerpt": "Enterprise"
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:60-60",
+          "excerpt": "Custom"
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:73-73",
+          "excerpt": "Credits are how Northlight measures usage. Each action — like updating a CRM record, sending a message, or enriching a contact — costs a small number of credits. Most tasks use 10-20 credits."
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:81-81",
+          "excerpt": "Credits reset each billing cycle and don't roll over. We designed the plans so you have plenty of headroom for your usage level."
+        },
+        {
+          "locator": "cases/003/research/b07c5236fed19199.txt:4-4",
+          "excerpt": "free for 7 days, no credit card required."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p003-b141c7f790990b2a",
+      "source_url": "https://northlight.ai/features",
+      "publisher": "Northlight",
+      "retrieved_at": "2026-09-20T21:19:38.411645+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/003/research/b141c7f790990b2a.txt",
+      "capture_sha256": "0a918034fefbb5c95dad4d1f3b4fd9daf3f2bd81b9edd6947760338be5ec17dc",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/003/research/b141c7f790990b2a.txt:26-26",
+          "excerpt": "Stop bouncing between 10 tabs. Send LinkedIn messages, update your CRM, and enrich leads — all from one conversation."
+        },
+        {
+          "locator": "cases/003/research/b141c7f790990b2a.txt:26-26",
+          "excerpt": "Stop bouncing between 10 tabs. Send LinkedIn messages, update your CRM, and enrich leads — all from one conversation."
+        },
+        {
+          "locator": "cases/003/research/b141c7f790990b2a.txt:40-40",
+          "excerpt": "Contact enrichment and deduplication"
+        },
+        {
+          "locator": "cases/003/research/b141c7f790990b2a.txt:45-45",
+          "excerpt": "Multi-channel sequences that run autonomously"
+        },
+        {
+          "locator": "cases/003/research/b141c7f790990b2a.txt:53-53",
+          "excerpt": "In process of getting SOC 2 Type II"
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p003-d82e14b6b2e70c20",
+      "source_url": "https://northlight.ai/integrations",
+      "publisher": "Northlight",
+      "retrieved_at": "2026-09-20T21:19:38.634846+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/003/research/d82e14b6b2e70c20.txt",
+      "capture_sha256": "5111c8d04f454ee3434e0eb6e388bca39b0d23d1fb8f887e2bc9f530270e17af",
+      "capture_truncated": true,
+      "excerpts": [
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:15-15",
+          "excerpt": "Connect 30+ sales tools"
+        },
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:23-23",
+          "excerpt": "185"
+        },
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:24-24",
+          "excerpt": "integrations across"
+        },
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:22-22",
+          "excerpt": "Northlight connects to the tools you already use — through your browser session, not API keys. No setup. No permissions to configure. Just start talking."
+        },
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:47-47",
+          "excerpt": "HubSpot"
+        },
+        {
+          "locator": "cases/003/research/d82e14b6b2e70c20.txt:48-48",
+          "excerpt": "Salesforce"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

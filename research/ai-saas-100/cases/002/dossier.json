@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "record_status": "blocked",
+  "identity": {
+    "id": "002",
+    "name": "LinkBunny",
+    "canonical_url": "https://getlinkbunny.com/",
+    "category": "C02",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-c1788014a4b4c0d62a25"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "getlinkbunny.com",
+    "selection_position": 2,
+    "eligibility_evidence_ids": [
+      "web-79e6dafbfc3b5a898824"
+    ],
+    "pilot": true,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Owners of synthetic sites",
+    "job": "Review and match backlink requests with local approval/reporting state",
+    "inputs": "Reviewed synthetic profiles, DR, editable scope, clock, owner decisions, local HTML",
+    "outputs": "Deterministic assignments, expiry/rejection, local-only nofollow report",
+    "success_criteria": "Frozen matching/lifecycle rules pass, no remote publication, B1 comparison and independent review completed",
+    "included_behavior": [
+      "Same-host validation",
+      "DR matching and deterministic ties",
+      "One pending outgoing request",
+      "Reverse-pair exclusion",
+      "Seven-day deadline",
+      "Owner approval",
+      "Nofollow/local-scope verification"
+    ],
+    "excluded_behavior": [
+      "Live backlink publishing",
+      "Real marketplace supply",
+      "Editorial AI",
+      "Real API compatibility",
+      "Payments",
+      "Authentication",
+      "Actual domain-rating lookup"
+    ],
+    "external_dependencies": [
+      "Reviewed generic-model baseline or approved alternative",
+      "Independent hidden evaluation",
+      "Real network value cannot be inferred from synthetic profiles"
+    ]
+  },
+  "research": {
+    "pricing": {
+      "claim_ids": [
+        "pricing"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternatives"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary_access"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "switching_costs": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "buyer",
+      "statement": "LinkBunny addresses site owners using coding agents.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-c1788014a4b4c0d6"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow",
+      "statement": "The vendor describes reviewed profiles, one DR-matched link request, a seven-day deadline, owner review and nofollow placement/reporting.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-c1788014a4b4c0d6",
+        "p002-79e13c11d1509761"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing",
+      "statement": "The founding plan advertises $20/month for up to 10 sites with no per-backlink fees.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-79e13c11d1509761"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption",
+      "statement": "The homepage describes a small founding group, without a numeric count.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-c1788014a4b4c0d6"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations",
+      "statement": "The public setup page describes a local MCP client process calling LinkBunny over HTTPS with a token.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-5aa93945dcc9ca51"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "size",
+      "statement": "The about page identifies its builder as a solo indie developer. This is not an audited current headcount.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p002-79e6dafbfc3b5a89"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Manual partner discovery and editorial review are conceptual substitutes for automated matching. No alternative provider was benchmarked.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p002-c1788014a4b4c0d6"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Model-knowledge hypothesis grounded in the workflow, not observed competitor performance",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "The coding-agent setup and founder-operated onboarding may target developer-owned sites. Acquisition volume and conversion are unknown.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p002-5aa93945dcc9ca51",
+        "p002-79e13c11d1509761"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Unmeasured channel hypothesis",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary_access",
+      "statement": "The reviewed marketplace pool is an access dependency not recreated by local matching code.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p002-79e13c11d1509761",
+        "p002-c1788014a4b4c0d6"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Pool size, availability and quality unknown",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "edge",
+      "statement": "A real supply pool and manual review could be more defensible than the matching algorithm. A small pool could also constrain relevance. No evidence here establishes SEO, referral, or customer ROI.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p002-c1788014a4b4c0d6"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Unverified commercial thesis, not a valuation",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/002/tests/repair-v2/evaluator.json",
+    "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889",
+    "fixed_at": "2026-09-20T22:49:43.141541+00:00",
+    "input_bundle_path": "cases/002/tests/repair-v2/comparison-inputs.json",
+    "input_bundle_sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331",
+    "interface_transformation_path": "cases/002/tests/repair-v2/adapter.py",
+    "interface_transformation_sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2",
+    "historical_fixture_path": "cases/002/tests/fixtures.json",
+    "acceptance_criteria": "protocol.md plus tests/specification.md; thresholds not satisfied by local regressions",
+    "baseline_specification": "Use only repair-v2/comparison-inputs.json for B1 and B2. It contains complete state, requests, clocks and the local contract. Evaluator answers stay separate. No model comparison executed.",
+    "held_out": false
+  },
+  "implementation": {
+    "source_path": "cases/002/implementation/workflow.py",
+    "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+    "setup_instructions": "python3 -B research/ai-saas-100/cases/002/tests/repair-v2/run.py",
+    "coverage": [
+      "54 complete-input exact-state regression cases pass after repair; 13 failed against archived original source",
+      "All 20 original local regressions still pass, but their historical scenario-derived inputs are not model comparison bundles",
+      "Same-host exclusions, credentials, scoped reporting, explicit clock/state transitions, malformed IDs and non-overwriting restored-state allocation exercised"
+    ],
+    "missing_capabilities": [
+      "Agent editorial reasoning",
+      "Generic-model B1 or reviewed alternative",
+      "Independent held-out tests",
+      "Real pool and original-product observations"
+    ],
+    "dependency_license_notes": "Original code written for this campaign. Python standard library only; no vendor code or model weights used.",
+    "kind": "independent_partial",
+    "requires_inference": false
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "blocked",
+      "execution": "blocked",
+      "evaluation": "blocked",
+      "review": "not_started"
+    },
+    "receipt_paths": [
+      "cases/002/receipts/002-repair-v2-20260920T225229146957Z.json",
+      "cases/002/receipts/002-legacy-regression-after-repair-20260920T225229278649Z.json",
+      "cases/002/receipts/baseline-blocked.json"
+    ],
+    "historical_receipt_paths": [
+      "cases/002/receipts/002-local-20260920T212619053188Z.json"
+    ],
+    "historical_source_manifest": "cases/002/source-history/pre-repair-287e153d1e4f/manifest.json",
+    "repair_note": "Task 1.c repaired local behavior and comparison inputs. Original fixtures and receipts remain byte-identical. Historical source references resolve through the pre-repair archive, not current implementation bytes. Pilot acceptance remains blocked.",
+    "technical_uncertainty": [
+      "Agent editorial reasoning",
+      "Generic-model B1 or reviewed alternative",
+      "Independent held-out tests",
+      "Real pool and original-product observations"
+    ],
+    "commercial_uncertainty": [
+      "Vendor-only research; no demand, retention, billing, or ROI validation"
+    ],
+    "verdict_path": "cases/002/verdict.json",
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Pilot incomplete; independent review pending"
+      ],
+      "artifact": null
+    }
+  },
+  "original_product": {
+    "status": "not_observed",
+    "reason": "No authorized interactive service execution performed. Public page GETs are not workflow trials.",
+    "observed_at": "2026-09-20T21:29:27.052049+00:00"
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:01:53.848035+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-c1788014a4b4c0d62a25"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-c1788014a4b4c0d62a25"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Agent editorial reasoning; Generic-model B1 or reviewed alternative; Independent held-out tests; Real pool and original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Agent editorial reasoning; Generic-model B1 or reviewed alternative; Independent held-out tests; Real pool and original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Agent editorial reasoning; Generic-model B1 or reviewed alternative; Independent held-out tests; Real pool and original-product observations",
+      "evidence_ids": []
+    }
+  ],
+  "blockers": [
+    {
+      "scope": "campaign",
+      "cause": "No independently callable authorized inference verified",
+      "affected_stages": [
+        "execution",
+        "evaluation"
+      ],
+      "permitted_next_action": "Verify a no-charge model without inspecting secrets, or request explicit provider budget/authorization",
+      "evidence": [
+        "capabilities.json",
+        "cases/001/research/inference-probes.json"
+      ]
+    },
+    {
+      "scope": "product",
+      "cause": "Only partial representative workflow and builder-visible regression suite",
+      "affected_stages": [
+        "implementation",
+        "execution",
+        "review"
+      ],
+      "permitted_next_action": "Complete missing behavior and obtain independently retained held-out evaluation",
+      "evidence": [
+        "cases/002/tests/specification.md"
+      ]
+    }
+  ],
+  "research_limitations": [
+    "Four first-party pages reviewed per pilot; not extensive independent commercial research",
+    "Pricing copy is not revenue",
+    "Unknown users is not zero users",
+    "Prototype simplicity is not evidence of low company value"
+  ]
+}

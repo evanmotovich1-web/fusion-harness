@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-0a6954e1d35cf006e054",
+      "source_url": "https://www.compose.ai/",
+      "final_url": "https://www.compose.ai/",
+      "publisher": "www.compose.ai",
+      "retrieved_at": "2026-09-20T21:00:09.989004+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        },
+        {
+          "locator": "text characters 0:250",
+          "excerpt": "Compose AI: Automated Your Writing\nPricing\nFeatures\nTestimonials\nFAQ\nSign In\nInstall Extension\nAI-Powered Writing Tool\nGenerate any text using AI. Autocomplete your sentences where you type. With Compose AI, you can write emails, create documents, an"
+        },
+        {
+          "locator": "text characters 25:337",
+          "excerpt": "r Writing\nPricing\nFeatures\nTestimonials\nFAQ\nSign In\nInstall Extension\nAI-Powered Writing Tool\nGenerate any text using AI. Autocomplete your sentences where you type. With Compose AI, you can write emails, create documents, and chat faster.\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,0"
+        },
+        {
+          "locator": "text characters 73:385",
+          "excerpt": " In\nInstall Extension\nAI-Powered Writing Tool\nGenerate any text using AI. Autocomplete your sentences where you type. With Compose AI, you can write emails, create documents, and chat faster.\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With A"
+        },
+        {
+          "locator": "text characters 134:446",
+          "excerpt": "xt using AI. Autocomplete your sentences where you type. With Compose AI, you can write emails, create documents, and chat faster.\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant"
+        },
+        {
+          "locator": "text characters 314:626",
+          "excerpt": " it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your tools & accelerate your writing.\nPersonalization Of Your Writing Style\nOur platform "
+        },
+        {
+          "locator": "text characters 336:648",
+          "excerpt": "000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your tools & accelerate your writing.\nPersonalization Of Your Writing Style\nOur platform learns your \"voice\" & "
+        },
+        {
+          "locator": "text characters 263:545",
+          "excerpt": ".\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your too"
+        },
+        {
+          "locator": "text characters 955:1491",
+          "excerpt": " assistant.\nFrequently Asked Questions\nWhat is Compose AI?\nCompose AI is a free Chrome plugin that accelerates your writing, lets you use auto complete anywhere, and will decrease your time spent typing.\nWhat is the cost?\nThe plugin is free to use forever, and there is a premium version with some advanced features including use of some of our personalization features.\nHow do I contact support?\nWe can be contacted with any questions at support (at) Compose AI, and we'd love to help you in any way that we can.\nWhat about my privacy?"
+        }
+      ],
+      "capture_path": "discovery/captures/0a6954e1d35cf006e054.html",
+      "capture_sha256": "379bc58ad39793ccee1ab4c949e7016ee3e80bbfcc6406c78b88d211d19475e6",
+      "record_path": "discovery/records/0a6954e1d35cf006e054.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r024-48136d1652bdf5f4a2a0",
+      "source_url": "https://www.compose.ai/features",
+      "publisher": "www.compose.ai",
+      "retrieved_at": "2026-09-20T21:35:31.824180+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": "failed",
+      "final_url": null,
+      "capture_path": null,
+      "capture_sha256": null,
+      "capture_truncated": null,
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "record_path": "cases/024/research/records/48136d1652bdf5f4a2a0.json",
+      "research_role": "workflow",
+      "excerpts": []
+    },
+    {
+      "evidence_id": "r024-5ca7863192cbf49afe05",
+      "source_url": "https://www.compose.ai/pricing",
+      "publisher": "www.compose.ai",
+      "retrieved_at": "2026-09-20T21:35:31.720884+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.compose.ai/pricing",
+      "capture_path": "cases/024/research/captures/5ca7863192cbf49afe05.html",
+      "capture_sha256": "c3d1414b6fbff477289ad6ee51b8c77c84ba45c6244cd39add8dc5ab38e81771",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/024/research/records/5ca7863192cbf49afe05.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Compose AI | Pricing"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-3f9873f073fd16531b0c",
+      "source_url": "https://www.hyperwriteai.com/",
+      "final_url": "https://www.hyperwriteai.com/",
+      "publisher": "www.hyperwriteai.com",
+      "retrieved_at": "2026-09-20T21:00:09.404455+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "HyperWrite | AI Writing Assistant"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Use our AI writer for content generation, research, speeches, rewriting, and more. HyperWrite uses the world's most powerful artificial intelligence technology to help you work faster and smarter in our AI document editor. Hundreds of AI tools to transform your writing, communication, and research."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "HyperWrite | AI Writing Assistant"
+        },
+        {
+          "locator": "text characters 0:255",
+          "excerpt": "HyperWrite | AI Writing Assistant\nHyperWrite\nFeatures\nTemplates\nLorem ipsum dolor sit amet consectetur elit\nDocuments\nLorem ipsum dolor sit amet consectetur elit\nChrome Extension\nUse AI on any website with the HyperWrite Chrome Extension\nAutoWrite\nLorem i"
+        },
+        {
+          "locator": "text characters 113:425",
+          "excerpt": "ents\nLorem ipsum dolor sit amet consectetur elit\nChrome Extension\nUse AI on any website with the HyperWrite Chrome Extension\nAutoWrite\nLorem ipsum dolor sit amet consectetur elit\nAI Tools\nDocument Editor\nChrome Extension\nPricing\nLog in\nStart writing\nFeatured \"Write Like a Pro\" Chrome Extension →\nWrite faster. W"
+        },
+        {
+          "locator": "text characters 222:534",
+          "excerpt": "hrome Extension\nAutoWrite\nLorem ipsum dolor sit amet consectetur elit\nAI Tools\nDocument Editor\nChrome Extension\nPricing\nLog in\nStart writing\nFeatured \"Write Like a Pro\" Chrome Extension →\nWrite faster. Work smarter.\nAI writing assistant with autocomplete, web search, and citations\nAdd to Chrome\nGet started for "
+        },
+        {
+          "locator": "text characters 368:680",
+          "excerpt": "red \"Write Like a Pro\" Chrome Extension →\nWrite faster. Work smarter.\nAI writing assistant with autocomplete, web search, and citations\nAdd to Chrome\nGet started for free\nGmail\nWrite\nEdit\nChat\nTools\nResearch\nAs you work, get predictive AI writing suggestions to help\nbreak writer’s block and refine your tone.\nGe"
+        },
+        {
+          "locator": "text characters 534:846",
+          "excerpt": "free\nGmail\nWrite\nEdit\nChat\nTools\nResearch\nAs you work, get predictive AI writing suggestions to help\nbreak writer’s block and refine your tone.\nGet AI writing assistance on any draft—ask for feedback, brainstorm ideas, or rewrite anything.\nChat with your AI writing assistant—crafting ideas, refining your vision"
+        },
+        {
+          "locator": "text characters 612:924",
+          "excerpt": "ng suggestions to help\nbreak writer’s block and refine your tone.\nGet AI writing assistance on any draft—ask for feedback, brainstorm ideas, or rewrite anything.\nChat with your AI writing assistant—crafting ideas, refining your vision, and bringing your words to life.\nHundreds of powerful AI writing tools avail"
+        }
+      ],
+      "capture_path": "discovery/captures/3f9873f073fd16531b0c.html",
+      "capture_sha256": "76fdf0514a47abb5d6f7553ffb725ae8e5c4f17b2a8a1df0f7457fb0157105ae",
+      "record_path": "discovery/records/3f9873f073fd16531b0c.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

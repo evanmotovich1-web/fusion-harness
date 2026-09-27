@@ -1,0 +1,321 @@
+{
+  "baseline_id": null,
+  "case_id": "003",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/tests/run_repair_v1.py"
+  ],
+  "component_check_passed": true,
+  "configuration": {
+    "concurrency": 1,
+    "executor": {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/execute.py",
+      "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+    },
+    "fault_injection": false,
+    "mode": "synthetic_persistence_components",
+    "model_calls": 0,
+    "runner": {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/run_repair_v1.py",
+      "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8"
+    },
+    "timeout_seconds": 10
+  },
+  "costs": [
+    {
+      "assumptions": [],
+      "category": "unknown",
+      "classification": "unknown",
+      "unit": "USD",
+      "unknown_reason": "Not measured",
+      "value": null
+    }
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "ended_at": "2026-09-22T03:32:10.268627+00:00",
+  "errors": [],
+  "execution_kind": "real",
+  "exit_status": 0,
+  "fixtures": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.repair-v1.json",
+    "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+  },
+  "human_interventions": [
+    "Builder-authored exposed tests. Persistence suite includes two explicit I/O fault injections."
+  ],
+  "implementation": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+    "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+  },
+  "inference_executed": false,
+  "input_bundle": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/fixtures.repair-v1.json",
+    "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+  },
+  "input_bundle_kind": "Builder-visible component fixture with evaluator answers, not a model input",
+  "latency": {
+    "assumptions": [
+      "Full test subprocess, not product latency"
+    ],
+    "category": "latency",
+    "classification": "measured",
+    "unit": "seconds",
+    "unknown_reason": null,
+    "value": 0.03198266700000002
+  },
+  "missing_capabilities": [
+    "Natural-language inference",
+    "Generic-model baseline",
+    "Independent hidden evaluation"
+  ],
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "original_product_status": "not_observed",
+  "outputs": [
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.stdout.json",
+      "sha256": "76dd6507fb03b1fde6df4df65ba86ba78f2763b234cb897b48c3934dfa09dc27"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "product_acceptance": false,
+  "quality": [],
+  "redactions": [],
+  "retries": [],
+  "run_id": "003-persistence-v1-20260922T033210014938Z-repair",
+  "runtime": {
+    "platform": "Darwin",
+    "python": "3.9.6"
+  },
+  "schema_version": 1,
+  "started_at": "2026-09-22T03:32:10.236440+00:00",
+  "status": "completed",
+  "system": "B2",
+  "test_results": [
+    {
+      "outcome": "passed",
+      "test_id": "exact-interleaved-groups"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "exact-empty"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "exact-no-duplicates"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "exact-casefold"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "exact-update-full-records"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "exact-inert-note"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "request-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "request-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "request-empty-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "request-string"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-boolean"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-number"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "action-send"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contacts-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contacts-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contacts-string"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-empty-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-id-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-id-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-id-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-id-whitespace"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "contact-duplicate-id"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "email-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "email-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "email-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "email-empty-local"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-empty-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-missing-id"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-only"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-forbidden-field"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-boolean"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-number"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-whitespace"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "patch-id-missing-contact"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-null"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-boolean"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-number"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "status-unknown"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "note-list"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "note-object"
+    },
+    {
+      "outcome": "passed",
+      "test_id": "note-null"
+    }
+  ],
+  "timeouts": [],
+  "usage": {
+    "unknown_reason": "Not measured",
+    "value": null
+  }
+}

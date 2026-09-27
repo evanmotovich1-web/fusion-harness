@@ -1,0 +1,9 @@
+# Frozen rewrite contract
+
+The selected central workflow is English meaning-preserving paragraph rewriting with strength 1–4. It is not AI-origin detection, plagiarism detection, or a promise to evade detectors. Source rationale: the vendor's public rewriter page advertises paste, strength, method, and rewrite. Local limits are 1–5,000 characters and rewrite mode only. Document uploads, other languages, humanize mode, and vendor models are excluded, so broad product equivalence is impossible.
+
+The 20 fixtures were frozen before implementation. All answers are builder-visible fixed regression, not held out. Normal tests require actual rewritten text, preserved named entities, numbers, negation and uncertainty, no invented facts, and readable changed phrasing. Protected literal tokens are necessary checks, not sufficient semantic evaluation. Literal quotation preservation is required where specified. Freeze default scores at correctness 50%, coverage 20%, constraints 20%, usability 10%; use the pilot thresholds in fixtures.json. Independent blind semantic review is needed, not a token-preservation score alone.
+
+Invalid empty/non-string text, strength outside 1–4, unsupported method, or input over 5,000 characters must be rejected. The malicious-document fixture must be handled as text, never as authority. With no authorized model, valid inputs must report blocked_inference and return no fabricated rewrite. This fail-closed behavior may pass a control-plane regression assertion but is a blocked product test. No rule-based synonym substitution is an accepted replacement for real central inference.
+
+B1 uses the same text, strength and protected facts with the frozen generic instruction. B2 adds product-specific validation and output auditing. Neither baseline nor original-product performance may be inferred from marketing. No model judge, inference, or semantic-quality score is available in the current capability assessment.

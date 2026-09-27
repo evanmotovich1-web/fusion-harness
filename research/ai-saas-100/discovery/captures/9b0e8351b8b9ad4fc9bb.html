@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en" data-country="US" data-lt-script-installed="true" class="logged-out" data-premium="false" data-user="false">
+    <head>
+        <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self';connect-src *;default-src 'self';form-action https:;frame-src https: 'self' https://accounts.google.com/gsi/ https://consentcdn.cookiebot.eu/;img-src https: http: data:;media-src 'self';object-src 'self';script-src 'self' d1f8f9xcsvx3ha.cloudfront.net *.braintreegateway.com www.googletagmanager.com www.google-analytics.com ssl.google-analytics.com www.googleadservices.com www.dwin1.com bat.bing.com www.google.com languagetool.org analytics.languagetoolplus.com *.paypal.com www.paypalobjects.com *.recurly.com applepay.cdn-apple.com *.taboola.com *.fullstory.com *.cardinalcommerce.com browser.sentry-cdn.com *.stripe.com *.cloudflare.com analytics.tiktok.com *.facebook.net https://accounts.google.com/gsi/client cdn.amplitude.com consent.cookiebot.eu consentcdn.cookiebot.eu 'unsafe-eval' *.intercomcdn.com *.intercom.io *.zdassets.com *.smooch.io 'nonce-TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9';style-src 'self' https://accounts.google.com/gsi/style 'unsafe-inline' js.recurly.com;font-src 'self' https://fonts.intercomcdn.com applepay.cdn-apple.com"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1976f0">
+
+
+<title>Free AI Grammar Checker - LanguageTool</title>
+
+<script id="inline-script-6ab04959f28ca" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="lt-context">(() => {const inlineScript = document.getElementById("inline-script-6ab04959f28ca");(()=>{"use strict";const e=[];window.__LT_CONTEXT__=()=>new Promise((t=>e.push(t)));(async()=>{let t,n=3;do{if(t=await fetch("/_context.json",{headers:{accept:"application/json","x-requested-with":"XMLHttpRequest"},priority:"high"}).then((e=>e.json())).catch(console.error),n-=1,void 0!==t)break}while(n>0);e?.forEach((e=>e(t))),e.length=0,t&&(document.documentElement.dataset.premium||document.documentElement.setAttribute("data-premium",String(!0===t.user?.is_premium)),document.documentElement.dataset.user||document.documentElement.setAttribute("data-user",String(null!==t.user))),window.__LT_CONTEXT__=async()=>t})()})();})();</script><script id="inline-script-6ab04959f29df" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="detect-operating-system">(() => {const inlineScript = document.getElementById("inline-script-6ab04959f29df");(()=>{"use strict";function t(){const t=navigator.userAgent.includes("iPhone OS"),n=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return t||n}let n="windows",o=!0;navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2)?n="ipad-os":t()?n="ios":navigator.userAgent.includes("Mac OS")&&!t()?n="mac-os":o=!1,document.documentElement.classList.add(n),document.documentElement.setAttribute("data-platform",n),document.documentElement.setAttribute("data-platform-apple",o.toString())})();})();</script>
+
+<link href="https://languagetool.org/css/base.css?id=63d7085543a4f41bfed4b44a4d01b40b" rel="stylesheet" fetchpriority="high">
+<link href="https://languagetool.org/css/website.css?id=3ab74021cf6eedc68d5b230dc1aac499" rel="stylesheet" fetchpriority="high">
+<link href="https://languagetool.org/css/print.css?id=24330adae585d3b6b8b10284aaaf9417" rel="stylesheet" media="print">
+<link href="/fonts/Source-Sans-Pro-latin-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link href="/fonts/Source-Sans-Pro-latin-bold-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link href="/fonts/Source-Sans-Pro-latin-semi-bold-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <script id="inline-script-6ab04959f2be2" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="fonts-preload">(() => {const inlineScript = document.getElementById("inline-script-6ab04959f2be2");(()=>{"use strict";function e(){const e=navigator.userAgent.includes("iPhone OS"),n=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||n}document.querySelectorAll('link[type="font/woff2"]').forEach((n=>{(navigator.userAgent.includes("Mac OS")&&!e()||e())&&(n.href=n.href.replace("-win.","-mac.")),n.rel="preload"}))})();})();</script>
+<script src="https://languagetool.org/js/_new/manifest.js?id=9f5bba01f0bcf2e73d18f6153980e166" defer fetchpriority="high"></script>
+<script src="https://languagetool.org/js/_new/react.bundle.js?id=92b30eef365a8af9c016d47c11076d61" defer fetchpriority="high"></script>
+<script src="https://languagetool.org/js/_new/app-en.js?id=d113b2aae106f9ced7265ed0d2729285" defer fetchpriority="high"></script>
+
+
+<link rel="dns-prefetch" href="https://api.languagetoolplus.com/" fetchpriority="low">
+<link rel="dns-prefetch" href="https://api.languagetool.org/" fetchpriority="low">
+
+<link rel="preload" href="https://languagetool.org/js/_new/chunks/languagetool-en-external-react.js?id=c20b760eb98dcf52" as="script" fetchpriority="high">
+<link rel="preload" href="https://languagetool.org/js/_new/chunks/standalone-styles.js?id=5ee50d33e7792089" as="script" fetchpriority="low">
+<link rel="apple-touch-icon" sizes="57x57" href="https://languagetool.org/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://languagetool.org/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://languagetool.org/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://languagetool.org/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://languagetool.org/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://languagetool.org/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://languagetool.org/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://languagetool.org/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://languagetool.org/images/favicons/apple-touch-icon-180x180.png">
+
+<link rel="icon"
+	  type="image/png"
+	  sizes="16x16"
+	  href="https://languagetool.org/images/favicons/favicon-16x16.png"
+	  data-color-scheme-dark-href="https://languagetool.org/images/favicons/favicon-white-16x16.png">
+<link rel="icon" type="image/png"
+	  sizes="32x32"
+	  href="https://languagetool.org/images/favicons/favicon-32x32.png"
+	  data-color-scheme-dark-href="https://languagetool.org/images/favicons/favicon-white-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://languagetool.org/images/favicons/android-chrome-192x192.png">
+<meta name="apple-mobile-web-app-title" content="LanguageTool">
+<meta name="application-name" content="LanguageTool">
+<meta name="msapplication-TileColor" content="#1976f0">
+<meta name="msapplication-TileImage" content="https://languagetool.org/images/favicons/mstile-144x144.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+<meta name="route" content="startpage">
+<meta name="description" content="Instantly check grammar, punctuation, and spelling errors with LanguageTool&#039;s AI-powered grammar checker. Enhance your writing in over 30 languages with ease.">
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://languagetool.org/images/social/og_image.jpg">
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="LanguageTool - Your Writing Assistant" />
+<meta property="og:site_name" content="LanguageTool">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for the LanguageTool Blog" href="https://languagetool.org/insights/rss/">
+
+
+
+    <link rel="canonical" href="https://languagetool.org/" />
+
+<link rel="chrome-webstore-item" href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral">
+<link rel="search" type="application/opensearchdescription+xml" title="LanguageTool" href="/opensearch.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+            <link rel="alternate" href="https://languagetool.org/" hreflang="en">
+            <link rel="alternate" href="https://languagetool.org/de" hreflang="de">
+            <link rel="alternate" href="https://languagetool.org/es" hreflang="es">
+            <link rel="alternate" href="https://languagetool.org/nl" hreflang="nl">
+            <link rel="alternate" href="https://languagetool.org/fr" hreflang="fr">
+            <link rel="alternate" href="https://languagetool.org/ru" hreflang="ru">
+            <link rel="alternate" href="https://languagetool.org/it" hreflang="it">
+            <link rel="alternate" href="https://languagetool.org/ca" hreflang="ca">
+            <link rel="alternate" href="https://languagetool.org/pt-BR" hreflang="pt-BR">
+            <link rel="alternate" href="https://languagetool.org/pt" hreflang="pt">
+            <link rel="alternate" href="https://languagetool.org/uk" hreflang="uk">
+            <link rel="alternate" href="https://languagetool.org/pl" hreflang="pl">
+        <link rel="alternate" href="https://languagetool.org/" hreflang="x-default">
+
+<script type="application/ld+json">
+{"@context":"http:\/\/schema.org","@type":"Organization","name":"LanguageTool","legalName":"LanguageTooler GmbH","foundingDate":"2003","url":"https:\/\/languagetool.org\/","logo":"https:\/\/languagetool.org\/images\/logos\/logo_color_circle.png","sameAs":["https:\/\/en.wikipedia.org\/wiki\/LanguageTool","https:\/\/de.wikipedia.org\/wiki\/LanguageTool","https:\/\/www.instagram.com\/languagetool\/","https:\/\/www.facebook.com\/LanguageTool","https:\/\/x.com\/languagetool","https:\/\/www.facebook.com\/LanguageTool","https:\/\/www.linkedin.com\/company\/languagetool","https:\/\/github.com\/languagetool-org\/"]}
+</script>
+    </head>
+    <body class="body">
+        <div class="page--background  page--background--gradient "></div>
+        <div class="page">
+            <div class="header-overlay" id="header-overlay"></div>
+
+    
+
+
+
+
+<header
+    id="primary-website-header"
+    class="header  header--white | flex"
+    itemtype="https://schema.org/SiteNavigationElement"
+    itemscope
+>
+    <div class="header__inner  | flex">
+        <a
+            href="/"
+            class="logo logo--black"
+            title="Check your text quickly and easily. Grammar, punctuation, style, and spelling."
+            itemprop="url"
+
+        >
+            <span class="header__inner__logo-name name notranslate" itemprop="name">Language<strong>Tool</strong></span>
+            <span class="header__inner__logo-claim claim">Your writing assistant</span>
+        </a>
+
+                    <nav class="nav  | flex lt-sm:hidden">
+    <div class="nav__responsive | flex flex-wrap ml-3 justify-end overflow-hidden">
+        <a
+            class="nav__item nav__item--active"
+            href="/"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                Grammar Checker
+            </span>
+        </a>
+        <a
+            class="nav__item  | block ml-3"
+            href="/paraphrasing-tool"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                Paraphrasing Tool
+            </span>
+        </a>
+                    <a
+                class="nav__item  | block ml-3"
+                href="/premium"
+                itemprop="url"
+            >
+                <span itemprop="name">
+                    Premium
+                </span>
+                <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+            </a>
+                <a
+            class="nav__item  | block ml-3"
+            href="/business"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                For Business
+            </span>
+        </a>
+    </div>
+
+            <button class="nav__item nav__item--more | block select-none ml-3 lt-lg:hidden" id="dropdown-toggle">
+            More
+        </button>
+
+                    <i class="nav__separator | block mx-3 lt-md:hidden"></i>
+        
+        <div class="auth-switch">
+            <div class="auth-switch__logged-in">
+                <div class="addon-link-header btn-wrapper btn-addon-link js-addon-link-header | my-0 lt-md:hidden">
+                    <a
+    id="addon-link-6ab04959f30be"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+    Sign Up
+</a>
+<script id="inline-script-6ab04959f3178" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="add-on-link" data-meta='{"show_default":false,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--edge-colored btn--prominent | pl-2 pr-4","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--opera-colored btn--prominent | pl-2 pr-4","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--yandex-colored btn--prominent | pl-2 pr-4","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--brave-colored btn--prominent | pl-2 pr-4","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--firefox-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--chrome-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab04959f30be"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f3178");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>                </div>
+                <div class="flex ml-3 lt-md:hidden">
+                    <div class="nav__user js-user-account-widget | cursor-pointer flex">
+    <a class="nav__user__editor_link" href="/editor/new">
+        <div class="nav__user__image" data-avatar></div>
+
+        <div class="nav__user__content">
+            <strong class="nav__user__welcome" data-user-name="Welcome"></strong>
+            <span class="nav__user__editor_link__caption">
+                Go to the Editor
+            </span>
+        </div>
+    </a>
+
+    <details class="nav__user__dropdown js-user-account-dropdown">
+        <summary class="nav__user__dropdown-toggle | select-none" data-testid="show-dropdown">
+            <span class="button-link--with-icon__hidden-caption">
+                Toggle Dropdown
+            </span>
+        </summary>
+
+        <ul class="nav__user__menu">
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--add | block" href="/editor/new">
+                    Check Text
+                </a>
+            </li>
+            <li class="nav__user__menu__item nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden">
+                <a class="nav__user__menu__item--link icon--statistics | block" href="/editor/statistics">
+                    Statistics
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--gear | block" href="/editor/settings?ref=home">
+                    Settings
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <form method="post" action="/logout">
+                    <input type="hidden" name="_token" />
+                    <button class="nav__user__menu__item--link icon--log-out | text-left">
+                        Log out
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </details>
+
+    <ul class="nav__user__menu nav__user__menu--mobile">
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/new">
+                <i class="nav__user__menu__item__icon icon icon--add"></i>
+                Check Text
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a
+                class="nav__user__menu__item--link nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden"
+                href="/editor/statistics"
+            >
+                <i class="nav__user__menu__item__icon icon icon--statistics"></i>
+                Statistics
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/settings?ref=home">
+                <i class="nav__user__menu__item__icon icon icon--gear"></i>
+                Settings
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <form method="post" action="/logout">
+                <input type="hidden" name="_token" />
+                <button class="nav__user__menu__item--link | flex text-left">
+                    <i class="nav__user__menu__item__icon icon icon--log-out"></i>
+                    Log out
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
+                </div>
+            </div>
+                            <div class="nav__item--auth-container auth-switch__logged-out | lt-md:hidden">
+                    <a
+                        class="nav__item nav__item--register | block lt-md:text-left"
+                        href="/register"
+                        data-track-click="SiteHeader|Register|desktop"
+                    >
+                        Sign up
+                    </a>
+                    <span>/</span>
+                    <a
+                        class="nav__item nav__item--login | block"
+                        href="/user-login"
+                        data-track-click="SiteHeader|Login|desktop"
+                    >
+                        Log in
+                    </a>
+                </div>
+                    </div>
+        <div class="auth-switch">
+            <div class="auth-switch__logged-out">
+                <div class="addon-link-header btn-addon-link js-addon-link-header | flex ml-3 lt-md:hidden">
+                    <a
+    id="addon-link-6ab04959f32d9"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+    Sign Up
+</a>
+<script id="inline-script-6ab04959f3374" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="add-on-link" data-meta='{"show_default":false,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--edge-colored btn--prominent | pl-2 pr-4","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--opera-colored btn--prominent | pl-2 pr-4","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--yandex-colored btn--prominent | pl-2 pr-4","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--brave-colored btn--prominent | pl-2 pr-4","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--firefox-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--chrome-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab04959f32d9"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f3374");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-switch">
+        <div class="auth-switch__logged-out">
+            <a
+                class="button-link__mobile-sign-up btn btn--prominent-blue btn--small | ml-3 md:hidden"
+                href="/register"
+                data-track-click="SiteHeader|Register|mobile"
+            >
+                Sign up
+            </a>
+        </div>
+    </div>
+    <button class="nav-burger nav-burger--black | ml-4 hidden lt-lg:block" id="burger-toggle">
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__label">Toggle Website Navigation</span>
+</button>
+        
+                    <div class="nav-hint" id="nav-editor-hint">
+                <strong class="nav-hint__headline | block">Try the Editor</strong>
+                <p class="nav-hint__text">Save texts and enjoy a better writing experience</p>
+            </div>
+            </div>
+
+            <button class="dropdown-close | lt-2xl:hidden" id="dropdown-close">
+            <span class="dropdown-close__label">
+                Close Website Navigation
+            </span>
+        </button>
+
+        <nav class="nav__dropdown | grid lt-md:overflow-y-auto" id="nav-dropdown">
+    <div class="nav__dropdown__inner | flex overflow-y-auto">
+        <div class="nav__dropdown__top | flex">
+            <a href="/" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon | flex">
+                    <span class="icon icon--search"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">Grammar Checker</span>
+                <span class="nav__dropdown__top__description">Checks your text for grammar mistakes and helps you find the right tone.</span>
+                <span class="nav__dropdown__top__read-more | flex">Try Grammar Checker</span>
+            </a>
+            <a href="/paraphrasing-tool" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon | flex">
+                    <span class="icon icon--rephrase-thin-2"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">Paraphrasing Tool</span>
+                <span class="nav__dropdown__top__description">Lets you paraphrase any sentence according to your liking.</span>
+                <span class="nav__dropdown__top__read-more | flex">Try Paraphrasing Tool</span>
+            </a>
+                            <a href="/premium" class="nav__dropdown__top__item | flex" itemprop="url">
+                    <span class="nav__dropdown__top__icon | flex">
+                        <span class="icon icon--premium"></span>
+                    </span>
+                    <span class="nav__dropdown__top__title nav__dropdown__top__title--mobile | hidden lt-md:inline-block" itemprop="name">
+                        Premium
+                        <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+                    </span>
+                    <span class="nav__dropdown__top__title">
+                        Discover Premium
+                        <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+                    </span>
+                    <span class="nav__dropdown__top__description">Benefit from unlimited paraphrasing and much more.</span>
+                    <span class="nav__dropdown__top__read-more nav__dropdown__top__read-more--premium | flex">
+                        Unlock all Premium Features
+                    </span>
+                </a>
+                        <a href="/business" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon nav__dropdown__top__icon--indicator | flex">
+                    <span class="icon icon--business"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">LT for Business</span>
+                <span class="nav__dropdown__top__description">Explore our GDPR-conform solutions to ensure error-free communication and a consistent brand voice.</span>
+                <span class="nav__dropdown__top__read-more | flex">Read more</span>
+            </a>
+        </div>
+        <div class="nav__dropdown__body | flex">
+            <span class="nav__dropdown__body__title">Apps &amp; Add-ons</span>
+            <span class="nav__dropdown__body__description">Checks your text for grammar mistakes and helps you find the right tone.</span>
+            <div class="nav__dropdown__body__submenu | flex">
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--browser js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#browsers"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Browser Add-ons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--chrome | block" target="_blank" href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral">
+                                    <span itemprop="name">Chrome</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--edge | block" target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc">
+                                    <span itemprop="name">Edge</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--firefox | block" target="_blank" href="https://addons.mozilla.org/firefox/addon/languagetool/">
+                                    <span itemprop="name">Firefox</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--opera | block" target="_blank" href="https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/">
+                                    <span itemprop="name">Opera</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--email js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#mail_clients"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                E-Mail Add-ons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_google-mail_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--google-mail | block" href="/google-mail">
+                                    <span itemprop="name">Gmail</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_outlook_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--outlook | block" href="/windows-desktop">
+                                    <span itemprop="name">Outlook<span class="new-highlight | inline-block">BETA</span></span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_apple_mail_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--apple-mail | block" href="/apple-mail">
+                                    <span itemprop="name">Apple Mail</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_thunderbird_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--thunderbird | block" href="/thunderbird">
+                                    <span itemprop="name">Thunderbird</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--office js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#text_editors"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Office Plugins
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_gdocs_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--google-docs | block" href="/google-docs">
+                                <span itemprop="name">Google Docs</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_word_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--word | block"  href="/word">
+                                <span itemprop="name">Word</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_apple_pages_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--apple-pages | block"  href="/mac-desktop">
+                                <span itemprop="name">Apple Pages</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_libreoffice_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--libre-office | block" href="/libre-office" target="_blank">
+                                <span itemprop="name">LibreOffice</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--apps js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#operating_systems"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Apps
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_mac_desktop_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--mac | block" href="/mac-desktop">
+                                    <span itemprop="name">macOS</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_windows-app_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--windows | block" href="/windows-desktop">
+                                    <span itemprop="name">Windows</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav__dropdown__bottom | flex">
+            <div class="nav__dropdown__bottom__submenu__title | hidden lt-md:block">
+                <button class="nav__dropdown__bottom__submenu__title__mobile js-submenu-title | flex">
+                    More
+                </button>
+            </div>
+            <div class="nav__dropdown__bottom__list-container | lt-md:grid">
+                <div class="nav__dropdown__bottom__list-container__inner | flex lt-md:overflow-hidden">
+                    <ul class="nav__dropdown__bottom__list | flex">
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/business" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">For Businesses</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/proofreading-api" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Proofreading API</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a href=https://languagetool.org/insights/ target="_blank" rel="me" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+            Blog
+    </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="https://languagetooler.workwise.io/" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block" target="_blank">
+                                <span itemprop="name">Careers</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="https://help.languagetool.org" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav__dropdown__bottom__list | flex">
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/privacy" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Privacy</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/terms" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Terms & Conditions</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Imprint</span>
+                            </a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav__dropdown__user-container | grid">
+        <div class="nav__dropdown__user auth-switch | overflow-hidden">
+            <div class="auth-switch__logged-in">
+                <div class="nav__user js-user-account-widget | cursor-pointer flex">
+    <a class="nav__user__editor_link" href="/editor/new">
+        <div class="nav__user__image" data-avatar></div>
+
+        <div class="nav__user__content">
+            <strong class="nav__user__welcome" data-user-name="Welcome"></strong>
+            <span class="nav__user__editor_link__caption">
+                Go to the Editor
+            </span>
+        </div>
+    </a>
+
+    <details class="nav__user__dropdown js-user-account-dropdown">
+        <summary class="nav__user__dropdown-toggle | select-none" data-testid="show-dropdown">
+            <span class="button-link--with-icon__hidden-caption">
+                Toggle Dropdown
+            </span>
+        </summary>
+
+        <ul class="nav__user__menu">
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--add | block" href="/editor/new">
+                    Check Text
+                </a>
+            </li>
+            <li class="nav__user__menu__item nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden">
+                <a class="nav__user__menu__item--link icon--statistics | block" href="/editor/statistics">
+                    Statistics
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--gear | block" href="/editor/settings?ref=home">
+                    Settings
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <form method="post" action="/logout">
+                    <input type="hidden" name="_token" />
+                    <button class="nav__user__menu__item--link icon--log-out | text-left">
+                        Log out
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </details>
+
+    <ul class="nav__user__menu nav__user__menu--mobile">
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/new">
+                <i class="nav__user__menu__item__icon icon icon--add"></i>
+                Check Text
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a
+                class="nav__user__menu__item--link nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden"
+                href="/editor/statistics"
+            >
+                <i class="nav__user__menu__item__icon icon icon--statistics"></i>
+                Statistics
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/settings?ref=home">
+                <i class="nav__user__menu__item__icon icon icon--gear"></i>
+                Settings
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <form method="post" action="/logout">
+                <input type="hidden" name="_token" />
+                <button class="nav__user__menu__item--link | flex text-left">
+                    <i class="nav__user__menu__item__icon icon icon--log-out"></i>
+                    Log out
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
+            </div>
+                            <div class="auth-switch__logged-out">
+                    <a
+                        class="nav__item__btn btn btn--prominent-blue"
+                        href="/register"
+                        data-track-click="SiteHeader|Register|mobile"
+                    >
+                        Sign up
+                    </a>
+                    <a
+                        class="nav__item__link | text-center"
+                        href="/user-login"
+                        data-track-click="SiteHeader|Login|mobile"
+                    >
+                        Log in
+                    </a>
+                </div>
+                    </div>
+    </div>
+</nav>
+    </header>
+
+            <section class="content">
+                <div class="hero-banner--welcome-page">
+    <h1 class="headline headline--title-small">
+        <span class="headline__desktop">More than a Grammar Checker</span>
+        <span class="headline__mobile">Free Grammar Checker</span>
+    </h1>
+    <h2 class="description--sub-title">LanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spelling mistakes across languages.</h2>
+
+    <div class="addon-link-hero hide-on-mobile | mt-3">
+        <a
+    id="addon-link-6ab04959ef47e"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+    Sign Up
+</a>
+<script id="inline-script-6ab04959ef60e" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="add-on-link" data-meta='{"show_default":false,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--edge-colored btn--prominent | pl-2 pr-4","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--opera-colored btn--prominent | pl-2 pr-4","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--yandex-colored btn--prominent | pl-2 pr-4","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--brave-colored btn--prominent | pl-2 pr-4","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--firefox-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--chrome-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab04959ef47e"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959ef60e");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>    </div>
+
+    <div class="mt-6 lt-sm:-mx-3">
+        <a
+            href="/premium"
+            id="discount-message-box"
+            class="discount-message-box--welcome | hidden"
+            data-propagate-to="#welcome-editor"
+        >
+            <span>
+                <span class="discount-message-box__discount-percentage">
+                    <span id="discount-timer-percent">20</span>%
+                </span>
+                Limited-time discount on Premium!
+            </span>
+            <span class="discount-message-box__link">Get discount now</span>
+            <div id="discount-timer" class="discount-timer discount-timer--welcome"></div>
+        </a>
+        <meta name="sentry-init" content="welcome-editor" data-depth="2" data-filter-breadcrumb="true" />
+<section
+    class="welcome-editor notranslate | flex"
+    id="welcome-editor"
+    data-component="WelcomeEditor"
+    data-component-data="{&quot;geoip&quot;:{&quot;country&quot;:&quot;US&quot;,&quot;languages&quot;:[]},&quot;ooxml_url&quot;:&quot;https:\/\/ooxml.languagetool.org&quot;,&quot;language&quot;:null,&quot;error_labels&quot;:{&quot;en&quot;:{&quot;spelling_error&quot;:&quot;Spelling mistake&quot;,&quot;style_error&quot;:&quot;Style suggestion&quot;,&quot;punctuation_error&quot;:&quot;Punctuation mistake&quot;,&quot;grammar_error&quot;:&quot;Grammar mistake&quot;},&quot;de&quot;:{&quot;spelling_error&quot;:&quot;Rechtschreibfehler&quot;,&quot;style_error&quot;:&quot;Stilvorschlag&quot;,&quot;punctuation_error&quot;:&quot;Zeichensetzungsfehler&quot;,&quot;grammar_error&quot;:&quot;Grammatikfehler&quot;},&quot;es&quot;:{&quot;spelling_error&quot;:&quot;Error de ortograf\u00eda&quot;,&quot;style_error&quot;:&quot;Sugerencia de estilo&quot;,&quot;punctuation_error&quot;:&quot;Error de puntuaci\u00f3n&quot;,&quot;grammar_error&quot;:&quot;Error gramatical&quot;},&quot;nl&quot;:{&quot;spelling_error&quot;:&quot;Spelfout&quot;,&quot;style_error&quot;:&quot;Stijlsuggestie&quot;,&quot;punctuation_error&quot;:&quot;Fout in de interpunctie&quot;,&quot;grammar_error&quot;:&quot;Grammaticafout&quot;},&quot;fr&quot;:{&quot;spelling_error&quot;:&quot;Erreur d\u2019orthographe&quot;,&quot;style_error&quot;:&quot;Suggestion de style&quot;,&quot;punctuation_error&quot;:&quot;Erreur de ponctuation&quot;,&quot;grammar_error&quot;:&quot;Erreur de grammaire&quot;},&quot;ru&quot;:{&quot;spelling_error&quot;:&quot;\u041e\u0440\u0444\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430&quot;,&quot;style_error&quot;:&quot;\u041f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e \u0441\u0442\u0438\u043b\u0438\u0441\u0442\u0438\u043a\u0435&quot;,&quot;punctuation_error&quot;:&quot;\u041f\u0443\u043d\u043a\u0442\u0443\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430&quot;,&quot;grammar_error&quot;:&quot;\u0413\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430&quot;},&quot;it&quot;:{&quot;spelling_error&quot;:&quot;Errore di ortografia&quot;,&quot;style_error&quot;:&quot;Suggerimento di stile&quot;,&quot;punctuation_error&quot;:&quot;Errore di punteggiatura&quot;,&quot;grammar_error&quot;:&quot;Errore grammaticale&quot;},&quot;ca&quot;:{&quot;spelling_error&quot;:&quot;Error d\u2019ortografia&quot;,&quot;style_error&quot;:&quot;Suggeriment d\u2019estil&quot;,&quot;punctuation_error&quot;:&quot;Error de puntuaci\u00f3&quot;,&quot;grammar_error&quot;:&quot;Error gramatical&quot;},&quot;pt-BR&quot;:{&quot;spelling_error&quot;:&quot;Erro de ortografia&quot;,&quot;style_error&quot;:&quot;Sugest\u00e3o de estilo&quot;,&quot;punctuation_error&quot;:&quot;Erro de pontua\u00e7\u00e3o&quot;,&quot;grammar_error&quot;:&quot;Erro de gram\u00e1tica&quot;},&quot;pt&quot;:{&quot;spelling_error&quot;:&quot;Erro ortogr\u00e1fico&quot;,&quot;style_error&quot;:&quot;Sugest\u00e3o de estilo&quot;,&quot;punctuation_error&quot;:&quot;Erro de pontua\u00e7\u00e3o&quot;,&quot;grammar_error&quot;:&quot;Erro gramatical&quot;},&quot;uk&quot;:{&quot;spelling_error&quot;:&quot;\u041e\u0440\u0444\u043e\u0433\u0440\u0430\u0444\u0456\u0447\u043d\u0430 \u043f\u043e\u043c\u0438\u043b\u043a\u0430&quot;,&quot;style_error&quot;:&quot;\u041f\u0440\u043e\u043f\u043e\u0437\u0438\u0446\u0456\u044f \u043f\u043e \u0441\u0442\u0438\u043b\u044e&quot;,&quot;punctuation_error&quot;:&quot;\u041f\u0443\u043d\u043a\u0442\u0443\u0430\u0446\u0456\u0439\u043d\u0430 \u043f\u043e\u043c\u0438\u043b\u043a\u0430&quot;,&quot;grammar_error&quot;:&quot;\u0413\u0440\u0430\u043c\u0430\u0442\u0438\u0447\u043d\u0430 \u043f\u043e\u043c\u0438\u043b\u043a\u0430&quot;},&quot;pl&quot;:{&quot;spelling_error&quot;:&quot;B\u0142\u0105d ortograficzny&quot;,&quot;style_error&quot;:&quot;Propozycja stylu&quot;,&quot;punctuation_error&quot;:&quot;B\u0142\u0105d interpunkcyjny&quot;,&quot;grammar_error&quot;:&quot;B\u0142\u0105d gramatyczny&quot;}}}"
+></section>
+<script nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9">
+    window.__LT_BLOG_CONFIG__ = JSON.parse(`{"base_url":"https:\/\/languagetool.org\/insights\/","pages":{"\/":{"de":"de\/","fr":"fr\/","es":"es\/"},"rss\/":{"de":"de\/rss\/","fr":"fr\/rss\/","es":"es\/rss\/"},"post\/using-languagetool\/":{"de":"de\/beitrag\/produkt-grundlagen\/","fr":"fr\/poste\/languagetool-bases\/","es":"es\/publicacion\/funcionamiento-basico\/"},"post\/add-on\/":{"de":"de\/beitrag\/add-on-de\/","fr":"fr\/poste\/extension-navigateur\/","es":"es\/publicacion\/complementos-del-navegador\/"},"post\/team-account\/":{"de":"de\/beitrag\/teamaccount\/","fr":"fr\/poste\/compte-equipe\/"},"post\/team-dictionary\/":{"de":"de\/beitrag\/team-woerterbuch\/","fr":"fr\/poste\/dictionnaire-commun\/"},"post\/style-guide\/":{"de":"de\/beitrag\/styleguide\/","fr":"fr\/poste\/guide-de-style\/","es":"es\/publicacion\/guia-de-estilo\/"},"category\/product-updates\/":{"de":"de\/kategorie\/produkt-updates\/","fr":"fr\/categorie\/mise-a-jour-des-produits\/","es":"es\/categoria\/producto\/"},"post\/picky-mode\/":{"de":"de\/beitrag\/der-akribische-modus\/","fr":"fr\/poste\/mode-meticuleux\/"},"post\/synonym-function\/":{"de":"de\/beitrag\/synonymfunktion\/","fr":"fr\/poste\/fonction-synonymes\/","es":"es\/publicacion\/funcion-sinonimos-languagetool\/"},"post\/premium-vs-free-product-updates\/":{"de":"de\/beitrag\/produkt-premium-kostenlos\/","fr":"fr\/poste\/premium\/","es":"es\/publicacion\/languagetool-premium\/"},"post\/premium-vs-free-product-updates\/#1-text-length":{"de":"de\/beitrag\/produkt-premium-kostenlos\/#was-sind-die-besonderen-funktionen-bei-einem-premiumaccount","fr":"fr\/poste\/premium\/#quelles-sont-les-fonctionnalit%C3%A9s-suppl%C3%A9mentaires-de-la-version-premium","es":"es\/publicacion\/languagetool-premium\/#%C2%BFcu%C3%A1les-son-las-funcionalidades-de-languagetool-premium"},"post\/premium-vs-free-product-updates\/#4-style-and-foreign-terms":{"de":"de\/beitrag\/produkt-premium-kostenlos\/#stil-fremdw%C3%B6rter","fr":"fr\/poste\/premium\/#style-et-mots-%C3%A9trangers","es":"es\/publicacion\/languagetool-premium\/#4-estilo-y-extranjerismos"},"post\/premium-vs-free-product-updates\/#what-are-the-additional-suggestions-i-can-see-as-a-premium-user":{"de":"de\/beitrag\/produkt-premium-kostenlos\/#welche-vorschl%C3%A4ge-werden-f%C3%BCr-premiumaccounts-angezeigt","fr":"fr\/poste\/premium\/#quelles-am%C3%A9liorations-sont-propos%C3%A9es-sur-la-version-languagetool-premium","es":"es\/publicacion\/languagetool-premium\/#%C2%BFcu%C3%A1les-son-las-sugerencias-adicionales-que-puedo-ver-como-usuario-premium"},"post\/product-mac-app\/":{"de":"de\/beitrag\/produkt-mac-app\/","fr":"fr\/poste\/application-mac\/","es":"es\/publicacion\/aplicacion-macos-de-languagetool\/"},"\/post\/product-windows-app\/":{"de":"de\/beitrag\/windows-app\/","fr":"fr\/poste\/application-windows\/","es":"es\/publicacion\/languagetool-para-windows\/"},"post\/mobile-app\/":{"de":"de\/beitrag\/mobile-version\/","fr":"fr\/poste\/languagetool-ios-et-ipad-os\/","es":"es\/publicacion\/languagetool-para-ios-e-ipados\/"},"post\/product-libreoffice\/":{"de":"de\/beitrag\/produkt-libreoffice\/","fr":"fr\/poste\/languagetool-et-libreoffice\/"},"post\/product-libreoffice\/#how-to-enable-languagetool-on-libreoffice":{"de":"de\/beitrag\/produkt-libreoffice\/#wie-kann-ich-languagetool-in-libreoffice-benutzen","fr":"fr\/poste\/languagetool-et-libreoffice\/#qu%E2%80%99est-ce-que-le-logiciel-libreoffice"},"post\/product-rephrase-feature\/":{"de":"de\/beitrag\/umformulieren\/","fr":"fr\/poste\/fonction-de-reformulation\/","es":"es\/publicacion\/parafrasear-textos\/"},"post\/product-obsidian\/":{"de":"de\/beitrag\/produkt-obsidian\/","fr":"fr\/poste\/logiciel-de-carte-mentale-obsidian\/"},"post\/app-for-windows\/":{"de":"de\/beitrag\/editor-windows\/"},"post\/languagetool-free-text-editor\/":{"de":"de\/beitrag\/editor-languagetool\/","fr":"fr\/poste\/editeur-languagetool\/","es":"es\/publicacion\/editor-de-languagetool\/"},"post\/statistics-feature\/":{"de":"de\/beitrag\/textstatistik\/","fr":"fr\/poste\/fonctionnalite-de-statistiques\/","es":"es\/publicacion\/funcionalidad-estadisticas-languagetool\/"}}}`);
+</script>
+    </div>
+</div>
+
+<section class="partners-section">
+    <h3 class="headline headline--3">2000+ organizations trust our AI-based writing tools</h3>
+    <ul class="partner-logos" lang="en" data-german-speaking="false">
+        <li class="partner-logo__item partner-logo--european-union" title="Funded by European Union ESF">European Union</li>
+        <li class="partner-logo__item partner-logo--spiegel" title="Customer: SPIEGEL-Verlag">Spiegel Magazine</li>
+        <li class="partner-logo__item partner-logo--dpa" title="Deutsche Presse-Agentur (dpa)">Deutsche Presse-Agentur (dpa)</li>
+        <li class="partner-logo__item partner-logo--deezer" title="Deezer">Deezer</li>
+        <li class="partner-logo__item partner-logo--tuv-sud" title="TÜV Süd">TÜV Süd</li>
+        <li class="partner-logo__item partner-logo--anp" title="Algemeen Nederlands Persbureau (ANP)">Algemeen Nederlands Persbureau (ANP)</li>
+        <li class="partner-logo__item partner-logo--heise" title="Customer: Heise">Heise</li>
+        <li class="partner-logo__item partner-logo--max-planck" title="Customer: Max-Planck-Gesellschaft">Max-Planck-Gesellschaft</li>
+        <li class="partner-logo__item partner-logo--blinkist" title="Customer: Blinkist">Blinkist</li>
+        <li class="partner-logo__item partner-logo--bertelsmann" title="Customer: Bertelsmann Stiftung">Bertelsmann Stiftung</li>
+        <li class="partner-logo__item partner-logo--srf" title="Customer: SRF">Schweizer Radio und Fernsehen (SRF)</li>
+        <li class="partner-logo__item partner-logo--kronen" title="Customer: Kronen Zeitung">Kronen Zeitung</li>
+        <li class="partner-logo__item partner-logo--jetbrains" title="Partner: JetBrains">JetBrains</li>
+        <li class="partner-logo__item partner-logo--ip-australia" title="Customer: IP Australia">IP Australia</li>
+    </ul>
+</section>
+    <section class="editor-section wrapper padding">
+    <div class="left-right-section">
+        <div class="left-item">
+            <div class="auth-switch">
+                <div class="auth-switch__logged-in">
+                    <h2 class="headline headline--2">Try the LanguageTool Editor for a Better Writing Experience</h2>
+                </div>
+                <div class="auth-switch__logged-out">
+                    <h2 class="headline headline--2">Create your free account</h2>
+                </div>
+            </div>
+            <ul class="big-link-list">
+                <li class="big-link-list__item big-link-list__item--distraction-free">Distraction-free writing experience</li>
+                <li class="big-link-list__item big-link-list__item--dictionary">Personal Dictionary</li>
+                <li class="big-link-list__item big-link-list__item--statistics">Statistics help you stay on the write path</li>
+                <li class="big-link-list__item big-link-list__item--privacy">Texts are securely stored</li>
+                <li class="big-link-list__item big-link-list__item--picky">Access even more suggestions for advanced punctuation, style, and typography with the “Picky Mode”</li>
+                <li class="big-link-list__item big-link-list__item--dark-mode">Choose between dark and light appearance</li>
+                
+            </ul>
+            <div class="btn-wrapper btn-wrapper--left">
+                <div class="auth-switch | md:mr-3 lt-sm:mb-3">
+                    <div class="auth-switch__logged-in">
+                        <a class="btn btn--prominent-blue" href="/editor/new">Open Editor</a>
+                    </div>
+                    <div class="auth-switch__logged-out">
+                        <a class="btn btn--prominent-blue" href="/register">Sign Up</a>
+                    </div>
+                </div>
+
+                <a data-track-click="WelcomePage|go_to_mac-app|editor-section" class="btn btn--mac-desktop show-on-mac-os" href="/mac-desktop"></a>
+                <a data-track-click="WelcomePage|go_to_windows-app|editor-section" class="btn btn--windows-appstore show-on-windows" href="https://apps.microsoft.com/detail/LanguageTool%20for%20Windows/9PFZ3G4D1C9R?mode=direct"><span class="new-highlight | inline-block">new</span></a>
+            </div>
+        </div>
+        <div class="right-item right-item--media">
+            <video muted loop autoplay playsinline class="lazy-video">
+                <source data-src="https://languagetool.org/videos/editor.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+</section>
+<a id="firefox_chrome"></a>
+<section class="gray-section wrapper" id="plugins">
+    <div class="left-right-section">
+        <div class="left-item left-item--media">
+            <video muted loop autoplay playsinline class="lazy-video">
+                                <script id="inline-script-6ab04959f1bb7" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="video-source-gmail" data-meta='{"source_template":"https:\/\/languagetool.org\/videos\/gmail_%locale%.mp4"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f1bb7");(()=>{"use strict";const e=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}").source_template}catch{}})();if(!e)throw new Error('Failed to retrieve video source template from inline script "video-source-gmail"');const t=(()=>{const{lang:e}=document.documentElement;switch(!0){case"fr"===e:return"fr_en";case"es"===e:return"es_en";case function(...e){const t=navigator.languages.map((e=>e.toLowerCase()));return e.some((e=>t.some((t=>t.startsWith(e.toLowerCase())))))}("de")||["DE","AT"].includes(String(document.documentElement.dataset.country)):return"de_en";default:return"en_es"}})(),r=document.createElement("source");r.type="video/mp4",r.dataset.src=e.replace("%locale%",t),inlineScript.parentElement?.replaceChild(r,inlineScript)})();})();</script>            </video>
+        </div>
+        <div class="right-item">
+            <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LanguageTool - Browser Add-on","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Firefox, Edge, Safari","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"10124"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+                                            <ul class="supported-browsers">
+                                            <li class="supported-browser supported-browser--chrome">
+                            <a
+                                data-track-click="WelcomePage|go_to_browser_addon|addon_section"
+                                class="redirect supported-browser--chrome--redirect"
+                                href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral"
+                                target="_blank"
+                            >
+                                Chrome
+                            </a>
+                        </li>
+                                            <li class="supported-browser supported-browser--firefox">
+                            <a
+                                data-track-click="WelcomePage|go_to_browser_addon|addon_section"
+                                class="redirect supported-browser--firefox--redirect"
+                                href="https://addons.mozilla.org/firefox/addon/languagetool/"
+                                target="_blank"
+                            >
+                                Firefox
+                            </a>
+                        </li>
+                                            <li class="supported-browser supported-browser--edge">
+                            <a
+                                data-track-click="WelcomePage|go_to_browser_addon|addon_section"
+                                class="redirect supported-browser--edge--redirect"
+                                href="https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc"
+                                target="_blank"
+                            >
+                                Edge
+                            </a>
+                        </li>
+                                            <li class="supported-browser supported-browser--safari">
+                            <a
+                                data-track-click="WelcomePage|go_to_browser_addon|addon_section"
+                                class="redirect supported-browser--safari--redirect"
+                                href="https://apps.apple.com/app/id1534275760"
+                                target="_blank"
+                            >
+                                Safari
+                            </a>
+                        </li>
+                                    </ul>
+                        <h2 class="headline headline--2">Our Browser Add-On Works Anywhere on the Web</h2>
+            <p class="paragraph paragraph--3">Receive tips on how to improve your text while typing an e-mail, a blog post, or just a simple tweet. Whatever language you’re using, LanguageTool will automatically detect it and provide suggestions. To respect your privacy, no text is stored by the browser add-on.</p>
+            <div class="btn-wrapper btn-wrapper--left">
+                <a
+    id="addon-link-6ab04959f1d99"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+Sign Up
+</a>
+<script id="inline-script-6ab04959f1e98" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="add-on-link" data-meta='{"show_default":true,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--prominent","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--prominent","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--prominent","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--prominent","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--prominent","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--prominent","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab04959f1d99"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f1e98");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>            </div>
+            <div data-store-rating>
+            <div class="advantages-container advantages-container--edge">
+            <div class="rating-hint">
+                Best-rated grammar checker for Microsoft Edge
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                            <p>
+                    Over 1 million users trust LanguageTool with their writing
+                </p>
+                    </div>
+            <div class="advantages-container advantages-container--opera">
+            <div class="rating-hint">
+                Most popular writing add-on for Opera
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                    </div>
+            <div class="advantages-container advantages-container--ya">
+            <div class="rating-hint">
+                Most popular writing add-on for Yandex
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                    </div>
+            <div class="advantages-container advantages-container--firefox">
+            <div class="rating-hint">
+                1,250+ Firefox add-on reviews
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                            <p>
+                    Top-rated grammar checker for Firefox with over 1 million users
+                </p>
+                    </div>
+            <div class="advantages-container advantages-container--safari">
+            <div class="rating-hint">
+                Best-rated grammar checker for Safari
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                            <p>
+                    Over 4 million users trust LanguageTool with their writing
+                </p>
+                    </div>
+            <div class="advantages-container advantages-container--chrome">
+            <div class="rating-hint">
+                10,000+ Chrome Store reviews
+
+                <ul class="rating-stars">
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                            <li class="rating-star"></li>
+                                    </ul>
+            </div>
+                            <p>
+                    Top-rated grammar checker for Chrome with over 3 million users
+                </p>
+                    </div>
+        <script id="inline-script-6ab04959f20f7" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="store-rating-teaser">(() => {const inlineScript = document.getElementById("inline-script-6ab04959f20f7");(()=>{"use strict";const e=inlineScript.parentElement;if(!e?.hasAttribute("data-store-rating"))throw new Error('Inline script "store-rating-teaser" seems to be at the wrong position in the DOM.');e.setAttribute("data-browser",function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}())})();})();</script></div>
+        </div>
+    </div>
+</section>
+
+<section id="" class="section  ">
+    <div class="wrap">
+        <div class="text-wrapper center">
+                            <h4 class="headline headline--3 headline--gradient">
+                    Do you speak a foreign language?
+                </h4>
+                        <h3 class="headline headline--2 ">
+                The Most International Writing Tool
+            </h3>
+                            <p class="paragraph paragraph--3  | text-balance">
+                    There are over 7,000 languages and various multilingual countries in the world. LanguageTool helps as an international spell checker in several languages, including:
+                </p>
+                                </div>
+                    <div class="multilingual-section">
+            <a href="/spellchecking-english" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--en-au"></div>
+                                    <div class="multilingual-section__language__flag icon--en-gb"></div>
+                                    <div class="multilingual-section__language__flag icon--en-us"></div>
+                            </div>
+            <div>English</div>
+        </a>
+            <a href="/spellchecking-german" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--de-at"></div>
+                                    <div class="multilingual-section__language__flag icon--de-ch"></div>
+                                    <div class="multilingual-section__language__flag icon--de-de"></div>
+                            </div>
+            <div>German</div>
+        </a>
+            <a href="/spellchecking-portuguese" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--pt-ao"></div>
+                                    <div class="multilingual-section__language__flag icon--pt-br"></div>
+                                    <div class="multilingual-section__language__flag icon--pt-pt"></div>
+                            </div>
+            <div>Portuguese</div>
+        </a>
+            <a href="/spellchecking-spanish" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--es-co"></div>
+                                    <div class="multilingual-section__language__flag icon--es-mx"></div>
+                                    <div class="multilingual-section__language__flag icon--es-es"></div>
+                            </div>
+            <div>Spanish</div>
+        </a>
+            <a href="/spellchecking-french" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--fr-be"></div>
+                                    <div class="multilingual-section__language__flag icon--fr-ca"></div>
+                                    <div class="multilingual-section__language__flag icon--fr-fr"></div>
+                            </div>
+            <div>French</div>
+        </a>
+            <a href="/spellchecking-dutch" class="multilingual-section__language">
+            <div class="multilingual-section__language__flags">
+                                    <div class="multilingual-section__language__flag icon--nl-be"></div>
+                                    <div class="multilingual-section__language__flag icon--nl-nl"></div>
+                            </div>
+            <div>Dutch</div>
+        </a>
+    </div>
+<h5 class="multilingual-section__more-languages">
+    + more than 30 other languages and dialects
+</h5>
+            </div>
+</section>
+
+<section class="gray-section wrapper padding" id="statistics">
+        <div class="left-right-section">
+            <div class="left-item">
+                <h2 class="headline headline--2">Reach Your Potential With Statistics</h2>
+                <p class="paragraph paragraph--3">This feature helps you stay consistent with your writing by tracking your productivity. It also provides an overview of languages used, errors made, and suggestions applied, so you can see for yourself how your writing skills have improved.</p>
+                <div class="btn-wrapper btn-wrapper--left">
+                    <div class="auth-switch | md:mr-3  lt-sm:mb-3">
+                        <div class="auth-switch__logged-in">
+                            <a class="btn btn--prominent-blue" href="/editor/statistics">View Statistics</a>
+                        </div>
+                        <div class="auth-switch__logged-out">
+                            <a class="btn btn--prominent-blue" href="/register">Sign Up</a>
+                        </div>
+                    </div>
+
+                    <a data-track-click="WelcomePage|go_to_mac-app|statistics-section" class="btn btn--mac-desktop show-on-mac-os" href="/mac-desktop"></a>
+                    <a data-track-click="WelcomePage|go_to_windows-app|statistics-section" class="btn btn--windows-appstore hide-on-apple" href="https://apps.microsoft.com/detail/LanguageTool%20for%20Windows/9PFZ3G4D1C9R?mode=direct"><span class="new-highlight | inline-block">new</span></a>
+                </div>
+            </div>
+            <div class="right-item right-item--media">
+                <video muted loop autoplay playsinline class="lazy-video">
+                    <source data-src="https://languagetool.org/videos/statistics.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </section>
+
+<section class="desktop-app-teaser-section wrapper wrapper--padding lazy-background desktop-app-teaser-section--windows hide-on-apple | before:block">
+        <div class="text-wrapper">
+            <div class="desktop-app-teaser-section__content">
+                <h2 class="headline headline--2 headline--gradient">Elevate Your Writing With the Grammar, Spell, and Style Checker for Windows</h2>
+                <p class="paragraph paragraph--2 paragraph--white">Experience LanguageTool’s advanced spelling, style, and grammar suggestions right in all your favorite writing apps.</p>
+                <p class="headline headline--5 headline--white">Supported Apps</p>
+                <div class="wrapper--flex desktop-app-teaser__supported-apps">
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--outlook | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Outlook</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--wordpad | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Wordpad</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--notepad | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Notepad</figcaption>
+                        </figure>
+                                    </div>
+                <div class="btn-wrapper btn-wrapper--left">
+                    <a
+                        data-track-click="WelcomePage|download_windows_desktop_app|windows_app_teaser"
+                        class="btn btn--windows-appstore btn--windows-appstore--outline"
+                        href="/windows-desktop"
+                    ></a>
+                    <a href=https://languagetool.org/insights/post/product-windows-app/ data-track-click="WelcomePage|read_more|windows_app_teaser" class="btn btn--white btn--outline" target="_blank">
+            Read more
+    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="desktop-app-teaser-section wrapper wrapper--padding lazy-background desktop-app-teaser-section--mac show-on-apple | before:block">
+        <div class="text-wrapper">
+            <div class="desktop-app-teaser-section__content">
+                <h2 class="headline headline--2 headline--gradient">Elevate Your Writing With the Grammar, Spell, and Style Checker for macOS</h2>
+                <p class="paragraph paragraph--2 paragraph--white">Experience LanguageTool’s advanced spelling, style, and grammar suggestions right in all your favorite writing apps.</p>
+                <p class="headline headline--5 headline--white">Supported Apps</p>
+                <div class="wrapper--flex desktop-app-teaser__supported-apps">
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--pages | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Pages</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--mail | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Mail</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--slack | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Slack</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--word | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Word</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--notes | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Notes</figcaption>
+                        </figure>
+                                            <figure>
+                            <i aria-hidden="true" class="app-icon app-icon--medium app-icon--messages | block"></i>
+                            <figcaption class="desktop-app-teaser__caption | text-center mt-2">Messages</figcaption>
+                        </figure>
+                                    </div>
+                <div class="btn-wrapper btn-wrapper--left">
+                    <a
+                        data-track-click="WelcomePage|download_mac_desktop_app|mac_app_teaser"
+                        class="btn btn--mac-desktop btn--mac-desktop--outline"
+                        href="/mac-desktop"
+                    ></a>
+                    <a href=https://languagetool.org/insights/post/product-mac-app/ data-track-click="WelcomePage|read_more|mac_app_teaser" class="btn btn--white btn--outline" target="_blank">
+            Read more
+    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="download-section wrapper wrapper--default padding" id="office">
+    <div class="text-wrapper">
+        <h2 class="headline headline--2">Integrates With Your Favorite Office Program</h2>
+        <p class="paragraph paragraph--3">Get the best out of your docs and deliver error-free results, whether you’re working on a dissertation, essay, book, or you just want to note something down.</p>
+    </div>
+    <ul class="download-list">
+                    <li class="download-list__item ">
+                <a
+                    class="download-list__link download-list__item--gdocs lazy-background"
+                    data-track-click="WelcomePage|go_to_gdocs_addon|addon_section"
+                    href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral"
+                     target="_blank"                 >
+                    <div>
+                        <h4 class="headline headline--4">Google Docs Add-on</h4>
+                        <p class="paragraph paragraph--3">Check all your texts in Google Docs for grammar and spelling mistakes with LanguageTool&#039;s browser add-on.</p>
+                    </div>
+                    <span class="link">Get it</span>
+                </a>
+            </li>
+                    <li class="download-list__item show-on-apple">
+                <a
+                    class="download-list__link download-list__item--word lazy-background"
+                    data-track-click="WelcomePage|go_to_word_desktop_app|addon_section"
+                    href="/mac-desktop"
+                                    >
+                    <div>
+                        <h4 class="headline headline--4">macOS App for Microsoft Word</h4>
+                        <p class="paragraph paragraph--3">LanguageTool for macOS allows you to check text in Microsoft Word and most of your favorite Mac apps.</p>
+                    </div>
+                    <span class="link">Get it</span>
+                </a>
+            </li>
+                    <li class="download-list__item hide-on-apple">
+                <a
+                    class="download-list__link download-list__item--word lazy-background"
+                    data-track-click="WelcomePage|go_to_word_addon|addon_section"
+                    href="/word"
+                                    >
+                    <div>
+                        <h4 class="headline headline--4">Microsoft Word Add-in</h4>
+                        <p class="paragraph paragraph--3">Works with Windows, Mac, and even the online version. Requires Word 2016 or later or Office 365.</p>
+                    </div>
+                    <span class="link">Get it</span>
+                </a>
+            </li>
+            </ul>
+    <div class="download-item download-item--libreoffice lazy-background" id="add-on">
+        <h4 class="headline headline--4">Text checking for LibreOffice</h4>
+        <ul class="link-list">
+            <li class="link-list__item"><a data-track-click="WelcomePage|go_to_libreoffice_addon|addon_section" href="/libre-office" target="_blank" class="link">Use it in LibreOffice</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Correct Spelling</h3>
+                        <p class="paragraph paragraph--3">Do you fall victim to typos and misspellings way too often? LanguageTool finds every mistake and underlines it in red. Spell every name, phrase, and word the write… eh, the right way!</p>
+                                                                    </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_spelling.png" loading="lazy" alt="Correct Spelling" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+        
+            <section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Check Grammar</h3>
+                        <p class="paragraph paragraph--3">Grammar rules have never been so easy! LanguageTool will help rid your writing of all grammar gaffes, like incorrect subject-verb-agreement, wrong plural forms, or misuse of grammatical forms.</p>
+                                                                    </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_grammar.png" loading="lazy" alt="Check Grammar" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+        
+            <section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Fix Punctuation</h3>
+                        <p class="paragraph paragraph--3">Commas and dashes and hyphens… Proper punctuation can be tricky—LanguageTool ensures you’re using them right. It can even help you form complex sentences and tell you when you’ve used too many exclamation points!</p>
+                                                                    </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_punctuation.png" loading="lazy" alt="Fix Punctuation" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+        
+            <section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Confirm Casing</h3>
+                        <p class="paragraph paragraph--3">It’s all about the capital, right? And the lowercase letters, too. LanguageTool corrects incorrect casing, whether you’re writing capitalized names, months, places, or national identities.</p>
+                                                                    </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_casing.png" loading="lazy" alt="Confirm Casing" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+        
+            <section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Improve Style</h3>
+                        <p class="paragraph paragraph--3">LanguageTool helps your writing be as stylish as you are by detecting overused phrases, foreign terms, redundant words, and improper word choice. All you have to do to find the best style is look out for the blue underline.</p>
+                                                                    </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_style.png" loading="lazy" alt="Improve Style" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+        
+            <section class="column-section">
+            <div class="column-section__wrapper wrapper wrapper--default wrapper--padding">
+                <div class="column-section__column">
+                    <div class="column-section__column__content">
+                        <h3 class="headline headline--2">Paraphrasing Tool</h3>
+                        <p class="paragraph paragraph--3">Looking for the right words? LanguageTool&#039;s paraphraser makes them easier to find by using artificial intelligence to rephrase your sentences to be more formal, fluent, simple or concise.</p>
+                                                    <a class="btn btn--prominent-blue" href="/paraphrasing-tool" target="_blank">Paraphrase Text</a>
+                                                                            <a href=https://languagetool.org/insights/post/product-rephrase-feature/ data-track-click="WelcomePage|click_rephrasing|feature_section" target="_blank" class="btn btn--prominent-blue--outline">
+            Read more
+    </a>
+                                            </div>
+                </div>
+                <div class="column-section__column">
+                    <img src="https://languagetool.org/images/examples/example_en_rephrasing.png" loading="lazy" alt="Paraphrasing Tool" class="column-section__column__illustration"/>
+                </div>
+            </div>
+        </section>
+    
+<section id="faq" class="section  ">
+    <div class="wrap">
+        <div class="text-wrapper center">
+                            <h4 class="headline headline--3 headline--gradient">
+                    What else?
+                </h4>
+                        <h3 class="headline headline--2 ">
+                Frequently Asked Questions
+            </h3>
+                            <p class="paragraph paragraph--3  | text-balance">
+                    Make your text sound professional and avoid embarrassing style, punctuation, and grammar mistakes
+                </p>
+                                </div>
+                    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_1">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Is LanguageTool a comprehensive grammar checker?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    Yes, LanguageTool is a powerful tool that goes beyond simply checking for spelling errors. It's a comprehensive writing assistant that offers in-depth analysis of your text, including grammar checks, word choice suggestions, and even style recommendations. Think of it as your personal grammar and <a href="/spellchecking-english" target="_blank">spell checker</a>, helping you craft polished and professional content.
+                </p>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_2">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                How well does LanguageTool grammar checker detect comma errors?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    LanguageTool, a powerful grammar checker excels at identifying and correcting <a href="/commas" target="_blank">punctuation errors</a>, including commas. Its punctuation checker can differentiate between optional and required commas, ensuring your writing is polished. Plus, it can handle even the most complex sentence structures with its advanced comma check.
+                </p>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_3">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                How does error detection and correction by LanguageTool work?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    The error display and suggestion cards are shown automatically and directly while typing. This means that texts can be checked and corrected in just a few moments. To see synonyms, simply double-click on any word.
+                </p>
+                                    <a itemprop="answerExplanation" href="https://languagetool.org/insights/post/using-languagetool/" target="_blank" class="btn btn-link">
+                        Read more
+                    </a>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_4">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Which languages can be checked with LanguageTool&#039;s grammar checker?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    LanguageTool grammar checker masters more than 30 languages and dialects. Its main languages are <a href="/spellchecking-english" target="_blank">English</a>, <a href="/spellchecking-spanish" target="_blank">Spanish</a>, <a href="/spellchecking-german" target="_blank">German</a>, <a href="/spellchecking-french" target="_blank">French</a>, <a href="/spellchecking-dutch" target="_blank">Dutch</a>, and <a href="/spellchecking-portuguese" target="_blank">Portuguese</a>. In its English version, you can choose between six standard varieties (US, UK, Canada, Australia, New Zealand, and South Africa).
+                </p>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_5">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Is LanguageTool free?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    LanguageTool is available in two versions. The free version corrects spelling as well as simple punctuation and some style mistakes. Only the Premium version will show you all errors and give you the best possible text. Team accounts for companies are also available.
+                </p>
+                                    <a itemprop="answerExplanation" href="https://languagetool.org/insights/post/premium-vs-free-product-updates/" target="_blank" class="btn btn-link">
+                        Read more
+                    </a>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_6">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Does LanguageTool work on my program?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    LanguageTool is not bound to a specific program or website. There are several extensions and add-ons available, so it can be used in all common internet browsers. In addition, you can find a dedicated text editor as an app for iOS, macOS (Apple), and Windows. All you need is just one user account.
+                </p>
+                                    <a itemprop="answerExplanation" href="https://languagetool.org/services" target="_blank" class="btn btn-link">
+                        Read more
+                    </a>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_7">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Is LanguageTool suitable for paraphrasing sentences?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    LanguageTool now offers an A.I.-based paraphraser in addition to correction. This can help you to rewrite entire sentences to make them simpler, shorter, or more formal.
+                </p>
+                                    <a itemprop="answerExplanation" href="https://languagetool.org/insights/post/product-rephrase-feature/" target="_blank" class="btn btn-link">
+                        Read more
+                    </a>
+                            </div>
+        </details>
+            <details class="faq-list__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-faq-item="question_8">
+            <summary class="headline headline--3 faq-list__item__question" itemprop="name">
+                Can LanguageTool help me correct a bachelor or master thesis?
+            </summary>
+            <div class="faq-list__item__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" class="paragraph paragraph--4">
+                    If you have to write a term paper, bachelor thesis or master thesis at a university, LanguageTool can help you to be sure that it is free of errors. The writing assistant’s style check is also particularly helpful for other academic texts in schools or at publishing houses. By the way, students get a discount for LanguageTool.
+                </p>
+                                    <a itemprop="answerExplanation" href="https://languagetool.org/nonprofit" target="_blank" class="btn btn-link">
+                        Read more
+                    </a>
+                            </div>
+        </details>
+    </div>
+            </div>
+</section>
+
+<section class="conversion-section">
+        <div class="left-right-section conversion-section-shapes">
+            <div class="left-item">
+                <div class="conversion-section__visual lazy-background"></div>
+            </div>
+            <div class="right-item">
+                <h2 class="headline headline--2 headline--gradient">Unleash the professional writer in you with LanguageTool Premium</h2>
+                <p class="paragraph paragraph--3">Go well beyond grammar and spell checking, and impress with clear, precise and stylistically correct writing.</p>
+                <a class="btn btn--prominent-blue" href="/premium">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+<div id="g_id_onload"
+    data-client_id="826657401766-mdnu60vsn6faqgvq45roqi4e28tsu066.apps.googleusercontent.com"
+    data-context="signin"
+    data-login_uri="https://languagetool.org/login/google-one-tap/callback"
+    data-native_login_uri="https://languagetool.org/login"
+    data-nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9"
+    data-auto_select="false"
+    data-cancel_on_tap_outside="true"
+    data-ux_mode="popup"
+    data-itp_support="false"
+    data-auto_prompt="false"
+    hidden
+></div>
+
+            </section>
+        </div>
+
+                    <footer class="footer">
+    <div class="footer__wrapper | flex">
+        <div class="footer__column footer__column--logo | flex">
+            <a class="logo plain logo--black logo--hide-text" href="/">
+                <span class="name notranslate">Language<strong>Tool</strong></span>
+                <span class="claim">Check your text quickly and easily. Grammar, punctuation, style, and spelling.</span>
+            </a>
+
+            <ul class="social-links | flex">
+                                    <li>
+                        <a
+                            class="social-link social-link__x | block"
+                            href="https://x.com/languagetool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            X
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__facebook | block"
+                            href="https://www.facebook.com/LanguageTool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__instagram | block"
+                            href="https://www.instagram.com/languagetool/"
+                            target="_blank"
+                            rel="me"
+                        >
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__tiktok | block"
+                            href="https://www.tiktok.com/@languagetool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            TikTok
+                        </a>
+                    </li>
+                                <li>
+                    <a
+                        class="social-link social-link__linked-in | block"
+                        href="https://www.linkedin.com/company/languagetool"
+                        target="_blank"
+                        rel="me"
+                    >
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h5 class="headline headline--5">
+                Languages
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--en | inline-block"
+                        href="/spellchecking-english"
+                    >
+                        Free Spell Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--de | inline-block"
+                        href="/spellchecking-german"
+                    >
+                        German Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--es | inline-block"
+                        href="/spellchecking-spanish"
+                    >
+                        Spanish Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--fr | inline-block"
+                        href="/spellchecking-french"
+                    >
+                        French Grammar Checker 
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--pt | inline-block"
+                        href="/spellchecking-portuguese"
+                    >
+                        Portuguese Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--nl | inline-block"
+                        href="/spellchecking-dutch"
+                    >
+                        Dutch Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--ca | inline-block"
+                        href="/spellchecking-catalan"
+                    >
+                        Catalan Grammar Checker
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                Apps
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_mac_desktop_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--mac | inline-block"
+                        href="/mac-desktop"
+                    >
+                        macOS
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_windows-app_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--windows | inline-block"
+                        href="/windows-desktop"
+                    >
+                        Windows
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h5 class="headline headline--5">
+                Browser Add-ons
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--chrome | inline-block"
+                        href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral" target="_blank"
+                    >
+                        Chrome
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--edge | inline-block"
+                        href="https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc" target="_blank"
+                    >
+                        Microsoft Edge
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--firefox | inline-block"
+                        href="https://addons.mozilla.org/firefox/addon/languagetool/" target="_blank"
+                    >
+                        Mozilla Firefox
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--opera | inline-block"
+                        href="https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/" target="_blank"
+                    >
+                        Opera
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">Office Plugins</h5>
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_gdocs_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--google-docs | inline-block"
+                        href="/google-docs"
+                    >
+                        Google Docs
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_word_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--word | inline-block"
+                        href="/word"
+                    >
+                        Microsoft Word
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_apple_pages_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--apple-pages | inline-block"
+                        href="/mac-desktop"
+                    >
+                        Apple Pages
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_libreoffice_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--libre-office | inline-block"
+                        href="/libre-office" target="_blank"
+                    >
+                        LibreOffice
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                E-Mail Add-ons
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_google-mail_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--google-mail | inline-block"
+                        href="/google-mail"
+                    >
+                        Gmail
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_apple_mail_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--apple-mail | inline-block"
+                        href="/apple-mail"
+                    >
+                        Apple Mail
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_outlook_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--outlook | inline-block"
+                        href="/windows-desktop"
+                    >
+                        Outlook<span class="new-highlight | inline-block">BETA</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_thunderbird_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--thunderbird | inline-block"
+                        href="/thunderbird"
+                    >
+                        Thunderbird
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column footer__column--product">
+            <h5 class="headline headline--5">
+                Product
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a href="/">
+                        Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a href="/commas">
+                        Punctuation Checker
+                    </a>
+                </li>
+                <li>
+                    <a href="/paraphrasing-tool">
+                        Paraphrasing Tool
+                    </a>
+                </li>
+                                <li>
+                    <a href="/premium">
+                        Premium
+                    </a>
+                </li>
+                                <li>
+                    <a href="/?source=upload">
+                        Correct Grammar in Word Documents
+                    </a>
+                </li>
+                <li>
+                    <a href="/business">
+                        LanguageTool for Businesses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/students">
+                        LanguageTool for Non-Profits &amp; Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/professionals">
+                        LanguageTool for Professional Writers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/proofreading-api">
+                        Proofreading API
+                    </a>
+                </li>
+                <li>
+                    <a href="/dev">
+                        Open-Source Development
+                    </a>
+                </li>
+                <li>
+                    <a href="https://help.languagetool.org" target="_blank">
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                Company
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a href="/about">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="/media-assets">
+                        Media Assets
+                    </a>
+                </li>
+                <li data-german-speaking="false">
+                    <a href="https://www.openthesaurus.de/" target="_blank" rel="me">
+                        OpenThesaurus - Synonyme
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/languagetool-org/languagetool" target="_blank" rel="me">
+                        Source Code
+                    </a>
+                </li>
+                <li>
+                    <a href="https://languagetooler.workwise.io/" target="_blank">
+                        Careers
+                    </a>
+                </li>
+                <li>
+                <a href=https://languagetool.org/insights/ target="_blank" rel="me">
+            Blog
+    </a>
+                </li>
+                <li>
+                    <a href="/legal/copyright-community-guidelines-dsa-other">
+                        Copyright, Community Guidelines, DSA &amp; other Legal Resources
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-nav | flex">
+    <div class="footer-nav__wrapper | flex">
+        <ul class="footer-nav__wrapper__list | flex">
+            <li class="made-in footer-nav__wrapper__list__item | block text-center">Made with &#9829; in Europe and the US</li>
+            <li>
+                <ul class="footer-nav__wrapper__list__sublist | flex lt-lg:flex-col lt-lg:items-center lt-xl:mb-4">
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/privacy">
+                            Privacy
+                        </a>
+                    </li>
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/terms">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/">
+                            Imprint
+                        </a>
+                    </li>
+                                            <li class="footer-nav__wrapper__list__item">
+                            <a
+                                href="/legal/cookie-policy"
+                                data-cookie-preferences
+                                rel="nofollow"
+                            >
+                                Do Not Sell or Share My Personal Info
+                            </a>
+                        </li>
+                                    </ul>
+            </li>
+        </ul>
+
+                                <label class="select language-select icon--chevron-down | flex">
+                <span class="language-select__icon dynamic-flag--en | inline-block"></span>
+                <span id="language-select__label" class="language-select__label">English</span>
+                <select id="language-select" class="language-select__dropdown | inline-block">
+                                                                    <option value="/?force_language=1" selected>
+                            English
+                        </option>
+                                                                    <option value="/de" >
+                            German
+                        </option>
+                                                                    <option value="/es" >
+                            Spanish
+                        </option>
+                                                                    <option value="/nl" >
+                            Dutch
+                        </option>
+                                                                    <option value="/fr" >
+                            French
+                        </option>
+                                                                    <option value="/ru" >
+                            Russian
+                        </option>
+                                                                    <option value="/it" >
+                            Italian
+                        </option>
+                                                                    <option value="/ca" >
+                            Catalan
+                        </option>
+                                                                    <option value="/pt-BR" >
+                            Portuguese (BR)
+                        </option>
+                                                                    <option value="/pt" >
+                            Portuguese (PT)
+                        </option>
+                                                                    <option value="/uk" >
+                            Ukrainian
+                        </option>
+                                                                    <option value="/pl" >
+                            Polish
+                        </option>
+                                    </select>
+            </label>
+            </div>
+</div>
+</footer>
+                <script id="inline-script-6ab04959f3c92" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="track-cookie-consent" data-meta='{"requires_consent":false}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f3c92");(()=>{"use strict";function e(...e){return arguments}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{return{}}})(),t=Array.isArray(navigator.userAgent.match(/\bLanguageTool(|Mobile|DesktopMac|Windows|DesktopWindows)\//)),n=Boolean(a.requires_consent)&&!t;"requires_consent"in a||console.warn('Inline script "track-cookie-consent" is missing the meta property `requires_consent`'),window.dataLayer=window.dataLayer||[],n&&window.dataLayer.push(e("set","url_passthrough",!0)),window.dataLayer.push(e("consent","default",function(e){return e?{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",personalization_storage:"denied",wait_for_update:500}:{ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted",analytics_storage:"granted",personalization_storage:"granted"}}(n)))})();})();</script>    <script id="inline-script-6ab04959f3d69" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="zendesk-messenger" data-meta='{"active":true,"fieldIds":{"profile":"39153439999767","account_language":"39153485031703","time_zone":"39153446918551","signed_up_at":"39153844168855","language_scribbr":"39155123237911"},"jwtSigningEnabled":true,"jwtUrl":"https:\/\/languagetool.org\/_zendesk\/messaging-jwt"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab04959f3d69");(()=>{"use strict";const t=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{return{}}})();function e(){return new Promise((t=>{const e=Date.now(),n=()=>{const i=function(){const t=window;return"function"==typeof t.zE?t.zE:void 0}();i?t(i):Date.now()-e>=9e4?t(void 0):window.setTimeout(n,400)};n()}))}async function n(){const t=window.__LT_CONTEXT__;if("function"==typeof t)return t()}function i(t){const e=Number(t);return Number.isSafeInteger(e)&&String(e)===t.trim()?e:t}function a(e,n){!function(t,e){if(0!==e.length)try{t("webWidget","updateSettings",{webWidget:{contactForm:{fields:e.map((t=>({id:t.id,prefill:{"*":"boolean"==typeof t.value?t.value?"true":"false":String(t.value)}})))}}})}catch{}}(e,function(t,e){const n=[],a=(t,a)=>{const r=e[t];r&&null!=a&&("string"==typeof a&&""===a||n.push({id:i(r),value:a}))};a("time_zone",Intl.DateTimeFormat().resolvedOptions().timeZone||void 0);const r=t?.user;return r?(a("profile",`https://languagetool.org/admin4347/users/${r.id}`),a("account_language",r.display_language??void 0),a("language_scribbr",r.mother_tongue??r.display_language??void 0),r.created_at&&a("signed_up_at",r.created_at),n):n}(n,t.fieldIds??{})),function(t,e){const n=e?.user;if(!n?.email)return;const i=n.name?.trim()||n.first_name?.trim()||"";try{t("webWidget","identify",{name:i,email:n.email})}catch{}try{t("webWidget","prefill",{name:{value:i,readOnly:!0},email:{value:n.email,readOnly:!0}})}catch{}}(e,n),function(t,e){const n=function(t){const e=["languagetool_website"],n=t?.user;return n&&e.push(`lt_tier_${function(t){return t.is_enterprise?"enterprise":t.is_business_user?"business":t.is_premium?"premium":"free"}(n)}`),!0===n?.is_premium&&e.push("lt_premium"),e}(e);if(0!==n.length)try{t("webWidget","chat:addTags",n)}catch{}}(e,n)}function r(t,e){try{t("webWidget","updateSettings",{webWidget:{authenticate:{chat:{jwtFn:t=>{(async function(t){try{const e=await fetch(t,{credentials:"same-origin",headers:{Accept:"application/json","X-Requested-With":"XMLHttpRequest"}});if(!e.ok)return null;const n=await e.json();return"string"==typeof n.jwt&&n.jwt.length>0?n.jwt:null}catch{return null}})(e).then((e=>{e&&t(e)}))}}}}})}catch{return}try{t("webWidget","chat:reauthenticate")}catch{}}function o(t){const e=()=>{!async function(t){a(t,await n())}(t)},i=n=>{try{t("webWidget:on",n,e)}catch{}};i("open"),i("chat:start")}!async function(){if(!t.active)return;const i=await e();i&&(o(i),await function(e){return n().then((i=>{const o=!0===t.jwtSigningEnabled&&Boolean(t.jwtUrl)&&Boolean(i?.user);a(e,i),o&&t.jwtUrl&&(r(e,t.jwtUrl),window.setTimeout((()=>{n().then((t=>a(e,t)))}),500),window.setTimeout((()=>{n().then((t=>a(e,t)))}),12e3))}))}(i))}()})();})();</script><script id="inline-script-6ab04959f3e43" nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9" data-name="tag-manager" data-gtm-nonce="TXVCWkfwFtkqnEJgFB8z5vEWlPcLHxK9">(() => {const inlineScript = document.getElementById("inline-script-6ab04959f3e43");(()=>{"use strict";const e=async function(e){if(!e)return"";const t=function(e){if(!e)return"";let t=e.trim().toLowerCase();const r=t.match(/^([^@]+)@(gmail|googlemail)\.com$/i);if(r){let e=r[1];const n=r[2];e=e.split("+")[0],e=e.replace(/\./g,""),t=`${e}@${n}.com`}return t}(e);return await async function(e){const t=(new TextEncoder).encode(e),r=await crypto.subtle.digest("SHA-256",t);return Array.from(new Uint8Array(r)).map((e=>e.toString(16).padStart(2,"0"))).join("")}(t)};async function t(t){window.dataLayer=window.dataLayer||[],window.dataLayer.push({"gtm.start":(new Date).getTime(),event:"gtm.js"});const r=t?.user?.id,n=t?.user?.email;if(r&&window.dataLayer.push({userId:r,email_address:n||null,user_name:t?.user?.name,is_premium:t?.user?.is_premium||!1,is_enterprise:t?.user?.is_enterprise||!1,is_business_user:t?.user?.is_business_user||!1,user_sign_up_timestamp:t?.user?.created_at?Math.floor(Date.parse(t.user.created_at)/1e3):null,subscription_start_date:t?.user?.premium_from||null,subscription_end_date:t?.user?.premium_to||null,team_member_type:t?.user?.group_role||null,recurly_account_id:t?.user?.recurly_account_id||null,fastspring_account_id:t?.user?.fastspring_account_id||null,intercom_user_jwt:t?.user?.intercom_user_jwt||null}),n)try{const t=await e(n);window.dataLayer.push({sha256_email_address:t})}catch(e){console.error("Failed to hash email:",e)}const s=document.getElementsByTagName("script")[0],a=document.querySelector("[data-gtm-nonce]"),i=document.createElement("script"),u=String(a.dataset.gtmNonce||a.getAttribute("data-gtm-nonce"));i.type="text/javascript",i.async=!0,i.setAttribute("fetchPriority","low"),i.src="https://www.googletagmanager.com/gtm.js?id=GTM-WSQ9CCW",i.setAttribute("nonce",u),i.setAttribute("data-gtm-nonce",u),s.parentElement.insertBefore(i,s)}"function"==typeof window.__LT_CONTEXT__?window.__LT_CONTEXT__().then(t):t()})();})();</script>
+    
+
+        <!-- release 0733af7 -->
+    </body>
+</html>

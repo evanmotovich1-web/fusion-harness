@@ -1,0 +1,118 @@
+{
+  "evidence_id": "r014-0ae4d0c1f13f509abc2f",
+  "source_url": "https://jenni.ai/pricing",
+  "publisher": "jenni.ai",
+  "retrieved_at": "2026-09-20T21:35:26.614086+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://jenni.ai/pricing",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "cases/014/research/captures/0ae4d0c1f13f509abc2f.html",
+  "capture_sha256": "ea8cad302f8fd2118fa2786fefa0a2d8e99cd3c38410190581ae3576fcafc336",
+  "bytes_saved": 262144,
+  "title": "Jenni AI Pricing & Plans | Find the Right Plan for Your Writing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore Jenni AI Plus and Pro plans. Compare features, find the right plan, and improve your academic writing, research, and productivity with AI."
+    },
+    {
+      "key": "og:title",
+      "value": "Jenni AI Pricing & Plans | Find the Right Plan for Your Writing"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore Jenni AI Plus and Pro plans. Compare features, find the right plan, and improve your academic writing, research, and productivity with AI."
+    }
+  ],
+  "text": "Jenni AI Pricing & Plans | Find the Right Plan for Your Writing",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/qYjbIznnZuv0AsCQzQJcoyhQI.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/ERRvDx9910nJtxJpyTOUQlmdTY.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://jenni.ai/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://jenni.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/it/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ar/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/fr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/hi/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ko/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/pt/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ja/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/zh/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/tr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/zh-hant/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/id/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/ru/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://jenni.ai/pricing",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 0.131335
+}

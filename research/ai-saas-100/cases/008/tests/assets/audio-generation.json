@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "asset_type": "original scripts rendered by installed local macOS speech synthesis",
+  "scope": "Internal synthetic fixtures, not real meetings or product output. All scripts and answers are builder-visible. No voice cloning or remote provider calls. Redistribution terms not assessed.",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/say",
+        "-r",
+        "155",
+        "-o",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-0.wav",
+        "--data-format=LEI16@16000",
+        "-f",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-0.txt"
+      ],
+      "started_at": "2026-09-20T21:42:20.980039+00:00",
+      "ended_at": "2026-09-20T21:42:23.571722+00:00",
+      "elapsed_seconds": 2.5915540409999998,
+      "exit_status": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/say",
+        "-r",
+        "155",
+        "-o",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-1.wav",
+        "--data-format=LEI16@16000",
+        "-f",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-1.txt"
+      ],
+      "started_at": "2026-09-20T21:42:23.572161+00:00",
+      "ended_at": "2026-09-20T21:42:25.583866+00:00",
+      "elapsed_seconds": 2.011739042,
+      "exit_status": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/say",
+        "-r",
+        "155",
+        "-o",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-2.wav",
+        "--data-format=LEI16@16000",
+        "-f",
+        "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/008/tests/assets/meeting-2.txt"
+      ],
+      "started_at": "2026-09-20T21:42:25.584662+00:00",
+      "ended_at": "2026-09-20T21:42:27.702149+00:00",
+      "elapsed_seconds": 2.117504083,
+      "exit_status": 0,
+      "stderr": ""
+    }
+  ]
+}

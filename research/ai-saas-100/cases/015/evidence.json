@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-af70a2afdc3529d896ea",
+      "source_url": "https://anyword.com/",
+      "final_url": "https://www.anyword.com/",
+      "publisher": "anyword.com",
+      "retrieved_at": "2026-09-20T21:00:10.228895+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Anyword makes AI content perform 76% better."
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Anyword makes AI content perform 76% better."
+        },
+        {
+          "locator": "text characters 0:256",
+          "excerpt": "Anyword makes AI content perform 76% better.\nWhy Anyword?\nSolutions\nBy Solution\nPlatform\nDiscover how leading marketing teams are transforming their marketing game with Anyword Business\nAPI\nEmpower Your Users to Create More Content that converts\nEnterprise"
+        },
+        {
+          "locator": "text characters 1033:1345",
+          "excerpt": "ss every channel in one powerful platform\nData-driven editor\nGenerate AI-powered content using performance prediction scores to know which assets will perform best before you go live\nWebsite Automation\nHyper-personalize messaging on your website at scale\nBlog Wizard\nConsistently produce high-quality, engaging b"
+        },
+        {
+          "locator": "text characters 2013:2325",
+          "excerpt": "d Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nCustomer Stories\nWorld-class companies trust Anyword to maximize content performance across every channel\nBlog\nHuman Insights on Artificial Intelligence\nQuickstart Guide\nYour essential"
+        },
+        {
+          "locator": "text characters 2315:2627",
+          "excerpt": " essential guide to understanding and getting started with generative AI\nSign in\nRequest demo\nTry it now\nWhy Anyword?\nSolutions\nSome title\nPlatform\nCopy analytics built for the post-generative AI world.\nAPI\nCopy analytics built for the post-generative AI world.\nEnterprise\nCopy analytics built for the post-gener"
+        },
+        {
+          "locator": "text characters 2438:2750",
+          "excerpt": "ions\nSome title\nPlatform\nCopy analytics built for the post-generative AI world.\nAPI\nCopy analytics built for the post-generative AI world.\nEnterprise\nCopy analytics built for the post-generative AI world.\nBy Use Case\nDemand Gen\nCopy analytics built for the post-generative AI world.\nProduct Marketing\nCopy analyt"
+        },
+        {
+          "locator": "text characters 2497:2809",
+          "excerpt": "generative AI world.\nAPI\nCopy analytics built for the post-generative AI world.\nEnterprise\nCopy analytics built for the post-generative AI world.\nBy Use Case\nDemand Gen\nCopy analytics built for the post-generative AI world.\nProduct Marketing\nCopy analytics built for the post-generative AI world.\nSEO Experts\nCop"
+        },
+        {
+          "locator": "text characters 4369:5024",
+          "excerpt": "ompt.\nRequest demo\nTry it now\nTrusted by the World’s Leading Companies\nGen-AI Content Platform\nAward winning AI content platform, backed by A/B-tested data, built for world class enterprise GTM teams.\nGen-AI Content Performance API\nAdd A/B-tested data, performance predictions and performance RAG to your AI Apps and Agents.\nAnyword delivers world class accuracy in performance prediction\nAnyword’s AI delivers industry-leading performance prediction—accurately determining which of two content variations will perform better based on audience, business goal, and channel—with 82% accuracy. In comparison, generic AI models like GPT-5 achieve only 52%.\nPe"
+        }
+      ],
+      "capture_path": "discovery/captures/af70a2afdc3529d896ea.html",
+      "capture_sha256": "469b84d5974695776075077cdd9610fcdd414aacdd19c2d111dbe31de6eff24b",
+      "record_path": "discovery/records/af70a2afdc3529d896ea.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r015-464606dc01e87357594f",
+      "source_url": "https://www.anyword.com/pricing",
+      "publisher": "www.anyword.com",
+      "retrieved_at": "2026-09-20T21:35:30.914546+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.anyword.com/pricing",
+      "capture_path": "cases/015/research/captures/464606dc01e87357594f.html",
+      "capture_sha256": "1ca7a43262c2de52bda68003dacedcbc96418ac1fb1d44b912763fe3a9c2e14a",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/015/research/records/464606dc01e87357594f.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Anyword | Pricing & Plans"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore Anyword's Plans & Pricing Designed to Grow With Your Business."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Anyword | Pricing & Plans"
+        },
+        {
+          "locator": "text characters 3826:6312",
+          "excerpt": "k email to keep all your marketing content in one place\nStart with Google\nOr continue with work email\nSign Up\nBy signing up, you agree to our\nTerms of Service\nand\nPrivacy Policy\nPlans & Pricing Designed to Grow With Your Business\nSave up to 50%\nMonthly\nYearly\nStarter\nFor solo marketers & freelancers who want on-brand content backed by Anyword’s performance data.\n$\n49\n/month\nStart\nyour 7-day free trial\nfor free\nBuy Now\nfor free\nStarter plan includes:\n50 performance predictions\n50 performance data rows\nIncludes 1 seat\nUnlimited copy generation\n1 brand voice\n1-click boost performance & content improver\n100+ marketing templates & prompts\nBlog Wizard with plagiarism checker\nAnyword’s Google Chrome Extension\nData-Driven\nFor marketing teams who want on-brand content backed by Anyword’s performance data.\n$\n99\n/month\nStart\nyour 7-day free trial\nfor free\nBuy Now\nfor free\nEverything in Starter, plus:\n100 performance predictions\n50 performance data rows\nIncludes 3 seats\nReal-time performance predictions for manual edits\nBusiness\nFor marketing teams aiming for superior performance across channels with AI trained on their most successful past messages and campaigns.\nCustom pricing\nLets discuss your needs\nContact sales\nEverything in Data-Driven, plus:\n250 performance predictions\n5,000 performance data rows (connect your marketing channel and learn from past campaigns)\nIncludes 3 seats\nCustom-built AI models\nReal-time content intelligence across your marketing channels\nBenchmark new generated content against copy published in the past\nIdentify high-performing talking points & incorporate them into new content\nAutomated website messaging A/B testing\nOnboarding & account setup\nRoles & permissions management\nPriority support\nEnterprise\nFor teams who want custom-built AI tailored to their brand, with enterprise-grade security, privacy, and control.\nCustom pricing\nLets discuss your needs\nRequest a demo\nEverything in Business, plus:\n500+ performance predictions\n10,000+ performance data rows (connect your marketing channel and learn from past campaigns)\nEnterprise-grade security & SSO\nPrivate language model (LLM)\nCustom integrations\nCustom-built AI models\nFull API access\nSecurity & legal review\nDedicated customer success manager\nCompare all plans\nStarter\n-20%\n$49\n/mo\nGet started\nBuy Now\nData-Driven\n-20%\n$99\n/mo\nGet started\nBuy Now\nBusiness\nCustom\nContact sales\nEnterprise\nCustom\nGet started\nSave 20%\nStarter\nFor solo marketers & freelancers who want on-brand content "
+        }
+      ]
+    },
+    {
+      "evidence_id": "r015-4b7e05fa659241de57fb",
+      "source_url": "https://www.anyword.com/integrations",
+      "publisher": "www.anyword.com",
+      "retrieved_at": "2026-09-20T21:35:30.915421+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.anyword.com/integrations",
+      "capture_path": "cases/015/research/captures/4b7e05fa659241de57fb.html",
+      "capture_sha256": "15cbe769fb71ba53075cd4729812743f44b2a2a1a4194ea6961caa82564929a7",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/015/research/records/4b7e05fa659241de57fb.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Integrations"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Anyword to your tech stack to create data-driven content that delivers measurable results."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Integrations"
+        },
+        {
+          "locator": "text characters 1584:2148",
+          "excerpt": "ction with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nBlog\nHuman Insights on Artificial Intel"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-81690fdbcd7e34e96ec8",
+      "source_url": "https://www.jasper.ai/",
+      "final_url": "https://www.jasper.ai/",
+      "publisher": "www.jasper.ai",
+      "retrieved_at": "2026-09-20T21:00:10.187035+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Put AI agents to work for marketing | Jasper"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Put AI agents to work for marketing | Jasper"
+        },
+        {
+          "locator": "text characters 0:246",
+          "excerpt": "Put AI agents to work for marketing | Jasper\nDownload PNG\nCopy SVG\nAll Logos\nPlatform\nPlatform\nPlatform\nSolutions\nSolutions\nSolutions\nResources\nResources\nResources\nCompany\nCompany\nCompany\nPricing\nPricing\nPricing\nLog In\nFree Trial\nGet A Demo\nGet A"
+        },
+        {
+          "locator": "text characters 410:722",
+          "excerpt": "e is designed to meet marketers where they work—so they can customize AI for how they work.\nGEO & AI Optimization\nWin the new front door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn M"
+        },
+        {
+          "locator": "text characters 438:750",
+          "excerpt": "ers where they work—so they can customize AI for how they work.\nGEO & AI Optimization\nWin the new front door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn More\nLearn More\nAgents\nAgents"
+        },
+        {
+          "locator": "text characters 538:850",
+          "excerpt": "ont door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn More\nLearn More\nAgents\nAgents\nAgents\nPurpose-built agents that execute end-to-end marketing workflows\nOptimization\nOptimization\nR"
+        },
+        {
+          "locator": "text characters 1002:1314",
+          "excerpt": " system that enables repeatability and scale.\nCanvas\nCanvas\nGrid\nGrid\nAI Studio\nAI Studio\nImage Pipelines\nImage Pipelines\nJasper APIs\nJasper APIs\nJasper MCP\nJasper MCP\nImage APIs\nImage APIs\nJasper IQ\nJasper IQ\nJasper IQ\nGoverned marketing decision surface embedding context, rules, and brand logic.\nBrand IQ\nBran"
+        },
+        {
+          "locator": "text characters 1012:1324",
+          "excerpt": "at enables repeatability and scale.\nCanvas\nCanvas\nGrid\nGrid\nAI Studio\nAI Studio\nImage Pipelines\nImage Pipelines\nJasper APIs\nJasper APIs\nJasper MCP\nJasper MCP\nImage APIs\nImage APIs\nJasper IQ\nJasper IQ\nJasper IQ\nGoverned marketing decision surface embedding context, rules, and brand logic.\nBrand IQ\nBrand IQ\nBrand"
+        }
+      ],
+      "capture_path": "discovery/captures/81690fdbcd7e34e96ec8.html",
+      "capture_sha256": "bd726b7d82c0639c99151566c569dd24c6a06b253105a9e5e5b42954de3a7ace",
+      "record_path": "discovery/records/81690fdbcd7e34e96ec8.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

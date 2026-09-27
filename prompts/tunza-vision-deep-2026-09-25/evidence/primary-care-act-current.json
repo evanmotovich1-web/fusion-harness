@@ -1,0 +1,27 @@
+{
+  "id": "primary-care-act-current",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng",
+  "accessed_utc": "2026-09-25T02:52:08.467854+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:52:09 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "40702",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Expires": "Fri, 25 Sep 2026 03:22:09 GMT",
+    "Cache-Control": "max-age=1800",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 40702,
+  "sha256": "c9fa8386d1e6aacc4bbd40f7c1d3530fad9862e15d989b8208db6e11004d13d1",
+  "file": "primary-care-act-current.html"
+}

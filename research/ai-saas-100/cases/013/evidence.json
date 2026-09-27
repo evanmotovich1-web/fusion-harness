@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-dcb8bfb89e43c86dc42e",
+      "source_url": "https://www.wonsulting.ai/",
+      "final_url": "https://www.wonsulting.com/wonsultingai",
+      "publisher": "www.wonsulting.ai",
+      "retrieved_at": "2026-09-20T21:00:56.243202+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "WonsultingAI by Wonsulting - AI for Job Search that Gets You Hired! Pause Play"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Tired of rejection after rejection? WonsultingAI helps you turn 'no's into offers with AI tools built to give job seekers an edge. From perfecting your resume to nailing interviews, everything you need to get hired, all in one place."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "WonsultingAI by Wonsulting - AI for Job Search that Gets You Hired!"
+        },
+        {
+          "locator": "text characters 0:271",
+          "excerpt": "WonsultingAI by Wonsulting - AI for Job Search that Gets You Hired!\n📣\nGuaranteed Job Offer in 120 days - or you don’t pay. 👉\nApply to Work With Us\n📣 80% of jobs never get posted!\nLearn how to find them anyway in our free live training on July 29th.\nSAVE YOUR SEAT TODAY\nS"
+        },
+        {
+          "locator": "text characters 955:1267",
+          "excerpt": "tore\nCover Letter Revision\nAvailable at Play & App Store\nWonsultingAI\nAI That Gets You Hired\nTry It for Free\nFeatures\nWonsultingAI\nMobile, web, and desktop apps.\nResumAI\nInsights, Filter, Notes, much more.\nNetworkAI\nCustom task cycles - automated task.\nJobBoardAI\nCustom task cycles - automated task.\nInterviewAI"
+        },
+        {
+          "locator": "text characters 1602:1914",
+          "excerpt": " & App Store\nAvailable at Play & App Store\nHigher Education\nResources\nAI That Gets You Hired\nTry It for Free\nFree Resources\nResource Library\nMobile, web, and desktop apps.\nResume Template\nInsights, Filter, Notes, much more.\nCover Letter Template\nInsights, Filter, Notes, much more.\nNetworking Template\nInsights, "
+        },
+        {
+          "locator": "text characters 3341:3658",
+          "excerpt": "you're still waiting. No interviews. No clear feedback. No idea which part of the process is failing you. That's not a motivation problem.\nThat's a diagnosis problem.\n$500M\nin Accepted Job Offers\n100%\nInterviews Guaranteed\n10K\nOffers Tracked in the App\n1.6M\nJob Seekers\nWonsultingAI turns job searching into job landi"
+        },
+        {
+          "locator": "text characters 3666:3978",
+          "excerpt": "guessing. Fix the stage blocking your interviews.\nWonsultingAI unites AI tools into a single guided journey. Every step you take is powered by your data, leading you closer to your job offer.\nResumAI\nStop stressing over resumes. ResumAI transforms your job duties into powerful accomplishment statements and give"
+        },
+        {
+          "locator": "text characters 4430:4742",
+          "excerpt": "ched with jobs that fit your skills and goals, then apply faster with AI tailored resumes, cover letters, and smart filters. Access over 1M active and exclusive listings so every application truly counts.\nJobTrackerAI\nAutomatically track your applications from start to finish on one simple platform.\nInterviewAI"
+        },
+        {
+          "locator": "text characters 14385:14653",
+          "excerpt": " to the ultimate AI powered job search platform.\n‍\n$19.99\n/month\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\n‍\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\nEverything on the Basic plan\nUnlimite"
+        }
+      ],
+      "capture_path": "discovery/captures/dcb8bfb89e43c86dc42e.html",
+      "capture_sha256": "3c40a1e6514abff90099aacd9a6030c07b0f5d9cb1d55a258b8bab8b5fab25f6",
+      "record_path": "discovery/records/dcb8bfb89e43c86dc42e.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r013-93443b0076d9926ecf6c",
+      "source_url": "https://www.wonsulting.com/resumai",
+      "publisher": "www.wonsulting.com",
+      "retrieved_at": "2026-09-20T21:35:26.535382+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.wonsulting.com/resumai",
+      "capture_path": "cases/013/research/captures/93443b0076d9926ecf6c.html",
+      "capture_sha256": "0a75787bcd8f3893ca46d59461cd2550c3292d7f483db3e14882ad9054aaccea",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/013/research/records/93443b0076d9926ecf6c.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "ResumAI by Wonsulting - Free AI Resume Builder & Bulletpoint Generator at WonsultingAI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Build the perfect resume for free with ResumAI, the first AI resume builder from WonsultingAI. Trusted by career and job search experts, it's the fastest way to craft a professional resume that gets you a job."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "ResumAI by Wonsulting - Free AI Resume Builder & Bulletpoint Generator at WonsultingAI"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r013-aed3b72e8c1d49399f14",
+      "source_url": "https://www.wonsulting.com/pricing",
+      "publisher": "www.wonsulting.com",
+      "retrieved_at": "2026-09-20T21:35:26.457694+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.wonsulting.com/pricing",
+      "capture_path": "cases/013/research/captures/aed3b72e8c1d49399f14.html",
+      "capture_sha256": "4897d97a3ae1f638dbaef2e5664fff786d03a098bf80cd6dbf64cf7bd159c6e8",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/013/research/records/aed3b72e8c1d49399f14.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "WonsultingAI by Wonsulting - Pricing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Elevate your career and upgrade your job search with our AI tools designed to make your life easier and land you a job!"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "WonsultingAI by Wonsulting - Pricing"
+        },
+        {
+          "locator": "text characters 3162:5628",
+          "excerpt": "r letter generations\n3 networking messages\n1 interview prep\nHigh level resume score\n2 cold emails\n30 Jobs Tracked\nAccess to JobBoardAI\nGet Started For $0\nNo credit card required (ever!)\nPREMIUM\nGet full access to the ultimate AI powered job search platform.\n‍\n$19.99\n/month\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\n‍\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\nEverything on the Basic plan\nUnlimited tracked jobs\nUnlimited resume uploads\nUnlimited learning hub accesss\nUnlimited Resume score and breakdown\nUnlimited bullet point generations\nUnlimited networking messages\nUnlimited tailoring resumes and cover letter\nUnlimited cold email generations\nUsed by grads from Google, Amazon, and Meta\nUnlimited company emails\nFuture releases included\nUnlimited interview prep\nUnlimited cover letter generations\nUnlimited bullet point generations\nStart Landing More Job Offers Now\nOver 24,000 job seekers have upgraded, and\n62% landed an interview within 30 days.\nPremium members\napply to 50% more jobs and generate 4x more networking messages.\n10,000+ SUCCESS STORIES\nOur users get interviews and job offers\nWonsultingAI turned out to be exactly what I needed...\nBefore WonsultingAI, my biggest challenge was creating a resume that truly showcased my skills and achievements in a professional, tailored way. ResumAI helped me build a clear, impactful resume that got results, In fact, the resume I submitted to Vistra Corp, where I now work full-time as a Supply Chain Diversity Data Analyst, was built using ResumAI. I also used NetworkAI to support my job search.\nShirin S.\nVistra Corp\nWonsultingAI helped me land my dream internship...\nI’m grateful to WonsultingAI for helping me land an internship at PayPal as an Anti-Phishing Intern. I began with their free tools, then upgraded to premium and accessed the Learning Hub. Even though I never interacted directly with the team, their guidance made a real difference. Though I had the skills, I struggled with how to present myself. Their guidance taught me to confidently share my story and turn potential into opportunity.\nAaryan R.\nPaypal\nNetworking has been easy with wonsulting...\nI was worried about my resume meeting ATS standards. I was finding it difficult to construct a good cover letter. Networking on LinkedIn was challenging for me.\nMy resume was modified to quantify my research experiences. I also made use of the cover letter"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-8d344204765ed9b22865",
+      "source_url": "https://www.rezi.ai/",
+      "final_url": "https://www.rezi.ai/",
+      "publisher": "www.rezi.ai",
+      "retrieved_at": "2026-09-20T21:00:56.226025+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "The #1 AI Resume Builder – Forbes' Top Pick. Trusted by 4.5M"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Land More Interviews with the #1 AI Resume Builder. Rezi's AI builds ATS-proof resumes that actually get callbacks. 4.5M+ job seekers trust it, Forbes ranks it #1. Free, done in minutes."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "The #1 AI Resume Builder – Forbes' Top Pick. Trusted by 4.5M"
+        },
+        {
+          "locator": "text characters 0:249",
+          "excerpt": "The #1 AI Resume Builder – Forbes' Top Pick. Trusted by 4.5M\nProduct\nResume Tools\nAI Resume Builder\nSmart resume creation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Check"
+        },
+        {
+          "locator": "text characters 12:324",
+          "excerpt": "sume Builder – Forbes' Top Pick. Trusted by 4.5M\nProduct\nResume Tools\nAI Resume Builder\nSmart resume creation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Checker\nResume Keyword Scanner\nTarget your application\nResume Keyword Scanner\nRe"
+        },
+        {
+          "locator": "text characters 52:364",
+          "excerpt": " by 4.5M\nProduct\nResume Tools\nAI Resume Builder\nSmart resume creation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Checker\nResume Keyword Scanner\nTarget your application\nResume Keyword Scanner\nResume Bullet Point Writer\nStronger resume"
+        },
+        {
+          "locator": "text characters 70:382",
+          "excerpt": "esume Tools\nAI Resume Builder\nSmart resume creation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Checker\nResume Keyword Scanner\nTarget your application\nResume Keyword Scanner\nResume Bullet Point Writer\nStronger resume content\nResume Bu"
+        },
+        {
+          "locator": "text characters 94:406",
+          "excerpt": "ilder\nSmart resume creation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Checker\nResume Keyword Scanner\nTarget your application\nResume Keyword Scanner\nResume Bullet Point Writer\nStronger resume content\nResume Bullet Point Writer\nResume"
+        },
+        {
+          "locator": "text characters 115:427",
+          "excerpt": "eation\nAI Resume Builder\nAI Resume Agent\nOur new AI resume experience\nAI Resume Agent\nResume Checker\nGet instant feedback\nResume Checker\nResume Keyword Scanner\nTarget your application\nResume Keyword Scanner\nResume Bullet Point Writer\nStronger resume content\nResume Bullet Point Writer\nResume Summary Generator\nCr"
+        }
+      ],
+      "capture_path": "discovery/captures/8d344204765ed9b22865.html",
+      "capture_sha256": "1cdb7fefac6dd0d8a2f3cd3a1a6b809cc1267d39b3d89a04b63c4ed6ac9e832b",
+      "record_path": "discovery/records/8d344204765ed9b22865.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

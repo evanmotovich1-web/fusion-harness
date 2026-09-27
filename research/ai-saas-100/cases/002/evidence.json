@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "p002-c1788014a4b4c0d6",
+      "source_url": "https://getlinkbunny.com/",
+      "publisher": "LinkBunny",
+      "retrieved_at": "2026-09-20T21:19:18.165352+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/002/research/c1788014a4b4c0d6.txt",
+      "capture_sha256": "481d4be1a0a922538d7d6b73dbcff632fbe34a9147192d5e3777214c3b45842b",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/002/research/c1788014a4b4c0d6.txt:8-8",
+          "excerpt": "FOR SITE OWNERS USING CODING AGENTS"
+        },
+        {
+          "locator": "cases/002/research/c1788014a4b4c0d6.txt:17-17",
+          "excerpt": "Your agent receives a link request with a target URL, requested anchor, Domain Rating, and seven-day deadline."
+        },
+        {
+          "locator": "cases/002/research/c1788014a4b4c0d6.txt:48-48",
+          "excerpt": "LinkBunny is new, with a small founding group of manually reviewed sites. Ask Boon for a current-pool fit check before subscribing."
+        },
+        {
+          "locator": "cases/002/research/c1788014a4b4c0d6.txt:50-50",
+          "excerpt": "LinkBunny matches within a Domain Rating range and prefers closer scores. You decide whether a request fits."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p002-79e13c11d1509761",
+      "source_url": "https://getlinkbunny.com/pricing",
+      "publisher": "LinkBunny",
+      "retrieved_at": "2026-09-20T21:19:23.842762+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/002/research/79e13c11d1509761.txt",
+      "capture_sha256": "731501c0966a71b4a0c2a715d003a422782ed454ace7c3643366d076f8cd139f",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/002/research/79e13c11d1509761.txt:1-1",
+          "excerpt": "LinkBunny founding plan — $20/month"
+        },
+        {
+          "locator": "cases/002/research/79e13c11d1509761.txt:14-14",
+          "excerpt": "/ month"
+        },
+        {
+          "locator": "cases/002/research/79e13c11d1509761.txt:15-15",
+          "excerpt": "Up to 10 sites. No per-backlink fees"
+        },
+        {
+          "locator": "cases/002/research/79e13c11d1509761.txt:17-17",
+          "excerpt": "Manual profile review before marketplace matching"
+        },
+        {
+          "locator": "cases/002/research/79e13c11d1509761.txt:10-10",
+          "excerpt": "For site owners using coding agents. One account, multiple profiles (sites)."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p002-79e6dafbfc3b5a89",
+      "source_url": "https://getlinkbunny.com/about",
+      "publisher": "LinkBunny",
+      "retrieved_at": "2026-09-20T21:19:18.292929+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/002/research/79e6dafbfc3b5a89.txt",
+      "capture_sha256": "0a9c03f2270bec451dc96f971497c5f18c4821ed33e5b940ec7c9ae7e96aa24d",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/002/research/79e6dafbfc3b5a89.txt:11-11",
+          "excerpt": "LinkBunny is built by Hwee-Boon Yar, a solo indie developer who has been writing and delivering software for 30 years."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p002-5aa93945dcc9ca51",
+      "source_url": "https://getlinkbunny.com/docs/agents",
+      "publisher": "LinkBunny",
+      "retrieved_at": "2026-09-20T21:19:23.927038+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/002/research/5aa93945dcc9ca51.txt",
+      "capture_sha256": "b10dc3f1bbd19d9ab1eb3a4c0f77f6dbc84f981566238ade2aee57df61c8e2de",
+      "capture_truncated": false,
+      "excerpts": [
+        {
+          "locator": "cases/002/research/5aa93945dcc9ca51.txt:78-78",
+          "excerpt": "LinkBunny matches candidates within a bounded Domain Rating gap, including the limit. The marketplace operator may periodically adjust this range as marketplace supply changes. Being within range does not guarantee an assignment."
+        },
+        {
+          "locator": "cases/002/research/5aa93945dcc9ca51.txt:82-82",
+          "excerpt": "LinkBunny does not assign the reverse pair while the first is pending or after it is reported. Expiry or rejection releases reverse matching without removing valid late or reconsidered reporting rights."
+        },
+        {
+          "locator": "cases/002/research/5aa93945dcc9ca51.txt:82-82",
+          "excerpt": "LinkBunny does not assign the reverse pair while the first is pending or after it is reported. Expiry or rejection releases reverse matching without removing valid late or reconsidered reporting rights."
+        },
+        {
+          "locator": "cases/002/research/5aa93945dcc9ca51.txt:106-106",
+          "excerpt": ". npm hosts the package files; no LinkBunny MCP process is hosted. Your client starts the process locally, and it calls LinkBunny over HTTPS with your token."
+        },
+        {
+          "locator": "cases/002/research/5aa93945dcc9ca51.txt:112-112",
+          "excerpt": "check_in"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

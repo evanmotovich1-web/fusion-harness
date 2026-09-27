@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
+    
+    <title>Integrations | Chatling</title>
+    <meta name="description" content="Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required.">
+
+    
+    <meta property="og:title" content="Integrations">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chatling.ai/integrations">
+    <meta property="og:image" content="https://static.chatling.ai/img/ogmedia-2.jpg">
+    <meta property="og:site_name" content="Chatling">
+    <meta property="og:description" content="Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integrations">
+    <meta name="twitter:description" content="Connect your AI agent with your favorite platforms. Integrate with WhatsApp, Instagram, Shopify, WordPress, Wix, and more — no coding required.">
+    <meta name="twitter:image" content="https://static.chatling.ai/img/ogmedia-2.jpg">
+    <meta name="twitter:url" content="https://chatling.ai/integrations">
+
+    <link rel="stylesheet" href="/css/v4/app.css?id=502458fbdb1d2b7673b4aa0df71e0ffb">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.chatling.ai/img/website/v4/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://static.chatling.ai/img/website/v4/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.chatling.ai/img/website/v4/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://static.chatling.ai/img/website/v4/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.chatling.ai/img/website/v4/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://static.chatling.ai/img/website/v4/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://static.chatling.ai/img/website/v4/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="bg-white">
+                <div class="fixed top-0 left-0 right-0 z-50 flex justify-center v4-container px-6 pt-3 pointer-events-none ">
+    <nav id="v4-navbar" class="v4-nav v4-nav--solid pointer-events-auto rounded-full v4-nav--wordmark" data-theme="light" data-show-wordmark="true">
+        <div class="v4-nav-inner flex items-center h-14 px-6 transition-all duration-400">
+            <a href="https://chatling.ai" class="flex items-center gap-2 v4-nav-logo flex-shrink-0 transition-all duration-300">
+    <svg class="v4-logo-icon w-6 h-6" viewBox="0 0 201 200" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25.7051" cy="25" r="25"/><circle cx="25.7051" cy="175" r="25"/><circle cx="25" cy="25" r="25" transform="matrix(-1 0 0 1 200.705 75)"/>
+        <path d="M75.7051 25C75.7051 11.1929 86.898 0 100.705 0H175.705C189.512 0 200.705 11.1929 200.705 25C200.705 38.8071 189.512 50 175.705 50H75.7051V25Z"/>
+        <path d="M75.7051 175C75.7051 161.193 86.898 150 100.705 150H175.705C189.512 150 200.705 161.193 200.705 175C200.705 188.807 189.512 200 175.705 200H75.7051V175Z"/>
+        <path d="M125.705 100C125.705 86.1929 114.512 75 100.705 75H25.7051C11.898 75 0.705078 86.1929 0.705078 100C0.705078 113.807 11.898 125 25.7051 125H125.705V100Z"/>
+    </svg>
+    <svg class="v4-logo-wordmark w-[72px]" viewBox="0 0 562 166" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M465.344 73.8361V124.373H451.694V76.8423C451.694 72.7257 450.692 68.9882 448.688 65.6299C446.684 62.2716 444.003 59.6175 440.644 57.6675C437.286 55.6634 433.549 54.6613 429.432 54.6613C425.37 54.6613 421.632 55.6634 418.22 57.6675C414.861 59.6175 412.18 62.2716 410.176 65.6299C408.172 68.9882 407.17 72.7257 407.17 76.8423V124.373H393.52V43.124H407.17V53.2801C410.041 49.4885 413.67 46.4823 418.057 44.2615C422.445 41.9865 427.211 40.849 432.357 40.849C438.424 40.849 443.949 42.3386 448.932 45.3177C453.969 48.2426 457.95 52.1968 460.875 57.18C463.855 62.1633 465.344 67.7153 465.344 73.8361Z"/>
+        <path d="M327.705 124.5V0H341.205V124.5H327.705Z"/>
+        <path d="M312.94 56.7743H294.497L294.415 124.373H280.766L280.847 56.7743H266.872V43.1245H280.847L280.766 17.6123H294.415L294.497 43.1245H312.94V56.7743Z"/>
+        <path d="M160.976 73.8366V124.373H147.327V76.8428C147.327 72.7262 146.325 68.9887 144.32 65.6304C142.316 62.2722 139.635 59.618 136.277 57.668C132.918 55.6639 129.181 54.6618 125.064 54.6618C121.002 54.6618 117.264 55.6639 113.852 57.668C110.494 59.618 107.813 62.2722 105.808 65.6304C103.804 68.9887 102.802 72.7262 102.802 76.8428V124.373H89.1523V0H102.802V53.2806C105.673 49.489 109.302 46.4828 113.69 44.262C118.077 41.987 122.844 40.8495 127.989 40.8495C134.056 40.8495 139.581 42.3391 144.564 45.3182C149.602 48.2432 153.583 52.1973 156.508 57.1806C159.487 62.1638 160.976 67.7158 160.976 73.8366Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M216.017 40.4163C239.201 40.4163 257.995 59.2107 257.995 82.3949V122.693C257.995 123.621 257.243 124.373 256.315 124.373H216.017C192.833 124.373 174.038 105.579 174.038 82.3949C174.038 59.2107 192.833 40.4163 216.017 40.4163ZM216.014 52.4768C232.537 52.4768 245.932 65.8718 245.932 82.3954V111.117C245.932 111.778 245.396 112.314 244.735 112.314H216.014C199.49 112.314 186.095 98.919 186.095 82.3954C186.095 65.8718 199.49 52.4768 216.014 52.4768Z"/>
+        <path d="M75.1432 109.014C69.6386 115.726 62.1884 120.567 53.8186 122.87C45.4487 125.172 36.5709 124.824 28.4075 121.871C20.2441 118.919 13.1967 113.509 8.23569 106.385C3.2747 99.2618 0.644105 90.7754 0.70615 82.0948C0.768196 73.4143 3.51983 64.9664 8.58215 57.9145C13.6445 50.8626 20.7685 45.5535 28.9732 42.7183C37.178 39.8831 46.0599 39.6613 54.396 42.0833C62.7321 44.5053 70.1123 49.452 75.5204 56.2423L65.7235 64.045C61.9289 59.2806 56.7506 55.8097 50.9016 54.1104C45.0526 52.411 38.8206 52.5666 33.0638 54.556C27.307 56.5453 22.3084 60.2704 18.7565 65.2183C15.2045 70.1662 13.2738 76.0937 13.2303 82.1844C13.1867 88.2751 15.0325 94.2295 18.5134 99.2277C21.9942 104.226 26.939 108.022 32.6668 110.093C38.3946 112.165 44.6238 112.41 50.4964 110.794C56.3691 109.178 61.5965 105.782 65.4588 101.072L75.1432 109.014Z"/>
+        <path d="M561.114 40.4433H547.298V52.0582C555.064 59.6123 559.895 70.2217 559.895 81.9707C559.895 93.7197 555.064 104.329 547.298 111.883V126.156C547.298 129.644 546.504 132.883 544.914 135.873C543.379 138.918 541.24 141.548 538.499 143.763C535.813 146.033 532.77 147.805 529.371 149.079C526.027 150.352 522.546 150.989 518.927 150.989C515.089 150.989 511.334 150.075 507.661 148.248C504.042 146.476 500.863 144.04 498.121 140.939C495.435 137.894 493.571 134.461 492.529 130.64L479.865 136.454C481.62 141.77 484.47 146.559 488.418 150.823C492.42 155.142 497.08 158.574 502.398 161.121C507.716 163.724 513.225 165.025 518.927 165.025C524.41 165.025 529.673 164.028 534.716 162.035C539.76 160.097 544.256 157.356 548.203 153.813C552.15 150.324 555.275 146.199 557.578 141.438C559.935 136.731 561.114 131.637 561.114 126.156V40.4433Z"/>
+        <path d="M561.114 82.4217C561.114 105.606 542.32 124.4 519.136 124.4C495.952 124.4 477.157 105.606 477.157 82.4217C477.157 59.2376 495.952 40.4431 519.136 40.4431C542.32 40.4431 561.114 59.2376 561.114 82.4217ZM490.886 82.4217C490.886 98.0239 503.534 110.672 519.136 110.672C534.738 110.672 547.386 98.0239 547.386 82.4217C547.386 66.8196 534.738 54.1716 519.136 54.1716C503.534 54.1716 490.886 66.8196 490.886 82.4217Z"/>
+        <path d="M360.908 117.602C360.908 121.342 363.939 124.373 367.678 124.373C371.418 124.373 374.449 121.342 374.449 117.602V51.2491C374.449 46.7618 370.812 43.1242 366.324 43.1242H360.908V117.602Z"/>
+        <path d="M360.908 22.812C360.908 19.0726 363.939 16.0413 367.678 16.0413C371.418 16.0413 374.449 19.0726 374.449 22.812C374.449 26.5514 371.418 29.5828 367.678 29.5828H360.908V22.812Z"/>
+    </svg>
+</a>
+
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium ml-auto mr-6">
+                                                            <a href="https://chatling.ai/integrations" class="v4-nav-link transition-colors">
+                            Integrations
+                        </a>
+                                                                                <a href="https://chatling.ai/pricing" class="v4-nav-link transition-colors">
+                            Pricing
+                        </a>
+                                                                                <div class="group relative">
+                            <button class="v4-nav-link inline-flex items-center gap-1.5 transition-colors">
+                                Resources
+                                <svg class="w-2 h-2 rotate-180 opacity-50" viewBox="0 0 75 47" fill="currentColor">
+                                    <path d="M42.66 3.34C41.16 1.84 39.13 1 37 1C34.88 1 32.85 1.84 31.35 3.34L2.35 32.34C0.85 33.84 0 35.87 0 38C0 40.12 0.85 42.15 2.34 43.66C3.84 45.16 5.88 46 8 46C10.12 46 12.16 45.16 13.66 43.66L37 20.31L60.34 43.66C61.84 45.16 63.88 46 66 46C68.12 46 70.16 45.16 71.66 43.66C73.16 42.16 74 40.12 74 38C74 35.88 73.16 33.84 71.66 32.34L42.66 3.34Z"/>
+                                </svg>
+                            </button>
+                            <div class="hidden group-hover:block absolute top-full pt-3 left-1/2 -translate-x-1/2 min-w-[190px] z-50">
+                                <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-2xl">
+                                    <div class="p-2 text-sm">
+                                                                                    <a href="https://chatling.ai/blog" class="block rounded-xl px-3 py-2 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950 transition-colors">
+                                                Blog
+                                            </a>
+                                                                                    <a href="https://docs.chatling.ai" class="block rounded-xl px-3 py-2 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950 transition-colors">
+                                                Documentation
+                                            </a>
+                                                                                    <a href="https://chatling.ai/go/api-docs" class="block rounded-xl px-3 py-2 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950 transition-colors">
+                                                API Docs
+                                            </a>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                                                </div>
+
+            <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+                <a href="https://app.chatling.ai/login" class="v4-nav-login inline-flex items-center justify-center rounded-full font-semibold h-10 px-5 text-sm transition-all duration-300">
+                    Log In
+                </a>
+                <a href="https://app.chatling.ai/register" class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 bg-brand-secondary-600 text-white hover:bg-brand-secondary-700 text-sm h-10 px-5 v4-nav-cta shadow-sm shadow-blue-600/20 min-w-[100px]" >Get Started</a>
+            </div>
+
+            <details class="relative md:hidden ml-auto" id="v4-mobile-menu">
+                <summary class="list-none rounded-xl p-2 v4-nav-link cursor-pointer">
+                    <span class="sr-only">Open menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </summary>
+                <div class="fixed left-4 right-4 mt-3 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-2xl z-50">
+                    <div class="p-3 text-base">
+                                                                                                                <a href="https://chatling.ai/integrations" class="block rounded-xl px-4 py-2.5 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950 font-medium">Integrations</a>
+                                                                                                                <div class="my-2 border-t border-zinc-100"></div>
+                                                                                        <a href="https://chatling.ai/pricing" class="block rounded-xl px-4 py-2.5 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950 font-medium">Pricing</a>
+                                                                                                                <div class="my-2 border-t border-zinc-100"></div>
+                                                                                        <p class="px-4 pt-2 pb-1 text-xs font-semibold text-zinc-400 uppercase tracking-wider">Resources</p>
+                                                                    <a href="https://chatling.ai/blog" class="block rounded-xl px-4 py-2.5 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950">Blog</a>
+                                                                    <a href="https://docs.chatling.ai" class="block rounded-xl px-4 py-2.5 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950">Documentation</a>
+                                                                    <a href="https://chatling.ai/go/api-docs" class="block rounded-xl px-4 py-2.5 text-zinc-700 hover:bg-zinc-950/5 hover:text-zinc-950">API Docs</a>
+                                                                                                            <div class="mt-3 flex gap-3 border-t border-zinc-200/70 pt-4 px-2 pb-2">
+                            <a href="https://app.chatling.ai/login" class="inline-flex items-center justify-center rounded-full font-semibold h-11 px-6 text-sm text-zinc-700 border border-zinc-200 hover:bg-zinc-50 flex-1">Log In</a>
+                            <a href="https://app.chatling.ai/register" class="inline-flex items-center justify-center rounded-full font-semibold h-11 px-6 text-sm bg-blue-600 text-white hover:bg-blue-700 flex-1">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </nav>
+</div>
+<script>
+    document.addEventListener('click', (e) => {
+        const menu = document.getElementById('v4-mobile-menu');
+        if (menu?.open && !menu.contains(e.target)) menu.open = false;
+    });
+    (function() {
+        const nav = document.getElementById('v4-navbar');
+        if (!nav) return;
+        const theme = nav.dataset.theme;
+        if (theme === 'light') return; // always solid on light pages
+        const threshold = 80;
+        function update() {
+            if (window.scrollY > threshold) {
+                nav.classList.remove('v4-nav--transparent');
+                nav.classList.add('v4-nav--solid');
+            } else {
+                nav.classList.remove('v4-nav--solid');
+                nav.classList.add('v4-nav--transparent');
+            }
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
+</script>
+    
+    
+
+
+<section class="v4-hero-glow relative overflow-hidden bg-white pt-32 pb-10 lg:pt-40 lg:pb-12">
+    <div class="v4-container relative z-10">
+        <div class="flex flex-col items-center text-center gap-6 max-w-4xl mx-auto">
+            <h1 class="v4-lp-hero-title text-black">
+                <div>Connect once.</div> 
+                <div>Support everywhere.</div>
+            </h1>
+            <p class="max-w-3xl text-lg md:text-xl text-brand-primary-900">
+                Bring all your channels and tools into one place, so you can automate conversations and respond faster across every touchpoint.
+            </p>
+            <div class="mt-4">
+                <a href="https://app.chatling.ai/register" class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 bg-brand-primary-900 text-white hover:bg-brand-primary-950 text-xl px-10 h-[54px]" >Start for free</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-16 lg:py-24 bg-white">
+    <div class="v4-container">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/whatsapp-icon.svg" alt="WhatsApp" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">WhatsApp</span>
+                                                    <a href="https://docs.chatling.ai/whatsapp/overview" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/instagram.svg" alt="Instagram" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Instagram</span>
+                                                    <a href="https://docs.chatling.ai/instagram/overview" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/telegram-icon.svg" alt="Telegram" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Telegram</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/messenger-icon.svg" alt="Messenger" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Messenger</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/zapier.svg" alt="Zapier" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Zapier</span>
+                                                    <a href="https://chatling.ai/docs/integrations/zapier" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/calcom-logo.png" alt="Cal.com" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Cal.com</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/google-sheets.svg" alt="Google Sheets" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Google Sheets</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/hubspot.svg" alt="HubSpot" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">HubSpot</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/zendesk.svg" alt="Zendesk" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Zendesk</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/slack.svg" alt="Slack" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Slack</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/airtable.svg" alt="Airtable" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Airtable</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/zoho.svg" alt="Zoho" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Zoho</span>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/wordpress.svg" alt="WordPress" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">WordPress</span>
+                                                    <a href="https://chatling.ai/docs/integrations/wordpress" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/bubble.svg" alt="Bubble" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Bubble</span>
+                                                    <a href="https://chatling.ai/docs/integrations/bubble" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/prestashop.svg" alt="PrestaShop" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">PrestaShop</span>
+                                                    <a href="https://chatling.ai/docs/integrations/prestashop" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/shopify.svg" alt="Shopify" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Shopify</span>
+                                                    <a href="https://chatling.ai/docs/integrations/shopify" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/squarespace.svg" alt="Squarespace" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Squarespace</span>
+                                                    <a href="https://chatling.ai/docs/integrations/squarespace" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/webflow.svg" alt="Webflow" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Webflow</span>
+                                                    <a href="https://chatling.ai/docs/integrations/webflow" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                            <div class="relative flex flex-col items-center rounded-3xl bg-gradient-to-b from-white to-[#f6f8fd] overflow-hidden" style="min-height: 300px;">
+                    
+                    <img src="/static/img/website/v4/integrations/card-line-1.svg" alt="" class="absolute inset-x-0 top-[60px] w-full pointer-events-none">
+                    <img src="/static/img/website/v4/integrations/card-line-2.svg" alt="" class="absolute inset-x-0 top-[142px] w-full pointer-events-none">
+
+                    
+                    <div class="relative z-10 mt-14 mb-auto flex items-center justify-center w-[110px] h-[110px] rounded-[30px] shadow-[0px_8px_0px_0px_#a9beff]" style="background: linear-gradient(183deg, #f9fafc 20%, #e6eaf1 110%); border: 1px solid rgba(255,255,255,0);">
+                        <img src="/static/img/website/v4/integrations/wix.svg" alt="Wix" class="w-[55px] h-[55px] object-contain">
+                    </div>
+
+                    
+                    <div class="relative z-10 w-full flex items-center justify-between px-7 pb-7 pt-6">
+                        <span class="font-semibold text-xl text-[#3a3a3a] tracking-[-0.6px]">Wix</span>
+                                                    <a href="https://chatling.ai/docs/integrations/wix" class="inline-flex items-center gap-1.5 text-brand-secondary-600 text-xs font-semibold tracking-[-0.36px] hover:opacity-80 transition-opacity">
+                                Learn more
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="#145DFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                                            </div>
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+<section class="py-16 lg:py-24 bg-white">
+    <div class="v4-container">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-[124px]">
+            
+            <div class="flex-shrink-0 w-full max-w-[371px]">
+                <img
+                    src="/static/img/website/v4/wix-integration-testimonial@2x.png"
+                    alt="Wix and Chatling integration"
+                    class="w-full h-auto rounded-[25px]"
+                >
+            </div>
+
+            
+            <div class="flex flex-col gap-6 max-w-[711px]">
+                <p class="text-[#3a3a3a] text-xl lg:text-[32px] font-semibold leading-[1.35] tracking-[-0.96px]">
+                    "It's very helpful to see how seamlessly Chatling integrates with WIX websites – it's like they were made for each other! Beyond that, it works equally well with most other website platforms."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="relative w-[50px] h-[50px] rounded-full flex items-center justify-center overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #eef1f7 100%);">
+                        <div class="absolute inset-0 rounded-full" style="border: 2px solid transparent; border-image: linear-gradient(to bottom, transparent 0%, #c0d4ff 60%, #c0d4ff 100%) 1; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor; padding: 2px;"></div>
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="23.5" stroke="url(#wix-avatar-grad)" stroke-width="2"/><defs><linearGradient id="wix-avatar-grad" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#c0d4ff" stop-opacity="0"/><stop offset="0.45" stop-color="#c0d4ff" stop-opacity="0.6"/><stop offset="1" stop-color="#c0d4ff"/></linearGradient></defs></svg>
+                        <img src="/static/img/website/v4/wix-logomark.png" alt="Wix" class="relative z-10 w-8 h-8 object-contain">
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#3a3a3a]">Robert Meli</p>
+                        <p class="text-[#7f7f7f] font-medium text-sm">WIX partner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 v4-container">
+    <div class="relative max-w-[1566px] mx-auto rounded-[40px] overflow-hidden py-20 px-6 bg-cover bg-center" style="background-image: url('/static/img/website/v4/blue-bars-illustration@2x.jpg')">
+
+        <div class="relative z-10 text-center text-white max-w-[856px] mx-auto">
+            <h2 class="v4-lp-section-title">
+                Transform customer interactions with AI agents that actually work
+            </h2>
+            <p class="mt-7 text-lg md:text-xl font-medium tracking-[-0.6px] mx-auto" style="max-width: 473px;">
+                Deploy AI agents that respond to queries, take actions, and deliver results - no coding required
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="https://app.chatling.ai/register" class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 bg-brand-primary-900 text-white hover:bg-brand-primary-950 text-xl px-10 h-[54px]"  style="box-shadow: inset 0px -2px 6px 2px rgba(20,93,252,0.37)" >Build AI agent</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <footer class="bg-brand-primary-950 text-white relative">
+    <div class="v4-container w-full m-auto">
+        <div class="relative grid grid-cols-10">
+            <div class="col-span-10 z-10 py-10 lg:pr-[420px]">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+                                            <div>
+                            <h4 class="font-semibold text-lg mb-4">Product</h4>
+                            <ul class="space-y-2.5">
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/pricing" class="text-gray-400 hover:text-white hover:underline transition-colors">Pricing</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/integrations" class="text-gray-400 hover:text-white hover:underline transition-colors">Integrations</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://www.g2.com/products/chatling/reviews" class="text-gray-400 hover:text-white hover:underline transition-colors">Reviews</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/alternatives" class="text-gray-400 hover:text-white hover:underline transition-colors">Alternatives</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://app.chatling.ai/register" class="text-gray-400 hover:text-white hover:underline transition-colors">Sign Up</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://app.chatling.ai/login" class="text-gray-400 hover:text-white hover:underline transition-colors">Login</a>
+                                                                            </li>
+                                                            </ul>
+                        </div>
+                                            <div>
+                            <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                            <ul class="space-y-2.5">
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/blog" class="text-gray-400 hover:text-white hover:underline transition-colors">Blog</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/tools" class="text-gray-400 hover:text-white hover:underline transition-colors">Free Tools</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/ai-chatbot-website" class="text-gray-400 hover:text-white hover:underline transition-colors">Website Chatbot</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/affiliate" class="text-gray-400 hover:text-white hover:underline transition-colors">Affiliate Program</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://docs.chatling.ai" class="text-gray-400 hover:text-white hover:underline transition-colors">Documentation</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/go/api-docs" class="text-gray-400 hover:text-white hover:underline transition-colors">API Docs</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://feedback.chatling.ai/changelog" class="text-gray-400 hover:text-white hover:underline transition-colors">Changelog</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://feedback.chatling.ai/roadmap" class="text-gray-400 hover:text-white hover:underline transition-colors">Roadmap</a>
+                                                                            </li>
+                                                            </ul>
+                        </div>
+                                            <div>
+                            <h4 class="font-semibold text-lg mb-4">Legal &amp; Privacy</h4>
+                            <ul class="space-y-2.5">
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/dpa" class="text-gray-400 hover:text-white hover:underline transition-colors">DPA</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/cookie-policy" class="text-gray-400 hover:text-white hover:underline transition-colors">Cookie Policy</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <span class="text-gray-400 hover:text-white hover:underline cursor-pointer show-cookie-consent-manager transition-colors">Cookie Preferences</span>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/privacy-policy" class="text-gray-400 hover:text-white hover:underline transition-colors">Privacy Policy</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/terms-of-service" class="text-gray-400 hover:text-white hover:underline transition-colors">Terms of Service</a>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="https://chatling.ai/eu-data-protection" class="text-gray-400 hover:text-white hover:underline transition-colors">EU Data Protection</a>
+                                                                            </li>
+                                                            </ul>
+                        </div>
+                                    </div>
+
+                <div class="mt-14 max-w-[500px]">
+                    <p class="text-2xl font-bold leading-snug">
+                        Got questions? Drop us a line at
+                        <a href="/cdn-cgi/l/email-protection#6b181e1b1b04191f2b08030a1f0702050c450a02" class="text-brand-secondary-300 hover:underline"><span class="__cf_email__" data-cfemail="53202623233c212713303b32273f3a3d347d323a">[email&#160;protected]</span></a>
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="hidden lg:block absolute right-0 top-0 bottom-0 w-[400px] pointer-events-none overflow-hidden z-0 opacity-[0.15]"
+                style="-webkit-mask-image: linear-gradient(to right, transparent, black 40%); mask-image: linear-gradient(to right, transparent, black 40%);"
+            >
+                <img
+                    src="https://static.chatling.ai/img/website/v3/chat-bubbles-illustration@2x.png"
+                    alt=""
+                    class="h-full w-full object-cover object-right"
+                >
+            </div>
+        </div>
+    </div>
+</footer>
+    <div
+    id="ck-consent-popup"
+    class="fixed bottom-0 z-[999] w-full border border-brand-primary-100 bg-white p-5 shadow-[0_24px_80px_rgba(3,28,84,0.16)] md:bottom-5 md:right-5 md:max-w-[420px] md:rounded-[28px]"
+    style="display: none;"
+>
+    <div class="text-xs leading-6 text-slate-600 md:text-sm">
+        We use cookies to make our site work. By clicking "Accept," you agree to our website's cookie use as described in our
+        <a href="https://chatling.ai/cookie-policy" class="font-semibold text-brand-primary-900 hover:text-brand-secondary-600" target="_blank" rel="noopener noreferrer">Cookie Policy</a>.
+        You can change your cookie settings at any time by clicking
+        <span class="show-cookie-consent-manager cursor-pointer font-semibold text-brand-primary-900 hover:text-brand-secondary-600">Preferences</span>.
+    </div>
+    <div class="mt-4 flex w-full flex-col gap-2 text-sm font-semibold sm:flex-row sm:items-center">
+        <button id="ck-consent-popup--accept" type="button" class="inline-flex items-center justify-center rounded-full bg-brand-secondary-600 px-5 py-2.5 text-white transition-colors hover:bg-brand-secondary-700">
+            Accept
+        </button>
+        <button id="ck-consent-popup--preferences" type="button" class="inline-flex items-center justify-center rounded-full border border-brand-primary-100 px-5 py-2.5 text-brand-primary-900 transition-colors hover:bg-brand-primary-50">
+            Preferences
+        </button>
+    </div>
+</div>
+
+<div
+    id="ck-consent-manager"
+    class="fixed left-1/2 top-1/2 z-[9999] flex h-[100dvh] w-full -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden bg-white p-5 md:h-auto md:max-h-[85vh] md:max-w-[640px] md:rounded-[32px] md:border md:border-brand-primary-100 md:p-7 md:shadow-[0_32px_120px_rgba(3,28,84,0.2)]"
+    style="display: none;"
+>
+    <div class="flex items-center justify-between gap-4">
+        <div>
+            <div class="text-2xl font-semibold tracking-[-0.72px] text-brand-primary-900">Cookie Preferences</div>
+            <div class="mt-1 text-sm text-slate-500">Control which cookies power your Chatling experience.</div>
+        </div>
+        <button id="ck-consent-manager--close-btn" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-primary-100 text-brand-primary-900 transition-colors hover:bg-brand-primary-50" aria-label="Close cookie preferences">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"/>
+                <path d="m6 6 12 12"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="mt-5 min-h-0 flex-1 overflow-y-auto pr-1">
+        <div class="text-sm leading-6 text-slate-600">
+            <div>
+                We use different types of cookies to optimize your experience on our website. Click on the categories below to learn more about their purposes. You may choose which types of cookies to allow and can change your preferences at any time. Remember that disabling cookies may affect your experience on the website.
+            </div>
+            <div class="mt-3">
+                To learn more about how we use cookies, visit our
+                <a class="font-semibold text-brand-primary-900 hover:text-brand-secondary-600" href="https://chatling.ai/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>.
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <div id="ck-consent-manager--cookie-controls" class="space-y-3">
+                            <div class="rounded-3xl border border-brand-primary-100 bg-brand-primary-50/40 p-4 md:p-5">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="min-w-0">
+                            <label for="cookie-control-essential" class="text-base font-semibold text-brand-primary-900">Essential Cookies</label>
+                            <div class="mt-2 text-sm leading-6 text-slate-600">
+                                Essential cookies are necessary for our website to function properly. These cookies ensure basic functionalities and security features of the website. As such, essential cookies cannot be disabled.
+                            </div>
+                        </div>
+                        <label class="toggle-switch relative inline-flex h-7 w-12 flex-shrink-0 cursor-not-allowed opacity-60">
+                            <input
+                                id="cookie-control-essential"
+                                type="checkbox"
+                                class="peer sr-only"
+                                checked
+                                data-consent-name="essential"
+                                disabled
+                            >
+                            <span class="absolute inset-0 rounded-full bg-brand-primary-100 transition-colors peer-checked:bg-brand-secondary-600"></span>
+                            <span class="pointer-events-none absolute left-1 top-1 h-5 w-5 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5"></span>
+                        </label>
+                    </div>
+                </div>
+                            <div class="rounded-3xl border border-brand-primary-100 bg-brand-primary-50/40 p-4 md:p-5">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="min-w-0">
+                            <label for="cookie-control-analytics" class="text-base font-semibold text-brand-primary-900">Analytics Cookies</label>
+                            <div class="mt-2 text-sm leading-6 text-slate-600">
+                                Analytical cookies are used to understand how visitors interact with our website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+                            </div>
+                        </div>
+                        <label class="toggle-switch relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer">
+                            <input
+                                id="cookie-control-analytics"
+                                type="checkbox"
+                                class="peer sr-only"
+                                
+                                data-consent-name="analytics"
+                                
+                            >
+                            <span class="absolute inset-0 rounded-full bg-brand-primary-100 transition-colors peer-checked:bg-brand-secondary-600"></span>
+                            <span class="pointer-events-none absolute left-1 top-1 h-5 w-5 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5"></span>
+                        </label>
+                    </div>
+                </div>
+                            <div class="rounded-3xl border border-brand-primary-100 bg-brand-primary-50/40 p-4 md:p-5">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="min-w-0">
+                            <label for="cookie-control-marketing" class="text-base font-semibold text-brand-primary-900">Marketing Cookies</label>
+                            <div class="mt-2 text-sm leading-6 text-slate-600">
+                                To deliver marketing campaigns and track their performance on our website.
+                            </div>
+                        </div>
+                        <label class="toggle-switch relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer">
+                            <input
+                                id="cookie-control-marketing"
+                                type="checkbox"
+                                class="peer sr-only"
+                                
+                                data-consent-name="marketing"
+                                
+                            >
+                            <span class="absolute inset-0 rounded-full bg-brand-primary-100 transition-colors peer-checked:bg-brand-secondary-600"></span>
+                            <span class="pointer-events-none absolute left-1 top-1 h-5 w-5 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5"></span>
+                        </label>
+                    </div>
+                </div>
+                        </div>
+        </div>
+    </div>
+
+    <div class="mt-4 border-t border-brand-primary-100 bg-white pt-4">
+        <div class="flex flex-col items-stretch justify-end gap-2 sm:flex-row">
+        <button class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 border border-brand-primary-100 text-brand-primary-900 hover:bg-brand-primary-50 text-sm px-4 py-2.5 w-full sm:w-auto" type="button" id="ck-consent-manager--decline-all" >Decline All</button>
+        <button class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 bg-brand-primary-900 text-white hover:bg-brand-primary-950 text-sm px-4 py-2.5 w-full sm:w-auto" type="button" id="ck-consent-manager--allow-selection" >Allow Selection</button>
+        <button class="inline-flex items-center justify-center rounded-full font-semibold text-center transition-all duration-200 bg-brand-secondary-600 text-white hover:bg-brand-secondary-700 text-sm px-4 py-2.5 w-full sm:w-auto" type="button" id="ck-consent-manager--allow-all" >Allow All</button>
+        </div>
+    </div>
+</div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://static.chatling.ai/jquery/3.6.2/jquery.min.js"></script>
+
+            
+        <script> window.chtlConfig = { chatbotId: "7468578969" } </script>
+        <script async data-id="7468578969" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    
+    <script>
+        var isProd = true;
+    </script>
+    <script src="/js/cookie_consent.js?id=82167065ac3ad834a139e82a5ca0f424"></script>
+    <script src="/js/v4/global.js?id=08ddcac4da86250b8959a449c037c585"></script>
+
+    </body>
+</html>

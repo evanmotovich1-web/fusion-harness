@@ -1,0 +1,669 @@
+{
+  "evidence_id": "web-f4a78931f3833395630d",
+  "source_url": "https://simplified.com/",
+  "retrieved_at": "2026-09-20T21:00:10.786165+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://simplified.com/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/f4a78931f3833395630d.html",
+  "capture_sha256": "8c8feacb510dc7819ff7ca4c57f4c84f84d6f95b9a4c8f2744cc2c74cdb97f12",
+  "bytes_saved": 262144,
+  "title": "Simplified | AI Agents for Marketing Workflows",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "AI agents for recurring marketing work. Start with Riley, your AI marketing agent, then add agents for launches, reports, and handoffs."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Simplified"
+    },
+    {
+      "key": "og:title",
+      "value": "Simplified | AI Agents for Marketing Workflows"
+    },
+    {
+      "key": "og:description",
+      "value": "AI agents for recurring marketing work. Start with Riley, your AI marketing agent, then add agents for launches, reports, and handoffs."
+    }
+  ],
+  "text": "Simplified | AI Agents for Marketing Workflows\nAI agents\nAI agents\nCall the execution layer\nGive external agents a safe place to execute marketing: brand memory, creative tools, approvals, publishing, analytics, and workflows.\nSee MCP + API\nRun Simplified from Claude, Codex, or your own agent\nAgents\nRiley\nLive\nPlans, creates, approves, and publishes social\nMarketing Agents\nAgents built on the full creative stack\nAgent Builder\nNew\nCreate agents for recurring work\nAI Chatbot\nTrain an assistant on your business\nBuild & automate\nWorkflows & Automations\nTurn repeated jobs into reusable runs\nBrand Memory & Context\nBrand, products, and knowledge agents inherit\nIntegrations\nConnect the tools your team already uses\nUse your own AI\nMCP Server\nConnect Claude and compatible agents\nCLI\nRun Simplified from the terminal\nAPI\nTrigger workflows programmatically\nAPI Documentation\nTrigger workflows programmatically\nPlatform\nPlatform\nWork inside Simplified\nPlan campaigns, create assets, approve work, publish across channels, and manage projects from one marketing workspace.\nStart with Riley\nRun your marketing inside Simplified\nCreative Suite\nAI Writer\nFirst drafts in your voice\nAI Image Generator\nCreate images from a prompt\nAI Photo Editor\nEdit and enhance photos with AI\nVideo Suite\nAI Image to Video\nTurn any image into motion\nAI Video Generator\nGenerate video from text\nVideo Background Remover\nRemove or replace any video background\nAI Video Translator\nTranslate video into any language\nAI Audio Enhancer\nClean up and boost audio quality\nAI Video Editor\nEdit video right in your browser\nAI Subtitle Generator\nAuto-caption any video\nAI Short Clips\nTurn long videos into short clips\nAll video tools\nEvery video and audio utility in one place\nSocial Suite\nSocial Media\nPlan, schedule, and publish\nPost Scheduler\nQueue posts across every channel\nAnalytics\nTrack reach and performance\nSocial Inbox\nReply to every comment and DM\nLink in Bio\nOne link for your whole audience\nClient Approvals\nReview and sign off before publish\nWork Management\nProject Management\nRun marketing work with AI\nSolutions\nSolutions\nWhat outcome can I automate?\nChoose the work you want running more consistently, with fewer tools and less coordination.\nSolutions for every team\nBy industry, role, and company size\nBy team\nSmall Business\nRun more without more tools\nStartups\nPunch above your headcount\nAgencies\nManage brands and approvals\nEnterprises\nScale with permissions and control\nBook a workflow review\nMap your first repeatable agent workflow\nResources\nResources\nCan I learn and trust this?\nSee how teams use Simplified, learn the platform, and access technical documentation.\nResource center\nGuides, customer proof, and product education\nFree tools\nFree AI Tools\nEvery Simplified tool in one place\nTemplates\nReady-made designs and posts\nSocial Media Glossary\nPlain-English social terms\nLearn\nBlog\nMarketing, AI, and workflow guides\nProduct Updates\nSee what the team has shipped\nG2 Reviews\nRead verified customer feedback\nGet started\nHelp Center\nSetup and product guidance\nVideo Academy\nLearn Simplified step by step\nPricing\nSign in\nGet Started\nAI agents\nCall the execution layer\nSee MCP + API\nAgents\nRiley\nLive\nMarketing Agents\nAgent Builder\nNew\nAI Chatbot\nBuild & automate\nWorkflows & Automations\nBrand Memory & Context\nIntegrations\nUse your own AI\nMCP Server\nCLI\nAPI\nAPI Documentation\nPlatform\nWork inside Simplified\nStart with Riley\nCreative Suite\nAI Writer\nAI Image Generator\nAI Photo Editor\nVideo Suite\nAI Image to Video\nAI Video Generator\nVideo Background Remover\nAI Video Translator\nAI Audio Enhancer\nAI Video Editor\nAI Subtitle Generator\nAI Short Clips\nAll video tools\nSocial Suite\nSocial Media\nPost Scheduler\nAnalytics\nSocial Inbox\nLink in Bio\nClient Approvals\nWork Management\nProject Management\nSolutions\nWhat outcome can I automate?\nSolutions for every team\nBy team\nSmall Business\nStartups\nAgencies\nEnterprises\nBook a workflow review\nResources\nCan I learn and trust this?\nResource center\nFree tools\nFree AI Tools\nTemplates\nSocial Media Glossary\nLearn\nBlog\nProduct Updates\nG2 Reviews\nGet started\nHelp Center\nVideo Academy\nPricing\nSign in\nGet Started\nNew: automate the work your business repeats\nAI agents for repeat marketing.\nStart with Riley.\nBuild agents that know your brand, products, customers, tools, and approvals. Riley runs marketing workflows today. Add custom agents for launches, reports, projects, and handoffs as your business grows.\nStart with Riley\nConnect Claude\nR\nP\nN",
+  "links": [
+    {
+      "href": "/astro/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/astro/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://lp-assets.simplified.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://simplified.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://simplified.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/am",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/az",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/bg",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/bn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/cs",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/da",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/el",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/et",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/fa",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/fi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/gb",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/he",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/hi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/hr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/hu",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/hy",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ka",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/lt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/lv",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/mn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ms",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ph",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ro",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/sl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/sq",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/sv",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/sw",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/uk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/uz",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://simplified.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agent-builder",
+      "rel": null
+    },
+    {
+      "href": "/ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/ai-workflows",
+      "rel": null
+    },
+    {
+      "href": "/brand-brain",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/mcp-server",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "/ai-content-api",
+      "rel": null
+    },
+    {
+      "href": "https://simplified.readme.io/reference/introduction",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/#buyer-paths",
+      "rel": null
+    },
+    {
+      "href": "/ai-writer",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-photo-editor",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-to-video",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/video-background-remover",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-translator",
+      "rel": null
+    },
+    {
+      "href": "/ai-audio-enhancer",
+      "rel": null
+    },
+    {
+      "href": "/video-editor",
+      "rel": null
+    },
+    {
+      "href": "/subtitle-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-clips",
+      "rel": null
+    },
+    {
+      "href": "/ai-tools?category=Video",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/social-media-scheduler",
+      "rel": null
+    },
+    {
+      "href": "/social-media-analytics",
+      "rel": null
+    },
+    {
+      "href": "/social-inbox",
+      "rel": null
+    },
+    {
+      "href": "/link-in-bio",
+      "rel": null
+    },
+    {
+      "href": "/social-media/external-approval-workflow",
+      "rel": null
+    },
+    {
+      "href": "/ai-project-management",
+      "rel": null
+    },
+    {
+      "href": "/#buyer-paths",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-small-business",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-agencies",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-enterprises",
+      "rel": null
+    },
+    {
+      "href": "https://calendly.com/d/cmnn-3yk-gzt",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/ai-tools",
+      "rel": null
+    },
+    {
+      "href": "/graphic-design/templates",
+      "rel": null
+    },
+    {
+      "href": "/social-media-glossary",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/blog/product-updates",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/simplified/reviews",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://help.simplified.com/en",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.simplified.com/login",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.simplified.com/signup",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-marketing-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agent-builder",
+      "rel": null
+    },
+    {
+      "href": "/ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/ai-workflows",
+      "rel": null
+    },
+    {
+      "href": "/brand-brain",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/mcp-server",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "/ai-content-api",
+      "rel": null
+    },
+    {
+      "href": "https://simplified.readme.io/reference/introduction",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/#buyer-paths",
+      "rel": null
+    },
+    {
+      "href": "/ai-writer",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-photo-editor",
+      "rel": null
+    },
+    {
+      "href": "/ai-image-to-video",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/video-background-remover",
+      "rel": null
+    },
+    {
+      "href": "/ai-video-translator",
+      "rel": null
+    },
+    {
+      "href": "/ai-audio-enhancer",
+      "rel": null
+    },
+    {
+      "href": "/video-editor",
+      "rel": null
+    },
+    {
+      "href": "/subtitle-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-clips",
+      "rel": null
+    },
+    {
+      "href": "/ai-tools?category=Video",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/social-media-scheduler",
+      "rel": null
+    },
+    {
+      "href": "/social-media-analytics",
+      "rel": null
+    },
+    {
+      "href": "/social-inbox",
+      "rel": null
+    },
+    {
+      "href": "/link-in-bio",
+      "rel": null
+    },
+    {
+      "href": "/social-media/external-approval-workflow",
+      "rel": null
+    },
+    {
+      "href": "/ai-project-management",
+      "rel": null
+    },
+    {
+      "href": "/#buyer-paths",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-small-business",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-agencies",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-enterprises",
+      "rel": null
+    },
+    {
+      "href": "https://calendly.com/d/cmnn-3yk-gzt",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/ai-tools",
+      "rel": null
+    },
+    {
+      "href": "/graphic-design/templates",
+      "rel": null
+    },
+    {
+      "href": "/social-media-glossary",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/blog/product-updates",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/simplified/reviews",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://help.simplified.com/en",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.simplified.com/login",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.simplified.com/signup",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.simplified.com/nexus",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/mcp-server",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2512
+}

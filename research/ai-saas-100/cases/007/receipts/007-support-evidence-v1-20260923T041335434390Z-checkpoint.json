@@ -1,0 +1,28 @@
+{
+  "baseline_executed": false,
+  "case_id": "007",
+  "central_workflow_complete": false,
+  "component_status": "tested",
+  "cost_classification": "unknown",
+  "historical_files_changed": [],
+  "inference_executed": false,
+  "passed_component_rows": 32,
+  "product_accepted": false,
+  "receipt": {
+    "path": "cases/007/receipts/007-support-evidence-v1-20260923T041335434390Z.json",
+    "sha256": "69a3b79f156682fbf790d4621eaed2231320890b1fda300cf5265526dca05c8c"
+  },
+  "recorded_at": "2026-09-23T04:13:35.509281+00:00",
+  "remaining": [
+    "Central model-dependent behavior",
+    "Generic-model baseline",
+    "Independent hidden review"
+  ],
+  "schema_version": 1,
+  "source_snapshot": {
+    "path": "cases/007/implementation/source-history/93c159b108bd67aef18d5f7a171f54e89467293a39680bf9d18a92f136fca62d/manifest.json",
+    "sha256": "e5afd42b9ef2c3b0a1bd696b6824f36f35d4f22888b1533eb22fe2a099fa70f1"
+  },
+  "sources_changed_during_run": [],
+  "total_component_rows": 32
+}

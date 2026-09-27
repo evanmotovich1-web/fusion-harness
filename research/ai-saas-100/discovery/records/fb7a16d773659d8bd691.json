@@ -1,0 +1,65 @@
+{
+  "evidence_id": "web-fb7a16d773659d8bd691",
+  "source_url": "https://mokker.ai/",
+  "retrieved_at": "2026-09-20T21:00:44.978192+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://mokker.ai/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/fb7a16d773659d8bd691.html",
+  "capture_sha256": "b0583664428e255ceeb5e754ce2cfe1ee2ab5139f5c02d9753303c1f0269ba1e",
+  "bytes_saved": 262144,
+  "title": "Mokker AI - Instant AI Background Replacement",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+    },
+    {
+      "key": "og:title",
+      "value": "Mokker AI - Instant AI Background Replacement"
+    },
+    {
+      "key": "og:description",
+      "value": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+    }
+  ],
+  "text": "Mokker AI - Instant AI Background Replacement",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/tmzgmcd3bUoVjH0uC8rbRqt1Hto.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/tmzgmcd3bUoVjH0uC8rbRqt1Hto.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://mokker.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://mokker.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://mokker.ai/zh/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://mokker.ai/",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 0.2506
+}

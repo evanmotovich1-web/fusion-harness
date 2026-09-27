@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "evan",
+  "vars": { "primary": "#55D6BE", "secondary": "#97A6AF", "dark": "#202D32" },
+  "colors": {
+    "accent": "primary", "border": "secondary", "borderAccent": "primary", "borderMuted": "#53666D",
+    "success": "#75D79A", "error": "#F58F8F", "warning": "#F2C679", "muted": "secondary", "dim": "#71838B", "text": "", "thinkingText": "secondary",
+    "selectedBg": "dark", "scrollbarThumb": "#53666D", "searchMatchBg": "dark", "searchMatchText": "", "userMessageBg": "dark", "userMessageText": "", "customMessageBg": "dark", "customMessageText": "", "customMessageLabel": "primary", "toolPendingBg": "#29353A", "toolSuccessBg": "#233B31", "toolErrorBg": "#422D30", "toolTitle": "primary", "toolOutput": "",
+    "mdHeading": "primary", "mdLink": "#80CDFF", "mdLinkUrl": "secondary", "mdCode": "#F2C679", "mdCodeBlock": "", "mdCodeBlockBorder": "secondary", "mdQuote": "secondary", "mdQuoteBorder": "secondary", "mdHr": "secondary", "mdListBullet": "primary",
+    "toolDiffAdded": "#75D79A", "toolDiffRemoved": "#F58F8F", "toolDiffContext": "secondary",
+    "syntaxComment": "secondary", "syntaxKeyword": "#80CDFF", "syntaxFunction": "primary", "syntaxVariable": "#F2C679", "syntaxString": "#75D79A", "syntaxNumber": "#E6A6E9", "syntaxType": "#80CDFF", "syntaxOperator": "primary", "syntaxPunctuation": "secondary",
+    "thinkingOff": "secondary", "thinkingMinimal": "#8EA6B3", "thinkingLow": "#80CDFF", "thinkingMedium": "primary", "thinkingHigh": "#E6A6E9", "thinkingXhigh": "#F58F8F", "thinkingMax": "#F58F8F", "bashMode": "#F2C679"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "test_id": "S-A6",
+  "split": "adversarial",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "timezone": "UTC",
+        "day": "2026-09-21",
+        "working_hours": [
+          "09:00",
+          "11:00"
+        ],
+        "meetings": [],
+        "tasks": [
+          {
+            "id": "alpha",
+            "minutes": 30,
+            "priority": 2,
+            "deadline": "11:00",
+            "splittable": false
+          },
+          {
+            "id": "beta",
+            "minutes": 45,
+            "priority": 2,
+            "deadline": "11:00",
+            "splittable": false
+          }
+        ],
+        "buffer_minutes": 0,
+        "write_to_calendar": false,
+        "input_path": "../outside-sentinel.txt",
+        "output_path": "../outside-output.txt"
+      }
+    }
+  ]
+}

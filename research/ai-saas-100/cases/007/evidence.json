@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-6faeef8f057706c992fb",
+      "source_url": "https://botsonic.com/",
+      "final_url": "https://botsonic.com/",
+      "publisher": "botsonic.com",
+      "retrieved_at": "2026-09-20T21:00:23.385697+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "AI chatbots for your website. No-code AI chatbot builder. Train on your content in 5 mins, launch instantly. Boost engagement with Botsonic's custom ChatGPT chat bots."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic\nEnterprise-ready AI that gets results.\nLearn more\nChatsonic\nAI Article Writer\nChecker\nBotsonic\nContact Sales\nView Demo\nAI AGent\nIntegrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWha"
+        },
+        {
+          "locator": "text characters 8:320",
+          "excerpt": "ot for Website - Custom ChatGPT Chat bots - Botsonic\nEnterprise-ready AI that gets results.\nLearn more\nChatsonic\nAI Article Writer\nChecker\nBotsonic\nContact Sales\nView Demo\nAI AGent\nIntegrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nCreate a\nCustom AI C"
+        },
+        {
+          "locator": "text characters 51:363",
+          "excerpt": " Botsonic\nEnterprise-ready AI that gets results.\nLearn more\nChatsonic\nAI Article Writer\nChecker\nBotsonic\nContact Sales\nView Demo\nAI AGent\nIntegrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nCreate a\nCustom AI Chatbot\nFor Your Website in Minutes\nCreate a"
+        },
+        {
+          "locator": "text characters 110:422",
+          "excerpt": "\nChatsonic\nAI Article Writer\nChecker\nBotsonic\nContact Sales\nView Demo\nAI AGent\nIntegrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nCreate a\nCustom AI Chatbot\nFor Your Website in Minutes\nCreate a\nCustom AI Chatbot\nfor\nYour Website in Minutes\nBotsonic sca"
+        },
+        {
+          "locator": "text characters 211:523",
+          "excerpt": "reshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nCreate a\nCustom AI Chatbot\nFor Your Website in Minutes\nCreate a\nCustom AI Chatbot\nfor\nYour Website in Minutes\nBotsonic scans your website, files and help center to automatically handle 70% of customer queries, and automate "
+        },
+        {
+          "locator": "text characters 246:558",
+          "excerpt": "New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nCreate a\nCustom AI Chatbot\nFor Your Website in Minutes\nCreate a\nCustom AI Chatbot\nfor\nYour Website in Minutes\nBotsonic scans your website, files and help center to automatically handle 70% of customer queries, and automate customer engagement, support, sales"
+        },
+        {
+          "locator": "text characters 873:1135",
+          "excerpt": "r experience in over\n50 languages\nacross various channels.\nTRUSTED BY 5,000+ TEAMS\nTransform your business with\n‍\nAI-powered automation\nAI Copilots trained on your Data\nHow various industries\nare already using Botsonic\ntry botsonic for free\nHow various industrie"
+        }
+      ],
+      "capture_path": "discovery/captures/6faeef8f057706c992fb.html",
+      "capture_sha256": "d6a9c51d35fdeb511dc3f8dfac120bffef0653567f4cf22c49946a3ebb44289a",
+      "record_path": "discovery/records/6faeef8f057706c992fb.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r007-3448d17fbecfe64862dc",
+      "source_url": "https://botsonic.com/integrations/zendesk",
+      "publisher": "botsonic.com",
+      "retrieved_at": "2026-09-20T21:35:25.937979+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://botsonic.com/integrations/zendesk",
+      "capture_path": "cases/007/research/captures/3448d17fbecfe64862dc.html",
+      "capture_sha256": "a6b638c6f5b02edc9161e1060482662021969a47cc3e4621d790773772f08002",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/007/research/records/3448d17fbecfe64862dc.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Zendesk"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "Zendesk"
+        },
+        {
+          "locator": "text characters 699:1266",
+          "excerpt": "igh-quality interactions\nAutomated Ticket Creation\nEliminates manual data entry\nCreates Zendesk tickets automatically\nCaptures all relevant details from chats\nEnsures seamless follow-up\nIntelligent Agent Routing\nSmooth handoff to human agents when needed\nDirects to the right Zendesk agent\nTransfers full chat history and context\nUse Cases That\nMake a Difference\nAfter-Hours Support\nYour AI chatbot handles inquiries when your team is off-duty, creating tickets for complex issues to be addressed during business hours.\nPeak Hour Assistance\nDuring high-volume periods"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r007-c369c718b67e922e96fd",
+      "source_url": "https://botsonic.com/pricing",
+      "publisher": "botsonic.com",
+      "retrieved_at": "2026-09-20T21:35:25.924625+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://botsonic.com/pricing",
+      "capture_path": "cases/007/research/captures/c369c718b67e922e96fd.html",
+      "capture_sha256": "2fca82e3af5c2409baaa9d398bdff19f2b2c8c16723d58f7eb56ef237f110917",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/007/research/records/c369c718b67e922e96fd.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Botsonic Pricing Plans: Affordable AI Agents & Chatbots"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore Botsonic's cost-effective pricing plans tailored for businesses of all sizes. Unleash the power of AI Agents to revolutionize your customer and employee interactions today!"
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Botsonic Pricing Plans: Affordable AI Agents & Chatbots"
+        },
+        {
+          "locator": "text characters 137:2619",
+          "excerpt": "egrations\nZendesk\nFreshdesk\npricing\nWhat's New\nWhat's New\nbook a demo\nSign in\nBuild your AI Chatbot\nSign in\nSimple and Affordable\nAI Chatbots\nTailored plans to automate support, boost engagement, and drive sales on your website\nMonthly\nAnnual\n(Save up to 20%)\nStarter\nStart crafting better\ncustomer experiences\n$\n16\nper month\nbilled annually\n$\n19\nbilled monthly\nIncludes 1 team member\nIncludes 1,000 messages /\nmonth\nStart 7-day Free Trial\n1 chatbot\n10M uploaded characters\n3 Agentic Actions\nGPT-4o mini AI model\nLead capture forms\nUpload sitemaps with up to\n5,000 URLs\nApps and Integrations\nWhatsapp\nFacebook Messenger\nTelegram\nZapier\nWordpress\nGoogle Tag Manager\nGoogle Drive\nCompare all features\nProfessional\nIntelligient AI agentic actions to\nscale self-service\n$\n41\nper month\nbilled annually\n$\n49\nbilled monthly\nIncludes 2 team members\nIncludes 3,000 messages /\nmonth\nStart 7-day Free Trial\nEverything in Starter and…\n2 chatbots\n50M uploaded characters\n5 Agentic Actions\nAccess to GPT-4o, and\nupcoming AI models\nApps and Integrations\nWhatsapp\nFacebook Messenger\nTelegram\nZapier\nWordpress\nSlack\nGoogle Tag Manager\nGoogle Chat\nCalendly\nNotion\nGoogle Drive\nAutomated email transcripts\nRequest callback button\nCompare all features\nAdvanced\nComprehensive AI agentic workflows\nto scale self-service and automate tasks\n$\n249\nper month\nbilled annually\n$\n299\nbilled monthly\nIncludes 5 team members\nIncludes 12,000 messages /\nmonth\nStart 7-day Free Trial\nEverything in Professional and…\n100M Upload Characters\nCreate industry-specific\nworkflows with AI agents\nthat reason and execute\ntasks automatically\n5 workflows and 10\nagentic actions\nNo limit on sitemap size\nAuto-sync from your website\nand 3rd party platforms\n1 training session\nDedicated Slack channel for\n1 month (optional)\nAPI Access\nCompare all features\nEnterprise\nOur most powerful AI agents for\nadvanced workflows and flexibility\nCustom Pricing\nCustom number of team members\nCustom number of messages\nContact Sales\nEverything in Advanced and…\nCustom number of chatbots\nCustom upload characters\nCreate industry-specific\nworkflows with AI agents\nthat reason and execute\ntasks automatically\nCustom number of\nbehaviors and abilities\n1 training session\nDedicated Slack channel for\n1 month (optional)\nAll integrations in the\nAdvanced plan plus:\nSalesforce\nSharepoint / Onedrive\nFreshdesk\nZoho\nConfluence\nActive Campaign\nHubSpot [Soon]\nAdvanced branding\nHandoffs\nEmail Ticket handoff to\nZendesk\nEmail Ticket handoff to\nFreshdesk\nEma"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-9e5143fc703046f4e60b",
+      "source_url": "https://sitegpt.ai/",
+      "final_url": "https://sitegpt.ai/",
+      "publisher": "sitegpt.ai",
+      "retrieved_at": "2026-09-20T21:00:23.290244+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "SiteGPT - Make AI your expert customer support agent"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "It's like having ChatGPT specifically for your products. Instantly answer your visitors' questions with a personalized chatbot trained on your website content."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "SiteGPT - Make AI your expert customer support agent"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "SiteGPT"
+        },
+        {
+          "locator": "text characters 0:257",
+          "excerpt": "SiteGPT - Make AI your expert customer support agent\nLead Generation\nAI Agents\nFeatures\nIntegrations\nPricing\nSecurity\nBlog\nResources\nSign In\nStart a free trial\nMake\nAI\nyour expert customer\nservice agent\nIt's like having ChatGPT specifically for your product"
+        },
+        {
+          "locator": "text characters 0:311",
+          "excerpt": "SiteGPT - Make AI your expert customer support agent\nLead Generation\nAI Agents\nFeatures\nIntegrations\nPricing\nSecurity\nBlog\nResources\nSign In\nStart a free trial\nMake\nAI\nyour expert customer\nservice agent\nIt's like having ChatGPT specifically for your product. Instantly answer your visitors' questions with a per"
+        },
+        {
+          "locator": "text characters 95:407",
+          "excerpt": "tions\nPricing\nSecurity\nBlog\nResources\nSign In\nStart a free trial\nMake\nAI\nyour expert customer\nservice agent\nIt's like having ChatGPT specifically for your product. Instantly answer your visitors' questions with a personalized chatbot trained on your website content.\nPersonalized onboarding help\nFriendly pricing"
+        },
+        {
+          "locator": "text characters 1176:1488",
+          "excerpt": "r-level tasks\nYou're\nthree easy steps\naway from your own personalized AI support chatbot\n1\nSync training data\nEnter your URL for SiteGPT to scan, or upload files, or drop in raw text content.\n2\nInstall on your site\nEmbed a chatbot on as many sites as you want — your marketing site, in-app, help center… wherever"
+        },
+        {
+          "locator": "text characters 2376:2688",
+          "excerpt": "ot answer.\nEscalate to Human\nEscalate to a human when necessary\nWhile AI can handle a vast majority of inquiries, some conversations require human touch. Users can seamlessly transition the conversation to a live agent at the push of a button. This hybrid approach ensures that users always receive the best poss"
+        },
+        {
+          "locator": "text characters 2992:3304",
+          "excerpt": "how your chatbot performs with daily trends and an engagement funnel. AI-powered insights group every conversation into topics and outcomes, and surface the exact questions visitors keep asking, so you always know what to improve next.\nSupercharge your chatbot\nDirect integrations\nwith your favorite tools\nWith n"
+        }
+      ],
+      "capture_path": "discovery/captures/9e5143fc703046f4e60b.html",
+      "capture_sha256": "0a812e5bd3dd0f8b474ea8588815ff00c14fe09427dabff9f49f63ad2c849870",
+      "record_path": "discovery/records/9e5143fc703046f4e60b.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "evidence_id": "web-559b4eecbf5ccd9bdb96",
+  "source_url": "https://www.photoroom.com/",
+  "retrieved_at": "2026-09-20T21:00:44.978445+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.photoroom.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/559b4eecbf5ccd9bdb96.html",
+  "capture_sha256": "bfc0016aca18b6acf20e3f0d60110c6792d72482b5df4295a130899ced3ddec6",
+  "bytes_saved": 262144,
+  "title": "AI-Powered Photo Editor and Listing Studio for Product Photography | Photoroom",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "AI-powered photo editing tool and listing studio for quick, professional-quality visuals tailored to e‑commerce businesses and social media creators. It helps automate image creation, format for multiple marketplaces, and produce marketplace-ready listings at scale."
+    },
+    {
+      "key": "og:title",
+      "value": "Remove Background and Create Product Pictures | Photoroom"
+    },
+    {
+      "key": "og:description",
+      "value": "Create product and portrait pictures using only your phone. Remove background, change background and showcase products."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Photoroom"
+    }
+  ],
+  "text": "AI-Powered Photo Editor and Listing Studio for Product Photography | Photoroom\nSkip to content\nProduct\nCreate\nBackground Remover\nInstant AI cutouts\nImage Generator\nGenerate product scenes\nAI Product Photography\nFull AI photo shoots\nAI Fashion Models\nDress any mannequin\nVirtual Try-On\nDigital fitting room\nProduct Staging\nLifestyle background\nVideo Generator\nGenerate product videos\nEdit\nResize & Expand\nAny format, instantly\nRemove Objects\nClean any background\nRecolor Clothing\nColor variants at scale\nBrand Kit\nFonts, logos & colors\nLogo Maker\nGenerate brand assets\nSee all tools\nScale & Automate\nBatch Processing\nEdit thousands at once\nProduct Catalog\nManage your full catalog\nPhotoroom MCP\nCustom connector in Claude\nAPI\nIntegrate at scale\nTeam Workspaces\nCollaborate & manage roles\nVisual QA\nQuality assurance for AI\nEnterprise Guarantee\nEnd-to-end coverage\nMarketplace API Demo\nTry our playground\nSolutions\nBy Scale\nGrowing Brands\nStartups & SMBs getting to market fast\nScaling Businesses\nMid-market teams needing volume & speed\nEnterprise\nGovernance, API, compliance & SLA\nROI Calculator\nEstimate your savings vs studio shots\nBy Teams\nProduct & Engineering\nAPI, integrations, workflow at scale\nOperations & Catalog\nImage ops, merchant ops, compliance\nCreative & Photo Studio\nBrand consistency across every shot\nMarketing\nCampaigns, social, ads\nIndustries\nFashion & Apparel\nClothing, accessories, shoes\nMarketplace & Retail\nSell on Amazon, eBay & more\nBeauty & Skincare\nCosmetics, wellness, personal care\nHome & Furniture\nDecor, furniture, lifestyle\nFood & Delivery\nMenus, packaging, apps\nTech & Saas\nScreenshots, UI, product images\nSee all industries\nResources\nLearn\nBlog\nEvents & Webinars\nVideo templates\nCommunity\nIndustry reports\nDiscover the 100 Best Product Pages of 2026\nProduct updates\nDevelopers\nDocumentation\nIntegrations\nAPI Pricing\nAPI Playground\nAPI\nBuild Photoroom into your product\nCustomer Stories\nFeatured\nHow Wolt automated image editing for 140,000+ merchants in 27 countries\nSee all stories\nPhotoroom Intelligence\nNew Report\nThe Hidden Cost of Product Photography for SMBs\nSee all reports\nEnterprise\nPlatform\nEnterprise Overview\nBuilt for teams at scale\nVisual Agents\nTailored visual intelligence\nEnterprise Guarantee\nEnd-to-end coverage\nAPI\nBuild your own workflows\nSecurity & Compliance\nSSO, GDPR, SOC 2\nCustom SLA & Support\nDedicated success team\nTeam Management\nRoles, permissions & admin\nWhy Photoroom\nCustomer Stories\nHow leading brands scaled visuals\nROI Calculator\nEstimate your savings vs studio shots\nPhotoroom Intelligence\nThought leadership & imaging reports\nComparisons\nSee why teams choose Photoroom\nSee Their Stories\nWhy Depop chose Photoroom and drove 1M+ listings with AI product photo solutions\nHow Decathlon slashed image editing costs by 99% and delivered market rollouts 4x faster\nHow Palm Angels launched its Milano-Cortina capsule in four days with Photoroom\nSee all stories\nTalk to sales\nScale your visual operations\nCustom plan, dedicated onboarding, and a team that knows e‑commerce imaging.\nContact sales\nPricing\nLog in\nContact sales\nStart creating\nSell at first sight\nThe future-ready product visual solution for e‑commerce.\nStart creating\nContact sales\nJoin\n1M+ businesses\nselling more with Photoroom\nDiscover our case studies\nA complete solution\nThe full AI visual solution for e‑commerce\nWhether you're listing your first product or managing millions of SKUs.\nScale & Automate\nCreate\nEdit\nBatch Edit\nRun AI edits across thousands of images in one pass, via API or the web app. No queue infrastructure on your side.\nLearn more\nImage API\nAutomate image production at scale.\nLearn more\nMarketplace Sync\nPublish on-brand to Shopify and any marketplace feeds.\nLearn more\nEnterprise\nCustom models, dedicated capacity, custom endpoints, and SLA-backed uptime. SOC 2 Type 2.\nLearn more\nAI Product Photography\nGenerate studio-quality product visuals without a studio.\nLearn more\nBrand kit\nLock in your colors, logos, and layouts. Every image stays on brand, automatically.\nLearn more\nInstant Resize\nOne image, every format. Resize for Instagram, Amazon, Shopify, and more.\nLearn more\nVideo Templates\nTake one product shot and turn it into campaign-ready video for Reels, TikTok, and Stories, all on-brand and ready to publish.\nLearn more\nBackground Remover\nThe fastest, most precise background remover on the market\nLearn more\nAI Shadow\nAdd natural shadows that make products look real.\nLearn more\nRecolor\nChange product colors instantly.\nLearn more\nProduct Staging\nDrop your product into lifestyle scenes and seasonal contexts.\nLearn more\nOne platform, every stage of growth\nBuilt for businesses that sell\nFrom solo entrepreneurs to enterprise teams, Photoroom scales with you and helps you sell more.\nGrowing brands\nProfessional product photos in seconds. Remove backgrounds, create lifestyle shots, and list faster than your competition.\nStart for free\n“It’s only simple, but it just adds a little bit extra. And we’re seeing so much more engagement, so many more followers and likes on our socials.”\n–\nDan Bacon, Founder, Layer\nScaling businesses\nEasily batch edit your products, publish them directly to Shopify and keep your brand consistent across every marketing channel, in the app or through the API.\nStart for free\n\"We were able to move from product assets to final live images very quickly. the entire process took just three to four days.\"\n–\nMarketing Manager\nEnterprise\nFor global teams running visual production at catalogue scale. Custom AI models, API access and dedicated support to match.\nContact sales",
+  "links": [
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Medium.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_DemiBold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Bold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_ExtraBold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/2h316-r6gtjcn.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/13n5nu4920lnv.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/36h8bgouv7duh.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.amplitude.com/script/0cc38251f8841c0d84d11fd20b400b07.experiment.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Medium.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_DemiBold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_Bold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://font-cdn.photoroom.com/fonts/tt-photoroom/TT_Photoroom_ExtraBold.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/favicons/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://www.photoroom.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.photoroom.com/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/ms",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/uk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/pt-pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com/zh-tw",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.photoroom.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicons/favicon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/favicons/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicons/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicons/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/favicons/safari-pinned-tab.svg",
+      "rel": "mask-icon"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/tools/background-remover",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-images",
+      "rel": null
+    },
+    {
+      "href": "/ai-product-photography",
+      "rel": null
+    },
+    {
+      "href": "/tools/virtual-model",
+      "rel": null
+    },
+    {
+      "href": "/tools/virtual-try-on",
+      "rel": null
+    },
+    {
+      "href": "/tools/product-staging",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-expand",
+      "rel": null
+    },
+    {
+      "href": "/tools/remove-object-from-photo",
+      "rel": null
+    },
+    {
+      "href": "/tools/recolor",
+      "rel": null
+    },
+    {
+      "href": "/brand-kit",
+      "rel": null
+    },
+    {
+      "href": "/tools/create-a-logo",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/batch",
+      "rel": null
+    },
+    {
+      "href": "/product-catalog",
+      "rel": null
+    },
+    {
+      "href": "/api/claude",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/teams",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/visual-qa",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/guarantee",
+      "rel": null
+    },
+    {
+      "href": "/api/api-marketplace-listing-playground",
+      "rel": null
+    },
+    {
+      "href": "/growing-brands",
+      "rel": null
+    },
+    {
+      "href": "/scaling-businesses",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/api/roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/teams/engineering",
+      "rel": null
+    },
+    {
+      "href": "/teams/operations",
+      "rel": null
+    },
+    {
+      "href": "/teams/creative",
+      "rel": null
+    },
+    {
+      "href": "/teams/marketing",
+      "rel": null
+    },
+    {
+      "href": "/industry/clothing-and-apparel",
+      "rel": null
+    },
+    {
+      "href": "/industry/marketplaces",
+      "rel": null
+    },
+    {
+      "href": "/industry/beauty",
+      "rel": null
+    },
+    {
+      "href": "/industry/furniture",
+      "rel": null
+    },
+    {
+      "href": "/industry/delivery/food",
+      "rel": null
+    },
+    {
+      "href": "/industry/tech",
+      "rel": null
+    },
+    {
+      "href": "/industry",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-generator/templates",
+      "rel": null
+    },
+    {
+      "href": "https://photoroom.notion.site/Find-your-community-and-create-together-121a0f7f3eee8008aa77faa026b1566f",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/industry-trends",
+      "rel": null
+    },
+    {
+      "href": "/100-best-product-pages",
+      "rel": null
+    },
+    {
+      "href": "/inside-photoroom/category/category-3",
+      "rel": null
+    },
+    {
+      "href": "https://docs.photoroom.com/?_gl=1*mo0807*_gcl_au*MTUwMTYzNzM2OS4xNzgwNDg3MjU3*_ga*NjgzMDM4MDUzLjE3NzI0NTU0NDc.*_ga_JBZP7ETRKK*czE3ODA2NzU4MTQkbzEyNyRnMSR0MTc4MDY3NjA1OSRqNjAkbDAkaDA.",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/api/pricing",
+      "rel": null
+    },
+    {
+      "href": "/api/api-marketplace-listing-playground",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/wolt",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/industry-trends/product-photography-cost-for-smbs",
+      "rel": null
+    },
+    {
+      "href": "/industry-trends",
+      "rel": null
+    },
+    {
+      "href": "/platform/enterprise-overview",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/visual-agents",
+      "rel": null
+    },
+    {
+      "href": "/enterprise/guarantee",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/platform/security",
+      "rel": null
+    },
+    {
+      "href": "/platform/custom-sla",
+      "rel": null
+    },
+    {
+      "href": "/platform/team-management",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/api/roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/industry-trends",
+      "rel": null
+    },
+    {
+      "href": "/comparisons",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/depop",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/decathlon",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/palm-angels",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.photoroom.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.photoroom.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.photoroom.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/ai-product-photography",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/product-catalog",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/ai-product-photography",
+      "rel": null
+    },
+    {
+      "href": "/brand-kit",
+      "rel": null
+    },
+    {
+      "href": "/tools/bulk-resize-images",
+      "rel": null
+    },
+    {
+      "href": "/tools/video-generator/templates",
+      "rel": null
+    },
+    {
+      "href": "/tools/background-remover",
+      "rel": null
+    },
+    {
+      "href": "/tools/instant-shadows",
+      "rel": null
+    },
+    {
+      "href": "/tools/recolor",
+      "rel": null
+    },
+    {
+      "href": "/tools/product-staging",
+      "rel": null
+    },
+    {
+      "href": "https://app.photoroom.com/create",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.photoroom.com/create?modal=upsell-select-plan",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2099
+}

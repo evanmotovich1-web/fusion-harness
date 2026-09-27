@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "source_url": "https://www.uneed.best/",
+  "source_evidence_id": "web-f3a20bffbe13acea545a",
+  "ordering": "Observed homepage display order, including premium placements. No claim of popularity or adoption from rank/upvotes.",
+  "selection_note": "Ten apparently relevant leads among the first twenty displayed listings were inspected. This is purposive lead discovery, followed by deterministic sampling of verified identities.",
+  "leads": [
+    {"name":"LinkBunny","category":"C02","display_rank":1,"listing_url":"https://www.uneed.best/tool/linkbunny","official_url":"https://getlinkbunny.com/","review_eligible":true},
+    {"name":"Medical Illustration","category":"C07","display_rank":3,"listing_url":"https://www.uneed.best/tool/medical-illustration-ai","official_url":"https://medicalillustration.app/","review_eligible":true},
+    {"name":"Since.dev","category":"C09","display_rank":5,"listing_url":"https://www.uneed.best/tool/since-dev","official_url":"https://since.dev/","review_eligible":true},
+    {"name":"Northlight","category":"C03","display_rank":6,"listing_url":"https://www.uneed.best/tool/northlight","official_url":"https://northlight.ai/","review_eligible":true},
+    {"name":"Taploop","category":"C02","display_rank":8,"listing_url":"https://www.uneed.best/tool/taploop","official_url":"https://taploop.app/","review_eligible":false},
+    {"name":"Prizmi","category":"C10","display_rank":14,"listing_url":"https://www.uneed.best/tool/prizmi","official_url":"https://prizmi.ai/","review_eligible":true},
+    {"name":"PinGenius","category":"C02","display_rank":15,"listing_url":"https://www.uneed.best/tool/pingenius","official_url":"https://mypingenius.com/","review_eligible":false},
+    {"name":"TalaForge","category":null,"display_rank":16,"listing_url":"https://www.uneed.best/tool/talaforge","official_url":"https://talaforge.net/","review_eligible":false},
+    {"name":"GoldMine AI","category":"C02","display_rank":17,"listing_url":"https://www.uneed.best/tool/goldmine","official_url":"https://www.goldmineai.io/","review_eligible":true},
+    {"name":"FlipWorth","category":"C10","display_rank":19,"listing_url":"https://www.uneed.best/tool/flipworth","official_url":"https://flipworth.app/","review_eligible":false}
+  ]
+}

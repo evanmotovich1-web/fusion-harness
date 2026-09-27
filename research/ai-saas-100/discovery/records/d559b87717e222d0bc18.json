@@ -1,0 +1,57 @@
+{
+  "evidence_id": "web-d559b87717e222d0bc18",
+  "source_url": "https://wonderchat.io/",
+  "retrieved_at": "2026-09-20T21:00:23.618173+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://wonderchat.io/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/d559b87717e222d0bc18.html",
+  "capture_sha256": "048ca470f650f9c34ea5e18b07880b8ec26f3e001b8459db1d910b4cfa8cd617",
+  "bytes_saved": 262144,
+  "title": "Wonderchat - The AI Support & Conversion Agent Platform",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The all-in-one platform to build AI customer support and  AI conversion agents. Deflect support tickets, qualify website visitors, and answer with confidence using AI trained on your content. Every response cites its source."
+    },
+    {
+      "key": "og:title",
+      "value": "Wonderchat - The AI Support & Conversion Agent Platform"
+    },
+    {
+      "key": "og:description",
+      "value": "The all-in-one platform to build AI customer support and  AI conversion agents. Deflect support tickets, qualify website visitors, and answer with confidence using AI trained on your content. Every response cites its source."
+    }
+  ],
+  "text": "Wonderchat - The AI Support & Conversion Agent Platform",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/0OUenhRWAuJaqwaKYfjdN6zlNs.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/0OUenhRWAuJaqwaKYfjdN6zlNs.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/U9crVI1Z5qffaGdQxgGBwM8utE.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://wonderchat.io/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    }
+  ],
+  "elapsed_seconds": 0.1666
+}

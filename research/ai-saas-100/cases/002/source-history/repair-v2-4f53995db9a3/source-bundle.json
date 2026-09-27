@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "archived_at": "2026-09-20T22:52:01.882834+00:00",
+  "members": [
+    {
+      "active_path": "cases/002/implementation/workflow.py",
+      "path": "cases/002/source-history/repair-v2-4f53995db9a3/implementation/workflow.py",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/adapter.py",
+      "path": "cases/002/source-history/repair-v2-4f53995db9a3/tests/repair-v2/adapter.py",
+      "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/run.py",
+      "path": "cases/002/source-history/repair-v2-4f53995db9a3/tests/repair-v2/run.py",
+      "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+    },
+    {
+      "active_path": "cases/002/tests/repair-v2/execute.py",
+      "path": "cases/002/source-history/repair-v2-4f53995db9a3/tests/repair-v2/execute.py",
+      "sha256": "6d395d14b24808d40800e999eeccfbcfe3b6964fd148fddeb42d3ffa06ba5a0c"
+    },
+    {
+      "active_path": "cases/002/tests/run.py",
+      "path": "cases/002/source-history/repair-v2-4f53995db9a3/tests/run.py",
+      "sha256": "12afaa11048879f3b92e439e9451b7c72cd77df5f644a9520fab75cccb3280b9"
+    }
+  ]
+}

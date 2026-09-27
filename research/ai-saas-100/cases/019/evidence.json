@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-22938b4076b347ee8953",
+      "source_url": "https://www.docsumo.com/",
+      "final_url": "https://www.docsumo.com/",
+      "publisher": "www.docsumo.com",
+      "retrieved_at": "2026-09-20T21:00:37.378106+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Intelligent Document Processing Meets Agentic AI | Docsumo"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Go from rule-based OCR to LLM-led intelligent document processing workflows in the Agentic AI era with Docsumo. Built for enterprise accuracy and ROI."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Intelligent Document Processing Meets Agentic AI | Docsumo"
+        },
+        {
+          "locator": "text characters 0:288",
+          "excerpt": "Intelligent Document Processing Meets Agentic AI | Docsumo\nPlatform\nSolutions\nBY TOOLS\nDocument AI Software\nIDP Software\nOCR Software\nCareers\nDocument Automation\nDocument Data Extraction\nDocument Scanning\nBY DOCUMENT TYPES\nBank Statements\nUtility Bills\nCareers\nACORD forms\nInvoices\nBank C"
+        },
+        {
+          "locator": "text characters 26:338",
+          "excerpt": "ssing Meets Agentic AI | Docsumo\nPlatform\nSolutions\nBY TOOLS\nDocument AI Software\nIDP Software\nOCR Software\nCareers\nDocument Automation\nDocument Data Extraction\nDocument Scanning\nBY DOCUMENT TYPES\nBank Statements\nUtility Bills\nCareers\nACORD forms\nInvoices\nBank Checks\nBill of Lading\nBY INDUSTRIES\nCommercial Lend"
+        },
+        {
+          "locator": "text characters 656:968",
+          "excerpt": "gents you can actually deploy\nTry 1,000 Pages Free\nDocsumo's Document AI agents are trained on billions of documents and complex industry use cases to help you make informed decisions in seconds with 95%+ straight-through processing.\nTrusted by 10,000+ mid-sized and enterprise teams\nDocument and email workflows"
+        },
+        {
+          "locator": "text characters 831:1088",
+          "excerpt": "ecisions in seconds with 95%+ straight-through processing.\nTrusted by 10,000+ mid-sized and enterprise teams\nDocument and email workflows break in four places. Your operations team feels it.\nFrom intake to decision, the manual document workflow has four fai"
+        }
+      ],
+      "capture_path": "discovery/captures/22938b4076b347ee8953.html",
+      "capture_sha256": "8fa3c57db00b68c6c9c446613049c2eaa83819aa11bd9dc42bd49792f902d8fd",
+      "record_path": "discovery/records/22938b4076b347ee8953.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r019-7c84afe98c97c47fd958",
+      "source_url": "https://www.docsumo.com/intelligent-document-processing",
+      "publisher": "www.docsumo.com",
+      "retrieved_at": "2026-09-20T21:35:31.159485+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.docsumo.com/intelligent-document-processing",
+      "capture_path": "cases/019/research/captures/7c84afe98c97c47fd958.html",
+      "capture_sha256": "88f12be24a549d38d91d9137884b512dd9bfa17cb29fcc9fd4d36480e69a205c",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/019/research/records/7c84afe98c97c47fd958.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Intelligent Document Processing | IDP Guides & Insights"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore intelligent document processing with practical workflows, evaluation criteria, and examples focused on accuracy, scale, and measurable outcomes."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Intelligent Document Processing | IDP Guides & Insights"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r019-ae30af7e39018be3676f",
+      "source_url": "https://www.docsumo.com/pricing",
+      "publisher": "www.docsumo.com",
+      "retrieved_at": "2026-09-20T21:35:31.157329+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.docsumo.com/pricing",
+      "capture_path": "cases/019/research/captures/ae30af7e39018be3676f.html",
+      "capture_sha256": "85c23932e2439125b96a9ded87cc03b218e522ec9efde32c52433abff6ffd956",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/019/research/records/ae30af7e39018be3676f.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Document AI Plans & Pricing | Docsumo"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Simple and flexible plans for teams of all sizes. Ditch manual workflows and switch to automated data feeds with Docsumo's data extraction platform."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Document AI Plans & Pricing | Docsumo"
+        },
+        {
+          "locator": "text characters 476:2956",
+          "excerpt": "cs\nCareers\nCOMPANY\nAbout Us\nEnterprise Plan\nTerms of Use\nPrivacy Policy\nCareers\nLog In\nTry For Free\nBook A Demo\nPlans &\nPricing\nBuild touchless workflows and act on data-driven decisions with Docsumo.\nFree\nNever miss another detail with AI-powered extraction.\nTry Free For 14 Days\nIncludes:\nUp to 1000 free pages\n10 users licences\nUnlimited pre-trained doc AI models\nFields & table extraction\nAI-document reviewer\nAI-prompting & refinement\nContinuous learning\nPre-built integrations\nWebhooks, APIs & Excel downloads\nPrivate Teams/Slack channel\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nBusiness\nIntelligent extraction, classification, and validation at scale.\nTalk to us\nEverything in\nFree\n, plus:\nUnlimited users licences\nMaster data lookup & database mapping\nAuto-classification & splitting\nAI-transform (Validations, Classification, Categorization)\nCustom document pipelines\nRich permissions control\nTest environment\nAudit logging\nCustom 3rd-party integrations\nDedicated Account Manager & Solutions Engineer\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nMost popular\nEnterprise\nEnd-to-end workflow automation with real-time insights.\nTalk to us\nEverything in\nBusiness\n, plus:\nAI-powered automated workflows\nAI-led case management\nCross-document validations\nReal-time document analytics\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nBest value\nTrusted by\n10,000+ data-driven\nbusinesses\nBusinesses Do Extraordinary Things With Docsumo\n$ 100 Million\nSaved in processing costs\n3.4 Million\nWork hours saved\n95%+\nStraight-through processing achieved\n20 Million\nDocuments processed\n“\nDocsumo is the best\n” - That's what they said\n“Leader in Intelligent Document Processing”\nJennifert Perdomo,\nOperations Manager, N.S. Trucking\nWhat took days - now only takes seconds.\n“We used to spend over 7 minutes on average processing a dispatch ticket to capture the relevant details. Docsumo helped us solve all our data extraction issues in under half a minute. We use the platform frequently and it's very easy to use.”\nJennifert Perdomo,\nOperations Manager, N.S. Trucking\nDaniel Tilipman,\nCo-Founder & Executive Board Member, National Debt Relief\nOur go-to solution for data capture from unstructured documents.\n“Docsumo does a very good job for our specific use case. Debt settlement letters vary a lot from each other, but "
+        },
+        {
+          "locator": "text characters 879:1441",
+          "excerpt": "t reviewer\nAI-prompting & refinement\nContinuous learning\nPre-built integrations\nWebhooks, APIs & Excel downloads\nPrivate Teams/Slack channel\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nBusiness\nIntelligent extraction, classification, and validation at scale.\nTalk to us\nEverything in\nFree\n, plus:\nUnlimited users licences\nMaster data lookup & database mapping\nAuto-classification & splitting\nAI-transform (Validations, Classification, Categorization)\nCustom document pipelines\nRich permissions control\nTest"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-967e50af6da8a7c52361",
+      "source_url": "https://nanonets.com/",
+      "final_url": "https://nanonets.com/",
+      "publisher": "nanonets.com",
+      "retrieved_at": "2026-09-20T21:00:37.388106+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Nanonets: AI Agents for Enterprise Data Processing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Nanonets automates messy manual processes including accounts payable, claims processing, order management, and more, and delivers clean data to systems of record like SAP, Salesforce, and more. Trusted by 10,000+ enterprises."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Nanonets: AI Agents for Enterprise Data Processing"
+        },
+        {
+          "locator": "text characters 0:252",
+          "excerpt": "Nanonets: AI Agents for Enterprise Data Processing\nNanonets\nProducts\nSolutions\nCustomers\nPricing\nResources\nGet started for free\nBook a demo\nTurn your business processes\ninto AI agents\nNanonets converts policies, procedures, systems, knowledge into AI a"
+        },
+        {
+          "locator": "text characters 104:416",
+          "excerpt": "es\nGet started for free\nBook a demo\nTurn your business processes\ninto AI agents\nNanonets converts policies, procedures, systems, knowledge into AI agents that run your\nbusiness.\nbusiness processes.\nBook a demo\nGet started for free\n$50 free credits, no card required.\nUsed by\n35% of the Fortune 500\nand\n10,000+ en"
+        },
+        {
+          "locator": "text characters 178:490",
+          "excerpt": "gents\nNanonets converts policies, procedures, systems, knowledge into AI agents that run your\nbusiness.\nbusiness processes.\nBook a demo\nGet started for free\n$50 free credits, no card required.\nUsed by\n35% of the Fortune 500\nand\n10,000+ enterprises\ncase study ↗\ncase study ↗\ncase study ↗\ncase study ↗\nAI agents wo"
+        },
+        {
+          "locator": "text characters 408:720",
+          "excerpt": ",000+ enterprises\ncase study ↗\ncase study ↗\ncase study ↗\ncase study ↗\nAI agents work tirelessly,\nso your team doesn't have to.\nEdge cases undermine agent ROI. Deploy agents that accurately follow business rules, learn from every correction, and work transparently.\nAccounts Payable\n/ 0\n1\n6 seconds per invoice, n"
+        },
+        {
+          "locator": "text characters 7570:7882",
+          "excerpt": "dures, systems, and institutional knowledge into a governed graph for AI.\n01\nImport your documentation\nDrop in the SOP, policy docs, and other forms of documentation of your business processes. A PDF / DOCX upload or simply a set of instructions.\nclaims-adjudication-SOP.pdf\nClaims Adjudication — Auto & Property"
+        },
+        {
+          "locator": "text characters 8595:8907",
+          "excerpt": "context graph. Every business rule is traceable to its source, giving AI agents a consistent, auditable source of truth across teams, systems, geographies.\nSOP · page 15\n“…the deductible is applied before any payable amount is calculated…”\nExtracted rule\nApply the\ndeductible first\n, then compute the payout.\nApp"
+        }
+      ],
+      "capture_path": "discovery/captures/967e50af6da8a7c52361.html",
+      "capture_sha256": "13294fd06c54986450a9afc202a5220a7a86b00755860e7c463999f87381774f",
+      "record_path": "discovery/records/967e50af6da8a7c52361.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

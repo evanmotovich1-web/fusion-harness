@@ -1,0 +1,410 @@
+{
+  "evidence_id": "r020-87e4a7ac64e7fadeb834",
+  "source_url": "https://medicalillustration.app/pricing",
+  "publisher": "medicalillustration.app",
+  "retrieved_at": "2026-09-20T21:35:31.206868+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://medicalillustration.app/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/020/research/captures/87e4a7ac64e7fadeb834.html",
+  "capture_sha256": "cfe473f690c0d80050637a0a134ea2ae35ec5f5678229eb3152046e1d0087558",
+  "bytes_saved": 198544,
+  "title": "Simple Pricing for Medical Illustration",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Choose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest"
+    },
+    {
+      "key": "og:title",
+      "value": "Simple Pricing for Medical Illustration"
+    },
+    {
+      "key": "og:description",
+      "value": "Choose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Medical Illustration"
+    }
+  ],
+  "text": "Medical Illustration\nExamples\nPricing\nEducation Program\nTools\nCreate\nSign In\nMedical Illustration\nSimple Pricing for Medical Illustration\nChoose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest\nMonthly\nYearly\n50% OFF\nSAVE 50%\nStandard\nGreat for getting started.\n$19\n$9.5\n/ month\nBilled annually — Save $114\n240 credits/month\n≈\n80 figures/month\nGet Started\nIncludes\n240\ncredits / month\nGenerate up to\n80\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nStandard member queue\nSlide & poster friendly layouts\nRun up to 3 generation tasks concurrently\n30-day history storage\nAll illustration styles included\nMost Popular\nSAVE 50%\nUltra\nBuilt for high-volume production.\n$99\n$49.5\n/ month\nBilled annually — Save $594\n1,800 credits/month\n≈\n600 figures/month\nGet Started\nIncludes\n1800\ncredits / month (3× Pro)\nGenerate up to\n600\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nSkip the waiting queue\nEverything in Pro, plus:\nRun up to\n10 generation tasks concurrently\nHighest priority\ngeneration queue\nPermanent history + dedicated support (12h response)\nSAVE 50%\nPro\nBest for regular creation.\n$39\n$19.5\n/ month\nBilled annually — Save $234\n600 credits/month\n≈\n200 figures/month\nGet Started\nIncludes\n600\ncredits / month\nGenerate up to\n200\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nPriority queue\nEverything in Standard, plus:\nRun up to 5 generation tasks concurrently\nPriority generation queue\nduring busy hours\n90-day history + priority support (24h response)\nEarly access to new features\nPay safely and securely with\nCredit Packages\nOne-time purchase. Credits remain available for up to 12 months and do not auto-renew.\nStarter Pack\n240\ncredits\n≈ 80 figures\n$30\nPurchase\nPopular\nGrowth Pack\n900\ncredits\n≈ 300 figures\n$100\nPurchase\nProfessional Pack\n2100\ncredits\n≈ 700 figures\n$200\nPurchase\nFAQ\nPricing & Credits FAQ\nHow do the billing cycles work?\nWhen are credits delivered?\nCan I switch or cancel later?\nDo unused credits expire?\nAre commercial rights included?\nNeed invoices or team billing?\nMedical Illustration\nMedical Illustration is an AI-powered tool for creating professional medical illustrations, anatomy diagrams, and patient education materials. Not affiliated with OpenAI or Google.\nMossAI Tools\nViesearch - The Human-curated Search Engine\nMossAI Tools\nViesearch - The Human-curated Search Engine\nProduct\nFeatures\nPricing\nExamples\nFAQ\nSupport\nContact Us\nFAQ\nUse Cases\nLegal\nLicense\nTerms\nPrivacy\nContent Policy\nCookies\nRefund\nFree Tools\nAnatomy Diagram Generator\nMedical Diagram Generator\nPatient Education Illustration\nMedical Infographic Generator\nNeurology Diagram Generator\nBioRender Alternative\nMore Tools →\n© 2026 Medical Illustration. All rights reserved.\nSimple Pricing for Medical Illustration",
+  "links": [
+    {
+      "href": "/_next/static/css/2dbfcc593ac31b7e.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-e1da8c08864c0a96.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#examples",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/education-program",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.producthunt.com/products/medical-illustration-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://startupfa.me/s/medical-illustration?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://fazier.com/launches/medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://wired.business",
+      "rel": null
+    },
+    {
+      "href": "https://twelve.tools",
+      "rel": null
+    },
+    {
+      "href": "https://findly.tools/medical-illustration-ai?utm_source=medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://turbo0.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://aiagentsdirectory.com/agent/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://frogdr.com/medicalillustration.app?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://uno.directory",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://toolfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://dofollow.tools",
+      "rel": null
+    },
+    {
+      "href": "https://similarlabs.com",
+      "rel": null
+    },
+    {
+      "href": "https://peerpush.net/p/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.uneed.best/tool/medical-illustration-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.foundrlist.com/product/medicalillustrationai?utm_source=badge&utm_medium=embed",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://mossai.org",
+      "rel": null
+    },
+    {
+      "href": "https://viesearch.com/",
+      "rel": null
+    },
+    {
+      "href": "https://tinylaunch.com",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.tinystartups.com/startup/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://saasfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://earlyhunt.com/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://auraplusplus.com/projects/ai-medical-illustration-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indiehunt.io/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indie.deals?ref=https%3A%2F%2Fmedicalillustration.app%2F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://yo.directory/",
+      "rel": null
+    },
+    {
+      "href": "https://www.producthunt.com/products/medical-illustration-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://startupfa.me/s/medical-illustration?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://fazier.com/launches/medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://wired.business",
+      "rel": null
+    },
+    {
+      "href": "https://twelve.tools",
+      "rel": null
+    },
+    {
+      "href": "https://findly.tools/medical-illustration-ai?utm_source=medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://turbo0.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://aiagentsdirectory.com/agent/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://frogdr.com/medicalillustration.app?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://uno.directory",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://toolfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://dofollow.tools",
+      "rel": null
+    },
+    {
+      "href": "https://similarlabs.com",
+      "rel": null
+    },
+    {
+      "href": "https://peerpush.net/p/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.uneed.best/tool/medical-illustration-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.foundrlist.com/product/medicalillustrationai?utm_source=badge&utm_medium=embed",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://mossai.org",
+      "rel": null
+    },
+    {
+      "href": "https://viesearch.com/",
+      "rel": null
+    },
+    {
+      "href": "https://tinylaunch.com",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.tinystartups.com/startup/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://saasfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://earlyhunt.com/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://auraplusplus.com/projects/ai-medical-illustration-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indiehunt.io/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indie.deals?ref=https%3A%2F%2Fmedicalillustration.app%2F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://yo.directory/",
+      "rel": null
+    },
+    {
+      "href": "/#feature",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/#feature",
+      "rel": null
+    },
+    {
+      "href": "/#faq",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "/#faq",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/license",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/content-policy",
+      "rel": null
+    },
+    {
+      "href": "/cookie-policy",
+      "rel": null
+    },
+    {
+      "href": "/refund-policy",
+      "rel": null
+    },
+    {
+      "href": "/tools/anatomy-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/medical-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/patient-education-illustration-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/medical-infographic-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/neurology-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/biorender-alternative",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "https://medicalillustration.app/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://medicalillustration.app/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/ja/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/ko/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/zh/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/fr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/pt/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/it/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/pricing",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 1.298523
+}

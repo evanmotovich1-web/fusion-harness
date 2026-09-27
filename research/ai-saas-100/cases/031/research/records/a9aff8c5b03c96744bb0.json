@@ -1,0 +1,238 @@
+{
+  "evidence_id": "r031-a9aff8c5b03c96744bb0",
+  "source_url": "https://klap.app/pricing",
+  "publisher": "klap.app",
+  "retrieved_at": "2026-09-20T21:35:37.842052+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://klap.app/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/031/research/captures/a9aff8c5b03c96744bb0.html",
+  "capture_sha256": "df9c8baebf6e314f0cceec6ee025c8b5c42882980799201afd94e402e3f3be7b",
+  "bytes_saved": 53696,
+  "title": "Klap Pricing | Plans for Creators, Teams & API Users",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore Klap's pricing — flexible plans for creators, teams and developers. Compare features, free trial, fair-use credits and the Klap REST API for AI video clipping at scale."
+    },
+    {
+      "key": "og:title",
+      "value": "Klap Pricing | Plans for Creators, Teams & API Users"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore Klap's pricing — flexible plans for creators, teams and developers. Compare features, free trial, fair-use credits and the Klap REST API for AI video clipping at scale."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Klap"
+    }
+  ],
+  "text": "Klap Pricing | Plans for Creators, Teams & API Users\nResources\nPricing\nResources\nPricing\nPlans\nOnly pay for clips you generate.\nMonthly\nYearly\nSave 50%\nBasic\nFor individuals\n100 clips\n/mo\n$14\n/mo\nBilled yearly\nGet started\nPro\nPopular\nFor professionals\n300 clips\n/mo\n$39\n/mo\nBilled yearly\nGet started\nPro+\nFor teams\n1000 clips\n/mo\n$94\n/mo\nBilled yearly\nGet started\nAll plans include:\nAI Clipping\nUnlimited social accounts\nAnalytics\nNeed more?\nLet's talk!\n8.5M clips\nmade by\n3.5M creators\nMade with ♥ by\n@theo\nand\n@victor\nZIGG SAS doing business as Klap\nTerms of services\nPrivacy policy\nTurn videos into viral shorts\nResources\nBlog\nTools\nAPI Docs\nDiscord\nServices\nBecome an affiliate\nAPI\nAlternatives\n2short AI\nDumme\nMunch\nOpus Clip\nQlip\nSpikes Studio\nVidyo\nVizard AI\nSsemble\nVeed.io\nSubmagic\nZubtitle\nWisecut\nLiveLink\nSendShort\nShort.ai\nNexus Clips\nWayin\nClipGoat\nCutLabs",
+  "links": [
+    {
+      "href": "/_next/static/media/0484562807a97172-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/8888a3826f4a3af4-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/b957ea75a84b6ea7-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/eafabf029ad39a43-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/svg/Klap_logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/svg/TikTok_logomark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/svg/Instagram_logomark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/svg/Linkedin_logomark.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/29445a73565ad896.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/62f3c6f7893387c4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-fed46cb8111a0b7b.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://storage.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://klap.app/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/KcAcHdrSQU",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/deletethistheo",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://twitter.com/VictorTimsit",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/terms-of-services",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "https://docs.klap.app",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/KcAcHdrSQU",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/2short-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/dumme",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/munch",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/opus-clip",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/qlip-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/spikes-studio",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/vidyo-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/vizard-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/ssemble",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/veed-io",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/submagic",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/zubtitle",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/wisecut",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/livelink",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/sendshort",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/short-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/nexus-clips",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/wayin",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/clipgoat",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/cutlabs",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.306745
+}

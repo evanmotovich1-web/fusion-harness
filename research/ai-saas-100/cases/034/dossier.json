@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "034",
+    "name": "Paperpal",
+    "canonical_url": "https://paperpal.com/",
+    "category": "C01",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-0c5dcc503ad76cf63ecc"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "paperpal.com",
+    "selection_position": 34,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Researchers editing papers and preparing submissions",
+    "job": "Improve academic language while preserving numerical results, uncertainty, citations, and technical meaning",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "edited_text": "string",
+      "edits": "array of before/after/reason",
+      "preserved_numbers": "array",
+      "preserved_citations": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Improve academic language while preserving numerical results, uncertainty, citations, and technical meaning",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Captured pricing page exposes feature and integration text but no numeric price. Prime entitlement and institution pricing require further verification."
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Researchers editing papers and preparing submissions",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "jenni.ai",
+        "name": "Jenni",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary-vendor"
+      ],
+      "value": {
+        "exclusive_access_verified": false
+      },
+      "unknown_reason": "Vendor statements do not establish exclusive access or an independently demonstrated technical advantage."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Researchers editing papers and preparing submissions.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording:  new tabs. No copy-pasting. Just seamless writing support, right where you are.\nMS Word Add-in\nChrome Extension\nSupports Google Docs and Overleaf\nMicrosoft Edge\nSupports Google Docs and Overleaf\nBring your Enterprise/Institution on board\nSimplify access management, collaborate through shared libraries, and unlock institution-wide pricing for your teams. Contact us to start your free trial.\nGet in Touch\nWhy every academic prefers Paperpal\n\"I can't recommend Paperpal enough for teachers. My students can now\nrefine writing and grammar withou",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r034-03b1ee4b466eefc4ae4b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r034-03b1ee4b466eefc4ae4b",
+          "locator": "text characters 241:785",
+          "excerpt": " new tabs. No copy-pasting. Just seamless writing support, right where you are.\nMS Word Add-in\nChrome Extension\nSupports Google Docs and Overleaf\nMicrosoft Edge\nSupports Google Docs and Overleaf\nBring your Enterprise/Institution on board\nSimplify access management, collaborate through shared libraries, and unlock institution-wide pricing for your teams. Contact us to start your free trial.\nGet in Touch\nWhy every academic prefers Paperpal\n\"I can't recommend Paperpal enough for teachers. My students can now\nrefine writing and grammar withou"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r034-03b1ee4b466eefc4ae4b": "2026-09-20T21:35:38.149350+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary-vendor",
+      "statement": "Vendor data/model/security wording: ining on security best practices.\nResponsible AI you can rely on\nTransparent and Secure AI Usage\nPaperpal uses advanced AI models—including proprietary and fine-tuned systems—tailored for scholarly writing. Whether you are a Prime member or a free Paperpal user, your data will never be used to train our AI models. With robust guardrails in place to mitigate incorrect or malicious use, our AI provides reliable assistance without security risks.\nTrusted Infrastructure. Total Protection.\nPaperpal’s enterprise-grade security measures protect your data at every step.\nCertified Data Centers\nYour data resides safely in SSAE 18/SOC1-certified facilities that are trusted glo",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r034-ba08d4859bd8927fcb96"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r034-ba08d4859bd8927fcb96",
+          "locator": "text characters 999:1673",
+          "excerpt": "ining on security best practices.\nResponsible AI you can rely on\nTransparent and Secure AI Usage\nPaperpal uses advanced AI models—including proprietary and fine-tuned systems—tailored for scholarly writing. Whether you are a Prime member or a free Paperpal user, your data will never be used to train our AI models. With robust guardrails in place to mitigate incorrect or malicious use, our AI provides reliable assistance without security risks.\nTrusted Infrastructure. Total Protection.\nPaperpal’s enterprise-grade security measures protect your data at every step.\nCertified Data Centers\nYour data resides safely in SSAE 18/SOC1-certified facilities that are trusted glo"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r034-ba08d4859bd8927fcb96": "2026-09-20T21:35:38.169784+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "No independent verification of exclusivity, training data rights, model quality, certification, or contractual enforceability.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Jenni advertises: Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-dcce27dc6bc240d69e57"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-dcce27dc6bc240d69e57",
+          "locator": "metadata[0].description",
+          "excerpt": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-dcce27dc6bc240d69e57": "2026-09-20T21:00:09.404352+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Jenni. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc",
+        "web-dcce27dc6bc240d69e57"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "evidence_id": "web-dcce27dc6bc240d69e57",
+          "locator": "metadata[0].description",
+          "excerpt": "Jenni is an AI research and academic writing assistant that helps students, researchers, and academics create essays, papers, and citations with ease."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00",
+          "web-dcce27dc6bc240d69e57": "2026-09-20T21:00:09.404352+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Scholarly-language adaptation, publisher workflows, citation integrity, and data-handling commitments may matter beyond general rewriting.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc",
+        "r034-03b1ee4b466eefc4ae4b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "evidence_id": "web-0c5dcc503ad76cf63ecc",
+          "locator": "metadata[0].description",
+          "excerpt": "Paperpal is a comprehensive AI academic writing tool and research assistant designed for researchers and students. Our AI-powered platform features grammar checker, paraphraser, plagiarism checker, AI writing assistant, citation generator, translator, Chat PDF, essay writer and journal submission checker. Our AI writing and research assistant provides instant feedback to improve clarity, fix errors, and ensure academic standards for essays, research papers, and journal submissions."
+        },
+        {
+          "evidence_id": "r034-03b1ee4b466eefc4ae4b",
+          "locator": "text characters 241:785",
+          "excerpt": " new tabs. No copy-pasting. Just seamless writing support, right where you are.\nMS Word Add-in\nChrome Extension\nSupports Google Docs and Overleaf\nMicrosoft Edge\nSupports Google Docs and Overleaf\nBring your Enterprise/Institution on board\nSimplify access management, collaborate through shared libraries, and unlock institution-wide pricing for your teams. Contact us to start your free trial.\nGet in Touch\nWhy every academic prefers Paperpal\n\"I can't recommend Paperpal enough for teachers. My students can now\nrefine writing and grammar withou"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0c5dcc503ad76cf63ecc": "2026-09-20T21:00:09.683272+00:00",
+          "r034-03b1ee4b466eefc4ae4b": "2026-09-20T21:35:38.149350+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/034/tests/specification.json",
+    "sha256": "9580d20a0777098704a4e2802326f5312151cf4e90ea326b89e5233758e8a256",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:09.683272+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-0c5dcc503ad76cf63ecc",
+        "r034-03b1ee4b466eefc4ae4b",
+        "r034-ba08d4859bd8927fcb96",
+        "web-dcce27dc6bc240d69e57"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

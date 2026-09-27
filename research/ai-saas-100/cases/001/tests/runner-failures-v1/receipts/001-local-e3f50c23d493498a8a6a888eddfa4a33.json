@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "run_id": "001-local-e3f50c23d493498a8a6a888eddfa4a33",
+  "system": "B2",
+  "status": "completed",
+  "started_at": "2026-09-20T22:37:47.097639+00:00",
+  "ended_at": "2026-09-20T22:37:47.112964+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/001/tests/runner-failures-v1/child.py",
+    "success",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/001/tests/runner-failures-v1/suite.json"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/001/tests/runner-failures-v1/child.py",
+    "sha256": "002b02fe411271e9a34ebbd185921f39288bcb4c110964cb0d2015a2bb9609f7"
+  },
+  "fixtures": {
+    "path": "cases/001/tests/runner-failures-v1/suite.json",
+    "sha256": "c7abf63c05987c3b2f4f0f5e0ae17eb178130a1b019c72d215cf0f0669b5ea67"
+  },
+  "input_bundle": {
+    "path": "cases/001/tests/runner-failures-v1/suite.json",
+    "sha256": "c7abf63c05987c3b2f4f0f5e0ae17eb178130a1b019c72d215cf0f0669b5ea67"
+  },
+  "outputs": [
+    {
+      "path": "cases/001/tests/runner-failures-v1/receipts/001-local-e3f50c23d493498a8a6a888eddfa4a33.stdout.bin",
+      "sha256": "18fe6c40587ae10ec4032bd072e2b039bf6071e9f139606fb4648030d7b017fb"
+    },
+    {
+      "path": "cases/001/tests/runner-failures-v1/receipts/001-local-e3f50c23d493498a8a6a888eddfa4a33.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "Darwin"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "network": false,
+    "mode": "runner_failure_validation",
+    "concurrency": 1,
+    "test_only": true,
+    "model_calls": 0,
+    "runner": {
+      "path": "cases/001/tests/runner-failures-v1/child.py",
+      "sha256": "002b02fe411271e9a34ebbd185921f39288bcb4c110964cb0d2015a2bb9609f7"
+    },
+    "orchestrator_sha256": "514b1c886616be7322d38386a739d7e8e87f85e6c7139d8719c092bfd42a0d5c",
+    "semantic_quality_scored": false,
+    "timeout_seconds": 0.25,
+    "expected_test_ids": [
+      "alpha",
+      "beta",
+      "gamma"
+    ],
+    "expected_count": 3,
+    "input_bundle_scope": "Synthetic runner validation only"
+  },
+  "baseline_id": null,
+  "exit_status": 0,
+  "test_results": [
+    {
+      "test_id": "alpha",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "beta",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "gamma",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [
+    {
+      "value": null,
+      "unit": "points",
+      "classification": "unknown",
+      "category": "semantic_quality",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "latency": {
+    "value": 0.015765209000000002,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "latency",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "Generic-model baseline unavailable",
+    "Independent hidden evaluation unavailable",
+    "Central AI workflow not executed"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible fixed regression, not hidden evaluation"
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "attempt_started_at": "2026-09-20T22:37:47.097302+00:00",
+  "attempt_ended_at": "2026-09-20T22:37:47.113066+00:00",
+  "failure_kind": null,
+  "process_started": true,
+  "product_acceptance": false,
+  "original_product_status": "not_observed"
+}

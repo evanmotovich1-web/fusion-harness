@@ -1,0 +1,89 @@
+{
+  "evidence_id": "web-84e7cc6ddc2fe181610f",
+  "source_url": "https://www.getclockwise.com/",
+  "retrieved_at": "2026-09-20T21:00:55.876967+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://getclockwise.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/84e7cc6ddc2fe181610f.html",
+  "capture_sha256": "8a5b7fe9ed5e22454affa9780d1eb9cc32e5152bd43154ecaec8685cd7a2bc98",
+  "bytes_saved": 61452,
+  "title": "Clockwise's Next Chapter",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "A new chapter for our team, and an important update for our customers."
+    },
+    {
+      "key": "og:title",
+      "value": "The Clockwise team is joining Salesforce"
+    },
+    {
+      "key": "og:description",
+      "value": "A new chapter for our team, and an important update for our customers."
+    }
+  ],
+  "text": "Clockwise's Next Chapter\nOur Next Chapter\nA new chapter for our team, and an important update for our customers\nFrom the earliest days of Clockwise, it has been our mission to help the world make time for what matters. We've built a business to be proud of, serving some of the most impressive customers like Uber, Netflix, and Atlassian. And the impact has been far reaching, with over 8 million hours of Focus Time created and 23 million meetings moved to better times.\nWe’ve been building AI into the heart of scheduling long before it became the defining technology of our time. Along the way, we've developed deep expertise in scheduling and calendars. Hard-won knowledge from nearly a decade of tackling one of the most underestimated problems in the modern workplace: shared time. It's a problem we care deeply about, and one that isn't going away.\nThat's why we're excited about this next chapter: the Clockwise team is joining Salesforce.\nWe believe this move will allow us to have even greater impact by bringing our deep expertise in building reliable, agentic software to the Agentic Enterprise.\nAs part of this transition, Clockwise will be going away. Our product will no longer be available starting on\nMarch 27, 2026.\nTo our customers, we want to thank you. You have inspired us to keep building and we deeply appreciate the trust you've placed with us. We don't take lightly what you gave us — your time, your trust, and your belief in what we were building.\nFrequently Asked Questions\nHow will the events on my calendar be impacted when the Clockwise services end?\nAny Smart Hold events created by Clockwise (such as Focus Time, Travel Time, Meeting Breaks, and Personal Calendar synced events) will be removed from your calendar. Flexible Meetings will stop moving and the green Clockwise sparkle will be removed.\nWhat about my Clockwise Scheduling Links? Will they stop working?\nYes, Clockwise Scheduling Links will no longer be available. We recommend transitioning your links immediately to another service, such as\nReclaim\n.\nWill my Focus Time blocks just disappear from my calendar or stay as-is?\nAll Focus Time blocks managed by Clockwise will be removed from your calendar.\nData\nHow do I export my data?\nPlease direct any questions related to your data to\n[email protected]\n.\nWill Salesforce have access to my data?\nNo, there is no transfer of data to Salesforce, and your data will be deleted.\nWhat happens to all my data — my calendar preferences, Scheduling Links, and Focus Time settings?\nYour data will be deleted shortly after you lose access to the product on March 27, 2026.\nHow long will Clockwise retain my data after shutdown and when will it be deleted?\nAll user data will be deleted shortly after March 27, 2026. There will be no confirmation of this deletion, but there will be notice if the deletion date changes and/or there are changes to our decision to delete all user data.\nBilling\nWill I get a refund for unused subscription time?\nYou will get a refund for any prepaid subscription that extends past March 27, 2026, on a prorated basis. For example, if you're on an annual plan that renews on September 1, 2026, and you've prepaid for the full year, you would receive a refund for the unused portion of your subscription from March 27 through August 31, 2026.\nWill my card be charged again before shutdown?\nWe are trying to avoid any charges before shutdown. If for some reason you do get charged, please know that amount will be added to your refund.\nWill I be able to access prior invoices?\nPast invoices will be accessible on the\nPlans & Billing page\nuntil March 27th, 2026.\nWhat's Next\nAre there other tools Clockwise recommends as an alternative?\nYes, we’ve partnered with\nReclaim\nto provide a smooth transition for anyone looking for AI-powered scheduling and calendar optimization. Reclaim offers a solution we feel confident recommending to Clockwise users and customers looking for intelligent scheduling of Focus Time, Habits, and Smart Meetings.\nReclaim has committed to the following support for Clockwise paid customers\n100% price match guarantee for migrating team\nPriority migration support to help replicate your Clockwise setup\nDedicated onboarding webinars throughout March for Clockwise users\nEnterprise onboarding assistance for larger teams\nFast-tracked security reviews (SOC 2 Type II, SSO & SCIM support – trust center)\nYou can\nfind more information here\n.\nIs there a migration guide to help me recreate my setup elsewhere?\nYes, Reclaim has created a custom guide for Clockwise customers to help with the transition. It includes details on the benefits they’re providing exclusively to former Clockwise customers and details about how to get started. You can find the guide\nhere\n.\nSupport\nWho can I contact if I have questions or issues during the wind-down period?\nPlease contact\n[email protected]\n.\nHow long will customer support be available?\nCustomer support will be available until March 27, 2026.\nWe'd like to thank the 40,000 organizations who made time for what matters with Clockwise\nSee more\nSee less\nWe're so grateful we could help. Together we made your calendars better, to the tune of:\n8 million\nhours of Focus Time created\n23 million\nmeetings rescheduled\nFrom the whole team, thank you!",
+  "links": [
+    {
+      "href": "css/styles.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "images/favicon.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "images/app-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://reclaim.ai/features/scheduling-links",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "https://www.getclockwise.com/app/plans-and-billingi",
+      "rel": null
+    },
+    {
+      "href": "https://reclaim.ai/compare/clockwise-alternative?utm_source=clockwise&utm_campaign=clockwise&utm_medium=lp&utm_term=clockwise",
+      "rel": null
+    },
+    {
+      "href": "https://reclaim.ai/compare/clockwise-alternative?utm_source=clockwise&utm_campaign=clockwise&utm_medium=lp&utm_term=clockwise",
+      "rel": null
+    },
+    {
+      "href": "https://help.reclaim.ai/en/articles/11123801-switching-from-clockwise-to-reclaim-ai?utm_source=clockwise&utm_campaign=clockwise&utm_medium=help-doc&utm_term=clockwise",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.366
+}

@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "024",
+    "name": "Compose AI",
+    "canonical_url": "https://www.compose.ai/",
+    "category": "C01",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-0a6954e1d35cf006e054"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "compose.ai",
+    "selection_position": 24,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "People writing emails and documents in a browser",
+    "job": "Suggest an in-context text continuation without changing the prefix or inventing personal facts",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "completion": "string",
+      "prefix_unchanged": "boolean",
+      "fact_refs": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Suggest an in-context text continuation without changing the prefix or inventing personal facts",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Public pricing page says choose a plan and cancel anytime, but exposes no numeric amounts. /features returned 404."
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "People writing emails and documents in a browser",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "hyperwriteai.com",
+        "name": "HyperWrite",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [
+      {
+        "source_url": "https://www.compose.ai/features",
+        "evidence_id": "r024-48136d1652bdf5f4a2a0",
+        "reason": "HTTPError: HTTP Error 404: Not Found"
+      }
+    ],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Compose AI: Automated Your Writing",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: People writing emails and documents in a browser.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        },
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: .\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your too",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "text characters 263:545",
+          "excerpt": ".\nSign Up\nIt's free\nInstall Extension\nBacked by\nTry it now\nTrusted by 10,000+ teams and 400,000 people\nWrite Faster With AI, Save Time\nCompose AI is your personal AI writing assistant that cuts your writing time by 40%\nAutocomplete Everywhere\nUse autocomplete across all of your too"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording:  assistant.\nFrequently Asked Questions\nWhat is Compose AI?\nCompose AI is a free Chrome plugin that accelerates your writing, lets you use auto complete anywhere, and will decrease your time spent typing.\nWhat is the cost?\nThe plugin is free to use forever, and there is a premium version with some advanced features including use of some of our personalization features.\nHow do I contact support?\nWe can be contacted with any questions at support (at) Compose AI, and we'd love to help you in any way that we can.\nWhat about my privacy?",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "text characters 955:1491",
+          "excerpt": " assistant.\nFrequently Asked Questions\nWhat is Compose AI?\nCompose AI is a free Chrome plugin that accelerates your writing, lets you use auto complete anywhere, and will decrease your time spent typing.\nWhat is the cost?\nThe plugin is free to use forever, and there is a premium version with some advanced features including use of some of our personalization features.\nHow do I contact support?\nWe can be contacted with any questions at support (at) Compose AI, and we'd love to help you in any way that we can.\nWhat about my privacy?"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "HyperWrite advertises: Use our AI writer for content generation, research, speeches, rewriting, and more. HyperWrite uses the world's most powerful artificial intelligence technology to help you work faster and smarter in our AI document editor. Hundreds of AI tools to transform your writing, communication, and research.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-3f9873f073fd16531b0c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-3f9873f073fd16531b0c",
+          "locator": "metadata[0].description",
+          "excerpt": "Use our AI writer for content generation, research, speeches, rewriting, and more. HyperWrite uses the world's most powerful artificial intelligence technology to help you work faster and smarter in our AI document editor. Hundreds of AI tools to transform your writing, communication, and research."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-3f9873f073fd16531b0c": "2026-09-20T21:00:09.404455+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: HyperWrite. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054",
+        "web-3f9873f073fd16531b0c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        },
+        {
+          "evidence_id": "web-3f9873f073fd16531b0c",
+          "locator": "metadata[0].description",
+          "excerpt": "Use our AI writer for content generation, research, speeches, rewriting, and more. HyperWrite uses the world's most powerful artificial intelligence technology to help you work faster and smarter in our AI document editor. Hundreds of AI tools to transform your writing, communication, and research."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00",
+          "web-3f9873f073fd16531b0c": "2026-09-20T21:00:09.404455+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Low-latency inline suggestions, browser coverage, personalization, and privacy can matter more than a standalone text box.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        },
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "title",
+          "excerpt": "Compose AI: Automated Your Writing"
+        },
+        {
+          "evidence_id": "web-0a6954e1d35cf006e054",
+          "locator": "text characters 955:1491",
+          "excerpt": " assistant.\nFrequently Asked Questions\nWhat is Compose AI?\nCompose AI is a free Chrome plugin that accelerates your writing, lets you use auto complete anywhere, and will decrease your time spent typing.\nWhat is the cost?\nThe plugin is free to use forever, and there is a premium version with some advanced features including use of some of our personalization features.\nHow do I contact support?\nWe can be contacted with any questions at support (at) Compose AI, and we'd love to help you in any way that we can.\nWhat about my privacy?"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0a6954e1d35cf006e054": "2026-09-20T21:00:09.989004+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/024/tests/specification.json",
+    "sha256": "fc69c1fd447c39e967d0ff04715d795ebfa3e5237e2e0af7c5ca503e2f4ab7b4",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:09.989004+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-0a6954e1d35cf006e054",
+        "r024-48136d1652bdf5f4a2a0",
+        "r024-5ca7863192cbf49afe05",
+        "web-3f9873f073fd16531b0c"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

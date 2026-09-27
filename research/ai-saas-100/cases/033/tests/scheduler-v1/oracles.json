@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "exposure": "builder_visible",
+  "held_out": false,
+  "cases": [
+    {
+      "id": "S001",
+      "description": "Retained fixture 033-N01",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S002",
+      "description": "Retained fixture 033-N02",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S003",
+      "description": "Retained fixture 033-N03",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S004",
+      "description": "Retained fixture 033-N04",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S005",
+      "description": "Retained fixture 033-N05",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S006",
+      "description": "Retained fixture 033-N06",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S007",
+      "description": "Retained fixture 033-N07",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S008",
+      "description": "Retained fixture 033-N08",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S009",
+      "description": "Retained fixture 033-N09",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S010",
+      "description": "Retained fixture 033-N10",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S011",
+      "description": "Retained fixture 033-N11",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S012",
+      "description": "Retained fixture 033-N12",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S013",
+      "description": "Retained fixture 033-N13",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S014",
+      "description": "Retained fixture 033-N14",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S015",
+      "description": "Retained fixture 033-E01",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S016",
+      "description": "Retained fixture 033-E02",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S017",
+      "description": "Retained fixture 033-E03",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S018",
+      "description": "Retained fixture 033-E04",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S019",
+      "description": "Retained fixture 033-E05",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S020",
+      "description": "Retained fixture 033-E06",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S021",
+      "description": "Tight deadline beats naive priority ordering",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "flex",
+        "urgent"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S022",
+      "description": "Fragmented free time split=False",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S023",
+      "description": "Fragmented free time split=True",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "whole"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S024",
+      "description": "Deadline equality",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "edge"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S025",
+      "description": "Higher priority admission",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "high"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S026",
+      "description": "Full calendar",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S027",
+      "description": "Both complete, no duplication",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "alpha",
+        "beta"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S028",
+      "description": "Buffer meets boundary without external edge buffer",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "buffered"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S029",
+      "description": "Backtrack an earliest-deadline-first dead end",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "early",
+        "long"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S030",
+      "description": "Task to task buffers consume capacity",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S031",
+      "description": "Impossible duration not partially completed",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S032",
+      "description": "Deadline before work",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S033",
+      "description": "Overlapping meetings treated as union",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S034",
+      "description": "Meeting outside day still has buffer",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S035",
+      "description": "No tasks",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": false
+    },
+    {
+      "id": "S036",
+      "description": "Midnight end boundary",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "edge"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S037",
+      "description": "Explicit exhausted search, not infeasible",
+      "invalid_input": false,
+      "scheduled_ids": [],
+      "search_limited": true
+    },
+    {
+      "id": "S038",
+      "description": "Malformed task minutes True",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S039",
+      "description": "Malformed task minutes -5",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S040",
+      "description": "Malformed task minutes 0",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S041",
+      "description": "Malformed task minutes 1.5",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S042",
+      "description": "Malformed task priority False",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S043",
+      "description": "Malformed task splittable 'true'",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S044",
+      "description": "Malformed task id []",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S045",
+      "description": "Malformed task deadline '25:00'",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S046",
+      "description": "Malformed or unsupported working_hours ['25:00', '26:00']",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S047",
+      "description": "Malformed or unsupported working_hours ['11:00', '09:00']",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S048",
+      "description": "Malformed or unsupported working_hours []",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S049",
+      "description": "Malformed or unsupported buffer_minutes True",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S050",
+      "description": "Malformed or unsupported buffer_minutes -1",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S051",
+      "description": "Malformed or unsupported write_to_calendar True",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S052",
+      "description": "Malformed or unsupported write_to_calendar 1",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S053",
+      "description": "Malformed or unsupported timezone 'America/New_York'",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S054",
+      "description": "Malformed or unsupported day '2026-02-30'",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S055",
+      "description": "Malformed or unsupported tasks {}",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S056",
+      "description": "Malformed or unsupported meetings [{'id': 'M', 'start': '10:00', 'end': '09:00', 'movable': False}]",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S057",
+      "description": "Duplicate task ID",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S058",
+      "description": "Movable meeting unsupported",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S059",
+      "description": "Untrusted extra fields {'input_path': '../outside-sentinel.txt', 'output_path': '../outside-output.txt'}",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S060",
+      "description": "Untrusted extra fields {'requested_external_action': 'Publish calendar'}",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S061",
+      "description": "Untrusted extra fields {'unknown_action': 'move_meetings'}",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S062",
+      "description": "Wrong top-level type",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S063",
+      "description": "Unsupported search limit",
+      "invalid_input": true,
+      "scheduled_ids": null,
+      "search_limited": false
+    },
+    {
+      "id": "S064",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S065",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S066",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S067",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S068",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S069",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S070",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S071",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S072",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S073",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S074",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S075",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S076",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S077",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S078",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S079",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S080",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S081",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S082",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S083",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a",
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S084",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S085",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S086",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "b"
+      ],
+      "search_limited": false
+    },
+    {
+      "id": "S087",
+      "description": "Independent minute-subset exhaustive oracle",
+      "invalid_input": false,
+      "scheduled_ids": [
+        "a"
+      ],
+      "search_limited": false
+    }
+  ]
+}

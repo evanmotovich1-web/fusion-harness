@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "record_status": "blocked",
+  "identity": {
+    "id": "001",
+    "name": "Smodin",
+    "canonical_url": "https://smodin.io/",
+    "category": "C01",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-a2e0663d6daec6d0bac6"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "smodin.io",
+    "selection_position": 1,
+    "eligibility_evidence_ids": [],
+    "pilot": true,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Writers editing their own English text",
+    "job": "Meaning-preserving paragraph rewrite",
+    "inputs": "Text, strength 1–4, protected facts",
+    "outputs": "Rewritten paragraph plus constraint audit",
+    "success_criteria": "Real model output preserves meaning and passes frozen rubric",
+    "included_behavior": [
+      "Input validation",
+      "Structured prompt",
+      "Protected-token response audit"
+    ],
+    "excluded_behavior": [
+      "Humanize/detector-evasion promises",
+      "Document parsing",
+      "Plagiarism search",
+      "Other languages",
+      "Model execution unavailable"
+    ],
+    "external_dependencies": [
+      "Authorized real model",
+      "Independent semantic evaluator"
+    ]
+  },
+  "research": {
+    "pricing": {
+      "claim_ids": [
+        "pricing"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternatives"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary_access"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "switching_costs": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "buyer",
+      "statement": "The rewriter page targets writers, students, and professionals.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-043d8a5343b3ace8"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow",
+      "statement": "The advertised paragraph rewriter preserves meaning and supports strength 1–4, default 3.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-043d8a5343b3ace8"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing",
+      "statement": "The rewriter page describes a character-limited trial and paid credit-based usage. The pricing capture distinguishes Starter and Premium but does not establish a dollar price.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-043d8a5343b3ace8",
+        "p001-0e3e543d064fd75c"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption",
+      "statement": "Smodin publishes a 1 Million+ users claim. Active, paying and independently verified user counts remain unknown.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-0e3e543d064fd75c"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations",
+      "statement": "The API page advertises a REST API for rewriting and related text services.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-8ed9b05793c0c98b"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "A vendor-hosted testimonial names ChatGPT and QuillBot as tools previously used by that purported customer. This does not independently verify switching or comparative performance.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-043d8a5343b3ace8"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary_access",
+      "statement": "Smodin advertises proprietary/specialized models and plagiarism scanning across billions of sources; none were accessed or evaluated.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p001-8ed9b05793c0c98b",
+        "p001-a2e0663d6daec6d0"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "Public tool pages and a no-signup rewrite trial may provide an acquisition channel. Conversion, traffic and acquisition cost are unknown.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p001-043d8a5343b3ace8"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Hypothesis, not measured distribution advantage",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "edge",
+      "statement": "Bundled rewriting, checking, APIs and specialized models could differentiate beyond a generic prompt. This pilot has no evidence that the differentiation improves quality or retention.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p001-8ed9b05793c0c98b"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Untested technical and commercial hypothesis",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/001/tests/fixtures.json",
+    "sha256": "da17753101d08dc5b2e017933e8a888d137febdc7cae4ead93193bd8a253f4a7",
+    "fixed_at": "2026-09-20T21:21:29.048258+00:00",
+    "acceptance_criteria": "protocol.md plus tests/specification.md; thresholds not satisfied by local regressions",
+    "baseline_specification": "Same frozen inputs to B1; currently blocked",
+    "held_out": false
+  },
+  "implementation": {
+    "source_path": "cases/001/implementation/workflow.py",
+    "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74",
+    "setup_instructions": "python3 -B research/ai-saas-100/cases/001/tests/run.py",
+    "coverage": [
+      "Input validation and honest blocked-model handling execute locally",
+      "Response auditing code exists but no actual model response was tested"
+    ],
+    "missing_capabilities": [
+      "Central rewrite model",
+      "Generic-model B1",
+      "Independent held-out tests",
+      "Original-product observations"
+    ],
+    "dependency_license_notes": "Original code written for this campaign. Python standard library only; no vendor code or model weights used.",
+    "kind": "independent_partial",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "blocked",
+      "execution": "blocked",
+      "evaluation": "blocked",
+      "review": "not_started"
+    },
+    "receipt_paths": [
+      "cases/001/receipts/001-local-20260920T212619017964Z.json",
+      "cases/001/receipts/baseline-blocked.json"
+    ],
+    "technical_uncertainty": [
+      "Central rewrite model",
+      "Generic-model B1",
+      "Independent held-out tests",
+      "Original-product observations"
+    ],
+    "commercial_uncertainty": [
+      "Vendor-only research; no demand, retention, billing, or ROI validation"
+    ],
+    "verdict_path": "cases/001/verdict.json",
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Pilot incomplete; independent review pending"
+      ],
+      "artifact": null
+    }
+  },
+  "original_product": {
+    "status": "not_observed",
+    "reason": "No authorized interactive service execution performed. Public page GETs are not workflow trials.",
+    "observed_at": "2026-09-20T21:29:27.052049+00:00"
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:09.544197+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-a2e0663d6daec6d0bac6"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-a2e0663d6daec6d0bac6"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Central rewrite model; Generic-model B1; Independent held-out tests; Original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Central rewrite model; Generic-model B1; Independent held-out tests; Original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Central rewrite model; Generic-model B1; Independent held-out tests; Original-product observations",
+      "evidence_ids": []
+    }
+  ],
+  "blockers": [
+    {
+      "scope": "campaign",
+      "cause": "No independently callable authorized inference verified",
+      "affected_stages": [
+        "execution",
+        "evaluation"
+      ],
+      "permitted_next_action": "Verify a no-charge model without inspecting secrets, or request explicit provider budget/authorization",
+      "evidence": [
+        "capabilities.json",
+        "cases/001/research/inference-probes.json"
+      ]
+    },
+    {
+      "scope": "product",
+      "cause": "Only partial representative workflow and builder-visible regression suite",
+      "affected_stages": [
+        "implementation",
+        "execution",
+        "review"
+      ],
+      "permitted_next_action": "Complete missing behavior and obtain independently retained held-out evaluation",
+      "evidence": [
+        "cases/001/tests/specification.md"
+      ]
+    }
+  ],
+  "research_limitations": [
+    "Four first-party pages reviewed per pilot; not extensive independent commercial research",
+    "Pricing copy is not revenue",
+    "Unknown users is not zero users",
+    "Prototype simplicity is not evidence of low company value"
+  ]
+}

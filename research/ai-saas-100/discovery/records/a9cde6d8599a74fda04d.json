@@ -1,0 +1,889 @@
+{
+  "evidence_id": "web-a9cde6d8599a74fda04d",
+  "source_url": "https://www.notta.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.432805+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.notta.ai/en/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/a9cde6d8599a74fda04d.html",
+  "capture_sha256": "46c3c68b4ff3b8ec8912769e25753b66ee123f4eac45a7b4e2ad53cf0c01d95a",
+  "bytes_saved": 182719,
+  "title": "AI Note Taker | Free AI Meeting Transcription",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "AI Note Taker | Free AI Meeting Transcription"
+    },
+    {
+      "key": "description",
+      "value": "Notta is an AI note taker that transcribes, summarizes, and generates action plans from your meetings, interviews, or recordings. Try it for free now!"
+    },
+    {
+      "key": "og:description",
+      "value": "Notta is an AI note taker that transcribes, summarizes, and generates action plans from your meetings, interviews, or recordings. Try it for free now!"
+    }
+  ],
+  "text": "AI Note Taker | Free AI Meeting Transcription\nFeatures\nCapture\nOnline Meeting Recorder\nRecord via a bot that joins your call\nBot-free Meeting Recorder\nRecord on your device — no bot joins\nUpload & Link Transcription\nTranscribe audio, video files, or YouTube links\nScreen Recording\nRecord screen, audio, and camera\nNotta Memo\nStick it on your phone to record calls and meetings\nTranscription & translation\nReal-time Transcription\nTranscribe live as you speak\nBilingual Transcription\nTranscribe two languages at once\nOn-device Transcription\nTranscribe locally, nothing leaves your device\nReal-time Translation\nTranslate live during meetings\nBilingual Translation\nTranslate with the original side by side\nAI features\nAI Notes\nGet summaries & action items\nCross-meeting Q&A\nAsk questions across all your meetings\nMeeting Infographics\nTurn meetings into shareable infographics\nDocument Builder\nCreate PDF, Word, Excel & slides\nSecurity & compliance\nSecurity & Compliance\nSOC 2, ISO 27001, GDPR & HIPAA\nApps & Integrations\nApps\nWeb App\nUse Notta in your browser\nMobile App\nRecord on iOS & Android\nChrome Extension\nCapture from any browser tab\nNotta Desktop\nRecord bot-free on Mac & Windows\nIntegrations\nZoom\nGoogle Meet\nMicrosoft Teams\nWebex\nSlack\nNotion\nSalesforce\nHubSpot\nGoogle Calendar\nOutlook Calendar\nGoogle Drive\nZapier\nView all integrations\nBuilt for\nBuilt for\nConsultants\nActively listen and understand client needs in meetings rather than note-taking.\nSales\nUnlock hidden insights from sales calls and close more deals.\nCustomer success\nIncrease customer retention and growth with smarter meeting notes.\nMedia & podcasting\nImmediately turn podcasts, interviews, and other audio into searchable text.\nEducation\nAutomate lecture notes to make learning more inclusive and efficient.\nCustomer stories\nRead success stories from our customers and see how Notta can make a difference.\nPricing\nShop Device\nLog in\nEN\nEnglish\n日本語\nDeutsch\nFrançais\nEspañol\nPortuguês (Portugal)\nPortuguês (Brasil)\nBahasa Indonesia\nČeština\nItaliano\nNederlands\nPolski\nTürkçe\nTiếng Việt\nУкраїнська\n한국어\nلعربية\nفارسی\nไทย\nहिन्दी\n繁體中文\nEnglish\n日本語\nDeutsch\nFrançais\nEspañol\nPortuguês (Portugal)\nPortuguês (Brasil)\nBahasa Indonesia\nČeština\nItaliano\nNederlands\nPolski\nTürkçe\nTiếng Việt\nУкраїнська\n한국어\nلعربية\nفارسی\nไทย\nहिन्दी\n繁體中文\nLog in\nStart for Free\nAI Note Taker\nto Visualize Meeting Decisions\nNotta is an AI meeting notetaker that turns your meetings, interviews, or lectures into searchable text or visuals. Transcribe, summarize, collaborate and create all in a single workflow to stay productive.\n🔥 Start for Free\n58 Languages Supported\n120 free minutes with full transcription\n10M+ users\nSOC-2, GDPR and more\nGenerate instant deliverables to keep your team moving.\nPresentations\nGenerate ready-to-be-shared PPT files\nInfographics\nCreate structured visuals in 5 seconds\nInsights\nGet actionable and valuable information across all recordings\nand More\nAI Notetaker journey from words to valuable knowledge\nThe only AI powered platform that takes notes, transcribes meetings, and turns meeting insights into actionable visuals.\nTake notes anywhere — in-person and online\nVirtual or offline meetings and uploaded files, every discussion flows into one workspace, ready for instant transcription and analysis.\nIn-person meetings\nOnline meetings\nImported files\n58 languages\nNotta supports an impressive 58 different languages for transcription and translation.\nNotta Brain (formerly AI Chat)\nSearch across your meetings to extract insights and auto-generate deliverables such as slides and infographics.\nBuilt for how you work\nExecutives & Leaders\nStrategic clarity with visual information\nReview board meetings as visual decision frameworks. See action items and track what matters without drowning in information.\nSales & Customer Success\nClose deals with customer intelligence\nTranscribe and summarize calls and turn them into buying criteria infographics. Create follow-up emails instantly.\nConsultants & Agencies\nClient deliverables in minutes\nCapture notes more effectively. Transform client interviews into professional PowerPoint and infographics.\nResearchers & Educators\nAnalyze conversations at scale\nCompare themes across 50 interviews. Capture lectures and interviews to generate visual frameworks.\nDiscover how businesses grow with Notta\n\"The implementation of Notta was easy, we just log in with the web browser and hit the ground running. Ever since implementing Notta, I've reduced my patient door-to-door time by nearly 50% and also saved our practice money by requiring less staffing.”\nDr. Tavish Nanda, Vitreoretinal surgeon at Retina Consultants, P.C\nRead full story\n\"I just love the ability of Notta to record meetings, transcribe notes and then be able to go back to that and remember what I committed to. Very convenient and super helpful to review before my next meeting or when following up with tasks.”\nDave Barclay, VP and Partner at MindWire\nRead full story\n\"I use Notta almost every single day. In these sales calls, it's very helpful for Notta to record everything that the prospective customer says as well as myself, so I can return to it in the future if needed. It saves me at least 30 minutes per customer.”\nParis Mielke, Co-founder and CEO of Tangram\nRead full story\n\"The implementation of Notta was easy, we just log in with the web browser and hit the ground running. Ever since implementing Notta, I've reduced my patient door-to-door time by nearly 50% and also saved our practice money by requiring less staffing.”\nDr. Tavish Nanda, Vitreoretinal surgeon at Retina Consultants, P.C\nRead full story\n\"I just love the ability of Notta to record meetings, transcribe notes and then be able to go back to that and remember what I committed to. Very convenient and super helpful to review before my next meeting or when following up with tasks.”\nDave Barclay, VP and Partner at MindWire\nRead full story\nAI Note Taker FAQs\nWhat AI is best for note taking?\nNotta is the best AI powered platform used for meeting notes, transcribing, and summarizing based on thousands of reviews online!\nIs my data secure?\nEnterprise-grade security: SOC 2 Type II certified, GDPR compliant. Your conversations stay private.\nWhat's the learning curve?\nZero setup required. Record → Ask → Get insights. Most users create their first infographic within 2 minutes. No training needed.\nDoes it integrate with my tools?\nYes. Export to Google Drive, Notion, Slack, Salesforce, and more. Plus native integrations with Zoom, Teams, and Google Meet.\nWhat languages do you support?\n58 languages for transcription. Notta currently generates content in English, Japanese, Chinese, Spanish, and German and more.\nHow much does it cost?\nFree plan includes 120 transcription minutes/month. Pro plans start at $8.17/month (billed annually).\nReady to see your meetings visualized?\nJoin 10M professionals who've turned conversations into clarity.\nStart Free Trial - No Credit Card\n120 free minutes with full transcription\n58 Languages Supported\n98%+ Accuracy Guaranteed\nBrowse related articles\nAI in Sales\nAI Video Summarizers\nAI Notepad\nAI Summary to Summarize Transcripts\nAI Meeting Assistants for More Effective Meetings\nHow to Take Meeting Notes in Microsoft Teams\nAI Transcript Summarizers\nAI Note Summarizer\nAI-Powered Summary Bots [Free Included]\nHow to Summarize a Presentation with AI\nAI Note-taking Apps\nTactiq Alternatives for Meeting Transcription\nFathom Alternatives for Meeting Notes\n10 Best Fireflies.ai Alternatives for Automated Notes\nFireflies.ai Review: Pricing, Features\nGrain Alternatives for Meeting Transcription\nGet Notta\nWeb App\nMobile App\nDesktop App\nChrome Extension\nPricing\nChangelog\nLearn More\nAbout Us\nBlog\nHelp Center\nReferral\nAffiliate\nNotta Brand Assets\nCompare\nvs Otter.ai\nvs Fireflies.ai\nvs tl;dv\nvs Fathom\nIntegrations\nAll\nHubSpot\nSalesforce\nZapier\nSlack\nNotion\nTools\nAudio to Text Converter\nVideo to Text Converter\nFree Real-Time Voice to Text\nYouTube Video Summarizer\nAI PDF Summarizer\nFree Video & Audio to Blog Converter\nAI Video & Audio Summarizer\nFree YouTube Transcript Generator\nGoogle Meet Recorder\nZoom Meeting Recorder\nMicrosoft Teams Recorder\nEnglish\nEnglish\n日本語\nDeutsch\nFrançais\nEspañol\nPortuguês (Portugal)\nPortuguês (Brasil)\nBahasa Indonesia\nČeština\nItaliano\nNederlands\nPolski\nTürkçe\nTiếng Việt\nУкраїнська\n한국어\nلعربية\nفارسی\nไทย\nहिन्दी\n繁體中文\nTerms of Service\nPrivacy\nSecurity\nSitemap\nNotta Terms of Refer & Earn\nCopyright ©\n2026\nNotta. All Rights Reserved.",
+  "links": [
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://a.storyblok.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.youtube.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700&display=swap",
+      "rel": "preload"
+    },
+    {
+      "href": "/component---src-pages-en-index-tsx.ef23a04b64d262333e1a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/styles.0797cf9509b4d30714de.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.notta.ai/en",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.notta.ai/en",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/zh-tw",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/cs",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/uk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/fa",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/hi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.notta.ai/en",
+      "rel": "alternate"
+    },
+    {
+      "href": "/sitemap-index.xml",
+      "rel": "sitemap"
+    },
+    {
+      "href": "https://www.notta.ai",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://a.storyblok.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.google-analytics.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/en",
+      "rel": null
+    },
+    {
+      "href": "/en/features/meeting-recording-software",
+      "rel": null
+    },
+    {
+      "href": "/en/features/bot-free",
+      "rel": null
+    },
+    {
+      "href": "/en/tools/audio-to-text-converter",
+      "rel": null
+    },
+    {
+      "href": "/en/screen-recorder-online",
+      "rel": null
+    },
+    {
+      "href": "/en/hardware/memo",
+      "rel": null
+    },
+    {
+      "href": "/en/features/ai-transcription",
+      "rel": null
+    },
+    {
+      "href": "/en/features/bilingual-transcription",
+      "rel": null
+    },
+    {
+      "href": "/en/features/privacy-mode",
+      "rel": null
+    },
+    {
+      "href": "/en/features/automatic-translation",
+      "rel": null
+    },
+    {
+      "href": "/en/features/automatic-translation",
+      "rel": null
+    },
+    {
+      "href": "/en/features/ai-notes",
+      "rel": null
+    },
+    {
+      "href": "/en/features/notta-brain",
+      "rel": null
+    },
+    {
+      "href": "/en/features/notta-brain",
+      "rel": null
+    },
+    {
+      "href": "/en/features/notta-brain",
+      "rel": null
+    },
+    {
+      "href": "/en/security",
+      "rel": null
+    },
+    {
+      "href": "/en/web",
+      "rel": null
+    },
+    {
+      "href": "/en/mobile",
+      "rel": null
+    },
+    {
+      "href": "/en/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "/en/features/bot-free",
+      "rel": null
+    },
+    {
+      "href": "/en/how-to-transcribe-zoom-meetings",
+      "rel": null
+    },
+    {
+      "href": "/en/how-to-live-transcribe-google-meet-calls",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/microsoft-teams",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/webex",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/slack",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/notion",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/salesforce",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/hubspot",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/google-calendar",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/outlook-calendar",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/google-drive",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations/zapier",
+      "rel": null
+    },
+    {
+      "href": "/en/integrations",
+      "rel": null
+    },
+    {
+      "href": "/en/use-case/consulting",
+      "rel": null
+    },
+    {
+      "href": "/en/use-case/sales",
+      "rel": null
+    },
+    {
+      "href": "/en/use-case/customer-success",
+      "rel": null
+    },
+    {
+      "href": "/en/use-case/media-and-podcasting",
+      "rel": null
+    },
+    {
+      "href": "/en/use-case/education",
+      "rel": null
+    },
+    {
+      "href": "/en/customers",
+      "rel": null
+    },
+    {
+      "href": "/en/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en/hardware/memo",
+      "rel": null
+    },
+    {
+      "href": "https://app.notta.ai/login?language=en&from=official",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/pt",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/id",
+      "rel": null
+    },
+    {
+      "href": "/cs",
+      "rel": null
+    },
+    {
+      "href": "/it",
+      "rel": null
+    },
+    {
+      "href": "/nl",
+      "rel": null
+    },
+    {
+      "href": "/pl",
+      "rel": null
+    },
+    {
+      "href": "/tr",
+      "rel": null
+    },
+    {
+      "href": "/vi",
+      "rel": null
+    },
+    {
+      "href": "/uk",
+      "rel": null
+    },
+    {
+      "href": "/ko",
+      "rel": null
+    },
+    {
+      "href": "/ar",
+      "rel": null
+    },
+    {
+      "href": "/fa",
+      "rel": null
+    },
+    {
+      "href": "/th",
+      "rel": null
+    },
+    {
+      "href": "/hi",
+      "rel": null
+    },
+    {
+      "href": "/zh-tw",
+      "rel": null
+    },
+    {
+      "href": "/en",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/pt",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/id",
+      "rel": null
+    },
+    {
+      "href": "/cs",
+      "rel": null
+    },
+    {
+      "href": "/it",
+      "rel": null
+    },
+    {
+      "href": "/nl",
+      "rel": null
+    },
+    {
+      "href": "/pl",
+      "rel": null
+    },
+    {
+      "href": "/tr",
+      "rel": null
+    },
+    {
+      "href": "/vi",
+      "rel": null
+    },
+    {
+      "href": "/uk",
+      "rel": null
+    },
+    {
+      "href": "/ko",
+      "rel": null
+    },
+    {
+      "href": "/ar",
+      "rel": null
+    },
+    {
+      "href": "/fa",
+      "rel": null
+    },
+    {
+      "href": "/th",
+      "rel": null
+    },
+    {
+      "href": "/hi",
+      "rel": null
+    },
+    {
+      "href": "/zh-tw",
+      "rel": null
+    },
+    {
+      "href": "https://app.notta.ai/login?language=en&from=official",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.notta.ai/signup?language=en&from=official",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://app.notta.ai/signup?language=en&from=official",
+      "rel": ""
+    },
+    {
+      "href": "/en/hardware/memo",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.notta.ai/en/customers/retina-consultants-pc",
+      "rel": ""
+    },
+    {
+      "href": "https://www.notta.ai/en/customers/mindwire",
+      "rel": ""
+    },
+    {
+      "href": "https://www.notta.ai/en/customers/tangram",
+      "rel": ""
+    },
+    {
+      "href": "https://www.notta.ai/en/customers/retina-consultants-pc",
+      "rel": ""
+    },
+    {
+      "href": "https://www.notta.ai/en/customers/mindwire",
+      "rel": ""
+    },
+    {
+      "href": "https://app.notta.ai/signup?language=en&from=official",
+      "rel": ""
+    },
+    {
+      "href": "/en/blog/ai-for-sales",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/video-summarizers",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/ai-notepad",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/notta-ai-summary",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/ai-meeting-assistant",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/how-to-take-meeting-notes-in-microsoft-teams",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/transcript-summarizer",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/ai-note-summarizer",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/summary-bot",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/how-to-summarize-presentation",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/best-ai-note-taking-app",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/tactiq-alternative",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/fathom-alternative",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/fireflies-ai-alternative",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/fireflies-ai-review",
+      "rel": null
+    },
+    {
+      "href": "/en/blog/grain-alternative",
+      "rel": null
+    },
+    {
+      "href": "/en/web",
+      "rel": ""
+    },
+    {
+      "href": "/en/mobile",
+      "rel": ""
+    },
+    {
+      "href": "/en/features/bot-free",
+      "rel": ""
+    },
+    {
+      "href": "/en/chrome-extension",
+      "rel": ""
+    },
+    {
+      "href": "/en/pricing",
+      "rel": ""
+    },
+    {
+      "href": "/en/changelog",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/about",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/blog",
+      "rel": ""
+    },
+    {
+      "href": "https://support.notta.ai/hc/en-us",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/referral-program",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/affiliate",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/brand-assets",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/compare/notta-vs-otter-ai",
+      "rel": ""
+    },
+    {
+      "href": "/en/compare/notta-vs-fireflies-ai",
+      "rel": ""
+    },
+    {
+      "href": "/en/compare/notta-vs-tldv",
+      "rel": ""
+    },
+    {
+      "href": "/en/compare/notta-vs-fathom",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations/hubspot",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations/salesforce",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations/zapier",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations/slack",
+      "rel": ""
+    },
+    {
+      "href": "/en/integrations/notion",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/audio-to-text-converter",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/video-to-text",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/voice-to-text",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/youtube-video-summarizer",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/pdf-summary",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/video-audio-to-blog",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/ai-summary",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/youtube-transcript-generator",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/google-meet-recorder",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/zoom-meeting-recorder",
+      "rel": ""
+    },
+    {
+      "href": "/en/tools/microsoft-teams-meeting-recorder",
+      "rel": ""
+    },
+    {
+      "href": "https://apps.apple.com/app/id1480649572",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=com.langogo.transcribe",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://twitter.com/NottaOfficial",
+      "rel": "noreferrer nofollow"
+    },
+    {
+      "href": "https://www.facebook.com/notta.en",
+      "rel": "noreferrer nofollow"
+    },
+    {
+      "href": "https://www.youtube.com/@Notta-Official",
+      "rel": "noreferrer nofollow"
+    },
+    {
+      "href": "https://www.linkedin.com/company/notta-official",
+      "rel": "noreferrer nofollow"
+    },
+    {
+      "href": "/en",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/pt",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/id",
+      "rel": null
+    },
+    {
+      "href": "/cs",
+      "rel": null
+    },
+    {
+      "href": "/it",
+      "rel": null
+    },
+    {
+      "href": "/nl",
+      "rel": null
+    },
+    {
+      "href": "/pl",
+      "rel": null
+    },
+    {
+      "href": "/tr",
+      "rel": null
+    },
+    {
+      "href": "/vi",
+      "rel": null
+    },
+    {
+      "href": "/uk",
+      "rel": null
+    },
+    {
+      "href": "/ko",
+      "rel": null
+    },
+    {
+      "href": "/ar",
+      "rel": null
+    },
+    {
+      "href": "/fa",
+      "rel": null
+    },
+    {
+      "href": "/th",
+      "rel": null
+    },
+    {
+      "href": "/hi",
+      "rel": null
+    },
+    {
+      "href": "/zh-tw",
+      "rel": null
+    },
+    {
+      "href": "/en/terms",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/privacy",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/security",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/sitemap",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/en/terms-of-share",
+      "rel": "nofollow"
+    }
+  ],
+  "elapsed_seconds": 0.3159
+}

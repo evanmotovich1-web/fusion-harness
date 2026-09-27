@@ -1,0 +1,129 @@
+{
+  "evidence_id": "web-0055b0b1d22da7891be2",
+  "source_url": "https://fireflies.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.299182+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://fireflies.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/0055b0b1d22da7891be2.html",
+  "capture_sha256": "1eb899992643e8429909eded92af463d4e7c7530db97b4bdafe51ce81b9e402c",
+  "bytes_saved": 262144,
+  "title": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place."
+    },
+    {
+      "key": "application-name",
+      "value": "Fireflies.ai"
+    },
+    {
+      "key": "og:title",
+      "value": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM"
+    },
+    {
+      "key": "og:description",
+      "value": "Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Fireflies.ai"
+    }
+  ],
+  "text": "Fireflies.ai | #1 AI Teammate for Meetings, Email, Chat & CRM\nNEW\nMeet Email Assistant: Your inbox triaged and replies auto-drafted.\nSee Now\nProduct\nSolutions\nIntegration\nResources\nEnterprise\nPricing\nLogin\nRequest demo\nGet Started\nGet Started",
+  "links": [
+    {
+      "href": "/_next/static/chunks/webpack-49d8c932e8d7816d.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/images/logo-full-color.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://fireflies.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fireflies.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai/pt-BR",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fireflies.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico?22cbfa51f42d5e95",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.png?8ca41d3ade63e552",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?81a7679a0c7e6094",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fireflies.ai/email-assistant",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "#request-demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.fireflies.ai/login",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.133
+}

@@ -1,0 +1,36 @@
+{
+  "evidence_id": "web-169b577dce3cfc1727fa",
+  "source_url": "https://www.google.com/search?q=%22norvjx%22+pricing",
+  "retrieved_at": "2026-09-20T21:01:31.168712+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.google.com/search?q=%22norvjx%22+pricing",
+  "content_type": "text/html; charset=ISO-8859-1",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/169b577dce3cfc1727fa.html",
+  "capture_sha256": "8e207d789354def22190f626298d940466a67fb943761b758114fced07d02b7c",
+  "bytes_saved": 91443,
+  "title": "Google Search",
+  "metadata": [],
+  "text": "Google Search\nIf you're having trouble accessing Google Search, please\nclick here\n, or send\nfeedback\n.",
+  "links": [
+    {
+      "href": "/httpservice/retry/enablejs?sei=q0mwarGLFdHe2roPlseG0Q0",
+      "rel": null
+    },
+    {
+      "href": "/search?q=%22norvjx%22+pricing&sca_esv=0685ec434f4b2503&ie=UTF-8&emsg=SG_REL&sei=q0mwarGLFdHe2roPlseG0Q0",
+      "rel": null
+    },
+    {
+      "href": "https://support.google.com/websearch",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.5467
+}

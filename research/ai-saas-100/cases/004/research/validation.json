@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "task_id": "3.b",
+  "started_at": "2026-09-20T21:54:25.312180+00:00",
+  "ended_at": "2026-09-20T21:54:25.517349+00:00",
+  "elapsed_seconds": 0.20508800000000002,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/004/research/validate_batch.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness",
+  "status": "passed",
+  "scope": "Offline structural, provenance, fixture and media-input validation. This is not a product execution, evaluation, held-out test, or independent acceptance.",
+  "counts": {
+    "dossiers": 32,
+    "fixed_cases": 640,
+    "indexed_quotes_checked": 823,
+    "asset_hashes_checked": 95,
+    "spoken_wav_inputs_decoded": 12,
+    "png_inputs_decoded": 46,
+    "new_public_page_attempts": 64,
+    "new_public_page_failures": 4,
+    "products_accepted": 0
+  },
+  "protected_files_unchanged": [
+    "registry.json",
+    "selection.json",
+    "capabilities.json",
+    "contract.md",
+    "protocol.md",
+    "pilot-results.json",
+    "tools/validate.py",
+    "tools/receipt.py"
+  ],
+  "case_results": [
+    {
+      "id": "004",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "005",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "006",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "007",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "008",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "009",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "010",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "011",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "012",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "013",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "014",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "015",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "016",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "017",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "018",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "019",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "020",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "021",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "022",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "023",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "024",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "025",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "026",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "027",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "028",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "029",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "030",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "031",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "032",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "033",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "034",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    },
+    {
+      "id": "035",
+      "structurally_valid": true,
+      "product_accepted": false,
+      "fixture_hash_valid": true,
+      "fixture_count": 20,
+      "source_quotes_valid": true
+    }
+  ],
+  "media_probe": {
+    "command": [
+      "/opt/homebrew/bin/ffprobe",
+      "-v",
+      "error",
+      "-show_entries",
+      "stream=codec_type,width,height,sample_rate:format=duration",
+      "-of",
+      "json",
+      "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/031/tests/assets/source-video.mp4"
+    ],
+    "exit_status": 0,
+    "stdout": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "codec_type": "audio",
+          "sample_rate": "16000"
+        }
+      ],
+      "format": {
+        "duration": "57.663997"
+      }
+    },
+    "stderr": ""
+  },
+  "checks": [
+    "Campaign validator accepts all dossier/evidence structures without accepting products",
+    "Registry identity correspondence and zero implementation/execution inflation",
+    "All fixed specification and asset hashes match",
+    "All indexed and claim-level excerpts exactly match captured source records",
+    "Six development/eight exposed-normal/six failure cases per product",
+    "Spoken audio, original PNG/PDF inputs and actual video+audio container available",
+    "All previously recorded shared-file hashes unchanged",
+    "All 32 IDs accounted for, failed public-source attempts preserved, no replacement silently applied"
+  ]
+}

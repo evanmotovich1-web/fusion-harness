@@ -1,0 +1,58 @@
+{
+  "evidence_id": "r026-b7b5fd95916dbaced91b",
+  "source_url": "https://persana.ai/pricing",
+  "publisher": "persana.ai",
+  "retrieved_at": "2026-09-20T21:35:37.399470+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://persana.ai/pricing",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "cases/026/research/captures/b7b5fd95916dbaced91b.html",
+  "capture_sha256": "53815491f3919167a3ed10e41ff5381606d2625a0c0adc80918c4971dccda752",
+  "bytes_saved": 262144,
+  "title": "Persana AI Pricing | Affordable AI Sales Prospecting",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore Persana AI pricing and discover an affordable AI sales prospecting solution. Find the best plan to scale outreach, generate leads, & boost conversions."
+    },
+    {
+      "key": "og:title",
+      "value": "Persana AI Pricing | Affordable AI Sales Prospecting"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore Persana AI pricing and discover an affordable AI sales prospecting solution. Find the best plan to scale outreach, generate leads, & boost conversions."
+    }
+  ],
+  "text": "Persana AI Pricing | Affordable AI Sales Prospecting",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://persana.ai/pricing",
+      "rel": "canonical"
+    }
+  ],
+  "elapsed_seconds": 0.441949
+}

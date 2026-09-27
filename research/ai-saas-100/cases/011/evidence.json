@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-681ee5ed8b6743b233ae",
+      "source_url": "https://pictory.ai/",
+      "final_url": "https://pictory.ai/",
+      "publisher": "pictory.ai",
+      "retrieved_at": "2026-09-20T21:00:45.335936+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pictory - Text to Video AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Create professional videos in minutes with Pictory’s AI video generator. Turn text, prompts, URLs, PPTs, images, and recordings into branded videos with captions, AI voices, and avatars."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pictory - AI Video Generator"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Pictory's powerful AI enables you to create and edit professional quality videos using text, no technical skills required or software to download."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Pictory.ai"
+        },
+        {
+          "locator": "text characters 0:26",
+          "excerpt": "Pictory - Text to Video AI"
+        }
+      ],
+      "capture_path": "discovery/captures/681ee5ed8b6743b233ae.html",
+      "capture_sha256": "3db069f5f8ca8b056bf835c79794ba73c1cef6b192b61f2eada1f83b598f90d9",
+      "record_path": "discovery/records/681ee5ed8b6743b233ae.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r011-e89f9326a3892798f815",
+      "source_url": "https://pictory.ai/text-to-video",
+      "publisher": "pictory.ai",
+      "retrieved_at": "2026-09-20T21:35:26.327513+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://pictory.ai/text-to-video",
+      "capture_path": "cases/011/research/captures/e89f9326a3892798f815.html",
+      "capture_sha256": "d1f4e36ba0eb92097039bbed08ba45ee9dd5652ac7918c306a45cd3a7406946f",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/011/research/records/e89f9326a3892798f815.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Video Editor - Text To Video - Pictory"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Transform your text into video effortlessly with Pictory's AI-powered tools. No video editing skills required."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Video Editor - Text To Video - Pictory"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Transform your text into engaging videos effortlessly with Pictory's AI-powered tools. No video editing skills required."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Pictory.ai"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r011-f7440e591a89238f2788",
+      "source_url": "https://pictory.ai/pricing",
+      "publisher": "pictory.ai",
+      "retrieved_at": "2026-09-20T21:35:26.291756+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://pictory.ai/pricing/",
+      "capture_path": "cases/011/research/captures/f7440e591a89238f2788.html",
+      "capture_sha256": "7f618ee7e74433bd13c2aac6029133df5efc2a348e50018d3bcbb74a8afbe021",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/011/research/records/f7440e591a89238f2788.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pictory Pricing | From $25 per Month"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Pricing plans start at just $25/month! Check out the official Pictory pricing for Starter and Enterprise plans here."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing page for Pictory AI Video Software"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Pictory.ai"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-20712b34d9e495ad8021",
+      "source_url": "https://fliki.ai/",
+      "final_url": "https://fliki.ai/",
+      "publisher": "fliki.ai",
+      "retrieved_at": "2026-09-20T21:00:45.396377+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Fliki - Turn Any Idea Into Video With 2,000+ AI Voices"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Turn text, scripts, and blog posts into videos with 2,000+ AI voices in 80+ languages. No camera, no editing skills needed. Free forever plan."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Fliki - Turn Any Idea Into Video With 2,000+ AI Voices"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Fliki"
+        },
+        {
+          "locator": "text characters 0:287",
+          "excerpt": "Fliki - Turn Any Idea Into Video With 2,000+ AI Voices\nFliki\nFeatures\nUse cases\nExplore\nPricing\nLogin\nSign Up\nGet started →\nTurn\ntext\ninto videos\nwith\nAI voices\nTransform your ideas into stunning videos with our AI video generator. Easy to use Text to Video editor featuring lifelike voi"
+        },
+        {
+          "locator": "text characters 81:393",
+          "excerpt": "xplore\nPricing\nLogin\nSign Up\nGet started →\nTurn\ntext\ninto videos\nwith\nAI voices\nTransform your ideas into stunning videos with our AI video generator. Easy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features.\nGenerate video\nSee what creators"
+        },
+        {
+          "locator": "text characters 142:454",
+          "excerpt": "eos\nwith\nAI voices\nTransform your ideas into stunning videos with our AI video generator. Easy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features.\nGenerate video\nSee what creators make with Fliki\nReal videos made with our text-to-video tool"
+        },
+        {
+          "locator": "text characters 234:546",
+          "excerpt": "sy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features.\nGenerate video\nSee what creators make with Fliki\nReal videos made with our text-to-video tool in under 5 minutes.\nAll\nExplainers\nTraining and L&D\nTikToks & Shorts\nMarketing\nInfo\nPromo\nT"
+        },
+        {
+          "locator": "text characters 270:582",
+          "excerpt": "ring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features.\nGenerate video\nSee what creators make with Fliki\nReal videos made with our text-to-video tool in under 5 minutes.\nAll\nExplainers\nTraining and L&D\nTikToks & Shorts\nMarketing\nInfo\nPromo\nTraining\nTutorial\nReview\nTikTok\nAd\nEd"
+        },
+        {
+          "locator": "text characters 881:1193",
+          "excerpt": "m\nPaste a script, blog post or one-line prompt. Fliki's\ntext-to-video\nAI writes the script, picks visuals, adds AI voiceover, music, and subtitles - and gives you a publish-ready video with consistent characters in minutes. The fastest way to turn any text into video.\nTry text to video →\nText to Speech\nHuman-qu"
+        }
+      ],
+      "capture_path": "discovery/captures/20712b34d9e495ad8021.html",
+      "capture_sha256": "4bbf3d5b6ccae63d9abe6f87acaed6e9100f74d75f6a9c1c922b59f20c7c3778",
+      "record_path": "discovery/records/20712b34d9e495ad8021.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}
