@@ -1,0 +1,12 @@
+#!/bin/bash
+# Local runner for the pinned nordeim/excel-agent-tool checkout.
+# The vendored prompt says `uv python tools/...`. That is not a runner on this machine.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/src" && pwd)"
+if [[ $# -lt 1 ]]; then
+  echo "usage: excel-tool <excel_script.py> [args...]" >&2
+  exit 2
+fi
+script="$1"
+shift
+exec "$ROOT/.venv/bin/python" "$ROOT/tools/$script" "$@"

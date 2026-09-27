@@ -1,0 +1,22 @@
+version: 1
+id: excel-build
+name: Excel Build
+description: One write-enabled builder creates one new formula-driven workbook from SPEC conventions and opens the HTML preview.
+triggers:
+  - build excel
+  - excel model
+  - workbook
+command: fh-only
+stack: ./stacks/model-stack-excel-build.yaml
+confirm: true
+prompt_template: |
+  You are the one write-enabled builder. Produce one new formula-driven .xlsx. Follow models/elite-luxury-mixed-use/SPEC.md: blue-font input cells as values, every calculated cell a live Excel formula, no hardcoded calculated values, no merged cells in data ranges. Do not edit an existing workbook. After that new workbook exists, open its HTML preview in the default browser with macOS open. Do not use the computer-use skill.
+
+  Harness tools and this bridge take precedence over the vendored Excel prompt.
+  The 15 excel_*.py tools are installed. Invoke them only through the repo-relative bridge
+  (the builder child's cwd is the repo root, where this workflow was discovered):
+  ./.pi/fusion-harness/excel-agent/excel-tool <script.py> [args...]
+  Do not run `uv python` (it is uv's version manager, not a runner). Do not pass --allow-external. Do not background processes. Do not replace Fusion Harness role prompts. Do not install LibreOffice. Do not label placeholder SOFR as a Chatham quote.
+
+  Task:
+  {{TASK}}

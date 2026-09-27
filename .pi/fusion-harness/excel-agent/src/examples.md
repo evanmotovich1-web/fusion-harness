@@ -1,0 +1,32 @@
+```bash
+source /opt/venv/bin/activate && python3 tools/excel_create_new.py   --output financial_model.xlsx   --sheets "Assumptions,Income Statement,Balance Sheet,Cash Flow"   --json
+
+source /opt/venv/bin/activate && python3 tools/excel_create_from_structure.py   --output model.xlsx   --structure structure.json   --validate   --json
+```
+
+excel_agent_tool/
+├── core/
+│   ├── __init__.py
+│   └── excel_agent_core.py          # 1400+ lines, production-ready
+├── tools/                            # 15 CLI tools
+│   ├── excel_create_new.py
+│   ├── excel_create_from_structure.py
+│   ├── excel_clone_template.py
+│   ├── excel_set_value.py
+│   ├── excel_add_formula.py
+│   ├── excel_add_financial_input.py
+│   ├── excel_add_assumption.py
+│   ├── excel_get_value.py
+│   ├── excel_apply_range_formula.py
+│   ├── excel_format_range.py
+│   ├── excel_add_sheet.py
+│   ├── excel_export_sheet.py
+│   ├── excel_validate_formulas.py
+│   ├── excel_repair_errors.py
+│   └── excel_get_info.py
+├── AGENT_SYSTEM_PROMPT.md           # AI agent instructions
+├── TOOLS_REFERENCE.md                # Technical reference
+├── README.md                         # User guide
+├── requirements.txt                  # Dependencies
+└── test_tools.py                     # Integration tests
+

@@ -1,0 +1,37 @@
+{
+  "url": "https://raw.githubusercontent.com/nordeim/excel-agent-tool/2afa48049502b60ae6f8afe963b52837c691b2fd/AGENT_SYSTEM_PROMPT.md",
+  "requested_url": "https://raw.githubusercontent.com/nordeim/excel-agent-tool/main/AGENT_SYSTEM_PROMPT.md",
+  "commit_sha": "2afa48049502b60ae6f8afe963b52837c691b2fd",
+  "commit_api": "https://api.github.com/repos/nordeim/excel-agent-tool/commits/main",
+  "commit_html": "https://github.com/nordeim/excel-agent-tool/commit/2afa48049502b60ae6f8afe963b52837c691b2fd",
+  "commit_date_utc": "2025-11-19T13:19:23Z",
+  "fetch_time_utc": "2026-09-25T23:24:18Z",
+  "sha256": "b18baa28193b2abd1ab2bc88e3512fd6ee5a0daad644a36942f42594fbc5ab0d",
+  "bytes": 24630,
+  "git_blob_sha": "456593d9b1dde74ce2bd6f9f185aee932c6437c2",
+  "github_contents_blob_prefix": "456593d9b1dd",
+  "blob_sha_match": true,
+  "license_name": "MIT License",
+  "license_file": null,
+  "license_source": "README.md section 'License' in the pinned tree; GitHub repo license API returned null because no root LICENSE file exists",
+  "license_forbids_local_install": false,
+  "fetch_status": "ok",
+  "stop": false,
+  "workbook_build_note": "Fetch succeeded and the MIT grant in README permits a local copy. The 15 CLI tools named by the prompt were not vendored and are not installed. Task 2.b still builds from SPEC.md with python3 + openpyxl. This is not a 404 or license stop.",
+  "also_fetched": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/nordeim/excel-agent-tool/2afa48049502b60ae6f8afe963b52837c691b2fd/README.md",
+      "bytes": 17543,
+      "sha256": "c6d559a41febc69ce276f9dd06f8518cff95b22893ff2a2de2a69ca9475c5e76",
+      "git_blob_sha": "dda4120c8433491504a31bb597952de1466b1ee0"
+    },
+    {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/nordeim/excel-agent-tool/2afa48049502b60ae6f8afe963b52837c691b2fd/requirements.txt",
+      "bytes": 62,
+      "sha256": "389e34bea0bbac0a0d6b632ff81526f9abf63c53d8dd8af32743d279e92f40ce",
+      "git_blob_sha": "d4925a1593d5f6e77982acf72588373b21960120"
+    }
+  ]
+}
