@@ -1,0 +1,429 @@
+{
+  "evidence_id": "web-2b1b95c2b5c5ab777a49",
+  "source_url": "https://medicalillustration.app/",
+  "retrieved_at": "2026-09-20T21:01:53.848528+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://medicalillustration.app/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/2b1b95c2b5c5ab777a49.html",
+  "capture_sha256": "f09da2a84db3d9ace3d80796e19ac18f62b8cfef40d76e47c80052d004dc3d61",
+  "bytes_saved": 262144,
+  "title": "AI Medical Illustration Generator for Anatomy & Research",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Draft AI medical illustrations for anatomy teaching, research figures, and patient education. Start from text or reference images and review each output."
+    },
+    {
+      "key": "og:title",
+      "value": "AI Medical Illustration Generator for Anatomy & Research"
+    },
+    {
+      "key": "og:description",
+      "value": "Draft AI medical illustrations for anatomy teaching, research figures, and patient education. Start from text or reference images and review each output."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Medical Illustration"
+    }
+  ],
+  "text": "Medical Illustration\nExamples\nPricing\nEducation Program\nTools\nCreate\nSign In\nMedical Illustration\nNow with multi-view anatomy and workflow prompts\nAI medical illustration generator\nfor teaching, research, and patient education\nCreate anatomy diagrams, research figures, and patient education visuals from a text prompt, then review labels, style, and viewing angle in one workspace.\nGenerate\nTry:\nLabeled cross-section of a human heart\nNeuron synapse with neurotransmitter release\nDNA double helix replication fork\nKnee joint anatomy with ligaments\nRespiratory system gas exchange in alveoli\nEye anatomy with retinal layers\n✨\nFree HD\n•\nHigh-resolution export\n•\nExplore plans before checkout\nHow it works\nCreate medical illustrations in 3 simple steps\nDescribe the visual you need in plain English, then generate a labeled draft you can review, refine, and adapt for slides, papers, or patient handouts.\nDescribe what you need\nType a plain-English description — \"labeled cross-section of a human heart\" or \"neuron synapse diagram for a journal figure.\" Pick your style, resolution, and detail level.\nAI generates your illustration\nThe model can help you draft clearer medical visuals quickly, but the best results still come from specific prompts and final human review before use.\nReview, download, and adapt\nExport high-resolution drafts for presentations, textbooks, patient handouts, or journal figure workflows after your own review.\nDescribe what you need\nType a plain-English description — \"labeled cross-section of a human heart\" or \"neuron synapse diagram for a journal figure.\" Pick your style, resolution, and detail level.\nAI generates your illustration\nThe model can help you draft clearer medical visuals quickly, but the best results still come from specific prompts and final human review before use.\nReview, download, and adapt\nExport high-resolution drafts for presentations, textbooks, patient handouts, or journal figure workflows after your own review.\n1\n2\n3\nBuilt for real medical workflows\nThree workflows that benefit from faster medical visual drafts\nUse the same workspace to draft visuals for lessons, research updates, and patient conversations, then refine labels and layout before export.\nTeaching and training materials\nBuild lecture slides, lab handouts, and board-review diagrams with consistent views and readable labels.\nPrompt starters for anatomy, physiology, pathology, and pharmacology\nLayouts sized for slides, worksheets, and LMS uploads\nEasy to revise labels or add callouts between versions\nDraft a teaching visual\nResearch figure drafts\nStart pathway diagrams, graphical abstracts, and poster panels from a structured brief, then refine the parts that matter.\nMulti-panel layouts for mechanisms, workflows, and study overviews\nHigh-resolution exports for review copies and presentations\nUseful when you need a first draft before manual polishing\nDraft a research figure\nPatient communication visuals\nPrepare clearer clinic handouts and treatment explainers with plainer labels and calmer layouts.\nPatient-friendly diagrams for procedures, findings, and treatment steps\nReference-image edits for adapting an existing clinic handout\nShared visual style across a series of clinic materials\nDraft a patient handout\nGallery\nAI-Generated Medical Illustration Examples\nBrowse real examples of anatomical diagrams, surgical illustrations, and medical visualizations created by our AI — from labeled anatomy to detailed procedural guides.\nAll\nAnatomy\nSurgery\nNeurology\nPathology\nHuman Heart Cross-Section\nDetailed anatomical illustration showing all four chambers, valves, and major vessels with labeled annotations.\nAnatomy\nKnee Joint Replacement\nStep-by-step surgical illustration of total knee arthroplasty with prosthetic component placement.\nSurgery\nNeural Pathway Diagram\nComprehensive visualization of synaptic connections and neurotransmitter signal transmission pathways.\nNeurology\nCell Division Phases\nClear illustration of mitosis stages from prophase to telophase with spindle fiber detail.\nPathology\nRespiratory System Overview\nDetailed diagram of the lungs, bronchi, alveolar structures, and gas exchange mechanism.\nAnatomy\nLaparoscopic Appendectomy\nMinimally invasive surgical technique illustration showing trocar placement and instrument positioning.\nSurgery\nBrain Anatomy Layers\nCross-sectional view showing cerebral cortex, white matter, basal ganglia, and subcortical structures.\nNeurology\nCardiovascular System\nComplete circulatory system with arterial and venous pathways, heart chambers, and blood flow direction.\nAnatomy\nSpinal Fusion Surgery\nPosterior lumbar interbody fusion technique with pedicle screws, rods, and cage placement.\nSurgery\nTumor Staging Diagram\nVisual classification of cancer staging from T1-T4 with lymph node involvement and metastasis patterns.\nPathology\nShoulder Joint Anatomy\nDetailed rotator cuff muscles, glenohumeral joint, and ligament structures for orthopedic reference.\nAnatomy\nCoronary Bypass Surgery\nCABG procedure illustration showing saphenous vein graft routing and anastomosis technique.\nSurgery\nSimple Pricing for Medical Illustration\nChoose your plan. No hidden fees, cancel anytime.\nYour data is yours · Never used to train any model · Encrypted in transit and at rest\nMonthly\nYearly\n50% OFF\nSAVE 50%\nStandard\nGreat for getting started.\n$19\n$9.5\n/ month\nBilled annually — Save $114\n240 credits/month\n≈\n80 figures/month\nGet Started\nIncludes\n240\ncredits / month\nGenerate up to\n80\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nStandard member queue\nSlide & poster friendly layouts\nRun up to 3 generation tasks concurrently\n30-day history storage\nAll illustration styles included\nMost Popular\nSAVE 50%\nUltra\nBuilt for high-volume production.\n$99\n$49.5\n/ month\nBilled annually — Save $594\n1,800 credits/month\n≈\n600 figures/month\nGet Started\nIncludes\n1800\ncredits / month (3× Pro)\nGenerate up to\n600\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nSkip the waiting queue\nEverything in Pro, plus:\nRun up to\n10 generation tasks concurrently\nHighest priority\ngeneration queue\nPermanent history + dedicated support (12h response)\nSAVE 50%\nPro\nBest for regular creation.\n$39\n$19.5\n/ month\nBilled annually — Save $234\n600 credits/month\n≈\n200 figures/month\nGet Started\nIncludes\n600\ncredits / month\nGenerate up to\n200\nbase 1K images / month\n4K Ultra HD generation\nSVG vector export\nHD downloads & sharing\nCommercial use license included\nPriority queue\nEverything in Standard, plus:\nRun up to 5 generation tasks concurrently\nPriority generation queue\nduring busy hours\n90-day history + priority support (24h response)\nEarly access to new features\nPay safely and securely with\nCredit Packages\nOne-time purchase. Credits remain available for up to 12 months and do not auto-renew.\nStarter Pack\n240\ncredits\n≈ 80 figures\n$30\nPurchase\nPopular\nGrowth Pack\n900\ncredits\n≈ 300 figures\n$100\nPurchase\nProfessional Pack\n2100\ncredits\n≈ 700 figures\n$200\nPurchase\nTestimonials\nHear What Our Users Say\nReal feedback from doctors, researchers, graduate students, and educators.\nI needed a hepatic portal system diagram for a resident lecture. The generator gave me a labeled first draft that our teaching team could review and refine before class.\nSarah Mitchell\nGeneral Surgeon\nMy students struggle with spatial relationships in the brachial plexus. Using this anatomy diagram generator, I can create multiple-angle anatomy diagrams during class for comparison. This kind of real-time visual teaching was impossible before AI medical illustration tools.\nMarco Reyes\nAnatomy Professor\nExplaining congenital heart defects to parents is hard. I use this medical illustration tool to create patient education diagrams showing their child's specific condition with clear before-and-after views of the surgical repair. The free credits let me test it before committing.\nAmara Patel\nPediatric Cardiologist\nAnatomy exams require identifying structures from every angle. I use this AI medical diagram generator to create labeled anatomy diagrams for study — the brachial plexus, cardiac valves, cranial nerves. It's way faster than redrawing from Netter's atlas.\nAlex Nguyen\n4th Year Medical Student\nMy dissertation requires many scientific figures, so I use this AI medical illustration tool to draft neural pathway layouts before manual polishing. It gives me a faster starting point for discussions with my committee.\nPriya Sharma\nPhD Candidate · Neuroscience\nI use this medical diagram generator to draft catheter-positioning diagrams for IR teaching. The medical illustrations give residents a clearer starting point before we review anatomy and procedural details together.\nMarcus Davis\nInterventional Radiologist\nI needed a hepatic portal system diagram for a resident lecture. The generator gave me a labeled first draft that our teaching team could review and refine before class.\nSarah Mitchell\nGeneral Surgeon\nMy students struggle with spatial relationships in the brachial plexus. Using this anatomy diagram generator, I can create multiple-angle anatomy diagrams during class for comparison. This kind of real-time visual teaching was impossible before AI medical illustration tools.\nMarco Reyes\nAnatomy Professor\nExplaining congenital heart defects to parents is hard. I use this medical illustration tool to create patient education diagrams showing their child's specific condition with clear before-and-after views of the surgical repair. The free credits let me test it before committing.\nAmara Patel\nPediatric Cardiologist\nAnatomy exams require identifying structures from every angle. I use this AI medical diagram generator to create labeled anatomy diagrams for study — the brachial plexus, cardiac valves, cranial nerves. It's way faster than redrawing from Netter's atlas.\nAlex Nguyen\n4th Year Medical Student\nMy dissertation requires many scientific figures, so I use this AI medical illustration tool to draft neural pathway layouts before manual polishing. It gives me a faster starting point for discussions with my committee.\nPriya Sharma\nPhD Candidate · Neuroscience\nI use this medical diagram generator to draft catheter-positioning diagrams for IR teaching. The medical illustrations give residents a clearer starting point before we review anatomy and procedural details together.\nMarcus Davis\nInterventional Radiologist\nPatients understand their biopsy results better when I show them a skin layer diagram with the lesion location marked. I generate these dermatology medical illustrations during consultations — takes about 30 seconds.\nMei-Ling Chen\nDermatologist\nWe review many figure submissions. A structured AI draft can help authors organize labels and panels before editorial review, but every claim and visual relationship still needs checking.\nThomas Eriksen\nMedical Journal Editor\nI create procedural illustrations for informed consent discussions. Showing patients exactly what a laparoscopic myomectomy involves helps them feel more prepared. It's like having a medical illustrator on call 24/7.\nFatima Al-Rashid\nOB/GYN Specialist\nFor our EM residency curriculum, I draft visual guides for central lines and chest tubes, then verify each landmark and sequence with faculty before teaching.\nNathan Brooks\nEmergency Medicine Physician\nMicroscopy images are hard for first-year students to interpret. I generate annotated cross-section diagrams alongside real slides so students can map what they see under the microscope to labeled structures.\nClara Reinholt\nHistology Professor\nPre-operative planning with patients is much smoother now. I generate reconstructive flap diagrams tailored to their anatomy. The patient education illustrations help set realistic expectations before surgery.\nRobert Lindqvist\nPlastic & Reconstructive Surgeon\nPatients understand their biopsy results better when I show them a skin layer diagram with the lesion location marked. I generate these dermatology medical illustrations during consultations — takes about 30 seconds.\nMei-Ling Chen\nDermatologist\nWe review many figure submissions. A structured AI draft can help authors organize labels and panels before editorial review, but every claim and visual relationship still needs checking.\nThomas Eriksen\nMedical Journal Editor\nI create procedural illustrations for informed consent discussions. Showing patients exactly what a laparoscopic myomectomy involves helps them feel more prepared. It's like having a medical illustrator on call 24/7.\nFatima Al-Rashid\nOB/GYN Specialist\nFor our EM residency curriculum, I draft visual guides for central lines and chest tubes, then verify each landmark and sequence with faculty before teaching.\nNathan Brooks\nEmergency Medicine Physician\nMicroscopy images are hard for first-year students to interpret. I generate annotated cross-section diagrams alongside real slides so students can map what they see under the microscope to labeled structures.\nClara Reinholt\nHistology Professor\nPre-operative planning with patients is much smoother now. I generate reconstructive flap diagrams tailored to their anatomy. The patient education illustrations help set realistic expectations before surgery.\nRobert Lindqvist\nPlastic & Reconstructive Surgeon\nI create respiratory system diagrams for my COPD and asthma patient handouts. The illustrations are clear enough that patients actually take the materials home and reference them between appointments.\nHannah Müller\nPulmonologist\nI use the workspace to explore anatomy-diagram directions for educational videos, then revise the labels, composition, and source notes before publishing.\nJordan Kim\nMedical Education Content Creator\nFor endoscopy reports, I attach AI-generated diagrams showing polyp location relative to anatomical landmarks. Referring physicians appreciate the visual clarity over text descriptions alone. Much better than a BioRender template.\nSofia Torres\nGastroenterologist\nI draft simplified retinal diagrams for counseling, then compare them with the approved clinical material and explain the actual OCT findings separately.\nDavid Kwon\nOphthalmologist\nAthletes want to understand their injuries. Showing a labeled orthopedic diagram of their specific ACL tear pattern or meniscus damage makes the rehab timeline conversation much more productive.\nLisa Chen\nSports Medicine Nurse\nFor tumor board presentations, I generate clean pathology diagrams showing staging and margins. The visual standardization helps the multidisciplinary team discuss treatment options more efficiently.\nCarlos Rivera\nPathology Assistant\nI create respiratory system diagrams for my COPD and asthma patient handouts. The illustrations are clear enough that patients actually take the materials home and reference them between appointments.\nHannah Müller\nPulmonologist\nI use the workspace to explore anatomy-diagram directions for educational videos, then revise the labels, composition, and source notes before publishing.\nJordan Kim\nMedical Education Content Creator\nFor endoscopy reports, I attach AI-generated diagrams showing polyp location relative to anatomical landmarks. Referring physicians appreciate the visual clarity over text descriptions alone. Much better than a BioRender template.\nSofia Torres\nGastroenterologist\nI draft simplified retinal diagrams for counseling, then compare them with the approved clinical material and explain the actual OCT findings separately.\nDavid Kwon\nOphthalmologist\nAthletes want to understand their injuries. Showing a labeled orthopedic diagram of their specific ACL tear pattern or meniscus damage makes the rehab timeline conversation much more productive.\nLisa Chen\nSports Medicine Nurse\nFor tumor board presentations, I generate clean pathology diagrams showing staging and margins. The visual standardization helps the multidisciplinary team discuss treatment options more efficiently.\nCarlos Rivera\nPathology Assistant\nFAQ\nFrequently Asked Questions\nWhat is Medical Illustration?\nWho is Medical Illustration designed for?\nWhich specialties and detail levels are supported?\nDo I need drawing skills or special software?\nHow does pricing work?\nWhat do I get on the free plan?\nCan I use the illustrations in papers and presentations?\nWhat formats and resolutions do you support?\nHow should I review scientific accuracy?\nDo my students need accounts to see the illustrations?\nHow fast are illustration generations?\nCan I use Medical Illustration for research papers?\nCan I cancel my subscription?\nStart your next medical visual draft\nDraft anatomy diagrams, research figures, and patient education visuals with AI, then review and refine them for your workflow.\nCreate a Medical Illustration\nView Examples\nMedical Illustration\nMedical Illustration is an AI-powered tool for creating professional medical illustrations, anatomy diagrams, and patient education materials. Not affiliated with OpenAI or Google.\nMossAI Tools\nViesearch - The Human-curated Search Engine\nMossAI Tools\nViesearch - The Human-curated Search Engine\nProduct\nFeatures\nPricing\nExamples\nFAQ\nSupport\nContact Us\nFAQ\nUse Cases\nLegal\nLicense\nTerms\nPrivacy\nContent Policy\nCookies\nRefund\nFree Tools\nAnatomy Diagram Generator\nMedical Diagram Generator\nPatient Education Illustration\nMedical Infographic Generator\nNeurology Diagram Generator\nBioRender Alternative\nMore Tools →\n© 2026 Medical Illustration. All rights reserved.\nAI Medical Illustration Generator for Anatomy & Research",
+  "links": [
+    {
+      "href": "/_next/static/css/2dbfcc593ac31b7e.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-e1da8c08864c0a96.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#examples",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/education-program",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/app",
+      "rel": null
+    },
+    {
+      "href": "/#examples",
+      "rel": null
+    },
+    {
+      "href": "https://www.producthunt.com/products/medical-illustration-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://startupfa.me/s/medical-illustration?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://fazier.com/launches/medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://wired.business",
+      "rel": null
+    },
+    {
+      "href": "https://twelve.tools",
+      "rel": null
+    },
+    {
+      "href": "https://findly.tools/medical-illustration-ai?utm_source=medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://turbo0.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://aiagentsdirectory.com/agent/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://frogdr.com/medicalillustration.app?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://uno.directory",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://toolfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://dofollow.tools",
+      "rel": null
+    },
+    {
+      "href": "https://similarlabs.com",
+      "rel": null
+    },
+    {
+      "href": "https://peerpush.net/p/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.uneed.best/tool/medical-illustration-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.foundrlist.com/product/medicalillustrationai?utm_source=badge&utm_medium=embed",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://mossai.org",
+      "rel": null
+    },
+    {
+      "href": "https://viesearch.com/",
+      "rel": null
+    },
+    {
+      "href": "https://tinylaunch.com",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.tinystartups.com/startup/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://saasfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://earlyhunt.com/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://auraplusplus.com/projects/ai-medical-illustration-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indiehunt.io/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indie.deals?ref=https%3A%2F%2Fmedicalillustration.app%2F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://yo.directory/",
+      "rel": null
+    },
+    {
+      "href": "https://www.producthunt.com/products/medical-illustration-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://startupfa.me/s/medical-illustration?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://fazier.com/launches/medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://wired.business",
+      "rel": null
+    },
+    {
+      "href": "https://twelve.tools",
+      "rel": null
+    },
+    {
+      "href": "https://findly.tools/medical-illustration-ai?utm_source=medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://turbo0.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://aiagentsdirectory.com/agent/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://frogdr.com/medicalillustration.app?utm_source=medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "https://uno.directory",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://toolfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://dofollow.tools",
+      "rel": null
+    },
+    {
+      "href": "https://similarlabs.com",
+      "rel": null
+    },
+    {
+      "href": "https://peerpush.net/p/medical-illustration-ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.uneed.best/tool/medical-illustration-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.foundrlist.com/product/medicalillustrationai?utm_source=badge&utm_medium=embed",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://mossai.org",
+      "rel": null
+    },
+    {
+      "href": "https://viesearch.com/",
+      "rel": null
+    },
+    {
+      "href": "https://tinylaunch.com",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.tinystartups.com/startup/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://saasfame.com/item/medical-illustration-ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://earlyhunt.com/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://auraplusplus.com/projects/ai-medical-illustration-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indiehunt.io/project/medical-illustration-ai-anatomy-diagram-generator",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://indie.deals?ref=https%3A%2F%2Fmedicalillustration.app%2F",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://yo.directory/",
+      "rel": null
+    },
+    {
+      "href": "/#feature",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/#feature",
+      "rel": null
+    },
+    {
+      "href": "/#faq",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@medicalillustration.app",
+      "rel": null
+    },
+    {
+      "href": "/#faq",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/license",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/content-policy",
+      "rel": null
+    },
+    {
+      "href": "/cookie-policy",
+      "rel": null
+    },
+    {
+      "href": "/refund-policy",
+      "rel": null
+    },
+    {
+      "href": "/tools/anatomy-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/medical-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/patient-education-illustration-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/medical-infographic-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/neurology-diagram-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/biorender-alternative",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "https://medicalillustration.app",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://medicalillustration.app",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://medicalillustration.app",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 1.3211
+}

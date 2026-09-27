@@ -1,0 +1,63 @@
+{
+  "validated_at": "2026-09-20T21:30:39.993982+00:00",
+  "cases": [
+    {
+      "case_id": "001",
+      "dossier_structurally_valid": true,
+      "accepted": false,
+      "quotes_match": true,
+      "freeze_hashes_match": true,
+      "receipts": [
+        {
+          "path": "cases/001/receipts/001-local-20260920T212619017964Z.json",
+          "status": "completed",
+          "passed_assertions": 20
+        },
+        {
+          "path": "cases/001/receipts/baseline-blocked.json",
+          "status": "blocked",
+          "passed_assertions": 0
+        }
+      ]
+    },
+    {
+      "case_id": "002",
+      "dossier_structurally_valid": true,
+      "accepted": false,
+      "quotes_match": true,
+      "freeze_hashes_match": true,
+      "receipts": [
+        {
+          "path": "cases/002/receipts/002-local-20260920T212619053188Z.json",
+          "status": "completed",
+          "passed_assertions": 20
+        },
+        {
+          "path": "cases/002/receipts/baseline-blocked.json",
+          "status": "blocked",
+          "passed_assertions": 0
+        }
+      ]
+    },
+    {
+      "case_id": "003",
+      "dossier_structurally_valid": true,
+      "accepted": false,
+      "quotes_match": true,
+      "freeze_hashes_match": true,
+      "receipts": [
+        {
+          "path": "cases/003/receipts/003-local-20260920T212619100032Z.json",
+          "status": "completed",
+          "passed_assertions": 20
+        },
+        {
+          "path": "cases/003/receipts/baseline-blocked.json",
+          "status": "blocked",
+          "passed_assertions": 0
+        }
+      ]
+    }
+  ],
+  "limitations": "Structural and local-regression validation only; not product or independent pilot acceptance."
+}

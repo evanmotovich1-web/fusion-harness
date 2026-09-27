@@ -1,0 +1,28 @@
+{
+  "id": "echis-moh-implementation",
+  "requested_url": "https://www.health.go.ke/advancing-implementation-electronic-community-health-information-system-e-chis",
+  "accessed_utc": "2026-09-25T02:54:56.230034+00:00",
+  "status": 200,
+  "final_url": "https://www.health.go.ke/advancing-implementation-electronic-community-health-information-system-e-chis",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "must-revalidate, no-cache, private",
+    "Date": "Fri, 25 Sep 2026 02:55:00 GMT",
+    "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
+    "Link": "<https://www.health.go.ke/advancing-implementation-electronic-community-health-information-system-e-chis>; rel=\"canonical\"",
+    "X-UA-Compatible": "IE=edge",
+    "Content-language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "interest-cohort=()",
+    "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "X-Generator": "Drupal 9 (https://www.drupal.org)",
+    "X-Drupal-Cache": "MISS"
+  },
+  "bytes": 53747,
+  "sha256": "674438e5aa6dcc1e1596c87d0ddf4b9ab4208f0fe1021b1737b27decb29086c8",
+  "file": "echis-moh-implementation.html"
+}

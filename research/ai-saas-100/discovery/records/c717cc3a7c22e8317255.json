@@ -1,0 +1,533 @@
+{
+  "evidence_id": "web-c717cc3a7c22e8317255",
+  "source_url": "https://www.autobound.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.102282+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.autobound.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/c717cc3a7c22e8317255.html",
+  "capture_sha256": "ebf1165fa49e80877f0f05553b172b51545a32b73b7f9555e2f4c1d02e4cd897",
+  "bytes_saved": 174373,
+  "title": "B2B Signal Intelligence: 700+ Signals | Autobound",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The signal layer powering enterprise GTM. 700+ signals across 35 signal types, 250M+ contacts, 50M+ companies. Delivered via API, file push, or OEM licensing."
+    },
+    {
+      "key": "og:title",
+      "value": "B2B Signal Intelligence: 700+ Signals | Autobound"
+    },
+    {
+      "key": "og:description",
+      "value": "The signal layer powering enterprise GTM. 700+ signals across 35 signal types, 250M+ contacts, 50M+ companies. Delivered via API, file push, or OEM licensing."
+    }
+  ],
+  "text": "B2B Signal Intelligence: 700+ Signals | Autobound\nSkip to main content\nProduct\nSignal Data\nSignal Database\n700+ signal types from 35+ sources\nREST API\nSearch, enrich, subscribe\nCoverage & Segmentation\nMeasured geography, join keys, freshness\nExplore Signal Data\n→\nIntegrations\nMCP Server\nClaude, Cursor, and any MCP client\nClaude Code\nAI-powered signal workflows\nOpenAI\nFunction calling with signals\nOEM / Embed\nWhite-label signal data\nLearn More\n→\nSolutions\nBy Use Case\nThe Intent Initiative\nContribute deal data, shape signal-native intent\nOEM / Platform Partners\nLicense signal data for your product\nAI SDR Platforms\nSignal data for AI-powered outreach\nData Consolidation\nReplace 3-5 fragmented vendors\nProduct Intelligence\nSignal-powered product decisions\nCompare Providers\nSignal data vs. alternatives\nAll Solutions\n→\nBy Role\nData Engineering\nRevenue Operations\nSales Leaders\nProduct Teams\nCustomer Stories\n→\nDevelopers\nQuickstart\nGet started with the Signal API\nAPI Endpoints\nEnrich, search, intent, email verification\nFor AI Agents\nMCP, tool calls, GCS push\nCoverage Report\nAudited volumes and fill rates per signal type\nPricing\nResources\nBlog\nGuides\nGlossary\nCustomer Stories\nSecurity\nAbout\nContact Sales\nStart Free\nProduct\nSignal Data\nSignal Database\nREST API\nCoverage & Segmentation\nExplore Signal Data\n→\nIntegrations\nMCP Server\nClaude Code\nOpenAI\nOEM / Embed\nLearn More\n→\nSolutions\nBy Use Case\nThe Intent Initiative\nOEM / Platform Partners\nAI SDR Platforms\nData Consolidation\nProduct Intelligence\nCompare Providers\nAll Solutions\n→\nBy Role\nData Engineering\nRevenue Operations\nSales Leaders\nProduct Teams\nCustomer Stories\n→\nDevelopers\nQuickstart\nAPI Endpoints\nFor AI Agents\nCoverage Report\nPricing\nResources\nBlog\nGuides\nGlossary\nCustomer Stories\nSecurity\nAbout\nStart Free\nContact Sales\nB2B Signal Intelligence\nThe signal layer for enterprise GTM\nThe signal layer for\nenterprise GTM\n|\n700+ signals across 35 signal types on 250M+ contacts and 50M+ companies. Delivered via API, file push, or OEM licensing.\nStart Free\nExplore Signals\nTrusted by leading data platforms\nCase study\nCase study\nCase study\nCase study\nCase study\nCase study\nCase study\nCase study\nWhy Signal Data\nThe problems we solve\nGTM teams, data platforms, and AI-native tools all hit the same walls. Autobound is the data layer that removes them.\nGeneric outreach gets ignored\nSignal-timed sends hit\n15–25% reply rates\n.\nHours wasted on manual research\nThe right trigger surfaced in\nmilliseconds\n, not hours.\nIntent data is a black box\nExactly\nwhat happened, when, and to whom\n— with sources.\nEvery GTM motion is different\nPick the\nexact signal types\nyour motion needs.\nLLM tools need structured data\nA clean, structured layer your\nagents\nbuild on.\nStale data kills deals\nRefreshed\ndaily to weekly\n, fully timestamped.\n3.8B+\nSignals processed\nSub-200ms\nAPI response\n99.9%\nUptime SLA\nDaily\nSignal refresh\nExplore real signals\nEvery signal is timestamped, sourced, and resolved to company and contact.\nHiring & Growth\nFinancial & Funding\nTechnology & Product\nLeadership & People\nIntent & Engagement\nCompany & Market\nLive\nSDR/BDR Team Expansion\nAcme Corp posted 8 SDR roles in the past 14 days. Sales team scaling signal.\nLinkedIn Jobs\nIndeed\n+\n1\nLive\nVP of Sales Hire\nTechStart hired a new VP of Sales from Salesforce. Expect stack evaluation in 60 days.\nLinkedIn\nPress Releases\n+\n1\nLive\nCustomer Success Scaling\nSaaSify posted 6 CSM roles this week. Customer base likely outpacing support capacity.\nLinkedIn Jobs\nIndeed\n+\n1\nLive\nData Team Hiring\nFinServ Inc. posted 4 data engineer roles. Building out their data warehouse team.\nLinkedIn Jobs\nGitHub\n+\n1\nBrowse all 700+ signals\nDelivery\nBuilt for how your stack already works\nREST API for real-time. File push for batch pipelines. OEM for embedding into your product. Pick the rail that fits.\n< 200ms\nREST API\nReal-time signal access. Sub-200ms. Search, enrich, and filter across all signal types.\ncurl https://signals.autobound.ai/v1/signals\nAutomated\nFile Delivery\nScheduled batch exports to GCS. Daily, weekly, or custom cadence. CSV, JSON, Parquet.\ngs://autobound-*/output.jsonl\nWhite-label\nOEM Licensing\nEmbed signal data into your platform. White-label ready with custom SLAs.\nnpm i @autobound-ai/mcp-server\nCustomer Impact\nPowering signal intelligence at scale\n“This partnership strengthens the foundation of our AI strategy. By combining high-quality contact data, insights from millions of users, and hundreds of signals, we are giving customers greater visibility into what matters most across their target prospects.”\nScott Kim\n, CEO,\nRocketReach\nRead the case study\n→\n18x\nROI in 3 months\nSkuid\n$400K+\nSaved vs. building in-house\nTechTarget\n500K+\nLeads activated\nSeries C HR Platform\n30%\nRetention increase\nTechTarget\nFor Developers\nThe B2B data layer for builders\nRESTful API with sub-200ms responses. Built for GTM teams, OEM partners, and anyone building with LLMs — Claude Code, AI SDRs, n8n workflows, and internal agents.\nStart Free\nAPI Reference\nsignal-search.sh\ncurl -X POST signals.autobound.ai/v1/companies/search \\ -H \"x-api-key: your-key\" \\ -d '\n{ \"query\": \"hiring data engineers\", \"signal_types\": [\"hiring_surge\"], \"limit\": 5 }\n'\n200 OK\n· 5 results · 47ms\nNew — The Intent Initiative\nHelp build intent, without the black box\nWe're layering real closed-won outcomes on 1B+ buying signals to predict who's in market - and in backtests it flagged future buyers at up to 7.6× the accuracy of random targeting. Contribute anonymized deal data, get early access and a map of who's about to buy.\nExplore the Initiative\nSee how it works\nStop guessing. Start selling with signals.\nGet real-time signal data flowing in days, not months. Custom packages for GTM teams, platforms, and AI-native tools.\nStart Free\nExplore Signals\nContact Sales\nB2B signal intelligence infrastructure.\nProduct\nSignal Database\nREST API\nMCP Server\nClaude Code\nOpenAI\nSolutions\nOEM / Platforms\nIntent Initiative\nData Consolidation\nProduct Intelligence\nCustomer Stories\nCompare Providers\nDevelopers\nDeveloper Hub\nIntegrations\nAPI Reference\nPricing\nResources\nBlog\nGuides\nGlossary\nSecurity\nAbout\nContact Sales\nLegal\nPrivacy Policy\nMaster Services Agreement\n©\n2026\nAutobound. All rights reserved.\nSOC 2 Type II",
+  "links": [
+    {
+      "href": "/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/28250788653d03d7.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/e579be24c10473d9.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/76374e48a2dc2dee.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://uploads-ssl.webflow.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/llms.txt",
+      "rel": "llms-txt"
+    },
+    {
+      "href": "https://www.autobound.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/icon?a794c9b96c24763a",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon?714a9acd369609a6",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/signal-api",
+      "rel": null
+    },
+    {
+      "href": "/signal-coverage",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/claude-code",
+      "rel": null
+    },
+    {
+      "href": "/integrations/openai",
+      "rel": null
+    },
+    {
+      "href": "/for-platforms",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mcp",
+      "rel": null
+    },
+    {
+      "href": "/intent-partners",
+      "rel": null
+    },
+    {
+      "href": "/for-platforms",
+      "rel": null
+    },
+    {
+      "href": "/for-ai-sdrs",
+      "rel": null
+    },
+    {
+      "href": "/use-case/tool-consolidation-and-roi",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product-development",
+      "rel": null
+    },
+    {
+      "href": "/compare/signal-data-providers",
+      "rel": null
+    },
+    {
+      "href": "/use-case",
+      "rel": null
+    },
+    {
+      "href": "/your-role/data-teams",
+      "rel": null
+    },
+    {
+      "href": "/your-role/gtm-ops",
+      "rel": null
+    },
+    {
+      "href": "/your-role/sales-leaders",
+      "rel": null
+    },
+    {
+      "href": "/your-role/product-leaders",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "/apis",
+      "rel": null
+    },
+    {
+      "href": "/for-ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/signal-coverage",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://signalapi.autobound.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/signal-api",
+      "rel": null
+    },
+    {
+      "href": "/signal-coverage",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/claude-code",
+      "rel": null
+    },
+    {
+      "href": "/integrations/openai",
+      "rel": null
+    },
+    {
+      "href": "/for-platforms",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mcp",
+      "rel": null
+    },
+    {
+      "href": "/intent-partners",
+      "rel": null
+    },
+    {
+      "href": "/for-platforms",
+      "rel": null
+    },
+    {
+      "href": "/for-ai-sdrs",
+      "rel": null
+    },
+    {
+      "href": "/use-case/tool-consolidation-and-roi",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product-development",
+      "rel": null
+    },
+    {
+      "href": "/compare/signal-data-providers",
+      "rel": null
+    },
+    {
+      "href": "/use-case",
+      "rel": null
+    },
+    {
+      "href": "/your-role/data-teams",
+      "rel": null
+    },
+    {
+      "href": "/your-role/gtm-ops",
+      "rel": null
+    },
+    {
+      "href": "/your-role/sales-leaders",
+      "rel": null
+    },
+    {
+      "href": "/your-role/product-leaders",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "/apis",
+      "rel": null
+    },
+    {
+      "href": "/for-ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/signal-coverage",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "https://signalapi.autobound.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://signalapi.autobound.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/case-study/rocketreach",
+      "rel": null
+    },
+    {
+      "href": "/case-study/warmly",
+      "rel": null
+    },
+    {
+      "href": "/case-study/informa-techtarget",
+      "rel": null
+    },
+    {
+      "href": "/case-study/oppy",
+      "rel": null
+    },
+    {
+      "href": "/case-study/rocketreach",
+      "rel": null
+    },
+    {
+      "href": "/case-study/warmly",
+      "rel": null
+    },
+    {
+      "href": "/case-study/informa-techtarget",
+      "rel": null
+    },
+    {
+      "href": "/case-study/oppy",
+      "rel": null
+    },
+    {
+      "href": "/signals/directory",
+      "rel": null
+    },
+    {
+      "href": "/case-study/rocketreach",
+      "rel": null
+    },
+    {
+      "href": "https://signalapi.autobound.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "https://autobound-api.readme.io",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/intent-partners",
+      "rel": null
+    },
+    {
+      "href": "/intent-partners#how-it-works",
+      "rel": null
+    },
+    {
+      "href": "https://signalapi.autobound.ai/signup",
+      "rel": null
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/autobound-ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/signal-data",
+      "rel": null
+    },
+    {
+      "href": "/signal-api",
+      "rel": null
+    },
+    {
+      "href": "/integrations/mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/claude-code",
+      "rel": null
+    },
+    {
+      "href": "/integrations/openai",
+      "rel": null
+    },
+    {
+      "href": "/for-platforms",
+      "rel": null
+    },
+    {
+      "href": "/intent-partners",
+      "rel": null
+    },
+    {
+      "href": "/use-case/tool-consolidation-and-roi",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product-development",
+      "rel": null
+    },
+    {
+      "href": "/success-stories",
+      "rel": null
+    },
+    {
+      "href": "/compare/signal-data-providers",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://autobound-api.readme.io",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/master-services-agreement",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2656
+}

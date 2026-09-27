@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "source_url": "https://botsonic.com/integrations/zendesk",
+  "purpose": "Actual advertised support escalation integration",
+  "retrieved_at": "2026-09-22T04:14:04.914978+00:00",
+  "source_type": "first_party_public_page",
+  "classification": "vendor_claims_only",
+  "method": "Credential-free bounded HTTPS GET",
+  "status": 200,
+  "error": null,
+  "maximum_bytes": 1048576,
+  "total_deadline_seconds": 8,
+  "limitations": "Static vendor content only, not service execution, customer verification or checkout.",
+  "final_url": "https://botsonic.com/integrations/zendesk",
+  "content_type": "text/html; charset=utf-8",
+  "truncated": false,
+  "bytes_read": 54128,
+  "captures": [
+    {
+      "path": "cases/007/research/continuation-v1/capture-20260922T041404914949Z.html",
+      "sha256": "a6b638c6f5b02edc9161e1060482662021969a47cc3e4621d790773772f08002"
+    },
+    {
+      "path": "cases/007/research/continuation-v1/capture-20260922T041404914949Z.txt",
+      "sha256": "66ebb60c20f855c9adebfd6d0fe51ba8b4090d2be9f1b80e06ed92d79f8ade04"
+    }
+  ],
+  "elapsed_seconds": 0.8375381659999999
+}

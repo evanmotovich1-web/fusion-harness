@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "task_id": "1.b",
+  "case_id": "002",
+  "started_at": "2026-09-22T03:23:02.372263+00:00",
+  "status": "passed",
+  "scope": "Fresh execution of retained local regression. Not independent hidden evaluation or product acceptance.",
+  "product_acceptance": false,
+  "model_comparison_executed": false,
+  "original_product_observed": false,
+  "implementation_changed": false,
+  "fixed_output_evidence_writers_executed": false,
+  "limits": [
+    "No model baseline",
+    "Builder-visible tests",
+    "No live marketplace observation or editorial evaluation",
+    "Historical suite uses scenario-derived inputs and must not be used for model comparison"
+  ],
+  "historical_reports": [
+    {
+      "original_path": "/tmp/fusion-harness-plXwRt/collaborate/reports/1.c-terra.md",
+      "copy": {
+        "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical-1.c-terra.md",
+        "sha256": "51834f63e303c9239d0ca222ad428a90ff553d28f83ffd0171eea36f33a598c6"
+      }
+    },
+    {
+      "original_path": "/tmp/fusion-harness-plXwRt/collaborate/reports/1.c-attempt-1.md",
+      "copy": {
+        "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical-1.c-attempt-1.md",
+        "sha256": "51834f63e303c9239d0ca222ad428a90ff553d28f83ffd0171eea36f33a598c6"
+      }
+    }
+  ],
+  "archived_original_files_verified": 25,
+  "original_files_unchanged_since_repair": 23,
+  "retained_validation": {
+    "path": "cases/002/tests/repair-v2/validation.json",
+    "sha256": "7d460f8733c006d791d847f4774197746f0602453527dbe2f4a955b536d7fd6c"
+  },
+  "retained_execution_index": {
+    "path": "cases/002/tests/repair-v2/execution-index.json",
+    "sha256": "243f30342f4bd461404424182830791307486b8ec0dfb94aff8050084cceedb1"
+  },
+  "source_bundle": {
+    "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/source-bundle.json",
+    "sha256": "d04f91488b9794c19265591518f5a7a2e7030a1b93037e71ebda530bb3283d7e"
+  },
+  "comparison_inputs": {
+    "path": "cases/002/tests/repair-v2/comparison-inputs.json",
+    "sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331"
+  },
+  "separate_evaluator": {
+    "path": "cases/002/tests/repair-v2/evaluator.json",
+    "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889"
+  },
+  "source_sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+  "runs": [
+    {
+      "label": "repair-v2",
+      "receipt": {
+        "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/repair-v2.receipt.json",
+        "sha256": "1bf168cd0080ddcb7dd7197059cb87b468fac6b3cb3f8ad3f6374d4345149655"
+      },
+      "passed": 54,
+      "total": 54,
+      "exit_status": 0,
+      "errors": []
+    },
+    {
+      "label": "historical",
+      "receipt": {
+        "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical.receipt.json",
+        "sha256": "be128a7b99627f4cca755912618f24e2f53553fdc925655aab41041687abf38a"
+      },
+      "passed": 20,
+      "total": 20,
+      "exit_status": 0,
+      "errors": []
+    }
+  ],
+  "all_preexisting_case_files_unchanged": true,
+  "preserved_file_count": 88,
+  "preservation_manifest": {
+    "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/preservation-before.json",
+    "sha256": "a97ce494093eec61545735de6dde928c5301293648ccde296b8be248aca34427"
+  },
+  "ended_at": "2026-09-22T03:23:02.718163+00:00"
+}

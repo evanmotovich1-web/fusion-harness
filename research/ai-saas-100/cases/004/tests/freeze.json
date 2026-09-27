@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "case_id": "004",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/004/tests/specification.json",
+  "specification_sha256": "0ace548d99c4f172dfec2f316a000af3b505e1a07acc25babecebe129c56b7ad",
+  "assets": [],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

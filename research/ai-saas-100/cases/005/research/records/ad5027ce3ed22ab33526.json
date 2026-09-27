@@ -1,0 +1,602 @@
+{
+  "evidence_id": "r005-ad5027ce3ed22ab33526",
+  "source_url": "https://www.frase.io/pricing",
+  "publisher": "www.frase.io",
+  "retrieved_at": "2026-09-20T21:35:25.748447+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.frase.io/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/005/research/captures/ad5027ce3ed22ab33526.html",
+  "capture_sha256": "e3e54bac3a8617e564639339bf6500e35002ee4e061601985eef64545fbeb617",
+  "bytes_saved": 225027,
+  "title": "Frase Pricing | SEO & GEO Content Platform Plans",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Frase plans and pricing. Starter, Professional and Scale, from $39 a month billed yearly. Free 7-day trial, no credit card."
+    },
+    {
+      "key": "og:title",
+      "value": "Frase plans and pricing"
+    },
+    {
+      "key": "og:description",
+      "value": "Starter, Professional and Scale, from $39 a month billed yearly. Free 7-day trial, no credit card."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Frase"
+    }
+  ],
+  "text": "Skip to content\nPlatform\nListen\nFrase Answers\nCapture the questions your visitors actually ask.\nCreate\nResearch\nSEO Research\nContent research that ends in a brief.\nTopic Clusters\nMap the cluster around every topic.\nWrite\nAI Agent\nDraft with your brand in context.\nBrand Voice\nKeep every draft sounding like you.\nOptimize\nContent Optimization\nScore and lift pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard\nCatch ranking decay and ship the fix.\nBacklinks\nFind link gaps, draft the outreach.\nPlatform Overview\nSee how Frase runs the whole content loop in one place.\nExplore the platform\nUse Frase in your AI tools\nRun Frase from Claude, Cursor, and any MCP tool.\nMCP server, CLI & API\nAutonomy\nLet Frase publish on its own, keep every page under review, or anywhere in between. You set the dial.\nHow autonomy works\nMultilingual\nWrite natively in 70+ languages, never translated.\nSee multilingual content\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nStart free trial →\nStart free trial →\nPlatform\nListen\nFrase Answers\nCreate\nResearch\nSEO Research\nTopic Clusters\nWrite\nAI Agent\nBrand Voice\nOptimize\nContent Optimization\nGEO Optimization\nAI Visibility\nSite Audit\nPublish\nFraseCMS\nIntegrations\nMonitor & Fix\nContent Guard\nBacklinks\nPlatform Overview\nUse Frase in your AI tools\nAutonomy\nMultilingual\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nThe content operating system for AI search\nPlans and\npricing.\nPick the plan that matches your team.\nMonthly\nYearly\nSave 20%\nBilled once a year. Switch back to monthly whenever you want.\nStarter\nRun the core loop on one site.\nBest for\nsolos, freelancers, and single-site teams\n$39\n/mo\nbilled yearly · $49/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\n1 seat, 1 site\n10 articles and 50 audit pages each month\nPublish to WordPress, Webflow, Sanity, or Wix, or host on FraseCMS\nSEO and GEO scores, plus AI Visibility on ChatGPT and Google AI\nContent Guard watches 10 pages for Google decay\nThe agent publishes on its own when you let it, on any content type\nFrase Answers, a free conversational widget that captures what your visitors want, so you can create content for it\nRunning low on room? Upgrade in a click. Until you do, Starter holds at its monthly limits.\nMost popular\nProfessional\nThe whole loop, built for a content team.\nBest for\nin-house teams and growing SMBs\n$103\n/mo\nbilled yearly · $129/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\nEverything in Starter, plus:\n3 seats and 5 sites, with extra seats at $29/mo\n40 articles and 250 audit pages each month\nA content calendar, internal linking suggestions, and one piece turned into posts for every channel\nAI crawler monitoring, plus Perplexity added to AI Visibility\nContent Guard watches 75 pages for Google decay\nOptional pay-as-you-go when a month runs long, off by default\nNeed more room? Add seats, audit pages, or AI prompts as you go.\nScale\nRun the loop across many sites, with more done for you.\nBest for\nagencies and multi-site brands\n$239\n/mo\nbilled yearly · $299/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\nEverything in Professional, plus:\n5 seats and up to 10 domains, with extra seats at $29/mo\n100 articles and 1,000 audit pages each month\nContent Guard watches 300 pages, plus Claude and Gemini added to AI Visibility\nClient-ready reports you can export for every client\nTurn the agent loose across every site you run, not just one\nNeed more room? Add seats, audit pages, or AI prompts as you go.\nWant white-label reports or a branded client portal?\nSee Enterprise.\nEnterprise\nThe loop at organization scale, on your terms.\nBest for\nlarge orgs and agencies needing security or white-label\nCustom\nscoped to your org\nTalk to sales\nCustom seats and domains\nWhite-label reports and a branded client portal\nSSO and SAML, a dedicated account manager, and an SLA\nCustom limits, custom API access, and two years of history\nBring your own agent.\nFrase runs where you already work — Claude, ChatGPT, Codex, Cursor, your own terminal — through the MCP server and CLI, on every plan. Point it at your site and let it work.\nPrices in USD. Starter simply stops at its monthly limits, so a surprise bill is off the table. On Professional and Scale, pay-as-you-go is optional and off by default; turn it on only if you want to keep working past the cap. White-label reports and branded client portals are Enterprise only.\nPublish it anywhere. Or publish it on FraseCMS\nFrase pushes finished posts to WordPress, Webflow, Sanity or Wix. Or publish to FraseCMS: an agent-ready CMS, hosted or headless, with WebMCP so AI assistants can read your pages and act on them. Nothing to set up, no hosting bill, and every post keeps the research it came from.\nFree\n$0\n100,000 page views a month\n25 GB bandwidth\nLive today, with a small Powered by Frase badge\nStructured data and llms.txt on every page\nBasic\nYOUR BLOG, YOUR BRAND\n$19\n/mo\n250,000 page views a month\nPublish at blog.yoursite.com or yoursite.com/blog — a subdirectory keeps the link authority on your main site\nNo Frase badge, so the page reads as yours\n100 GB bandwidth\nPro\n$99\n/mo\n1,000,000 page views a month\nTen times the free allowance, for a site with real traffic\n500 GB bandwidth\nDedicated support\nEvery Frase plan includes FraseCMS hosting free, trial included. More room and no badge from $19/mo on top of your paid plan (plans from $39/mo), or $99/mo at a million page views. Yearly billing on FraseCMS saves two months. A page view counts each time a page is served to a reader or pulled through the API; past the cap, free pauses for the month while paid tiers keep serving. Higher volumes run on a Custom plan.\nSee how FraseCMS works\nWhat a month on Frase looks like\nFrase ships finished work, not another idle login.\nA normal month: new articles go out, older pages get audited and patched, and good content stops quietly decaying. Rankings and AI citations build over the weeks after you publish, so Frase shows the work shipping now and the signals coming back later. No tool ranks you inside a trial, and Frase will not pretend otherwise.\nListen · Frase Answers\nThe loop starts on your own site\nFrase Answers sits on your site as a conversational front door and captures the real questions your visitors ask. The loop starts from first-party demand, and those questions tell Frase exactly what to create next.\nNew content, researched and drafted\nFrase studies what already ranks for your topic, then drafts and optimizes the piece in your voice. You get a finished draft, not an outline.\nPublished straight to your CMS\nPush each piece to WordPress, Webflow, Sanity, or Wix in a click. Or host it on FraseCMS, free for 100,000 page views a month.\nExisting pages audited and scored\nFrase scores the pages you already have for SEO, GEO, and AI visibility. You see exactly where you stand and what to fix first.\nSlipping pages caught and fixed\nWhen a live page starts losing rank on Google, Content Guard writes the revision and republishes it the moment you approve.\nWork ships now. Rankings build after.\nIn a trial you see the work going out and the gaps Frase finds, plus your in-app scores moving as you apply fixes. Google rankings and AI citations are the slow part, and they keep compounding in the weeks after you publish.\nTrusted at work\nThousands of teams already run on Frase.\n4.8/5 on G2\nCompare plans\nLine by line, what you get at each tier.\nEvery plan runs the whole loop, and the agent can publish on its own from the first one. What changes as you move up is how much you run, how many sites and people you run it for.\nShow full comparison\nFrase plan feature comparison across Starter, Professional, Scale, and Enterprise.\nFeature\nStarter\nProfessional\nMost popular\nScale\nEnterprise\nVolume each month\nArticles\n10\n40\n100\nCustom\nAudit pages\n50\n250\n1,000\nCustom\nAI generations\nOn-demand AI actions the agent runs for you, like idea expansions and image generation. Separate from your monthly article count.\n25\n100\n350\nCustom\nAI diagrams and infographics\n20\n50\nCustom\nGoing over your limit\nPay-as-you-go is optional and off by default. Leave it off and your plan holds at its limit, with no surprise bill. Turn it on to keep working past the cap; overages bill at the end of your cycle.\nHolds at limit\nOptional pay-as-you-go\nOptional pay-as-you-go\nCustom\nTeam\nSeats included\n1\n3\n5\nCustom\nExtra seats\n$29/mo each\n$29/mo each\nIncluded\nRoles and permissions\nAdmins manage the team and billing, Editors create and edit content, Viewers get read-only access.\nSingle seat\nOwner, Admin, Editor, Viewer\nOwner, Admin, Editor, Viewer\nOwner, Admin, Editor, Viewer\nDomains\n1\n5\n10\nCustom\nThe loop it runs\nFrase Answers (Listen)\nEvery plan includes a free Answers widget, one per site. Higher conversation volume is a paid add-on.\nFree tier + add-on\nFree tier + add-on\nFree tier + add-on\nFree tier + add-on\nResearch, writer, and images\nEach article can include a generated hero image, plus in-content visuals.\nPublish to your CMS or FraseCMS\nWordPress, Webflow, Sanity, Wix, or FraseCMS, our own hosted CMS that keeps each post connected to the research behind it. FraseCMS is free for 100,000 page views a month and included with any plan; Basic adds your own domain and 250,000 page views for $19/mo on top of your plan. Starter covers the core content formats; Professional and up unlock the full set.\nSEO and GEO scores\nContent calendar\nInternal linking suggestions\nAI crawler monitoring\nAgent drafts and auto-publishes content\nOn every plan, on any content type, whenever you switch it on. Your monthly articles are the only limit. Separate from Content Guard, which waits for your approval unless you opt in.\nAll types\nAll types\nAll types\nAll types\nMonitor and fix\nContent Guard pages watched\nWatches Google rank and traffic decay. Proposes the fix. Republishes on your approval.\n10\n75\n300\nCustom\nAI Visibility engines tracked\nDaily monitoring and alerts. AI Visibility does not auto-fix.\nChatGPT\nGoogle AI\nChatGPT\nGoogle AI\nPerplexity\nChatGPT\nGoogle AI\nPerplexity\nClaude\nGemini\nAll named engines\nAI Visibility prompts tracked\nThe questions you monitor to see whether AI engines cite you, like \"best telehealth platform\".\n50\n200\n500\nCustom\nReporting and access\nExportable client-ready reports\nOmni-channel atomization\nTurn one piece of content into channel-ready posts and snippets sized for each channel.\nAPI, MCP and CLI requests\n5,000/mo\n20,000/mo\n50,000/mo\nCustom\nHistorical data\nHow far back your reporting history goes. AI Visibility keeps its own history, from 30 days on Starter.\nCurrent only\n3 months\n12 months\n24 months\nEnterprise only\nWhite-label reports\nBranded client portal\nSSO and SAML\nDedicated account manager and SLA\nAgencies and multi-brand teams\nRun the loop across every client site, share the workspace with your team, and export client-ready reports. Scale is fully self-serve, so you can have it running before your next client call.\nStart your Scale trial\nFree 7-day trial. No credit card.\nEnterprise\nWhite-label reports, a branded client portal, SSO and SAML, and a dedicated manager with an SLA. Custom seats and limits, scoped to your org.\nTalk to sales\nCustom limits and pricing.\nQuestions, answered straight.\nWhat do I get in the 7-day free trial?\nProfessional's full feature set, including the part most tools make you pay to reach: you can let the agent publish on its own during the trial. Turn it on for a content type, watch what it ships, and turn it off again if you don't like what you see. You also get the content calendar, internal linking, Frase's AI engines for content (ChatGPT, Perplexity, Gemini), and AI Visibility on ChatGPT and Google AI. Quantities are capped at 5 articles, 50 audit pages, 25 AI prompts and up to 3 seats. No credit card to start.\nWhat happens when I hit a monthly limit?\nOn Starter, Frase holds at the limit until your cycle resets or you upgrade, so a surprise charge never happens. On Professional and Scale, you can switch on pay-as-you-go capacity and keep going. Professional adds $5 per extra article, $0.50 per audit page, and $0.25 per AI prompt. Scale adds $4, $0.40, and $0.20. Overages only apply if you turn them on, and they bill at the end of your cycle.\nHow do add-ons work?\nExtra seats run $29/mo each on Professional and Scale. Audit pages and AI prompts come as pay-as-you-go capacity on those same plans. FraseCMS hosting is an add-on too: free with any plan, then $19/mo for Basic or $99/mo for Pro on top of it. Add what you need, when you need it. The sticker price is your floor, not a number that creeps up behind your back.\nCan I change plans later?\nYes. Upgrade whenever you want and the change is prorated on the spot. Downgrade and it takes hold at your next billing cycle. Choose yearly billing and 20% comes off the monthly rate.\nWhat does Content Guard do, and what stays in my control?\nWhen a published page starts losing Google rank or traffic, Content Guard writes the fix and republishes it to your CMS once you approve. Approval is the default on every change. You can opt in to let Frase ship low-risk fixes on their own, and that switch is always yours to flip back. AI Visibility is a separate feature: it monitors AI engines and alerts you, and it never touches your content.\nWhich CMS platforms does Frase publish to?\nFrase publishes to WordPress, Webflow, Sanity, and Wix, or hosts the content for you on FraseCMS — an agent-ready CMS, hosted or headless, with WebMCP so AI assistants can read your pages and act on them.\nHow much does FraseCMS cost?\nThe free tier is included with any Frase plan: 100,000 page views a month and 25 GB of bandwidth. Basic and Pro are add-ons on top of your plan. Basic is $19/mo for 250,000 page views, a subdirectory of your own site if you want one, and no Frase badge. Pro is $99/mo for a million page views. Yearly billing saves two months on either. Past the cap, the free tier pauses until the month resets; Basic and Pro keep serving at $1.00 and $0.50 per extra 1,000 page views, with a spend cap set at your base price by default, so overage cannot silently run away. A page view counts each time a page is served to a reader or pulled through the API.\nIs Scale enough for my agency, or do I need Enterprise?\nFor most agencies, Scale is plenty: up to 10 domains, 5 seats with roles, client-ready reports you can export, all self-serve. Turning one piece of content into posts for every channel starts on Professional. The line is white-label reports or a branded client portal. The moment you need one of those, that is Enterprise. Talk to sales and we will set it up.\nWhat can I realistically expect Frase to do?\nFrase produces real, optimized content, surfaces the gaps in the pages you already have, and moves your in-app SEO, GEO, and AI-visibility scores as you apply the fixes. Rankings and AI citations are the slow part. They build over the weeks after you publish, so Frase shows you the work going out and tracks the signals coming back. What Frase will not do is promise you a ranking or a citation inside a 7-day window.\nSee it run on your own pages.\nFinish with real work behind you: content shipped, gaps found, slipping pages caught. It takes about a minute to start, and you keep the final say the whole way through.\nStart free trial\nFree 7-day trial. No credit card.\nStart free trial\nFree 7-day trial. No credit card.\nThe content operating system for AI search. Frase researches, writes, optimizes, publishes, and monitors content so it ranks on Google and gets cited by AI.\nSOC 2 Type II\nGDPR Compliant\nPlatform\nPlatform Overview\nFrase Answers\nAI Agent\nContent Optimization\nGEO Optimization\nAI Visibility\nContent Guard\nBacklinks\nSite Audit\nFraseCMS\nAutonomy\nUse Frase in your AI tools\nSolutions\nContent Marketers\nSEO Teams\nAgencies\nEnterprise\nCustomer Stories\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nvs Ahrefs\nvs Clearscope\nvs MarketMuse\nvs Conductor\nvs Otterly\nAll Comparisons\nResources\nBlog\nSEO + GEO Guide\nCase Studies\nReviews\nHelp Center\nllms.txt\nCompany\nAbout\nAffiliate Program\nContact\nSecurity\nTerms\nPrivacy\n©\n2026\nFrase. All rights reserved.\nPrivacy\nTerms\nllms.txt\nContact\nFrase Pricing | SEO & GEO Content Platform Plans",
+  "links": [
+    {
+      "href": "/_next/static/css/e09a05363150cf23.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/ee4698f5216cae25.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-27236eb3690087b4.js?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "preload"
+    },
+    {
+      "href": "https://next.frase.io/answers-widget.js?token=NDU3MWU2ZmItNWY4Ni00MWRjLThlYzEtODMwNGUwN2QzZjY1OmZiY2EyMmE5MjIxMTEwMjc6ZWUwZTk5NmUzZjRjZjUyOQ",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?plan=starter&utm_source=pricing&utm_medium=tier_card&utm_campaign=pricing_v1",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?plan=professional&utm_source=pricing&utm_medium=tier_card&utm_campaign=pricing_v1",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?plan=scale&utm_source=pricing&utm_medium=tier_card&utm_campaign=pricing_v1",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?plan=scale&utm_source=pricing&utm_medium=segments_band&utm_campaign=pricing_lean",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=pricing&utm_medium=final_cta&utm_campaign=pricing_v1",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=pricing&utm_medium=mobile_sticky&utm_campaign=pricing_v1",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs/ahrefs",
+      "rel": null
+    },
+    {
+      "href": "/vs/clearscope",
+      "rel": null
+    },
+    {
+      "href": "/vs/marketmuse",
+      "rel": null
+    },
+    {
+      "href": "/vs/conductor",
+      "rel": null
+    },
+    {
+      "href": "/vs/otterly",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/company/about",
+      "rel": null
+    },
+    {
+      "href": "/partners/affiliates",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.frase.io/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/mstile-270x270.png",
+      "rel": "msapplication-TileImage"
+    }
+  ],
+  "elapsed_seconds": 0.324644
+}

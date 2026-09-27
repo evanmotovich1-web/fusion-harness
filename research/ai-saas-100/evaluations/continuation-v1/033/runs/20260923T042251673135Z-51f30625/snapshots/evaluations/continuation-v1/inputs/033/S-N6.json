@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "test_id": "S-N6",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "timezone": "UTC",
+        "day": "2026-09-21",
+        "working_hours": [
+          "09:00",
+          "11:00"
+        ],
+        "meetings": [
+          {
+            "id": "M1",
+            "start": "09:00",
+            "end": "11:00",
+            "movable": false
+          }
+        ],
+        "tasks": [
+          {
+            "id": "blocked",
+            "minutes": 20,
+            "priority": 1,
+            "deadline": "11:00",
+            "splittable": false
+          }
+        ],
+        "buffer_minutes": 0,
+        "write_to_calendar": false
+      }
+    }
+  ]
+}

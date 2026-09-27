@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "name": "unit",
+      "argv": [
+        "bun",
+        "test",
+        "extensions/self-compact/self-compact.test.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "types",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/.bun/install/cache/typescript@5.9.3@@@1/lib/tsc.js",
+        "-p",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/tsconfig.local.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-0",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-1",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-soft-at=20%",
+        "compact-at=50%",
+        "compact-buffer=10%"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-2",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compactions-soft-at=100k",
+        "compactions-at=200k",
+        "compact-buffer=50k"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-3",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-soft-at=250k",
+        "compact-at=35%",
+        "compact-buffer=50k"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-4",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-buffer=0"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-5",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-prompt=EXACT_LITERAL"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-6",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-soft-at=invalid"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "runtime-7",
+      "argv": [
+        "node",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/verification/runtime-smoke.mjs",
+        "compact-soft-at=10",
+        "compact-at=20",
+        "compact-buffer=10"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "cli-help",
+      "argv": [
+        "pi",
+        "--no-extensions",
+        "--no-skills",
+        "--no-prompt-templates",
+        "--no-themes",
+        "--no-context-files",
+        "--no-session",
+        "-e",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/self-compact.ts",
+        "--help"
+      ],
+      "exit": 0
+    }
+  ],
+  "sha256": {
+    "extensions/self-compact/self-compact.ts": "afe5055e6b75ab8fc7012d4ff1f042c5b3dfd14d06a81d9c1fd4f63be612d1c3",
+    "extensions/self-compact/self-compact.test.ts": "3d4116e1aa44de8a9211ae11534ac20ecbac8429aa5a79f5da2157bb8d3fb5db",
+    ".pi/self-compact/USER_PROMPT_COMPACTION_MESSAGE_.md": "8526a081dec82077fa88f8f8398f4189ebd96eb136ff97ec20616ed4ded8a085",
+    ".pi/self-compact/USER_PROMPT_SELF_COMPACT.md": "ee935d4ea0a1ced5f9f15c25b49e52eb32ddd5044fdeb4ba095d2f78da3f1966",
+    ".pi/self-compact/USER_SOFT_SELF_COMPACT.md": "2e79df538b9be2213c5980cded2ef2f03641e8187a12034650c0f90c922ef377"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "name": "Botsonic",
+  "recorded_at": "2026-09-22T04:25:39.616393+00:00",
+  "scope": "Bounded follow-up to existing dossier; no rediscovery or accepted product",
+  "research_status": "bounded_followup_completed_commercial_research_incomplete",
+  "research_findings": {
+    "path": "cases/007/research/continuation-v1/findings.md",
+    "sha256": "b3617fe00abed601fe74102decbca89cdf4bf00219138f4810f1392fef1b8816"
+  },
+  "new_source_record": {
+    "path": "cases/007/research/continuation-v1/capture-20260922T041404914949Z.json",
+    "sha256": "458751cde4d15c09bc30911eb947aa4ed38f820f4b96f51491eb0c58f24d74c5"
+  },
+  "original_dossier": {
+    "path": "cases/007/dossier.json",
+    "sha256": "4b3014378c99d6b557977a97773ff16fc108977babd72a63c033b8e95c433833"
+  },
+  "frozen_original_specification": {
+    "path": "cases/007/tests/specification.json",
+    "sha256": "8e39d8c547c76a631b993b2f9d0d52c8ad3ec5b1c8573737099961c05e47ca2a"
+  },
+  "historical_preservation": {
+    "path": "cases/007/research/continuation-v1/preservation.json",
+    "sha256": "feb370d93ea5e2463f8b49acb178b9650f9bb34862b476bc8a964e0ea42437cd"
+  },
+  "historical_files_changed": [],
+  "work_completed": "deterministic_component_and_source_followup",
+  "implementation": {
+    "path": "cases/007/implementation/support_evidence.py",
+    "sha256": "39fff0b74c8700d40e1d9741268131af0e4278cb209fadbab4a744faaa61d464"
+  },
+  "source_snapshot": {
+    "path": "cases/007/implementation/source-history/028872f53c4d8fefc661490567884cab81f1a9ebc2ad5ac21a0de6e7b691d30a/manifest.json",
+    "sha256": "3121512618dd0e27e6c58e6b16878a80e990a21dafb70cb4dea5141ae443035c"
+  },
+  "execution_receipt": {
+    "path": "cases/007/receipts/007-support-evidence-v1-20260922T042353241002Z.json",
+    "sha256": "13870d702544fb09727b25edcd18bfa6aa82571c4de9bf88b8234fae0b9f1158"
+  },
+  "component_checks_passed": 32,
+  "original_workflow_tests_passed": null,
+  "test_count_scope": "Builder-visible component rows, including reused historical inputs; not independent product observations",
+  "central_workflow_complete": false,
+  "product_status": "incomplete",
+  "accepted": false,
+  "blockers": [
+    "No natural-language answers or semantic entailment evaluation",
+    "No real Zendesk ticket creation or agent routing",
+    "Generic-model comparison absent",
+    "Independent hidden evaluation and acceptance absent"
+  ],
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "baseline_status": "not_executed",
+  "original_product_status": "not_observed",
+  "inference_executed": false,
+  "commercial_verdict": "insufficient_evidence",
+  "operating_cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "No billing or resource allocation measurement"
+  },
+  "additional_paid_calls": 0,
+  "public_source_requests": 1,
+  "handoff": "Inspect source-bound component receipts where present. Resolve documented capability gaps before central workflow evaluation. Preserve old dossier as historical evidence and integrate this supplement through the campaign owner."
+}

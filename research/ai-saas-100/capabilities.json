@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "task_id": "1.a",
+  "assessment_started_at_utc": "2026-09-20T20:55:54.675309+00:00",
+  "start_time_scope": "Observed clock at first execution probe. Initial read-only inspection preceded this timestamp. Original campaign start is unknown.",
+  "campaign_started_at_utc": null,
+  "requested_minimum_duration_hours": 24,
+  "research_completed": false,
+  "spending": {
+    "explicit_additional_spending_authorization": false,
+    "authorized_additional_spend_usd": 0,
+    "purchases_or_paid_api_calls_made": false,
+    "current_harness_inference_cost_usd": null,
+    "restriction": "Only no-charge public access and local computation. Current agent inference is provided by the harness, not evidence of free or independently callable inference."
+  },
+  "capabilities": {
+    "filesystem": {
+      "repository": "/Users/evanmotovich/fusion-harness",
+      "read": "verified through directory listing and delegation-plan read",
+      "write_authorization": "Delegated sole writer token for this task",
+      "write_scope": "research/ai-saas-100/capabilities.json",
+      "initial_research_directory_exists": false,
+      "repository_write_access_hint": true,
+      "write_probe": "Creation of this artifact is the scoped write probe; readback validation follows creation."
+    },
+    "foreground_execution": {
+      "available": true,
+      "probe": "Python standard-library computation, one-second sleep, and two sequential bounded HTTPS requests",
+      "sleep_probe_elapsed_seconds": 1.003,
+      "probe_command_timeout_seconds": 40,
+      "maximum_validation_command_seconds": 60,
+      "sustained_foreground_execution": "Short bounded foreground calls verified. Repeated calls may proceed while the session remains active. Continuous long-duration availability is unverified.",
+      "unattended_execution_authorized": false,
+      "twenty_four_hour_execution_guaranteed": false
+    },
+    "public_browsing": {
+      "available": true,
+      "method": "Python urllib HTTPS GET without application credentials or purchases",
+      "dedicated_browser_tool_exposed": false,
+      "javascript_rendering_verified": false,
+      "search_engine_access_verified": false,
+      "scope": "Two public endpoints only. HTTP success does not establish other sites' access, useful research content, or permitted automated bulk collection.",
+      "probes": [
+        {
+          "url": "https://example.com/",
+          "final_url": "https://example.com/",
+          "status": 200,
+          "bytes_read": 559,
+          "content_type": "text/html",
+          "elapsed_seconds": 0.082
+        },
+        {
+          "url": "https://www.producthunt.com/",
+          "final_url": "https://www.producthunt.com/",
+          "status": 200,
+          "bytes_read": 4096,
+          "content_type": "text/html; charset=utf-8",
+          "elapsed_seconds": 0.121
+        }
+      ],
+      "per_request_timeout_seconds": 10,
+      "maximum_body_read_per_probe_bytes": 4096
+    },
+    "local_computation": {
+      "python3_execution_verified": true,
+      "executables_on_path": {
+        "python3": true,
+        "node": true,
+        "curl": true,
+        "ollama": false,
+        "llama-cli": false
+      },
+      "node_and_curl_execution_tested": false
+    },
+    "inference": {
+      "current_agent_response_available": true,
+      "independently_callable_model_endpoint_verified": false,
+      "no_charge_model_endpoint_verified": false,
+      "local_model_execution_verified": false,
+      "model_weights_searched": false,
+      "credentials_inspected": false,
+      "provider_calls_made": false,
+      "restriction": "Do not assume the current assistant session supplies a reproducible callable baseline or authorizes paid model calls. Missing PATH executables do not prove that no local inference capability exists."
+    }
+  },
+  "restrictions": [
+    "Preserve existing changes and all eight supplied untracked paths.",
+    "Do not inspect secret values or modify harness settings or permissions.",
+    "Do not re-derive supplied Git topology, create worktrees, publish, fetch, pull, merge, rebase, stash, clean, hard-reset, or force-update refs.",
+    "No detached processes, background jobs, daemon mode, or unattended 24-hour promise. Subprocesses must finish before reporting.",
+    "Keep validation commands bounded to at most 60 seconds. Do not scan the filesystem root or home directory or download large datasets.",
+    "Do not buy access, call paid APIs, bypass authentication or access controls, or treat a blocked site as permission to evade its restrictions.",
+    "Record inaccessible sources and continue through other authorized sources or products without inventing completed research.",
+    "All subsequent task reports must end with one FH_TASK_OUTCOME JSON metadata line using schema_version 1 and a truthful allowed status."
+  ],
+  "preserved_untracked_paths": [
+    "EVANAI_VISION_AND_ROADMAP.md",
+    "prompts/full-sweep-2026-09-02.md",
+    "prompts/swarm-tool-harness-repair.md",
+    "publication.wave3.pending.json",
+    "publication.wave4.pending.json",
+    "publication.wave5.pending.json",
+    "specs/personal-agent-onboarding.md",
+    "system.txt"
+  ],
+  "handoff": "Public-source discovery and local tooling can proceed within these restrictions. Independently callable no-charge inference remains unverified. This assessment is not research completion, prototype acceptance, or evidence of 24 hours of execution."
+}

@@ -1,0 +1,204 @@
+SOURCE	/Users/evanmotovich/Downloads/07c5a914-5620-4982-8472-709ac59f1a21.pdf
+BYTES	40069
+TITLE	Tunza - Kenya Urgency, Decision Architecture and ML/GPU Plan
+AUTHOR	Tunza Labs
+CREATIONDATE	D:20260924202728+00'00'
+PRODUCER	ReportLab PDF Library - (opensource)
+PAGES_KIDS	4
+
+----- DECODED TEXT -----
+----- PAGE 1 -----
+TUNZA
+INTERNAL STRATEGY BRIEF | JACOB | SEPT 2026
+Internal working document. Clinical and market claims remain subject to validation; proprietary implementation detail included for team alignment.
+1
+WHY KENYA NEEDS THIS LAYER NOW
+The system is digitizing quickly. The
+decision gap cannot wait.
+Kenya is not short of ambition or digital infrastructure. It is simultaneously scaling community health, connecting
+facilities, formalizing referral policy, expanding national registries and exchange, strengthening emergency
+dispatch, and introducing mandatory certification for digital health systems. The urgency for Tunza comes from
+the space between those systems: the point where a person is still outside formal care and the next decision can
+determine whether care is timely, appropriate, and reachable.
+The human cost is current, not theoretical. WHO's 2025 Kenya report still places maternal mortality at an estimated 355 deaths per
+100,000 live births, with preventable causes such as postpartum haemorrhage and hypertensive disorders continuing to contribute
+substantially. Kenya also faces a 92% shortage of doctors against estimated need. When clinical capacity is scarce, delays and poor
+routing carry real consequences.
+>107K
+CHPs supported with
+devices + medical kits
+10,277
+facilities connected
+to national systems
+92%
+doctor shortfall
+against estimated need
+355
+maternal deaths /
+100k live births
+THE PROBLEM IS NOT 'NO DIGITAL HEALTH.' IT IS FRAGMENTED DECISION CONTINUITY.
+The Ministry of Health's 2026 referral-policy process explicitly identifies fragmentation in referral pathways and calls for better continuity,
+digital interoperability, accountability, clearer forward and backward referral pathways, and improved movement of patients, specimens,
+and specialist expertise. That is a signal: the country is already naming the system-level problem Tunza is designed to sit inside.
+Before care
+The patient or CHP still has uncertainty. Information is incomplete. Distance, transport, facility capability and
+urgency matter before the hospital ever sees the case.
+During handoff
+The critical question is not only 'where is the nearest facility?' but 'what is the right level of care, can this facility
+handle it, has it acknowledged the case, and what is the next safe action?'
+After care
+Without an outcome returning to the original episode, the system cannot reliably learn whether the initial decision,
+referral destination, or escalation path was correct.
+WHY THE WINDOW IS TIME-SENSITIVE
+This is an inference, not an official deadline: the next 12-24 months are likely to matter disproportionately because national referral rules,
+interoperability expectations, certification requirements, and institutional digital habits are hardening at the same time. A system that earns
+clinical trust and integration credibility while these rails are still being shaped can become easier to embed; a later entrant may be forced to
+fit decisions already made.
+The question is no longer whether Kenya will digitize care. It is whether digitization will merely
+record what happened - or help the right decision happen sooner.
+Primary public sources: Kenya MoH - 107,000+ CHPs | MoH - 10,277 facilities | MoH - Referral Policy | WHO Kenya 2025 | DHA Certification
+
+----- PAGE 2 -----
+TUNZA
+INTERNAL STRATEGY BRIEF | JACOB | SEPT 2026
+Internal working document. Clinical and market claims remain subject to validation; proprietary implementation detail included for team alignment.
+2
+HOW TUNZA MAKES DECISIONS WITHOUT TURNING THE MODEL INTO THE SAFETY BOUNDARY
+JEV / TypeSafe Decision Framework
+JEV is our internal working framework for turning messy real-world clinical input into bounded, auditable
+decisions. It is not an external standard. The core idea is TypeSafe decision-making: the model may interpret and
+reason inside a controlled contract, but the system - not the model - owns the allowed states, hard safety rules,
+provenance, and actions.
+1
+Typed Encounter Context
+Convert incoming facts into explicit typed observations: concept, value, unit, source, observed time, freshness, confidence, and whether the
+value is unknown.
+2
+Deterministic Safety Envelope
+Run non-negotiable danger-sign and policy rules before model interpretation. A model cannot downgrade a hard safety condition because it
+sounds confident.
+3
+Bounded ML Interpretation
+Use the model for language understanding, structured extraction, missing-information detection, targeted questions, and policy-constrained
+reasoning - never unrestricted side effects.
+4
+TypeSafe Decision Object
+Emit only allowed dispositions and reason codes: urgent/emergency, same-day care, routine care, self-care/monitoring, insufficient
+information, or system-degraded.
+5
+Execution Guard
+Translate the decision into eligible actions. Requested is not confirmed: referral send, facility acceptance, arrival, completion and outcome
+each require authoritative acknowledgement.
+6
+Outcome + Evaluation Join
+Attach downstream facility/diagnostic/outcome evidence back to the original decision so disagreements and failures become evaluation
+evidence, not forgotten anecdotes.
+THE DECISION CONTRACT
+A Tunza decision should be inspectable and replayable. It should carry the disposition, reason codes, deterministic rule hits,
+missing-information state, required next action, policy version, model version, prompt/config version, and provenance references used to
+reach it. The model should return structured content that the application validates before any user-facing action is allowed.
+Allowed outputs
+URGENT / EMERGENCY
+SAME-DAY CARE
+ROUTINE CARE
+SELF-CARE / MONITOR
+INSUFFICIENT INFORMATION
+SYSTEM DEGRADED
+Mandatory abstention triggers
+critical facts missing
+contradictory observations
+low-confidence safety-critical transcription
+schema failure
+model-policy conflict
+unsupported context
+degraded dependency state
+System-owned controls
+danger-sign rules
+action eligibility
+role authorization
+referral state authority
+idempotency + revisions
+offline reconciliation
+audit + provenance
+WHY THIS MATTERS COMPETITIVELY
+Most teams can fine-tune a medical model. Far fewer can build a system where every clinical decision is bounded, typed, versioned,
+auditable, reversible when dependencies fail, and linked to downstream outcomes. If Tunza gets this right, the model becomes
+replaceable while the decision system, safety policy, evaluation evidence, referral reliability, and outcome loop become progressively
+harder to reproduce.
+The model is an intelligence component. JEV / TypeSafe is the contract that prevents
+intelligence from becoming uncontrolled authority.
+Internal note: JEV is a working internal name for the TypeSafe decision architecture. The framework should remain implementation-agnostic so the underlying model, routing provider, or external health
+system can change without changing the decision contract.
+
+----- PAGE 3 -----
+TUNZA
+INTERNAL STRATEGY BRIEF | JACOB | SEPT 2026
+Internal working document. Clinical and market claims remain subject to validation; proprietary implementation detail included for team alignment.
+3
+ML EXECUTION: BUY ITERATION SPEED, NOT GPU THEATER
+Four H100s as a controlled research
+campaign.
+The near-term ML plan is not foundation-model pretraining. We start from strong existing base models, build the
+evaluation system first, specialize with SFT/QLoRA, compare against locked clinical evals, mine failures,
+adjudicate them, and iterate. H100s shorten that loop; they are not the moat.
+Baseline
+Run untouched candidates against CORE, RED, ABSTAIN, PARITY and locked GOLD sets before changing weights.
+SFT / QLoRA
+Axolotl training harness; frozen base weights in 4-bit NF4; BF16 compute on H100s; train LoRA adapters rather than full
+weights.
+Evaluation
+Measure urgent sensitivity, undertriage, overtriage, abstention, danger-sign capture, EN/SW parity and Gold
+regressions.
+Failure loop
+Cluster failures, adjudicate clinically important disagreements, improve data, and rerun one explicit hypothesis at a time.
+THE 4-DAY H100 CAMPAIGN
+DAY 1
+Baseline + smoke + A
+Verify 4xH100 / CUDA / NCCL / interconnect, validate immutable hashes, run 100-200 smoke steps, then train Candidate A.
+DAY 2
+Evaluate A
+Run the locked suite, compare to baseline, identify regressions, and cluster clinically important failures.
+DAY 3
+Targeted B
+Change one controlled variable based on an explicit hypothesis - e.g. stronger abstention - then train Candidate B.
+DAY 4
+Same eval, decision
+Compare BASELINE vs A vs B on the exact same suite. Reject, send for clinical review, or promote toward shadow mode.
+4 H100s x $3.50/hr = $14/hr. 96 hours continuously = $1,344. Do not auto-spend it. Target first campaign: $500-$900, with GPUs
+treated as a shared pool and released whenever they are not generating useful training/evaluation work.
+GITHUB IS THE CONTROL PLANE; THE GPU NODE IS DISPOSABLE COMPUTE.
+Commits run cheap CPU CI. A merged SHA becomes eligible for training; it does not automatically spend GPU money. A deliberate Train
+Candidate action freezes Git SHA, model revision, dataset hash, eval version, Axolotl config, seed, max spend and max runtime. Only
+then does orchestration provision H100s.
+Preflight
+4 H100s visible
+correct SKU
+CUDA/PyTorch healthy
+NCCL/interconnect healthy
+disk + object storage healthy
+hashes match
+Cost guards
+max_cost_usd
+max_runtime_hours
+trainer heartbeat
+30-60 min checkpoints
+keep last 2-3 + best
+terminate idle node
+Permanent record
+Git SHA
+model revision
+dataset hash
+config + seed
+GPU hours + cost
+eval report
+candidate disposition
+THE COMPOUNDING ADVANTAGE
+The H100s buy faster iteration. The durable advantage is the loop: high-quality care-path data -> typed decisions -> locked evals -> failure
+analysis -> clinician adjudication -> better SFT -> safer decisions -> better referrals -> outcomes returned -> stronger evidence. As that
+loop compounds, Tunza depends less on any single model vendor.
+What should feel urgent to Jacob is not 'we need GPUs.' It is that Kenya is formalizing the
+digital rails now, while the clinical decision layer between community and formal care is still
+open enough to shape.
+Internal execution principle: every month should end with something Tunza can prove that it could not prove the month before - not simply more features. Distillation comes later, after we have a
+demonstrably better teacher and a clear deployment reason to compress it.
+

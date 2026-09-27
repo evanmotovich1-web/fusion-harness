@@ -1,0 +1,350 @@
+{
+  "evidence_id": "r025-7bb651f7681f2fe35728",
+  "source_url": "https://trypencil.com/integrations",
+  "publisher": "trypencil.com",
+  "retrieved_at": "2026-09-20T21:35:31.879827+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://trypencil.com/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/025/research/captures/7bb651f7681f2fe35728.html",
+  "capture_sha256": "8dc572ddc5c9751f4589f4e9ee0079679bc62d9e78ee75df8e1fc5f11f5ab763",
+  "bytes_saved": 191067,
+  "title": "Integrations | Pencil",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility."
+    },
+    {
+      "key": "og:title",
+      "value": "Integrations | Pencil"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility."
+    }
+  ],
+  "text": "Integrations | Pencil\nLoading...\n'\nBook a Demo\nThe Platform\nFor Enterprise\nScribble\nIntegrations\nWorkflows\nCanvas\nContent Hub\nArticles\nNews\nCase Studies\nThe Help Center\nCompany\nPricing\nCommunity\nLogin\nPencil\nPencil Pro\nLogin\nPencil\nPencil Pro\nPart of the Platform\nEvery model. One platform.\nPencil aggregates the world's leading AI models so you always have the right tool for the job, and switch freely as the market evolves.\nBook a demo\nClaude now live\nTry it now\nTrusted by marketing teams at the world’s leading brands\nAll\nAll\nGeneral Availability\nGeneral Availability\nClosed Beta\nClosed Beta\nComing Soon\nComing Soon\nIntegrations List\nPick your stack\nMonotype\nCreative Tools / Fonts\nGeneral Availability\nAdobe Workfront Integration\nDAM\nClosed Beta\nOrange Logic\nDAM\nGeneral Availability\nCampaign Manager 360 (CM360)\nAd Serving / Trafficking\nGeneral Availability\nDisplay & Video 360 (DV360)\nProgrammatic Display & Video\nGeneral Availability\nYouTube\nVideo / Owned Media\nGeneral Availability\nGoogle Ads\nPaid Search & Display\nGeneral Availability\nLinkedIn Ads\nPaid Social Media\nGeneral Availability\nTikTok Ads\nPaid Social Media\nGeneral Availability\nMeta (Facebook & Instagram Ads)\nPaid Social Media\nGeneral Availability\nBynder\nAsset Library / DAM\nGeneral Availability\nTarget\nDAM\nClosed Beta\nAdobe AEM\nDAM\nComing Soon\nForeplay.co\nAd Intelligence / Competitive Research\nClosed Beta\nGWI Consumer Research\nConsumer Intelligence\nGeneral Availability\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nWhy this matters\nOpen garden, not a\nwalled one.\nOne vendor locks you in. Pencil sets you free. Every leading AI model, one platform, switch anytime as the market evolves.\nWalled garden\nPencil open garden\nWalled garden\nOne vendor's models only\nGuardrails, approval workflows, audit trails — all automatic.\nLocked into their roadmap\nYour data never trains models. You own everything you create.\nManual migration when better models launch\nYour team loses weeks every time AI moves forward\nYour data used to train their models\nYou're improving their product, not yours\nPay for capability you can't access\nBundled pricing hides what you actually get\nPencil open garden\nEvery leading model, one layer\nOpenAI, Google, Adobe, Runway — all in one place\nBest model auto-selected\nper task\nThe right tool fires automatically, no guesswork\nNew models added\nautomatically\nYou're always on the cutting edge, no migration needed\nNo-train policy\nYour data stays yours, always\nOnly pay for what you use\nTransparent, usage-based pricing with no surprises\nTo surprise you\nwith what creativity\ncan do\nBook a demo\nAI for brands and the humans behind them.\nPlatform\nScribble\nThe Platform\nFor Enterprise\nRelease Notes\nPlatform Status\nResources\nCase Studies\nContent Hub\nNews\nThe Help Center\nCompany\nPricing\nCareers\nEthics Policy\nThe Trust Center\nGet started\nTalk to Sales\nBook a demo\nSign up\n© 2026 Pencil AI Limited\nCore & Growth Terms\nPro Terms\nSub-Processors\nData Processing Addendum\nPrivacy Policy\nEnterprise Legal Hub\nIframe is blocked. Accept cookies to load it.\nPreferences\nAccept All\nManage Consent Preferences\nEssentials\nAlways active\nNecessary for the site to function. Always On.\nProvider name\nPrivacy Policy\nName\nTracker Name\nDescription\nTracker description\nType\nTracker type\nRetention:\nTracker retention\nNo trackers detected for this category.\nNo providers detected for this category.\nAnalytics\nAnalytics\nMeasures usage and improves your experience.\nProvider name\nPrivacy Policy\nName\nTracker Name\nDescription\nTracker description\nType\nTracker type\nRetention:\nTracker retention\nNo trackers detected for this category.\nNo providers detected for this category.\nMarketing\nMarketing\nUsed for targeted advertising.\nProvider name\nPrivacy Policy\nName\nTracker Name\nDescription\nTracker description\nType\nTracker type\nRetention:\nTracker retention\nNo trackers detected for this category.\nNo providers detected for this category.\nPersonalization\nPersonalization\nRemembers your preferences and provides enhanced features.\nProvider name\nPrivacy Policy\nName\nTracker Name\nDescription\nTracker description\nType\nTracker type\nRetention:\nTracker retention\nNo trackers detected for this category.\nNo providers detected for this category.\nReject All\nAccept All\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nBy clicking\n\"Accept\"\n, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our\nPrivacy Policy\nfor more information.\nPreferences\nReject\nAccept",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/682b822e50ceee37e06f059a/css/pencil-2025.webflow.shared.bd87ce113.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/682b822e50ceee37e06f059a/69ea0775670ea91f3fa55f2a_favicon_32x32.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/682b822e50ceee37e06f059a/69ea076829a7fe206c6ed038_dark%20favicon_32x32.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/682b822e50ceee37e06f059a/69ea07609635ba7ae569a63c_favicon_256x256.jpg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://trypencil.com/integrations",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117969717.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117969717.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/the-platform",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-enterprise",
+      "rel": null
+    },
+    {
+      "href": "/scribble",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/workflows",
+      "rel": null
+    },
+    {
+      "href": "/canvas",
+      "rel": null
+    },
+    {
+      "href": "/content-hub",
+      "rel": null
+    },
+    {
+      "href": "/blog/articles",
+      "rel": null
+    },
+    {
+      "href": "/blog/news",
+      "rel": null
+    },
+    {
+      "href": "/blog/case-studies",
+      "rel": null
+    },
+    {
+      "href": "https://help.trypencil.com/en/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://app.trypencil.com/login?_gl=1*1v4hdl*_gcl_au*OTQwOTcxNDc5LjE3ODgzNjA5MDI.",
+      "rel": null
+    },
+    {
+      "href": "https://pro.trypencil.com/login?_gl=1*1uj73hy*_gcl_au*OTQwOTcxNDc5LjE3ODgzNjA5MDI.",
+      "rel": null
+    },
+    {
+      "href": "https://app.trypencil.com/login?_gl=1*1v4hdl*_gcl_au*OTQwOTcxNDc5LjE3ODgzNjA5MDI.",
+      "rel": null
+    },
+    {
+      "href": "https://pro.trypencil.com/login?_gl=1*1uj73hy*_gcl_au*OTQwOTcxNDc5LjE3ODgzNjA5MDI.",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/integrations/monotype",
+      "rel": null
+    },
+    {
+      "href": "/integrations/adobe-workfront-integration",
+      "rel": null
+    },
+    {
+      "href": "/integrations/orange-logic",
+      "rel": null
+    },
+    {
+      "href": "/integrations/campaign-manager-360-cm360",
+      "rel": null
+    },
+    {
+      "href": "/integrations/display-video-360-dv360",
+      "rel": null
+    },
+    {
+      "href": "/integrations/youtube",
+      "rel": null
+    },
+    {
+      "href": "/integrations/google-ads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/linkedin-ads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/tiktok-ads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/meta-facebook-instagram-ads",
+      "rel": null
+    },
+    {
+      "href": "/integrations/bynder",
+      "rel": null
+    },
+    {
+      "href": "/integrations/target",
+      "rel": null
+    },
+    {
+      "href": "/integrations/adobe-aem",
+      "rel": null
+    },
+    {
+      "href": "/integrations/foreplay-co",
+      "rel": null
+    },
+    {
+      "href": "/integrations/gwi-consumer-research",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/trypencil",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/trypencil/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC-7RWSiJdbZua2BfFxq68fQ",
+      "rel": null
+    },
+    {
+      "href": "https://open.spotify.com/show/6yHSCVkdYb7VH2wjSVnUZ0?si=329d09ea6b8248d6",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/trypencil/",
+      "rel": null
+    },
+    {
+      "href": "/scribble",
+      "rel": null
+    },
+    {
+      "href": "/the-platform",
+      "rel": null
+    },
+    {
+      "href": "/ai-for-enterprise",
+      "rel": null
+    },
+    {
+      "href": "/resources/release-notes",
+      "rel": null
+    },
+    {
+      "href": "https://pencil.statuspage.io/",
+      "rel": null
+    },
+    {
+      "href": "/blog/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/content-hub",
+      "rel": null
+    },
+    {
+      "href": "/blog/news",
+      "rel": null
+    },
+    {
+      "href": "https://help.trypencil.com/en/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://jobs.ashbyhq.com/pencil",
+      "rel": null
+    },
+    {
+      "href": "/legals/ai-ethics-policy",
+      "rel": null
+    },
+    {
+      "href": "https://trust.trypencil.com/",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://app.trypencil.com/signup?plan_id=basic-monthly-14&_gl=1*trtawq*_up*MQ..*_ga*MTQ4MzQ0MzY3Ni4xNzUwMDAwMzcz*_ga_E580DTEBCD*czE3NTAwMDAzNzEkbzEkZzEkdDE3NTAwMDAzNzkkajUyJGwwJGgw",
+      "rel": null
+    },
+    {
+      "href": "/legals/pencil-core---terms-and-conditions",
+      "rel": null
+    },
+    {
+      "href": "/legals/pencil-pro-terms-and-conditions",
+      "rel": null
+    },
+    {
+      "href": "/legals/sub-processors",
+      "rel": null
+    },
+    {
+      "href": "/legals/data-processing-addendum",
+      "rel": null
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/legals/enterprise-legal-hub",
+      "rel": null
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legals/privacy-policy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.111279
+}

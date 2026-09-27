@@ -1,0 +1,486 @@
+{
+  "evidence_id": "r027-6343b8a98f79c1a9a643",
+  "source_url": "https://botpress.com/features/knowledge-bases",
+  "publisher": "botpress.com",
+  "retrieved_at": "2026-09-20T21:35:37.399366+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://botpress.com/features/knowledge-bases",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/027/research/captures/6343b8a98f79c1a9a643.html",
+  "capture_sha256": "26aa7e6b1bf37cb5c7f0e23d87c84e494924f79b8a86d43be6452557b359e997",
+  "bytes_saved": 200980,
+  "title": "Botpress Knowledge Bases: centralize your organizational knowledge",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+    },
+    {
+      "key": "og:title",
+      "value": "Botpress Knowledge Bases: centralize your organizational knowledge"
+    },
+    {
+      "key": "og:description",
+      "value": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+    }
+  ],
+  "text": "Botpress Knowledge Bases: centralize your organizational knowledge\nBotpress\nPlatform\nBuild\nBotpress Viber\nNatural language builder\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolution to 67¢ With Botpress\nAll case studies\nResources\nBuild\nDocs\nAPI\nChangelog\nPartners\nBecome a Partner\nHire an expert\nLearn\nBlog\nLibrary\nCommunity\nDiscord\nEvents\nVideos\nCompare\nThe 10 Best AI Agents for Customer Support in 2026\nDocs\nEnterprise\nPricing\nLog in\nGet a demo\nTry for free\nKnowledge Bases\nCentralize your agent’s knowledge for accurate, reliable answers.\nGet started\nKnowledge Bases centralize the information your AI agent relies on, combining documents, websites, tables, and structured data into one searchable source of truth.\nWebsite Ingestion\nImport entire websites, blogs, or FAQs into your agent’s Knowledge Base\n. Botpress automatically indexes and structures content, making it instantly available for generating accurate, context-rich answers.\nDocument Uploads\nAdd PDFs, text files, and word docs directly to your Knowledge Base.\nBotpress processes content to provide precise answers drawn from your specific source material.\nTabular Data\nConnect structured data from built-in Botpress Tables or import CSVs and spreadsheets to use as knowledge.\nUse table lookups in conversations to give users fast, data-driven responses.\nAPI Access\nProgrammatically manage Knowledge Base files with the Botpress API.\nDynamically add, update, or remove content in real time\nto keep your AI agent’s knowledge current.\nWhy Knowledge Bases?\nAccurate search; custom data.\nStart building now\nUpload websites directly to your agent’s Knowledge Base\nUpload multiple different file types like documents and decks\nImport tabular data like spreadsheets or CSVs\nSmart escalation that follows your rules and intent\nIngest entire websites\nParse blogs and FAQs\nIngest entire websites\nParse blogs and FAQs\nUpload PDFs and text files\nIndex rich text documents\nUpload PDFs and text files\nIndex rich text documents\nConnect to Tables\nProvide precise citations\nConnect to Tables\nProvide precise citations\nBuild\nbetter\nwith\nGet started\nBotpress\nGet started\n© 2026 Botpress\nPlatform\nPricing\nAI-native Helpdesk\nAgent Studio\nAutonomous Engine\nKnowledge Bases\nTables\nHub\nIntegrations\nChannels\nLLMs\nResources\nTalk to our Team\nDocumentation\nHire an Expert\nVideos\nCustomer Stories\nAPI Reference\nBlog\nStatus\nTrust Center\nCommunity\nPartners & Affiliates\nDiscord\nCompany\nAbout\nCareers\nLegal\nPrivacy",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/css/botpress-production.shared.e2c5c06a3.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8878772637f1f7a109128e_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887680628e755606a2406b_bp-logo.jpg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876800d6e3c2e33b747bd_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876810551d667a25125aa_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/fr/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/es/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/de/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/it/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/ko/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/zh-cn/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/ar/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/pl/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/nl/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/ms/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/th/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/tl/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/pt/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117738747.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117738747.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://unpkg.com/swiper@8/swiper-bundle.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/viber",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-agent-studio",
+      "rel": null
+    },
+    {
+      "href": "/built-for-you",
+      "rel": null
+    },
+    {
+      "href": "/features/engine",
+      "rel": null
+    },
+    {
+      "href": "/features/knowledge-bases",
+      "rel": null
+    },
+    {
+      "href": "/features/tables",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/intercom-integration",
+      "rel": null
+    },
+    {
+      "href": "/zendesk-integration",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/hubspot-0fa7d",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/salesforce",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/webchat",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/whatsapp",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/slack",
+      "rel": null
+    },
+    {
+      "href": "/hub",
+      "rel": null
+    },
+    {
+      "href": "/customer-support",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/escalation-handoff",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ai-actions",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-deflection",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-management",
+      "rel": null
+    },
+    {
+      "href": "/industries/saas",
+      "rel": null
+    },
+    {
+      "href": "/industries/healthcare",
+      "rel": null
+    },
+    {
+      "href": "/industries/education",
+      "rel": null
+    },
+    {
+      "href": "/industries/retail",
+      "rel": null
+    },
+    {
+      "href": "/industries/fintech",
+      "rel": null
+    },
+    {
+      "href": "/customers/super-dispatch",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/api-reference/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/changelog/",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/get-matched",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/botpress",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/blog/ai-agent-customer-support",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/?ref=navbar",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration?ref=home",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration?ref=home",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/botpress/",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/ai-agent-studio?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/autonomous?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/tables?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=Integration",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=Channel",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=LLM",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "/get-matched",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/api-reference/introduction",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://status.botpress.com/",
+      "rel": null
+    },
+    {
+      "href": "https://app.drata.com/trust/9cb618e1-0c38-11ee-865f-029d78a187d9",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/botpress",
+      "rel": null
+    },
+    {
+      "href": "/company/about",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/legal",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/legal/privacy-statement",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.769731
+}

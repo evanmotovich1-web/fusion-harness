@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "004",
+    "name": "LanguageTool",
+    "canonical_url": "https://languagetool.org/",
+    "category": "C01",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-9b0e8351b8b9ad4fc9bb"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "languagetool.org",
+    "selection_position": 4,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "People and teams proofreading English documents",
+    "job": "Correct grammar, punctuation, and spelling while preserving factual meaning and the user's voice",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "corrected_text": "string",
+      "edits": "array of original/replacement/reason"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Correct grammar, punctuation, and spelling while preserving factual meaning and the user's voice",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": null,
+      "unknown_reason": "Premium page reports an issue displaying prices. No numeric price established."
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "People and teams proofreading English documents",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "grammarly.com",
+        "name": "Grammarly",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r004-8f12ca3a24fc8dac5f8f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r004-8f12ca3a24fc8dac5f8f",
+          "locator": "metadata[1].description",
+          "excerpt": "Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r004-8f12ca3a24fc8dac5f8f": "2026-09-20T21:35:25.747674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: People and teams proofreading English documents.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb",
+        "r004-8f12ca3a24fc8dac5f8f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        },
+        {
+          "evidence_id": "r004-8f12ca3a24fc8dac5f8f",
+          "locator": "metadata[1].description",
+          "excerpt": "Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00",
+          "r004-8f12ca3a24fc8dac5f8f": "2026-09-20T21:35:25.747674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Premium page reports an issue displaying prices. No numeric price established.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "r004-70e1845e0b54e7c7c14a"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r004-70e1845e0b54e7c7c14a",
+          "locator": "text characters 1312:3813",
+          "excerpt": "og in\nTake Your Writing to the Next Level\nMake your text sound professional and avoid embarrassing style, punctuation, and grammar mistakes\n20\n%\nOff\nLimited-time discount on Premium!\nTake your writing to the next level\nhour\nhours\nminute\nminutes\nsecond\nseconds\nThere was an issue displaying the prices. Please try again later.\nLimited-time offer\nFor Individual Users\n-\n% discount\nPerfect for everyone who wants to improve their writing noticeably.\nOnly with Premium\nEnhanced grammar, punctuation, and style checking\nMore than 20,000 additional checks for English, German, French, Spanish, Dutch, Polish, and Portuguese are performed to perfect your text style and prevent embarrassing mistakes.\nUp to 150,000 characters per text field\nPerfect for blog articles, letters, or when that important e-mail gets a little long.\nUnlimited sentence paraphrasing powered by A.I.\nLevel up your writing by having our state-of-the-art A.I. paraphrase your sentences to be more formal, fluid, or simply shorter.\nStyle Guide\nCreate custom rules to enforce consistent wording throughout your writing.\nAdd-on for your browser\nUse LanguageTool's grammar checker wherever you write on the web. Works with all your favorite web services.\nChoose payment interval\nYour current plan\n2 years\n/2 years\nper month\nAnnual\nBESTSELLER\n/year\nper month\nQuarterly\n/quarter\nper month\nMonthly\n/month\n/year\nScroll to read more about Premium\nGet started\nCurrent plan\nLimited-time offer\nFor Teams\n-\n% discount\nOnly for Teams\nAll benefits for Premium\nYour team benefits from all the Premium features like advanced checking, a shared style guide and the ability to check texts up to 150,000 characters.\nUser management\nInvite the users in your team by e-mail and manage them.\nTeam Style Guide\nCreate custom rules to enforce consistent wording and a common voice for all team members.\nTeam Dictionary\nAdd technical terms and unique phrases to your Team Dictionary to avoid spelling mistakes and get better suggestions for everyone.\nUsers\n2\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n1"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r004-70e1845e0b54e7c7c14a": "2026-09-20T21:35:25.748005+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording: refox with over 1 million users\nBest-rated grammar checker for Safari\nOver 4 million users trust LanguageTool with their writing\n10,000+ Chrome Store reviews\nTop-rated grammar checker for Chrome with over 3 million users\nDo you speak a foreign language?\nThe Most Interna",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "text characters 2928:3198",
+          "excerpt": "refox with over 1 million users\nBest-rated grammar checker for Safari\nOver 4 million users trust LanguageTool with their writing\n10,000+ Chrome Store reviews\nTop-rated grammar checker for Chrome with over 3 million users\nDo you speak a foreign language?\nThe Most Interna"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: dd-ons\nGmail\nOutlook\nBETA\nApple Mail\nThunderbird\nToggle Sub Menu\nOffice Plugins\nGoogle Docs\nWord\nApple Pages\nLibreOffice\nToggle Sub Menu\nApps\nmacOS\nWindows\nMore\nFor Businesses\nProofreading API\nBlog\nCareers\nHelp\nPrivacy\nTerms & Conditions\nImprint\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\nLog in\nMore than a Grammar Checker\nFree Grammar Checker\nLanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spell",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "text characters 1026:1567",
+          "excerpt": "dd-ons\nGmail\nOutlook\nBETA\nApple Mail\nThunderbird\nToggle Sub Menu\nOffice Plugins\nGoogle Docs\nWord\nApple Pages\nLibreOffice\nToggle Sub Menu\nApps\nmacOS\nWindows\nMore\nFor Businesses\nProofreading API\nBlog\nCareers\nHelp\nPrivacy\nTerms & Conditions\nImprint\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\nLog in\nMore than a Grammar Checker\nFree Grammar Checker\nLanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spell"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Grammarly advertises: Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-324c6f2b51b260f2c8e9"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-324c6f2b51b260f2c8e9",
+          "locator": "metadata[0].description",
+          "excerpt": "Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-324c6f2b51b260f2c8e9": "2026-09-20T21:00:09.998981+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Grammarly. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb",
+        "web-324c6f2b51b260f2c8e9"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        },
+        {
+          "evidence_id": "web-324c6f2b51b260f2c8e9",
+          "locator": "metadata[0].description",
+          "excerpt": "Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00",
+          "web-324c6f2b51b260f2c8e9": "2026-09-20T21:00:09.998981+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Browser/editor distribution, custom style rules, and user dictionaries may matter beyond single-sentence correction.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb",
+        "r004-8f12ca3a24fc8dac5f8f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "metadata[1].description",
+          "excerpt": "Instantly check grammar, punctuation, and spelling errors with LanguageTool's AI-powered grammar checker. Enhance your writing in over 30 languages with ease."
+        },
+        {
+          "evidence_id": "r004-8f12ca3a24fc8dac5f8f",
+          "locator": "metadata[1].description",
+          "excerpt": "Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking."
+        },
+        {
+          "evidence_id": "web-9b0e8351b8b9ad4fc9bb",
+          "locator": "text characters 1026:1567",
+          "excerpt": "dd-ons\nGmail\nOutlook\nBETA\nApple Mail\nThunderbird\nToggle Sub Menu\nOffice Plugins\nGoogle Docs\nWord\nApple Pages\nLibreOffice\nToggle Sub Menu\nApps\nmacOS\nWindows\nMore\nFor Businesses\nProofreading API\nBlog\nCareers\nHelp\nPrivacy\nTerms & Conditions\nImprint\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\nLog in\nMore than a Grammar Checker\nFree Grammar Checker\nLanguageTool is an AI-based grammar checker. Paste your text or start typing below to check grammatical errors and spell"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-9b0e8351b8b9ad4fc9bb": "2026-09-20T21:00:09.656972+00:00",
+          "r004-8f12ca3a24fc8dac5f8f": "2026-09-20T21:35:25.747674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/004/tests/specification.json",
+    "sha256": "0ace548d99c4f172dfec2f316a000af3b505e1a07acc25babecebe129c56b7ad",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:09.656972+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-9b0e8351b8b9ad4fc9bb",
+        "r004-70e1845e0b54e7c7c14a",
+        "r004-8f12ca3a24fc8dac5f8f",
+        "web-324c6f2b51b260f2c8e9"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

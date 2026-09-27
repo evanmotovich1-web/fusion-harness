@@ -1,0 +1,73 @@
+{
+  "evidence_id": "web-92e807fa89aee0c5da2f",
+  "source_url": "https://www.saleshandy.com/pricing",
+  "retrieved_at": "2026-09-20T21:02:59.229140+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.saleshandy.com/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/92e807fa89aee0c5da2f.html",
+  "capture_sha256": "b20c078a251bca98e8e2b13fff69329ddd2ec6ce4597e06e398e96b99b772932",
+  "bytes_saved": 262144,
+  "title": "Plans & Pricing | Saleshandy",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore Saleshandy's pricing options and choose the best plan for your needs. Start your cold outreach today with Saleshandy!"
+    },
+    {
+      "key": "og:title",
+      "value": "Plans & Pricing | Saleshandy"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore Saleshandy's pricing options and choose the best plan for your needs. Start your cold outreach today with Saleshandy!"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Saleshandy"
+    }
+  ],
+  "text": "Plans & Pricing | Saleshandy",
+  "links": [
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/brand/logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-a2c43dd01f2c9365.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.google-analytics.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.saleshandy.com/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.saleshandy.com/pricing.md",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    }
+  ],
+  "elapsed_seconds": 0.2107
+}

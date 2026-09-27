@@ -1,0 +1,581 @@
+{
+  "evidence_id": "web-91190593cb116ab3380c",
+  "source_url": "https://www.usetwain.com/",
+  "retrieved_at": "2026-09-20T21:00:22.984968+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.twain.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/91190593cb116ab3380c.html",
+  "capture_sha256": "393dcfb54fd551971773ca91182db2aa14a7c47e5fd3cdba7eb5b84d75be60fc",
+  "bytes_saved": 262144,
+  "title": "Twain: Outreach worth sending and replying to",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Better pipeline comes from accurate messaging. Twain researches prospects in real-time so your outreach leads with relevant signals."
+    },
+    {
+      "key": "og:title",
+      "value": "Outreach worth sending and replying to"
+    },
+    {
+      "key": "og:description",
+      "value": "Better pipeline comes from accurate messaging. Twain researches prospects in real-time so your outreach leads with relevant signals."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Outreach worth sending and replying to"
+    }
+  ],
+  "text": "Twain: Outreach worth sending and replying to\nFeatures\nAPI & MCP\nBlog\nPricing\nLog in\nSign up\nOutreach\nworth\nsending\nreplying\nRun on 500 contacts\nFree\nTry it on yourself\nReply rate\n12% positive\nReplies on cold outbound\nBefore Twain our outbound outreach was very generic and did not tackle individual pain points. Now we send 1:1 deep researched emails and we see\n12% positive reply rates\n, whilst we send highly specific\nmessages on scale\n.\nIn my 12 years of doing outbound, I have never seen this.\nFlorian Teufel\nDemand Gen Lead @ Xentral\nMessage quality\nSounds human\nNot a template, speaks to real pain point\nMost AI outreach tools just make it faster to send worse emails.\nTwain's\ncontextual research\nactually digs into a prospect's situation, so the draft already\nspeaks to their real pain points\nand sounds like a person who did the work, not a template.\nIt's the only kind of AI worth using.\nMadeleine Cooper\nFounding GTM @ Cotiss\nTime to launch\n25 minutes\nFor an ABM campaign that took 6 hours\nSince using Twain, we have cut our ABM preparation time by\nup to 90%\n. Now it takes us 25 minutes instead of 6 hours to launch a campaign.\nBefore, our emails were like any other cold outreach message. Now, every message is\nunique and hyper-personalized\n. They sound human and help us book demos with bigger logos.\nJernej Samide\nHead of Sales @ Ingestro\nTo your prospect,\nthe message is\nthe product\nTo your prospect,\nthe message is\nthe product\nTo\nyour\nprospect,\nthe\nmessage\nis\nthe\nproduct\nT\no\ny\no\nu\nr\np\nr\no\ns\np\ne\nc\nt\n,\nt\nh\ne\nm\ne\ns\ns\na\ng\ne\ni\ns\nt\nh\ne\np\nr\no\nd\nu\nc\nt\nYour\nprospect\nnever\nsees\nthe\nstack.\nNot\nthe\nenrichment,\nnot\nthe\nsignal\nrouting,\nnot\nthe\nemail\ninfrastructure\nyour\nteam\nspent\nquarters\nbuilding.\nThey\nsee\none\nmessage\nin\nan\ninbox.\nThat\nmessage\nis\nthe\nentire\nsurface\nof\nall\nthat\nwork.\nIf\nit\ndoesn't\nland,\nnone\nof\nit\nhappened.\nAll\nof\nit\ndepends\non\nthe\npart\nyou\ncontrol\nleast.\nYou\nown\nthe\npipeline,\nbut\nyour\nreps\ndraft\nevery\nmessage.\nResearching\neach\nprospect\nby\nhand\ndoesn't\nscale,\nso\nwhat\nactually\ngoes\nout\nis\nAI\nslop\nor\na\ntemplate\nwith\nthe\nfirst\nname\nswapped.\nBoth\nget\nignored.\nReply rate\n12% positive\nReplies on cold outbound\nBefore Twain our outbound outreach was very generic and did not tackle individual pain points. Now we send 1:1 deep researched emails and we see\n12% positive reply rates\n, whilst we send highly specific\nmessages on scale\n.\nIn my 12 years of doing outbound, I have never seen this.\nFlorian Teufel\nDemand Gen Lead @ Xentral\nMessage quality\nSounds human\nNot a template, speaks to real pain point\nMost AI outreach tools just make it faster to send worse emails.\nTwain's\ncontextual research\nactually digs into a prospect's situation, so the draft already\nspeaks to their real pain points\nand sounds like a person who did the work, not a template.\nIt's the only kind of AI worth using.\nMadeleine Cooper\nFounding GTM @ Cotiss\nTime to launch\n25 minutes\nFor an ABM campaign that took 6 hours\nSince using Twain, we have cut our ABM preparation time by\nup to 90%\n. Now it takes us 25 minutes instead of 6 hours to launch a campaign.\nBefore, our emails were like any other cold outreach message. Now, every message is\nunique and hyper-personalized\n. They sound human and help us book demos with bigger logos.\nJernej Samide\nHead of Global Sales @ Ingestro\nThe most accurate GTM agents*\n*Result from blind test conducted by Clay\nResearch agent\nFinds buying signals across the web in real-time\nPulls leads directly from your CRM lists\nGets smarter with every campaign\nQualification agent\nMatches leads to personas so every message is relevant\nQualifies at contact and account level\nFlags bad, outdated, and conflicting data\nRun anywhere\nWorks with Claude, Gemini, or your favorite AI\nSyncs with your CRM\nIntegrates with Clay, HubSpot, Salesforce & more\nReal-time deep research\nResearches every prospect across the web using your CRM data, value prop, and ICP. The highest accuracy on the market.\nSignal-based copywriting\nStart from your TAM. Twain finds signals and writes every touchpoint from email to LinkedIn to calls, backed by deep research.\nAPI-first platform\nRun Twain agents wherever you work. Through native integrations in Clay, your own API builds, or MCP in Claude Code. No lock-in.\nAdaptive personas\nImport personas from any source and let Twain instantly tailor the perfect pain point, USP, and social proof for every lead\nUpload Document\nPersonalize\nRelevant insight\nARRtist Circus improved its outbound sales process using Honeysales, an AI solution, achieving a 7-8% message-to-meeting conversion rate, significantly above the industry average of 0.5-1%. This led to faster lead conversion and efficient sales workflow. (Honeysales Case Study)\nPain point\nManual research for sales prospecting consumes considerable time, yielding incomplete or outdated information, making it difficult to identify and engage potential customers efficiently.\nCost of inaction\nContinuing manual data collection and research raises operational expenses and causes lost productivity across sales and marketing teams.\nSolution\nClay allows building targeted lead lists using over 100 sources and AI, and connecting/auto-updating CRM as a source of truth.\nObjection\nIt may feel difficult to trust automated research and AI tools to replace manual research processes for high-value outreach.\nCompetitive advantage\nAI agents automate manual research at scale, such as summarizing job posts, flagging domains, and building custom lead scoring models.\nSocial proof\nOver 300.000 GTM teams of all sizes use Clay's platform to track signals, enrich data, and use AI personalization.\nCustom onboarding\nWe help you deploy your GTM agents. Including weekly health checks and agent audits so your team always has an edge and keeps it.\nBook Demo\nEverything in one plan\nFair credit policy\nStarting from one credit per lead for research and bespoke outreach.\nCredit roll-over\nCredits stay valid for 2 months on any active subscription.\nInvite team\nAdd teammates for free—everyone taps into a shared credit pool.\nFlexible by design\nConnect through API, MCP, or native integrations. However your stack works, Twain fits in.\nWatch Tutorials\nNo usage limits\nInbound, outbound, or event-based agents. Build exactly what your campaigns need.\nCredits per month\n$\nfrom $\nper lead\nScale\nBigger volumes, lower price\nLoading...\nSubscription\nPay as you go\nStart for Free\nBacked by",
+  "links": [
+    {
+      "href": "/images/success-stories/pawel-nical.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/assets/features-and-benefits.min-COb2-CxP.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-DQ5O6HCX.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/routes-CkBHN3IC.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/swiper-D9akbhbg.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-BwhYLWry.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/rolldown-runtime-BMeI84Mc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/react-YlY9D52h.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/react-dom-CGBdyrXZ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useStore-CgxiAVhl.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/invariant-YhDSKLKj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/link-DVumQpq8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/not-found-DT4ibQAs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/redirect-84X98jhP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/fileRoute-0bPmI9Vu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index.client-DGUlg9Ml.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/jsx-runtime-D9GSpKDf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ClientOnly-e0ndK6bE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useRouter-Dd-qhPto.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useMatch-D1__WU4V.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useSearch-wMqjcJ1k.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useNavigate-IIB1e6lg.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/lazyRouteComponent-DqOXdqf9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useNotifications-DenMwy3h.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useLocation-37xVswnz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useAuth-ChIOHV36.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/utils-0tI9uaQ2.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/omit-HPnFNFIT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/constants-2RwSnA48.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/documentsUtils-DWxPz2GU.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/client-CKuUJSYm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/constants-Bfdtx9kO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Logo-D-YrJifS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/IconSVG-whEfqG3B-DzBd7HOI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/CursorTooltip-DzlAW5Lk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/classnames-z26bgr_C.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/usePrevious-DRa_0tzQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Button-BISmJSr6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/dist--fyGax5n.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Clickable-B_VTzYG1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useAnalytics-DEIdnblr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/routerInstance-Eatrl5ls.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useRouterTransition-DLaYryPN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ApiError-BuySPc0a.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/store-Bg_O3iuw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/ServerError-DVwBc_Cf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useQueries-CsQQ2Zz0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/localStorageKeys-DhXd7ugE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useToastCssTransition-L7w1I58A.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/lazyComponent-CW4IS9_8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/preload-helper-DbWLVUxj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/sentryException-Cvotgz-f.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/dist-DEDZGq9O.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/providers-BC-3bwiV.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/index.esm-sbaoc-11.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/workspaceRoutes-RzfF6Fl4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/appHandoff-DwBv56Sz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Page-CwXHL1s5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/landingSectionNavigation-sQd16YZs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/CloseM_SM-5BEWnijm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/CloseS_SM-CNybAYA-.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/amplemarket-import.metadata-Bg3_f0r0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/attio-import.metadata-B9-okFTe.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/use-ai-for-better-cold-calling.metadata-iGmPRV6f.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/campaign-brief.metadata-BLuMmAGz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/deep-research.metadata-CwkKRsgR.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/generation-modes.metadata-Csj8IZKW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/hubspot-conversation-history.metadata-Duv4rVXO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/hubspot-export.metadata-fm5uwV8L.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/hubspot-import.metadata-CbNKbIXJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/hubspot-setup-guide.metadata-cj4GIOPe.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/linkedin-connection-request-message-examples.metadata-Dc6pWO9e.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/linkedin-follow-up-message-after-no-response.metadata-DrpKUsoJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mcp-prompts.metadata-B_5_C-uB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/mcp-server.metadata-DZ6XQWwk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/n8n-demo-booking-prep.metadata-CpHQkgpr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/n8n-heyreach-reengagement.metadata-Dah7RiuY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/n8n-linkedin-outreach.metadata-JhQRVXmZ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/n8n-signup-fit-triage.metadata-zjb21nrs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/n8n-welcome-draft.metadata-BpZCMdNw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/outreach-import.metadata-C7Cq9pfS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/outreach-workflows.metadata-BSPH11iI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/re-engage-prospect-went-silent-linkedin.metadata-CiHK7t4i.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/salesforce-import.metadata-pUllKLAo.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/routes-Cih8EBt_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/form-CQK9oZfw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/getHostnameFromUrl-5t0zXrN0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Spinner-Cczj-aGY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/gsap-Dh3JzIpc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useTrackLandingSectionView-Bq8rkmlS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/src-BH6ewL8m.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/Copy_SM-D4dIr5uJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useGenerateLandingPagePreview-X0gOXSm_.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/resizeSettleScheduler-CkXqLCtx.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/parseInsightsText-CZg0zIVa.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/DrawSVGPlugin-Dd1Wbis3.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useMatchMedia-CFbAg8IS.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useGoogleFaviconUrl-BCgNY7Yp.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/useLandingWebGLAvailable-qdAzuuW4.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/linkedinValidationCopy-DoMVMezB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/assets/TestimonialCard-Cjh6Pf9N.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/logo.svg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/favicon-64.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.logr-ingest.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.logr-ingest.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/fonts/Graphik-Medium.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/Graphik-Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/Produkt-Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/Produkt-Medium.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://firebasestorage.googleapis.com/v0/b/u2t3n-uploads/o/public%2Flanding%2F3d%2Fv1%2Fpaper-plane.glb?alt=media&token=b7988cd8-b8a1-4d4d-acaa-b35823bf760b",
+      "rel": "preload"
+    },
+    {
+      "href": "https://firebasestorage.googleapis.com/v0/b/u2t3n-uploads/o/public%2Flanding%2F3d%2Fv1%2Fpaper-plane-city-pmrem.ktx2?alt=media&token=192e8d70-491f-4849-a1e8-ad1708d528c6",
+      "rel": "preload"
+    },
+    {
+      "href": "https://firebasestorage.googleapis.com/v0/b/u2t3n-uploads/o/public%2Flanding%2F3d%2Fv1%2Fpaper-bin.glb?alt=media&token=4b9695de-9ea0-47cd-aabf-c6ce1b40a260",
+      "rel": "preload"
+    },
+    {
+      "href": "https://firebasestorage.googleapis.com/v0/b/u2t3n-uploads/o/public%2Flanding%2F3d%2Fv1%2Fpotsdamer_platz_1k.hdr?alt=media&token=92d7f0cb-1f07-42fd-bf75-e66485bb18e9",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.twain.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#features-and-benefits",
+      "rel": null
+    },
+    {
+      "href": "https://public.api.twain.ai/v2/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/#pricing",
+      "rel": null
+    },
+    {
+      "href": "/onboarding?authMode=sign-in",
+      "rel": null
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    },
+    {
+      "href": "https://xentral.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.ashbyhq.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://traba.work/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ingestro.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.cotiss.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://luminovo.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.gravitee.io/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://vumo.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://calendar.app.google/EFioh4ppdyXjxHyRA",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtube.com/playlist?list=PLURB-4aGAMq69sYrZvUnuoO7VhZ_KYVYe",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 1.5234
+}

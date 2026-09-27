@@ -1,0 +1,174 @@
+{
+  "evidence_id": "r011-e89f9326a3892798f815",
+  "source_url": "https://pictory.ai/text-to-video",
+  "publisher": "pictory.ai",
+  "retrieved_at": "2026-09-20T21:35:26.327513+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://pictory.ai/text-to-video",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": true,
+  "capture_path": "cases/011/research/captures/e89f9326a3892798f815.html",
+  "capture_sha256": "d1f4e36ba0eb92097039bbed08ba45ee9dd5652ac7918c306a45cd3a7406946f",
+  "bytes_saved": 262144,
+  "title": "AI Video Editor - Text To Video - Pictory",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Transform your text into video effortlessly with Pictory's AI-powered tools. No video editing skills required."
+    },
+    {
+      "key": "og:title",
+      "value": "AI Video Editor - Text To Video - Pictory"
+    },
+    {
+      "key": "og:description",
+      "value": "Transform your text into engaging videos effortlessly with Pictory's AI-powered tools. No video editing skills required."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Pictory.ai"
+    }
+  ],
+  "text": "AI Video Editor - Text To Video - Pictory",
+  "links": [
+    {
+      "href": "https://b2bjsstore.s3.us-west-2.amazonaws.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://customer-wtn437ryaa2ata4r.cloudflarestream.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/fonts/Inter-VariableFont_slntwght.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/ubermenu/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/fonts/Pictory-Sans-Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2026/03/Pictory-ai-video-generator-banner2.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "https://pictory.ai/text-to-video",
+      "rel": "canonical"
+    },
+    {
+      "href": "//www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://pictory.ai/feed",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/comments/feed",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpictory.ai%2Ftext-to-video",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpictory.ai%2Ftext-to-video&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/pictory-pricing-slider-india/pictory-slider-india.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/thrive-ultimatum/tcb-bridge/assets/css/placeholders.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/wonderplugin-carousel/engine/wonderplugincarouselengine.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/thrive-leads/editor-layouts/css/frontend.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/themes/thrive-theme/style.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/themes/thrive-theme-child/style.css?ver=1.0",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/thrive-ovation/tcb-bridge/frontend/css/frontend.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/themes/thrive-theme/inc/assets/dist/landingpage-front.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/uploads/pum/pum-site-styles.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/themes/thrive-theme/style.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.8.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/ubermenu/assets/css/skins/minimal.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/cache/min/1/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css?ver=1789653794",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://pictory.ai/wp-json/wp/v2/pages/12994",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://pictory.ai/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://pictory.ai/?p=12994",
+      "rel": "shortlink"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://pictory.ai/wp-content/uploads/2022/03/cropped-Just-Octopus-with-oct-1.png",
+      "rel": "apple-touch-icon"
+    }
+  ],
+  "elapsed_seconds": 0.207504
+}

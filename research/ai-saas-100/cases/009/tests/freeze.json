@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "009",
+  "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+  "specification_path": "cases/009/tests/specification.json",
+  "specification_sha256": "c061e496c4bd51835fb82410e245d7dd326ec1abcfac83a6dcac5649fd0df1e7",
+  "assets": [
+    {
+      "path": "cases/009/tests/assets/corrupt.pdf",
+      "sha256": "d8493ed5221233a853e33e23a9699ef7526709f34a2e9d41cf591573e26bbd7c",
+      "bytes": 26
+    },
+    {
+      "path": "cases/009/tests/assets/document-0.pdf",
+      "sha256": "a25bfad3b676d62de1d5847392c7502f9ea2bb67bbdd5160fad8de356f00dfe9",
+      "bytes": 2146
+    },
+    {
+      "path": "cases/009/tests/assets/document-1.pdf",
+      "sha256": "c262d546a05b57ac4f229cec5e1865d22ce30abe32510f365524eaa831b58885",
+      "bytes": 2145
+    },
+    {
+      "path": "cases/009/tests/assets/document-2.pdf",
+      "sha256": "e3f45947bedca94503f317ee47afb7cb20b925180b576f0ddb1c72af0729ddbf",
+      "bytes": 2146
+    }
+  ],
+  "builder_exposure": "all visible",
+  "prototype_execution_status": "not_started"
+}

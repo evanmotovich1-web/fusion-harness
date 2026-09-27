@@ -1,0 +1,621 @@
+{
+  "evidence_id": "web-9e5143fc703046f4e60b",
+  "source_url": "https://sitegpt.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.290244+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://sitegpt.ai/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/9e5143fc703046f4e60b.html",
+  "capture_sha256": "0a812e5bd3dd0f8b474ea8588815ff00c14fe09427dabff9f49f63ad2c849870",
+  "bytes_saved": 99724,
+  "title": "SiteGPT - Make AI your expert customer support agent",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "It's like having ChatGPT specifically for your products. Instantly answer your visitors' questions with a personalized chatbot trained on your website content."
+    },
+    {
+      "key": "og:title",
+      "value": "SiteGPT - Make AI your expert customer support agent"
+    },
+    {
+      "key": "og:description",
+      "value": "It's like having ChatGPT specifically for your products. Instantly answer your visitors' questions with a personalized chatbot trained on your website content."
+    },
+    {
+      "key": "og:site_name",
+      "value": "SiteGPT"
+    }
+  ],
+  "text": "SiteGPT - Make AI your expert customer support agent\nLead Generation\nAI Agents\nFeatures\nIntegrations\nPricing\nSecurity\nBlog\nResources\nSign In\nStart a free trial\nMake\nAI\nyour expert customer\nservice agent\nIt's like having ChatGPT specifically for your product. Instantly answer your visitors' questions with a personalized chatbot trained on your website content.\nPersonalized onboarding help\nFriendly pricing as you scale\n95+ languages supported\n7-day free trial\nCancel anytime\nStart a free trial\nBook a demo\nTrusted by these leading companies\n★\nRated\n4.8\n/5 on G2\nImagine what you could do if you had an\nexpert chatbot\nanswering questions 24/7\nBefore\nFickle, one-size-fits-all chatbots that do more harm than good\nGeneric GPT tools don't answer based on your training data\nCustom-built bots are finicky and difficult to maintain\nCustomer service staff takes 3+ months to train\nBogged down with support tickets\nAfter\nAn automated resource that super charges your support team\nProvide 24/7/365 quality customer support with instant responses\nAutomate answering the vast majority of support tickets\nMake your current support team twice as productive\nFree up time to work on higher-level tasks\nYou're\nthree easy steps\naway from your own personalized AI support chatbot\n1\nSync training data\nEnter your URL for SiteGPT to scan, or upload files, or drop in raw text content.\n2\nInstall on your site\nEmbed a chatbot on as many sites as you want — your marketing site, in-app, help center… wherever.\n3\nLearn and refine\nUse real chat history to improve your chatbot by providing feedback that allows it to improve with every interaction.\nPersonalized Chatbot\nBuild a custom chatbot trained on your own content\nEver wanted to clone yourself to answer customer queries? Now you can! Train your chatbot with your content and let it echo your brand's voice. Who knew a chatbot could be your digital doppelgänger?\nQuick Prompts\nHelp users start conversations with quick prompts\nGive users a digital icebreaker to kick things off. Include frequently asked questions or questions you wish more users would ask to get value out of your product or service.\nWeekly Digest\nStay up to date with the weekly email digest\nStart every week knowing exactly how your chatbot did. Each Monday, your team gets last week's numbers, the topics visitors asked about most, and the questions your chatbot could not answer.\nEscalate to Human\nEscalate to a human when necessary\nWhile AI can handle a vast majority of inquiries, some conversations require human touch. Users can seamlessly transition the conversation to a live agent at the push of a button. This hybrid approach ensures that users always receive the best possible assistance.\nCollect Leads\nGenerate leads to follow up with later\nDon't just answer questions, seize opportunities. Our chatbot captures interested visitors' details, allowing you to build a list of potential leads.\nAnalytics and Insights\nKnow what visitors ask before you ever read a transcript\nSee how your chatbot performs with daily trends and an engagement funnel. AI-powered insights group every conversation into topics and outcomes, and surface the exact questions visitors keep asking, so you always know what to improve next.\nSupercharge your chatbot\nDirect integrations\nwith your favorite tools\nWith native integrations into platforms like\nCrisp\n,\nSlack\n, and\nZendesk\n, our chatbot becomes an extended arm of your existing toolkit.\nLive demo\nSee for yourself.\nAsk the SiteGPT chatbot a question about itself.\nCustomer testimonials\nDon't just take our word for it\n“We've got the bot dialled in - we're using GPT-4, have an avenue for escalations to Zendesk, and so far I have no complaints.”\nBrent Burrows II\nVice President – Retail & Sales at CBS Bahamas\nEnterprise-grade security\nSOC 2 Type II examined, GDPR certified, and HIPAA assessed. Your data is encrypted, access-controlled, and never used to train AI models.\nLearn about our security practices\nFAQs\nHave a different question and can't find the answer you're looking for? Reach out to our support team by\nsending us an email\nand we'll get back to you as soon as we can.\nChatbot Training and Support\nPricing\nTechnology and Integrations\nSecurity and Compliance\nCan I add text content to train the chatbot if I don't have web pages to scrape or files to upload?\nAsk\nYes, you're able to enter raw text content as training data.\nDo you have a plan for agencies to offer chatbots to their clients?\nAsk\nYes, please contact us by sending us an email for more information.\nIs there a demo that I can try?\nAsk\nYes, you can go to\nsitegpt.ai/demo\nand try out the demo. The demo bot you see on\nsitegpt.ai/demo\nis trained on the\nsitegpt.ai\nwebsite content itself. So you can ask any questions related to SiteGPT website in that demo bot and it will answer it. You can also sign up for a 7-day free trial and try out everything on your own data.\nWhat type of content can we use to train the chatbot?\nAsk\nYou can use any type of content to train the chatbot. The more content you provide, the better the chatbot will be able to answer the questions.\nDo you retrain the chatbot automatically when the website content changes?\nAsk\nYes! SiteGPT now supports automatic syncing of your content. Depending on your plan, you can set up automatic syncing on a monthly, weekly, or daily basis to keep your chatbot's knowledge up to date. You can also manually retrain/resync your chatbot anytime from the dashboard.\nCan I upload files to train the chatbot?\nAsk\nYes. You can upload\nCSV/TXT/PDF/DOCX/PPTX/MD\nor any other text based files to train the chatbot. Each file is converted to pages based on its content (2,500 cleaned characters = 1 page). The page limits vary based on your plan.\nSome of my files are larger than 10 MB. What do I do?\nAsk\nPlease contact us on\nbhanu@sitegpt.ai\n. We can figure out a way for you to upload those files.\nHow do I add the chatbot to my website?\nAsk\nEach chatbot gets its own unique url, you can embed the chatbot on your own site via the embed code we provide. You can even directly link to the chatbot from your site.\nHow do I train the chatbot?\nAsk\nYou can train the chatbot by adding a\nwebsite link\n,\na sitemap link\n, or\nYouTube videos/playlists/channels\n. You can just enter a URL and the chatbot will be trained on all the content present on that URL. You can also upload\nCSV/TXT/PDF/DOCX/PPTX/MD\nor any other text based files, or connect sources like Notion, Google Drive, Dropbox, OneDrive, Box, and GitHub.\nHow long does the training take?\nAsk\nIt depends on the amount of content you are training. But usually, it should be done within a few minutes.\nHow can we contact you?\nAsk\nYou can reach out to us at\nbhanu@sitegpt.ai\n.\nReady to take SiteGPT for a spin?\nFind out if a personalized AI support chatbot is a good fit for you in just a few hours.\nStart a free trial\nBook a demo\nPersonalized onboarding help\nFriendly pricing as you scale\n95+ languages supported\n7-day free trial\nCancel anytime\nSOC 2 Type II compliant\nInstantly answer your visitors' questions with a personalized chatbot trained on your website content.\nbhanu@sitegpt.ai\nConvert to Markdown\nConvert PDF to Markdown\nConvert DOCX to Markdown\nConvert HTML to Markdown\nConvert Notion to Markdown\nConvert Google Docs to Markdown\nConvert XML to Markdown\nConvert CSV to Markdown\nConvert JSON to Markdown\nConvert RTF to Markdown\nConvert Paste to Markdown\nConvert Webpage to Markdown\nProduct\nFeatures\nIntegrations\nPricing\niOS App\nBlog\nResources\nAPI Docs\nPartners\nWordPress Plugin\nLead Generation\nSecurity\nBrand\nLegal\nTrust Portal\nTerms & Conditions\nPrivacy\nRefund Policy\nContact us\nSiteGPT for AI Agents\nAll AI Agents\nSiteGPT for Claude\nSiteGPT for Claude Cowork\nSiteGPT for ChatGPT Work\nSiteGPT for Claude Code\nSiteGPT for Cursor\nSiteGPT for Codex\nSiteGPT for OpenClaw\nSiteGPT for Hermes\nSiteGPT MCP Server\nMCP for Customer Support\nMCP Registry Entry\nClaude Plugins Guide\nSiteGPT CLI\nAI Chat Tools\nAI Chat with Your Text Data\nAI Chat with Your Website Data\nAI Chat with Your Document & Data\nAI Chat with Your PDF Document & Data\nAI Chat with Your Word Document & Data\nAI Generators\nAI Reply Generator\nAI Prompt Generator\nAI Prompt Optimizer\nAI FAQ Generator\nAI Answer Generator\nAI Email Response Generator\nAI Letter Generator\nAI Blog Title Generator\nAI Chatbot Name Generator\nAI SaaS Brand Name Generator\nOther Tools\nAll Tools\nAI Chatbot Conversation Analysis\nSitemap Finder & Checker\nSitemap Validator\nXML Sitemap Generator\nSitemap URL Extractor\nWebsite URL Extractor\nChatbot ROI Calculator\nEmail Signature Generator\nSourceSync.ai\n© SiteGPT 2025 . All rights reserved\nTwitter\nYouTube",
+  "links": [
+    {
+      "href": "https://sitegpt.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://b-cdn.sitegpt.ai/images/chat-icon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/build/app-BB2D877h.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/build/fonts-DjBKX1G3.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/build/cooltipz.min-DOqvlSn6.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/lead-generation",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/resources",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/sitegpt/reviews",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.aicpa.org/soc4so",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "mailto:bhanu@sitegpt.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://sitegpt.ai/demo",
+      "rel": "noreferrer noopener"
+    },
+    {
+      "href": "https://sitegpt.ai/demo",
+      "rel": "noreferrer noopener"
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.aicpa.org/soc4so",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-pdf-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-docx-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-html-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-notion-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-google-docs-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-xml-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-csv-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-json-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-rtf-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-paste-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/tools/convert-webpage-to-markdown",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/ios-app",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/resources",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://sitegpt.ai/docs/api-reference/v2/getting-started",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/wordpress-plugin",
+      "rel": null
+    },
+    {
+      "href": "/lead-generation",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/brand",
+      "rel": null
+    },
+    {
+      "href": "https://trust.sitegpt.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/legal/privacy",
+      "rel": null
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/claude",
+      "rel": null
+    },
+    {
+      "href": "/claude-cowork",
+      "rel": null
+    },
+    {
+      "href": "/chatgpt-work",
+      "rel": null
+    },
+    {
+      "href": "/claude-code",
+      "rel": null
+    },
+    {
+      "href": "/cursor",
+      "rel": null
+    },
+    {
+      "href": "/codex",
+      "rel": null
+    },
+    {
+      "href": "/openclaw",
+      "rel": null
+    },
+    {
+      "href": "/hermes",
+      "rel": null
+    },
+    {
+      "href": "/mcp-server",
+      "rel": null
+    },
+    {
+      "href": "/mcp-for-customer-support",
+      "rel": null
+    },
+    {
+      "href": "https://registry.modelcontextprotocol.io/?search=io.github.sitegpt/sitegpt",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/claude-plugins",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chat-with-your-text-data",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chat-with-your-website-data",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chat-with-your-document-data",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chat-with-your-pdf-document-data",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chat-with-your-word-document-data",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-reply-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-prompt-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-prompt-optimizer",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-faq-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-answer-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-email-response-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-letter-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-blog-title-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chatbot-name-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-saas-brand-name-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-chatbot-conversation-analysis",
+      "rel": null
+    },
+    {
+      "href": "/tools/sitemap-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/sitemap-validator",
+      "rel": null
+    },
+    {
+      "href": "/tools/sitemap-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/sitemap-url-extractor",
+      "rel": null
+    },
+    {
+      "href": "/tools/website-url-extractor",
+      "rel": null
+    },
+    {
+      "href": "/tools/chatbot-roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/tools/email-signature-generator",
+      "rel": null
+    },
+    {
+      "href": "https://sourcesync.ai?ref=sitegpt",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://twitter.com/SiteGPT",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtube.com/@SiteGPT",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/build/manifest-4bf61ed9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/entry.client-C-TFMxeX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/chunk-6CSD65Y2-DwxXdMRu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/react-dom-3xUX1ayj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/jsx-runtime-D6p65pam.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/root-DD-yYKeZ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/Img-CISvLwOE.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/dashboard-Cnl80EkD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/useUser-D6Aho1Oc.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/CheckCircleIcon-B-pYADzx.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/isomorphic-link-yXzDYSbW.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/structured-data-CYiN-WiT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/react-jm-yyf7H.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/dist-Cem4p81d.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/TimeAgo-BV5cto3j.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/use-hydrated-ysMTtZQj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/bundle-mjs-_luiSGPg.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/paginated_query_client-DJqfNG6E.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/use_queries-Di3HqWh9.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/user-shape-mbf184tf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/chatbot-shape-C6K-Szoe.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/chatbot-DNbqXzBH.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/api-B9tP-x5f.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/jsonKeys-Bbd6d19s.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/_marketing-DCVm0ELb.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/A-BSTAL9fo.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/NavBar-DPEw2Z9f.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/compliance-badges-w1nHpXJ8.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/LogoutForm-BA5kjjSY.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/brand-assets-HOoRDG-g.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/useBrand-C4zjq2yu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/getCFImage-DiIETCnu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/dashboard-guard-C_uvrHOu.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/copy-to-clipboard-DFfJYzcs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/_marketing._index-DoWCS-OA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/cta-CRaShZGk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/customer-logos-B2YGbjRA.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/demo-Cx-qNoCd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/faqs-iYn8ZgQi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/how-it-works-DEVQdxHk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/testimonials-DUHh1_d1.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/MyMarkdown-DGFZt3gs.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/dist.es2015-I0krxOGC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "/build/Code-DF1j2EPp.js",
+      "rel": "modulepreload"
+    }
+  ],
+  "elapsed_seconds": 0.1847
+}

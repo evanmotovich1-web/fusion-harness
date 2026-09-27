@@ -1,0 +1,417 @@
+{
+  "evidence_id": "web-af70a2afdc3529d896ea",
+  "source_url": "https://anyword.com/",
+  "retrieved_at": "2026-09-20T21:00:10.228895+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.anyword.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/af70a2afdc3529d896ea.html",
+  "capture_sha256": "469b84d5974695776075077cdd9610fcdd414aacdd19c2d111dbe31de6eff24b",
+  "bytes_saved": 145602,
+  "title": "Anyword makes AI content perform 76% better.",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+    },
+    {
+      "key": "og:title",
+      "value": "Anyword makes AI content perform 76% better."
+    },
+    {
+      "key": "og:description",
+      "value": "Anyword works with any AI model or application, adding A/B-tested data at every step of the generation process. The result – a 30% lift in business outcomes."
+    }
+  ],
+  "text": "Anyword makes AI content perform 76% better.\nWhy Anyword?\nSolutions\nBy Solution\nPlatform\nDiscover how leading marketing teams are transforming their marketing game with Anyword Business\nAPI\nEmpower Your Users to Create More Content that converts\nEnterprise\nExplore Anyword's custom-built, secure enterprise solution\nBy Use Case\nDemand Gen\nInstantly create high-performing ads and predict success before publishing\nProduct Marketing\nStreamline workflows, resonate with your users, and elevate your brand's voice\nSEO Experts\nCreate SEO-optimized, On-Brand blogs at scale\nBy Use Case\nCMO\nBoost your marketing performance and streamline workflows while keeping your brand's voice\nContent Marketing\nGenerate high performing, on-brand content for ads, social, blogs, emails, LPs and more\nBy Use Case\nSocial Media\nCreate on-brand social media content that drives engagment\nMarketing Ops\nEnhance emails, streamline processes, boost performance, and elevate your brand\nProduct\nContent intelligence\nUnderstand, analyze and improve content across every channel in one powerful platform\nData-driven editor\nGenerate AI-powered content using performance prediction scores to know which assets will perform best before you go live\nWebsite Automation\nHyper-personalize messaging on your website at scale\nBlog Wizard\nConsistently produce high-quality, engaging blog content in half the time\nChrome Extension\nBoost engagement, sign-ups, conversions and leads like never before with Anyword's Chrome Extension\nPrivate Model\nSecure your enterprise data with Anyword's private LLMs\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nIntegrations\nConnect Anyword to your tech stack to get content that delivers measurable results\nWebsite Automation\nHyper-personalize messaging on your website at scale\nSecurity\nExperience unmatched safety and enhanced protection with Anyword, built to prioritize your data privacy security\nNews\nHow to Train ChatGPT with Your Brand Voice [Video]\nOne of the biggest concerns about adopting generative AI in the Enterprise is security.\nPricing\nResources\nLearn\nCustomer Stories\nWorld-class companies trust Anyword to maximize content performance across every channel\nBlog\nHuman Insights on Artificial Intelligence\nQuickstart Guide\nYour essential guide to understanding and getting started with generative AI\nSign in\nRequest demo\nTry it now\nWhy Anyword?\nSolutions\nSome title\nPlatform\nCopy analytics built for the post-generative AI world.\nAPI\nCopy analytics built for the post-generative AI world.\nEnterprise\nCopy analytics built for the post-generative AI world.\nBy Use Case\nDemand Gen\nCopy analytics built for the post-generative AI world.\nProduct Marketing\nCopy analytics built for the post-generative AI world.\nSEO Experts\nCopy analytics built for the post-generative AI world.\nCMO\nCopy analytics built for the post-generative AI world.\nContent Marketing\nCopy analytics built for the post-generative AI world.\nSocial Media\nCopy analytics built for the post-generative AI world.\nMarketing Ops\nCopy analytics built for the post-generative AI world.\nProduct\nPlatform\nContent Intelligence\nCopy analytics built for the post-generative AI world.\nBlog Wizard\nCopy analytics built for the post-generative AI world.\nPrivate Model\nCopy analytics built for the post-generative AI world.\nData-driven editor\nCopy analytics built for the post-generative AI world.\nChrome Extension\nCopy analytics built for the post-generative AI world.\nIntegrations\nCopy analytics built for the post-generative AI world.\nWebsite Automation\nCopy analytics built for the post-generative AI world.\nSecurity\nCopy analytics built for the post-generative AI world.\nPricing\nResources\nLearn\nBlog\nCopy analytics built for the post-generative AI world.\nQuarkstart Guide\nCopy analytics built for the post-generative AI world.\nStart for free\nRequest demo\nWelcome to Anyword\nWe recommend signing up with your work email to keep all your marketing content in one place\nStart with Google\nOr continue with work email\nSign Up\nBy signing up, you agree to our\nTerms of Service\nand\nPrivacy Policy\nAnyword makes\nAI content perform\n76% better.\nAnyword’s best in class AI content platform was built for GTM teams that care about performance and brand. It works with any AI and any agent, adding A/B tested data and brand context to every prompt.\nRequest demo\nTry it now\nTrusted by the World’s Leading Companies\nGen-AI Content Platform\nAward winning AI content platform, backed by A/B-tested data, built for world class enterprise GTM teams.\nGen-AI Content Performance API\nAdd A/B-tested data, performance predictions and performance RAG to your AI Apps and Agents.\nAnyword delivers world class accuracy in performance prediction\nAnyword’s AI delivers industry-leading performance prediction—accurately determining which of two content variations will perform better based on audience, business goal, and channel—with 82% accuracy. In comparison, generic AI models like GPT-5 achieve only 52%.\nPerformance prediction accuracy\n20\n%\nGPT-5\nwithout Anyword\nPublic data doesn’t work\nOnly 2% better than random\n30\n%\n(and improving)\nGPT-5\nwith\nAnyword\nWe no longer A/B test Anyword copy vs. original copy. Now, we just go with Anyword copy.\nDemand Marketer, Fortune 500 cloud platform\nAI Built For the Enterprise\nSecure Access\nManage user permissions and control usage with enterprise-grade SSO, multi-factor authentication, and role-based access.\nData Privacy by Design\nYour data is never used to train third-party models. Anyword’s proprietary generation engine is LLM-agnostic, ensuring full data isolation and total control over your IP.\nCompliance & Certifications\nStay compliant with the highest global standards. Anyword meets SOC 2, ISO 27001, GDPR, and HIPAA requirements — ensuring your data and content are protected at every step.\nAlways-On Reliability\nBuilt for scale with 99.9% uptime, global availability, and robust failover systems — so your workflows and AI-powered campaigns never miss a beat.\nThe world's most AI-advanced GTM teams leverage Anyword and achieve an astounding 30% increase in sales and business performance compared to baseline AI models.\nContent intelligence\nData-driven editor\nBrand voice\nWorks with any app or model\nAPI\nContent intelligence\nContent Intelligence compares your published content with Anyword’s industry specific AB-test data set, surfacing opportunities to lift performance for existing content as well as subsequent AI generation.\nContent Intelligence compares your published content with Anyword’s industry specific AB-test data set, surfacing opportunities to lift performance for existing content as well as subsequent AI generation.\nData-driven Editor\nCreate content that performs. Anyword’s Data-driven Editor analyzes and predicts performance, helping you choose the top-performing variations before publishing.\nCreate content that performs. Anyword’s Data-driven Editor analyzes and predicts performance, helping you choose the top-performing variations before publishing.\nBrand voice\nCentralize your brand’s messaging, tone of voice, audience profiles, and guidelines. Ensure consistent, on-brand content across every channel and team.\nCentralize your brand’s messaging, tone of voice, audience profiles, and guidelines. Ensure consistent, on-brand content across every channel and team.\nWorks with any app or model\nIntegrate Anyword’s performance boost capabilities into your favorite co-pilots and writing tools, including ChatGPT, Notion, Gemini, and more. Apply your brand voice and high performing talking points into every prompt and predict output performance for every generated asset.\nIntegrate Anyword’s capabilities into your favorite tools, including ChatGPT, Notion, Google Gemini, and more. Apply your brand voice to every prompt and predict performance across all applications.\nAPI\nPower your AI applications with Anyword’s APIs. Leverage performance predictions and RAG capabilities to ensure on-brand, high-performing content every time.\nPower your AI applications with Anyword’s APIs. Leverage performance predictions and RAG capabilities to ensure on-brand, high-performing content every time.\nAnyword ensures that AI models don’t just generate content, but content that delivers business results.\nProduct marketing\nDemand generation\nSocial media\nContent marketing\nEmail marketing & ops\nMarketing strategy\nProduct marketing\nDiscover which messaging resonates best with your audience\nEnsure all content is always on-brand and on point\n10x content creation for your next product launch\nSee how\nDemand Gen, Paid & Growth\nBoost ROAS & conversions\nPredict performance of ads before you go live\nSee performance analytics across all channels\nSave time & money on A/B testing\nSee how\nSocial media\nAchieve 20% more reach and engagement with your posts\nTailor content to your specific audiences with built-in customer personas\nSelect the best copy fast with predictive performance scores built on real marketing data\nSee how\nContent marketing\nNo fluff. Just well researched blog posts in your voice, backed by data\nAuthentic, plagiarism-free content for blogs, website content, landing pages, ads, emails & more!\nSee which content will engage and resonate before you go live\nSee how\nEmail marketing & ops\nUnderstand which email copy works best without A/B testing\nEnsure high open rate and CTR on your emails with optimized copy\nGenerate a month’s worth of engaging emails in less than an hour\nCreate email drips tailored to your ICPs and any actual Linkedin profiles\nSee how\nMarketing strategy\nKeep messaging on brand and aligned across the organization\nBoost campaign performance and increase revenue\nSet and uphold brand communication policies, aligning with legal and ethical standards across marketing efforts\nSee how\nStay Secure & Compliant\nYour data’s security is our priority. Anyword adheres to global security and privacy standards, including SOC 2, ISO, GDPR, and HIPAA, ensuring your AI-generated content remains protected. Manage access with SSO, multi-factor authentication, and role-based permissions, all while maintaining compliance with industry-leading security frameworks.\nWhy Marketing Teams Love Anyword\nCompared to other programs I’ve tried, Anyword is more intuitive and easier to use. I love the scoring and integrated SEO tools. If you have a lot to produce, this helps streamline your approach.\nMelissa Tyndall\nContent Developer Manager\nMelissa Tyndall\nContent Developer Manager\nMore intuitive\neasy-to-use AI\nAnyword's responsiveness, passion, and dedication has been amazing. It's a really special thing when you give feedback and you see it get implemented. Using Anyword to write ad copy, we were able to significantly reduce time writing without sacrificing performance, which our clients love.\nMarissa Wehrer Maggio\nDigital Advertising Analyst\nMarissa Wehrer Maggio\nDigital Advertising Analyst\n33% faster\nad creation\nWe've received 23% more clicks for around the same cost per conversion. We are now deploying Anyword to all of our paid channels.\nChristopher Ingrao\nSenior Manager, Growth Marketing\nChristopher Ingrao\nSenior Manager, Growth Marketing\n23%\nmore clicks\nAnyword makes ad copy creation so much easier! I can create multiple personas and add their specific pain points to adjust the content directly to those personas\nJessica Amaral\nDemand Gen Manager\nJessica Amaral\nDemand Gen Manager\nHyper- Personalized\nad copy creation at scale\n\"Anyword has helped us marry the data world and the creative world. We've used Anyword to analyze what we've been doing and create smarter content – and it's working! We went from an average of 2.5% to now seeing our emails achieve an 8% click-through rate. It's huge for us.\"\nFreya Smale\nDirector, Marketing, Automotive\nFreya Smale\nDirector, Marketing, Automotive\n8%\nclick-through rate\nNow I can optimize my SEO, social media, performance, and email content in one place. With performance scores to help me choose the text that will deliver the best results.\nDiana Tataran\nFounder\nDiana Tataran\nFounder\nBoosted performance\nacross all channels\nDeep Dive Into the World of AI in Marketing\nCreate a Buyer Persona in a Click\nNo need to spend hours developing your personas. Anyword’s AI can create any persona down to their pain points in a click.\nRead more\nGuide\nPerformance Writing 101: How to Apply Data & Analytics to Your Content\nThere are key moments in the content and campaign building process that are deeply enhanced by clear, performance based data.\nRead more\nVideo\nWhy Enterprises Need a Secure AI Platform\nExplore the importance of secure AI for enterprises with Anyword. Delve into how robust security measures can protect sensitive data and enhance AI operations.\nRead more\nBlog\nWhat enterprises need to know about adopting generative AI\nExplore how generative AI works, what red flags enterprises need to consider, and how to evolve into an AI-ready enterprise.\nRead more\nNews\nDeep Dive Into the World of AI in Marketing\nCreate a Buyer Persona in a Click\nNo need to spend hours developing your personas. Anyword’s AI can create any persona down to their pain points in a click.\nRead more\nGuide\nPerformance Writing 101: How to Apply Data & Analytics to Your Content [Video]\nThere are key moments in the content and campaign building process that are deeply enhanced by clear, performance based data.\nRead more\nVideo\nWhy Enterprises Need a Secure AI Platform\nExplore the importance of secure AI for enterprises with Anyword. Delve into how robust security measures can protect sensitive data and enhance AI operations.\nRead more\nBlog\nWhat enterprises need to know about adopting generative AI\nExplore how generative AI works, what red flags enterprises need to consider, and how to evolve into an AI-ready enterprise.\nRead more\nNews\nCompany\nPricing\nCareers\nContact us\nResources\nHelp Center\nBlog\nGlossary\nUse Case\n368 9th Ave, New York, NY 10001, United States.\nCopyright 2025\nKeywee Inc. (d.b.a. Anyword)\ninfo@anyword.com\nPrivacy Policy\nTerms of Use\nDPA Agreement",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/css/anyword-3b0adc.webflow.shared.d3572f847.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65e05bb0fa8c35f3c2c9fa58_Faf-icon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/gen-ai-content-platform",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/performance-marketers",
+      "rel": null
+    },
+    {
+      "href": "/product-marketing",
+      "rel": null
+    },
+    {
+      "href": "/seo-experts",
+      "rel": null
+    },
+    {
+      "href": "/marketing-strategy",
+      "rel": null
+    },
+    {
+      "href": "/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/marketing-ops",
+      "rel": null
+    },
+    {
+      "href": "/copy-intelligence-platform",
+      "rel": null
+    },
+    {
+      "href": "/data-driven-editor",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog-wizard",
+      "rel": null
+    },
+    {
+      "href": "/performance-boost-ai",
+      "rel": null
+    },
+    {
+      "href": "/private-models",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/quick-start-guide",
+      "rel": null
+    },
+    {
+      "href": "https://go.anyword.com/login",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-demo",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/gen-ai-content-platform",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/performance-marketers",
+      "rel": null
+    },
+    {
+      "href": "/product-marketing",
+      "rel": null
+    },
+    {
+      "href": "/seo-experts",
+      "rel": null
+    },
+    {
+      "href": "/marketing-strategy",
+      "rel": null
+    },
+    {
+      "href": "/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/marketing-ops",
+      "rel": null
+    },
+    {
+      "href": "/copy-intelligence-platform",
+      "rel": null
+    },
+    {
+      "href": "/blog-wizard",
+      "rel": null
+    },
+    {
+      "href": "/private-models",
+      "rel": null
+    },
+    {
+      "href": "/data-driven-editor",
+      "rel": null
+    },
+    {
+      "href": "/performance-boost-ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/website-automation",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/quick-start-guide",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://anyword.com/anyword-terms-of-service/",
+      "rel": null
+    },
+    {
+      "href": "https://anyword.com/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-demo",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/gen-ai-content-platform",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/product-marketing",
+      "rel": null
+    },
+    {
+      "href": "/performance-marketers",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/marketing-ops",
+      "rel": null
+    },
+    {
+      "href": "/marketing-strategy",
+      "rel": null
+    },
+    {
+      "href": "/blog/create-a-buyer-persona-in-a-click",
+      "rel": null
+    },
+    {
+      "href": "/blog/performance-writing-101-apply-data-to-your-content/",
+      "rel": null
+    },
+    {
+      "href": "/blog/why-enterprises-need-a-secure-ai-platform",
+      "rel": null
+    },
+    {
+      "href": "https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/",
+      "rel": null
+    },
+    {
+      "href": "/blog/create-a-buyer-persona-in-a-click",
+      "rel": null
+    },
+    {
+      "href": "/blog/performance-writing-101-apply-data-to-your-content/",
+      "rel": null
+    },
+    {
+      "href": "/blog/why-enterprises-need-a-secure-ai-platform",
+      "rel": null
+    },
+    {
+      "href": "https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://support.anyword.com/",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/getanyword/",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/getanyword?lang=en",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/getanyword/",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/anyword-terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/anyword-dpa-agreement",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.3781
+}

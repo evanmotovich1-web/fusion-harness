@@ -1,0 +1,14 @@
+{
+  "evidence_id": "web-099b060ce78404ff87d0",
+  "source_url": "https://textcortex.com/",
+  "retrieved_at": "2026-09-20T21:00:09.821930+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 403: Forbidden",
+  "elapsed_seconds": 0.182
+}

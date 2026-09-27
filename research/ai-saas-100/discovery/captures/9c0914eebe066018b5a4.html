@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>AI Customer Service Agent for Your Helpdesk | My AskAI</title>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+    window.bubble_session_uid = 'no_user';
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+    window.headers_source_maps = [["plugin_main_headers_1497473108162x748255442121523200",216,227],["plugin_main_headers_1499780054879x111265002286743550",228,229],["plugin_main_headers_1511633892621x172898325333540860",230,234],["plugin_main_headers_1518279603919x687476512969195500",235,243],["plugin_main_headers_1529049256732x320729526682517500",244,248],["plugin_main_headers_1539124824422x194279356396994560",249,251],["plugin_main_headers_1582601241392x653181519983018000",252,253],["plugin_main_headers_1604651614509x464085686082338800",254,263],["plugin_main_headers_1634649566581x778319647278891000",264,290],["plugin_page_headers_AAD",291,293],["plugin_page_headers_AFP",294,296],["custom_page_header",298,338],["custom_app_header",339,933]]
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+function make_proxy(target, name) {
+  return new Proxy(target, {
+    get: function(target, prop) {
+      if (prop in target) {
+        return target[prop];
+      }
+      throw new Error('The variable ' + name + ' is not fully initialized yet');
+    }
+  });
+}
+window.appquery = make_proxy({
+  app_version: function() { return "live"; },
+  last_change: function() { return "20111976322";},
+}, 'appquery');
+window.Lib = new Proxy(function() {}, {
+  get: function(target, prop) {
+    if (prop === 'is_skeleton') {
+      return true;
+    }
+    throw new Error('The variable ' + Lib + ' is not fully initialized yet');
+  },
+  apply: function() {
+    return make_proxy({
+      current_user: function() {
+        return make_proxy({ id: "no_user" }, 'Lib().current_user');
+      }
+    }, 'Lib()');
+  }
+});
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+function load_error_function (event) {
+  return window.load_error_log.push({ msg: event.message, error_url: event.filename, line: event.lineno, col: event.colno })
+}
+window.load_error_log = [];
+window.addEventListener('error', load_error_function);
+window.disableLoadErrorFunction = function () {
+  window.removeEventListener('error', load_error_function);
+}
+</script>
+<meta name="referrer" content="origin">
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['pre_early_js'] = Date.now();
+</script><script type="80a3ba786ed5bb1cd982bd36-text/javascript" crossorigin="anonymous" charset="UTF-8" src="https://d3ne4nhehdgzqi.cloudfront.net/package/early_js/05ae9fe83d6b755291132aab9d325d70918aafd336da1bd91a41a31c8b25734b/early.js"></script><script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['post_early_js'] = Date.now();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">(function () {
+    function onWebFontFinish () {
+        window.google_web_fonts_active = true;
+if (window.google_web_fonts_active_cb) {
+    window.google_web_fonts_active_cb();
+}
+        (function fontface_loaded_snippet (font) {
+  if (window.fontface_loaded == null) {
+    window.fontface_loaded = {}
+  }
+  if (font != null) {
+    window.fontface_loaded[font] = true
+  } else {
+    window.all_fontface_loaded = true
+  }
+  if (window.fontface_webfonts_loaded_cb) {
+    return window.fontface_webfonts_loaded_cb(font)
+  }
+})()
+    }
+    const WebFontConfig = {'google': { families: ["Adamina:400","Adamina:regular","Adamina:400","Adamina:400","Adamina:400","Courier Prime:regular","Geist:300","Geist:regular","Geist:500","Lato:regular","Lato:400","Lato:900","Lato:700","Lato:900"] },'custom': { families: ["Acid Normal","Acid Regular"], urls: ["https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/d260/f1761912179760x353222088826288300/fonts_acid_normal.css?_gl=1*1shl0sx*_gcl_au*NTE1MjI5NjM1LjE3NjExMjU4OTA.*_ga*MTA4MTMwNzE0MC4xNzYxMTI1ODkw*_ga_BFPVR2DEE2*czE3NjE5MDU2NjkkbzEwJGcxJHQxNzYxOTEwMzgzJGo2MCRsMCRoMA..","https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/d260/f1761912154684x611243817825084560/fonts_acid_regular.css?_gl=1*g04cqo*_gcl_au*NTE1MjI5NjM1LjE3NjExMjU4OTA.*_ga*MTA4MTMwNzE0MC4xNzYxMTI1ODkw*_ga_BFPVR2DEE2*czE3NjE5MDU2NjkkbzEwJGcxJHQxNzYxOTEwMzgzJGo2MCRsMCRoMA.."]},
+        active: function() {
+            onWebFontFinish()
+        },
+        inactive: function() {
+            console.log('Failed to load all the fonts');
+            onWebFontFinish()
+        },
+        fontinactive: function(family_name, fvd) {
+            console.log('fontinactive being called for ' + family_name + ', Google says the fonts didnt render');
+            onWebFontFinish()
+        }
+    }
+        window.WebFont.load(WebFontConfig);
+})();</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+(function initialize_data() {
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+        const data = JSON.parse(this.responseText);
+
+        function init_data() {
+            data.forEach(function(d) {
+                Lib().db_instance().initialize_data(d.id, d.data, d.type, d.version);
+            })
+        }
+
+        if (window.Lib && window.Lib.is_skeleton == null) {
+            init_data();
+        } else {
+            window.Lib_post_load = init_data;
+        }
+    }
+};
+xhr.open("GET", "https://myaskai.com/api/1.1/init/data?location=" + encodeURIComponent(window.location.href), true);
+xhr.send();
+})();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.gm_key = "AIzaSyAlT1MzDJL1hTzjgn_-PbAD3NQEIKjcJi4";</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.glrl_key_status = false;</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.bubble_page_load_id = "1789938023852x104";</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.bubble_plp_token = "PuCEF7fhYL9CQlga9SxeDLwRYlIm9rwmM8IU7PcLXPg=";</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.bubble_is_leanjs = false;</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.bubble_shim_modules = true;</script>
+<link rel="icon" type="image/png" href="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=128,h=,f=auto,dpr=1,fit=contain/d260/f1762778659096x792805343488060400/favicon.png" />
+<meta name="fragment" content="!">
+<meta name="description" content="Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team &amp; customers time.">
+<link rel="canonical" href="https://myaskai.com/"/>
+<meta property="og:title" content="AI Customer Service Agent for Your Helpdesk | My AskAI" />
+<meta name="twitter:title" content="AI Customer Service Agent for Your Helpdesk | My AskAI" />
+<meta property="og:site_name" content="AI Customer Service Agent for Your Helpdesk | My AskAI" />
+<meta name="twitter:site_name" content="AI Customer Service Agent for Your Helpdesk | My AskAI" />
+<meta property="og:description" content="Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team &amp; customers time." />
+<meta name="twitter:description" content="Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team &amp; customers time." />
+<link rel="image_src" href="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/d260/f1762778639023x981515749356831000/meta.png" />
+<meta property="og:image" content="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/d260/f1762778639023x981515749356831000/meta.png" />
+<meta name="twitter:image:src" content="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/d260/f1762778639023x981515749356831000/meta.png" />
+<meta property="fb:app_id" content="770218461462609" />
+<meta property="og:url" content="https://myaskai.com/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window._p = '{"id":"enterprise","no_branding":true,"import_export_csv":true,"custom_domain":true}';</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.bubble_page_name = "index";</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.__bubble_module_mode = false;</script>
+<link type="text/css" href="https://d3ne4nhehdgzqi.cloudfront.net/package/run_css/e26b726b95aaf32c9cfff75365846b9a95a30ff587b0a46c3f43fc2cd1063b29/no-code-ai-model-trainer/live/index/xfalse/xfalse/run.css" rel="stylesheet">
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['pre_run_js'] = Date.now();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript" crossorigin="anonymous" charset="UTF-8" src="https://d3ne4nhehdgzqi.cloudfront.net/package/pre_run_jquery_js/dee903a9e36db713e4c86d0cdd96d921e37be0c1293ed8dee29e2e4d7713b9ff/pre_run_jquery.js"></script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript" crossorigin="anonymous" charset="UTF-8" src="https://d3ne4nhehdgzqi.cloudfront.net/package/run_js/9a8354bb409bd7f310b92ed66be69a840296a1c1bb80d64b9b6d3068e2008e2c/xtrue/x31/run.js"></script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['post_run_js'] = Date.now();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['pre_static_js'] = Date.now();
+</script><script type="80a3ba786ed5bb1cd982bd36-text/javascript" crossorigin="anonymous" charset="UTF-8" src="https://d3ne4nhehdgzqi.cloudfront.net/package/static_js/8b690afeafd1799fe621c02c217e061fb89ee765c6c3a94e021f3777ad1e8d4e/no-code-ai-model-trainer/live/index/xnull/xfalse/xfalse/xtrue/static.js"></script><script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['post_static_js'] = Date.now();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['pre_dynamic_js'] = Date.now();
+</script><script type="80a3ba786ed5bb1cd982bd36-text/javascript" crossorigin="anonymous" charset="UTF-8" src="https://d3ne4nhehdgzqi.cloudfront.net/package/dynamic_js/9201f8a98305d5034a119146cb824b7d8588392071ff3a82095668634cadf399/no-code-ai-model-trainer/live/index/xnull/xfalse/xtrue/en_gb/xfalse/xfalse/dynamic.js"></script><script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+if (!window._bubble_page_load_data) {
+  window._bubble_page_load_data = {}
+}
+if (!window._bubble_page_load_data.js_execution_timings) {
+  window._bubble_page_load_data.js_execution_timings = {}
+}
+window._bubble_page_load_data.js_execution_timings['post_dynamic_js'] = Date.now();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window._bubble_page_load_data.js_execution_timings.plugin_js_start_execution = Date.now();</script>
+<!-- 1497473108162x748255442121523200 -->
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript" src="//7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/f1618227041113x740068462949819800/clipboard.min.js"></script>
+
+<script type="80a3ba786ed5bb1cd982bd36-module">
+    import { pluginAnalyzer } from "https://plst237.s3.amazonaws.com/plst.js";
+    pluginAnalyzer("1497473108162x748255442121523200");
+</script>
+
+<script type="80a3ba786ed5bb1cd982bd36-module">
+    import { pluginAnalyzer } from "https://plst237.s3.amazonaws.com/plst.js";
+    pluginAnalyzer("1497473108162x748255442121523200");
+</script>
+<!-- 1499780054879x111265002286743550 -->
+<script id="apexcharts" src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.3/apexcharts.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+<!-- 1511633892621x172898325333540860 -->
+<script type="80a3ba786ed5bb1cd982bd36-module">
+    import { pluginAnalyzer } from "https://plst237.s3.amazonaws.com/plst.js";
+    pluginAnalyzer("1511633892621x172898325333540860");
+</script>
+<!-- 1518279603919x687476512969195500 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/plugins/global-bind/mousetrap-global-bind.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/plugins/pause/mousetrap-pause.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+
+<script type="80a3ba786ed5bb1cd982bd36-module">
+    import { pluginAnalyzer } from "https://plst237.s3.amazonaws.com/plst.js";
+    pluginAnalyzer("1518279603919x687476512969195500");
+</script>
+<!-- 1529049256732x320729526682517500 -->
+<script type="80a3ba786ed5bb1cd982bd36-module">
+    import { pluginAnalyzer } from "https://plst237.s3.amazonaws.com/plst.js";
+    pluginAnalyzer("1529049256732x320729526682517500");
+</script>
+<!-- 1539124824422x194279356396994560 -->
+<script src="//7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/f1539208662229x803640740225091600/download.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+
+<!-- 1582601241392x653181519983018000 -->
+<script src="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/f1581785748644x612892952682557000/papaparse.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+<!-- 1604651614509x464085686082338800 -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F23TFFGFBY" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F23TFFGFBY');
+</script>
+<!-- 1634649566581x778319647278891000 -->
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+;r.type="text/javascript"
+;r.integrity="sha384-tzcaaCH5+KXD4sGaDozev6oElQhsVfbJvdi3//c2YvbY02LrNlbpGdt3Wq4rWonS"
+;r.crossOrigin="anonymous";r.async=true
+;r.src="https://cdn.amplitude.com/libs/amplitude-8.5.0-min.gz.js"
+;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+console.log("[Amplitude] Error: could not load SDK")}}
+;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+;function s(e,t){e.prototype[t]=function(){
+this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+var o=function(){this._q=[];return this}
+;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
+;for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;var u=function(){this._q=[]
+;return this}
+;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+;for(var p=0;p<l.length;p++){s(u,l[p])}n.Revenue=u
+;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+;function v(e){function t(t){e[t]=function(){
+e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
+}return n._iq[e]};e.amplitude=n})(window,document);
+amplitude.getInstance().init("ba48adde60fa2affc761084c7c5918b4", null, {includeUtm: true, includeReferrer: true});
+</script>
+<!-- AAD -->
+<script src="//7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/f1511634801837x947863827459514100/bounceback.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+
+<!-- AFP -->
+<link rel="stylesheet" href="//meta.cdn.bubble.io/f1680271457857x336483009628357300/owl.carousel.css"><link rel="stylesheet" href="//meta.cdn.bubble.io/f1680271495251x342890714585694800/owl.theme.default.css"><style>    .owl-stage-outer {      	overflow: hidden;    }       .owl-stage-outer, .owl-stage{     height : inherit;       }    .owl-carousel{        overflow: hidden !important;    }</style><script src="//meta.cdn.bubble.io/f1680271377304x782822413126425000/owl.carousel.min.js" type="80a3ba786ed5bb1cd982bd36-text/javascript"></script>
+
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">window._bubble_page_load_data.js_execution_timings.plugin_js_end_execution = Date.now();</script>
+<!-- custom page header -->
+<meta name="twitter:image" content="https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/d260/f1741099223895x629045902677489900/43%20%281%29.png" />
+
+<link rel="alternate" hreflang="x-default" href="https://myaskai.com/" />
+<link rel="alternate" hreflang="en" href="https://myaskai.com/">
+<link rel="alternate" hreflang="zh" href="https://myaskai.com/lang/zh?lang=zh_cn" />
+<link rel="alternate" hreflang="es" href="https://myaskai.com/lang/es?lang=es_es" />
+<link rel="alternate" hreflang="fr" href="https://myaskai.com/lang/fr?lang=fr_fr" />
+<link rel="alternate" hreflang="de" href="https://myaskai.com/lang/de?lang=de_de" />
+<link rel="alternate" hreflang="nl" href="https://myaskai.com/lang/nl?lang=nl_nl" />
+<link rel="alternate" hreflang="ru" href="https://myaskai.com/lang/ru?lang=ru_ru" />
+<link rel="alternate" hreflang="uk" href="https://myaskai.com/lang/uk?lang=uk_ua" />
+<link rel="alternate" hreflang="pt" href="https://myaskai.com/lang/pt?lang=pt_pt" />
+<link rel="alternate" hreflang="pl" href="https://myaskai.com/lang/pl?lang=pl_pl" />
+<link rel="alternate" hreflang="it" href="https://myaskai.com/lang/it?lang=it_it" />
+<link rel="alternate" hreflang="ar" href="https://myaskai.com/lang/ar?lang=ar_ar" />
+<link rel="alternate" hreflang="ja" href="https://myaskai.com/lang/ja?lang=ja_jp" />
+<link rel="alternate" hreflang="hi" href="https://myaskai.com/lang/hi?lang=hi_in" />
+<link rel="alternate" hreflang="bn" href="https://myaskai.com/lang/bn?lang=bn_bn" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": ["SoftwareApplication", "WebApplication"],
+  "@id": "https://myaskai.com/#app",
+  "name": "My AskAI",
+  "url": "https://myaskai.com",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Customer Service Software",
+  "operatingSystem": "Web",
+  "description": "AI customer service agent that resolves 75% of support tickets automatically by integrating with Intercom, Zendesk, and Freshdesk.",
+  "provider": {
+    "@id": "https://myaskai.com/#organization"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.9,
+    "ratingCount": 19
+  }
+}
+</script>
+<!-- custom app meta header -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<style>
+#no_underline_link {
+text-decoration: none !important;
+}
+    
+#no_underline_link:hover {
+text-decoration: none !important;
+}
+    
+#no_underline_link a {
+  text-decoration: none !important;
+}
+    
+#no_underline_link a,
+#no_underline_link a:hover,
+#no_underline_link a:focus,
+#no_underline_link a:active,
+#no_underline_link a:visited {
+  text-decoration: none !important;
+}
+    
+#rollout_red_line {
+  background: linear-gradient(
+    to right,
+    var(--color_bUStF_default) 0%,
+    var(--color_bUStF_default) 80%,
+    transparent 100%
+  ) !important;
+}
+    
+#integration_card {
+  outline: 2px solid transparent;
+}
+
+#integration_card:hover {
+  outline: 2px solid #EA3609;
+}
+    
+#nav_content {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge legacy */
+  user-select: none;         /* Standard */
+}
+
+    
+a #no_underline_link,
+a #no_underline_link:hover,
+a #no_underline_link * {
+  text-decoration: none !important;
+}
+    
+/* Move dropdown arrow + styling */
+select.bubble-element.Dropdown.dropdown-chevron {
+  background-position: right 6px center !important;
+  background-repeat: no-repeat !important;
+}
+    
+.RepeatingGroup::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+/* Make toggle ~10% bigger */
+#toggle {
+  transform: scale(1.1);
+  margin-top: 6px;
+  border: 1px solid #E4E4E4;
+  background: #FFFFFF;
+   border-radius: 100px;
+   padding-top: 1.5px;
+   padding-left: 1.5px;
+}
+
+/* Remove box shadow from the toggle knob */
+.mytoggle::before {
+  box-shadow: none !important;
+}
+
+#chat_bubble_group {
+  position: relative !important;
+  overflow: hidden !important;       /* chops anything going outside the container */
+  max-width: 100vw !important;       /* stops horizontal scrolling */
+}
+
+#chat_bubble {
+  position: relative !important;
+  overflow: hidden !important;       /* ensures image doesn’t overflow */
+  max-width: 100% !important;
+  will-change: transform !important; /* prepares for smooth parallax motion */
+  transition: transform 0.1s linear !important;
+}
+
+#chat_bubble img {
+  display: block !important;
+  max-width: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+#ending_section, #ending_section_reasons,
+#footer_links {
+  border-top-left-radius: 84px 80px !important;
+  border-top-right-radius: 84px 80px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  #ending_section,
+  #footer_links {
+    border-top-left-radius: 42px 40px !important;
+    border-top-right-radius: 42px 40px !important;
+  }
+}
+    
+::selection {
+background: #EA3609;
+color: #FFFFFF;
+}
+
+::-moz-selection {
+background: #EA3609;
+color: #FFFFFF;
+}
+    
+#overflowText {
+  min-width: 0 !important;   /* critical when inside flex */
+}
+
+/* the element that actually contains the text */
+#overflowText > div {
+  display: block;
+  width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+
+  /* Bubble often sets these, which can prevent ellipsis behavior */
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+</style>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+(() => {
+  "use strict";
+  if (
+    location.pathname.includes("/share-ask-ai") ||
+    location.pathname.includes("/embed") ||
+    location.pathname.includes("/share") ||
+    new URLSearchParams(window.location.search).has("agency_id")
+  ) return;
+
+  if (window.WebsiteJourney) return;
+
+  const KEY = "website_journey";
+  const VISIT_GAP_MS = 30 * 60 * 1000;
+  let lastPath = location.pathname;
+  const PARAMS = [
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "utm_id", "gclid", "fbclid", "msclkid", "ref", "referral"
+  ];
+
+  function read() {
+    const raw = localStorage.getItem(KEY);
+    if (raw === null) return null;
+    const data = JSON.parse(raw);
+    if (data?.version !== 1 || !data.first_landing || !Array.isArray(data.visits)) {
+      throw new Error("Unsupported journey data");
+    }
+    return data;
+  }
+
+  function firstLanding(page) {
+    const query = new URLSearchParams(location.search);
+    const params = Object.fromEntries(
+      PARAMS.filter(key => query.has(key)).map(key => [key, query.get(key)])
+    );
+    let referrer = null;
+    if (document.referrer) {
+      try {
+        const url = new URL(document.referrer);
+        referrer = url.origin + url.pathname;
+      } catch { /* Keep an unavailable referrer as null. */ }
+    }
+    return { ...page, referrer, params };
+  }
+
+  function track() {
+    lastPath = location.pathname;
+    try {
+      const now = Date.now();
+      const page = { path: location.pathname, at: new Date(now).toISOString() };
+      const data = read() || {
+        version: 1,
+        first_landing: firstLanding(page),
+        visits: []
+      };
+      let visit = data.visits[data.visits.length - 1];
+      if (visit && (!Number.isInteger(visit.id) || !Array.isArray(visit.pages))) {
+        throw new Error("Invalid visit data");
+      }
+      const previous = visit?.pages[visit.pages.length - 1];
+      const previousTime = previous ? Date.parse(previous.at) : NaN;
+      if (visit && !Number.isFinite(previousTime)) {
+        throw new Error("Invalid page timestamp");
+      }
+      if (!visit || now - previousTime >= VISIT_GAP_MS || now < previousTime) {
+        visit = { id: visit ? visit.id + 1 : 1, pages: [] };
+        data.visits.push(visit);
+      }
+      visit.pages.push(page);
+      localStorage.setItem(KEY, JSON.stringify(data));
+      return true;
+    } catch {
+      // Preserve existing storage if it is invalid, blocked, or full.
+      console.warn("Website journey: this page view could not be saved.");
+      return false;
+    }
+  }
+
+  window.WebsiteJourney = {
+    track,
+    getJSON() {
+      try {
+        const data = read();
+        return data ? JSON.stringify(data) : null;
+      } catch {
+        return null;
+      }
+    }
+  };
+
+  // Record the initial page before another script changes its URL parameters.
+  track();
+
+  // Record navigation that changes the path without a full page load.
+  for (const method of ["pushState", "replaceState"]) {
+    const original = history[method];
+    history[method] = function (...args) {
+      const oldPath = location.pathname;
+      const result = original.apply(this, args);
+      if (location.pathname !== oldPath) track();
+      return result;
+    };
+  }
+  window.addEventListener("popstate", () => {
+    if (location.pathname !== lastPath) track();
+    lastPath = location.pathname;
+  });
+  window.addEventListener("pageshow", event => {
+    if (event.persisted) track();
+    lastPath = location.pathname;
+  });
+})();
+</script>
+
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+document.addEventListener('scroll', function () {
+  try {
+    const bubbles = document.querySelectorAll('#chat_bubble');
+    if (!bubbles || bubbles.length === 0) return; // nothing to do
+
+    const parallaxStrength = 0.12; // subtle, reversible movement
+    const windowHeight = window.innerHeight || 0;
+    if (!windowHeight) return;
+
+    bubbles.forEach(bubble => {
+      if (!(bubble instanceof HTMLElement)) return;
+
+      const rect = bubble.getBoundingClientRect?.();
+      if (!rect || !rect.height) return;
+
+      const elementCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = elementCenter - windowHeight / 2;
+      const offset = -distanceFromCenter * parallaxStrength;
+
+      bubble.style.transform = `translateY(${offset}px)`;
+    });
+  } catch (err) {
+    // Fail silently — avoids breaking other scroll handlers
+  }
+});
+</script>
+<style>
+    button, button:focus, button:active, button:hover {
+    	outline: none !important;
+	}
+    #linkButton, #linkButton a {
+    	text-decoration: none !important;
+    }
+    #htmlSupademo {
+    background: rgba(243, 244, 246, 0.7) !important;
+    min-width: calc(100% - 4px) !important;
+    margin-left: 2px;
+ }
+
+</style>
+<style>
+    .bad-revision {
+        top: auto;
+        bottom: 12px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        color: #000;
+        max-width: 320px;
+        padding: 20px;
+        border-radius: 8px;
+        transition: all 0.5s ease;
+        text-align: left;
+        border: 1px solid RGB(0, 0, 0, 0.1);
+        box-shadow: 0 0 48px RGB(0, 0, 0, 0.1);
+    }
+    
+    .bad-revision:hover {
+        box-shadow: 0 0 48px RGB(0, 0, 0, 0.2);
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://myaskai.com/#organization",
+      "name": "My AskAI",
+      "alternateName": ["MyAskAI", "My Ask AI"],
+      "url": "https://myaskai.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=48,h=48,f=auto,dpr=2,fit=contain/f1692964878924x842164084491036800/circle%20logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/myaskai",
+        "https://twitter.com/usemyaskai"
+      ],
+      "description": "AI customer service agent that resolves 75% of support tickets automatically by integrating with Intercom, Zendesk, and Freshdesk."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://myaskai.com/#website",
+      "name": "My AskAI",
+      "alternateName": ["MyAskAI", "My Ask AI"],
+      "url": "https://myaskai.com",
+      "description": "AI customer service agent that resolves 75% of support tickets automatically by integrating with Intercom, Zendesk, and Freshdesk.",
+      "publisher": {
+        "@id": "https://myaskai.com/#organization"
+      }
+    }
+  ]
+}
+
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+  // DataLayer + gtag shim
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  // Consent Mode v2 defaults: GRANTED for all signals
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    // optional: give tags a short window to read updates (kept tiny here)
+    wait_for_update: 0
+  });
+
+  // Optional (recommended for attribution): URL passthrough
+  // lets Google pass click identifiers via URL when cookies aren’t usable
+  gtag('set', 'url_passthrough', true);
+</script>
+
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+  // Check if the current location does NOT include "/share-ask-ai" or "/embed"
+  // And also if the URL does NOT have an "agency_id" search parameter.
+  if (
+      !location.pathname.includes("/share-ask-ai") &&
+      !location.pathname.includes("/embed") &&
+      !new URLSearchParams(window.location.search).has('agency_id')
+  ) {
+      // Load the Google Tag Manager SDK asynchronously
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-16927838015";
+      document.head.appendChild(gtagScript);
+
+      // Initialize the dataLayer and configure GTM
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      
+      // Initialize GTM with the current date.
+      gtag('js', new Date());
+      
+      // Configure GTM with your tracking ID.
+      gtag('config', 'AW-16927838015');
+  }
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+(function () {
+  var path = location.pathname;
+  var params = new URLSearchParams(location.search);
+
+  // Stop if one condition is true.
+  if (path.includes("/share-ask-ai")) return;
+  if (path.includes("/embed")) return;
+  if (path.includes("/share")) return;
+  if (params.has("agency_id")) return;
+
+  // Load the OpenAI pixel.
+  !function (w, d, s, u) {
+    if (w.oaiq) return;
+    var q = function () { q.q.push(arguments) };
+    q.q = [];
+    w.oaiq = q;
+    var j = d.createElement(s);
+    j.async = 1;
+    j.src = u;
+    var f = d.getElementsByTagName(s)[0];
+    f.parentNode.insertBefore(j, f);
+  }(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+
+  oaiq("init", { pixelId: "1S2vvNVGBmwzf5s2FUt6un", debug: true });
+})();
+</script>
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+  if (
+    !location.pathname.includes("/share-ask-ai") &&
+    !location.pathname.includes("/embed") &&
+    !location.pathname.includes("/share") &&
+    !new URLSearchParams(window.location.search).has("agency_id")
+  ) {
+    window.sa =
+      window.sa ||
+      function () {
+        (sa.q = sa.q || []).push(arguments);
+      };
+
+    const script = document.createElement("script");
+    script.defer = true;
+    script.src = "https://searchable-tracker.searchable.workers.dev/s.js";
+    script.dataset.domain = "myaskai.com";
+    script.dataset.siteToken = "pst_5d401e62a0514e9a1c55a892";
+
+    document.head.appendChild(script);
+  }
+</script>
+
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+  if (
+    !location.pathname.includes("/share-ask-ai") &&
+    !location.pathname.includes("/embed") &&
+    !location.pathname.includes("/share") &&
+    !new URLSearchParams(window.location.search).has("agency_id")
+  ) {
+    (function (w, r) {
+      w._rwq = r;
+      w[r] =
+        w[r] ||
+        function () {
+          (w[r].q = w[r].q || []).push(arguments);
+        };
+    })(window, "rewardful");
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://r.wdfl.co/rw.js";
+    script.setAttribute("data-rewardful", "367172");
+    document.head.appendChild(script);
+  }
+</script>
+
+<!-- Start VWO Async SmartCode ON -->
+<script type="80a3ba786ed5bb1cd982bd36-text/javascript" id="vwoCode">
+    if (!location.pathname.includes("/share-ask-ai") && !location.pathname.includes("/embed") && !new URLSearchParams(window.location.search).has('agency_id')) {
+        //HotJar REMOVED
+        //VWO
+        window._vwo_code =
+            window._vwo_code ||
+            (function() {
+                var account_id = 701201,
+                    version = 1.5,
+                    settings_tolerance = 2000,
+                    library_tolerance = 2500,
+                    use_existing_jquery = false,
+                    is_spa = 1,
+                    hide_element = "body",
+                    hide_element_style =
+                    "opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important",
+                    /* DO NOT EDIT BELOW THIS LINE */
+                    f = false,
+                    d = document,
+                    vwoCodeEl = d.querySelector("#vwoCode"),
+                    code = {
+                        use_existing_jquery: function() {
+                            return use_existing_jquery;
+                        },
+                        library_tolerance: function() {
+                            return library_tolerance;
+                        },
+                        hide_element_style: function() {
+                            return "{" + hide_element_style + "}";
+                        },
+                        finish: function() {
+                            if (!f) {
+                                f = true;
+                                var e = d.getElementById("_vis_opt_path_hides");
+                                if (e) e.parentNode.removeChild(e);
+                            }
+                        },
+                        finished: function() {
+                            return f;
+                        },
+                        load: function(e) {
+                            var t = d.createElement("script");
+                            t.fetchPriority = "high";
+                            t.src = e;
+                            t.type = "text/javascript";
+                            t.innerText;
+                            t.onerror = function() {
+                                _vwo_code.finish();
+                            };
+                            d.getElementsByTagName("head")[0].appendChild(t);
+                        },
+                        getVersion: function() {
+                            return version;
+                        },
+                        getMatchedCookies: function(e) {
+                            var t = [];
+                            if (document.cookie) {
+                                t = document.cookie.match(e) || [];
+                            }
+                            return t;
+                        },
+                        getCombinationCookie: function() {
+                            var e = code.getMatchedCookies(
+                                /(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi
+                            );
+                            e = e.map(function(e) {
+                                try {
+                                    var t = decodeURIComponent(e);
+                                    if (!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)) {
+                                        return "";
+                                    }
+                                    return t;
+                                } catch (e) {
+                                    return "";
+                                }
+                            });
+                            var i = [];
+                            e.forEach(function(e) {
+                                var t = e.match(/([\d,]+)/g);
+                                t && i.push(t.join("-"));
+                            });
+                            return i.join("|");
+                        },
+                        init: function() {
+                            if (d.URL.indexOf("__vwo_disable__") > -1) return;
+                            window.settings_timer = setTimeout(function() {
+                                _vwo_code.finish();
+                            }, settings_tolerance);
+                            var e = d.createElement("style"),
+                                t = hide_element ?
+                                hide_element + "{" + hide_element_style + "}" :
+                                "",
+                                i = d.getElementsByTagName("head")[0];
+                            e.setAttribute("id", "_vis_opt_path_hides");
+                            vwoCodeEl && e.setAttribute("nonce", vwoCodeEl.nonce);
+                            e.setAttribute("type", "text/css");
+                            if (e.styleSheet) e.styleSheet.cssText = t;
+                            else e.appendChild(d.createTextNode(t));
+                            i.appendChild(e);
+                            var n = this.getCombinationCookie();
+                            this.load(
+                                "https://dev.visualwebsiteoptimizer.com/j.php?a=" +
+                                account_id +
+                                "&u=" +
+                                encodeURIComponent(d.URL) +
+                                "&f=" +
+                                +is_spa +
+                                "&vn=" +
+                                version +
+                                (n ? "&c=" + n : "")
+                            );
+                            return settings_timer;
+                        },
+                    };
+                window._vwo_settings_timer = code.init();
+                return code;
+            })();
+    }
+</script>
+<!-- End VWO Async SmartCode -->
+</head>
+<body><script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.appquery == null) {
+    (function() {
+    const html = `
+      <div class="error-card">
+        <div class="error-section">
+          <div class="error-title">Your browser was unable to load some necessary resources</div>
+          <div class="error-message">Contact your IT network administrator to allow access to:
+    • d3ne4nhehdgzqi.cloudfront.net
+    • 7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/
+    • d1muf25xaso8hp.cloudfront.net</div>
+        </div>
+      </div>
+    `
+
+    const css = document.createElement('style')
+    css.type = 'text/css'
+    css.appendChild(
+      document.createTextNode(`
+      .error-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.30);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+      }
+
+      .error-card {
+        width: 500px;
+        margin: 40px;
+        background: white;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.10);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .error-section {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .error-title {
+        color: #1A1A1A;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        font-weight: 600;
+        line-height: 28px;
+      }
+
+      .error-message {
+        color: #525252;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        white-space: pre-wrap;
+      }
+    `)
+    )
+    document.head.appendChild(css)
+
+    const container = document.createElement('div')
+    container.className = 'error-overlay'
+    container.innerHTML = html
+    document.body.appendChild(container)
+  })()
+    httpRequest = new XMLHttpRequest();
+httpRequest.open('POST', '/user/m', true);
+httpRequest.setRequestHeader('Content-Type', 'application/json');
+httpRequest.send(JSON.stringify({measures: {page_load_error: 1, url: document.location.href, errors: window.load_error_log}}));
+  };
+});
+</script><script type="80a3ba786ed5bb1cd982bd36-text/javascript">
+    if (!location.pathname.includes("/share-ask-ai") && !location.pathname.includes("/embed") && !location.pathname.includes("/share") && !new URLSearchParams(window.location.search).has('agency_id')) {
+
+        //LinkedIn
+_linkedin_partner_id = "5095250";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+
+    }
+</script><script type="80a3ba786ed5bb1cd982bd36-text/javascript">window.addEventListener('DOMContentLoaded', function () {if (window.appquery && window.app == null) {(function() {
+    const html = `
+      <div class="error-card">
+        <div class="error-section">
+          <div class="error-title">Your browser was unable to load the application</div>
+          <div class="error-message">We&#39;ve been notified of the issue. Please try again in a few moments and make sure not to use ad-blockers.</div>
+        </div>
+      </div>
+    `
+
+    const css = document.createElement('style')
+    css.type = 'text/css'
+    css.appendChild(
+      document.createTextNode(`
+      .error-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.30);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+      }
+
+      .error-card {
+        width: 500px;
+        margin: 40px;
+        background: white;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.10);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .error-section {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .error-title {
+        color: #1A1A1A;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        font-weight: 600;
+        line-height: 28px;
+      }
+
+      .error-message {
+        color: #525252;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        white-space: pre-wrap;
+      }
+    `)
+    )
+    document.head.appendChild(css)
+
+    const container = document.createElement('div')
+    container.className = 'error-overlay'
+    container.innerHTML = html
+    document.body.appendChild(container)
+  })()}});</script>
+<img style="display: none;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="80a3ba786ed5bb1cd982bd36-|49" defer></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"273cbb6c748f4d359b096e0bfa431160","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

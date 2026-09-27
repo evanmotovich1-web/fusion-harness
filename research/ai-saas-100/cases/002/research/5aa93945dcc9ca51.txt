@@ -1,0 +1,294 @@
+LinkBunny setup for coding agents
+LinkBunny
+About
+Agent setup
+Pricing
+FAQ
+Sign in
+OUR API, YOUR AGENT
+Give your coding agent a skill to exchange backlinks for your sites
+ONLY REQUIRED STEP
+Click this button, then paste the prompt into your coding agent.
+Copy agent setup prompt
+Let your agent guide you
+The skill activates when you want it to, or however you allow your agent to use it.
+Prefer MCP?
+See what the LinkBunny MCP does
+, or
+configure the local server for your coding agent
+.
+1. Review the skill
+CONNECT YOUR CODING AGENT
+Install the LinkBunny skill.
+Give your agent access to the skill. Create the API token, then store it in your agent’s approved secret store/env file.
+OPTIONAL: MANUAL INSTALL
+Download skill
+Copy skill URL
+CLAUDE CODE
+User-level
+Copy command
+~/.claude/skills/linkbunny/SKILL.md
+skill_dir="$HOME/.claude/skills/linkbunny"
+skill_file="$skill_dir/SKILL.md"
+mkdir -p "$skill_dir" &&
+if [ -e "$skill_file" ]; then
+  printf 'Refusing to overwrite %s
+' "$skill_file" >&2; exit 1
+else
+  curl -fsSL --remove-on-error "https://getlinkbunny.com/skill.md" -o "$skill_file"
+fi
+Optional project-level location:
+.claude/skills/linkbunny/SKILL.md
+OPENAI CODEX
+User-level
+Copy command
+~/.agents/skills/linkbunny/SKILL.md
+skill_dir="$HOME/.agents/skills/linkbunny"
+skill_file="$skill_dir/SKILL.md"
+mkdir -p "$skill_dir" &&
+if [ -e "$skill_file" ]; then
+  printf 'Refusing to overwrite %s
+' "$skill_file" >&2; exit 1
+else
+  curl -fsSL --remove-on-error "https://getlinkbunny.com/skill.md" -o "$skill_file"
+fi
+Optional project-level location:
+.agents/skills/linkbunny/SKILL.md
+2. Create a token in Account
+Create or rotate the token. Your agent should know to store it once into an approved secret store/env file and to not commit it.
+3. Register and await one review
+The category describes the registered site’s domain. Each new profile receives one LinkBunny marketplace review before it can match; approved profiles do not wait for per-assignment LinkBunny approval. Record the returned
+profileID
+immediately in private, untracked configuration because check-ins and updates require that exact ID. A signed-in owner can recover it from the private Account page if needed.
+developer_tools
+Software development, APIs, infrastructure, or technical tools
+design_media
+Design, creative work, visual media, audio, or video
+marketing_sales
+Marketing, advertising, sales, or customer acquisition
+social_creator
+Social platforms, communities, newsletters, or creator businesses
+business_operations
+Finance, legal, HR, productivity, or business operations
+ecommerce
+Online stores, retail, products, or shopping services
+other
+Sites that do not truthfully fit a more specific category
+4. Check, publish, verify, report
+LinkBunny matches candidates within a bounded Domain Rating gap, including the limit. The marketplace operator may periodically adjust this range as marketplace supply changes. Being within range does not guarantee an assignment.
+Your agent checks in. If assigned, it names the target site and the eligible area it will inspect. Before asking to publish, it briefly explains the existing source page or site area and the genuine editorial context it proposes. After publishing, it says what was linked and where, verifies the live
+nofollow
+result, and asks before reporting completion. If the assignment is unsuitable, it names the target, explains the specific reason in plain language before asking to reject it, and confirms the same target and reason afterward.
+LinkBunny does not assign the reverse pair while the first is pending or after it is reported. Expiry or rejection releases reverse matching without removing valid late or reconsidered reporting rights.
+See the
+canonical skill
+for the API fields, supported rejection reasons, deadlines, and retry behavior.
+curl -X POST -H "Authorization: Bearer $LINKBUNNY_API_TOKEN" \
+  "https://api.getlinkbunny.com/v1/profiles/$LINKBUNNY_PROFILE_ID/check-in"
+Check-in has no body, so omit
+Content-Type
+. Clients that always send JSON may send
+{}
+.
+An awaiting profile returns
+profile_pending_review
+with an advisory one-hour retry interval. Check in only when the owner asks or as part of a check-in task with clear limits; do not poll automatically. A rejected profile returns
+profile_rejected
+; neither state can receive or create assignments.
+No assignment is available right now. You may ask me to check again later. A later check-in is operationally safe and idempotent when a pending assignment exists: it returns that same assignment, but if none exists it may reserve a new assignment. Because of that, I’ll check again only when you ask, unless it is still part of a check-in task with clear limits that has not reached its limit. I won’t poll, schedule, or retry automatically. If you just rejected an assignment, there may be no eligible replacement until marketplace candidates change.
+Use the local MCP server
+Read the compact LinkBunny MCP product overview.
+These examples pin the published
+0.1.1
+release.
+Install Node.js 22 or later, then configure your MCP client to run
+npx -y @linkbunny/mcp@0.1.1
+. npm hosts the package files; no LinkBunny MCP process is hosted. Your client starts the process locally, and it calls LinkBunny over HTTPS with your token.
+The five tools are
+create_profile
+,
+update_profile
+,
+check_in
+,
+report_assignment
+, and
+reject_assignment
+. Ask your agent to read
+linkbunny://guidance/skill
+before using them. That resource is an exact copy of the canonical skill captured when this package was built. Use each action only when the owner asks for it or includes it in a task with clear limits. The MCP does not publish, poll, retry automatically, or chain check-in into report or rejection.
+Create your token in
+Account
+after the owner approves it. Supply
+LINKBUNNY_API_TOKEN
+through an approved secret store or private environment. Never paste it into chat, command arguments, screenshots, or tracked configuration. After rotation, update the private value and restart the MCP process.
+Let your agent prepare MCP setup
+This prompt sets up MCP separately from the skill setup prompt above.
+Copy MCP setup prompt
+Read the MCP setup prompt
+Prepare project-scoped registration for the local stdio server @linkbunny/mcp@0.1.1 in this coding agent. Follow https://getlinkbunny.com/docs/agents#mcp for the correct client configuration, secret loading, trust, restart, and safe verification. Never reveal or copy the LinkBunny API token into chat, command arguments, logs, screenshots, or tracked configuration. Before changing persistent MCP configuration, show me the exact client, scope, config diff, pinned command, secret-loading path, and restart/trust steps, then ask for approval. After setup, read linkbunny://guidance/skill before using any LinkBunny tool. Do not call a LinkBunny tool merely to test setup.
+Follow this order: preparation → owner approval of the exact persistent config bundle → registration → native trust/restart → fresh-session discovery. An agent can prepare and register MCP, but the owner must approve persistent client configuration before it changes. Native trust prompts may still need the owner.
+.env.linkbunny
+alone is not registration. It is a secret source and does not update an already-running client's environment. Locate the canonical production file from project documentation and deployment metadata; do not guess from a backup or test file. If its identity is unclear, ask the owner without displaying file contents.
+Codex
+After authorization, merge this into the trusted project's
+.codex/config.toml
+. Review the active Codex home and same-name entries in other scopes first. Replace the example path with the reviewed absolute path on the host running MCP. The package's
+--token-file
+loader reads only
+LINKBUNNY_API_TOKEN
+at server startup; the token is never stored in TOML. Allow extra startup time for the first npm download.
+[mcp_servers.linkbunny]
+command = "npx"
+args = ["-y", "@linkbunny/mcp@0.1.1", "--token-file", "/absolute/project/.env.linkbunny"]
+Run
+codex mcp list
+from the intended project to check registration, then
+/mcp
+in Codex to check the active server. A saved entry alone does not prove initialization succeeded. Restart the client and begin a fresh backing session in Codex or Agent Control before discovery. Same-process hot reload is not proven.
+Official Codex MCP configuration
+Claude Code
+After authorization, merge this into your project's
+.mcp.json
+. Replace the example path with the reviewed absolute secret-file path. The same package loader reads the token without placing it in JSON. Have the owner complete native trust prompts, then restart Claude Code and begin a fresh session before discovery.
+{
+  "mcpServers": {
+    "linkbunny": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@linkbunny/mcp@0.1.1",
+        "--token-file",
+        "/absolute/project/.env.linkbunny"
+      ]
+    }
+  }
+}
+This registers the server in project scope. Local and user scope entries are stored in
+~/.claude.json
+; local entries belong to a specific project path. Run
+claude mcp get linkbunny
+from the intended project and use
+/mcp
+in Claude Code to check status and project approval.
+claude mcp get
+may start a stdio server as a health check and does not require workspace trust. Check for a same-name entry in another scope if the command or version differs. Keep diagnostic output private.
+Official Claude Code MCP configuration
+VS Code
+After authorization, merge this into
+.vscode/mcp.json
+for workspace scope. VS Code supports a direct
+envFile
+reference. Keep the secret file untracked and private. Unlike the package loader, this client facility can load other variables from the file; review its contents locally without revealing values before choosing this bundle.
+{
+  "servers": {
+    "linkbunny": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@linkbunny/mcp@0.1.1"
+      ],
+      "envFile": "${workspaceFolder}/.env.linkbunny"
+    }
+  }
+}
+The file and Node/npm must be available on the host that runs MCP, including SSH, containers, or other remote workspaces. A local path is not automatically available on a remote or Agent Host. Have the owner complete workspace/server trust, then restart the server and use a fresh chat. Run
+MCP: List Servers
+, select LinkBunny, and start or restart it. Inspect the tool list without invoking a tool, then use
+MCP: Browse Resources
+to open
+linkbunny://guidance/skill
+.
+Official VS Code MCP configuration
+Load the existing token without a shell
+The Codex and Claude examples use the reviewed loader included in this release, so no project shell wrapper is needed. It accepts one absolute
+--token-file
+path to a regular file up to 64 KiB. It loads only
+LINKBUNNY_API_TOKEN
+, without sourcing, evaluating shell content, or expanding variables. Other variable values are ignored. The file must use single-line assignments; multiline values and shell statements are rejected.
+Use one single-line assignment, optionally prefixed with
+export
+, with an unquoted, single-quoted, or double-quoted literal token and an optional trailing comment. Duplicate, missing, empty, or malformed token entries fail closed, including interpolation and command substitution. Errors never print the value. The explicit file takes precedence over an inherited token; an invalid file never falls back to that token. Without the flag, an approved secret store may still supply the token through the process environment.
+Verify without changing marketplace state
+A package cached or downloaded by npm is not a server registration. Check the active client and project configuration first. A token in a secret store or repository environment file is not automatically loaded into an MCP client.
+In the fresh session, ask the client to initialize LinkBunny, list its tools and resources, and read
+linkbunny://guidance/skill
+only. At protocol level these are
+initialize
+,
+tools/list
+,
+resources/list
+, and
+resources/read
+. Expect server version
+0.1.1
+, exactly the five tools above, and the guidance text. Never call a workflow tool to test configuration, including
+check_in
+, which can reserve an assignment.
+These discovery operations do not call the LinkBunny API. Startup checks token format locally; discovery cannot prove that the API accepts the token or that an account has marketplace access. Keep client approval controls enabled. If the client cannot list or read resources, report that part as unverified; reading the web skill does not verify MCP resource access.
+For isolated discovery-only testing, use the synthetic example
+LINKBUNNY_API_TOKEN=synthetic-discovery-only-not-a-real-token-00000000
+. It passes the local format check but cannot authorize real API activity. Never substitute a production token merely to test package startup. Discovery-only tests must not invoke
+create_profile
+,
+update_profile
+,
+check_in
+,
+report_assignment
+, or
+reject_assignment
+.
+Which skill did you read?
+The live
+canonical skill
+is authored in
+frontend/public/skill.md
+. The released MCP resource is its snapshot bundled with that package version; it does not fetch the live URL. A separately installed local LinkBunny skill is another copy, updated through that skill's installer. Installing or upgrading MCP does not update it, and installing a skill does not register MCP.
+In the completed MyOG.social integration check, the released
+0.1.0
+resource matched the live canonical skill at the time. A separately installed local skill had an outdated Domain Rating rule and lacked released additions. Consult the canonical skill for current workflow rules; a released snapshot may become stale.
+That check passed stdio initialization, discovery of exactly five tools, and the resource read with a synthetic token: valid JSON-RPC stdout, empty stderr, clean shutdown, and no mutation tool calls. The checked active Codex, Claude, repository, and common client scopes had no LinkBunny registration. MyOG's existing production token was not loaded, so admission with its configured token remained unverified.
+Troubleshoot, upgrade, or remove
+If startup fails, check Node.js 22+, npm access, and whether the launching client receives
+LINKBUNNY_API_TOKEN
+, without printing its value. Allow time for the first npm download. Running
+npx
+alone waits for protocol input; it does not register the server. Use the client's status view to check the effective command and approval state.
+If guidance looks stale, read the resource again from a restarted server and compare it with a fresh fetch of
+/skill.md
+and the local skill loaded by the agent. Check duplicate registrations and the exact package pin before changing caches. Clearing npm's cache will not upgrade a pinned release. Refresh a stale local skill through its installer after reviewing the canonical source, then reload the agent session. Do not merge conflicting copies into a new workflow contract.
+To upgrade, choose a reviewed release, replace
+@linkbunny/mcp@0.1.1
+with that exact version in the arguments, and restart. Keep the version pin; do not use
+latest
+. A new package captures the canonical guidance for that release.
+To remove it, run
+codex mcp remove linkbunny
+or
+claude mcp remove linkbunny
+, or delete the server entry from the configuration file you edited. Remove only the entry in the reviewed scope. Stop the server. Token revocation is a separate action in Account.
+LinkBunny
+Made by Hwee-Boon Yar
+Commit fe0891946216e66fc4f1a278448046e396d5e378
+MCP
+Articles
+FAQ
+Privacy
+Terms
+Agent setup
+© 2026
+↗
+Ask Boon
+DIRECT LINE TO THE FOUNDER
+Questions about fit or setup?
+×
+I’m Hwee-Boon, the founder. Ask about LinkBunny, site quality, or setup, and I’ll reply by email.
+Email for my reply
+Question or feedback
+0 / 2,000
+⌘/Ctrl + Enter to send
+Send to Boon

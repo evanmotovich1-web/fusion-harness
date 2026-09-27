@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "version": "support-evidence-v2",
+  "results": [
+    {
+      "test_id": "additional-sources-null",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 7.245800000000441e-05,
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-string",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 8.332999999999258e-06,
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-number",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 7.415999999996203e-06,
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-absent",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 1.712499999999978e-05,
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-empty",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 1.4958000000002414e-05,
+      "input_unchanged": true,
+      "io_attempts": []
+    },
+    {
+      "test_id": "additional-sources-nonempty-unresolved",
+      "outcome": "passed",
+      "product_acceptance": false,
+      "elapsed_seconds": 2.84579999999951e-05,
+      "input_unchanged": true,
+      "io_attempts": []
+    }
+  ],
+  "scope": "R9 additional-source type validation only; unresolved evidence remains passthrough.",
+  "held_out": false,
+  "inference_executed": false,
+  "external_calls": 0,
+  "product_acceptance": false
+}

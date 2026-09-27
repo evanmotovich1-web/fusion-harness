@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "version": 1,
+  "recorded_at_utc": "2026-09-22T03:47:58.286258+00:00",
+  "kind": "capability_bound_non_execution_evidence",
+  "task_id": "2.a",
+  "capability_assessment": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "preserved_artifacts": [
+    {
+      "path": "cases/001/implementation/workflow.py",
+      "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+    },
+    {
+      "path": "cases/001/tests/fixtures.json",
+      "sha256": "da17753101d08dc5b2e017933e8a888d137febdc7cae4ead93193bd8a253f4a7"
+    },
+    {
+      "path": "cases/001/tests/specification.md",
+      "sha256": "02c0ba8f8acea7198f68a7c972bd88856ff15035b38c1cae40018cacf3afc2b2"
+    },
+    {
+      "path": "cases/001/tests/freeze.json",
+      "sha256": "06b8b25ec62f125c56543f6915d7d05ea0c67a217df912255a371a396d83a52e"
+    },
+    {
+      "path": "cases/001/receipts/baseline-blocked.json",
+      "sha256": "4104540c87febe9b92d6409213e0901d81ccd9386bfc4bb9ef473d28a08019d5"
+    }
+  ],
+  "central_workflow": {
+    "status": "blocked",
+    "reason": "No authorized callable no-additional-charge inference route established by the verified capability assessment. Existing valid requests explicitly return blocked_inference without generated text."
+  },
+  "generic_model_baseline": {
+    "status": "blocked_not_executed",
+    "historical_record": "cases/001/receipts/baseline-blocked.json"
+  },
+  "semantic_evaluation": {
+    "status": "not_executed",
+    "reason": "No real rewrite outputs exist. Protected-token survival alone cannot establish semantic correctness. Independent semantic scoring and unexposed evaluation remain required."
+  },
+  "current_task_execution": {
+    "model_calls": 0,
+    "network_requests": 0,
+    "product_tests_executed": 0,
+    "baseline_runs": 0,
+    "generated_rewrites": 0,
+    "model": null,
+    "model_settings": null,
+    "prompts_sent": [],
+    "outputs": [],
+    "latency_seconds": null,
+    "usage": null,
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "unknown_reason": "No inference attempt or billing evidence. Not a measured zero-cost run."
+    }
+  },
+  "source_modified": false,
+  "adapter_created": false,
+  "substitute_inference_created": false,
+  "historical_receipts_modified": false,
+  "product_accepted": false
+}

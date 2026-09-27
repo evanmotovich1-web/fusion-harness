@@ -1,0 +1,469 @@
+{
+  "evidence_id": "web-400d593d76b2314959f5",
+  "source_url": "https://forethought.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.952747+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://forethought.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/400d593d76b2314959f5.html",
+  "capture_sha256": "b388feecbc5b07a8e15fae798cfbb4cddf8635b3071a29e7334a7a482d65ad97",
+  "bytes_saved": 262144,
+  "title": "The Customer Service AI Platform for Modern Support Teams",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Lower support costs and deliver better customer experiences with AI agents that resolve customer issues automatically."
+    },
+    {
+      "key": "og:title",
+      "value": "The Customer Service AI Platform for Modern Support Teams"
+    },
+    {
+      "key": "og:description",
+      "value": "Lower support costs and deliver better customer experiences with AI agents that resolve customer issues automatically."
+    }
+  ],
+  "text": "The Customer Service AI Platform for Modern Support Teams\nA new chapter begins: Forethought is now part of Zendesk\nLearn More\nSkip To Main Content\nSolutions\nBack\nSolutions\nOverview\nOverview\nAgentic AI for CX—designed for every role and industry.\nLearn more\nBy Role\nCX Teams\nSupport Agents\nOperations\nSecurity & IT\nEngineering\nProduct\nBY INDUSTRY\nSaaS\nEcommerce & Retail\nFintech\nHealth, Wellness & Fitness\nMobile Apps\nEducation\nBY CUSTOMER MOMENT\nEngage\nExpand\nRetain\nQualify\nEnable\nSupport\nRequest Demo\nAgents\nBack\nAgents\nOur Platform\nOur Platform\nThe only multi-agentic system for all of customer support.\nLearn More\nAGENTS\nDiscover Agent\nAI Surfaced Insights\nFix knowledge gaps instantly\nSolve Agent\nOmnichannel AI Agent\nSolve customer issues end-to-end\nTriage Agent\nSmarter Ticket Classification\nGet every ticket to the right agent\nQA Agent\nAgent QA\nScore 100% of human agent tickets\nMORE\nAgentic AI Copilot\nEmpower human agents\nSecurity & Compliance\nKeep your data safe\nIntegrations\nRequest Demo\nChannels\nBack\nAgents\nChannels\nOur Platform\nBetter customer experiences everywhere.\nLearn More\nChat\nDeliver instant, accurate answers\nEmail\nResolve emails automatically\nVoice\nReal-time AI call resolution\nHeadless\nEmbed AI into your systems\nSlack\nInstant in-workflow support\nRequest Demo\nResources\nBack\nResources\nResource Center\nResource Center\nHelpful guides, articles, and tools to support your team. Learn how to use AI to improve customer experience.\nLearn more\nLEARN\nBlog\nOur latest and greatest blog content.\nWebinars\nEducational webinars to support CX teams.\nCustomer Stories\nSee how other teams are finding success with Forethought.\nHELP\nSupport\nGet the support you need with your Forethought account.\nFAQs\nAnswers to our most frequently asked questions.\nRequest Demo\nFEATURED\nCX Leaders Guide to AI\nPricing\nRequest Demo\nAI AGENTs FOR CUSTOMER SUPPORT & SERVICE TEAMS\nEnterprise AI Agents for Any CX Platform\nThanks for contacting us! We will get in touch with you shortly.\nOops! Something went wrong while submitting the form.\nWhy Forethought is the undisputed AI in CX leader\nFully Agentic\nFully Agentic\nForethought’s AI agents don’t just understand intent—they reason, decide, and take action using your business policies to deliver end-to-end AI customer support.\nTrained on Your Data\nTrained on Your Data\nForethought's AI agents learn from your past tickets and help center content to deliver accurate, personalized AI customer service from day one.\nMulti-Agent System\nMulti-Agent System\nDeploy AI agents that collaborate across your customer journey by identifying, solving, classifying, and supporting your team without added overhead.\nLeading the market with unmatched results\nForethought is the leading AI agent for customer support platform—recognized by G2 for ROI and customer satisfaction. Our AI Agents don’t just automate, they deliver. Want to see for yourself? Try a proof of concept.\nRead the 2025 Benchmark Report\nroi\n15x\nAverage return on investment\nDecreased Response Time\n55%\nAverage reduction in first response time\nUp to\n98%\nResolution rate\nRead the 2025 Benchmark Report\nForethought Multi-Agent System\nAI agents for smarter customer support\nTake a sneak peek behind the scenes with our interactive demo.\nour multi-agent system\nFrom insights to resolution—AI agents that do it all\nOur Platform\nAI-Surfaced Insights\nFix gaps before they become problems.\n‍\nUncover insights from all support interactions, detect knowledge gaps, and receive actionable recommendations to generate articles, optimize AI workflows, and lower costs.\nLearn More\nOmnichannel Agent\nResolve issues instantly across any channel.\nDeliver personalized, human-like, 24/7 AI customer support across chat, email, voice, and more—all from one customer experience AI platform.\nLearn More\nSmarter Ticket Classification\nGet every ticket to the right agent, fast.\n‍\nEnhance ticket classification with pre-built or custom models to add context, prioritize cases, and tag tickets automatically—driving faster, more efficient responses.\nLearn More\nAgentic AI Copilot\nEmpower human agents with an AI copilot.\nGive agents real-time insights, next steps, and intelligent responses with AI workflows—all without ever leaving your helpdesk.\nLearn More\nRead customer success stories\nUpwork Reduces Time to Resolution by 50% with Forethought\n“We were working with a different company before. They don’t brand themselves as an AI product because they work differently–I had to train every workflow myself. We had thousands of workflows built that were often duplicated that answered questions incorrectly. It became a big monster that was too complicated to manage”\nAlix Perez\nProject Manager for Chatbot & Help Center Products\nRead Case Study\n90%\nAccuracy & coverage in classifying new tickets\n50%\nReduction in time to resolution\n65%\nAverage self-serve rate\nRead Case Study\nCotopaxi Hits 168% ROI in Six Months with Forethought\n“When implementing Forethought—going from our old chatbot to the new one—the biggest thing was the ability to route customer questions automatically through specific intents.”\nAlexia Bench\nConsumer Insights Manager\nRead Case Study\n4.5\nCSAT\n28%\nIncrease in deflection rate\n168%\nROI\nRead Case Study\nYAZIO Deflects 80% of Tickets Without Lowering CSAT in 6 Months with Solve\n“We would drown in tickets if we didn’t have Solve’s 80% deflection,” Trojan said. “We’d have to hire three full-time agents focused on customer support to maintain our team’s current workload if we were to try to replace it with human support.”\nMichael Trojan\nUser Success Specialist (AI)\nRead Case Study\n80%\nTicket deflection rate\n4.0\nCSAT\nRead Case Study\nSolutions By ROLE & INDUSTRY\nScalable enterprise AI agents for support teams\nForethought helps enterprise support teams deliver faster resolutions, empower agents, and create exceptional customer experiences—whether you operate globally or regionally.\nView All Solutions\nROLE\nSupport Agents\nResolve issues faster and deliver the kind of support customers remember—for all the right reasons.\nLearn More\nINDUSTRY\nSaaS\nEnhance customer satisfaction by resolving issues instantly and scale effortlessly with AI agents built for the fast-paced world of SaaS.\nLearn More\nIntegration\nHelpdesk\nIntegrate Forethought with leading helpdesks to empower your customer service team, lower costs, and improve key support metrics.\nLearn More\nROLE\nOperations\nStreamline processes, reduce ticket volume, and optimize support operations with AI built for scale.\nLearn More\nINDUSTRY\nEcommerce and Retail\nDeliver faster resolutions, reduce returns, and create happier customers with a team of AI agents.\nLearn More\nTrusted by brands delivering exceptional service\nRecent Press\n“What has made Forethought resonate with customers is software that plugs into a company’s sales and customer service software to learn how past issues were resolved and better predict what an individual ticket might be about.”\nForbes\nThis Startup Raised $17 Million to Take On Customer Service With AI\n“When a ticket is coming in, it can predict whether it’s a high-priority or low-priority ticket and which agent is best qualified to handle this question. And this all happens before the agent even touches the ticket.”\nTechCrunch\nBattlefield winner Forethought adds tool to automate support ticket routing\n“Designed as a plug-in enterprise solution that can be installed in two days and improve customer support time-to-resolution by up to 30 percent, [Forethought] gained widespread attention as it propelled Forethought to victory at the 2018 TechCrunch Disrupt Battlefield.”\nEntrepreneur\n4 Ways Artificial Intelligence Is Shaping the Future for Businesses Big And Small\nExplore more from Forethought\nView Resources\nReport\n2025 AI in CX Benchmark Report\nGet Started Today\nBlog\nIntroducing Forethought Voice: Agentic AI That Truly Resolves Customer Calls\nRead More\nBlog\nHow Do Consumers Really Feel About Customer Support? New Consumer Survey Reveals Key Trends\nRead More\nView More\nSupport that’s faster, smarter, and more human\nFree your team to focus on high-value customer conversations that build lasting customer relationships.\nRequest a Demo\nStill deciding?\nExplore how support teams succeed with Forethought\nLearn how Forethought’s multi-agent system works\nSee how Forethought started and where we’re headed",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/css/forethought-21f5bf.shared.75fe3310c.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/6830a0ca9ddd38162fe96d51_Forethought%20Favicon%20-%20Blue%20Transparent.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/683473039103180a46bbd840_Forethought%20Webclip%20-%20Blue%20on%20Dark.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://forethought.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://forethought.ai/blog/the-next-chapter-for-forethought",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#ft-main",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/solutions",
+      "rel": null
+    },
+    {
+      "href": "/solutions",
+      "rel": null
+    },
+    {
+      "href": "/solutions/conversational-ai-platform-for-customer-experience",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-customer-service-agent",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-support-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/solutions/engineering",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product",
+      "rel": null
+    },
+    {
+      "href": "/solutions/saas-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ecommerce-retail-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/solutions/conversational-ai-chatbot-fintech",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-chatbot-for-healthcare",
+      "rel": null
+    },
+    {
+      "href": "/solutions/in-app-chat-support",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-chatbot-for-education",
+      "rel": null
+    },
+    {
+      "href": "/by-customer-moment/engage",
+      "rel": null
+    },
+    {
+      "href": "/by-customer-moment/expand",
+      "rel": null
+    },
+    {
+      "href": "/by-customer-moment/retain",
+      "rel": null
+    },
+    {
+      "href": "/by-customer-moment/qualify",
+      "rel": null
+    },
+    {
+      "href": "/by-customer-moment/enable",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-customer-service-agent",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "/platform/discover",
+      "rel": null
+    },
+    {
+      "href": "/platform/solve",
+      "rel": null
+    },
+    {
+      "href": "/platform/triage",
+      "rel": null
+    },
+    {
+      "href": "/platform/agent-qa",
+      "rel": null
+    },
+    {
+      "href": "/platform/assist",
+      "rel": null
+    },
+    {
+      "href": "/platform/security",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "/channels",
+      "rel": null
+    },
+    {
+      "href": "/channels/ai-chatbot-for-customer-support",
+      "rel": null
+    },
+    {
+      "href": "/channels/ai-email-customer-support",
+      "rel": null
+    },
+    {
+      "href": "/channels/ai-voice-agent",
+      "rel": null
+    },
+    {
+      "href": "/channels/headless",
+      "rel": null
+    },
+    {
+      "href": "/channels/ai-support-for-slack",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "/resource-center",
+      "rel": null
+    },
+    {
+      "href": "/resource-center",
+      "rel": null
+    },
+    {
+      "href": "/resource-center?category=Blog",
+      "rel": null
+    },
+    {
+      "href": "/resource-center?category=Webinar",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://support.forethought.ai/hc/en-us",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "/cx-leaders-guide-to-ai",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/682356995fc6d52ad5cf5e00_d03b9c1cd728d08e6dfe8fec8d09a416_Full%20Agentic.json",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/68203da2539798c6cc308dcc_97385a2de92f7ebb48717aa954ea5a96_Trained%20on%20Your%20Data.json",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/682356ef00ce43494722f607_Multi%20Agent%20System.json",
+      "rel": null
+    },
+    {
+      "href": "/ai-in-cx-benchmark-report-2025",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/68236ab2820a20815bd40bb3_roi.json",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/68236ab2de2ed064cdbc44f3_d40697e8f948bf27511e6c777166709d_Decreased%20Response%20Time.json",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/68236ab2a6e0d93a087d73e4_self%20serve.json",
+      "rel": null
+    },
+    {
+      "href": "/ai-in-cx-benchmark-report-2025",
+      "rel": null
+    },
+    {
+      "href": "https://app.storylane.io/demo/fs8gprwgqhzt?embed=inline",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/6822c4d8d313b4015a84562d_AI%20Surfaced%20Insights.json",
+      "rel": null
+    },
+    {
+      "href": "/platform/discover",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/6822cb3b4e7893c78eccb500_9f0699422ee4ec4c3162584e2a8e85c4_ffffffffIntelligent%20Handoff.json",
+      "rel": null
+    },
+    {
+      "href": "/platform/solve",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/6822df0248e283b2a1764ce6_Intelligent%20Handoff%20animation.json",
+      "rel": null
+    },
+    {
+      "href": "/platform/triage",
+      "rel": null
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67d3f59af6cbe778200469c9/6822dd6e48e283b2a17533c9_4eb5b21f256c9deb5e39fbbc6e53f43d_AI%20Agent%20Copilot.json",
+      "rel": null
+    },
+    {
+      "href": "/platform/assist",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/upwork",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/upwork",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/cotopaxi-168-percent-roi-forethought",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/cotopaxi-168-percent-roi-forethought",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/yazio-deflects-80-percent-forethought",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/yazio-deflects-80-percent-forethought",
+      "rel": null
+    },
+    {
+      "href": "/solutions",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ai-customer-service-agent",
+      "rel": null
+    },
+    {
+      "href": "/solutions/saas-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ecommerce-retail-ai-chatbot",
+      "rel": null
+    },
+    {
+      "href": "https://www.forbes.com/sites/alexkonrad/2020/10/28/forethought-raises-17-million-from-investors-like-ashton-kutcher-and-diddy/?sh=4401a2fe46f0",
+      "rel": null
+    },
+    {
+      "href": "https://techcrunch.com/2019/09/05/battlefield-winner-forethought-adds-tool-to-automate-support-ticket-routing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.entrepreneur.com/science-technology/4-ways-artificial-intelligence-is-shaping-the-future-for/332749",
+      "rel": null
+    },
+    {
+      "href": "/resource-center",
+      "rel": null
+    },
+    {
+      "href": "/ai-in-cx-benchmark-report-2025",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-forethought-voice-agentic-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/customer-support-consumer-survey-2025",
+      "rel": null
+    },
+    {
+      "href": "/resource-center",
+      "rel": null
+    },
+    {
+      "href": "/view-demo",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.202
+}

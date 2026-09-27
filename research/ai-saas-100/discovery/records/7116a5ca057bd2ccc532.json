@@ -1,0 +1,189 @@
+{
+  "evidence_id": "web-7116a5ca057bd2ccc532",
+  "source_url": "https://www.coderabbit.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.314181+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.coderabbit.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/7116a5ca057bd2ccc532.html",
+  "capture_sha256": "db5f48445e9c13a85022359832c25ce5e7c6843843b7ec97d62c7b0e2c1352e4",
+  "bytes_saved": 262144,
+  "title": "AI Code Reviews | CodeRabbit | Try for Free.",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "AI-first pull request reviewer with context-aware feedback, line-by-line code suggestions, and real-time chat."
+    },
+    {
+      "key": "og:title",
+      "value": "Agentic Change Management | CodeRabbit"
+    },
+    {
+      "key": "og:description",
+      "value": "The future isn't writing code. It's understanding it. Review, prioritize, understand, and secure agent outputs with CodeRabbit."
+    },
+    {
+      "key": "og:site_name",
+      "value": "CodeRabbit"
+    }
+  ],
+  "text": "AI Code Reviews | CodeRabbit | Try for Free.\nSkip to content\nIntroducing CodeRabbit Triage. Prioritize PRs by impact.\nExplore Triage\n:\nIntroducing CodeRabbit Triage. Prioritize PRs by impact.\nEnterprise\nTriage\nSecurity\nCustomers\nPricing\nBlog\nResources\nLog In\nGet a free trial\nAgentic change management\nThe future isn't writing code.\nIt's\nr\ne\nv\ni\ne\nw\ni\nn\ng\ni\nt\n.\ns\ne\nc\nu\nr\ni\nn\ng\ni\nt\n.\np\nr\ni\no\nr\ni\nt\ni\nz\ni\nn\ng\ni\nt\n.\nreviewing it.\nAI-driven code now outpaces human capacity.\nWe help teams ship code, not surprises.\nTry it for free\n01\nReview\nevery PR automatically\ncoderabbitai\nbot\ncommented 2 minutes ago\nPotential issue\n|\nMajor\nReject expired refresh tokens before issuing a session.\nCheck the token expiry before creating a new authenticated session.\n@@ -42,2 +42,3 @@ export async function createSession\n− return issueSession(payload.userId);\n+ if (payload.expiresAt <= Date.now()) return null;\n+ return issueSession(payload.userId);\nCommittable suggestion\nGuard against expired refresh tokens before issuing the session:\nif (payload.expiresAt <= Date.now()) return null;\ncoderabbitai\nbot\ncommented just now\n02\nPrioritize\nPull requests\n128\nPriority\nNotes\nRepo\nOwner\nRisk\nReward\nEffort\nComplexity\nActivity\nP0\nNew, active work needs your attention.\nmono\n#24753\n@muntani-yi\nlow\nhigh\nmedium\nmedium\nReview requested\nP1\nNew, active work needs your attention.\nservices\n#533\n@havarti2\nmedium\nmedium\nlow\nlow\nChecks running\nP2\nAssign a reviewer to keep this moving.\nwebapp_02\n#8220\n@hbuo1\nhigh\nlow\nlow\nmedium\nOwner needed\nP2\nNew, active work needs your attention.\nmono\n#24813\n@benson_d\nlow\nlow\nlow\nlow\nTriage queued\nP2\nNew, active work needs your attention.\nmono\n#24977\n@muntani-yi\nlow\nlow\nlow\nhigh\nRisk detected\nP2\nReady for a reviewer pass.\napi-gateway\n#3912\n@sloane\nmedium\nhigh\nmedium\nmedium\nReview started\nP3\nLow-risk maintenance update.\ndocs\n#1208\n@ravi\nlow\nmedium\nlow\nlow\nReady to merge\nP3\nDependency refresh is ready.\nplatform\n#9364\n@mika\nlow\nlow\nmedium\nmedium\nChecks passed\nP3\nSmall cleanup with no blockers.\nwebapp\n#25011\n@leon\nlow\nlow\nlow\nlow\nRecently updated\n03\nUnderstand\n04\nSecure\nReal-time codebase health\nMostly healthy\nScanning every PR\nLast scan now\n0 critical\nDependency vulnerability\nHigh\naxios · GHSA-4w2v-q235-vp99\nDetected on PR #482\nFix ready\nSeverity distribution\nAI Deep Scan and Dependencies\n1,999\nfindings\nCritical\n2%\nHigh\n12%\nUnscanned\n40%\nHealthy\n46%\nRead the\nSwiggy\ncase study in a new tab\nRead the\nVisma\ncase study in a new tab\nRead the\nSwiggy\ncase study in a new tab\nRead the\nVisma\ncase study in a new tab\nRead the\nTrivago\ncase study in a new tab\nRead the\nClerk\ncase study in a new tab\nRead the\nTask Rabbit\ncase study in a new tab\nTrusted by\n17K\ncustomers\n6M\nRepositories\nMost installed AI App on\nGitHub\nGitLab\n“\nWe're using CodeRabbit all over NVIDIA\nJensen Huang\n,\nFounder & CEO\n,\nWatch the NVIDIA customer story in a new tab\n#123 fix(auth)\nrefresh tokens\n#204 feat(api)\nretry queue\n#318 chore(ci)\npin runner\n#421 fix(cache)\nstale reads\n#537 feat(ui)\ncompact nav\n#612 fix(db)\nprevent deadlock\n#748 perf(search)\nbatch queries\n#819 fix(webhook)\nretry delivery\n#934 feat(logs)\nadd filters\n#1051 fix(rate-limit)\nhonor headers\n#1127 chore(deps)\nupdate SDK\n#1264 fix(alerts)\ndedupe events\n#1389 feat(metrics)\nlatency histogram\n#1452 fix(queue)\nrestore ordering\n#1578 perf(build)\ncache artifacts\n#1623 fix(api)\nvalidate cursor\n#1744 feat(traces)\nlink spans\n#1886 fix(session)\nrotate token\n#1932 chore(ci)\nreduce flakes\n#2075 fix(index)\nrebuild shards\n#2184 feat(audit)\nexport events\n#2291 fix(worker)\ndrain safely\nFast code.\nFaster chaos.\nCoding agents are flooding pipelines with massive PRs faster than teams can validate, prioritize, understand, or secure them.\n01 Review\nIndustry-leading AI code reviews.\nWe pioneered AI code reviews and have best-in-class context. Our automated reviews are the central validation layer for AI code.\nacme/platform\n#482\n1\n/\n3\ncoderabbitai\nbot\nreviewed 2m ago\nInvalidate the cache after the mutation.\nThe record updates, but the stale project key remains in Redis.\n- await db.project.update(input)\n+ await updateProjectAndInvalidate(input)\ncodex\ncoding agent\nreplied 1m ago\nFixed in\n9f2c4a1\n— invalidation now runs after the transaction, with a regression test for the stale-cache path.\ncoderabbitai\nbot\nchecked now\nVerified. The cache is cleared after commit and the new test covers the failure mode.\ncoderabbitai\nbot\nreviewed 3m ago\nReturn the HTTP error from the service layer.\nThis keeps the handler smaller and centralizes error mapping.\nSK\nshaun-k\nauthor\nreplied 2m ago\n@coderabbitai\nIn this repository, handlers own the HTTP mapping. Services return domain errors.\ncoderabbitai\nbot\nreplied now\nUnderstood — I'll follow that convention in future reviews.\n▶\nNew Learnings Added\nUser: shaun-k\nPR: acme/platform#482\nFile: app/api/projects/route.ts:42–58\nLearning: Handlers map domain errors to HTTP responses.\ncoderabbitai\nbot\nupdated just now\n▶\nPre-merge checks | ✅ 3\n▶\n✅ Passed checks (3 passed)\nCheck name\nStatus\nExplanation\nDescription Check\n✅\nPassed\nThe PR description follows the repository template.\nTitle Check\n✅\nPassed\nThe title clearly describes the payment-limit change.\nDocstring Coverage\n✅\nPassed\nNo changed functions require docstrings.\n▶\n🚀 Post-Merge Actions\nUpdate changelog\nNotify release channel\nSync docs\ncoderabbitai\nbot\ncommented just now\n▶\n🚀 Post-Merge Actions\n@shaun-k, one or more post-merge actions failed.\n✅\nUpdate changelog\n— opened follow-up PR\n#483\nNotify release channel\n— Slack connection unavailable.\ncoderabbitai\nbot\nreviewed 2m ago\nInvalidate the cache after the mutation.\nThe record updates, but the stale project key remains in Redis.\n- await db.project.update(input)\n+ await updateProjectAndInvalidate(input)\ncodex\ncoding agent\nreplied 1m ago\nFixed in\n9f2c4a1\n— invalidation now runs after the transaction, with a regression test for the stale-cache path.\ncoderabbitai\nbot\nchecked now\nVerified. The cache is cleared after commit and the new test covers the failure mode.\nDozens more points of context\nWe bring in more context than any other tool for reviews that actually understand your codebase.\nAgent loops with reviews\nLoops with your coding agents to address all the review feedback.\nContinuous learning\nAuto learns from your usage and adapts to your team's preferences.\nPre-Merge Checks & Post-Merge Actions\nEnforce standards before merge. Complete follow-up work after.\nCustomizable\nCustomize everything from your coding guidelines to your workflow and review style with Quiet, Chill, and Assertive profiles.\nSee a sample review\n02 Triage\nPrioritize your PR flood.\nWith more PRs than ever ballooning your queue, CodeRabbit Triage scores, ranks, and routes them to ship value faster.\nSearch pull requests\nPull requests\nAll reviews\n33\nNeeds my review\n17\nAuthored by me\n9\nSafe to merge\n29\nSaved views\nSecurity watch\n17\nRelease train\n23\nAgent-created PRs\n2\nP0\nUrgent\n11\n#25493\nidentity-platform\nReview Change Stack\nfix(auth): rotate exposed production signing key\nAgent detected a compromised key path. Human judgment required.\nP0\nAgent-created\nNeeds human review\nHigh risk\nDeep review\nHigh blast radius\n@sentinel-agent[bot]\n#25095\nplatform\nReview Change Stack\nfeat(mcp): add integrations-authoritative reverse tunnel routing\nNew, active work needs your attention.\nP0\nNeeds human review\nHigh risk\nDeep review\nHigh complexity\nHigh effort\n@caseyreed (Casey Reed)\n#2704\nwebapp\nReview Change Stack\ndocs(blog): explain graph engineering and LLM orchestration\nThis may need maintainer follow-up.\nP0\nNeeds human review\nLow risk\nReview later\nMedium complexity\nLow effort\n@aaravmehta (Aarav Mehta)\n#736\ndesign-system\nReview Change Stack\nfix(ads): separate campaign asset upload authorization\nReview has been waiting and may need coordination.\nP0\nNeeds human review\nLow risk\nDeep review\nHigh complexity\nLow effort\n@amaraokafor (Amara Okafor)\n#718\ndesign-system\nReview Change Stack\nfeat(ads): automate campaign configuration\nReview has been waiting and may need coordination.\nP0\nNeeds human review\nLow risk\nQuick review\nHigh complexity\nLow effort\n@amaraokafor (Amara Okafor)\n#548\ndesign-system\nReview Change Stack\ndocs(ads): separate brand and non-brand campaign handling\nThis may need maintainer follow-up.\nP0\nNeeds author action\nLow risk\nQuick review\nLow complexity\nLow effort\n@sofiaalvarez (Sofia Alvarez)\n#470\ndesign-system\nReview Change Stack\nfeat(experiments): TTS brand-voice bake-off — corpus, rubric, matrix, key-optional harness\nThis may need maintainer follow-up.\nP0\nNeeds author action\nLow risk\nQuick review\nMedium complexity\nLow effort\n@aaravmehta (Aarav Mehta)\n#592\ndesign-system\nReview Change Stack\nfeat(skills): add manual large-change handoff\nThis may need maintainer follow-up.\nP0\nNeeds author action\nLow risk\nQuick review\nLow complexity\nLow effort\n@aaravmehta (Aarav Mehta)\n#25473\nplatform\nReview Change Stack\nfix(reviews): stop reporting a successful reviewer request as a failure\nNew, active work needs your attention.\nP0\nBugfix\nLow risk\nStandard review\nHigh blast radius\nHigh complexity\nMedium effort\nIssue severity: Medium\n@kenjisato (Kenji Sato)\n#25479\nplatform\nReview Change Stack\nfix(analytics): attribute frontend events from the server-side locator\nNew, active work needs your attention.\nP0\nLow risk\nStandard review\nHigh complexity\nMedium effort\n@kenjisato (Kenji Sato)\n#25467\nplatform\nReview Change Stack\nfix(triage): exclude authored PRs from the review queue\nNew, active work needs your attention.\nP0\nBugfix\nLow risk\nQuick review\nHigh blast radius\nMedium complexity\nLow effort\nIssue severity: Medium\n@laylahaddad (Layla Haddad)\nP1\nHigh priority\n9\n#63\nevents\nReview Change Stack\nfeat(managed-events): own historical event programs\nAssign a reviewer to keep this moving.\nP1\nNew changes since last review\nNeeds human review\nLow risk\nDeep review\nHigh complexity\nLow effort\n@aaravmehta (Aarav Mehta)\n#126\ncarrot-ui\nReview Change Stack\nfeat(theme): tasteful depth, applied across the system\nReview has been waiting and may need coordination.\nP1\nNew changes since last review\nNeeds human review\nLow risk\nReview later\nLow effort\n@nadiapetrova (Nadia Petrova)\n#23204\nplatform\nReview Change Stack\nAutofix path instructions, try 2\nReview has been waiting and may need coordination.\nP1\nNew changes since last review\nNeeds human review\nLow risk\nQuick review\nMedium complexity\nLow effort\n@mateosilva (Mateo Silva)\n#1369\ndocs\nReview Change Stack\nDocument repository tabs for security scan results\nAssign a reviewer to keep this moving.\nP1\nNeeds human review\nLow risk\nQuick review\nLow complexity\nLow effort\nIssue severity: Low\n@coderabbitai[bot]\n#1281\ndocs\nReview Change Stack\nClarify reusable Agent connections\nAssign a reviewer to keep this moving.\nP1\nNeeds human review\nLow risk\nQuick review\nLow complexity\nLow effort\n@coderabbitai[bot]\n#1283\ndocs",
+  "links": [
+    {
+      "href": "/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "preload"
+    },
+    {
+      "href": "/redesign/cr-logo-name.svg?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/1lhys5k9hahug.css?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0y2jckxrxt3as.css?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1mgqgjh1aux1e.css?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1ikh9aji8n1hj.css?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/3k98etv4c2dr3.css?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/3t0giu5q-hr0t.js?dpl=dpl_FTswd7pfCiu8sQ6gCk5kcFctSdv4",
+      "rel": "preload"
+    },
+    {
+      "href": "https://t.coderabbit.ai/gtm.js?id=GTM-5BWLXJRC",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://www.coderabbit.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico?v=4",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/favicon.ico?v=4",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16x16.png?v=4",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32x32.png?v=4",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png?v=4",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/triage",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/triage",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://app.coderabbit.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.coderabbit.ai/login?free-trial=",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.coderabbit.ai/login?free-trial=",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/how-coderabbit-is-helping-swiggy-ship-faster",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/how-visma-found-the-enhance-code-quality-and-streamline-reviews",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/how-coderabbit-is-helping-swiggy-ship-faster",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/how-visma-found-the-enhance-code-quality-and-streamline-reviews",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/trivago-raises-the-floor-for-code-review-with-coderabbit",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/inside-clerks-40-percent-faster-merge-workflow-with-coderabbit",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/case-studies/taskrabbit-cut-merge-time-by-25-before-adopting-coding-agents",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=Fo9jgL_x7hU",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://github.com/TanStack/tanstack.com/pull/1075#issuecomment-5124000913",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.2314
+}

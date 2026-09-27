@@ -1,0 +1,282 @@
+{
+  "evidence_id": "r031-62bc2407f0377ebabccd",
+  "source_url": "https://klap.app/api",
+  "publisher": "klap.app",
+  "retrieved_at": "2026-09-20T21:35:37.933840+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://klap.app/api",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/031/research/captures/62bc2407f0377ebabccd.html",
+  "capture_sha256": "94bf71c6a333a6ee7c4d9e3254c003578e5e45df85d095f05cc6abf8ad085567",
+  "bytes_saved": 80198,
+  "title": "Klap API | Automate AI Video Clipping, Captions & Reframing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Integrate Klap's AI video editing into your product. Generate short-form videos, dynamic captions and smart reframing at scale via the Klap REST API."
+    },
+    {
+      "key": "og:title",
+      "value": "Klap API | Automate AI Video Clipping, Captions & Reframing"
+    },
+    {
+      "key": "og:description",
+      "value": "Integrate Klap's AI video editing into your product. Generate short-form videos, dynamic captions and smart reframing at scale via the Klap REST API."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Klap"
+    }
+  ],
+  "text": "Klap API | Automate AI Video Clipping, Captions & Reframing\nResources\nPricing\nResources\nPricing\nLog in\nGet started\nBuild with\nKlap API\nBring Klap's AI-powered video editing to your product and automate social-ready shorts generation via API\nGet started\nDocumentation\ncURL\nJavaScript\nPython\ncurl -X POST \"https://api.klap.app/v2/video-to-shorts\" \\ -H \"Authorization: Bearer <api-key>\" \\ -H \"Content-Type: application/json\" \\ -d '{ \"source_video_url\": \"https://example.com/video.mp4\", \"style_preset_id\": \"dd2875e8-4e75-4887-973c-2adc928dd2ab\", }'\nUsed by teams at\nWhat can you do with the\nKlap API\nAutomate your video creation and posting process.\nTurn long videos into shorts\nAutomatically convert long-form videos into viral shorts. Submit a YouTube URL or video file, and our API identifies the most engaging moments to deliver ready-to-post clips for TikTok, Instagram Reels, and YouTube Shorts.\nGenerate viral captions\nAdd highly accurate, dynamic subtitles to your videos in over 100 languages. Automate caption generation for user-generated content or global video production to significantly reduce manual editing time.\nSmart AI reframing\nSeamlessly convert landscape videos into portrait format. Our AI reframing technology automatically tracks and keeps the main subject centered, ensuring perfect framing for mobile-first social platforms.\nGet transcripts with timecodes\nAccess full video transcripts programmatically. Extract perfectly timed, word-level text data to power search, metadata generation, and precise video content analysis.\nTurn long videos into shorts\nAutomatically convert long-form videos into viral shorts. Submit a YouTube URL or video file, and our API identifies the most engaging moments to deliver ready-to-post clips for TikTok, Instagram Reels, and YouTube Shorts.\nGenerate viral captions\nAdd highly accurate, dynamic subtitles to your videos in over 100 languages. Automate caption generation for user-generated content or global video production to significantly reduce manual editing time.\nSmart AI reframing\nSeamlessly convert landscape videos into portrait format. Our AI reframing technology automatically tracks and keeps the main subject centered, ensuring perfect framing for mobile-first social platforms.\nGet transcripts with timecodes\nAccess full video transcripts programmatically. Extract perfectly timed, word-level text data to power search, metadata generation, and precise video content analysis.\nVideo editing API\nuse cases\nAgencies\nStreamline and speed up your editing for multiple clients. What took both hands and hours is now automated. And zero hands.\nSaaS\nUse Klap to power your podcast editor and instantly open up a host of features for your clients.\nEcommerce\nAutomate videos for your vast catalog of products and ship videos at scale. What seemed impossible, is now trivial.\nStudios\nTake on more clients. Automate and speed up your workflow, unlocking more time slots to fill in with new clients.\nEducation\nSchools, colleges, and online tutorial sites can now automate educational videos at scale.\nCreators\nCreators with high demand, open up a world of untapped growth. What took hours, can be automated.\nFrequently Asked Questions\nWhat can I do with the Klap API?\nYou can programmatically generate ready-to-publish short-form videos from long videos using AI. You can also use it to add dynamic captions and reframe already short videos, or even create managed users and embed the Klap editor directly into your product.\nHow do I authenticate with the API?\nYou need to include your API key in the request header as `Authorization: Bearer <your_api_key>`. You can obtain your API key from your Klap account dashboard at klap.app/rest-api.\nWhat is the base URL for the API?\nAll API requests should be made to the base URL: `https://api.klap.app/v2`. The API uses standard HTTP methods (GET and POST) and accepts/returns JSON format.\nCan I embed the Klap editor in my own application?\nYes! The API supports Managed Users & Embeds, allowing you to create sub-users and seamlessly embed the Klap video editor directly into your own product or platform.\nWhat video formats does the Klap API support?\nThe API supports standard video formats including MP4, MOV, and WebM. You can also provide a direct YouTube URL to process public videos.\nMade with ♥ by\n@theo\nand\n@victor\nZIGG SAS doing business as Klap\nTerms of services\nPrivacy policy\nTurn videos into viral shorts\nResources\nBlog\nTools\nAPI Docs\nDiscord\nServices\nBecome an affiliate\nAPI\nAlternatives\n2short AI\nDumme\nMunch\nOpus Clip\nQlip\nSpikes Studio\nVidyo\nVizard AI\nSsemble\nVeed.io\nSubmagic\nZubtitle\nWisecut\nLiveLink\nSendShort\nShort.ai\nNexus Clips\nWayin\nClipGoat\nCutLabs",
+  "links": [
+    {
+      "href": "/_next/static/media/0484562807a97172-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/8888a3826f4a3af4-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/b957ea75a84b6ea7-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/eafabf029ad39a43-s.p.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/svg/Klap_logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.klap.app/projects/eE4ZRqp6wQyd/thumbnail",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.klap.app/projects/At7OIF3Sxd0E/thumbnail",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.klap.app/projects/ogrCEEh6zKTW/thumbnail",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.klap.app/projects/MPwAYuKR1RdM/thumbnail",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.klap.app/projects/Qk5HbDlQQ5wr/thumbnail",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-agencies.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-saas.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-ecommerce.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-studios.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/29445a73565ad896.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/62f3c6f7893387c4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-fed46cb8111a0b7b.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-education.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app/web-assets/api-icons/v28/api-use-case-creators.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://assets.klap.app",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://storage.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://klap.app/api",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.klap.app",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://docs.klap.app",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/signup",
+      "rel": null
+    },
+    {
+      "href": "/rest-api",
+      "rel": null
+    },
+    {
+      "href": "https://docs.klap.app",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/deletethistheo",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://twitter.com/VictorTimsit",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/terms-of-services",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "https://docs.klap.app",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/KcAcHdrSQU",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/2short-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/dumme",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/munch",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/opus-clip",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/qlip-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/spikes-studio",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/vidyo-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/vizard-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/ssemble",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/veed-io",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/submagic",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/zubtitle",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/wisecut",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/livelink",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/sendshort",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/short-ai",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/nexus-clips",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/wayin",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/clipgoat",
+      "rel": null
+    },
+    {
+      "href": "/alternatives/cutlabs",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.313721
+}

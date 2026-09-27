@@ -1,0 +1,537 @@
+{
+  "evidence_id": "web-a021421682130e5ad8a0",
+  "source_url": "https://www.sembly.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.539183+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.sembly.ai/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/a021421682130e5ad8a0.html",
+  "capture_sha256": "7512f3dc90b37a76c71ba6c32822fdff093d1b7062d0b2d57cb376906dcc57a7",
+  "bytes_saved": 61563,
+  "title": "Agentic AI for Professional Services | Sembly AI",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Sembly — agentic AI platform for professional services. Build on-brand client documents and presentations from scratch. Try it free."
+    },
+    {
+      "key": "og:title",
+      "value": "Agentic AI for Professional Services | Sembly AI"
+    },
+    {
+      "key": "og:description",
+      "value": "Sembly — agentic AI platform for professional services. Build on-brand client documents and presentations from scratch. Try it free."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Sembly AI"
+    }
+  ],
+  "text": "Agentic AI for Professional Services | Sembly AI\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nAffiliate Program\nReseller Program\nTrust Center\nHelp Center\nPricing\nSign in\nStart free\n→\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nAffiliate Program\nReseller Program\nTrust Center\nHelp Center\nPricing\nSign in\nStart free\n→\nLooking for Meeting Notes?\n→\n×\nAI deliverable production for professional services\nClient brief in.\nBranded deck out.\nSembly transforms meetings, documents, and other background materials into polished proposals, case studies, and agreements. Ready in minutes, not days.\nCreate your first deck\n→\nTalk to sales\nFrom context to client-ready work\nBR\nBrand package\nAa\nFont styles\nLogo, colors, fonts, voice, and more\nRF\nReference materials\nMarket landscape\nReports, decks, data, and docs\nMT\nMeeting notes\nDiscussed priorities\nGrowth opportunities\nBudget considerations\nTranscripts and key takeaways\nReady to review\n✓\nH\nHALCYON\nFOODS\nPrepared for\nMeridian Labs\nMay 15, 2026\nQ3 Growth Proposal\nA strategic plan to accelerate growth and market leadership in Q3.\nExecutive summary\nhalcyonfoods.com\n01 / 12\nBuilt for professional services teams turning knowledge into delivery\nConsulting\nAgencies\nTechnology services\nAdvisory\nRecruitment\nVenture teams\nTrusted by teams at\nPlatform\nFrom a goal statement to a finished deliverable.\nSembly remembers everything about every client and handles the production. Your team sets the goal, steers the draft, and approves what goes out.\n01 / 03\nEvery client gets a living context environment.\nIdentity, project history, reference files, contracts, meetings, and delivery standards — kept together and reused across every engagement.\n✓\nClient and project hierarchy\n✓\nReusable brand packages\n✓\nShared institutional context\n02 / 03\nOne goal statement starts the work.\nDescribe the deliverable you need. Sembly assembles the relevant context from meetings, documents, CRM records, websites, and knowledge bases.\n✓\nA goal, not a prompt chain\n✓\nFine-grained control over sources\n✓\nResults grounded in your context\n03 / 03\nSteer the build. Approve the file.\nWatch the document take shape, you guide structure and emphasis as it builds. Export the finished .pptx or .docx in the client's brand.\n✓\nStructured steering as it builds\n✓\nOn-brand layouts and visuals\n✓\nNothing ships without your approval\nDeliverables\nEvery client-facing document, on demand.\nPick a document type or describe your own. Every one exports as an editable PowerPoint or Word file in the client's brand.\nP\nProposal\n.pptx / .docx\nP\nPitch deck\n.pptx\nW\nStatement of work\n.docx\nW\nProject plan\n.docx\nW\nStatus report\n.docx\nP\nQBR deck\n.pptx\nW\nCreative brief\n.docx\nP\nCampaign report\n.pptx\nStart Free Trial\n→\nBook a Demo\nInstitutional intelligence\nNot another chatbot. A repeatable delivery system.\nGeneric AI depends on each person's prompting skill. Sembly gives every professional the same context, brand standards, templates, and workflows.\nZero\nprompting skills required\nOne\ngoal statement is all it takes to start a deliverable\nTwo\nnative output formats — editable PowerPoint and Word files\nAny\nknowledge source: meetings, documents, CRM, web, wikis\nUse cases\nBuilt for the work after the conversation.\nCreate the concrete deliverables that move deals, projects, and client relationships forward.\nSales\nFrom discovery to proposal.\nTurn conversations, account history, and client messaging into a tailored pitch deck and proposal while the opportunity is still warm.\nCreate a Deliverable\n→\nDelivery\nFrom project knowledge to status.\nGenerate project plans, SOWs, change registers, reports, and executive updates from the latest decisions and source materials.\nCreate a Deliverable\n→\nMarketing\nEvery output on-brand.\nProduce creative briefs, media plans, campaign reports, and client updates using the correct visual identity and tone.\nCreate a Deliverable\n→\nSembly 3.0\nTurn client knowledge into client-ready work.\nGive every team member the opportunity to do their best work — on every engagement.\nStart free\n→\nBook a demo\nThe system behind every deliverable — branded, accurate, and approved by your team.\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nPricing\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & Creative\nProduct Development\nDepartments\nLeadership\nSales\nHR & Recruitment\nCustomer Success\nLegal & Finance\nResources\nAbout Us\nBlog\nWebinars\nHelp Center\nAffiliate Program\nTrust Center\nReseller Program\n© 2026 Sembly AI. All rights reserved.\nTerms of Service\nPrivacy Policy\n234 5th Ave, New York, NY 10001",
+  "links": [
+    {
+      "href": "https://www.sembly.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/sitemap.xml",
+      "rel": "sitemap"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-256x256.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/assets/favicon-256x256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/_astro/privacy-policy.D4VUlsqm.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_astro/index.DQWgWnuc.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/notes/login",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/notes/login",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://www.sembly.ai/form/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://www.sembly.ai/form/",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://webapp.sembly.ai/signup/with-calendar",
+      "rel": null
+    },
+    {
+      "href": "https://www.sembly.ai/form/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/solution-for-professional-services/",
+      "rel": null
+    },
+    {
+      "href": "/how-it-works/",
+      "rel": null
+    },
+    {
+      "href": "/platform-comparison/",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-artifacts/",
+      "rel": null
+    },
+    {
+      "href": "/product/organizational-knowledge/",
+      "rel": null
+    },
+    {
+      "href": "/product/clients-branding/",
+      "rel": null
+    },
+    {
+      "href": "/product/meetings/",
+      "rel": null
+    },
+    {
+      "href": "/product/automations/",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/small-medium-businesses/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/freelancers-micro-entities/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/management-consultancy/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/project-management/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/it-outsourcing/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/marketing-creative/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/product-development/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/leadership/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/sales/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/hr-recruitment/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/customer-success/",
+      "rel": null
+    },
+    {
+      "href": "/solutions/legal-finance/",
+      "rel": null
+    },
+    {
+      "href": "/about-us/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/webinars/",
+      "rel": null
+    },
+    {
+      "href": "https://help.sembly.ai/en",
+      "rel": "noopener"
+    },
+    {
+      "href": "/affiliate-program/",
+      "rel": null
+    },
+    {
+      "href": "https://trustcenter.sembly.ai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "/reseller-program/",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service/",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://discord.gg/QhT6JaEFmm",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.reddit.com/r/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://x.com/sembly_ai",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.instagram.com/semblyai/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.facebook.com/SemblyAI/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCC2SojuAyLz9rlFtpExDFBQ",
+      "rel": "noopener"
+    }
+  ],
+  "elapsed_seconds": 0.3739
+}

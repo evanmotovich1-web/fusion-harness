@@ -1,0 +1,393 @@
+{
+  "evidence_id": "web-db54da8f23d7ab6b9e65",
+  "source_url": "https://formulabot.com/",
+  "retrieved_at": "2026-09-20T21:00:56.281529+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://betteranalyst.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/db54da8f23d7ab6b9e65.html",
+  "capture_sha256": "c87b35dce5e2dbe0a51a5bbcb660cbe915f9947ed7986ad63a28841fe8ff8444",
+  "bytes_saved": 262144,
+  "title": "Better Analyst (formerly Formula Bot) | All-in-One Analytics",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Better Analyst is the all-in-one analytics app for individuals and growing businesses. Enrich data, uncover insights, build dashboards, and automate recurring work."
+    },
+    {
+      "key": "og:title",
+      "value": "Better Analyst (formerly Formula Bot) | All-in-One Analytics"
+    },
+    {
+      "key": "og:description",
+      "value": "Better Analyst is the all-in-one analytics app for individuals and growing businesses. Enrich data, uncover insights, build dashboards, and automate recurring work."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Better Analyst"
+    }
+  ],
+  "text": "Better Analyst (formerly Formula Bot) | All-in-One Analytics\nFormula Bot is now Better Analyst—same account, more powerful analysis.\nFormula Bot is now Better Analyst—same account and workflows, with more powerful analysis, dashboards, and automation.\nLearn what changed\n→\nProduct\nConnectors\nPricing\nBook a demo\nLog in\nTry free\nThe all-in-one analytics app\nAll your analytics work,\nin one place.\nConnect your data and turn it into an analysis, dashboard, report, or automated workflow. Built for individuals and growing businesses—no analytics team required.\nStart analyzing for free\nJoin 1M+ users.\nNo credit card required.\nTry a real question\nYour question carries into your free workspace\nAnalyze this month’s sales\nBuild a live executive dashboard\nClean & send to Google Sheets\nEvaluating Better Analyst for your team?\nBook a personalized demo\nData Visualization\nData Preparation\nData Science\nDashboards\nData Flows\nPresentations\nEnrich\nReplace the fragmented stack\nOne app for the whole\nanalytics workflow.\nConnect your sources, analyze your data, build dashboards, and automate reporting in one place.\nA fragmented stack requires separate automation, data preparation, analysis, BI, reporting, and presentation tools, with handoffs across data engineers, analysts, and scientists. Better Analyst connects these sources in one workspace for analysis, dashboards, enrichment, spreadsheets, reports, presentations, and automation.\nThe fragmented stack.\nYour team manually stitches together data to tell a story.\nSources\nAnalytics\nSearch Console\nAirtable\nPostgreSQL\nExcel\nBigQuery\nTools\nAutomation\nData preparation\nAnalysis\nBI / dashboards\nReporting\nPresentations\nPeople\nData engineer\nData analyst\nData scientist\nTogether in Better Analyst.\nAll your analytics work, in one place.\nYOUR DATA, WHEREVER IT LIVES\nGA4\nGSC\nTableau\nPower BI\nAirtable\nSheets\nDrive\nDropbox\nOneDrive\nSharePoint\nBigQuery\nSnowflake\nMySQL\nPostgreSQL\nSupabase\nMSSQL\nExcel\nPDF\nCSV\nApps, databases, spreadsheets, and documents.\n→\n→\nConnect\nBring your data together\nAnalyze\nAsk questions, find answers\nDashboards\nSee the whole picture\nEnrichment\nAdd context to your data\nSpreadsheets\nBuild ready-to-use workbooks\nReports\nTurn findings into a story\nPresentations\nShare presentation-ready insights\nAutomate\nKeep recurring work moving\nThe all-in-one analytics app\nDocs\nLog in\nSign up\nData Flows\nAI Dashboard Generator\nExcel AI\nAI Chart Maker\nAI Spreadsheet Generator\nPDF to Excel Converter\nBank Statement to Excel\nSentiment Analysis Tool\nAI Homework Helper\nAI SQL Query Generator\nVBA Code Generator\nGoogle Sheets Formula Generator\nGoogle Apps Script Generator\nRegex Generator\nExcel Formulas\nGoogle Sheets Formulas\nGoogle Analytics Connector\nGoogle Search Console Connector\nTableau Connector\nPower BI Connector\nAirtable Connector\nGoogle Sheets Connector\nGoogle Drive Connector\nDropbox Connector\nOneDrive Connector\nSharePoint Connector\nGoogle BigQuery Connector\nSnowflake Connector\nMySQL Connector\nPostgreSQL Connector\nSupabase Connector\nMicrosoft SQL Server Connector\nProduct\nExcel Templates\nCalculators\nChart Makers\nDatasets\nJulius AI Alternative\nFeatured On\nROI Calculator\nBlog\nContact Us\nDocs\nPrivacy Policy\nTerms of Service\nFair-Use Policy\nSecurity\nEspañol\n©\n2026\nBetter Analyst.\nAll rights reserved.\nDashboards · Data automation · Data enrichment\nOne app for the entire analytics workflow\nGo from raw files and live business data to enriched datasets, polished dashboards, reports, presentations, and automated workflows.\nData Visualization\nTransform raw data into beautiful, interactive charts and graphs.\nData Transformation\nClean, standardize, merge, reshape, and organize raw data from multiple sources into analysis-ready formats.\nCode Transparency\nSee the exact code generated for every request. Verify, learn, and export for your own use.\nPython\n1\nimport pandas as pd\n2\ndf = pd.read_csv('data.csv')\n3\ndf.groupby('date').sum()\nSQL\n1\nSELECT date, SUM(profit)\n2\nFROM sales\n3\nGROUP BY 1 ORDER BY 1;\nR\n1\nggplot(df, aes(x, y)) +\n2\ngeom_line() +\n3\ntheme_minimal()\nAI Agents\nCreate reusable agents that understand your business, follow your analytical approach, and present results your way.\nText Analysis\nAnalyze text with sentiment detection, language translation, keyword extraction, and more.\nAnalyze sentiment in customer reviews\nAnalyzed\n847\nreviews:\n\"\nGreat product, fast shipping!\n\"\nPositive\n\"\nIt works fine, nothing special\n\"\nNeutral\n\"\nBroke after two days, very disappointed\n\"\nNegative\n\"\nExceeded my expectations!\n\"\nPositive\nData Connectors\nConnect analytics, BI, databases, warehouses, and cloud files from one place.\nAutomated delivery\nData Flows\nFresh data in. The same transform. A recorded delivery.\nActive\nPipeline ready\nFLOW-04\n4 sources\nGA4\nSearch Console\nAirtable\nGoogle Sheets\nTransform\n5 saved steps\n4 targets\nGoogle Sheets\nSnowflake\nBigQuery\nPostgreSQL\nMonday · 07:30\nNext run\n2,418 rows\nDelivered\nInspect flow\nData Explorer\nBrowse curated datasets spanning government, economics, health, weather, and more — ready to analyze instantly.\nUS Population Data\nFile\n3.2k rows\nStock Market Index\nDatabase\n12k rows\nWeather Stations\nAPI\nLive\nConsumer Prices\nAPI\nLive\nCompany Filings\nFile\n48k rows\nGDP by Country\nDatabase\n8.5k rows\nEmbeddable Analytics\nAdd AI-powered analytics chat to your website with a single iframe snippet. Custom-branded for your users.\nCopy\nyourapp.com/dashboard\nData Context\nAdd context files, metrics, and definitions so the AI answers with your business context.\nBrand Kits\nKeep colors, typography, number formats, and artifact styling consistent automatically.\nSpreadsheets & Reports\nExport to Excel, generate formatted reports, and automate your data workflows.\nMake me a spreadsheet of profit by state\nprofit_by_state.xlsx\nExport\nA\nB\n1\nState\nProfit\n2\nCalifornia\n$45,200.00\n3\nNew York\n$38,900.50\n4\nTexas\n$32,100.00\n5\nFlorida\n$28,500.25\nAnalytics that fits how you work\nStart on your own. Keep using it as you grow.\nBetter Analyst gives one person the power to do more with data—and gives a growing business one place to keep that work consistent.\nFor individuals\nDo the work of an analyst without learning SQL, Python, or another business intelligence platform.\nFor small businesses\nBring sales, marketing, finance, and operations data together, enrich it, and automate recurring reporting without assembling a data team.\nFor growing teams\nStandardize metrics, dashboards, data enrichments, and automated workflows as your business grows.\nStart analyzing for free\nAI Dashboards\nBuild beautiful dashboards in seconds with AI\nDescribe what you need and AI generates a fully interactive dashboard. Pick a template, customize every detail, and schedule automatic data refreshes.\nExecutive\nClean Corporate\nTerminal\nMaximum Density\nGlass\nPremium Cinematic\nEditorial\nNarrative Authority\nLearn More\nSecurity First\nData privacy and security\nData is securely stored, encrypted, and executed in a dedicated, isolated sandbox environment for every chat. Apply row-level security to database connections for complete data isolation.\nYour data is YOUR data. We never use your data to train AI models.\nYour data is always private. Your files, data sources and conversations remain isolated, keeping your business information confidential.\nData is encrypted in-transit and at-rest\nAll data is stored and encrypted in Amazon Web Services (AWS), which meets 143 security standards and certifications. Data is safeguarded in transit with TLS and at rest through RDS AES-256 encryption.\nRow-level security for your data\nControl access at the row level. Each user only sees data they're authorized to access, ensuring complete data isolation between organizations.\nmembers\nname\nemail\norgID\nsales\nid\namount\norg_id\nSelected columns\n=\n12345\nFilter Preview\nmembers:\n`orgID`\n=\n12345\nsales:\n`org_id`\n=\n12345\nConnected data\nConnect the tools your business already uses.\nView all connectors\nGoogle Analytics\nGoogle Search Console\nTableau\nPower BI\nAirtable\nGoogle Sheets\nGoogle Drive\nDropbox\nData Flows / Automated delivery",
+  "links": [
+    {
+      "href": "/_next/static/chunks/1fcxw1p5e_eyc.css?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1o4ymd8lz4v16.css?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/3wycczlia11l-.css?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0l3py0yv9ta_m.css?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/023ykb98_iyjr.css?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0al7rskp-riuv.js?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "preload"
+    },
+    {
+      "href": "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtag/js?id=G-P94TJLSC8Y",
+      "rel": "preload"
+    },
+    {
+      "href": "https://betteranalyst.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://betteranalyst.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://betteranalyst.com/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://betteranalyst.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico?favicon.1h0604lu0qbl8.ico?dpl=39d45f757592f2ee4e2c3785f3fc03979f5d1947",
+      "rel": "icon"
+    },
+    {
+      "href": "/brand/better-analyst/favicon-32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/brand/better-analyst/app-icon-512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/formula-bot-is-now-better-analyst",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#pricing",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/signup",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "/docs/get-started/welcome",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/signup",
+      "rel": null
+    },
+    {
+      "href": "/product/data-flows",
+      "rel": null
+    },
+    {
+      "href": "/ai-dashboard-generator",
+      "rel": null
+    },
+    {
+      "href": "/excel-ai",
+      "rel": null
+    },
+    {
+      "href": "/chart-maker",
+      "rel": null
+    },
+    {
+      "href": "/ai-excel-spreadsheet-generator",
+      "rel": null
+    },
+    {
+      "href": "/pdf-to-excel-ai",
+      "rel": null
+    },
+    {
+      "href": "/bank-statement-converter-pdf-to-excel",
+      "rel": null
+    },
+    {
+      "href": "/sentiment-analysis-tool",
+      "rel": null
+    },
+    {
+      "href": "/ai-homework-helper",
+      "rel": null
+    },
+    {
+      "href": "/ai-sql-query-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-vba-code-generator",
+      "rel": null
+    },
+    {
+      "href": "/google-sheets-formula-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-google-apps-script-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-regex-generator",
+      "rel": null
+    },
+    {
+      "href": "/excel-formulas",
+      "rel": null
+    },
+    {
+      "href": "/google-sheets-formulas",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/google-analytics",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/google-search-console",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/tableau",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/powerbi",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/airtable",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/google-sheets",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/google-drive",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/dropbox",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/onedrive",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/sharepoint",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/bigquery",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/snowflake",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/mysql",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/postgresql",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/supabase",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors/mssql",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/excel-templates",
+      "rel": null
+    },
+    {
+      "href": "/calculators",
+      "rel": null
+    },
+    {
+      "href": "/chart-maker",
+      "rel": null
+    },
+    {
+      "href": "/product/data-explorer",
+      "rel": null
+    },
+    {
+      "href": "/vs/julius-ai",
+      "rel": null
+    },
+    {
+      "href": "/featured-on",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/docs/get-started/welcome",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-services",
+      "rel": null
+    },
+    {
+      "href": "/fair-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/docs/security-privacy/overview",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/product/data-flows",
+      "rel": null
+    },
+    {
+      "href": "https://app.betteranalyst.com/signup",
+      "rel": null
+    },
+    {
+      "href": "/product/dashboards",
+      "rel": null
+    },
+    {
+      "href": "/data-connectors",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/google-analytics",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/google-search-console",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/tableau",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/powerbi",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/airtable",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/google-sheets",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/google-drive",
+      "rel": null
+    },
+    {
+      "href": "/docs/connectors/dropbox",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.6749
+}

@@ -1,0 +1,397 @@
+{
+  "evidence_id": "web-15f2bd5aff94769eacb1",
+  "source_url": "https://www.blackbox.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.761495+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.blackbox.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/15f2bd5aff94769eacb1.html",
+  "capture_sha256": "25dfb9f4221d24cbbac9289e31feaac16dd181c9a0c0193d8b70a27dd93cd837",
+  "bytes_saved": 262144,
+  "title": "Blackbox: The high-trust platform for frontier inference",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Secure, private, fast. We run the open-weight model that you choose as a dedicated deployment, or we route 300+ models through one endpoint. Verified speed."
+    },
+    {
+      "key": "og:title",
+      "value": "Blackbox: The high-trust platform for frontier inference"
+    },
+    {
+      "key": "og:description",
+      "value": "Secure, private, fast. We run the open-weight model that you choose as a dedicated deployment, or we route 300+ models through one endpoint. Verified speed."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Blackbox"
+    }
+  ],
+  "text": "Blackbox: The high-trust platform for frontier inference\nPLATFORM\nPrivacy\nWe provide end-to-end encryption and retain zero data. On Enterprise, we remove PII before prompts reach a closed model.\nSpeed\nArtificial Analysis verified us as the #1 Nemotron 3 Ultra provider at 454 tokens/sec, July 2026.\nMODELS\nModel catalog\nCompare models\nBlackbox Router\nDEPLOYMENT\nDedicated deployment\nSecurity overview\nZero data retention\nMicrosoft Azure\nENTERPRISE\nMove faster with direct support from Blackbox engineers, from your first token to production scale.\nTALK TO SALES\n→\nPRODUCTS\nEnterprise\nInference\nSECURE INFERENCE FOR ENTERPRISE\nThe open-weight model that you choose, on capacity reserved for you: no shared pools, and no other customers on the instance.\nBlackbox Router\n300+ open and closed models through one endpoint. The gateway enforces zero data retention and no training, wherever the provider API supports it.\nAgents API\nSend coding agents to any repository over HTTP: create runs, stream logs, and open PRs.\nCommand Line\nAn agentic terminal that reads the conventions of your repository.\nRESOURCES\nDeveloper\nDocumentation\nGUIDES · API REFERENCE · SDKS\nQuickstarts, the full API reference, and SDK guides, from your first key to production traffic.\nLATEST BLOGS\nAnnouncing Nemotron 3.5 Lightning: reasoning at 1,200 tokens/sec\nAUG 11, 2026 · 5 MIN READ\nTB v2.1 Blackbox: GPT-5.6 Sol + Opus 4.8 (90% pass@1)\nJUL 21, 2026 · 2 MIN READ\nBenchmark Performance: Faster Inference, Reference-Level Model Quality\nJUL 15, 2026 · 2 MIN READ\nView all blogs\n→\nCOMPANY\nMission\nCareers\nPress kit\nBrand guide\nGET STARTED\nCreate an account\nLog in\nTALK TO US\nQuestions about deployment, procurement, or a custom contract? We route you to a person, not a form reply.\nCONTACT US\n→\nPRICING\nLOGIN\nGET STARTED\nSECURE INFERENCE FOR ENTERPRISE\nEnd-to-end\nencrypted\ninference\nfor\nevery\nmodel.\nPrompts are encrypted before they leave your machine and decrypted only where the model runs. Nothing readable crosses the wire, and zero data retention means nothing is kept after the answer.\nGET A DEMO\nREAD THE SECURITY MODEL\nENCRYPTED\nNOT ENCRYPTED\nSealed in the client. The proxy, the host, and the operator never hold the key.\nagent tui | docker logs -f\nCLIENT · DECRYPTED\n⌘1\nagent tui 0.4.2 | local embedded | agent main\n>\nexplain ssh\nSSH,\nor\nSecure\nShell\n,\nis\na\nprotocol\nfor\nlogging\nin\nto\nanother\ncomputer\nover\na\nnetwork\nyou\ndo\nnot\ntrust\nand\nworking\non\nit\nas\nif\nyou\nwere\nat\nits\nkeyboard.\nEverything\nthat\npasses\nbetween\nthe\ntwo\nmachines\n(commands,\noutput,\nfiles)\nis\nencrypted\nbefore\nit\nleaves\nand\ndecrypted\nonly\non\nthe\nother\nend.\n###\n1.\nWhat\nis\nit\nused\nfor?\n-\nRemote\nadministration:\nopen\na\nshell\non\na\nserver\nto\ninstall\npackages,\nedit\nconfigs,\nor\nread\nlogs.\n-\nFile\ntransfer:\nscp\nand\nsftp\nride\non\ntop\nof\nSSH,\nso\ncopies\ninherit\nthe\nsame\nprotection.\n-\nPort\nforwarding:\nwrap\na\nplaintext\nservice,\nlike\na\ndatabase\nport,\ninside\nthe\ntunnel.\n###\n2.\nWhere\ndoes\nthe\nsecurity\ncome\nfrom?\nSSH\nreplaced\nTelnet\n,\nwhich\nsent\npasswords\nin\nthe\nclear.\nIt\nlayers\nthree\nkinds\nof\ncryptography:\n-\nKey\nexchange:\nboth\nsides\nderive\na\nfresh\nsession\nkey;\nan\nobserver\nnever\nsees\nit.\n-\nSymmetric\nencryption:\nthat\nkey\nencrypts\nthe\ntraffic,\nfast\nenough\nfor\ninteractive\nuse.\n-\nIntegrity\nchecks:\nevery\npacket\ncarries\na\nMAC,\nso\ntampering\nis\ndetected\nand\nthe\nconnection\ndrops.\n###\n3.\nKeys\ninstead\nof\npasswords\nPut\nyour\npublic\nkey\non\nthe\nserver\nin\nauthorized_keys\n.\nYour\nprivate\nkey\nnever\nleaves\nyour\nmachine,\nso\nthere\nis\nno\npassword\nto\nphish,\nand\naccess\nis\nrevoked\nby\ndeleting\none\nline.\n###\n4.\nA\nminimal\nconfig\n```\n#\n~/.ssh/config\nHost\nprod\nHostName\n203.0.113.7\nUser\nadmin\nIdentityFile\n~/.ssh/id_ed25519\nForwardAgent\nno\n```\nThen\nssh\nprod\nconnects.\nOn\nthe\nfirst\nconnection\nSSH\nshows\nthe\nhost\nfingerprint\nand\nasks\nwhether\nto\ntrust\nit.\n###\n5.\nSummary\n|\nConcern\n|\nMechanism\n|\n|-----------|---------------------------|\n|\nIdentity\n|\nHost\nkey\nfingerprint\n|\n|\nLogin\n|\nPublic\nand\nprivate\nkey\n|\n|\nPrivacy\n|\nPer-session\nsymmetric\nkey\n|\n|\nIntegrity\n|\nPer-packet\nMAC\n|\nlocal ready | idle\nagent main | session tui-976f797a… | bbenc/nvidia/nemotron-3.5-lightning | tokens 7.6k/128k (6%)\nWIRE · ENCRYPTED\n⌘2\n2026-09-10 14:12:37,911 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3670, \"iv\": \"mquT4lcbJtQk+UKf\", \"ciphertext\": \"TyoKRmRG6qGOgqOylpIA/RUTOqh4iZhcbX5GHbDTSO5OIs2hS844v8Oq1rd+ibeOuTEGUTuANMasZv7GxAhCX7SMaXTVgroB+jkaqRacyYTjaaJt7/U9sJOS/laIfmewr411F2StW5QzO2t11NJQ2vz5Et4JpVac\", [84 chars omitted], \"signature\": \"MGUCMQ82XS/mYhia46lQonRablP5ELn4kadv5TjVYyAqGhr/RIKyRzSDvr3KMsyJzp3FGTCxcE2HPR4TdjWxAVarsvr/dgR2PIHzhE34w+81Y/rJW8bW6UroqTpHgaBL7bT1Bl3Zj7==\"}\n2026-09-10 14:12:37,928 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3671, \"iv\": \"CJcOr94pE8iV6AaN\", \"ciphertext\": \"ZaaPLZACnVp/b0YMMRR/1v7WqvCPSzDZ9+Xc/eT0AbrwCjLOWYtttXlXRksMoopMSmMpnOnOl3M6hSs/YWtu5LCBFmfOTNBt2wCwRw4s1vloxLTYz4lpnOmU40ann5ZQ3RmQDhdq7ED5xN+dtYZjbocSFrkABzet\", [116 chars omitted], \"signature\": \"MGYCMQChrKXkOwt94F2UF18nCgVnk8Q7iFLPzadUSeNAPcP2nebs32fweHePk6cZwkirVmdqkOLbY3Swk+xphNBjgf5S/G+dLkgchDuengxzFenXjCi4WaaDzlxORx2thz4/BHabhM==\"}\n2026-09-10 14:12:37,944 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3672, \"iv\": \"p6Sqt1n1h6525zoE\", \"ciphertext\": \"jJnvPAYPkjPLGC4rWOY7/UZ40KudTa8eNlhiqGrIDaq4pFDstP0q0t7gqDjMu7iVb6QCEyRetQqaywkF83I5+dlcfj+XmiFaeAPa3wMZJ2fLtTTc3PWotXsaTf/PpzPIgFRHoohTWQe0NCF/Q1aurSyhejfJnpVL\", [84 chars omitted], \"signature\": \"MGYCMQCB8mbCfd/fa0rX1C3vt+0yNb4YKeLILy3rB4B1f98PXwNVOv9p5trYpXKb/o4eALId5tgdfaP1Tz7meCw0bd8RniafSCCnnfhq0+CD8tKGkK1b7KRNmEdx0MAoUGtRSVpC4y==\"}\n2026-09-10 14:12:37,957 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3673, \"iv\": \"vZ1Cak0NUinTrEEJ\", \"ciphertext\": \"5gHvZ/LD6f/03lymaGq4DXdd++mW1BkW575BGkjz0QNWLq0Wqrz3MbQWbYvf6ujRQ68I7XMxR/qwlM1+yHET9tSizTLb5Fcxo4bC3nV5skhrkJuHvrCKpaxb4lG6ry04gCLK6w/+DT2/cGe6+ajF9DPDPm9nfHSs\", [144 chars omitted], \"signature\": \"MGQCMBjU4KjvQf8dgvO2Z9wSA6jBRetGKAyWm3AveLqu+aQb0ntPNxIepPrdStqZz80q1QX65pmfFa0gHU0r4C1rdz2XS5WqoXOfkusN+XkJoMIax81GAUOUjlXQMB/Aa88E3ifn/6==\"}\n2026-09-10 14:12:37,972 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3674, \"iv\": \"vW9P60XJ9xCt5R99\", \"ciphertext\": \"8h8pJaIVAzLUNSUTuSXUIh5XPxoLpFSW4RHai+1FWysHw3F8y3MgS4QeiaXqwtn33gXlbvIdQ5hVTNGSOwXMJWjtjbzNb7IvmnxaM892tkRlxjHytBZMUWs9F/EZYIr3ckKBWpm9IRfbPs6nyBYp4uc0nqlp9NG6\", [120 chars omitted], \"signature\": \"MGYCMQC+g7vpczz5R/Bm6XJsZUZJljT8ws+T1ri6Lz14K9uD8XYIm+BJ3zgwG+TSTV+Cf/uWhtMwF7RCGNDvP4TAm7gwY8BOVDvmyQTVh/jXLZrMJOBlSmYL7jvhq0b8A4cBB/9HkJ==\"}\n2026-09-10 14:12:37,988 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3675, \"iv\": \"+Js1aOImo8Ero/B3\", \"ciphertext\": \"a9wqKl5TrVqtk7og0KnCK6SCzzwA3087hXqlUI/zZsYLMHhMWOXywWXKgxsH0LhBSypH0AptOo1lt4rq4InSbUNhaUuwE7CCgPDU6LQg09eTU/UfIT37rvex8zgOuf7qdwvOYcPpw8MFBpZ8hfErDqykMX36mFPk\", [64 chars omitted], \"signature\": \"MGQCMBgmUF+hZx2XqHEG8CUN08OmgBkg+lkh2R9rJCZzpeYsBFdj6T5W8fqsRqY+nU/oQFiqZ8pDeTVFXALCFbmtjfe3Vx0/+0l3P9fTVFYWXx+vxNcyZkzJCVmXfpzTrBvxB119OJ==\"}\n2026-09-10 14:12:38,007 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3676, \"iv\": \"M9d/mcFukyywwQEO\", \"ciphertext\": \"2ZyarBxQ+9KyLjoNqq3jPx6I1YiS9QOhf0RI4KcyLp+wpARd4Jv0ivKUvnCUVPa55B8Skpvkm2X+rYS6UT4bzb22Tocfew3rQhQfoKYjiLOIWJsja3DnIYt9sniZpIJnPswaI4wcUpuyzOWXIqT9hlugtPEOQT7+\", [60 chars omitted], \"signature\": \"MGYCMQCUeFVamY4vIOBcD72WSNXHD34mAQVYtgSFhzzn1ti597GsLHdgS05ES0dPnZIAFgpGq40JRuW2yOk7TSMEDLa5190NG9lJSNgaay9y7yTrCIJiHrWOE2+qSm/djiRx3d0jPF==\"}\n2026-09-10 14:12:38,020 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3677, \"iv\": \"AIMSLo4qH/2JzcT7\", \"ciphertext\": \"cIIZTXc6BG5lYr1ly6t9GgViTty8DR0ta/IS4HVlIX/X2IR0Jt6jXSW6pipBtMeRMS5kj7LuzdxEr5P9ltVJfwH66/LZZjok2hdC/VfL713Ckx8LFkdWnRg6yqRiDToKyO/0hJXmwgs6WHMFADcnGDhVCClZuKDG\", [68 chars omitted], \"signature\": \"MGYCMQCtE1itME8TZTBkMaQw8HExD8JomDXgQs33GoLJaRFCnV1OB3cHXFpqe4uemLJIPPPltEMB+jXXENHQd7dDMdy//OQLRdEMDpfHI3cFW935gbGRngiacYwPD9qr8tcTphWgFl==\"}\n2026-09-10 14:12:38,033 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3678, \"iv\": \"SiOBlx3pASwJlvsl\", \"ciphertext\": \"OZDF9XCDrIq+XCXHL++sJkp99KjBCaniVq2eAbXQmsmoPIO00z/CO3G1Sv3oU2+tje3pqICr6D0fApZQsBahJGk4a/7nN8QwetN4zkc4sWqcvYvVYSfsBO6BU42Q6EA3A0vsrbi8KRrIfIRXqDtRu3DbbzYOKfCE\", [100 chars omitted], \"signature\": \"MGQCMBtxWBegguCbmsZFNqy5pHhkFO48J6EsZ9jP6l4hvLashuDLEImJftopX1hpTi4338Wvvej3pZimEnB2irZJf6+x5s73Grsgk2zTaOcpBzKAeMQa+N3GmldK9fmEE0VX+eTt9t==\"}\n2026-09-10 14:12:38,047 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3679, \"iv\": \"nGume4mFAO3lw5cp\", \"ciphertext\": \"UIZY6Y39KDIa5YLrRdnrKo7luxpMX+RizSSKPAYK/Z78/TW0tPzvx/quNJEQRcyXNCWXEwjgyWFqRrdicpBm/sz29SVc5YcOaeLTLhTX5K/S7GngD/ZP88njhOHFDT3htkXhzLGn5UfzQg2VWfMRZPbBbMGc5xSI\", [68 chars omitted], \"signature\": \"MGQCMBA28Oi1CkJnwF21ZM3tc4J0B/stjr3Ak1EBRBIEztR/zNCV4tXvNxOxyeBkH7kd/HxUXMqAkRL6K/CDorcVBmLduQRy2rPDACInkZER1MrA2jtmvyNkhfAPEsRC5l90mm1X9H==\"}\n2026-09-10 14:12:38,063 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3680, \"iv\": \"AGefdbAJ6044A2Tt\", \"ciphertext\": \"UG7NE2tV+wH+INs6InJilI9PbZCWAQ5l+dpfdRrzaq1VySmIXgsB4435NaIQT2l4ceeI2Knl1ic7XmuMT4FDP61ZAUjGP5mtw+hZIIhhIHj2x9VX/GUPqnsSG99l1p2NEuaIv27+ciq5iFE+wQJzhCe9N4rBVSkd\", [108 chars omitted], \"signature\": \"MGYCMQCafSzCH4ZIlPkg3yRd0jhAhnlP2Vne11ezBVNieGgjRtA8EI3CLukylkYZje9Ka7eNAw3iYb0MB58mrmCd4lkLt2iEb8TNIGosDz7XaLk3snvIVFVYsEXZHpMXDSZd/ar6pz==\"}\n2026-09-10 14:12:38,082 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3681, \"iv\": \"AdbFRV2id+ibfNBB\", \"ciphertext\": \"bzXCYaPWyq1yohu6sfspwhjWSsMeTRKghxpFjY2mKi40c1WNvlevhTpw+6GLKFQLInZVRvsFYtjQtfgHyOGudzVVMUrULclKmnt/ufaiK4LiV4m8Ylp4tSckK5VBPAUAVYHTVQPkTMCIjM58gfSsI3nYEVuIkf3/\", [84 chars omitted], \"signature\": \"MGUCMQqMMnlGxDH7A59X9goQ3Yd1y5CnkTviH2qyxnGNvG8q6hDZs6jj7N/Frd13SYHlR7WwtviU5da6GGeBz4RMNoaDc9VKZzpwxlui8n90OO9legSL/Fj/JhEdxtE4LXyEqoxUZn==\"}\n2026-09-10 14:12:38,095 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3682, \"iv\": \"lNYzADt5ATUarVY2\", \"ciphertext\": \"f2U4m9ZWZen0TlTQ0nHkYwpQaI1ykE+M3Bfec43v7aFTjlArDr7RpC943fDezliBb/gu59ZwBsUjlDsK3Z1O45hd+y4XSpS/r9fIcMJtu2g1UNMrzm2WO08DPRItrNknPOCwEE0LpATu8hzOhDa2rMvZ6FQ1ue29\", [152 chars omitted], \"signature\": \"MGYCMQCV4YocwBCI0NKHPuBL2H4scR2ZAO8Hbn72jIkDwqnZUbo8cqC62tzl7HDX0xh0IzTWgcaGy66ZwM0k3Tj7JDiBQ/gfgDjX5sOVBvVsVTRyNFGYH87EhFypeyuhCiaLGnptYn==\"}\n2026-09-10 14:12:38,112 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"nonce\": 3683, \"iv\": \"4pyuEuJAGKjh6DoN\", \"ciphertext\": \"bKM7pAFp9PAqEcxiKH6gNrmB1cQMe3FH5R35KoxZFTk+UV1iP1YLyLIOBeu5jgcRTjCt6t4rJuIUNzExPX5aKF9ehJoCO45zLvxtsOXjs8LfNHtAgwF5sQF9h3mxfoQ79ivMihaPeVpzTOMX7XQU+o8RU5pwy5fQ\", [104 chars omitted], \"signature\": \"MGYCMQCDjB3Ci3Yn3W11Y5i6U9Mv4xoN5oEZydnqi/foIHytXBkc1a4qe2JSYC8coI5oyd0z0/UxvQaUPcIf+2OoIUC9UVSFuleKtvMj+vz9nqXfxHR3szhI8GPd/meV7DqeyCL9KA==\"}\n2026-09-10 14:12:38,192 INFO cc_proxy.wire: <- https://enterprise.blackbox.ai/enc/nvidia/nemotron-3.5-lightning/message_stream {\"eos\": true, \"usage\": {\"prompt_tokens\": 7312, \"completion_tokens\": 333, \"total_tokens\": 7645}, \"key_alias\": \"anonymous\"}\n454 t/s\nNEMOTRON 3 ULTRA · #1 ON ARTIFICIAL ANALYSIS\n0\nDATA RETENTION · ENFORCED AT THE GATEWAY\n2.7×\nLOWER COST THAN THE #2 PROVIDER\n300+\nMODELS · ONE ENDPOINT, ONE BILL\nTHE PLATFORM\nFastest and most secure inference engine\nEnterprise Inference runs the open-weight model that you choose on our GPUs, isolated to you. The Blackbox Router connects you to the 300+ models that we host, with zero data retention and no training. One commit covers both products and the agent tools.\nVIEW DOCS\n01\nEnterprise Inference\nWe deploy the open-weight model that you choose, only for you: reserved capacity, one tenant, verified top speed. No shared pools, and no other customers.\n#1 Nemotron 3 Ultra provider · 454 t/s\nSingle-tenant · isolated to you\nEnd-to-end encryption\n02\nBlackbox Router\nOne endpoint connects you to the 300+ models that we host. The gateway enforces zero data retention and no training. One key, one bill, one dashboard.\nThe gateway enforces zero retention\nPII removed before closed models (Enterprise)\nEnd-to-end encryption\n03\nAgents & Tooling\nThe Agents API and the CLI. Each surface uses the same per-token commit.\nWorks with every agent harness\nSSO sign-in across every surface\nOne commit covers the full organization\nBENCHMARKS\nIndependent measurements, not claims.\nArtificial Analysis independently measured our output speed on NVIDIA Nemotron 3 Ultra. We are #1 of all providers: 30% faster than the #2 provider, at 2.7× lower price, with end-to-end encryption.\ntokens / second · nemotron 3 ultra\nBLACKBOX.AI\n454\nNEBIUS\n351\nCOREWEAVE\n222\nTOGETHER AI\n173\nSECURITY & PRIVACY\nYour prompts are not our product.\nRoute across 300+ models and send only the data that each task requires. Run the workloads that you cannot share on a dedicated deployment that serves only you.\nEND-TO-END\nWe provide end-to-end encryption and retain zero data\nCLOSED MODELS\nOn Enterprise, we remove PII before prompts reach a closed model\nTRAINING\nTraining opt-out is on by default, and we enforce it with the upstream providers that we route to\nWe suppress retention and training on routed traffic through provider terms and per-request flags, wherever the provider API supports it.\nREAD THE SECURITY OVERVIEW\nISOLATION\nENTERPRISE API\nOur endpoint, our GPUs\nDEDICATED CAPACITY\nReserved for you\nSINGLE-TENANT DEPLOYMENT\nIsolated to you\nNO HUMAN REVIEW\nNegotiated per contract\nThe Enterprise API is our endpoint on our GPUs. We route each client to their own dedicated deployment, isolated from every other customer.\n300+ MODELS · ONE ENDPOINT\nDeploy privately.\nALL\nTEXT\nMODEL\nTYPE\nCONTEXT\nINPUT $/M\nmoonshotai\nkimi-k3\nText\n1M\n$3.00\nDEPLOY\nzai\nglm-5.3\nText\n1M\n$1.40\nDEPLOY\nalibaba\nqwen3.8-max\nText\n262K\n$2.00\nDEPLOY\ndeepseek\ndeepseek-v4-pro-0813\nText\n1M\n$0.66\nDEPLOY\ndeepseek\ndeepseek-v4.1-flash\nText\n1M\n$0.30\nDEPLOY\ntencent\nhy4-preview\nText\n1M\n$0.83\nDEPLOY\nVIEW THE FULL CATALOG\nOpen-weight models can run as a dedicated deployment on\nEnterprise\n: single-tenant, isolated to you.\nOr start with three lines of code.\nOne OpenAI-compatible endpoint. Change the base URL and keep your code. You get intelligent routing across 300+ models, with end-to-end encryption on each connection.\nOpenAI-compatible REST and streaming\nPrompt caching and cost-aware routing included\nEnd-to-end encryption · zero data retention\nPer-token Enterprise commits · rates improve with spend\ncurl\nCOPY\ncurl\n-X POST https://enterprise.blackbox.ai/chat/completions \\\n-H\n'Authorization: Bearer sk-••••••'\n\\\n-H\n'Content-Type: application/json'\n\\\n-d\n'\n{\n\"model\"\n:\n\"nvidia/nemotron-3-ultra-550b-a55b\"\n,\n\"messages\"\n: [\n{\n\"role\"\n:\n\"user\"\n,\n\"content\"\n:\n\"Hello, Blackbox!\"\n}\n],\n\"stream\"\n:\ntrue\n}\n'\nPROOF\nCheck it yourself.\nBENCHMARKS\nIndependently measured speed\n#1 Nemotron 3 Ultra provider on Artificial Analysis. Open the live benchmark and verify the numbers.\nREAD MORE\nPARTNERSHIP\nMicrosoft AI partner\nLearn how the partnership works and what it includes for enterprise deployments on Azure.\nREAD MORE\nSECURITY\nThe security overview\nEncryption, retention, deployment boundaries, and audit status, in plain language.\nREAD MORE\nHigh-trust machine intelligence, abundant and secure\nAny model. Full speed.\nYour data stays yours.\nSTART BUILDING\nTALK TO ENTERPRISE SALES\nThe high-trust inference layer for teams that deploy at scale.\nBLACKBOX AI TECHNOLOGIES INC.\n535 MISSION STREET\nSAN FRANCISCO, CA\nPLATFORM\nEnterprise Inference\nBlackbox Router\nModel catalog\nNemotron 3 Ultra\nProvider benchmarks\nCompare models\nAgents API\nPricing\nDEPLOYMENT\nSecurity overview\nDedicated deployment\nZero data retention\nMicrosoft Azure\nTalk to sales\nDEVELOPERS\nDocs\nAPI Reference\nCommand Line\nLog in\nCOMPANY\nMission\nContact Us\nSupport\nCareers\nBlog\nPress Kit\nBrand Guide\n© 2026 BLACKBOX AI TECHNOLOGIES INC. · ALL SYSTEMS OPERATIONAL\nPRIVACY\n·\nTERMS",
+  "links": [
+    {
+      "href": "/_next/static/immutable/media/Archivo_latin-s.p.13rul5q9jl2r0.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/BerkeleyMono_Bold.p.0f4u6jow_ql96.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/BerkeleyMono_Bold_Oblique.p.2xa81zstmipv-.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/BerkeleyMono_Oblique.p.40-6qxkfb041g.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/BerkeleyMono_Regular.p.26zevj_cm3ir7.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/media/DarkerGrotesque_latin-s.p.1l3uiti1qcymn.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/0rtfyvi1h9os1.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/36jtwgop8784z.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/2e94ydma8k9ie.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.blackbox.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico?favicon.0fnsoedg1cvqn.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.png?icon.1v940t4cxvy07.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?apple-icon.3-i9b6th79ypa.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#top",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/models",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/#security",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/microsoft-partner",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://docs.blackbox.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/blog/nemotron-3-5-lightning",
+      "rel": null
+    },
+    {
+      "href": "/blog/tb-v2-1-blackbox-gpt-5-6-sol-opus-4-8",
+      "rel": null
+    },
+    {
+      "href": "/blog/benchmark-performance",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/mission",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/press",
+      "rel": null
+    },
+    {
+      "href": "/brand",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "#security",
+      "rel": null
+    },
+    {
+      "href": "https://docs.blackbox.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/get-started",
+      "rel": null
+    },
+    {
+      "href": "/models",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/microsoft-partner",
+      "rel": null
+    },
+    {
+      "href": "/#security",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/blackboxai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/api",
+      "rel": null
+    },
+    {
+      "href": "/models",
+      "rel": null
+    },
+    {
+      "href": "/nemotron",
+      "rel": null
+    },
+    {
+      "href": "/benchmarks",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/#security",
+      "rel": null
+    },
+    {
+      "href": "/inference",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/microsoft-partner",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://docs.blackbox.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://docs.blackbox.ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/mission",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/support",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/press",
+      "rel": null
+    },
+    {
+      "href": "/brand",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.223
+}

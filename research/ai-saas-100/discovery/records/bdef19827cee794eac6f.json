@@ -1,0 +1,125 @@
+{
+  "evidence_id": "web-bdef19827cee794eac6f",
+  "source_url": "https://www.explainpaper.com/",
+  "retrieved_at": "2026-09-20T21:00:37.228692+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.explainpaper.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/bdef19827cee794eac6f.html",
+  "capture_sha256": "cbc3ac5860da5a6113adc7418c6e0747b0a62b8982280d766783f5cf201c19ba",
+  "bytes_saved": 110989,
+  "title": "Explainpaper",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Read research papers 10x faster"
+    },
+    {
+      "key": "og:title",
+      "value": "Explainpaper - Read research papers 10x faster"
+    },
+    {
+      "key": "og:description",
+      "value": "Read research papers 10x faster"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Explainpaper"
+    }
+  ],
+  "text": "Explainpaper\nExplainpaper\nFeatures\nPricing\nSign In\nTry Free\nTry Free\nOpen menu\nExplainpaper\nRead Research Papers 10x Faster\nHighlight confusing text and get instant, simple explanations. No more drowning in jargon.\nUpload Your First Paper\nJoin\n400,000+\nresearchers\nLoved by researchers worldwide\nBindu Reddy\n@bindureddy\nMy AI and ML research paper review time has gone down significantly. Thanks to this amazing tool – Explainpaper – that uses an AI model to explain dense sections. In the background, an LLM simplifies and explains complex concepts. AI explaining AI.\nKenneth Cassel\n@KennethCassel\nJust tried out explainpaper.com and it's wild. Academic papers are filled with so much jargon that it's hard to grok them at first pass. Being able to ask an AI questions about a research paper is such a cool tool – killer product @amanjha__ + @functionofjade.\nSimon Kozlov\n@sim0nsays\nIn just a few days, explainpaper.com completely changed how and how often I read papers. Upload a paper, and then select any words to get an AI explanation using Large Language Models. And it works surprisingly well.\nAmy\n@amytcun\nEvery time I feel a bit intimidated about learning complex concepts I have to remember I have the help of @explain_paper. I'm going to dig into ML and feel more confident going deep into new territory.\nJustin Torre\n@justinstorre\nI want to do all my reading on @explain_paper. It's so fun and useful. I feel like I have a buddy reading the paper with me.\nBindu Reddy\n@bindureddy\nMy AI and ML research paper review time has gone down significantly. Thanks to this amazing tool – Explainpaper – that uses an AI model to explain dense sections. In the background, an LLM simplifies and explains complex concepts. AI explaining AI.\nKenneth Cassel\n@KennethCassel\nJust tried out explainpaper.com and it's wild. Academic papers are filled with so much jargon that it's hard to grok them at first pass. Being able to ask an AI questions about a research paper is such a cool tool – killer product @amanjha__ + @functionofjade.\nSimon Kozlov\n@sim0nsays\nIn just a few days, explainpaper.com completely changed how and how often I read papers. Upload a paper, and then select any words to get an AI explanation using Large Language Models. And it works surprisingly well.\nAmy\n@amytcun\nEvery time I feel a bit intimidated about learning complex concepts I have to remember I have the help of @explain_paper. I'm going to dig into ML and feel more confident going deep into new territory.\nJustin Torre\n@justinstorre\nI want to do all my reading on @explain_paper. It's so fun and useful. I feel like I have a buddy reading the paper with me.\nIn-Context Explanations\nHighlight any confusing sentence and get simple explanations in your language. Like having an expert sitting next to you.\nAdjustable complexity\n- From beginner to expert level\n50+ languages\n- Get explanations in your native language\nContext-aware\n- Understands the full paper context\nChat with Your Paper\nAsk questions about the paper and get accurate answers based on the actual content, not general knowledge.\nCite specific sections\n- Jump directly to relevant parts\nFollow-up questions\n- Dive deeper into any topic\nSummarize findings\n- Get quick overviews of key results\nAuto-Generated Insights\nInstantly see the paper's structure, key findings, and main arguments without reading everything.\nSmart outlines\n- Navigate complex papers with ease\nKey points extraction\n- See what matters most\nConcept relationships\n- Understand how ideas connect\nStart Free, Try Pro for 7 Days\nExplore on the free tier, or start a 7-day Pro trial with full access (card on file).\nFree\n$0\n/month\nPerfect for exploring research\nUnlimited highlight explanations\nAsk follow-up questions\nPowered by basic AI models\nStart Free\nMost Popular\nPro\n$16\n/month\nFor professional research\nPowered by advanced AI models\nGenerate summaries for the entire paper\nSave your highlights and explanations\nAsk questions about your paper\nStart 7-day Pro trial\nSee full pricing details →\nStart Reading Smarter\nwith AI-Powered Explanations\nUpload any research paper and get instant, simple explanations for complex concepts\nUpload Your First Paper Free\nNo credit card required • Free forever • Takes 30 seconds\nExplainpaper\nAI-powered research paper reader that makes complex papers easy to understand.\n© 2025 Explainpaper. All rights reserved.",
+  "links": [
+    {
+      "href": "/_next/static/media/797e433ab948586e-s.p.29207c2f.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/caa3a2e1cccd8315-s.p.3b6cae6d.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/34d933785a17edf3.css?dpl=dpl_7TThzEj1jvm9MRM1cexUfm5BRmRB",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/7e4c356fd9ed1016.css?dpl=dpl_7TThzEj1jvm9MRM1cexUfm5BRmRB",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/86232f574be4f673.js?dpl=dpl_7TThzEj1jvm9MRM1cexUfm5BRmRB",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#features",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signin",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login?mode=signup",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/explain_paper",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.3585
+}

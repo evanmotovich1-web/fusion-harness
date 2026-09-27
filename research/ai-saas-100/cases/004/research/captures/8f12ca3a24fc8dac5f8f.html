@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en" data-country="US" data-lt-script-installed="true" class="logged-out" data-premium="false" data-user="false">
+    <head>
+        <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self';connect-src *;default-src 'self';form-action https:;frame-src https: 'self' https://accounts.google.com/gsi/ https://consentcdn.cookiebot.eu/;img-src https: http: data:;media-src 'self';object-src 'self';script-src 'self' d1f8f9xcsvx3ha.cloudfront.net *.braintreegateway.com www.googletagmanager.com www.google-analytics.com ssl.google-analytics.com www.googleadservices.com www.dwin1.com bat.bing.com www.google.com languagetool.org analytics.languagetoolplus.com *.paypal.com www.paypalobjects.com *.recurly.com applepay.cdn-apple.com *.taboola.com *.fullstory.com *.cardinalcommerce.com browser.sentry-cdn.com *.stripe.com *.cloudflare.com analytics.tiktok.com *.facebook.net https://accounts.google.com/gsi/client cdn.amplitude.com consent.cookiebot.eu consentcdn.cookiebot.eu 'unsafe-eval' *.intercomcdn.com *.intercom.io *.zdassets.com *.smooch.io 'nonce-Xhi4iYepA2BmQCpVwlXvzFN916bqs09P';style-src 'self' https://accounts.google.com/gsi/style 'unsafe-inline' js.recurly.com;font-src 'self' https://fonts.intercomcdn.com applepay.cdn-apple.com"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1976f0">
+
+
+<title>API, Open Source and Developer information - LanguageTool</title>
+
+<script id="inline-script-6ab0519e0475a" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="lt-context">(() => {const inlineScript = document.getElementById("inline-script-6ab0519e0475a");(()=>{"use strict";const e=[];window.__LT_CONTEXT__=()=>new Promise((t=>e.push(t)));(async()=>{let t,n=3;do{if(t=await fetch("/_context.json",{headers:{accept:"application/json","x-requested-with":"XMLHttpRequest"},priority:"high"}).then((e=>e.json())).catch(console.error),n-=1,void 0!==t)break}while(n>0);e?.forEach((e=>e(t))),e.length=0,t&&(document.documentElement.dataset.premium||document.documentElement.setAttribute("data-premium",String(!0===t.user?.is_premium)),document.documentElement.dataset.user||document.documentElement.setAttribute("data-user",String(null!==t.user))),window.__LT_CONTEXT__=async()=>t})()})();})();</script><script id="inline-script-6ab0519e04b3d" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="detect-operating-system">(() => {const inlineScript = document.getElementById("inline-script-6ab0519e04b3d");(()=>{"use strict";function t(){const t=navigator.userAgent.includes("iPhone OS"),n=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return t||n}let n="windows",o=!0;navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2)?n="ipad-os":t()?n="ios":navigator.userAgent.includes("Mac OS")&&!t()?n="mac-os":o=!1,document.documentElement.classList.add(n),document.documentElement.setAttribute("data-platform",n),document.documentElement.setAttribute("data-platform-apple",o.toString())})();})();</script>
+
+<link href="https://languagetool.org/css/base.css?id=63d7085543a4f41bfed4b44a4d01b40b" rel="stylesheet" fetchpriority="high">
+<link href="https://languagetool.org/css/website.css?id=3ab74021cf6eedc68d5b230dc1aac499" rel="stylesheet" fetchpriority="high">
+<link href="https://languagetool.org/css/print.css?id=24330adae585d3b6b8b10284aaaf9417" rel="stylesheet" media="print">
+<link href="/fonts/Source-Sans-Pro-latin-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link href="/fonts/Source-Sans-Pro-latin-bold-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link href="/fonts/Source-Sans-Pro-latin-semi-bold-win.woff2" rel="x-preload" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <script id="inline-script-6ab0519e04fe8" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="fonts-preload">(() => {const inlineScript = document.getElementById("inline-script-6ab0519e04fe8");(()=>{"use strict";function e(){const e=navigator.userAgent.includes("iPhone OS"),n=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||n}document.querySelectorAll('link[type="font/woff2"]').forEach((n=>{(navigator.userAgent.includes("Mac OS")&&!e()||e())&&(n.href=n.href.replace("-win.","-mac.")),n.rel="preload"}))})();})();</script>
+<script src="https://languagetool.org/js/_new/manifest.js?id=9f5bba01f0bcf2e73d18f6153980e166" defer fetchpriority="high"></script>
+<script src="https://languagetool.org/js/_new/react.bundle.js?id=92b30eef365a8af9c016d47c11076d61" defer fetchpriority="high"></script>
+<script src="https://languagetool.org/js/_new/app-en.js?id=d113b2aae106f9ced7265ed0d2729285" defer fetchpriority="high"></script>
+
+    <link href="https://languagetool.org/css/api.css?id=0954d7872908977302a77eb35d2dac18" rel="stylesheet">
+
+<link rel="dns-prefetch" href="https://api.languagetoolplus.com/" fetchpriority="low">
+<link rel="dns-prefetch" href="https://api.languagetool.org/" fetchpriority="low">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://languagetool.org/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://languagetool.org/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://languagetool.org/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://languagetool.org/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://languagetool.org/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://languagetool.org/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://languagetool.org/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://languagetool.org/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://languagetool.org/images/favicons/apple-touch-icon-180x180.png">
+
+<link rel="icon"
+	  type="image/png"
+	  sizes="16x16"
+	  href="https://languagetool.org/images/favicons/favicon-16x16.png"
+	  data-color-scheme-dark-href="https://languagetool.org/images/favicons/favicon-white-16x16.png">
+<link rel="icon" type="image/png"
+	  sizes="32x32"
+	  href="https://languagetool.org/images/favicons/favicon-32x32.png"
+	  data-color-scheme-dark-href="https://languagetool.org/images/favicons/favicon-white-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://languagetool.org/images/favicons/android-chrome-192x192.png">
+<meta name="apple-mobile-web-app-title" content="LanguageTool">
+<meta name="application-name" content="LanguageTool">
+<meta name="msapplication-TileColor" content="#1976f0">
+<meta name="msapplication-TileImage" content="https://languagetool.org/images/favicons/mstile-144x144.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+<meta name="route" content="generated::1qXoIP0JhqjA0qyg">
+<meta name="description" content="Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking.">
+<meta name="MSSmartTagsPreventParsing" content="true">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://languagetool.org/images/social/og_image.jpg">
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="LanguageTool - Your Writing Assistant" />
+<meta property="og:site_name" content="LanguageTool">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for the LanguageTool Blog" href="https://languagetool.org/insights/rss/">
+
+
+
+    <link rel="canonical" href="https://languagetool.org/proofreading-api" />
+
+<link rel="chrome-webstore-item" href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral">
+<link rel="search" type="application/opensearchdescription+xml" title="LanguageTool" href="/opensearch.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+            <link rel="alternate" href="https://languagetool.org/proofreading-api" hreflang="en">
+            <link rel="alternate" href="https://languagetool.org/de/proofreading-api" hreflang="de">
+            <link rel="alternate" href="https://languagetool.org/es/proofreading-api" hreflang="es">
+            <link rel="alternate" href="https://languagetool.org/nl/proofreading-api" hreflang="nl">
+            <link rel="alternate" href="https://languagetool.org/fr/proofreading-api" hreflang="fr">
+            <link rel="alternate" href="https://languagetool.org/ru/proofreading-api" hreflang="ru">
+            <link rel="alternate" href="https://languagetool.org/it/proofreading-api" hreflang="it">
+            <link rel="alternate" href="https://languagetool.org/ca/proofreading-api" hreflang="ca">
+            <link rel="alternate" href="https://languagetool.org/pt-BR/proofreading-api" hreflang="pt-BR">
+            <link rel="alternate" href="https://languagetool.org/pt/proofreading-api" hreflang="pt">
+            <link rel="alternate" href="https://languagetool.org/uk/proofreading-api" hreflang="uk">
+            <link rel="alternate" href="https://languagetool.org/pl/proofreading-api" hreflang="pl">
+        <link rel="alternate" href="https://languagetool.org/proofreading-api" hreflang="x-default">
+
+<script type="application/ld+json">
+{"@context":"http:\/\/schema.org","@type":"Organization","name":"LanguageTool","legalName":"LanguageTooler GmbH","foundingDate":"2003","url":"https:\/\/languagetool.org\/","logo":"https:\/\/languagetool.org\/images\/logos\/logo_color_circle.png","sameAs":["https:\/\/en.wikipedia.org\/wiki\/LanguageTool","https:\/\/de.wikipedia.org\/wiki\/LanguageTool","https:\/\/www.instagram.com\/languagetool\/","https:\/\/www.facebook.com\/LanguageTool","https:\/\/x.com\/languagetool","https:\/\/www.facebook.com\/LanguageTool","https:\/\/www.linkedin.com\/company\/languagetool","https:\/\/github.com\/languagetool-org\/"]}
+</script>
+    </head>
+    <body class="body">
+        <div class="page">
+            <div class="header-overlay" id="header-overlay"></div>
+
+
+
+<header
+    id="primary-website-header"
+    class="header  header--white | flex"
+    itemtype="https://schema.org/SiteNavigationElement"
+    itemscope
+>
+    <div class="header__inner  | flex">
+        <a
+            href="/"
+            class="logo logo--black"
+            title="Check your text quickly and easily. Grammar, punctuation, style, and spelling."
+            itemprop="url"
+
+        >
+            <span class="header__inner__logo-name name notranslate" itemprop="name">Language<strong>Tool</strong></span>
+            <span class="header__inner__logo-claim claim">Your writing assistant</span>
+        </a>
+
+                    <nav class="nav  | flex lt-sm:hidden">
+    <div class="nav__responsive | flex flex-wrap ml-3 justify-end overflow-hidden">
+        <a
+            class="nav__item "
+            href="/"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                Grammar Checker
+            </span>
+        </a>
+        <a
+            class="nav__item  | block ml-3"
+            href="/paraphrasing-tool"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                Paraphrasing Tool
+            </span>
+        </a>
+                    <a
+                class="nav__item  | block ml-3"
+                href="/premium"
+                itemprop="url"
+            >
+                <span itemprop="name">
+                    Premium
+                </span>
+                <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+            </a>
+                <a
+            class="nav__item  | block ml-3"
+            href="/business"
+            itemprop="url"
+        >
+            <span itemprop="name">
+                For Business
+            </span>
+        </a>
+    </div>
+
+            <button class="nav__item nav__item--more | block select-none ml-3 lt-lg:hidden" id="dropdown-toggle">
+            More
+        </button>
+
+                    <i class="nav__separator | block mx-3 lt-md:hidden"></i>
+        
+        <div class="auth-switch">
+            <div class="auth-switch__logged-in">
+                <div class="addon-link-header btn-wrapper btn-addon-link js-addon-link-header | my-0 lt-md:hidden">
+                    <a
+    id="addon-link-6ab0519e067cf"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+    Sign Up
+</a>
+<script id="inline-script-6ab0519e06af7" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="add-on-link" data-meta='{"show_default":false,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--edge-colored btn--prominent | pl-2 pr-4","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--opera-colored btn--prominent | pl-2 pr-4","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--yandex-colored btn--prominent | pl-2 pr-4","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--brave-colored btn--prominent | pl-2 pr-4","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--firefox-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--chrome-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab0519e067cf"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab0519e06af7");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>                </div>
+                <div class="flex ml-3 lt-md:hidden">
+                    <div class="nav__user js-user-account-widget | cursor-pointer flex">
+    <a class="nav__user__editor_link" href="/editor/new">
+        <div class="nav__user__image" data-avatar></div>
+
+        <div class="nav__user__content">
+            <strong class="nav__user__welcome" data-user-name="Welcome"></strong>
+            <span class="nav__user__editor_link__caption">
+                Go to the Editor
+            </span>
+        </div>
+    </a>
+
+    <details class="nav__user__dropdown js-user-account-dropdown">
+        <summary class="nav__user__dropdown-toggle | select-none" data-testid="show-dropdown">
+            <span class="button-link--with-icon__hidden-caption">
+                Toggle Dropdown
+            </span>
+        </summary>
+
+        <ul class="nav__user__menu">
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--add | block" href="/editor/new">
+                    Check Text
+                </a>
+            </li>
+            <li class="nav__user__menu__item nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden">
+                <a class="nav__user__menu__item--link icon--statistics | block" href="/editor/statistics">
+                    Statistics
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--gear | block" href="/editor/settings?ref=home">
+                    Settings
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <form method="post" action="/logout">
+                    <input type="hidden" name="_token" />
+                    <button class="nav__user__menu__item--link icon--log-out | text-left">
+                        Log out
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </details>
+
+    <ul class="nav__user__menu nav__user__menu--mobile">
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/new">
+                <i class="nav__user__menu__item__icon icon icon--add"></i>
+                Check Text
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a
+                class="nav__user__menu__item--link nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden"
+                href="/editor/statistics"
+            >
+                <i class="nav__user__menu__item__icon icon icon--statistics"></i>
+                Statistics
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/settings?ref=home">
+                <i class="nav__user__menu__item__icon icon icon--gear"></i>
+                Settings
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <form method="post" action="/logout">
+                <input type="hidden" name="_token" />
+                <button class="nav__user__menu__item--link | flex text-left">
+                    <i class="nav__user__menu__item__icon icon icon--log-out"></i>
+                    Log out
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
+                </div>
+            </div>
+                            <div class="nav__item--auth-container auth-switch__logged-out | lt-md:hidden">
+                    <a
+                        class="nav__item nav__item--register | block lt-md:text-left"
+                        href="/register"
+                        data-track-click="SiteHeader|Register|desktop"
+                    >
+                        Sign up
+                    </a>
+                    <span>/</span>
+                    <a
+                        class="nav__item nav__item--login | block"
+                        href="/user-login"
+                        data-track-click="SiteHeader|Login|desktop"
+                    >
+                        Log in
+                    </a>
+                </div>
+                    </div>
+        <div class="auth-switch">
+            <div class="auth-switch__logged-out">
+                <div class="addon-link-header btn-addon-link js-addon-link-header | flex ml-3 lt-md:hidden">
+                    <a
+    id="addon-link-6ab0519e0707f"
+    data-track-click="WelcomePage|sign_up|header"
+    class="btn btn--sign-up btn--prominent addon-link"
+    href="/register"
+>
+    Sign Up
+</a>
+<script id="inline-script-6ab0519e072a5" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="add-on-link" data-meta='{"show_default":false,"is_small":false,"config":{"edge":{"add_on":true,"href":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/hfjadhjooeceemgojogkhlppanjkbobc","class":"btn btn--edge btn--edge-colored btn--prominent | pl-2 pr-4","title":"Over 1 million users trust LanguageTool with their writing","caption":"Add to Edge"},"opera":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--opera btn--opera-colored btn--prominent | pl-2 pr-4","caption":"Add to Opera"},"yandex":{"add_on":true,"href":"https:\/\/addons.opera.com\/extensions\/details\/grammar-and-spell-checker-languagetool\/","class":"btn btn--yandex btn--yandex-colored btn--prominent | pl-2 pr-4","caption":"Add to Yandex"},"brave":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--brave btn--brave-colored btn--prominent | pl-2 pr-4","caption":"Add to Brave"},"firefox":{"add_on":true,"href":"https:\/\/addons.mozilla.org\/firefox\/addon\/languagetool\/","class":"btn btn--firefox btn--firefox-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Firefox with over 1 million users","caption":"Add to Firefox"},"apple_mobile":{"add_on":false,"href":"https:\/\/apps.apple.com\/app\/id1534275760","class":"btn btn--ios-appstore"},"apple_desktop":{"add_on":false,"href":"https:\/\/languagetool.org\/download\/mac-app\/LanguageToolDesktop-latest.dmg","class":"btn btn--mac-desktop","title":"Over 4 million users trust LanguageTool with their writing","caption":"","success_page":"\/desktop-app-download-success"},"chrome":{"add_on":true,"href":"https:\/\/chromewebstore.google.com\/detail\/ai-grammar-checker-paraph\/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral","class":"btn btn--chrome btn--chrome-colored btn--prominent | pl-2 pr-4","title":"Top-rated grammar checker for Chrome with over 3 million users","caption":"Add to Chrome"}},"id":"addon-link-6ab0519e0707f"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab0519e072a5");(()=>{"use strict";const e=()=>{switch(function(){const e=navigator.userAgent.toLowerCase();if(navigator.brave)return"brave";switch(!0){case e.includes("opr/")||e.includes("opera/"):return"opera";case e.includes("edg/")||e.includes("edge/"):return"edge";case e.includes("chromium/"):return"chromium";case e.includes("chrome/"):return"chrome";case e.includes("seamonkey/"):return"seamonkey";case e.includes("firefox/"):return"firefox";case e.includes("safari/"):return"safari";case e.includes("YaBrowser/"):return"ya";case e.includes("trident/"):return"ie";default:return"unknown"}}()){case"opera":return"Opera";case"edge":return"Edge";case"chromium":return"Chromium";case"seamonkey":return"Seamonkey";case"firefox":return"Firefox";case"safari":return"Safari";case"ya":return"Yandex";case"brave":return"Brave";case"ie":return"Internet Explorer";default:return"Chrome"}};function r(){return navigator.userAgent.includes("Mac OS")&&!function(){const e=navigator.userAgent.includes("iPhone OS"),r=navigator.userAgent.includes("Macintosh")&&Boolean(navigator.maxTouchPoints&&navigator.maxTouchPoints>2);return e||r}()}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{}})(),n=document.querySelector(`#${a?.id}`),s=e(),t=(e,r)=>{r&&console.warn(`The small size has not been implemented yet for the "${e}" add-on link.`)},o=e=>{if(!n)throw new Error("Add-on link element is not found.");const r=n.dataset.trackClick?.split("|"),a=e.add_on?"go_to_browser_addon":"go_to_ios_app",s=n.firstElementChild?.outerHTML||"",t=e.caption?`${e.caption} ${s}`:"";n.href=e.href,n.innerHTML=t,e.title&&(n.title=e.title),e.success_page&&n.addEventListener("click",(r=>{r.preventDefault(),window.open(n.href,"_blank"),location.href=e.success_page})),r&&(n.dataset.trackClick=[r[0],a,r[2]].join("|")),n.className=e.class,n.target="_blank"};window.__LT_CONTEXT__?.().then((e=>{!function(e){if(a&&n)switch(!0){case Boolean(a.show_specific):t(a.show_specific,a.is_small),o(a.config[a.show_specific]);break;case"Edge"===s:case"Opera"===s:case"Yandex"===s:case"Brave"===s:case"Firefox"===s:t(s.toLowerCase(),a.is_small),o(a.config[s.toLowerCase()]);break;case"Safari"===s&&r():t("apple_desktop",a.is_small),o(a.config.apple_desktop);break;case"Chrome"===s||a.show_default:t("chrome",a.is_small),o(a.config.chrome);break;case e:n.classList.add("hidden")}}("number"==typeof e?.user?.id)}))})();})();</script>                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-switch">
+        <div class="auth-switch__logged-out">
+            <a
+                class="button-link__mobile-sign-up btn btn--prominent-blue btn--small | ml-3 md:hidden"
+                href="/register"
+                data-track-click="SiteHeader|Register|mobile"
+            >
+                Sign up
+            </a>
+        </div>
+    </div>
+    <button class="nav-burger nav-burger--black | ml-4 hidden lt-lg:block" id="burger-toggle">
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__line | block"></span>
+    <span class="nav-burger__label">Toggle Website Navigation</span>
+</button>
+        
+            </div>
+
+            <button class="dropdown-close | lt-2xl:hidden" id="dropdown-close">
+            <span class="dropdown-close__label">
+                Close Website Navigation
+            </span>
+        </button>
+
+        <nav class="nav__dropdown | grid lt-md:overflow-y-auto" id="nav-dropdown">
+    <div class="nav__dropdown__inner | flex overflow-y-auto">
+        <div class="nav__dropdown__top | flex">
+            <a href="/" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon | flex">
+                    <span class="icon icon--search"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">Grammar Checker</span>
+                <span class="nav__dropdown__top__description">Checks your text for grammar mistakes and helps you find the right tone.</span>
+                <span class="nav__dropdown__top__read-more | flex">Try Grammar Checker</span>
+            </a>
+            <a href="/paraphrasing-tool" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon | flex">
+                    <span class="icon icon--rephrase-thin-2"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">Paraphrasing Tool</span>
+                <span class="nav__dropdown__top__description">Lets you paraphrase any sentence according to your liking.</span>
+                <span class="nav__dropdown__top__read-more | flex">Try Paraphrasing Tool</span>
+            </a>
+                            <a href="/premium" class="nav__dropdown__top__item | flex" itemprop="url">
+                    <span class="nav__dropdown__top__icon | flex">
+                        <span class="icon icon--premium"></span>
+                    </span>
+                    <span class="nav__dropdown__top__title nav__dropdown__top__title--mobile | hidden lt-md:inline-block" itemprop="name">
+                        Premium
+                        <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+                    </span>
+                    <span class="nav__dropdown__top__title">
+                        Discover Premium
+                        <span class="nav__item__badge js-premium-discount-badge | hidden">-20%</span>
+                    </span>
+                    <span class="nav__dropdown__top__description">Benefit from unlimited paraphrasing and much more.</span>
+                    <span class="nav__dropdown__top__read-more nav__dropdown__top__read-more--premium | flex">
+                        Unlock all Premium Features
+                    </span>
+                </a>
+                        <a href="/business" class="nav__dropdown__top__item | flex" itemprop="url">
+                <span class="nav__dropdown__top__icon nav__dropdown__top__icon--indicator | flex">
+                    <span class="icon icon--business"></span>
+                </span>
+                <span class="nav__dropdown__top__title" itemprop="name">LT for Business</span>
+                <span class="nav__dropdown__top__description">Explore our GDPR-conform solutions to ensure error-free communication and a consistent brand voice.</span>
+                <span class="nav__dropdown__top__read-more | flex">Read more</span>
+            </a>
+        </div>
+        <div class="nav__dropdown__body | flex">
+            <span class="nav__dropdown__body__title">Apps &amp; Add-ons</span>
+            <span class="nav__dropdown__body__description">Checks your text for grammar mistakes and helps you find the right tone.</span>
+            <div class="nav__dropdown__body__submenu | flex">
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--browser js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#browsers"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Browser Add-ons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--chrome | block" target="_blank" href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral">
+                                    <span itemprop="name">Chrome</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--edge | block" target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc">
+                                    <span itemprop="name">Edge</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--firefox | block" target="_blank" href="https://addons.mozilla.org/firefox/addon/languagetool/">
+                                    <span itemprop="name">Firefox</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_browser_addon|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--opera | block" target="_blank" href="https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/">
+                                    <span itemprop="name">Opera</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--email js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#mail_clients"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                E-Mail Add-ons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_google-mail_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--google-mail | block" href="/google-mail">
+                                    <span itemprop="name">Gmail</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_outlook_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--outlook | block" href="/windows-desktop">
+                                    <span itemprop="name">Outlook<span class="new-highlight | inline-block">BETA</span></span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_apple_mail_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--apple-mail | block" href="/apple-mail">
+                                    <span itemprop="name">Apple Mail</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_thunderbird_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--thunderbird | block" href="/thunderbird">
+                                    <span itemprop="name">Thunderbird</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--office js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#text_editors"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Office Plugins
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_gdocs_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--google-docs | block" href="/google-docs">
+                                <span itemprop="name">Google Docs</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_word_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--word | block"  href="/word">
+                                <span itemprop="name">Word</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_apple_pages_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--apple-pages | block"  href="/mac-desktop">
+                                <span itemprop="name">Apple Pages</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_libreoffice_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--libre-office | block" href="/libre-office" target="_blank">
+                                <span itemprop="name">LibreOffice</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__dropdown__body__submenu__column">
+                    <div class="nav__dropdown__body__submenu__title">
+                        <button class="nav__dropdown__body__submenu__title__mobile nav__dropdown__body__submenu__title__mobile--apps js-submenu-title | hidden lt-md:flex">
+                            <span class="nav__dropdown__body__submenu__title__caption">
+                                Toggle Sub Menu
+                            </span>
+                        </button>
+                        <a
+                            href="/services#operating_systems"
+                            data-track-click="WelcomePage|go_to_services_lp|header"
+                            class="nav__dropdown__body__submenu__title__link"
+                            itemprop="url"
+                        >
+                            <span itemprop="name">
+                                Apps
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav__dropdown__body__submenu__list-container | lt-md:grid">
+                        <ul class="nav__dropdown__body__submenu__list | lt-md:overflow-hidden">
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_mac_desktop_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--mac | block" href="/mac-desktop">
+                                    <span itemprop="name">macOS</span>
+                                </a>
+                            </li>
+                            <li class="nav__dropdown__body__submenu__list__item">
+                                <a itemprop="url" data-track-click="WelcomePage|go_to_windows-app_lp|header" class="nav__dropdown__body__submenu__list__item__link dynamic-service--small dynamic-service--windows | block" href="/windows-desktop">
+                                    <span itemprop="name">Windows</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav__dropdown__bottom | flex">
+            <div class="nav__dropdown__bottom__submenu__title | hidden lt-md:block">
+                <button class="nav__dropdown__bottom__submenu__title__mobile js-submenu-title | flex">
+                    More
+                </button>
+            </div>
+            <div class="nav__dropdown__bottom__list-container | lt-md:grid">
+                <div class="nav__dropdown__bottom__list-container__inner | flex lt-md:overflow-hidden">
+                    <ul class="nav__dropdown__bottom__list | flex">
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/business" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">For Businesses</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/proofreading-api" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Proofreading API</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a href=https://languagetool.org/insights/ target="_blank" rel="me" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+            Blog
+    </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="https://languagetooler.workwise.io/" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block" target="_blank">
+                                <span itemprop="name">Careers</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="https://help.languagetool.org" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav__dropdown__bottom__list | flex">
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/privacy" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Privacy</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/terms" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Terms & Conditions</span>
+                            </a>
+                        </li>
+                        <li class="nav__dropdown__bottom__list__item">
+                            <a itemprop="url" href="/legal/" class="nav__dropdown__bottom__submenu__list__item__link | lt-md:block">
+                                <span itemprop="name">Imprint</span>
+                            </a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav__dropdown__user-container | grid">
+        <div class="nav__dropdown__user auth-switch | overflow-hidden">
+            <div class="auth-switch__logged-in">
+                <div class="nav__user js-user-account-widget | cursor-pointer flex">
+    <a class="nav__user__editor_link" href="/editor/new">
+        <div class="nav__user__image" data-avatar></div>
+
+        <div class="nav__user__content">
+            <strong class="nav__user__welcome" data-user-name="Welcome"></strong>
+            <span class="nav__user__editor_link__caption">
+                Go to the Editor
+            </span>
+        </div>
+    </a>
+
+    <details class="nav__user__dropdown js-user-account-dropdown">
+        <summary class="nav__user__dropdown-toggle | select-none" data-testid="show-dropdown">
+            <span class="button-link--with-icon__hidden-caption">
+                Toggle Dropdown
+            </span>
+        </summary>
+
+        <ul class="nav__user__menu">
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--add | block" href="/editor/new">
+                    Check Text
+                </a>
+            </li>
+            <li class="nav__user__menu__item nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden">
+                <a class="nav__user__menu__item--link icon--statistics | block" href="/editor/statistics">
+                    Statistics
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <a class="nav__user__menu__item--link icon--gear | block" href="/editor/settings?ref=home">
+                    Settings
+                </a>
+            </li>
+            <li class="nav__user__menu__item">
+                <form method="post" action="/logout">
+                    <input type="hidden" name="_token" />
+                    <button class="nav__user__menu__item--link icon--log-out | text-left">
+                        Log out
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </details>
+
+    <ul class="nav__user__menu nav__user__menu--mobile">
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/new">
+                <i class="nav__user__menu__item__icon icon icon--add"></i>
+                Check Text
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a
+                class="nav__user__menu__item--link nav__user__menu__item--statistics js-user-account-widget-statistics-link | hidden"
+                href="/editor/statistics"
+            >
+                <i class="nav__user__menu__item__icon icon icon--statistics"></i>
+                Statistics
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <a class="nav__user__menu__item--link | flex" href="/editor/settings?ref=home">
+                <i class="nav__user__menu__item__icon icon icon--gear"></i>
+                Settings
+            </a>
+        </li>
+        <li class="nav__user__menu__item">
+            <form method="post" action="/logout">
+                <input type="hidden" name="_token" />
+                <button class="nav__user__menu__item--link | flex text-left">
+                    <i class="nav__user__menu__item__icon icon icon--log-out"></i>
+                    Log out
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
+            </div>
+                            <div class="auth-switch__logged-out">
+                    <a
+                        class="nav__item__btn btn btn--prominent-blue"
+                        href="/register"
+                        data-track-click="SiteHeader|Register|mobile"
+                    >
+                        Sign up
+                    </a>
+                    <a
+                        class="nav__item__link | text-center"
+                        href="/user-login"
+                        data-track-click="SiteHeader|Login|mobile"
+                    >
+                        Log in
+                    </a>
+                </div>
+                    </div>
+    </div>
+</nav>
+    </header>
+            <section class="content">
+                    <div class="dev-page">
+        <section class="hero-banner">
+            <div class="hero-banner__content wrapper">
+                <h1 class="headline headline--1">LanguageTool Proofreading API</h1>
+                <h2 class="headline headline--4">Join 100+ companies and enhance your software with our HTTP API</h2>
+                <p class="paragraph paragraph--2">Get developer access to the same technology that powers our Premium grammar, style, and spelling checker. It supports more than 30 languages, including English, French, Spanish, and German. The API can easily be used from any programming language, since it’s based on HTTP and returns simple-structured JSON data.</p>
+                <div class="api-order box--prominent">
+                    <div class="api-order__dropdown">
+                        <select id="api-plan">
+                            <option value="lt-api-100-req-per-day">100 API calls per day</option>
+                            <option value="lt-api-250-req-per-day" selected>250 API calls per day</option>
+                            <option value="lt-api-500-req-per-day">500 API calls per day</option>
+                            <option value="lt-api-1000-req-per-day">1000 API calls per day</option>
+                            <option value="lt-api-10000-req-per-day">10000 API calls per day</option>
+                        </select>
+                    </div>
+
+                    <div class="pricing-wrapper" id="pricing">
+                        <span class="price-value" id="price-value"></span>
+                        <span class="pricing-info">
+                            per month
+                        </span>
+
+                        <div class="btn-wrapper">
+                            <button class="btn btn--prominent-blue" id="order-button">Buy Now</button>
+                        </div>
+                    </div>
+
+                    <div class="vat-info">all prices incl. VAT<br>can be canceled any month</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="features-section">
+        <h2 class="headline headline--2">Details</h2>
+            <ul class="blue-dot-list">
+                <li>All servers are hosted in Germany, the service is fully GDPR-compliant</li>
+                <li>None of the texts you send to the API are stored to ensure full privacy</li>
+                <li>Monthly plans can be canceled any month</li>
+                <li>Maximum text length per request: 60,000 characters</li>
+                <li>Specific grammar or style rules can be disabled to meet individual requirements</li>
+                <li>The Personal Dictionary is also available through the API</li>
+            </ul>
+
+            <div class="btn-wrapper">
+                <a class="btn btn--primary btn--outline" target="_blank" href="https://languagetool.org/http-api/#/default">
+                    Show API documentation
+                </a>
+            </div>
+        </section>
+
+
+        <script
+            id="fsc-api"
+            src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+            type="text/javascript"
+            data-storefront="languagetooler.onfastspring.com/popup-languagetooler-b2b"
+            data-popup-webhook-received="webhookCallback"
+        ></script>
+        <script nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P">
+            var apiPlan = document.getElementById("api-plan");
+            var pricingContainer = document.getElementById("pricing");
+            var priceValueElement = document.getElementById("price-value");
+            var orderButton = document.getElementById("order-button");
+
+            apiPlan.onchange = function() {
+                setPlan(apiPlan.value);
+            };
+
+            orderButton.onclick = function() {
+                fastspring.builder.checkout();
+            };
+
+            function setPlan(plan) {
+                priceValueElement.textContent = "...";  // fastspring.builder can take some time, show rather the placeholder than the old value
+                pricingContainer.style.display = "block";
+                fastspring.builder.push({
+                    reset: true,
+                    products: [{
+                        path: plan
+                    }]
+                }, function(order) {
+                    priceValueElement.textContent = order.total;
+                });
+            }
+
+            function webhookCallback(orderObjOrNull) {
+                if (!orderObjOrNull) {
+                    // trackEvent("FastSpring", "OrderPopupClosed");
+                } else {
+                    window.location.replace("https://languagetool.org/subscribe/?source=ltp&orderId=" + orderObjOrNull.id);
+
+                    try {
+                        fastspring.builder.reset();
+                    } catch(e) {}
+                }
+            }
+
+            setPlan("lt-api-250-req-per-day");
+        </script>
+    </div>
+            </section>
+
+                            <footer class="footer">
+    <div class="footer__wrapper | flex">
+        <div class="footer__column footer__column--logo | flex">
+            <a class="logo plain logo--black logo--hide-text" href="/">
+                <span class="name notranslate">Language<strong>Tool</strong></span>
+                <span class="claim">Check your text quickly and easily. Grammar, punctuation, style, and spelling.</span>
+            </a>
+
+            <ul class="social-links | flex">
+                                    <li>
+                        <a
+                            class="social-link social-link__x | block"
+                            href="https://x.com/languagetool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            X
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__facebook | block"
+                            href="https://www.facebook.com/LanguageTool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__instagram | block"
+                            href="https://www.instagram.com/languagetool/"
+                            target="_blank"
+                            rel="me"
+                        >
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="social-link social-link__tiktok | block"
+                            href="https://www.tiktok.com/@languagetool"
+                            target="_blank"
+                            rel="me"
+                        >
+                            TikTok
+                        </a>
+                    </li>
+                                <li>
+                    <a
+                        class="social-link social-link__linked-in | block"
+                        href="https://www.linkedin.com/company/languagetool"
+                        target="_blank"
+                        rel="me"
+                    >
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h5 class="headline headline--5">
+                Languages
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--en | inline-block"
+                        href="/spellchecking-english"
+                    >
+                        Free Spell Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--de | inline-block"
+                        href="/spellchecking-german"
+                    >
+                        German Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--es | inline-block"
+                        href="/spellchecking-spanish"
+                    >
+                        Spanish Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--fr | inline-block"
+                        href="/spellchecking-french"
+                    >
+                        French Grammar Checker 
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--pt | inline-block"
+                        href="/spellchecking-portuguese"
+                    >
+                        Portuguese Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--nl | inline-block"
+                        href="/spellchecking-dutch"
+                    >
+                        Dutch Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="language-specific dynamic-flag--small-before dynamic-flag--ca | inline-block"
+                        href="/spellchecking-catalan"
+                    >
+                        Catalan Grammar Checker
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                Apps
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_mac_desktop_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--mac | inline-block"
+                        href="/mac-desktop"
+                    >
+                        macOS
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_windows-app_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--windows | inline-block"
+                        href="/windows-desktop"
+                    >
+                        Windows
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h5 class="headline headline--5">
+                Browser Add-ons
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--chrome | inline-block"
+                        href="https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&amp;utm_medium=referral" target="_blank"
+                    >
+                        Chrome
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--edge | inline-block"
+                        href="https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc" target="_blank"
+                    >
+                        Microsoft Edge
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--firefox | inline-block"
+                        href="https://addons.mozilla.org/firefox/addon/languagetool/" target="_blank"
+                    >
+                        Mozilla Firefox
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_browser_addon|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--opera | inline-block"
+                        href="https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/" target="_blank"
+                    >
+                        Opera
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">Office Plugins</h5>
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_gdocs_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--google-docs | inline-block"
+                        href="/google-docs"
+                    >
+                        Google Docs
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_word_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--word | inline-block"
+                        href="/word"
+                    >
+                        Microsoft Word
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_apple_pages_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--apple-pages | inline-block"
+                        href="/mac-desktop"
+                    >
+                        Apple Pages
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_libreoffice_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--libre-office | inline-block"
+                        href="/libre-office" target="_blank"
+                    >
+                        LibreOffice
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                E-Mail Add-ons
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_google-mail_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--google-mail | inline-block"
+                        href="/google-mail"
+                    >
+                        Gmail
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_apple_mail_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--apple-mail | inline-block"
+                        href="/apple-mail"
+                    >
+                        Apple Mail
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_outlook_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--outlook | inline-block"
+                        href="/windows-desktop"
+                    >
+                        Outlook<span class="new-highlight | inline-block">BETA</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        data-track-click="WelcomePage|go_to_thunderbird_lp|footer"
+                        class="plugin-redirect dynamic-service--small dynamic-service--thunderbird | inline-block"
+                        href="/thunderbird"
+                    >
+                        Thunderbird
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column footer__column--product">
+            <h5 class="headline headline--5">
+                Product
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a href="/">
+                        Grammar Checker
+                    </a>
+                </li>
+                <li>
+                    <a href="/commas">
+                        Punctuation Checker
+                    </a>
+                </li>
+                <li>
+                    <a href="/paraphrasing-tool">
+                        Paraphrasing Tool
+                    </a>
+                </li>
+                                <li>
+                    <a href="/premium">
+                        Premium
+                    </a>
+                </li>
+                                <li>
+                    <a href="/?source=upload">
+                        Correct Grammar in Word Documents
+                    </a>
+                </li>
+                <li>
+                    <a href="/business">
+                        LanguageTool for Businesses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/students">
+                        LanguageTool for Non-Profits &amp; Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/professionals">
+                        LanguageTool for Professional Writers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/proofreading-api">
+                        Proofreading API
+                    </a>
+                </li>
+                <li>
+                    <a href="/dev">
+                        Open-Source Development
+                    </a>
+                </li>
+                <li>
+                    <a href="https://help.languagetool.org" target="_blank">
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+
+            <h5 class="headline headline--5">
+                Company
+            </h5>
+
+            <ul class="footer_column_link-list">
+                <li>
+                    <a href="/about">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="/media-assets">
+                        Media Assets
+                    </a>
+                </li>
+                <li data-german-speaking="false">
+                    <a href="https://www.openthesaurus.de/" target="_blank" rel="me">
+                        OpenThesaurus - Synonyme
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/languagetool-org/languagetool" target="_blank" rel="me">
+                        Source Code
+                    </a>
+                </li>
+                <li>
+                    <a href="https://languagetooler.workwise.io/" target="_blank">
+                        Careers
+                    </a>
+                </li>
+                <li>
+                <a href=https://languagetool.org/insights/ target="_blank" rel="me">
+            Blog
+    </a>
+                </li>
+                <li>
+                    <a href="/legal/copyright-community-guidelines-dsa-other">
+                        Copyright, Community Guidelines, DSA &amp; other Legal Resources
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-nav | flex">
+    <div class="footer-nav__wrapper | flex">
+        <ul class="footer-nav__wrapper__list | flex">
+            <li class="made-in footer-nav__wrapper__list__item | block text-center">Made with &#9829; in Europe and the US</li>
+            <li>
+                <ul class="footer-nav__wrapper__list__sublist | flex lt-lg:flex-col lt-lg:items-center lt-xl:mb-4">
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/privacy">
+                            Privacy
+                        </a>
+                    </li>
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/terms">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+                    <li class="footer-nav__wrapper__list__item">
+                        <a href="/legal/">
+                            Imprint
+                        </a>
+                    </li>
+                                            <li class="footer-nav__wrapper__list__item">
+                            <a
+                                href="/legal/cookie-policy"
+                                data-cookie-preferences
+                                rel="nofollow"
+                            >
+                                Do Not Sell or Share My Personal Info
+                            </a>
+                        </li>
+                                    </ul>
+            </li>
+        </ul>
+
+                                <label class="select language-select icon--chevron-down | flex">
+                <span class="language-select__icon dynamic-flag--en | inline-block"></span>
+                <span id="language-select__label" class="language-select__label">English</span>
+                <select id="language-select" class="language-select__dropdown | inline-block">
+                                                                    <option value="/proofreading-api?force_language=1" selected>
+                            English
+                        </option>
+                                                                    <option value="/de/proofreading-api" >
+                            German
+                        </option>
+                                                                    <option value="/es/proofreading-api" >
+                            Spanish
+                        </option>
+                                                                    <option value="/nl/proofreading-api" >
+                            Dutch
+                        </option>
+                                                                    <option value="/fr/proofreading-api" >
+                            French
+                        </option>
+                                                                    <option value="/ru/proofreading-api" >
+                            Russian
+                        </option>
+                                                                    <option value="/it/proofreading-api" >
+                            Italian
+                        </option>
+                                                                    <option value="/ca/proofreading-api" >
+                            Catalan
+                        </option>
+                                                                    <option value="/pt-BR/proofreading-api" >
+                            Portuguese (BR)
+                        </option>
+                                                                    <option value="/pt/proofreading-api" >
+                            Portuguese (PT)
+                        </option>
+                                                                    <option value="/uk/proofreading-api" >
+                            Ukrainian
+                        </option>
+                                                                    <option value="/pl/proofreading-api" >
+                            Polish
+                        </option>
+                                    </select>
+            </label>
+            </div>
+</div>
+</footer>
+                        <script id="inline-script-6ab0519e0944e" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="track-cookie-consent" data-meta='{"requires_consent":false}'>(() => {const inlineScript = document.getElementById("inline-script-6ab0519e0944e");(()=>{"use strict";function e(...e){return arguments}const a=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{return{}}})(),t=Array.isArray(navigator.userAgent.match(/\bLanguageTool(|Mobile|DesktopMac|Windows|DesktopWindows)\//)),n=Boolean(a.requires_consent)&&!t;"requires_consent"in a||console.warn('Inline script "track-cookie-consent" is missing the meta property `requires_consent`'),window.dataLayer=window.dataLayer||[],n&&window.dataLayer.push(e("set","url_passthrough",!0)),window.dataLayer.push(e("consent","default",function(e){return e?{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",personalization_storage:"denied",wait_for_update:500}:{ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted",analytics_storage:"granted",personalization_storage:"granted"}}(n)))})();})();</script>    <script id="inline-script-6ab0519e097bf" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="zendesk-messenger" data-meta='{"active":true,"fieldIds":{"profile":"39153439999767","account_language":"39153485031703","time_zone":"39153446918551","signed_up_at":"39153844168855","language_scribbr":"39155123237911"},"jwtSigningEnabled":true,"jwtUrl":"https:\/\/languagetool.org\/_zendesk\/messaging-jwt"}'>(() => {const inlineScript = document.getElementById("inline-script-6ab0519e097bf");(()=>{"use strict";const t=(()=>{try{return JSON.parse(inlineScript.dataset.meta||"{}")}catch{return{}}})();function e(){return new Promise((t=>{const e=Date.now(),n=()=>{const i=function(){const t=window;return"function"==typeof t.zE?t.zE:void 0}();i?t(i):Date.now()-e>=9e4?t(void 0):window.setTimeout(n,400)};n()}))}async function n(){const t=window.__LT_CONTEXT__;if("function"==typeof t)return t()}function i(t){const e=Number(t);return Number.isSafeInteger(e)&&String(e)===t.trim()?e:t}function a(e,n){!function(t,e){if(0!==e.length)try{t("webWidget","updateSettings",{webWidget:{contactForm:{fields:e.map((t=>({id:t.id,prefill:{"*":"boolean"==typeof t.value?t.value?"true":"false":String(t.value)}})))}}})}catch{}}(e,function(t,e){const n=[],a=(t,a)=>{const r=e[t];r&&null!=a&&("string"==typeof a&&""===a||n.push({id:i(r),value:a}))};a("time_zone",Intl.DateTimeFormat().resolvedOptions().timeZone||void 0);const r=t?.user;return r?(a("profile",`https://languagetool.org/admin4347/users/${r.id}`),a("account_language",r.display_language??void 0),a("language_scribbr",r.mother_tongue??r.display_language??void 0),r.created_at&&a("signed_up_at",r.created_at),n):n}(n,t.fieldIds??{})),function(t,e){const n=e?.user;if(!n?.email)return;const i=n.name?.trim()||n.first_name?.trim()||"";try{t("webWidget","identify",{name:i,email:n.email})}catch{}try{t("webWidget","prefill",{name:{value:i,readOnly:!0},email:{value:n.email,readOnly:!0}})}catch{}}(e,n),function(t,e){const n=function(t){const e=["languagetool_website"],n=t?.user;return n&&e.push(`lt_tier_${function(t){return t.is_enterprise?"enterprise":t.is_business_user?"business":t.is_premium?"premium":"free"}(n)}`),!0===n?.is_premium&&e.push("lt_premium"),e}(e);if(0!==n.length)try{t("webWidget","chat:addTags",n)}catch{}}(e,n)}function r(t,e){try{t("webWidget","updateSettings",{webWidget:{authenticate:{chat:{jwtFn:t=>{(async function(t){try{const e=await fetch(t,{credentials:"same-origin",headers:{Accept:"application/json","X-Requested-With":"XMLHttpRequest"}});if(!e.ok)return null;const n=await e.json();return"string"==typeof n.jwt&&n.jwt.length>0?n.jwt:null}catch{return null}})(e).then((e=>{e&&t(e)}))}}}}})}catch{return}try{t("webWidget","chat:reauthenticate")}catch{}}function o(t){const e=()=>{!async function(t){a(t,await n())}(t)},i=n=>{try{t("webWidget:on",n,e)}catch{}};i("open"),i("chat:start")}!async function(){if(!t.active)return;const i=await e();i&&(o(i),await function(e){return n().then((i=>{const o=!0===t.jwtSigningEnabled&&Boolean(t.jwtUrl)&&Boolean(i?.user);a(e,i),o&&t.jwtUrl&&(r(e,t.jwtUrl),window.setTimeout((()=>{n().then((t=>a(e,t)))}),500),window.setTimeout((()=>{n().then((t=>a(e,t)))}),12e3))}))}(i))}()})();})();</script><script id="inline-script-6ab0519e09a89" nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P" data-name="tag-manager" data-gtm-nonce="Xhi4iYepA2BmQCpVwlXvzFN916bqs09P">(() => {const inlineScript = document.getElementById("inline-script-6ab0519e09a89");(()=>{"use strict";const e=async function(e){if(!e)return"";const t=function(e){if(!e)return"";let t=e.trim().toLowerCase();const r=t.match(/^([^@]+)@(gmail|googlemail)\.com$/i);if(r){let e=r[1];const n=r[2];e=e.split("+")[0],e=e.replace(/\./g,""),t=`${e}@${n}.com`}return t}(e);return await async function(e){const t=(new TextEncoder).encode(e),r=await crypto.subtle.digest("SHA-256",t);return Array.from(new Uint8Array(r)).map((e=>e.toString(16).padStart(2,"0"))).join("")}(t)};async function t(t){window.dataLayer=window.dataLayer||[],window.dataLayer.push({"gtm.start":(new Date).getTime(),event:"gtm.js"});const r=t?.user?.id,n=t?.user?.email;if(r&&window.dataLayer.push({userId:r,email_address:n||null,user_name:t?.user?.name,is_premium:t?.user?.is_premium||!1,is_enterprise:t?.user?.is_enterprise||!1,is_business_user:t?.user?.is_business_user||!1,user_sign_up_timestamp:t?.user?.created_at?Math.floor(Date.parse(t.user.created_at)/1e3):null,subscription_start_date:t?.user?.premium_from||null,subscription_end_date:t?.user?.premium_to||null,team_member_type:t?.user?.group_role||null,recurly_account_id:t?.user?.recurly_account_id||null,fastspring_account_id:t?.user?.fastspring_account_id||null,intercom_user_jwt:t?.user?.intercom_user_jwt||null}),n)try{const t=await e(n);window.dataLayer.push({sha256_email_address:t})}catch(e){console.error("Failed to hash email:",e)}const s=document.getElementsByTagName("script")[0],a=document.querySelector("[data-gtm-nonce]"),i=document.createElement("script"),u=String(a.dataset.gtmNonce||a.getAttribute("data-gtm-nonce"));i.type="text/javascript",i.async=!0,i.setAttribute("fetchPriority","low"),i.src="https://www.googletagmanager.com/gtm.js?id=GTM-WSQ9CCW",i.setAttribute("nonce",u),i.setAttribute("data-gtm-nonce",u),s.parentElement.insertBefore(i,s)}"function"==typeof window.__LT_CONTEXT__?window.__LT_CONTEXT__().then(t):t()})();})();</script>
+
+        </div>
+
+        <!-- release 0733af7 -->
+    </body>
+</html>

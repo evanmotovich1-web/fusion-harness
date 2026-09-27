@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "suite_id": "crm-repair-v1",
+  "recorded_at": "2026-09-20T22:43:46.489599+00:00",
+  "checks": [
+    {
+      "check": "historical-counterexamples",
+      "passed": true,
+      "receipt": {
+        "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-historical-counterexamples.json",
+        "sha256": "bd93aa52c95ab251bf98d474780d53fe4770e0a530aac51125f8b66eb12e15ce"
+      },
+      "passed_rows": 43,
+      "total_rows": 53
+    },
+    {
+      "check": "legacy-regression",
+      "passed": true,
+      "receipt": {
+        "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-legacy-regression.json",
+        "sha256": "403c8febe135d6989f0e784ec63c78104735f3f35d17fe63e5a084ccc04d31fa"
+      },
+      "passed_rows": 20,
+      "total_rows": 20
+    },
+    {
+      "check": "repair-regression",
+      "passed": true,
+      "receipt": {
+        "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-repair-regression.json",
+        "sha256": "aa967b953fb6e047031f2dc755fd605ed5d46819f61849443a0621d95c6f0ea6"
+      },
+      "passed_rows": 53,
+      "total_rows": 53
+    }
+  ],
+  "historical_artifacts_changed": [],
+  "archive_matches_original_hash": true,
+  "preservation_manifest": {
+    "path": "cases/003/implementation/source-history/71cbff3059ea041d9e1920dd7767c827ae0b382d13341b6ca033826d43b87135/manifest.json",
+    "sha256": "555033501cbb50c114ed3d29311c04742986e53a87f06f1be15d479097de077a"
+  },
+  "implementation": {
+    "path": "cases/003/implementation/workflow.py",
+    "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4"
+  },
+  "fixtures": {
+    "path": "cases/003/tests/fixtures.repair-v1.json",
+    "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+  },
+  "product_acceptance": false,
+  "inference_executed": false,
+  "scope": "Local R1/R3 repair verification only, not a reproduced conversational CRM product",
+  "status": "passed"
+}

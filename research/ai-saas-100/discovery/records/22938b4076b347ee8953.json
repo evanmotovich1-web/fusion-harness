@@ -1,0 +1,273 @@
+{
+  "evidence_id": "web-22938b4076b347ee8953",
+  "source_url": "https://www.docsumo.com/",
+  "retrieved_at": "2026-09-20T21:00:37.378106+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.docsumo.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/22938b4076b347ee8953.html",
+  "capture_sha256": "8fa3c57db00b68c6c9c446613049c2eaa83819aa11bd9dc42bd49792f902d8fd",
+  "bytes_saved": 262144,
+  "title": "Intelligent Document Processing Meets Agentic AI | Docsumo",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Go from rule-based OCR to LLM-led intelligent document processing workflows in the Agentic AI era with Docsumo. Built for enterprise accuracy and ROI."
+    },
+    {
+      "key": "og:title",
+      "value": "Intelligent Document Processing Meets Agentic AI | Docsumo"
+    },
+    {
+      "key": "og:description",
+      "value": "Go from rule-based OCR to LLM-led intelligent document processing workflows in the Agentic AI era with Docsumo. Built for enterprise accuracy and ROI."
+    }
+  ],
+  "text": "Intelligent Document Processing Meets Agentic AI | Docsumo\nPlatform\nSolutions\nBY TOOLS\nDocument AI Software\nIDP Software\nOCR Software\nCareers\nDocument Automation\nDocument Data Extraction\nDocument Scanning\nBY DOCUMENT TYPES\nBank Statements\nUtility Bills\nCareers\nACORD forms\nInvoices\nBank Checks\nBill of Lading\nBY INDUSTRIES\nCommercial Lending\nFinancial Services\nCareers\nHealthcare\nCommercial Banking\nExplore All Solutions\nCustomers\nPricing\nResources\nLEARN\nBlogs\nCompare\nCase Studies\nFAQs\nSupport Docs\nCareers\nCOMPANY\nAbout Us\nEnterprise Plan\nTerms of Use\nPrivacy Policy\nCareers\nLog In\nTry For Free\nBook A Demo\nAutomate your\nemail & document workflows\nwith agents you can actually deploy\nTry 1,000 Pages Free\nDocsumo's Document AI agents are trained on billions of documents and complex industry use cases to help you make informed decisions in seconds with 95%+ straight-through processing.\nTrusted by 10,000+ mid-sized and enterprise teams\nDocument and email workflows break in four places. Your operations team feels it.\nFrom intake to decision, the manual document workflow has four failure points.\nEach one is a tax on your team and on your customer's experience.\nChasing documents\nExtracting data\nCross-checking\nWaiting on decisions\nDOCUMENT INTAKE\nYour team spends more time chasing documents than processing them.\nInbound docs arrive across email, SFTP, drive folders, vendor portals, and scanned attachments. Half are missing pages. The latest version is buried in a reply-all thread. Your team becomes the routing layer copying attachments, classifying intent, asking \"did you send the W-2?\" for the third time.\n1\nLoan officer requests missing documents\n2\nWrong attachment lands - resend needed\n3\nRead 4 days ago - no reply from borrower\n4\nUrgent 3rd follow-up - rate lock at risk\nRe: Mortgage application - missing documents\n7 days - open\nMR\nMarcus Reed\nMon - 9:14 am\nHi Sarah - please send: 2024 W-2, Nov bank stmt, driver's license.\nSC\nSarah Chen\nTue - 11:42 am\nW-2_2023.pdf\nWrong year\nMR\nMarcus Reed\nWed - 10:15 am\nThat's the\n2023\nW-2 - need 2024. Bank stmt + DL still missing.\nRead 4 days ago - no reply\nMR\nMarcus Reed\n- 3rd follow-up\nMon - 8:30 am\nRate lock expires\nWednesday\n- we lose the 4.875% rate.\nManual extraction\nYour team is reading PDFs and typing the data into systems.\nEvery invoice, application, claim, and form means someone opens a document, reads the fields, and types them into NetSuite, Encompass, Epic, or your CRM. Slow. Expensive. Error-prone. The work scales linearly with volume - your team doesn't.\n1\nBank statement opens - ready for manual entry\n2\nOperator types row 1 - clean entry\n3\nRow 2 vendor mistyped - error not caught\n4\nAmount mistyped - 2 of 5 rows wrong\nstatement.pdf\nsource\ndate\nvendor\namount\n11/03\nAcme corp\n1,247.50\n11/07\nWhole foods\n89.32\n11/12\nStarbucks\n5.75\n11/15\nPG&E utils\n187.40\n11/19\nAWS cloud\n1,089.00\nrecon.xlsx\n0 errors\n1 error\n2 errors\nA\nB\nC\n1\ndate\nvendor\namount\n2\n11/03\nAcme corp\n1,247.50\n3\n11/07\nWhole food\n89.32\n4\n11/12\nStarbucks\n5.75\n5\n11/15\nPG&E utils\n18.40\n6\n11/19\nAWS cloud\n-\nCase validation\nEvery case takes 20 minutes and a human to cross-check.\nA loan packet, a claim, a KYC bundle. Each one needs someone to verify names match across three documents, calculate the DTI, confirm income against the W-2, and check the reserves. The work is rote, the volume is large, and one mistake costs the team a quarter.\n1\nCase bundle opens · 3 supporting documents\n2\nUnderwriter checks applicant name in each\n3\n3 different name formats detected\n4\nManual review required · same person?\nForm 1003\napplicant name\nWayne, B.\nACORD 25\nnamed insured\nB. Wayne\nKYC packet\nlegal full name\nBruce Wayne\nApplicant name varies across sources\nManual review\nForm 1003\nWayne, B.\n≠\nACORD 25\nB. Wayne\n≠\nKYC packet\nBruce Wayne\nDecision delivery\nDecisions sit in a queue while customers wait.\nBy the time a document gets routed, extracted, validated, and reviewed, days have passed. Your SLA slipped. Your customer called twice. Your ops team is firefighting volume instead of improving the process.\n1\nApplication enters the underwriting queue\n2\nDocuments finally collected · past SLA\n3\nData typed manually · stuck in queue\n4\nDecision still pending · customer waiting\nLOAN-3892\nSarah Chen\n1\ndays waiting\non track\n1\nDay 1 ·\nSarah submits application\nLoan packet enters queue · 12 documents\nSLA target · 48 hours · missed at day 2\n2\nDay 3 ·\nDocuments finally collected\nAfter 4 follow-up emails — wrong W-2 sent twice\n3\nDay 5 ·\nData manually keyed into LOS\n3 hours of typing · 2 errors slipped through\n4\nDay 7 ·\nCross-check in underwriter queue\n8 cases ahead · waiting on Marcus to review\n5\nDay 9 · now\n· Decision still pending\nSarah called twice · rate lock expires in 2 days\nMultiple Agents. One Operating Layer.\nUnlimited Document Workflows.\nEach Docsumo agent owns one job and does it exceptionally well. Together they form an end-to-end pipeline from any inbox or document source to your systems of record. Click any agent to see how it works.\nRead\nEmail Agent\nTriages shared inboxes by intent, extracts attachments, drafts contextual replies, and routes work to the right downstream agent.\nDocument Collection Agent\nGathers documents from any source - email, SFTP, drive folders, scanners, vendor portals, APIs. Organizes them into the right case.\n1\nNew emails arrive in the shared inbox\n2\nAgent opens the latest message\n3\nBody and attachments are scanned\n4\nEvery thread is tagged by intent\n[email protected]\n5 threads - 1 new\nAcme Corp\nInvoice INV-3941 - Net 30\ninvoice-3941.pdf\n10:42\nSarah Chen\nMortgage docs upload\nw2-2024.pdf\n9:14\nGlobex Ltd\nACORD 25 quote request\nacord-25.pdf\nTue\nOut-of-office bot\nAuto-reply - Away Aug 30\nTue\nInitech AP\nStatement Aug 2026\nstmt-aug.pdf\nMon\nInvoice INV-3941 - Net 30 terms\nFrom\n[email protected]\n- 10:42 am\nHi team,\nPlease find attached invoice INV-3941 for May 2026.\nPayment due on August 26th, 2026 per Net 30 terms.\ninvoice-3941.pdf\npo-4421.pdf\nLet us know if you have any questions.\nInvoice INV-3941 - Net 30 terms\nFrom\n[email protected]\nKey date detected\nHi team - please find attached invoice INV-3941.\nApprover: J. Patel - Cost center 4420 - Region NA-East.\nNet 30 terms apply, see PO-4421 attached.\nTotal\nPayment due on August 26th, 2026\nper Net 30 terms.\nReach out to\n[email protected]\nwith questions.\n[email protected]\n5 threads - tagged by agent\nAcme Corp\nInvoice INV-3941 - Net 30\ninvoice-3941.pdf\n-> AP team\n10:42\nSarah Chen\nMortgage docs upload\nw2-2024.pdf\n-> Case LOAN-3892\n9:14\nGlobex Ltd\nACORD 25 quote request\nacord-25.pdf\n-> Underwriting\nTue\nOut-of-office bot\nAuto-reply - Away Aug 30\nArchived\nTue\nInitech AP\nStatement Aug 2026\nstmt-aug.pdf\n-> AP team\nMon\n1\nCollecting from API webhook\n2\nCollecting from email inbox\n3\nCollecting from SharePoint folder\n4\nCollecting from SFTP drop\n5\nCase Overview\nAPI webhook\nPOST /v1/docs/intake\nIdle\nFetching\n+1 doc\nEmail inbox\n[email protected]\nIdle\nFetching\n+3 docs\nSharePoint folder\n/Loans/incoming/2026\nIdle\nFetching\n+2 docs\nSFTP drop\nsftp://docs.yourco.com/incoming\nIdle\nFetching\n+4 docs\nCase Name - LOAN-3892\n10 docs - ready\nDocument\nSource\nType\nStatus\nwh-payload-44a2.json\nAPI webhook\nInvoice\nProcessed\ninvoice-3941.pdf\nEmail inbox\nInvoice\nProcessed\npo-4421.pdf\nEmail inbox\nPurchase order\nProcessed\nstmt-mar-2026.pdf\nEmail inbox\nBank statement\nReview\nloan-app-9921.pdf\nSharePoint\nMortgage app\nProcessed\nw2-chen-2024.pdf\nSharePoint\nW-2\nProcessed\nacord-25-globex.pdf\nSFTP drop\nACORD 25\nReview\nclaim-photos.zip\nSFTP drop\nImage bundle\nProcessed\npay-stub-aug.pdf\nSFTP drop\nPay stub\nProcessed\nid-front-back.pdf\nSFTP drop\nID document\nProcessed\nDecide\nDocument Classification Agent\nIdentifies every document type invoice, W-2, ACORD, 1003, bank statement, ID, and routes it to the right extraction logic.\nDocument Extraction Agent\n99% field-level accuracy on 250+ document types including handwriting, tables, and signatures. Every field has a confidence score and a source span.\nDocument Verification Agent\nCross-document validation against your business rules - name matches, DTI thresholds, income verification, reserves checks. Surfaces only true exceptions.\n1\nRaw files uploaded with random names\n2\nEach file classified by document type\n3\nStatus updated · ready for routing\nCase Name\nLOAN-2024-3892\n5 documents\ndoc-001.pdf\nMortgage application (1003)\ndoc-001.pdf\n99%\nReview pending\ndoc-002.pdf\nBank statement (3 mo)\ndoc-002.pdf\n98%\nProcessed\ndoc-003.pdf\nW-2 2024\ndoc-003.pdf\n99%\nProcessed\ndoc-004.pdf\nDriver's license\ndoc-004.pdf\n100%\nProcessed\ndoc-005.pdf\nACORD 25 - Certificate of insurance\ndoc-005.pdf\n97%\nReview pending\n1\nOpen a document in the case folder\n2\nFields appear with confidence scores\n3\nClick a field to see its source\nCase Name",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/css/docsumo-staging.webflow.shared.9863a0079.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/64be86eaa29fa71f24b00a24_favicon%2032%20px.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/64be86eaa29fa71f24b00914_favicon.webp",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.docsumo.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.docsumo.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.docsumo.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/platform/overview",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-ai-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/intelligent-document-processing-platform",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ocr-software",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-data-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-scanning-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-statements",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/utility-bills",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/acord-forms",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/invoices",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-checks",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bill-of-lading",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-lending",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-financial-services",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-healthcare",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-commercial-banking",
+      "rel": null
+    },
+    {
+      "href": "/solutions",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/customers/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/faqs",
+      "rel": null
+    },
+    {
+      "href": "https://support.docsumo.com/",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/login?utm_source=website&utm_medium=navbar&utm_campaign=login-cta",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/signup?utm_source=website&utm_medium=navbar&utm_campaign=signup-cta",
+      "rel": null
+    },
+    {
+      "href": "/get-started?utm_source=website&utm_medium=navbar&utm_campaign=schedule-demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/signup?utm_source=website&utm_medium=home-atf&utm_campaign=signup-cta",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1921
+}

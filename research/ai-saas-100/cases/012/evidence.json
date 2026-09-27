@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-b8dc840fe34230025b1f",
+      "source_url": "https://replit.com/",
+      "final_url": "https://replit.com/",
+      "publisher": "replit.com",
+      "retrieved_at": "2026-09-20T21:00:55.594077+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI App and Website Builder | Replit"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "AI App and Website Builder"
+        },
+        {
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "replit"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI App and Website Builder | Replit\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding "
+        },
+        {
+          "locator": "text characters 1164:1476",
+          "excerpt": " an example prompt\nB2B project management app\nFreelance client portal\nAI sales assistant\nMeet\nReplit\nMaximize Making on Replit\nFree mode\nCreate without token costs\nBrainstorm and create at no cost.\nFree\nPower\nMax\nSarah\nGreat! Here's the plan…\nI have an idea to create a mood board.\nSarah\nPerfect! Let's create a "
+        },
+        {
+          "locator": "text characters 2370:2682",
+          "excerpt": "alable apps easily and securely from day one.\nIntegrations\nConnect to AI & services.\nEnhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\nEnterprise control\nSecure your apps as they scale.\nSecurity controls: SSO/SAML, SOC 2, and admin controls. Scree"
+        },
+        {
+          "locator": "text characters 2408:2720",
+          "excerpt": "ay one.\nIntegrations\nConnect to AI & services.\nEnhance your apps with AI and 100+ integrations. Connect to OpenAI, Stripe, Google Workspace, and more in minutes.\nEnterprise control\nSecure your apps as they scale.\nSecurity controls: SSO/SAML, SOC 2, and admin controls. Screening and secure services keep apps saf"
+        },
+        {
+          "locator": "text characters 3082:3166",
+          "excerpt": "alable apps easily and securely from day one.\nIntegrations\nConnect to AI & services."
+        }
+      ],
+      "capture_path": "discovery/captures/b8dc840fe34230025b1f.html",
+      "capture_sha256": "dfc1c5707a0de961e8412fe8afc0503cb9dd58832fc3fe494265ce039c052db3",
+      "record_path": "discovery/records/b8dc840fe34230025b1f.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r012-0bc3718b3b246df0d32b",
+      "source_url": "https://replit.com/integrations",
+      "publisher": "replit.com",
+      "retrieved_at": "2026-09-20T21:35:26.390724+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://replit.com/integrations",
+      "capture_path": "cases/012/research/captures/0bc3718b3b246df0d32b.html",
+      "capture_sha256": "b55e473ca57ecf2980b0105eb31dbc59c209fbe16664c07f832dc621f33bf7de",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/012/research/records/0bc3718b3b246df0d32b.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Replit Integrations — Browse 450+ Connectors | Replit"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Connect Tools. Ship Products. — 450+ Replit Integrations"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "The largest integration library in AI. Find the connector you need and tell Replit Agent what to build — auth, wiring, and UI handled for you."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Replit"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r012-d66542f783c611971c26",
+      "source_url": "https://replit.com/pricing",
+      "publisher": "replit.com",
+      "retrieved_at": "2026-09-20T21:35:26.333636+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://replit.com/pricing",
+      "capture_path": "cases/012/research/captures/d66542f783c611971c26.html",
+      "capture_sha256": "243c559ccb87eef66004e0f92b48281564c07e892f5b498bedd2a6f59f36ccf3",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/012/research/records/d66542f783c611971c26.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing and Plans | Replit"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "Pricing and Plans"
+        },
+        {
+          "locator": "metadata[1].og:description",
+          "excerpt": "See Replit's plans and pricing. Start free, or upgrade for more AI usage, collaborators, and features."
+        },
+        {
+          "locator": "metadata[2].og:site_name",
+          "excerpt": "replit"
+        },
+        {
+          "locator": "text characters 674:2822",
+          "excerpt": "Dashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nLog in\nCreate account\nPricing\nChoose the best plan for you.\nMonthly\nYearly\nUp to 10% off\nCore\n$20\n$18 / month, billed annually\nAI integrations\nUp to 30 hours of chat on Free Mode\nUp to 60 projects on Free Mode\n$20 towards most powerful models\nPlan mode\nUnlimited workspaces\nTry now\nPro\n$100\n$90 / month, billed annually\n10 parallel agents\nPremium Support\nEverything in Core plus:\nEven more Free Mode usage to chat and create\n$100 towards most powerful models\nUp to 15 collaborators\nInvite up to 50 viewers\nDatabase rollback up to 28 days\nUpgrade to Pro\nEnterprise\nCustom\nEnterprise-grade security and control\nCustom seat limits\nSSO/SAML\nAdvanced privacy controls\nSingle-tenant environments\nStatic outbound IPs\nand much more\nContact sales\nGet started\n*Prices are subject to tax depending on your location. Replit Agent is powered by large language models. While it can produce powerful results, its behavior is probabilistic - meaning it may occasionally make mistakes.\nFrequently asked questions\nWhat are all the features included in these plans?\nHow do credits work?\nWhat happens when I run out of credits?\nWhat comes with my subscription?\nWhat plan is best for me?\nWhat is Effort-Based Pricing (pay-as-you-go)?\nHow can I control what I spend on Replit?\nHow can I see how much I'm spending?\nDo you offer invoicing instead of credit card payments?\nDo you offer annual plans at a discount?\nStill have questions?\nYou can see more details in our\nBilling docs\n. If you're interested in the Enterprise plan,\ncontact us\n. For support, sign in to Replit and use the ? on the top right corner of the page for help.\nCA\n73°F\nMade in sunny California.\nAll rights reserved. Copyright © 2026 Replit, Inc.\nHandy Links\nResources\nHelp\nHow to guides\nStatus\nCertifications\nPartnerships\nLegal\nTerms of Service\nPro Agreement\nEnterprise Agreement\nPrivacy\nSubprocessors\nDPA\nReport Abuse\nCompany\nAbout\nNews\nCareers\nBrand Center\nContact Us\nSocial\nX / Twitter\nYouTube\nLinkedin\nInstagram\nFacebook\nTikTok"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-34ea67d75a31b4177a53",
+      "source_url": "https://bolt.new/",
+      "final_url": "https://bolt.new/",
+      "publisher": "bolt.new",
+      "retrieved_at": "2026-09-20T21:00:55.713426+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Bolt AI builder: Websites, apps & prototypes"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Build and scale high-performing websites & apps using your words. Join millions and start building today."
+        },
+        {
+          "locator": "metadata[1].og:site_name",
+          "excerpt": "bolt.new"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Bolt AI builder: Websites, apps & prototypes"
+        },
+        {
+          "locator": "text characters 0:247",
+          "excerpt": "Bolt AI builder: Websites, apps & prototypes\nBack\nSolutions\nResources\nCareers\nPricing\nSign in\nGet Started\nGet Started\nSolutions\nResources\nCareers\nPricing\nAI for Small Business\n→\nCustom apps for your business, built in an afternoon — no code, no de"
+        },
+        {
+          "locator": "text characters 84:396",
+          "excerpt": "g\nSign in\nGet Started\nGet Started\nSolutions\nResources\nCareers\nPricing\nAI for Small Business\n→\nCustom apps for your business, built in an afternoon — no code, no developer, no $100K project.\nTop Use Cases\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nBusiness Type\nSmall Business\nEnterprise\nBolt Template"
+        },
+        {
+          "locator": "text characters 218:530",
+          "excerpt": "an afternoon — no code, no developer, no $100K project.\nTop Use Cases\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nBusiness Type\nSmall Business\nEnterprise\nBolt Templates\n→\nProduction-ready starting points — dashboards, storefronts, portfolios, and more. Fork one and make it yours.\nSupport\nCommunity\nHe"
+        },
+        {
+          "locator": "text characters 233:545",
+          "excerpt": "no code, no developer, no $100K project.\nTop Use Cases\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nBusiness Type\nSmall Business\nEnterprise\nBolt Templates\n→\nProduction-ready starting points — dashboards, storefronts, portfolios, and more. Fork one and make it yours.\nSupport\nCommunity\nHelp Center\nSecur"
+        },
+        {
+          "locator": "text characters 626:938",
+          "excerpt": "ill you build today?\nCreate stunning apps & websites by chatting with AI.\nLet's build a prototype...\nPlan\nBuild now\nWebsite\nNew\nSlides\nApp\nPrototype\nor start from\nFigma\nGitHub\nTeam template\nTrusted by Google, Microsoft, Salesforce, AWS, Meta, HubSpot, Accenture, TikTok, Shopify, Chegg, Cloudflare, Netlify, Fact"
+        },
+        {
+          "locator": "text characters 3022:3315",
+          "excerpt": "building for free\nLet's build a prototype...\nPlan\nBuild now\nSolutions\nAI App Builder\nAI Website Builder\nSaaS Dev\nPrototyping\nSmall Business\nEnterprise\nResources\nBlog\nCommunity\nHelp Center\nSecurity & Trust\nTemplates\nMore\nCareers\nPricing\nTerms of Use\nAcceptable Use Policy\nPrivacy Policy\nConnect"
+        }
+      ],
+      "capture_path": "discovery/captures/34ea67d75a31b4177a53.html",
+      "capture_sha256": "2026c08f622d8c69b096cc71cd6a03b8f4b05f35ab501fc01e22cc40d6515feb",
+      "record_path": "discovery/records/34ea67d75a31b4177a53.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

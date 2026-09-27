@@ -1,0 +1,27 @@
+{
+  "id": "data-protection-act",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng",
+  "accessed_utc": "2026-09-25T02:52:36.062470+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng@2022-12-31",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:52:37 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "308130",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Expires": "Fri, 25 Sep 2026 03:22:37 GMT",
+    "Cache-Control": "max-age=1800",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 308130,
+  "sha256": "20734d5a55b7603aeb4af8e8b6ce74f193223d02e65127d8f891df228527cf9d",
+  "file": "data-protection-act.html"
+}

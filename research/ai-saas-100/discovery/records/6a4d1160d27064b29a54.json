@@ -1,0 +1,577 @@
+{
+  "evidence_id": "web-6a4d1160d27064b29a54",
+  "source_url": "https://meetgeek.ai/",
+  "retrieved_at": "2026-09-20T21:00:36.299453+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://meetgeek.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/6a4d1160d27064b29a54.html",
+  "capture_sha256": "72130b3c03726a60ce2c16602c972d19280e9c3491d9559dd89b001e54aa9f55",
+  "bytes_saved": 262144,
+  "title": "MeetGeek | AI Meeting Notetaker & Automation Platform",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+    },
+    {
+      "key": "og:title",
+      "value": "MeetGeek | AI Meeting Notetaker & Automation Platform"
+    },
+    {
+      "key": "og:description",
+      "value": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+    }
+  ],
+  "text": "MeetGeek | AI Meeting Notetaker & Automation Platform\nBy clicking\n“Accept All Cookies”\n, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our\nPrivacy Policy\nfor more information.\nPreferences\nDeny\nAccept\nPrivacy Preference Center\nWhen you visit websites, they may store or retrieve data in your browser. This storage is often necessary for the basic functionality of the website. The storage may be used for marketing, analytics, and personalization of the site, such as storing your preferences. Privacy is important to us, so you have the option of disabling certain types of storage that may not be necessary for the basic functioning of the website. Blocking categories may impact your experience on the website.\nReject all cookies\nAllow all cookies\nManage Consent Preferences by Category\nEssential\nAlways Active\nThese items are required to enable basic website functionality.\nMarketing\nEssential\nThese items are used to deliver advertising that is more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Advertising networks usually place them with the website operator’s permission.\nPersonalization\nEssential\nThese items allow the website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features. For example, a website may provide you with local weather reports or traffic news by storing data about your current location.\nAnalytics\nEssential\nThese items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually doesn’t collect information that identifies a visitor.\nConfirm my preferences and close\nHey, promo box!\nSolutions\nTEAMS\nSales Team\nMarketing\nCustomer Success\nHR\nExecutives\nProduct & Engineering\nFinance\nVenture Capital\nORGANIZATION\nMid-market & Enterprise\nAgencies & SMBs\nFreelancers & Consulting\nStartups\nNon-profit\nEducation\nUSE CASES\nCustomer Calls\nInterviews\nProduct & discovery meeting\nTeam meetings\nOnline classes\nTemplate directory\nYour new AI Recorder for in-person meetings and calls!\nMeetGeek Wave captures conversations wherever they happen and turns them into searchable transcripts, summaries, and AI notes.\nJoin the waitlist\nJoin the waitlist\nProduct\nCORE FEATURES\nRecord & Transcribe Meetings\nAI Meeting Notes\nMeeting Analytics\nMeeting Templates\nAUTOMATION & PRODUCTIVITY\nAI Chat\nVoice Agents\nMeeting Skills\nNEW\nWorkflows & Automations\nTeam Collaboration\nMeeting Library\nPLATFORMS & DEVICES\nDesktop App\nAccess meetings, notes, and AI insights from your desktop.\nSlack Agent\nFind meeting answers and insights without leaving Slack.\nMobile App\nAvailable on both iOs and Android.\nWave\nSOON\nAI hardware to record phone calls and in-person meetings.\nBrowser Extension\nCapture and manage meetings directly from your browser.\nCleaner & Sharper AI Chat\nNavigate a redesigned chat surface, built-in prompts, and Chat folders to organize threads\nTry MeetGeek AI Chat\nTry MeetGeek AI Chat\nIntegrations\nCONFERENCING\nGoogle Meet\nZoom\nMicrosoft Teams\nLLMs\nClaude\nAccess meetings, notes, and AI insights from your desktop.\nChatGPT\nCapture and manage meetings directly from your browser.\nCRM\nSalesforce\nSync customer conversations to your CRM.\nHubspot\nKeep contacts, deals, and notes aligned.\nPipedrive\nUpdate pipelines from meeting outcomes.\nZoho CRM\nAutomacially sync transcripts and highlights to your CRM.\nAttio\nSync investor meetings into a dedicated CRM.\nCOLLABORATION & KNOWLEDGE\nSlack\nSearch and share meeting insights instantly.\nNotion\nSend summaries directly to your workspace.\nAsana\nSend summaries directly to your workspace.\nConfluence\nTurn meeting highlights into Confluence pages.\nGoogle Drive\nStore recordings and transcripts automatically.\nAUTOMATION & AI\nPublic API\nBuild custom integrations and experiences.\nMCP Server\nPower AI assistants with meeting knowledge.\nZapier\nConnect MeetGeek with thousands of apps.\nMake\nAutomate complex processes visually.\nn8n\nHave full control over your meeting workflows.\nConnect MeetGeek to your favorite tools\nSync meetings, notes, and insights across 10,000+ apps in your stack: from CRM to calendars.\nSee all integrations\nSee all integrations\nResources\nLEARN\nBlog\nInsights on meetings, productivity, and updates.\nCompare MeetGeek\nLearn how MeetGeek compares to other meeting tools.\nMeeting Templates\nRun better meetings with templates.\nMeetGeek ROI Calculator\nCalculate your anual savings.\nCOMMUNITY\nWebinars & Events\nJoin live sessions and expert talks on better meetings.\nReddit Community\nGet in touch with our Reddit Community anytime.\nSupport Center\nResource to help you get the most out of MeetGeek\nDigital Studio Services\nAI & Automation digital services for your business\nTRUST & SECURITY\nSecurity Center\nEnterprise-grade security,\ncompliance, and trust.\nRecording & Data Privacy\nSecure, reliable and transparent data management\nService Status\nCheck services status and maintenance updates.\nPARTNERS\nPartner Programs\nChoose the partner program that best suits you.\nPartner Directory\nFind trusted partners and services.\nAffiliate\nRefer MeetGeek and earn rewards.\nReseller Program\nBecome a MeetGeek reseller and revenue share.\nJoin our Webinar & Events\nSign-up for live Office-hours, expert talk and deep dive into meeting productivity\nFree Sign-up\nFree Sign-up\nPricing\nPartners\nRequest a demo\nLog in\nStart free\nStart free\nen\nEnglish\nPortuguese (Brazil)\nEspañol\nFrançais\nDeutsch\nStart for free\nStart for free\nSign up\nSign up\nAI Meeting Notetaker, Transcription & Automation Platform\nYour #1 AI Meeting Assistant.\nFrom notes to what happens next.\nYour #1 Solution for\nMeeting Intelligence\nOne platform for AI notetaking, transcription, recordings, chat, workflows, team sharing, analytics, and APIs — works anywhere.\nSign up for free\nSign up for free\nWatch Demo\nNo credit card required\nEU & US Data Hosting\nWorks natively with\nTooltip\nTrusted by 50,000+ teams across 100+ countries\nCapture every meeting. Online, hybrid, and in person.\nBot or no-bot — MeetGeek adapts to any meeting setup with full control and zero vendor lock-in.\nHigh transcript accuracy\nAuto detect 100+ languages\nHD Video recording\nNo training on your data\nBot\nMeeting Agent\nConversational AI Notetaker that joins your meetings to record, transcribe and summarize - and can take calls on your behalf\nAuto-join\nCopilot voice agent\nTakes calls on your behalf\nBot-free\nDesktop app\nRecord anything on your desktop — meetings, training sessions, or internal calls - no bot needed.\nMeeting reminders\nPrivacy oriented\nWorks offline\nIn person\nMobile app\nRecord in-person conversations, calls, or interviews directly from your phone — and access the results instantly in your dashboard.\nSpeaker recognition\nPhone calls\nWorks offline\nBrowser extension\nBrowser extension\nDialers\nDialers\nREST API\nREST API\nMigrate your meetings\nMigrate your meetings\nYour meetings happen.\nThe work keeps moving.\nSkills turn meetings into outcomes while voice agents do the heavy lifting for you.\nTabs\nMeeting Skills\nThey do the work after the call\nVoice Agents\nThey assist or take the calls themselves\nUpdate CRMs, create tasks, draft emails — autonomously\nEvent-driven agents watch your meeting stream and act through the tools you already use. Triggered by a meeting end, a keyword, a pattern across calls, or simply schedule it to run when you want.\nExplore Meeting Skills\nExplore Meeting Skills\nTask Breakdown Assistant\nSplit complex work into smaller tasks and map them into Notion\nChurn Risk Alert\nDetect churn signals from CS calls and trigger an instant Slack alert to the account team.\nCRM Insight Sync\nExtract customer insights from meetings and auto-update your CRM with structured data.\nLegal Action Tracker\nAuto-log legal action items from meetings and sync them to your task management tool.\nSync notes to Notion\nAutomatically send your summaries, and action items to your Notion workspace for better documentation.\nBug Report to Jira\nExtract bug mentions from standup calls and auto-create tickets in Jira or Linear.\nAI copilots in your call — or fully autonomous Voice Agents\nRun as copilots that brief you live, or as autonomous agents that qualify, triage, and route inbound calls end-to-end. Goal-driven, hand-off ready.\nExplore Voice Agents\nExplore Voice Agents\nInterview Request\nScheduled Meeting\nProspect\nScheduled Call\nCustomer Call\nSentiment Detected\nCandidate Q&A\nAsk and answer questions\nQualified candidate\nAdded to ATS\nFollow-up Email\nSent via Gmail\nQualified lead\nAdded to CRM\nMeeting scheduled\nAdded to Google Calendar\nFollow-up Email\nSent via Gmail\nMeeting recap\nSent via email\nAction items shared\nAssigned to customer + team\nLive assists handoff\nEscalated to human support\nRecruiter agent",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://meetgeek.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://meetgeek.ai/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://meetgeek.ai/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://meetgeek.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://meetgeek.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://meetgeek.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a/css/meetgeek.webflow.shared.ca22bae30.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a/css/meetgeek.webflow.6a281f2886f15756a04e0080.3ee621857.opt.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a/63bce5d78d77f2295530d025_MeetGeek%20Favicon.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a/63bcb98e8eab05a5e0004c20_MeetGeek%20Webclip.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://meetgeek.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a%2F6a6e3452c6fa1a189caeb37e_Anim-1-3_poster.0000000.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63af97f08f22087ab0e44f0a%2F6a6e3452c6fa1a189caeb37e_Anim-1-3_poster.0000000.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/sales-and-account-management",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/roles/marketing",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/customer-success",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/hr",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/c-level",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/product",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/finance",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/roles/venture-capitalists",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/company-type/agencies-smbs",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/company-type/freelancer",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/company-type/startups",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/company-type/nonprofit",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/company-type/education",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/call-type/customer-calls",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/call-type/interviews",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/call-type/product-and-user-research",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/call-type/team-meetings",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/call-type/online-classes",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/template-repository",
+      "rel": null
+    },
+    {
+      "href": "https://y3srtzd46y3.typeform.com/to/Mmp2w16x?utm_source=xxxxx#email=xxxxx&role=xxxxx",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/auto-recording-and-transcription",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/ai-meeting-minutes",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/meeting-insights",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/meeting-templates",
+      "rel": null
+    },
+    {
+      "href": "/meetgeek-ai-chat",
+      "rel": null
+    },
+    {
+      "href": "/voice-agent",
+      "rel": null
+    },
+    {
+      "href": "/meeting-skills",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/automated-meeting-management",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/team-collaboration",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/features/repository-of-conversations",
+      "rel": null
+    },
+    {
+      "href": "/desktop-app",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeekai.slack.com/marketplace/A02K9ST1NQ4-meetgeek",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/go/mobile",
+      "rel": null
+    },
+    {
+      "href": "/wave",
+      "rel": null
+    },
+    {
+      "href": "/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "/meetgeek-ai-chat",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/google-meet",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/zoom",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/microsoft-teams",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/claude",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/chatgpt",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/salesforce",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/hubspot",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/pipedrive",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/zoho",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/attio",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/slack",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/notion",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/asana",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/confluence",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/google-drive",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/go/api",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/meetgeek-mcp",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/zapier",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/make",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/integrations/n8n",
+      "rel": ""
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/comparison",
+      "rel": ""
+    },
+    {
+      "href": "https://meetgeek.ai/template-repository",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/calculator",
+      "rel": null
+    },
+    {
+      "href": "https://lu.ma/meetgeek-events",
+      "rel": null
+    },
+    {
+      "href": "https://www.reddit.com/r/MeetGeek/",
+      "rel": null
+    },
+    {
+      "href": "https://support.meetgeek.ai/en/?_gl=1*1haswwn*_gcl_au*MTE0NDEwNDcxMC4xNzc3NDY0OTQzLi0uLS4xNzg0NjI2ODE0Ljk5MDAwNTUwNi4xNzg0NTQ2NTI2LjE3ODQ2MzA1ODE.*_ga*MTQxNjc5NzU1OC4xNzc3NDY0OTQz*_ga_MFVT99K4CE*czE3ODQ2Mzg2MTAkbzI2MiRnMSR0MTc4NDY0NTE2MyRqNTkkbDAkaDE3Njc5ODQyNQ..",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/meetgeek-studio",
+      "rel": null
+    },
+    {
+      "href": "https://security.meetgeek.ai/",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.instatus.com/",
+      "rel": null
+    },
+    {
+      "href": "/partner",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/partner-directory",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.partnerstack.com/",
+      "rel": null
+    },
+    {
+      "href": "https://y3srtzd46y3.typeform.com/to/U8U1ipQ2",
+      "rel": null
+    },
+    {
+      "href": "https://lu.ma/meetgeek-events",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/partner",
+      "rel": null
+    },
+    {
+      "href": "https://y3srtzd46y3.typeform.com/to/HNKubZHZ?utm_source={source}&utm_medium={medium}&utm_campaign=navbar",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetgeek.ai/login?button=sign_up",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetgeek.ai/login?button=sign_up",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetgeek.ai/record",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetgeek.ai/record",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetgeek.ai/login?button=sign_up",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/hipaa",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://security.meetgeek.ai/",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://security.meetgeek.ai/",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://www.g2.com/products/meetgeek/reviews",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "/integrations/google-meet",
+      "rel": null
+    },
+    {
+      "href": "/integrations/zoom",
+      "rel": null
+    },
+    {
+      "href": "/integrations/microsoft-teams",
+      "rel": null
+    },
+    {
+      "href": "/integrations/whatsapp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/slack",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-record-webex-meeting",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-record-a-discord-call",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "https://meetgeek.ai/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "/features/auto-recording-and-transcription",
+      "rel": null
+    },
+    {
+      "href": "/desktop-app",
+      "rel": null
+    },
+    {
+      "href": "/go/mobile",
+      "rel": null
+    },
+    {
+      "href": "/chrome-extension",
+      "rel": null
+    },
+    {
+      "href": "/integrations?category=Dialers",
+      "rel": null
+    },
+    {
+      "href": "/go/api",
+      "rel": null
+    },
+    {
+      "href": "https://y3srtzd46y3.typeform.com/to/HNKubZHZ?utm_source=%7Bsource%7D&utm_medium=%7Bmedium%7D&utm_campaign=navbar",
+      "rel": null
+    },
+    {
+      "href": "/meeting-skills",
+      "rel": null
+    },
+    {
+      "href": "/voice-agent",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2605
+}

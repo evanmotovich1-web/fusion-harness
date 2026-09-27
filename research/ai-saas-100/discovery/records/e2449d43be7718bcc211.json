@@ -1,0 +1,257 @@
+{
+  "evidence_id": "web-e2449d43be7718bcc211",
+  "source_url": "https://hix.ai/",
+  "retrieved_at": "2026-09-20T21:00:09.492556+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://hix.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/e2449d43be7718bcc211.html",
+  "capture_sha256": "8c5c9015a038cf6942be7bdb9ca2d8ca800920d3d0192ee68c52cbc74e2052ce",
+  "bytes_saved": 262144,
+  "title": "HIX AI: Your Ultimate AI Agent Workspace",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "HIX AI is your ultimate AI agent workspace that automates work and study. Create ready-to-use slides, marketing assets, reports, and code. Try it for free today!"
+    },
+    {
+      "key": "og:title",
+      "value": "HIX AI: Your Ultimate AI Agent Workspace"
+    },
+    {
+      "key": "og:description",
+      "value": "HIX AI is your ultimate AI agent workspace that automates work and study. Create ready-to-use slides, marketing assets, reports, and code. Try it for free today!"
+    },
+    {
+      "key": "og:site_name",
+      "value": "HIX.AI"
+    }
+  ],
+  "text": "HIX AI: Your Ultimate AI Agent Workspace\nHome\nAI Agent\nNEW\nSkills\nAI Image\nAI Video\nAI Writer\nResources\nPricing\nLogin\nTry for free\nTrusted by 10M+ users\nYour Ultimate\nAI Agent Workspace\nClaim your free credits and start creating now!\n﻿\nSlides\nVideo\nImage\nDocs\nResearch\nInstant\nCreate a complete product launch kit for an AI writing assistant\nBuild a social media campaign package for a new coffee brand launch\nCreate a complete webinar launch package for a B2B SaaS product\nCreate a children's bedtime story with illustrations and a storybook presentation",
+  "links": [
+    {
+      "href": "https://hix.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/da",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/nb",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/tw",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://hix.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-touch-icon-precomposed.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-touch-icon-120x120-precomposed.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-touch-icon-120x120.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-touch-icon-152x152-precomposed.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-touch-icon-152x152.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/cdn/_next/static/media/cf514f5d0007dafa-s.p.1wc2mf9hp9pav.woff2?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/media/fed68dff3ca987ed-s.p.3e08ior5wrhci.woff2?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/media/910852303c6b2343-s.p.1wvhz6ut8au_x.woff2?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/06f9jmpbgckag.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/06f9jmpbgckag.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/3d2unjml51b8h.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/3d2unjml51b8h.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1wpts5trntdex.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1wpts5trntdex.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1gd01j_kftk3_.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1gd01j_kftk3_.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1a5juaa3gxp8l.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1a5juaa3gxp8l.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/3gtfllmdt5-9y.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/3gtfllmdt5-9y.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1niwb-8jw2zu7.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/1niwb-8jw2zu7.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/0q6fr62b_8x_v.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "preload"
+    },
+    {
+      "href": "/cdn/_next/static/chunks/0q6fr62b_8x_v.css?dpl=f8d61c493728a02aa8759d67d401a6c96164250f",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://hix.ai/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://hix.ai/sign-up",
+      "rel": "nofollow"
+    }
+  ],
+  "elapsed_seconds": 0.5024
+}

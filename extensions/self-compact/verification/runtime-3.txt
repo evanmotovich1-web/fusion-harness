@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "flags": {
+    "compact-soft-at": "250k",
+    "compact-at": "35%",
+    "compact-buffer": "50k"
+  },
+  "extensions": 1,
+  "registeredFlags": [
+    "compactions-soft-at",
+    "compactions-at",
+    "compact-buffer",
+    "compact-prompt",
+    "compact-soft-at",
+    "compact-at"
+  ],
+  "summaryCalls": 1,
+  "resumed": true,
+  "modelCalls": 2,
+  "errors": [],
+  "widget": [
+    "self-compact [=----/-!!-----------] [0% used] soft 25% (250000) · warning 35% (350000) · force 40% (400000)",
+    "OK"
+  ],
+  "finalWidget": [
+    "self-compact [=----/-!!-----------] [0% used] soft 25% (250000) · warning 35% (350000) · force 40% (400000)",
+    "OK"
+  ]
+}

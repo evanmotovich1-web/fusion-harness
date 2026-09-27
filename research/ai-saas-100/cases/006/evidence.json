@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-908f513779080968a695",
+      "source_url": "https://www.clay.com/",
+      "final_url": "https://www.clay.com/",
+      "publisher": "www.clay.com",
+      "retrieved_at": "2026-09-20T21:00:22.705084+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Clay | Build systems to grow revenue"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Clay | Build systems to grow revenue"
+        },
+        {
+          "locator": "text characters 614:926",
+          "excerpt": "t coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form d"
+        },
+        {
+          "locator": "text characters 674:986",
+          "excerpt": "ople with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long fo"
+        },
+        {
+          "locator": "text characters 958:1270",
+          "excerpt": "here.\nFunctions\nLink long form description will go in this slot here.\nAI formatting\nLink long form description will go in this slot here.\nExecution\nAds\nSync targeted ad audiences to Linkedin, Meta, and Google\nSequencer\nUse Clay's native sequencer or automate messaging\nClay MCP\nGive reps the best prospecting dat"
+        },
+        {
+          "locator": "text characters 1211:1523",
+          "excerpt": "omate messaging\nClay MCP\nGive reps the best prospecting data in their AI tools\nData foundations\nCRM enrichment\nLink long form description will go in this slot here.\nTAM sourcing\nLink long form description will go in this slot here.\nTerritory planning\nLink long form description will go in this slot here.\nReverse"
+        },
+        {
+          "locator": "text characters 4536:4848",
+          "excerpt": "t coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form d"
+        },
+        {
+          "locator": "text characters 4596:4908",
+          "excerpt": "ople with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long fo"
+        },
+        {
+          "locator": "text characters 368:1082",
+          "excerpt": "Audiences\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long form description will go in this slot here.\nAI formatting\nLink long form description will go in th"
+        }
+      ],
+      "capture_path": "discovery/captures/908f513779080968a695.html",
+      "capture_sha256": "021f088f10823aa825038ef76a5618ba18d4940f9b0c99819cf66a8ef321d398",
+      "record_path": "discovery/records/908f513779080968a695.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r006-5bed13c2b0c170f24ec5",
+      "source_url": "https://www.clay.com/pricing",
+      "publisher": "www.clay.com",
+      "retrieved_at": "2026-09-20T21:35:25.748688+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.clay.com/pricing",
+      "capture_path": "cases/006/research/captures/5bed13c2b0c170f24ec5.html",
+      "capture_sha256": "9f7bb234b970400740034bbb67672779dbbc3b9f04976d8498445e2292262478",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/006/research/records/5bed13c2b0c170f24ec5.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Compare plans, features & costs | Clay.com"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Build and scale any GTM play you can imagine to grow pipeline, win deals, and expand customers. GTM teams use Clay to manage end-to-end GTM plays – from sourcing to enrichment to taking prospect-facing action."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Compare plans, features & costs | Clay.com"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r006-efc7c1c3dcb4c9d73daa",
+      "source_url": "https://www.clay.com/integrations",
+      "publisher": "www.clay.com",
+      "retrieved_at": "2026-09-20T21:35:25.748784+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.clay.com/integrations",
+      "capture_path": "cases/006/research/captures/efc7c1c3dcb4c9d73daa.html",
+      "capture_sha256": "2bfe58139303fed8506f2c51d0b2704738ce6a40a7830ad9605c46ec52a74a6a",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/006/research/records/efc7c1c3dcb4c9d73daa.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Integrations | Clay.com"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Discover what data you can find with Clay's 50+ built-in data providers from title to work email address to department headcount growth."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Integrations | Clay.com"
+        },
+        {
+          "locator": "text characters 361:919",
+          "excerpt": "ces\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form descrip"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-139e71c6a26394f273d8",
+      "source_url": "https://persana.ai/",
+      "final_url": "https://persana.ai/",
+      "publisher": "persana.ai",
+      "retrieved_at": "2026-09-20T21:00:23.162200+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Persana AI | 10x Your Sales Prospecting with AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Persana AI | 10x Your Sales Prospecting with AI"
+        },
+        {
+          "locator": "text characters 0:47",
+          "excerpt": "Persana AI | 10x Your Sales Prospecting with AI"
+        },
+        {
+          "locator": "text characters 0:47",
+          "excerpt": "Persana AI | 10x Your Sales Prospecting with AI"
+        }
+      ],
+      "capture_path": "discovery/captures/139e71c6a26394f273d8.html",
+      "capture_sha256": "90b65b2cf3c9bcf9715c6fb378e5c06e77595fa1c0fb017127e3845a826ce1a0",
+      "record_path": "discovery/records/139e71c6a26394f273d8.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "evidence_id": "web-8ac2ac7d2fd7c0bf8a00",
+  "source_url": "https://www.frase.io/",
+  "retrieved_at": "2026-09-20T21:00:10.232543+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.frase.io/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/8ac2ac7d2fd7c0bf8a00.html",
+  "capture_sha256": "1334feae585a1c77c49acf68adf4b6abef3934dd2994f49aa880bdf09685324f",
+  "bytes_saved": 172583,
+  "title": "Frase — SEO & GEO Content Platform for AI Search",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The content operating system for AI search. Frase writes and optimizes content that ranks on Google and gets cited by AI — SEO, GEO, and AEO in one loop."
+    },
+    {
+      "key": "og:title",
+      "value": "Frase — Rank on Google. Get Cited by AI."
+    },
+    {
+      "key": "og:description",
+      "value": "Frase runs the whole content loop: research, writing, optimization, and publishing. Stop juggling five tools. Join thousands of content teams."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Frase"
+    }
+  ],
+  "text": "Skip to content\nPlatform\nListen\nFrase Answers\nCapture the questions your visitors actually ask.\nCreate\nResearch\nSEO Research\nContent research that ends in a brief.\nTopic Clusters\nMap the cluster around every topic.\nWrite\nAI Agent\nDraft with your brand in context.\nBrand Voice\nKeep every draft sounding like you.\nOptimize\nContent Optimization\nScore and lift pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard\nCatch ranking decay and ship the fix.\nBacklinks\nFind link gaps, draft the outreach.\nPlatform Overview\nSee how Frase runs the whole content loop in one place.\nExplore the platform\nUse Frase in your AI tools\nRun Frase from Claude, Cursor, and any MCP tool.\nMCP server, CLI & API\nAutonomy\nLet Frase publish on its own, keep every page under review, or anywhere in between. You set the dial.\nHow autonomy works\nMultilingual\nWrite natively in 70+ languages, never translated.\nSee multilingual content\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nStart free trial →\nStart free trial →\nPlatform\nListen\nFrase Answers\nCreate\nResearch\nSEO Research\nTopic Clusters\nWrite\nAI Agent\nBrand Voice\nOptimize\nContent Optimization\nGEO Optimization\nAI Visibility\nSite Audit\nPublish\nFraseCMS\nIntegrations\nMonitor & Fix\nContent Guard\nBacklinks\nPlatform Overview\nUse Frase in your AI tools\nAutonomy\nMultilingual\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nThe content operating system for AI search\nRank on Google.\nGet cited by AI.\nFrase runs SEO and AI search end to end: audit, research, writing, publishing, hosting. So you win in both.\nStart free trial\n4.8/5 · 500+ reviews on G2 & Capterra · 7-day free trial · no credit card\nPlan & Create · Opportunities\nOpportunities\nReview queue\nPublish\nContent Guard\nPublish · Review queue\nYou never start from a blank page.\nWrite it\nyourself, together, or let Frase draft it\nIn your voice\nlearned from your pages, or set by you in the Brand Hub\nNothing ships\nuntil you approve it\nPlan · Calendar\nFrase publishes it to your CMS, set up so search engines and AI tools can read it.\nPublishes\nTomorrow · 09:00\nDestination\nWordPress\nSet up for\nsearch engines and AI tools\nMonitor · Content Guard\nFrase checks your rankings and AI mentions every day. If a page slips, Frase writes the fix.\nGoogle\n#3 → #1\nAI answers\nnamed as a source\nIf it slips\nFrase writes the fix for you to approve\nOpportunity\nFrase looks at your search data, your competitors and your own pages, then gets the work done.\nLooks at\nyour search data, your competitors, your pages\nAnd at\npages losing ground, questions visitors ask\nThen\nwrites what is worth doing, most useful first\nTrusted by brands and marketers of all sizes\nSearch changed\nPeople search on Google and ask AI. You need to win\nboth.\nGoogle ranks pages. AI tools name brands. Most sites are built to win one of those and are invisible in the other, and\nyour buyer follows whichever answer they see first.\nYou usually find out from a prospect, weeks late.\nStart with your own site.\nFrase shows you what is costing you before you change a thing.\nOn Google\nRank in the results, and in the AI summary above them.\nFrase checks every page, scores it for search, and writes the fixes worth making first.\nIn AI answers\nBe the source the AI answer names.\nFrase tracks which of your pages AI tools mention, and writes the ones they are missing.\n“\nI love the emails about AI visibility — they help me understand how I'm trending on different LLMs. I rate the likelihood of recommending it a 10 out of 10.\n”\nFe G.\n·\nGrowth Marketing Lead\n· G2\nStart with the audit\nFrase shows you what is holding your site back, and drafts the fixes.\nFrase checks your site page by page, scores each one for search and for AI answers, and puts the most valuable fixes first.\nYou see what it is costing you before you change a thing.\nFrase then writes the fixes for you to approve, and keeps checking your rankings and AI mentions every day.\nStart a trial for an audit\n7-day free trial · no credit card\nAudit · your site\n58\nReadiness · out of 100\nAI answers never name it, on its own topic\nYour best guide\n+34\nRanking slipped 3 → 7 in 30 days\nYour pricing page\n+21\nThe answer is buried in paragraph 9\nA post that answers the question\n+12\nFix Pack ready · 44 fixes\n“\nI also enjoy the Audit and \"Fix Pack\" it creates so that I can send it to my website creator for improvements and improved SEO.\n”\nChet S.\n·\nPhysician, Medical Educator\n· G2\nThe opportunity report\nKnow what's worth doing next.\nFrase looks at your search data, your competitors, the pages you already have, the pages losing ground, and the questions visitors ask you.\nYou get one list, with the most useful work at the top.\nStart free trial\n7-day free trial · no credit card\nOpportunity report\nRanked by likely payoff\nSearch Console\nMedium impact\nLow effort\n3 est. upside\n6/10 ROI\nA page sitting just below the first page\nWhy this matters:\nYou are already earning impressions here. A focused update turns attention you have into clicks, faster than starting something new.\nCompetitor gaps\n27.1K est. vol\n7/10 ROI\nA topic your buyers search for, and you have nothing on it\nWhy this matters:\nEnough people search for this that you should have a page for it, and right now you have none.\nCMS update\n2 est. upside\n5/10 ROI\nA guide that still ranks, on facts that have changed\nWhy this matters:\nThe page still ranks, but the answer is buried and some of it is out of date.\nProgrammatic\n22.7K est. vol\n7/10 ROI\nOne page pattern worth repeating five times\nWhy this matters:\nNot a one-page win. Frase repeats the pattern across five pages people already search for.\nContent decay\n4 est. upside\n8/10 ROI\nA page quietly losing the clicks it used to win\nWhy this matters:\nTraffic here has been sliding for weeks. Frase caught it and puts the refresh first, because holding a position you earned is cheaper than earning a new one.\nVisitor questions\nasked × 14\n6/10 ROI\nA question your visitors keep asking that no page answers\nWhy this matters:\nFourteen people asked this on your site this week, and every one of them left without an answer.\nWhat Frase does, all week\nCreate\nPublish\nOptimize\nFix\nListen\nFrase publishes to your CMS.\nFrase publishes to WordPress, Webflow, Sanity, and Wix, or hosts the page on FraseCMS.\nScheduled, formatted, schema attached.\nNo copy and paste, no migration.\nFrase scores every page.\nEvery page gets a search score and an AI-readiness score, and Frase tracks your share of voice across ChatGPT, Perplexity, Gemini, and Google AI every day.\nYou know where you stand before a prospect tells you.\nFrase fixes pages that slip.\nContent Guard watches rankings and traffic on your published pages. The day one slides, Frase drafts the revision and sets it in front of you.\nYou approve each change.\nOpt in, and low-risk fixes ship on their own.\nFrase learns what visitors ask.\nFrase Answers sits on your site and captures the questions your visitors actually ask.\nEvery unanswered one is a topic you can own next.\nThe loop starts again, with better information than any keyword tool has.\nDrafts you can actually publish.\nFrase drafts against the pages already ranking and your brand profile — learned from your own site, or set by you in the Brand Hub — so the draft arrives sounding like you.\nYour content rules hold anything that looks off\nbefore it reaches you, so you are editing a draft, not rescuing one.\nContent · Draft\nThe page your buyers keep asking for\nBrand voice\nResearch\nTop results read\n20\nCompetitor gaps\n6\nQuestions to answer\n9\nDrafting · to Review queue\nWhile you are out\nYou log off.\nFrase keeps working.\nOvernight, Frase audits, drafts, watches, and queues what needs your call.\nYou decide what it may publish without asking\n, and you can change your mind at any time.\nLet Frase run tonight\nActivity · last night\n23:14\nAudit finished: 212 pages. Fix Pack ready, 44 fixes ranked by impact.\n23:52\nDraft ready: the page for the question asked 14 times this week, in your brand voice.\n02:10\nContent Guard: a guide started losing clicks. Revision drafted.\n06:30\nAI visibility: share of voice 34%, up 6 points this week.\n07:00\nReview queue: 3 drafts waiting for you. Low-risk fixes went out on their own.\nAutonomy · per content type\nManual\nReview only\nAuto\nWhat changes for you\nYou know what to write. And it gets written.\nFrase checks your site, finds what your buyers are searching for, and writes the drafts in your voice. You approve the ones you like and the pages go live.\nThen Frase keeps watching them\n, so nothing quietly slips while you are busy.\nPlans open at\n$39/mo\non yearly billing, or $49 month to month — one site, one person. Working as a team, or running more than one site? That is\nProfessional, $103/mo yearly or $129 monthly\n, which adds the seats, sites and content volume a team gets through. Add seats, credits or AI prompts as you grow.\nStart free trial\nSee plans\n7-day free trial · no credit card\nThe topics worth owning\nThe searches your buyers are already making that nobody in your category has answered well.\nA score for every page\nWhere each page stands in search and in AI answers, so you stop finding out late.\nPages ready to publish\nReal drafts in your voice, checked and ready to go live. Not another backlog.\n“Frase feels like a next-gen content tool that's not just exciting for SEOs, but for writers as well.”\nKevin Indig · Growth advisor · Shopify, G2, Atlassian\n“I've spent a great deal of time comparing tools, and Frase feels like you're using content marketing cheat codes.”\nBrendan Hufford · SEO content strategist · ActiveCampaign\n4.8/5\nacross G2 and Capterra\nRead the reviews\nFor agencies\nCommon questions.\nDo I have to move my site to Frase?\nNo. Frase publishes into the CMS you already use — WordPress, Webflow, Sanity or Wix. Or publish to FraseCMS: an agent-ready CMS, hosted or headless, on your own domain, with WebMCP so AI assistants can read your pages and act on them. Either way your content stays yours and exports whenever you want it.\nDoes Frase monitor whether AI cites me?\nYes. AI Visibility tracks where you show up across ChatGPT, Perplexity, Claude, Gemini, and Google AI on a daily cadence, and alerts you when your share of voice moves. AI Visibility is a separate feature from Content Guard.\nDoes Frase fix pages automatically?\nContent Guard watches your published pages for ranking and traffic decay in Google and drafts the fix. You approve each change. You can opt in to let Frase apply low-risk fixes automatically, but that stays your call.\nHow does Frase know my brand?\nTwo ways. Frase builds a brand profile from the content you already have, and you can set it yourself in the Brand Hub: your tone, your rules, the terms you use and the ones you never want used. Every draft is written against that, then checked against the live results you are competing with.\nIs Frase for agencies?\nYes. On Scale, agencies get multi-site, multi-seat, exportable client-ready reports, and role-based access. White-label, branded client portals, and custom domains are available on Enterprise.\nDoes the free trial need a credit card?\nNo. The trial runs for 7 days with no credit card required. You add billing only when you choose a plan.\nCan I run Frase from my own agent or terminal?\nBring your own agent. Frase runs where you already work — Claude, ChatGPT, Codex, Cursor, your own terminal — through the MCP server and CLI, on every plan, so it researches, drafts and publishes without leaving the tool you are in. Point it at your site and let it run.\nDo I need to be an SEO expert to use Frase?\nNo. Frase handles the research, drafts in your voice, and points to exactly what to improve before you publish. You bring the strategy and the judgment. Frase does the legwork.\nFrase does the work.\nYou stay in charge.\nPoint Frase at your site and see what it finds. The fixes come written, and nothing goes live until you say so.\nStart free trial\nSee plans\nTalk to us about Enterprise\n7-day free trial · no credit card\nStart free trial\nThe content operating system for AI search. Frase researches, writes, optimizes, publishes, and monitors content so it ranks on Google and gets cited by AI.\nSOC 2 Type II\nGDPR Compliant\nPlatform\nPlatform Overview\nFrase Answers\nAI Agent\nContent Optimization\nGEO Optimization\nAI Visibility\nContent Guard\nBacklinks\nSite Audit\nFraseCMS\nAutonomy\nUse Frase in your AI tools\nSolutions\nContent Marketers\nSEO Teams\nAgencies\nEnterprise\nCustomer Stories\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nvs Ahrefs\nvs Clearscope\nvs MarketMuse\nvs Conductor\nvs Otterly\nAll Comparisons\nResources\nBlog\nSEO + GEO Guide\nCase Studies\nReviews\nHelp Center\nllms.txt\nCompany\nAbout\nAffiliate Program\nContact\nSecurity\nTerms\nPrivacy\n©\n2026\nFrase. All rights reserved.\nPrivacy\nTerms\nllms.txt\nContact\nFrase — SEO & GEO Content Platform for AI Search",
+  "links": [
+    {
+      "href": "/_next/static/css/e09a05363150cf23.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/ee4698f5216cae25.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-27236eb3690087b4.js?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "preload"
+    },
+    {
+      "href": "https://next.frase.io/answers-widget.js?token=NDU3MWU2ZmItNWY4Ni00MWRjLThlYzEtODMwNGUwN2QzZjY1OmZiY2EyMmE5MjIxMTEwMjc6ZWUwZTk5NmUzZjRjZjUyOQ",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=hero&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "#start-with-the-audit",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=audit&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=opportunities&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=overnight&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=value_preframe&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=final_cta&utm_campaign=home_v3",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=homepage&utm_medium=mobile_sticky&utm_campaign=home_v2",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs/ahrefs",
+      "rel": null
+    },
+    {
+      "href": "/vs/clearscope",
+      "rel": null
+    },
+    {
+      "href": "/vs/marketmuse",
+      "rel": null
+    },
+    {
+      "href": "/vs/conductor",
+      "rel": null
+    },
+    {
+      "href": "/vs/otterly",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/company/about",
+      "rel": null
+    },
+    {
+      "href": "/partners/affiliates",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.frase.io",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/mstile-270x270.png",
+      "rel": "msapplication-TileImage"
+    }
+  ],
+  "elapsed_seconds": 0.3094
+}

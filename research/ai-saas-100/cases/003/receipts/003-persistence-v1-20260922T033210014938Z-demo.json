@@ -1,0 +1,113 @@
+{
+  "baseline_id": null,
+  "case_id": "003",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/implementation/demo_persistence.py"
+  ],
+  "component_check_passed": true,
+  "configuration": {
+    "concurrency": 1,
+    "executor": {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/tests/persistence-v1/execute.py",
+      "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+    },
+    "fault_injection": false,
+    "mode": "synthetic_persistence_components",
+    "model_calls": 0,
+    "runner": {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py",
+      "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+    },
+    "timeout_seconds": 10
+  },
+  "costs": [
+    {
+      "assumptions": [],
+      "category": "unknown",
+      "classification": "unknown",
+      "unit": "USD",
+      "unknown_reason": "Not measured",
+      "value": null
+    }
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "ended_at": "2026-09-22T03:32:10.204089+00:00",
+  "errors": [],
+  "execution_kind": "real",
+  "exit_status": 0,
+  "fixtures": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py",
+    "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+  },
+  "human_interventions": [
+    "Builder-authored exposed tests. Persistence suite includes two explicit I/O fault injections."
+  ],
+  "implementation": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+    "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+  },
+  "inference_executed": false,
+  "input_bundle": {
+    "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/implementation/demo_persistence.py",
+    "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+  },
+  "input_bundle_kind": "Builder-visible component fixture with evaluator answers, not a model input",
+  "latency": {
+    "assumptions": [
+      "Full test subprocess, not product latency"
+    ],
+    "category": "latency",
+    "classification": "measured",
+    "unit": "seconds",
+    "unknown_reason": null,
+    "value": 0.037654332999999984
+  },
+  "missing_capabilities": [
+    "Natural-language inference",
+    "Generic-model baseline",
+    "Independent hidden evaluation"
+  ],
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "original_product_status": "not_observed",
+  "outputs": [
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.stdout.json",
+      "sha256": "e194230926fa44d1efc87da802c02a0cc1050c823018e857265c6d411d7e5e66"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "product_acceptance": false,
+  "quality": [],
+  "redactions": [],
+  "retries": [],
+  "run_id": "003-persistence-v1-20260922T033210014938Z-demo",
+  "runtime": {
+    "platform": "Darwin",
+    "python": "3.9.6"
+  },
+  "schema_version": 1,
+  "started_at": "2026-09-22T03:32:10.166252+00:00",
+  "status": "completed",
+  "system": "B2",
+  "test_results": [
+    {
+      "outcome": "passed",
+      "test_id": "synthetic-roundtrip-demo"
+    }
+  ],
+  "timeouts": [],
+  "usage": {
+    "unknown_reason": "Not measured",
+    "value": null
+  }
+}
