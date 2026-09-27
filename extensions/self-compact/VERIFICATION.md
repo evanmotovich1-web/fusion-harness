@@ -143,3 +143,9 @@ widget and OK status. The selected 272k model displayed scaled defaults
 Reran the focused Bun suite: 63 passed, 0 failed, 124 assertions. Reran actual-Pi
 offline compact-and-resume through the directory: one extension, one summary,
 resumed true, no extension errors, exit 0. No live-provider compaction claim.
+
+## Current checkout recheck — 2026-09-26
+
+Reran `PI_AGENT_PACKAGE=/Users/evanmotovich/.local/lib/node_modules/@earendil-works/pi-coding-agent TSC_JS=/Users/evanmotovich/.bun/install/cache/typescript@5.9.3@@@1/lib/tsc.js python3 extensions/self-compact/verification/verify.py` from the repository root. Exit 0: 63 tests passed, 0 failed, 124 assertions; strict TypeScript passed; all eight actual-Pi offline runtime variants and CLI flag discovery passed. `verification/results.json` and the adjacent logs were refreshed by that run.
+
+Reran `pi -e ./extensions/self-compact/ --no-session --no-context-files --mode rpc` with normal discovery. Exit 0; startup emitted the self-compact widget with `OK` and scaled 153000/214200/244800 token thresholds on the selected 272k model. No model prompt was submitted in this startup check. No implementation change was needed.
