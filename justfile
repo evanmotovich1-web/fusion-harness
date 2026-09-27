@@ -10,9 +10,15 @@ WORKHORSE_BUILDER := "openai/gpt-5.6-terra"
 SOTA_ARCHITECT := "anthropic/claude-fable-5"
 SOTA_BUILDER := "openai/gpt-5.6-sol"
 
+# Extension entry points. self-compact loads by FILE path: the directory form
+# (`-e ./extensions/self-compact/`) resolves to a different source and
+# double-registers the tool and its flags, so never add it alongside these.
+FH_EXT := "extensions/fusion-harness/fusion-harness.ts"
+SELF_COMPACT_EXT := "extensions/self-compact/self-compact.ts"
+
 # Cheap legacy two-slot pair. Raw chat is the builder.
 fh-workhorse *ARGS:
-    pi -e extensions/fusion-harness/fusion-harness.ts \
+    pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
         --model {{WORKHORSE_BUILDER}} \
         --architect {{WORKHORSE_ARCHITECT}} --builder {{WORKHORSE_BUILDER}} \
         --architect-thinking medium --builder-thinking medium \
@@ -20,7 +26,7 @@ fh-workhorse *ARGS:
 
 # Frontier legacy two-slot pair.
 fh-sota *ARGS:
-    pi -e extensions/fusion-harness/fusion-harness.ts \
+    pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
         --model {{SOTA_BUILDER}} \
         --architect {{SOTA_ARCHITECT}} --builder {{SOTA_BUILDER}} \
         --architect-thinking medium --builder-thinking medium \
@@ -28,7 +34,7 @@ fh-sota *ARGS:
 
 # Explicit 2-5 slot YAML stack. The extension selects configured Main as host.
 fh-stack CONFIG *ARGS:
-    pi -e extensions/fusion-harness/fusion-harness.ts \
+    pi -e {{FH_EXT}} -e {{SELF_COMPACT_EXT}} \
         --fh-config {{CONFIG}} {{ARGS}}
 
 # THE fusion stack: rune=Fable 5 architect · flux=Gemini 3.7 Flash Main · drift=DeepSeek V4 Pro
