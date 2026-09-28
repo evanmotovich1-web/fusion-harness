@@ -203,13 +203,23 @@ describe("knowledge-install safety", () => {
 		const manifestPath = join(realHome, ".fh-knowledge", "manifest.json");
 		// Do not assert the machine is uninstalled: the real home may legitimately carry an
 		// install. Assert the refusal changed nothing (the manifest is byte-identical before
-		// and after, or stays absent).
-		const before = existsSync(manifestPath) ? readFileSync(manifestPath, "utf8") : null;
+		// and after, or stays absent). Sandboxed runs (the eval loop's fix/test profiles allow
+		// metadata but deny reading the real home) cannot read the manifest at all; there the
+		// witness reads return undefined before and after, so the refusal itself is still
+		// fully asserted while byte identity stays unverifiable — not silently presumed.
+		const witness = (): string | null | undefined => {
+			try {
+				return existsSync(manifestPath) ? readFileSync(manifestPath, "utf8") : null;
+			} catch {
+				return undefined;
+			}
+		};
+		const before = witness();
 		const result = runKnowledgeInstall(["--home", realHome, "--apply", "--json"]);
 		expect(result.exitCode).toBe(2);
 		expect(result.stderr).toContain("--allow-real-home");
 		expect(JSON.parse(result.stdout).applied).toBe(false);
-		const after = existsSync(manifestPath) ? readFileSync(manifestPath, "utf8") : null;
+		const after = witness();
 		expect(after).toBe(before);
 	});
 
