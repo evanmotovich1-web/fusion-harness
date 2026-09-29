@@ -81,6 +81,7 @@ import {
 } from "./modules/model-stack.ts";
 import { deleteGroup, groupLabel, saveGroup, setGroupReason, sortedGroups, stackSignature } from "./modules/model-groups.ts";
 import { catalogByProvider, loginHint, modelLabel, providerLabel, searchModels, type CatalogModel } from "./modules/model-browser.ts";
+import { buildFusionStack, parseFusionArgs, resolveModelToken, type FusionPick } from "./modules/fusion-size.ts";
 import {
 	ANSWER_MAX_BYTES,
 	BOOT_TYPE,
@@ -1226,6 +1227,7 @@ export default function (pi: ExtensionAPI) {
 		["/fh-lanes on|off|status|clean", "lane mode toggle, lane list, lane cleanup"],
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
 		["/fh-model", "pick slot, model, thinking"],
+		["/fusion [N] [model…]", "how many agents, then each model"],
 		["/fh-auto-validate [--max-validations N] <prompt>", "gate written first, build until green"],
 		["/fh-system-prompt", "every slot's effective system prompt"],
 		["/find-workflow <task>", "route to a saved task harness"],
@@ -1570,6 +1572,12 @@ export default function (pi: ExtensionAPI) {
 
 	const applyWorkflowStack = async (stackPath: string, ctx: any): Promise<void> => {
 		const next = cloneStack(loadModelStack(stackPath));
+		await applyStack(next, ctx, stackPath);
+		ctx.ui.notify(`fusion-harness: workflow stack → ${next.codename} (session-only)`, "info");
+	};
+
+	/** Make `next` the live stack: every model registered, logged in and child-visible; Main becomes the host. */
+	const applyStack = async (next: ModelStack, ctx: any, source: string, reason?: string): Promise<void> => {
 		const errors: string[] = [];
 		let childCatalogue = new Set<string>();
 		try { childCatalogue = await childVisibleModels(); } catch (error) { errors.push(error instanceof Error ? error.message : String(error)); }
@@ -1590,9 +1598,78 @@ export default function (pi: ExtensionAPI) {
 		stackReadyError = undefined;
 		hostModel = next.primaryBuilder.model;
 		renderFooterWidget();
-		try { saveGroup(next, { source: stackPath }); } catch { /* the switch already happened */ }
-		ctx.ui.notify(`fusion-harness: workflow stack → ${next.codename} (session-only)`, "info");
+		try { saveGroup(next, { source, reason }); } catch { /* the switch already happened */ }
 	};
+
+	// ── /fusion N [model…] — how many agents run, and each one's model ──
+	pi.registerCommand("fusion", {
+		description: "Choose how many agents run (2-20) and each one's model. /fusion alone asks; /fusion 3 opus sol grok sets them directly. Session-only.",
+		handler: async (raw, ctx) => {
+			noteHost(ctx);
+			const stack = modelStack();
+			const parsed = parseFusionArgs(String(raw ?? ""));
+			if (parsed.error) {
+				ctx.ui.notify(`fusion-harness: ${parsed.error} — usage: /fusion N [model…]`, "warning");
+				return;
+			}
+			if (!parsed.count) {
+				// No number typed: ask how many, then walk the model picker for each agent.
+				const now = orderedSlots(stack).length;
+				const more = "More… (type a number up to 20)";
+				const counts = [2, 3, 4, 5, 6, 7, 8].map((n) => `${n} agents${n === now ? "   (current)" : ""}`);
+				const picked = await ctx.ui.select(`How many agents? · now ${now}: ${orderedSlots(stack).map((slot) => slot.name).join(", ")}`, [...counts, more]);
+				if (!picked) return;
+				const typed = picked === more ? await ctx.ui.input("How many agents?", "9-20") : picked;
+				const again = parseFusionArgs(String(typed ?? "").split(" ")[0] ?? "");
+				if (!again.count) {
+					if (typed) ctx.ui.notify(`fusion-harness: ${again.error ?? "no number given"}`, "warning");
+					return;
+				}
+				parsed.count = again.count;
+			}
+			const all = ctx.modelRegistry.getAll() as CatalogModel[];
+			const usable = usableModel(ctx);
+			const picks: FusionPick[] = [];
+			for (const token of parsed.tokens) {
+				const pick = resolveModelToken(token, all, usable);
+				if (!pick) {
+					ctx.ui.notify(`fusion-harness: no logged-in model matches "${token}" — /fusion ${parsed.count} alone opens the picker`, "warning");
+					return;
+				}
+				picks.push(pick);
+			}
+			const browse = "Browse every provider & model…";
+			while (picks.length < parsed.count) {
+				const k = picks.length;
+				const title = `Agent ${k + 1} of ${parsed.count} · ${k === 0 ? "◆ ARCHITECT" : k === 1 ? "▲ MAIN" : "▲ BUILDER"}`;
+				const offered = [...new Set([...orderedSlots(stack).map((slot) => slot.model), ...picks.map((pick) => pick.model)])];
+				const choice = await ctx.ui.select(title, [...offered, browse]);
+				if (!choice) {
+					ctx.ui.notify("fusion-harness: /fusion cancelled — stack unchanged", "info");
+					return;
+				}
+				const model = choice === browse ? await browseAllModels(ctx, title) : choice;
+				if (model) picks.push({ model });
+			}
+			let thinking: Thinking = "medium";
+			if (picks.some((pick) => !pick.thinking)) {
+				const level = await ctx.ui.select("Thinking for these agents", ["medium", ...THINKING_LEVELS.filter((l) => l !== "medium")]);
+				if (!level) {
+					ctx.ui.notify("fusion-harness: /fusion cancelled — stack unchanged", "info");
+					return;
+				}
+				thinking = resolveStackThinking(level) ?? "medium";
+			}
+			const next = buildFusionStack(picks, stack, thinking);
+			try {
+				await applyStack(next, ctx, "/fusion", `fusion ${next.slots.length}: ${next.slots.map((slot) => slot.model).join(", ")}`);
+			} catch (error) {
+				ctx.ui.notify(`fusion-harness: /fusion could not apply — stack unchanged\n${error instanceof Error ? error.message : String(error)}`, "error");
+				return;
+			}
+			ctx.ui.notify([`fusion-harness: ${next.slots.length} agents (session-only)`, ...slotChoices(next).map((line) => `  ${line}`)].join("\n"), "info");
+		},
+	});
 
 	// ── Saved model groups: /fh-groups and alt+m pick any combo you have run ──
 	const pickModelGroup = async (ctx: any): Promise<void> => {
