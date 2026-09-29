@@ -19,7 +19,7 @@ import { HARNESS_REPO_STATE_HEADER, newRun, withHarnessRepoState, type AgentRun,
 const gitIdentity = ["-c", "user.name=t", "-c", "user.email=t@t"];
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
 
-type ChildCall = { role: string; slot?: string; prompt: string; tools: string; timeoutMs: number };
+type ChildCall = { role: string; slot?: string; prompt: string; tools: string; timeoutMs: number; sessionDir: string; sessionId?: string; resume?: string };
 const calls: ChildCall[] = [];
 let blockTaskId: string | null = null;
 let repairFixture = false;
@@ -32,11 +32,15 @@ let rejectionsBeforeFix = 0;
 let quotaOnceTaskId: string | null = null;
 let bigStackSlots = 0;
 let quotaDuringPlanningSlot: string | null = null;
+// "*" fails every proposal. Unlike a 429, terminal credit failures never call onQuotaWait.
+let creditDeadSlot: string | null = null;
+let creditPlanIncludesDeadOnce = false;
+const CREDIT_ERROR = 'OpenAI API error (403): 403 "You have run out of credits or need a Grok subscription. Add credits at https://grok.com/?_s=usage or upgrade at https://grok.com/supergrok."';
 let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
 		const run: AgentRun = opts.run;
-		calls.push({ role: run.role, slot: run.slot?.id, prompt: opts.prompt, tools: opts.tools, timeoutMs: opts.timeoutMs });
+		calls.push({ role: run.role, slot: run.slot?.id, prompt: opts.prompt, tools: opts.tools, timeoutMs: opts.timeoutMs, sessionDir: opts.sessionDir, sessionId: opts.sessionId, resume: opts.resume });
 		run.status = "working";
 		run.startedAt = Date.now();
 		run.sessionRef = `${run.slot?.id ?? run.role}-${calls.length}`;
@@ -49,6 +53,17 @@ mock.module("../modules/child-runner.ts", () => ({
 			opts.onQuotaWait?.(0, "429: rate limited, retry after 0 seconds");
 		}
 		const isProposal = !/Merge them into ONE delegation plan|executing delegated task|closing an N-agent collaboration|READ-ONLY BLOCKED DIGEST/.test(opts.prompt);
+		if (creditDeadSlot && isProposal && (creditDeadSlot === "*" || run.slot?.id === creditDeadSlot)) {
+			run.text = "";
+			run.exitCode = 1;
+			run.stopReason = "error";
+			run.errorMessage = CREDIT_ERROR;
+			run.status = "failed";
+			run.toolCalls = 0;
+			run.endedAt = Date.now();
+			run.ms = 1;
+			return run;
+		}
 		if (quotaDuringPlanningSlot && isProposal && run.slot?.id === quotaDuringPlanningSlot) {
 			opts.onQuotaWait?.(3_600_000, "429: 5-hour usage cap, resets later");
 			if (!run.slot?.architect) {
@@ -60,8 +75,17 @@ mock.module("../modules/child-runner.ts", () => ({
 				return run;
 			}
 		}
-		if (quotaDuringPlanningSlot === "terra" && opts.prompt.includes("Merge them into ONE delegation plan")) {
-			run.text = opts.prompt.includes("UNAVAILABLE THIS RUN (provider quota exhausted): terra")
+		if (creditDeadSlot && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			const names = creditDeadSlot === "fable" ? ["sol"] : ["fable", "sol"];
+			if (creditPlanIncludesDeadOnce) {
+				names.push(creditDeadSlot);
+				creditPlanIncludesDeadOnce = false;
+			}
+			run.text = JSON.stringify({ tasks: names.map((assignee, i) => ({
+				id: `1.${String.fromCharCode(97 + i)}`, assignee, description: `implement for ${assignee}`, depends_on: [], mode: "write",
+			})) });
+		} else if (quotaDuringPlanningSlot === "terra" && opts.prompt.includes("Merge them into ONE delegation plan")) {
+			run.text = opts.prompt.includes("UNAVAILABLE THIS RUN (provider unavailable): terra")
 				? JSON.stringify({ tasks: [
 					{ id: "1.a", assignee: "fable", description: "plan a", depends_on: [], mode: "read" },
 					{ id: "1.b", assignee: "sol", description: "plan b", depends_on: [], mode: "read" },
@@ -153,6 +177,8 @@ afterEach(() => {
 	quotaOnceTaskId = null;
 	bigStackSlots = 0;
 	quotaDuringPlanningSlot = null;
+	creditDeadSlot = null;
+	creditPlanIncludesDeadOnce = false;
 	onFinalCoordination = null;
 	while (files.length) rmSync(files.pop()!, { force: true });
 	while (dirs.length) rmSync(dirs.pop()!, { recursive: true, force: true });
@@ -198,8 +224,8 @@ function stackFile(): string {
 	return file;
 }
 
-function harness(cwd: string) {
-	const stack = loadModelStack(stackFile());
+function harness(cwd: string, configPath = stackFile()) {
+	const stack = loadModelStack(configPath);
 	const panels: Array<{ details: FhDetails; content: string }> = [];
 	let handler: ((args: string, ctx: any) => Promise<void>) | undefined;
 	const hostMessages: Array<{ content: string; options: any }> = [];
@@ -473,6 +499,95 @@ describe("/fh-collaborate repository reflexes", () => {
 			expect(calls.some((call) => call.prompt.includes("closing an N-agent collaboration"))).toBe(true);
 		}, 30_000);
 	}
+	test("terminal credit failure promotes the sole surviving primary onto its own session", async () => {
+		creditDeadSlot = "fable";
+		const configPath = stackFile();
+		writeFileSync(configPath, "- name: fable\n  model: anthropic/claude-fable-5\n  architect: true\n- name: sol\n  model: openai/gpt-5.6-sol\n  primary: true\n");
+		const fh = harness(repo(), configPath);
+		await fh.run("complete with the available primary");
+
+		const summary = JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8"));
+		expect(summary.ok).toBe(true);
+		expect(summary.taskExecutions.map((task: any) => [task.taskId, task.ok])).toEqual([["1.a", true], ["final", true]]);
+		expect(summary.maxConcurrentWriteEnabledChildren).toBe(1);
+		expect(summary.agents.map((agent: any) => agent.slotId).sort()).toEqual(["fable", "sol"]);
+		const benched = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/quota-benched.json"), "utf8"));
+		expect(benched.fable.error).toContain("403");
+		expect(benched.fable.reason).toBe("proposal failed — provider unavailable");
+		expect(readFileSync(join(fh.artifacts, "collaborate/proposals/fable.md"), "utf8")).toStartWith("BENCHED:");
+		expect(calls.filter((call) => call.slot === "fable")).toHaveLength(1);
+		const plan = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/plan.json"), "utf8"));
+		expect(plan.tasks.map((task: any) => task.assignee)).toEqual(["sol"]);
+
+		const delegates = calls.filter((call) => call.prompt.includes("Merge them into ONE delegation plan"));
+		const finals = calls.filter((call) => call.prompt.includes("closing an N-agent collaboration"));
+		expect(delegates).toHaveLength(1);
+		expect(finals).toHaveLength(1);
+		expect(delegates[0]!.prompt).toContain("UNAVAILABLE THIS RUN (provider unavailable): fable");
+		const proposal = calls.find((call) => call.slot === "sol")!;
+		expect(proposal.sessionId).toBe("pinned-sol");
+		for (const call of [...delegates, ...finals]) {
+			expect(call.slot).toBe("sol");
+			expect(call.sessionDir).toBe(proposal.sessionDir);
+			const index = calls.indexOf(call);
+			const previous = calls.slice(0, index).findLastIndex((candidate) => candidate.slot === "sol");
+			expect(previous).toBeGreaterThanOrEqual(0);
+			expect(call.resume).toBe(`sol-${previous + 1}`);
+		}
+	});
+
+	test("terminal credit failure benches a builder before assigning survivor tasks", async () => {
+		creditDeadSlot = "terra";
+		const fh = harness(repo());
+		await fh.run("complete without the unavailable builder");
+		const benched = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/quota-benched.json"), "utf8"));
+		expect(benched.terra.error).toContain("403");
+		expect(readFileSync(join(fh.artifacts, "collaborate/proposals/terra.md"), "utf8")).toStartWith("BENCHED:");
+		expect(calls.filter((call) => call.slot === "terra")).toHaveLength(1);
+		expect(calls.some((call) => call.slot === "terra" && call.prompt.includes("executing delegated task"))).toBe(false);
+		const delegates = calls.filter((call) => call.prompt.includes("Merge them into ONE delegation plan"));
+		expect(delegates).toHaveLength(1);
+		expect(delegates[0]!.prompt).toContain("UNAVAILABLE THIS RUN (provider unavailable): terra");
+		const plan = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/plan.json"), "utf8"));
+		expect(plan.tasks.map((task: any) => task.assignee).sort()).toEqual(["fable", "sol"]);
+		const summary = JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8"));
+		expect(summary.ok).toBe(true);
+		expect(summary.taskExecutions.map((task: any) => [task.taskId, task.ok])).toEqual([["1.a", true], ["1.b", true], ["final", true]]);
+		expect(summary.maxConcurrentWriteEnabledChildren).toBe(1);
+	});
+
+	test("terminal credit failure of every proposal fails closed without delegation", async () => {
+		creditDeadSlot = "*";
+		const fh = harness(repo());
+		await fh.run("stop when every provider is unavailable");
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
+		expect(fh.panels.some((panel) => panel.details.kind === "error" && panel.details.ok === false && panel.content.includes("no successful proposals"))).toBe(true);
+		expect(calls).toHaveLength(3);
+		expect(calls.some((call) => /Merge them into ONE delegation plan|executing delegated task|closing an N-agent collaboration/.test(call.prompt))).toBe(false);
+		expect(existsSync(join(fh.artifacts, "collaborate/plan.json"))).toBe(false);
+		const benched = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/quota-benched.json"), "utf8"));
+		expect(Object.keys(benched).sort()).toEqual(["fable", "sol", "terra"]);
+	});
+
+	test("terminal credit failure rejects a delegation assigning the benched slot", async () => {
+		creditDeadSlot = "terra";
+		creditPlanIncludesDeadOnce = true;
+		const fh = harness(repo());
+		await fh.run("repair a plan that assigns an unavailable slot");
+		const delegates = calls.filter((call) => call.prompt.includes("Merge them into ONE delegation plan"));
+		expect(delegates).toHaveLength(2);
+		expect(delegates[1]!.prompt).toContain("PREVIOUS PLAN VALIDATION FAILED");
+		expect(delegates[1]!.prompt).toContain('assignee is unknown: "terra"');
+		expect(calls.filter((call) => call.slot === "terra")).toHaveLength(1);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 1.c"))).toBe(false);
+		const plan = JSON.parse(readFileSync(join(fh.artifacts, "collaborate/plan.json"), "utf8"));
+		expect(plan.tasks.map((task: any) => task.assignee).sort()).toEqual(["fable", "sol"]);
+		const summary = JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8"));
+		expect(summary.ok).toBe(true);
+		expect(summary.taskExecutions.map((task: any) => [task.taskId, task.ok])).toEqual([["1.a", true], ["1.b", true], ["final", true]]);
+		expect(summary.maxConcurrentWriteEnabledChildren).toBe(1);
+	});
+
 	test("a builder out of quota during planning is benched, not waited on", async () => {
 		quotaDuringPlanningSlot = "terra";
 		const statuses: string[] = [];
