@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/canary-assignment.json",
+  "written_before_any_judge_call": true,
+  "seed": 38035,
+  "rng": "python random.Random(seed); shuffle the four pack labels, then shuffle a balanced [A,A,B] C0-position vector",
+  "position_balance": "C0 appears as film_A in two of the three canary calls and as film_B in one, so a position bias cannot explain a pass or a miss",
+  "revised_before_any_judge_call": true,
+  "packs": {
+    "C0": {
+      "planted_defect": "none",
+      "source": "judge_packs.audit, unmutated"
+    },
+    "C1": {
+      "planted_defect": "s04 scoreboard line reads HOME 39 instead of HOME 38",
+      "mutation": "scoreboard_timeline[s04].line"
+    },
+    "C2": {
+      "planted_defect": "clock alive: s04 clock 0:03, s06 clock 0:02",
+      "mutation": "scoreboard_timeline[s04].clock, [s06].clock"
+    },
+    "C3": {
+      "planted_defect": "flat dynamics: span 0.3 LU, short-term range narrowed",
+      "mutation": "drop_to_catch*, short_term_lufs_min/max, integrated_lufs"
+    }
+  },
+  "label_to_canary": {
+    "P1": "C3",
+    "P2": "C2",
+    "P3": "C0",
+    "P4": "C1"
+  },
+  "canary_to_label": {
+    "C3": "P1",
+    "C2": "P2",
+    "C0": "P3",
+    "C1": "P4"
+  },
+  "calls": [
+    {
+      "tag": "canary-call-1",
+      "film_A_canary": "C1",
+      "film_B_canary": "C0",
+      "film_A_label": "P4",
+      "film_B_label": "P3"
+    },
+    {
+      "tag": "canary-call-2",
+      "film_A_canary": "C0",
+      "film_B_canary": "C2",
+      "film_A_label": "P3",
+      "film_B_label": "P2"
+    },
+    {
+      "tag": "canary-call-3",
+      "film_A_canary": "C0",
+      "film_B_canary": "C3",
+      "film_A_label": "P3",
+      "film_B_label": "P1"
+    }
+  ],
+  "comparison_note": "canary.md fixes the PASS conditions and the C0..C3 labels; it does not fix a pairing. This runner pairs every defective pack against C0 so each defect is attributable, and randomizes C0's A/B position per call."
+}

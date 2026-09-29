@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/ab-mechanical-comparison.json",
+  "source": "ab-result.json verbatim object plus canary-verdict.json judge_stability",
+  "assignment": {
+    "schema_version": 1,
+    "artifact": "self-compact/hail-mary-eval/ab/assignment.json",
+    "written_before_any_judge_call": true,
+    "seed": 38036,
+    "film_A": "audit",
+    "film_B": "reference",
+    "reveal": "this file is not sent to the judge; it is read only after raw output is saved",
+    "packs": {
+      "audit": "judge_packs.audit",
+      "reference": "judge_packs.reference"
+    }
+  },
+  "axes": {
+    "vivid": {
+      "film_A": 2,
+      "film_B": 4,
+      "margin": 2,
+      "canary_spread_same_axis": 0,
+      "margin_exceeds_axis_spread": true,
+      "favors": "B"
+    },
+    "loud": {
+      "film_A": 3,
+      "film_B": 4,
+      "margin": 1,
+      "canary_spread_same_axis": 2,
+      "margin_exceeds_axis_spread": false,
+      "favors": "B"
+    },
+    "exciting": {
+      "film_A": 2,
+      "film_B": 4,
+      "margin": 2,
+      "canary_spread_same_axis": 1,
+      "margin_exceeds_axis_spread": true,
+      "favors": "B"
+    },
+    "final_play": {
+      "film_A": 5,
+      "film_B": 3,
+      "margin": 2,
+      "canary_spread_same_axis": 0,
+      "margin_exceeds_axis_spread": true,
+      "favors": "A"
+    }
+  },
+  "mean_of_sensory_axes_A": 2.333,
+  "mean_of_sensory_axes_B": 4.0,
+  "rubric_verdict_band_A": "BAD",
+  "rubric_verdict_band_B": "GOOD",
+  "judge_reported_overall_winner": "B",
+  "spread_max": 2,
+  "margins_within_global_spread_max": [
+    "vivid",
+    "loud",
+    "exciting",
+    "final_play"
+  ],
+  "margins_exceeding_their_own_axis_spread": [
+    "vivid",
+    "exciting",
+    "final_play"
+  ],
+  "adjudication": "NONE. This file records arithmetic only. Which margins count as a real difference is the findings task's call, and per rubric R2 every sensory verdict is non-authoritative until a human watches the films.",
+  "non_authoritative_note": "per rubric R2 and canary.md, the judge is text-contained and rated from numeric packs; it did not watch either film"
+}

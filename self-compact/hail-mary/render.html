@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920,height=1080">
+<title>Hail Mary at Zero - deterministic frame renderer</title>
+<style>
+  html,body{margin:0;padding:0;background:#07090D;width:1920px;height:1080px;overflow:hidden}
+  canvas#stage{display:block;width:1920px;height:1080px}
+  pre#frame-states{position:absolute;left:-10000px;top:0;margin:0}
+</style>
+</head>
+<body>
+<canvas id="stage" width="1920" height="1080"></canvas>
+<pre id="frame-states"></pre>
+<script>
+/* render.html - deterministic frame renderer for "The Hail Mary at Zero".
+ *
+ * Contract:
+ *   - No network. One local read: ./shot-list.json (same directory).
+ *   - No external assets. No images, no fonts files, no web fonts.
+ *   - Captions, burned-in scoreboard strings, colours, timing, and audio cue ids
+ *     all come from shot-list.json. Nothing here reads screenplay.md or canon.md.
+ *   - Picture grade is NIGHT_ELECTRIC_v1 from sound-palette.md, painted in canvas
+ *     with the palette's own hex tokens. Grain seed is 38 + film frame number.
+ *   - Same shot-list.json plus same params produce the same pixels.
+ *
+ * Params:
+ *   ?t=<seconds>   global film time to draw            (default 0)
+ *   ?beat=<id>     force a beat instead of deriving it from t
+ *   ?state=1       do not draw; emit the frame plan as JSON into <pre#frame-states>
+ *   ?strip=n&t0=<s>&dt=<s>
+ *                  draw n whole frames side by side into an n*1920 x 1080 canvas,
+ *                  one tile per t0 + i*dt. Each tile runs the same single-frame
+ *                  pipeline on an offscreen 1920x1080 canvas, so a tile is
+ *                  pixel-identical to a standalone ?t= capture of that time.
+ *                  ffmpeg `untile=nx1` splits a strip back into n frames.
+ *   ?skip=a,b,c    debug only: omit render stages (scene, grade1, bloom, grade2, overlays)
+ *                  Default is empty, so the normal path always runs every stage.
+ */
+(function () {
+  "use strict";
+
+  var W = 1920, H = 1080, FPS = 30;
+  var CATCH_FRACTION = 0.35;   // where inside s04 the ball is caught
+  var GRAIN_SEED_BASE = 38;    // sound-palette.md: grain seed is 38 + frame_index
+
+  /* ---- palette tokens (sound-palette.md, NIGHT_ELECTRIC_v1) ---- */
+  var C = {
+    bgVoid: "#07090D", lightSpill: "#F4F7FF",
+    fieldLit: "#14915A", fieldShadow: "#0B4A32", yardLine: "#F4F7F2",
+    forgeCrimson: "#E10600", forgeCharcoal: "#141418",
+    kingsNavy: "#071833", kingsSilver: "#D5DCE3",
+    scoreboardBg: "#07080C", scoreboardAmber: "#FFC857", scoreboardText: "#F7F4EC",
+    shadowTeal: "#0E3A42", highlightWarm: "#FFB08A"
+  };
+
+  /* Beat look table, keyed by shot-list beat id. Undefined beats fall back to s01. */
+  var LOOK = {
+    s01: { teal: 0.18, warm: 0.10, contrast: 1.12, bloom: 0.35, vignette: 0.62, grain: 0.04 },
+    s02: { teal: 0.18, warm: 0.16, contrast: 1.12, bloom: 0.35, vignette: 0.55, grain: 0.06 },
+    s03: { teal: 0.18, warm: 0.16, contrast: 1.12, bloom: 0.35, vignette: 0.55, grain: 0.06 },
+    s04: { teal: 0.26, warm: 0.10, contrast: 1.27, bloom: 0.35, vignette: 0.55, grain: 0.04, satCrimson: 1.20, satOther: 0.92 },
+    s05: { teal: 0.18, warm: 0.10, contrast: 1.12, bloom: 0.50, vignette: 0.55, grain: 0.03 },
+    s06: { teal: 0.18, warm: 0.10, contrast: 1.12, bloom: 0.00, vignette: 0.00, grain: 0.00, flat: true }
+  };
+
+  /* ---------------------------- small helpers ---------------------------- */
+
+  function hexRgb(hex) {
+    return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+  }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+  function smoothstep(e0, e1, x) { var t = clamp((x - e0) / (e1 - e0), 0, 1); return t * t * (3 - 2 * t); }
+  function rr(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  /* Integer hash. Deterministic across runs; Math.imul keeps it 32-bit exact. */
+  function hash3(x, y, s) {
+    var h = Math.imul(x | 0, 374761393) ^ Math.imul(y | 0, 668265263) ^ Math.imul(s | 0, 2246822519);
+    h = Math.imul(h ^ (h >>> 13), 1274126177);
+    return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+  }
+  function wrapText(ctx, text, maxWidth) {
+    var words = String(text).split(/\s+/), lines = [], cur = "";
+    for (var i = 0; i < words.length; i++) {
+      var t = cur ? cur + " " + words[i] : words[i];
+      if (ctx.measureText(t).width > maxWidth && cur) { lines.push(cur); cur = words[i]; } else { cur = t; }
+    }
+    if (cur) lines.push(cur);
+    return lines;
+  }
+
+  /* ------------------------------ input data ----------------------------- */
+
+  function fail(msg) {
+    var ctx = document.getElementById("stage").getContext("2d");
+    ctx.fillStyle = "#07090D"; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#E10600"; ctx.font = "700 48px Arial";
+    ctx.fillText("RENDER ERROR", 80, 140);
+    ctx.fillStyle = "#F7F4EC"; ctx.font = "400 30px Arial";
+    ctx.fillText(String(msg), 80, 210);
+    document.title = "RENDER ERROR: " + msg;
+  }
+
+  function readShotList() {
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "shot-list.json", false);
+      xhr.overrideMimeType("application/json");
+      xhr.send(null);
+      if (xhr.status !== 0 && xhr.status !== 200) throw new Error("HTTP " + xhr.status);
+      return JSON.parse(xhr.responseText);
+    } catch (e) {
+      fail("cannot read ./shot-list.json (" + e.message + "). Chrome needs --allow-file-access-from-files.");
+      return null;
+    }
+  }
+
+  function params() {
+    var q = (location.search || "").replace(/^\?/, "").split("&"), out = {};
+    for (var i = 0; i < q.length; i++) {
+      if (!q[i]) continue;
+      var kv = q[i].split("=");
+      out[decodeURIComponent(kv[0])] = decodeURIComponent(kv.slice(1).join("=") || "");
+    }
+    return out;
+  }
+
+  /* ------------------------------ film state ----------------------------- */
+
+  function beatAt(shot, t) {
+    var b = shot.beats;
+    for (var i = 0; i < b.length; i++) if (t >= b[i].t_in_s && t < b[i].t_out_s) return b[i];
+    return t < b[0].t_in_s ? b[0] : b[b.length - 1];
+  }
+
+  function catchTime(beat) { return beat.t_in_s + CATCH_FRACTION * beat.duration_s; }
+
+  /* Clock counts 4 -> 0 across the throw beat. Rule from canon.md: the clock dies
+     with the ball in the air, so the digit is a floor of the remaining fraction. */
+  function clockDigits(beat, t) {
+    if (beat.id !== "s03") return null;
+    return clamp(Math.floor(4 * (beat.t_out_s - t) / beat.duration_s), 0, 4);
+  }
+
+  /* The exact burned-in string for this frame. This one function feeds both the
+     drawn pixels and the machine-readable frame plan, so they cannot drift. */
+  function scoreboardLine(shot, beat, t) {
+    var L = shot.ledger;
+    if (beat.id === "s03") return beat.scoreboard.line.replace("0:0N", "0:0" + clockDigits(beat, t));
+    if (beat.id === "s04" && t < catchTime(beat)) {
+      return "BAY " + L.bay.points + " · FRG " + L.frg_pre_final.points + " | 0:00 Q4";
+    }
+    return beat.scoreboard.line;
+  }
+
+  function ledgerState(shot, beat, t) {
+    var L = shot.ledger;
+    var after = beat.id === "s05" || beat.id === "s06" || (beat.id === "s04" && t >= catchTime(beat));
+    var state = {
+      bay: after ? L.final.bay : L.bay.points,
+      frg: after ? L.final.frg : L.frg_pre_final.points
+    };
+    if (beat.id === "s01" || beat.id === "s02") state.clock = "0:04";
+    else if (beat.id === "s03") state.clock = "0:0" + clockDigits(beat, t);
+    else if (beat.id === "s04") state.clock = "0:00";
+    else if (beat.id === "s05") state.clock = "FINAL";
+    else state.clock = "-";
+    /* Situation text: the pre-snap down and spot while the play is live, then the
+       final situation once the ball is caught. s04 post-catch stays in the quarter
+       so the waived-try language lands on the beat canon puts it on (s05). */
+    if (!after) state.situation = L.situation.down + " · " + L.situation.ball_on;
+    else if (beat.id === "s05" || beat.id === "s06") state.situation = "FINAL · TRY WAIVED";
+    else state.situation = L.situation.quarter + " · " + state.clock;
+    state.quarter = L.situation.quarter;
+    return state;
+  }
+
+  /* ----------------------------- frame plan ----------------------------- */
+  /* Midpoint of every beat, the full clock countdown inside the throw beat, and
+     before/catch/after samples inside the catch beat. Sorted by film time. */
+  function planFrames(shot) {
+    var items = [], seen = {};
+    function add(beat, t, tag) {
+      var key = beat.id + "@" + t.toFixed(3);
+      if (seen[key]) return;
+      seen[key] = 1;
+      items.push({ beat: beat.id, t: t, tag: tag });
+    }
+    for (var i = 0; i < shot.beats.length; i++) {
+      var b = shot.beats[i];
+      add(b, (b.t_in_s + b.t_out_s) / 2, "mid");
+      if (String(b.scoreboard.clock).indexOf("→") >= 0) {
+        for (var k = 0; k <= 5; k++) add(b, b.t_in_s + b.duration_s * k / 5, "clock");
+        add(b, b.t_out_s - 0.05, "clock");
+      }
+      if (b.id === "s04") {
+        add(b, b.t_in_s + 0.20 * b.duration_s, "pre-catch");
+        add(b, catchTime(b), "catch");
+        add(b, b.t_in_s + 0.70 * b.duration_s, "post-catch");
+      }
+    }
+    items.sort(function (a, b) { return a.t - b.t; });
+    items.forEach(function (f, idx) {
+      f.index = idx;
+      f.frame_index = Math.round(f.t * FPS);
+      f.name = "f" + String(idx + 1).padStart(2, "0") + "_" + f.beat + "_t" +
+        String(Math.round(f.t * 1000)).padStart(5, "0") + ".png";
+    });
+    return items;
+  }
+
+  function stateManifest(shot) {
+    var plan = planFrames(shot);
+    var beats = {};
+    for (var i = 0; i < shot.beats.length; i++) beats[shot.beats[i].id] = shot.beats[i];
+    return {
+      schema_version: 1,
+      source: "render.html",
+      shot_list: "shot-list.json",
+      fps: FPS,
+      resolution: W + "x" + H,
+      grain_seed_rule: "38 + round(t * 30)",
+      catch_fraction: CATCH_FRACTION,
+      frames: plan.map(function (f) {
+        var b = beats[f.beat];
+        return {
+          index: f.index, name: f.name, beat: f.beat, tag: f.tag, t_s: Number(f.t.toFixed(3)),
+          frame_index: f.frame_index, grain_seed: GRAIN_SEED_BASE + f.frame_index,
+          look: f.beat,
+          scoreboard_line: scoreboardLine(shot, b, f.t),
+          clock: ledgerState(shot, b, f.t).clock,
+          ledger: ledgerState(shot, b, f.t)
+        };
+      })
+    };
+  }
+
+  /* ------------------------------ scene paint ---------------------------- */
+  /* Perspective field: u across 0..1, v depth 0 (near sideline) .. 1 (far end zone). */
+  function fieldPoint(u, v) {
+    var f = v * v * 0.35 + v * 0.65;
+    var y = H - f * (H - 300);
+    var l = lerp(110, 590, f), r = lerp(1810, 1330, f);
+    return { x: lerp(l, r, u), y: y, s: lerp(1.0, 0.30, f), v: f };
+  }
+  function quad(ctx, a, b, c, d, fill) {
+    ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.lineTo(c.x, c.y); ctx.lineTo(d.x, d.y);
+    ctx.closePath(); ctx.fillStyle = fill; ctx.fill();
+  }
+  function stripes(ctx) {
+    for (var k = 0; k < 12; k++) {
+      quad(ctx, fieldPoint(0, k / 12), fieldPoint(1, k / 12), fieldPoint(1, (k + 1) / 12), fieldPoint(0, (k + 1) / 12),
+        k % 2 ? C.fieldShadow : C.fieldLit);
+    }
+  }
+  function endZone(ctx, v0, v1, fill) {
+    quad(ctx, fieldPoint(0, v0), fieldPoint(1, v0), fieldPoint(1, v1), fieldPoint(0, v1), fill);
+  }
+  function yardLines(ctx) {
+    ctx.save(); ctx.globalAlpha = 0.7; ctx.strokeStyle = C.yardLine;
+    for (var k = 0; k <= 20; k++) {
+      var v = k / 20, a = fieldPoint(0, v), b = fieldPoint(1, v);
+      ctx.lineWidth = clamp(1 + 3 * a.s, 0.6, 4);
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function player(ctx, u, v, team, pose) {
+    var p = fieldPoint(u, v), s = p.s;
+    var main = team === "frg" ? C.forgeCrimson : C.kingsNavy;
+    var trim = team === "frg" ? C.forgeCharcoal : C.kingsSilver;
+    ctx.save(); ctx.translate(p.x, p.y); ctx.scale(s, s);
+    ctx.fillStyle = "rgba(7,9,13,0.35)";
+    ctx.beginPath(); ctx.ellipse(0, 6, 26, 8, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = trim;
+    ctx.beginPath(); ctx.moveTo(-22, 0); ctx.lineTo(22, 0); ctx.lineTo(16, -34); ctx.lineTo(-16, -34); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = main;
+    ctx.beginPath(); ctx.moveTo(-20, -4); ctx.lineTo(20, -4); ctx.lineTo(14, -40); ctx.lineTo(-14, -40); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = trim;
+    if (pose === "up") { ctx.fillRect(-24, -66, 10, 30); ctx.fillRect(14, -66, 10, 30); }
+    ctx.fillStyle = main;
+    ctx.beginPath(); ctx.arc(0, -50, 13, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = trim; ctx.fillRect(-6, -52, 12, 4);
+    ctx.restore();
+  }
+  function backplate(ctx, shot, beat) {
+    var g = ctx.createLinearGradient(0, 0, 0, 700);
+    g.addColorStop(0, C.bgVoid); g.addColorStop(0.55, "#0A1424"); g.addColorStop(1, "#0D1B2E");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, 700);
+    var seed = 11;
+    ctx.fillStyle = "#0B1220";
+    ctx.beginPath(); ctx.moveTo(0, 380); ctx.lineTo(W, 380); ctx.lineTo(W, 300); ctx.lineTo(0, 300); ctx.closePath(); ctx.fill();
+    for (var i = 0; i < 2600; i++) {
+      var x = hash3(i, 1, seed) * W, y = 300 + hash3(i, 2, seed) * 100;
+      var side = x < W / 2 ? C.forgeCrimson : C.kingsNavy;
+      ctx.fillStyle = hash3(i, 3, seed) > 0.6 ? C.kingsSilver : side;
+      ctx.globalAlpha = 0.16 + hash3(i, 4, seed) * 0.34;
+      ctx.fillRect(x, y, 3, 3);
+    }
+    ctx.globalAlpha = 1;
+    var lights = [[300, 90], [760, 50], [1160, 50], [1620, 90]];
+    for (var L = 0; L < lights.length; L++) {
+      ctx.fillStyle = C.bgVoid;
+      ctx.fillRect(lights[L][0] - 34, lights[L][1] - 20, 68, 26);
+      var lg = ctx.createRadialGradient(lights[L][0], lights[L][1], 8, lights[L][0], lights[L][1], 460);
+      lg.addColorStop(0, "rgba(244,247,255,0.55)");
+      lg.addColorStop(0.35, "rgba(244,247,255,0.12)");
+      lg.addColorStop(1, "rgba(244,247,255,0)");
+      ctx.globalCompositeOperation = "lighter";
+      ctx.fillStyle = lg; ctx.fillRect(lights[L][0] - 460, lights[L][1] - 460, 920, 920);
+      ctx.globalCompositeOperation = "source-over";
+    }
+  }
+  function fieldBase(ctx, forCard) {
+    if (forCard) { ctx.fillStyle = C.forgeCharcoal; ctx.fillRect(0, 0, W, H); return; }
+    backplate(ctx, null, null);
+    stripes(ctx);
+    endZone(ctx, 0.92, 1.0, C.forgeCrimson);
+    endZone(ctx, 0.0, 0.04, C.kingsNavy);
+    yardLines(ctx);
+  }
+
+  function sceneWide(ctx, shot, beat, t, f) {
+    fieldBase(ctx, false);
+    var off = Math.sin(f * Math.PI) * 0.03;
+    player(ctx, 0.30 + off, 0.30, "bay", "set");
+    player(ctx, 0.44, 0.26, "bay", "set");
+    player(ctx, 0.58, 0.31, "bay", "set");
+    player(ctx, 0.36, 0.42, "frg", "set");
+    player(ctx, 0.50, 0.47, "frg", "set");
+    player(ctx, 0.62, 0.40, "frg", "set");
+    player(ctx, 0.83, 0.22, "frg", "wide");
+    ctx.save(); ctx.globalAlpha = 0.10 + 0.05 * f; ctx.fillStyle = C.lightSpill;
+    ctx.fillRect(0, 620, W, 240); ctx.restore();
+  }
+
+  function sceneHuddle(ctx, shot, beat, t, f) {
+    fieldBase(ctx, false);
+    for (var i = 0; i < 5; i++) player(ctx, 0.30 + i * 0.055, 0.28, "bay", "set");
+    for (var j = 0; j < 7; j++) player(ctx, 0.33 + j * 0.05, 0.46, "frg", (j === 3 && f > 0.6) ? "up" : "set");
+    player(ctx, 0.50, 0.58, "frg", "up");
+    player(ctx, 0.06, 0.30, "frg", "wide");
+    player(ctx, 0.94, 0.30, "frg", "wide");
+    ctx.save(); ctx.globalAlpha = 0.16; ctx.fillStyle = C.lightSpill;
+    ctx.beginPath(); ctx.ellipse(W * 0.5, 300, 900, 150, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  }
+
+  function sceneThrow(ctx, shot, beat, t, f) {
+    sceneHuddle(ctx, shot, beat, t, f);
+    var ball = fieldPoint(0.50 + 0.14 * f, 0.50 + 0.48 * f);
+    var arc = Math.sin(f * Math.PI) * 150;
+    var bx = ball.x, by = ball.y - arc, br = lerp(13, 5, f);
+    for (var k = 24; k >= 1; k--) {
+      var g = clamp(f - k * 0.012, 0, 1);
+      var q = fieldPoint(0.50 + 0.14 * g, 0.50 + 0.48 * g);
+      ctx.globalAlpha = 0.30 * (1 - k / 24);
+      ctx.fillStyle = C.lightSpill;
+      ctx.beginPath(); ctx.arc(q.x, q.y - Math.sin(g * Math.PI) * 150, lerp(13, 5, g) * 0.6, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = C.forgeCharcoal; ctx.strokeStyle = C.lightSpill; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.ellipse(bx, by, br * 1.7, br, 0.5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.globalCompositeOperation = "lighter";
+    var bg = ctx.createRadialGradient(bx, by, 2, bx, by, 120);
+    bg.addColorStop(0, "rgba(244,247,255,0.45)"); bg.addColorStop(1, "rgba(244,247,255,0)");
+    ctx.fillStyle = bg; ctx.beginPath(); ctx.arc(bx, by, 120, 0, Math.PI * 2); ctx.fill();
+    ctx.globalCompositeOperation = "source-over";
+  }
+
+  function sceneCatch(ctx, shot, beat, t, f) {
+    var g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, "#0A1424"); g.addColorStop(0.45, C.bgVoid); g.addColorStop(1, C.forgeCharcoal);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#0B1220"; ctx.fillRect(0, 0, W, 230);
+    for (var i = 0; i < 1400; i++) {
+      ctx.fillStyle = hash3(i, 9, 5) > 0.5 ? C.forgeCrimson : C.kingsNavy;
+      ctx.globalAlpha = 0.16 + hash3(i, 10, 5) * 0.3;
+      ctx.fillRect(hash3(i, 11, 5) * W, 20 + hash3(i, 12, 5) * 190, 3, 3);
+    }
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = C.forgeCrimson; ctx.fillRect(0, 620, W, 460);
+    ctx.save(); ctx.globalAlpha = 0.7; ctx.strokeStyle = C.yardLine; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.moveTo(0, 700); ctx.lineTo(W, 700); ctx.stroke();
+    ctx.font = '900 150px "Arial Black", Arial'; ctx.fillStyle = "rgba(244,247,255,0.30)";
+    ctx.textAlign = "center"; ctx.fillText("FORGE", W / 2, 900); ctx.restore();
+    /* Pool of light over the end zone so the catch reads in a dark frame. */
+    ctx.save(); ctx.globalCompositeOperation = "lighter";
+    var pool = ctx.createRadialGradient(980, 720, 40, 980, 720, 620);
+    pool.addColorStop(0, "rgba(244,247,255,0.34)"); pool.addColorStop(1, "rgba(244,247,255,0)");
+    ctx.fillStyle = pool; ctx.beginPath(); ctx.ellipse(980, 720, 620, 420, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+    ctx.save(); ctx.strokeStyle = C.kingsSilver; ctx.lineWidth = 10;
+    ctx.beginPath(); ctx.moveTo(1500, 620); ctx.lineTo(1500, 300); ctx.lineTo(1700, 620); ctx.stroke(); ctx.restore();
+    var cp = CATCH_FRACTION;
+    function ball(x, y, r) {
+      ctx.save(); ctx.translate(x, y);
+      ctx.fillStyle = C.forgeCharcoal; ctx.strokeStyle = C.lightSpill; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.ellipse(0, 0, r * 1.7, r, 0.6, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      ctx.strokeStyle = "rgba(244,247,255,0.85)"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(-r * 0.9, -r * 0.1); ctx.lineTo(r * 0.9, r * 0.1); ctx.stroke();
+      ctx.restore();
+    }
+    if (f < cp) {
+      var k = f / cp, bx = lerp(1620, 980, k), by = lerp(120, 720, k);
+      ctx.save(); ctx.globalAlpha = 0.45; ctx.strokeStyle = C.lightSpill; ctx.lineWidth = 5;
+      ctx.beginPath(); ctx.moveTo(1620, 120); ctx.bezierCurveTo(1500, 300, 1200, 560, 980, 720); ctx.stroke(); ctx.restore();
+      ctx.save(); ctx.globalCompositeOperation = "lighter";
+      var tg = ctx.createRadialGradient(bx, by, 4, bx, by, 220);
+      tg.addColorStop(0, "rgba(244,247,255,0.55)"); tg.addColorStop(1, "rgba(244,247,255,0)");
+      ctx.fillStyle = tg; ctx.beginPath(); ctx.arc(bx, by, 220, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      ball(bx, by, 40);
+    } else {
+      /* Hands, ball, and the official's signal, all scaled up to read at 1080p. */
+      ball(980, 720, 40);
+      ctx.save(); ctx.translate(980, 760);
+      ctx.fillStyle = C.lightSpill; ctx.fillRect(-96, -40, 82, 40); ctx.fillRect(14, -40, 82, 40);
+      ctx.fillStyle = C.forgeCrimson; ctx.fillRect(-124, -8, 70, 62); ctx.fillRect(54, -8, 70, 62);
+      ctx.fillStyle = C.forgeCharcoal; ctx.fillRect(-58, -6, 116, 68);
+      ctx.restore();
+      var burst = clamp((f - cp) / (1 - cp), 0, 1);
+      ctx.save(); ctx.globalCompositeOperation = "lighter";
+      var ring = ctx.createRadialGradient(980, 745, 20, 980, 745, 260 + burst * 520);
+      ring.addColorStop(0, "rgba(244,247,255," + (0.55 * (1 - burst)) + ")");
+      ring.addColorStop(1, "rgba(244,247,255,0)");
+      ctx.fillStyle = ring; ctx.beginPath(); ctx.arc(980, 745, 260 + burst * 520, 0, Math.PI * 2); ctx.fill();
+      for (var s = 0; s < 30; s++) {
+        var a = s / 30 * Math.PI * 2, len = 120 + burst * 460 * (0.4 + hash3(s, 21, 7));
+        ctx.strokeStyle = "rgba(244,247,255," + (0.5 * (1 - burst)) + ")"; ctx.lineWidth = 7;
+        ctx.beginPath(); ctx.moveTo(980 + Math.cos(a) * 70, 745 + Math.sin(a) * 70);
+        ctx.lineTo(980 + Math.cos(a) * len, 745 + Math.sin(a) * len); ctx.stroke();
+      }
+      ctx.restore();
+      if (f > cp + 0.45) {
+        ctx.save(); ctx.strokeStyle = C.yardLine; ctx.lineWidth = 14; ctx.lineCap = "round";
+        ctx.beginPath(); ctx.moveTo(700, 810); ctx.lineTo(620, 520); ctx.moveTo(700, 810); ctx.lineTo(790, 520);
+        ctx.stroke(); ctx.restore();
+      }
+    }
+  }
+
+  function sceneRoar(ctx, shot, beat, t, f) {
+    fieldBase(ctx, false);
+    ctx.save(); ctx.globalCompositeOperation = "lighter";
+    for (var i = 0; i < 10; i++) {
+      var x = 120 + i * 190, y = 780 - (i % 3) * 40;
+      var rg = ctx.createRadialGradient(x, y, 4, x, y, 150);
+      rg.addColorStop(0, "rgba(225,6,0,0.55)"); rg.addColorStop(1, "rgba(225,6,0,0)");
+      ctx.fillStyle = rg; ctx.beginPath(); ctx.arc(x, y, 150, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.restore();
+    for (var p = 0; p < 12; p++) {
+      var u = 0.08 + hash3(p, 31, 3) * 0.84, v = 0.16 + hash3(p, 32, 3) * 0.5;
+      player(ctx, u, v < 0.5 ? 0.5 - v * 0.8 : 0.2 + (v - 0.5) * 0.6, "frg", "up");
+    }
+    var drift = f;
+    for (var c = 0; c < 340; c++) {
+      var hue = hash3(c, 41, 4);
+      ctx.fillStyle = hue > 0.55 ? C.forgeCrimson : (hue > 0.25 ? C.lightSpill : C.kingsSilver);
+      ctx.globalAlpha = 0.55 + hash3(c, 42, 4) * 0.45;
+      var cx = (hash3(c, 43, 4) * W + drift * 40 * (0.5 + hash3(c, 44, 4))) % W;
+      var cy = ((hash3(c, 45, 4) + drift * (0.25 + hash3(c, 46, 4) * 0.5)) % 1) * 620;
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate(drift * 4 + hash3(c, 47, 4) * 6);
+      ctx.fillRect(-6, -3, 12, 6); ctx.restore();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function sceneCard(ctx, shot, beat, t, f) {
+    ctx.fillStyle = C.forgeCharcoal; ctx.fillRect(0, 0, W, H);
+    var vg = ctx.createRadialGradient(W / 2, H / 2, 120, W / 2, H / 2, 1200);
+    vg.addColorStop(0, "rgba(7,9,13,0)"); vg.addColorStop(1, "rgba(7,9,13," + (0.35 + 0.25 * f) + ")");
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = C.forgeCrimson; ctx.fillRect(0, 0, W, 14); ctx.fillRect(0, H - 14, W, 14);
+  }
+
+  /* ------------------------------ overlays ------------------------------- */
+
+  function scoreboardPlate(ctx, shot, beat, t) {
+    var L = shot.ledger, st = ledgerState(shot, beat, t);
+    var x = 60, y = 40, w = W - 120, h = 132;
+    ctx.save();
+    ctx.globalAlpha = 0.92; ctx.fillStyle = C.scoreboardBg;
+    rr(ctx, x, y, w, h, 12); ctx.fill();
+    ctx.globalAlpha = 1; ctx.strokeStyle = "rgba(244,247,255,0.18)"; ctx.lineWidth = 2;
+    rr(ctx, x, y, w, h, 12); ctx.stroke();
+    ctx.fillStyle = C.forgeCrimson; ctx.fillRect(x + 18, y + 18, 10, h - 36);
+    ctx.fillStyle = C.kingsNavy; ctx.fillRect(x + w - 28, y + 18, 10, h - 36);
+    ctx.textBaseline = "middle";
+    ctx.font = '900 62px "Arial Black", Arial';
+    /* Left block: BAY then its score immediately to the right. */
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.scoreboardText;
+    ctx.fillText("BAY", x + 52, y + 62);
+    ctx.fillStyle = C.scoreboardAmber;
+    ctx.fillText(String(st.bay), x + 230, y + 62);
+    /* Right block: score then FRG at the far right, mirrored. */
+    ctx.textAlign = "right";
+    ctx.fillStyle = C.scoreboardAmber;
+    ctx.fillText(String(st.frg), x + w - 230, y + 62);
+    ctx.fillStyle = C.scoreboardText;
+    ctx.fillText("FRG", x + w - 52, y + 62);
+    ctx.textAlign = "center";
+    ctx.font = '700 40px Arial';
+    ctx.fillStyle = C.scoreboardAmber;
+    ctx.fillText(st.clock + "  " + st.quarter, W / 2, y + 50);
+    ctx.font = '400 28px Arial';
+    ctx.fillStyle = C.scoreboardText;
+    ctx.fillText(st.situation, W / 2, y + 98);
+    ctx.textAlign = "left"; ctx.font = '400 22px Menlo, monospace';
+    ctx.fillStyle = "rgba(247,244,236,0.72)";
+    ctx.fillText(scoreboardLine(shot, beat, t), x + 48, y + h + 26);
+    ctx.restore();
+  }
+
+  function captionBar(ctx, beat) {
+    var text = (beat.captions || []).join(" ");
+    if (!text) return;
+    ctx.save();
+    ctx.font = '600 46px Arial';
+    var lines = wrapText(ctx, text, W - 420);
+    var lh = 58, boxH = lines.length * lh + 44, y = H - boxH - 70;
+    ctx.fillStyle = "rgba(7,8,12,0.86)";
+    rr(ctx, 80, y, W - 160, boxH, 10); ctx.fill();
+    ctx.fillStyle = C.forgeCrimson; ctx.fillRect(80, y, 12, boxH);
+    ctx.fillStyle = C.scoreboardText; ctx.textBaseline = "top";
+    for (var i = 0; i < lines.length; i++) ctx.fillText(lines[i], 124, y + 22 + i * lh);
+    ctx.restore();
+  }
+
+  function fictionLabel(ctx, small) {
+    ctx.save();
+    ctx.font = (small ? "700 22px Arial" : '700 34px Arial');
+    ctx.fillStyle = "rgba(244,247,255," + (small ? 0.72 : 0.9) + ")";
+    ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
+    ctx.fillText("FICTIONAL SIMULATION", 84, small ? H - 40 : H - 60);
+    ctx.restore();
+  }
+
+  function closingCard(ctx, shot, beat) {
+    ctx.save();
+    ctx.textAlign = "center";
+    ctx.fillStyle = C.scoreboardText;
+    ctx.font = '900 300px "Arial Black", Arial';
+    ctx.fillText("38-35", W / 2, 520);
+    ctx.font = '700 72px Arial';
+    ctx.fillStyle = C.forgeCrimson;
+    ctx.fillText("REDHAWK FORGE", W / 2, 640);
+    ctx.font = '400 40px Arial';
+    ctx.fillStyle = C.kingsSilver;
+    ctx.fillText("BAYLINE KINGS 35", W / 2, 710);
+    ctx.font = '600 34px Arial';
+    ctx.fillStyle = C.scoreboardText;
+    ctx.fillText((beat.captions || []).join(" "), W / 2, 800);
+    ctx.font = '400 26px Arial';
+    ctx.fillStyle = "rgba(244,247,255,0.68)";
+    var label = wrapText(ctx, shot.fiction_label, W - 640);
+    for (var i = 0; i < label.length; i++) ctx.fillText(label[i], W / 2, 900 + i * 34);
+    ctx.restore();
+  }
+
+  /* ------------------------------- grade --------------------------------- */
+
+  function gradePass1(ctx, look) {
+    var img = ctx.getImageData(0, 0, W, H), d = img.data;
+    var voidRgb = hexRgb(C.bgVoid), spill = hexRgb(C.lightSpill);
+    var teal = hexRgb(C.shadowTeal), warm = hexRgb(C.highlightWarm), crimson = hexRgb(C.forgeCrimson);
+    var cScale = look.satCrimson || 1, oScale = look.satOther || 1;
+    for (var i = 0; i < d.length; i += 4) {
+      var r = d[i], g = d[i + 1], b = d[i + 2];
+      if (r < voidRgb[0]) r = voidRgb[0];
+      if (g < voidRgb[1]) g = voidRgb[1];
+      if (b < voidRgb[2]) b = voidRgb[2];
+      var luma = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+      if (luma < 0.45) {
+        var tw = look.teal * smoothstep(0.45, 0.35, luma);
+        r = r * (1 - tw) + (r * teal[0] / 255) * tw;
+        g = g * (1 - tw) + (g * teal[1] / 255) * tw;
+        b = b * (1 - tw) + (b * teal[2] / 255) * tw;
+      }
+      if (luma > 0.72) {
+        var ww = look.warm * smoothstep(0.72, 0.82, luma);
+        r = r * (1 - ww) + warm[0] * ww;
+        g = g * (1 - ww) + warm[1] * ww;
+        b = b * (1 - ww) + warm[2] * ww;
+      }
+      r = 128 + (r - 128) * look.contrast;
+      g = 128 + (g - 128) * look.contrast;
+      b = 128 + (b - 128) * look.contrast;
+      if (look.satCrimson) {
+        var maxc = Math.max(r, g, b), minc = Math.min(r, g, b);
+        var sat = maxc > 0 ? (maxc - minc) / maxc : 0;
+        var isCrimson = r >= g && r >= b && (r - g) / (r || 1) > 0.25;
+        var k = 1 + (sat * ((isCrimson ? cScale : oScale) - 1));
+        var gray = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        r = gray + (r - gray) * k; g = gray + (g - gray) * k; b = gray + (b - gray) * k;
+      }
+      d[i] = clamp(r, voidRgb[0], spill[0]);
+      d[i + 1] = clamp(g, voidRgb[1], spill[1]);
+      d[i + 2] = clamp(b, voidRgb[2], spill[2]);
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+
+  function bloomPass(ctx, look) {
+    if (!look.bloom) return;
+    var small = document.createElement("canvas");
+    small.width = 240; small.height = 135;
+    var sc = small.getContext("2d");
+    sc.drawImage(ctx.canvas, 0, 0, 240, 135);
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    ctx.globalAlpha = look.bloom * 0.35;
+    ctx.drawImage(small, 0, 0, W, H);
+    ctx.restore();
+  }
+
+  function gradePass2(ctx, look, seed) {
+    var img = ctx.getImageData(0, 0, W, H), d = img.data;
+    var cx = W / 2, cy = H / 2, maxD = Math.sqrt(cx * cx + cy * cy);
+    var grain = look.grain || 0;
+    for (var y = 0, i = 0; y < H; y++) {
+      for (var x = 0; x < W; x++, i += 4) {
+        var dxx = x - cx, dyy = y - cy;
+        var dist = Math.sqrt(dxx * dxx + dyy * dyy) / maxD;
+        var vig = 1 - look.vignette * smoothstep(0.35, 1.0, dist);
+        var r = d[i] * vig, g = d[i + 1] * vig, b = d[i + 2] * vig;
+        if (grain) {
+          var n = (hash3(x, y, seed) - 0.5) * 2 * grain * 255;
+          r += n; g += n; b += n;
+        }
+        d[i] = clamp(r, 0, 255); d[i + 1] = clamp(g, 0, 255); d[i + 2] = clamp(b, 0, 255);
+      }
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+
+  /* ------------------------------- driver -------------------------------- */
+
+  function renderOne(ctx, shot, beat, t, skip) {
+    skip = skip || "";
+    var skips = skip.split(",");
+    function on(name) { return skips.indexOf(name) < 0; }
+    var look = LOOK[beat.id] || LOOK.s01;
+    var f = clamp((t - beat.t_in_s) / beat.duration_s, 0, 1);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
+    if (on("scene")) {
+      if (beat.id === "s01") sceneWide(ctx, shot, beat, t, f);
+      else if (beat.id === "s02") sceneHuddle(ctx, shot, beat, t, f);
+      else if (beat.id === "s03") sceneThrow(ctx, shot, beat, t, f);
+      else if (beat.id === "s04") sceneCatch(ctx, shot, beat, t, f);
+      else if (beat.id === "s05") sceneRoar(ctx, shot, beat, t, f);
+      else sceneCard(ctx, shot, beat, t, f);
+    }
+
+    if (on("grade1")) gradePass1(ctx, look);
+    if (on("bloom")) bloomPass(ctx, look);
+    if (on("grade2")) gradePass2(ctx, look, GRAIN_SEED_BASE + Math.round(t * FPS));
+
+    if (!on("overlays")) return { look: beat.id, fraction: f };
+    if (beat.id !== "s06") { scoreboardPlate(ctx, shot, beat, t); captionBar(ctx, beat); fictionLabel(ctx, true); }
+    else { closingCard(ctx, shot, beat); fictionLabel(ctx, false); }
+    return { look: beat.id, fraction: f };
+  }
+
+  var shot = readShotList();
+  if (!shot) return;
+  var p = params();
+
+  if (p.state === "1") {
+    document.getElementById("frame-states").textContent = JSON.stringify(stateManifest(shot), null, 2);
+    document.title = "STATE OK";
+    return;
+  }
+
+  var t = p.t !== undefined && p.t !== "" ? Number(p.t) : 0;
+  if (!isFinite(t)) t = 0;
+  t = clamp(t, shot.beats[0].t_in_s, shot.beats[shot.beats.length - 1].t_out_s - 0.001);
+  var beat = p.beat ? shot.beats.filter(function (b) { return b.id === p.beat; })[0] : beatAt(shot, t);
+  if (!beat) beat = beatAt(shot, t);
+
+  var ctx = document.getElementById("stage").getContext("2d", { alpha: false });
+
+  /* Strip mode: one Chrome launch paints many whole frames side by side. */
+  if (p.strip) {
+    var n = clamp(parseInt(p.strip, 10) || 0, 1, 16);
+    var t0 = p.t0 !== undefined && p.t0 !== "" ? Number(p.t0) : 0;
+    var dt = p.dt !== undefined && p.dt !== "" ? Number(p.dt) : 0.1;
+    var minT = shot.beats[0].t_in_s;
+    var maxT = shot.beats[shot.beats.length - 1].t_out_s;
+    var stage = document.getElementById("stage");
+    stage.width = n * W; stage.height = H;
+    stage.style.width = (n * W) + "px"; stage.style.height = H + "px";
+    document.documentElement.style.width = (n * W) + "px";
+    document.body.style.width = (n * W) + "px";
+    var off = document.createElement("canvas");
+    off.width = W; off.height = H;
+    var octx = off.getContext("2d", { alpha: false });
+    var drawn = [];
+    for (var i = 0; i < n; i++) {
+      var ti = clamp(t0 + i * dt, minT, maxT - 0.001);
+      /* The scene painters do not cover every pixel (corners outside the field
+         trapezoid, for one). A standalone capture starts from a blank black
+         canvas, so each tile must too, or tile 1..n-1 inherit the previous
+         tile's residue and stop matching a single-frame capture. */
+      octx.setTransform(1, 0, 0, 1, 0, 0);
+      octx.globalAlpha = 1; octx.globalCompositeOperation = "source-over";
+      octx.fillStyle = "#000000";
+      octx.fillRect(0, 0, W, H);
+      renderOne(octx, shot, beatAt(shot, ti), ti, "");
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
+      ctx.drawImage(off, i * W, 0);
+      drawn.push(Number(ti.toFixed(3)));
+    }
+    document.title = "STRIP OK n=" + n + " t0=" + drawn[0] + " tlast=" + drawn[drawn.length - 1];
+    return;
+  }
+
+  renderOne(ctx, shot, beat, t, p.skip || "");
+  document.title = "FRAME OK " + beat.id + " t=" + t.toFixed(3);
+})();
+</script>
+</body>
+</html>

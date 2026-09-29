@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "target_I_lufs": -14.0,
+  "target_window_lufs": [
+    -16.0,
+    -12.0
+  ],
+  "pcm_true_peak_max_dbtp": -2.0,
+  "gain_delta_db": 0.0,
+  "loudnorm_tp_target": "-2.5",
+  "ffmpeg_print": {
+    "input_i": "-19.78",
+    "input_tp": "-7.81",
+    "input_lra": "13.00",
+    "input_thresh": "-31.43",
+    "output_i": "-13.42",
+    "output_tp": "-2.50",
+    "output_lra": "15.80",
+    "output_thresh": "-24.48",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.58"
+  },
+  "replay": "loudnorm=I=-14:TP=-2.5:LRA=11:measured_I=-19.78:measured_TP=-7.81:measured_LRA=13.00:measured_thresh=-31.43:offset=-0.58:linear=true,aresample=48000",
+  "ebur128": {
+    "I_lufs": -14.0,
+    "true_peak_dbtp": -2.5
+  },
+  "stem_sample_peak_dbfs": {
+    "crowd.bed": -6.3,
+    "crowd.rise": -6.3,
+    "crowd.roar_peak": -6.3,
+    "pa.horn": -6.3,
+    "ref.whistle": -6.3,
+    "hit.snap": -6.3,
+    "hit.helmet": -6.3,
+    "ball.hiss": -6.3,
+    "ball.tip": -6.3,
+    "hit.catch": -6.3,
+    "call.radio": -6.3,
+    "sting.final": -6.3
+  },
+  "call_lines": [
+    {
+      "start_s": 0.4,
+      "text": "Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play."
+    },
+    {
+      "start_s": 8.4,
+      "text": "Takes the snap. Steps up. Hail Mary, launched toward the goal line."
+    },
+    {
+      "start_s": 18.4,
+      "text": "Tipped. Caught. In the end zone. At zero. Touchdown, Forge."
+    },
+    {
+      "start_s": 26.4,
+      "text": "The try is waived. It cannot change the winner. Redhawk Forge wins it, thirty-eight to thirty-five."
+    }
+  ],
+  "format": "pcm_s16le 48000 Hz stereo 1920000 frames",
+  "note": "loudnorm linear=true emits 192 kHz; aresample=48000 before the 40s trim. amix dropout_transition=0."
+}

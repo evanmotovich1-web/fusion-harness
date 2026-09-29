@@ -1,0 +1,216 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "mime_codec_string": "avc1.640028",
+      "width": 1920,
+      "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1080,
+      "has_b_frames": 2,
+      "pix_fmt": "yuv420p",
+      "level": 40,
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 614400,
+      "duration": "40.000000",
+      "bit_rate": "23201072",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "1200",
+      "extradata_size": 47,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "encoder": "Lavc63.1.101 libx264"
+      }
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "mime_codec_string": "mp4a.40.2",
+      "sample_fmt": "fltp",
+      "sample_rate": "48000",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 0,
+      "initial_padding": 1024,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 1920000,
+      "duration": "40.000000",
+      "bit_rate": "192411",
+      "nb_frames": "1876",
+      "extradata_size": 5,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "SoundHandler"
+      }
+    }
+  ],
+  "format": {
+    "filename": "/Users/evanmotovich/fusion-harness/self-compact/hail-mary/final-38-35.mp4",
+    "nb_streams": 2,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "format_long_name": "QuickTime / MOV",
+    "start_time": "0.000000",
+    "duration": "40.000000",
+    "size": "117013410",
+    "bit_rate": "23402682",
+    "probe_score": 100,
+    "tags": {
+      "major_brand": "isom",
+      "minor_version": "512",
+      "compatible_brands": "isomiso2avc1mp41",
+      "encoder": "Lavf63.1.101"
+    }
+  },
+  "sha256": "6a90e78a280115b4748bd439a46537660c85cf6b4ab342791d12b25061bf489f",
+  "decode_check": "passed",
+  "visual_review_seconds": [
+    2.0,
+    6.0,
+    13.0,
+    22.0,
+    29.5,
+    36.5
+  ],
+  "transcript_words_verified": null,
+  "gates_passed": true,
+  "failures": [],
+  "duration_s": 40.0,
+  "duration_target_s": 40.0,
+  "duration_tolerance_s": 0.1,
+  "loudness": {
+    "integrated_lufs": -14.0,
+    "true_peak_dbtp": -2.7,
+    "window_lufs": [
+      -16.0,
+      -12.0
+    ],
+    "peak_ceiling_dbtp": -1.0
+  },
+  "scoreboard": {
+    "before_snap": "35-32 at 0:04 on s01 and s02",
+    "after_catch": "38-35 at 0:00 on s04",
+    "closing_card": "38-35 Forge on s06",
+    "extra_point_frames": [],
+    "sample_step_s": 2.0,
+    "frames": [
+      {
+        "id": "s01",
+        "t": 2.0,
+        "text": "BAY\n35\nBAY 35 \u2022 FRG 32 | 4TH & 14 | 0:04 Q4\n0:04 Q4\n4th & 14 \u2022 FRG 32\n32 FRG\nThirty-five to thirty-two. Fourth and fourteen. Four seconds. One\nplay.\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s01-t2.000.png"
+      },
+      {
+        "id": "s02",
+        "t": 6.0,
+        "text": "BAY\n35\nBAY 35 \u2022 FRG 32 | 4TH & 14 | 0:04 Q4\n0:04 Q4\n4th & 14 \u2022 FRG 32\n32 FRG\nEverybody deep. Protect, then throw it as far as it will go.\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s02-t6.000.png"
+      },
+      {
+        "id": "s03",
+        "t": 13.0,
+        "text": "BAY\n35\nBAY 35 \u2022 FRG 32 | 4TH & 14 | 0:02 Q4\n0:02 Q4\n4th & 14 \u2022 FRG 32\n32 FRG\nTakes the snap... steps up... and launches it toward the goal line-\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s03-t13.000.png"
+      },
+      {
+        "id": "s04",
+        "t": 22.0,
+        "text": "BAY\n35\nFRG 38 \u2022 BAY 35 | 0:00 Q4\n0:00\nQ4\nQ4 \u2022 0:00\n38 FRG\nTIPPED... CAUGHT! IN THE END ZONE! AT ZERO! TOUCHDOWN\nFORGE!\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s04-t22.000.png"
+      },
+      {
+        "id": "s05",
+        "t": 29.5,
+        "text": "BAY\n35\nFINAL \u2022 TRY WAIVED\nFINAL Q4\nFINAL \u2022 TRY WAIVED\n38 FRG\nBAY 35\nFRG 38\nThe try is waived \u2014 it cannot change the winner. Redhawk Forge\nwins it, thirty-eight to thirty-five!\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s05-t29.500.png"
+      },
+      {
+        "id": "s06",
+        "t": 36.5,
+        "text": "38-35\nREDHAWK FORGE\nBAYLINE KINGS 35\n38-35. Forge. December night. Fictional simulation.\nFICTIONAL SIMULATION \u2014 Redhawk Forge and Bayline Kings are invented teams; no real league, club,\nbroadcaster, or player names, marks, logos, uniforms, or likenesses.\nFICTIONAL SIMULATION",
+        "frame": "verify-frames/s06-t36.500.png"
+      }
+    ]
+  },
+  "chrome_play": {
+    "status": "play-resolved",
+    "duration": 40,
+    "readyState": 4,
+    "currentTime": 0.000336,
+    "error": null,
+    "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  },
+  "whisper_check": "skipped",
+  "bytes": 117013410
+}

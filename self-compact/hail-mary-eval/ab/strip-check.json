@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/strip-check.json",
+  "checks": {
+    "prompt_sha256_matches_sent_call": true,
+    "rebuilt_prompt_bytes": 7295
+  },
+  "substring_forbidden_tested": [
+    "redhawk",
+    "forge",
+    "bayline",
+    "kings",
+    "cowboys",
+    "dallas",
+    "evan",
+    "hail-mary",
+    ".mp4",
+    "/Users/",
+    "self-compact",
+    "sha256",
+    "glm",
+    "deepseek",
+    "grok",
+    "sonnet",
+    "opus"
+  ],
+  "substring_hits": [],
+  "word_boundary_forbidden_tested": [
+    "audit",
+    "reference",
+    "sol",
+    "terra",
+    "claude",
+    "codex"
+  ],
+  "word_boundary_hits": [],
+  "identity_stripped": true,
+  "note": "scanned the rebuilt prompt for the A/B call, which is byte-identical to the prompt sent (prompt_sha256_matches_sent_call)"
+}

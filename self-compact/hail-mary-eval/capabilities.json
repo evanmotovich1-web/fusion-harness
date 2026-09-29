@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/capabilities.json",
+  "task": "1.a capability probe",
+  "authored_by": "sol",
+  "purpose": "Probe the host rail for the hail-mary quality evaluation: ffmpeg/ffprobe, an out-of-roster isolated judge, and read-only comparison facts on the 2026-09-28 Cowboys reference film. No generation calls, no media credits.",
+
+  "probe_policy": {
+    "writes": "only self-compact/hail-mary-eval/; ~/Movies/cowboys-hail-mary/ read-only",
+    "credits": "zero media-generation credits; no Higgsfield or other paid generation rail was contacted",
+    "network": "no fetch, no clone, no download; judge probes are one-line prompts to already-authenticated local CLIs",
+    "bounded": "every command finished well inside 60 s",
+    "background_processes": "none"
+  },
+
+  "tools": {
+    "ffmpeg": {
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "version": "9.0.1",
+      "drawtext_filter_present": false,
+      "drawtext_filter_count": 0,
+      "note": "Re-confirmed. No libfreetype in this build, so the film cannot burn text in ffmpeg; all burned-in text must be rasterized by the renderer."
+    },
+    "ffprobe": {
+      "path": "/opt/homebrew/bin/ffprobe",
+      "version": "9.0.1"
+    },
+    "chrome": {
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "version": "154.0.8037.58",
+      "note": "Task 1.a of the film run recorded 153.0.8010.54; task 2.b observed the update mid-session. Any determinism claim must be re-measured after a Chrome update."
+    },
+    "ebur128": {
+      "usable": true,
+      "how": "ffmpeg -af ebur128=peak=true over the whole file, or -ss/-t over a bounded window",
+      "whole_file_seconds_cost": "about 1 s for the 40 s film, about 2 s for the 72 s reference"
+    }
+  },
+
+  "judge": {
+    "verdict": "available",
+    "isolated_judge_available": true,
+    "out_of_roster": true,
+    "primary": {
+      "cli": "claude",
+      "path": "/Users/evanmotovich/.local/bin/claude",
+      "version": "2.1.284 (Claude Code)",
+      "canonical_recipe": "printf '%s' \"$PROMPT\" | VAULT_SEMANTIC_HOOK_DISABLE=1 claude -p --strict-mcp-config --no-session-persistence --disallowedTools \"Bash,Read,Grep,Glob,WebFetch,WebSearch,Task,Edit,Write\"",
+      "probes": [
+        {
+          "prompt": "Reply with exactly: JUDGE_OK",
+          "raw_output": "JUDGE_OK",
+          "exit": 0,
+          "flags": ["VAULT_SEMANTIC_HOOK_DISABLE=1", "--strict-mcp-config", "--no-session-persistence"]
+        },
+        {
+          "prompt": "Reply with exactly: TOOLS_OK",
+          "raw_output": "TOOLS_OK",
+          "exit": 0,
+          "flags": ["VAULT_SEMANTIC_HOOK_DISABLE=1", "--strict-mcp-config", "--no-session-persistence", "--disallowedTools=<8 tools>"]
+        },
+        {
+          "prompt": "Use your Read tool to open <vault path> and quote its first line. If you have no such tool, reply exactly: NO_TOOLS",
+          "raw_output": "NO_TOOLS",
+          "exit": 0,
+          "meaning": "positive containment test: with tools denied the judge cannot read the vault, and it reported the sentinel verbatim"
+        }
+      ],
+      "unusable_flags": {
+        "--bare": "returns 'Not logged in \u00b7 Please run /login' on this host; do not use it"
+      },
+      "flag_pitfall": "--disallowedTools is greedy across whitespace: a space-separated list swallows the prompt as bogus tool names. Pass a comma-separated string, and pass the prompt on stdin."
+    },
+    "secondary": {
+      "cli": "codex",
+      "path": "/Users/evanmotovich/.local/bin/codex",
+      "version": "codex-cli 0.157.0",
+      "canonical_recipe": "VAULT_SEMANTIC_HOOK_DISABLE=1 codex exec --sandbox read-only --skip-git-repo-check -c approval_policy=\"never\" \"$PROMPT\" </dev/null",
+      "probes": [
+        {
+          "prompt": "Reply with exactly: JUDGE_OK",
+          "raw_output": "JUDGE_OK",
+          "tokens_used": 20688,
+          "exit": 0
+        }
+      ],
+      "required_flags": [
+        "--skip-git-repo-check",
+        "--sandbox read-only",
+        "-c approval_policy=\"never\"",
+        "stdin redirected from /dev/null, otherwise it blocks reading stdin"
+      ],
+      "caveat": "codex prints hook lifecycle lines (SessionStart, UserPromptSubmit, Stop) and spent 20688 tokens on a one-line prompt. Its prompt context is unaudited, so treat it as a cross-check only, not the primary judge."
+    },
+    "isolation_evidence": {
+      "method": "positive containment test plus a ledger canary",
+      "containment": "passed (raw output NO_TOOLS)",
+      "ledger_canary": "failed to confirm, and this is itself a finding",
+      "ledger_path": "~/.cache/vault-semantic/hook-ledger.jsonl",
+      "finding": "An un-isolated control run (same claude recipe without VAULT_SEMANTIC_HOOK_DISABLE=1) also produced no ledger entry. The vault injection ledger does not record isolated claude -p runs at all, so ledger absence is NOT evidence of isolation. Isolation must be argued from the containment test, not from the ledger.",
+      "ledger_entries_with_cwd_tmp_total": 3,
+      "ledger_entries_with_cwd_tmp_on_probe_day": 0
+    }
+  },
+
+  "reference_film": {
+    "label": "cowboys_run1",
+    "path": "/Users/evanmotovich/Movies/cowboys-hail-mary/cowboys_hail_mary.mp4",
+    "access": "read-only; nothing written to that tree",
+    "exists": true,
+    "sha256": "1e40a4d299572f5cb97893d2eef5e66574c64084dec4df9ea0c1a371598c126f",
+    "bytes": 205402437,
+    "built": "2026-09-28, by a separate five-agent /fh-collaborate run (fh-collaborate-20260928T190908) on the same Mac",
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "24/1",
+      "avg_frame_rate": "24/1",
+      "duration_s": 72.0,
+      "nb_frames": 1728
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_s": 72.0
+    },
+    "format_bit_rate": 22822493,
+    "distinct_frames": {
+      "output_frames": 1728,
+      "timeline_declared_frames": 1728,
+      "timeline_shots": 9,
+      "per_shot_declared": {"s01": 144, "s02": 192, "s03": 192, "s04": 240, "s05": 240, "s06": 192, "s07": 192, "s08": 192, "s09": 144},
+      "on_disk_residue_png": 1464,
+      "on_disk_residue_note": "frames/ retains s02..s08 (1440) plus frames/_test (24); s01 and s09 frame dirs were cleaned, but parts/g_s01.mp4 and parts/g_s09.mp4 exist",
+      "effective_fps_source": "one rendered frame per output frame at 24 fps; no duplication step"
+    },
+    "measured_whole_file": {
+      "integrated_lufs": -9.9,
+      "lra_lu": 13.6,
+      "true_peak_dbfs": -1.3,
+      "note": "independently reproduced with ffmpeg ebur128=peak=true; matches the project's own qa/validate.txt line for line"
+    },
+    "recorded_own_validation": {
+      "file": "/Users/evanmotovich/Movies/cowboys-hail-mary/qa/validate.txt",
+      "result": "7 of 7 PASS",
+      "lines": [
+        "PASS V1: ok dur=72.000 fps=24/1",
+        "PASS V2: decoded with no errors",
+        "PASS V3: integrated=-9.9 LUFS true_peak=-1.3 dBTP",
+        "PASS V5: short-term mean 34-41s=-22.47, 47-52s=-9.20, gap=13.3 LU",
+        "PASS V4: no black frames after 1.0s",
+        "PASS V6: qa/contact_sheet.png (10,27,30,48,52,69s) qa/overview.png (1 frame/4s)",
+        "PASS V7: s02 frames 0-23 sha256 identical"
+      ]
+    },
+    "disclosure_lines": {
+      "file": "/Users/evanmotovich/Movies/cowboys-hail-mary/SPEC.md",
+      "line_23": "Loudness | -10 LUFS integrated (\u00b11 LU), true peak <= -1 dBTP, LRA 9 ...",
+      "line_24": "Dynamics | Short-term loudness over 34-41 s must sit at least 10 LU below 47-52 s",
+      "line_154": "ebur128: integrated loudness -11 to -9 LUFS, true peak <= -1.0 dBTP",
+      "line_159": "Evan watches it with sound on. The stylized look and \"loud and exciting\" are his call.",
+      "line_166": "Not verified: the stylized look and whether it feels loud and exciting. Evan has to watch it with sound on."
+    },
+    "unverified_by_its_own_record": ["the stylized look", "whether it feels loud and exciting"]
+  },
+
+  "artifact_under_audit": {
+    "label": "hail_mary_run2",
+    "path": "/Users/evanmotovich/fusion-harness/self-compact/hail-mary/final-38-35.mp4",
+    "sha256": "6a90e78a280115b4748bd439a46537660c85cf6b4ab342791d12b25061bf489f",
+    "bytes": 117013410,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "r_frame_rate": "30/1", "duration_s": 40.0, "nb_frames": 1200},
+    "audio": {"codec": "aac", "sample_rate": 48000, "channels": 2},
+    "distinct_frames": {
+      "output_frames": 1200,
+      "distinct_rendered_frames": 400,
+      "effective_fps_source": "400 distinct frames painted 8 per strip into 50 strips (shots/seq/strip_000..049.png, 51 entries including sequence.json), captured at 10 Hz, then untile + setpts + fps=30; every output frame is a duplicate of one of the 400",
+      "duplication_factor": 3.0,
+      "standalone_png_in_shots": 16
+    },
+    "measured_whole_file": {"integrated_lufs": -14.0, "lra_lu": 16.5, "true_peak_dbfs": -2.7},
+    "stem_peaks": {
+      "source": "self-compact/hail-mary/audio/loudnorm.json",
+      "finding": "all 12 stems are exactly -6.3 dBFS sample peak",
+      "consequence": "uniform stem headroom plus a single loudnorm pass leaves no mechanism for one cue to be relatively louder than another; the mix cannot build"
+    },
+    "acceptance_word_coverage": {
+      "words": ["vivid", "exciting", "entertain", "watchable"],
+      "authored_text_files_scanned": 15,
+      "files_with_match": 0,
+      "total_matches": 0,
+      "files_scanned": [
+        "assemble.sh", "audio/loudnorm.json", "canon.md", "capabilities.json",
+        "capture-strips.mjs", "capture.mjs", "README.md", "render.html", "screenplay.md",
+        "shot-list.json", "shots/frames.json", "shots/seq/sequence.json", "sound-palette.md",
+        "verification.json", "verify.sh"
+      ],
+      "finding": "none of the request's acceptance words (vivid, exciting, entertain, watchable) appears anywhere in any of the 15 authored text files of the film artifact; the request's own acceptance criteria never entered the spec, the script, the sound design or the verifier"
+    }
+  },
+
+  "loudness_envelope": {
+    "method": "ffmpeg -ss <t> -t 4 -i <file> -af ebur128, integrated value per 4 s window, measured 2026-09-29",
+    "window_s": 4,
+    "reference_cowboys": [
+      {"t": 0, "lufs": -11.0}, {"t": 8, "lufs": -8.6}, {"t": 16, "lufs": -10.2}, {"t": 24, "lufs": -9.8},
+      {"t": 32, "lufs": -24.0}, {"t": 36, "lufs": -22.6}, {"t": 40, "lufs": -14.5},
+      {"t": 48, "lufs": -9.1}, {"t": 56, "lufs": -9.1}, {"t": 64, "lufs": -10.7}
+    ],
+    "artifact_hail_mary": [
+      {"t": 0, "lufs": -14.6}, {"t": 4, "lufs": -13.8}, {"t": 8, "lufs": -12.3}, {"t": 12, "lufs": -13.1},
+      {"t": 16, "lufs": -14.0}, {"t": 18, "lufs": -15.0}, {"t": 22, "lufs": -15.2}, {"t": 26, "lufs": -13.4},
+      {"t": 30, "lufs": -16.7}, {"t": 34, "lufs": -29.8}, {"t": 36, "lufs": -31.5}
+    ],
+    "targeted_windows": {
+      "reference": {
+        "pre_catch_34_41_s": -22.7,
+        "post_catch_47_52_s": -9.5,
+        "gap_lu": 13.2,
+        "recorded_in_project_validation": 13.3
+      },
+      "artifact": {
+        "ball_flight_12_17_s": -13.1,
+        "catch_and_roar_20_26_s": -15.2,
+        "setup_window_8_12_s": -12.3,
+        "gap_lu": -2.1,
+        "note": "negative: the catch-and-roar window is QUIETER than the ball-flight window"
+      }
+    },
+    "derived": {
+      "reference_climax_is_loudest": true,
+      "artifact_climax_is_loudest": false,
+      "artifact_loudest_window": {"t": 8, "lufs": -12.3, "beat": "s03 the throw / snap"},
+      "artifact_catch_window": {"t": 22, "lufs": -15.2, "beat": "s04 the catch at zero"},
+      "artifact_climax_deficit_lu": 2.9,
+      "headline": "the loudest moment of the delivered film is the snap, 2.9 LU above the catch; the reference film's loudest moment is the catch, 13.3 LU above its pre-catch drop"
+    }
+  },
+
+  "regression_table_measured_from_files": {
+    "columns": ["reference_cowboys", "artifact_hail_mary"],
+    "duration_s": [72.0, 40.0],
+    "fps": [24, 30],
+    "distinct_rendered_frames": [1728, 400],
+    "duplication_factor": [1.0, 3.0],
+    "integrated_lufs": [-9.9, -14.0],
+    "true_peak_dbfs": [-1.3, -2.7],
+    "designed_dynamic_gate": ["short-term 34-41 s at least 10 LU below 47-52 s", "none"],
+    "measured_climax_gap_lu": [13.2, -2.1],
+    "explicit_unverified_disclosure": [true, false]
+  },
+
+  "constraints_for_downstream": [
+    "C1. No drawtext in ffmpeg (re-confirmed, count 0). Any text in a clip must be rasterized by a renderer, not burned by ffmpeg.",
+    "C2. Primary judge is the claude recipe in judge.primary.canonical_recipe. Pass the prompt on stdin and the tool list comma-separated.",
+    "C3. Do not use the vault injection ledger as isolation evidence; it does not record isolated runs. Use the containment test (sentinel NO_TOOLS) instead.",
+    "C4. The artifact under audit is frozen. Do not modify anything under self-compact/hail-mary/.",
+    "C5. The reference film is read-only. Never write under /Users/evanmotovich/Movies/cowboys-hail-mary/.",
+    "C6. Judge availability is proven, but each judge call costs real tokens (codex spent 20688 on one line). Keep judge batches small and pre-registered.",
+    "C7. Measured fact for the rubric: the artifact contains 0 occurrences of the request's acceptance words, and its loudness envelope is inverted at the climax. Any rubric that cannot separate these two films is unfit."
+  ],
+
+  "limitations": [
+    "L1. The judge probes prove the CLI answers and proves containment. They do not measure judge reliability, bias, or run-to-run variance; that is a T2/T4 question.",
+    "L2. The reference film's own acceptance record still lists the stylized look and the felt loudness as unverified by its author. It is a better measurement target, not a proven-good film.",
+    "L3. The on-disk distinct-frame count for the reference is incomplete by construction (1464 of 1728 retained). The 1728 figure comes from nb_frames, timeline.json, and one rendered frame per output frame, not from a full on-disk count.",
+    "L4. No human label exists yet for what was wrong with the artifact. Per wiki/em-bench-eval-integrity.md and dev-factory-build-story.md, a grader over an unlabelled corpus returns a null result. Q1 to the operator is still open."
+  ],
+
+  "unblocks": ["1.b rubric + canary", "1.c deterministic measurement", "2.x blind A/B with the isolated judge"]
+}

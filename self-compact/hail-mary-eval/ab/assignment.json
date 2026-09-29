@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/assignment.json",
+  "written_before_any_judge_call": true,
+  "seed": 38036,
+  "film_A": "audit",
+  "film_B": "reference",
+  "reveal": "this file is not sent to the judge; it is read only after raw output is saved",
+  "packs": {
+    "audit": "judge_packs.audit",
+    "reference": "judge_packs.reference"
+  }
+}

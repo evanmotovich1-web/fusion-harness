@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/ab-result.json",
+  "extracted_verbatim_from": "ab/raw/ab-call.txt",
+  "extraction_note": "verbatim JSON object from the raw judge output; no prose edited, no axis renamed, no score changed",
+  "assignment": {
+    "schema_version": 1,
+    "artifact": "self-compact/hail-mary-eval/ab/assignment.json",
+    "written_before_any_judge_call": true,
+    "seed": 38036,
+    "film_A": "audit",
+    "film_B": "reference",
+    "reveal": "this file is not sent to the judge; it is read only after raw output is saved",
+    "packs": {
+      "audit": "judge_packs.audit",
+      "reference": "judge_packs.reference"
+    }
+  },
+  "rubric_body_sha256": "88ace4f20cec840c042a28bfdddb9a54baabde64946284bb726febd35ad69925",
+  "judge_object": {
+    "film_A": {
+      "vivid": 2,
+      "loud": 3,
+      "exciting": 2,
+      "final_play": 5,
+      "one_line": "The transcript nails the last-second Hail Mary, but motion is low and flat (mean_ydif 1.29\u20132.23 through s05, effective 10 Hz, 400 distinct frames out of 1200). Loudness falls at the catch (-13.2 to -15.0 LUFS, -1.8 LU), and the biggest motion spike (7.11) comes in the closing card, after the payoff."
+    },
+    "film_B": {
+      "vivid": 4,
+      "loud": 4,
+      "exciting": 4,
+      "final_play": 3,
+      "one_line": "Motion energy builds from 2.78 to a peak of 10.30 (s08) with all 1728 frames distinct at 24 Hz. Loudness jumps 13.2 LU into the catch (-22.7 to -9.5 LUFS), and there is a lull before the release. The transcript shows a launch, a catch in the end zone and a touchdown, but says nothing explicit about 'deep' or 'at zero'."
+    },
+    "overall_winner": "B",
+    "what_the_packs_cannot_show": "The packs give no actual picture, so they cannot show what is on screen, how good the animation or rendering is, or whether the motion numbers come from meaningful action or from cuts, fades or title cards. Film A's s06 spike (7.11) sits on a text card, and the pack does not say what causes it. The packs cannot show whether the audio is well mixed, whether the crowd or commentary sound convincing, or whether audio and picture line up at the catch. They also cannot show whether the pass is deep. Film B's transcript never says 'deep' or 'at zero'. Its scoreboard has the clock at 0:00 from 28s and the touchdown at 47s, so the catch is not clearly tied to the clock hitting zero. The films differ in length (40s vs 72s), frame rate (30 vs 24 fps) and effective motion rate (10 vs 24 Hz). The two drop_to_catch spans also use different windowing rules (A's has no declared dynamics window), so the LU spans are not directly comparable. Nothing here measures audience excitement, only proxies for it."
+  }
+}

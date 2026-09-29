@@ -1,0 +1,921 @@
+{
+  "acceptance_words": {
+    "files": [
+      "canon.md",
+      "shot-list.json",
+      "screenplay.md",
+      "sound-palette.md",
+      "verify.sh",
+      "README.md"
+    ],
+    "per_file": [
+      {
+        "counts": {
+          "38-35": 0,
+          "38\u201335": 3,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 5,
+          "loud": 1,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "canon.md"
+      },
+      {
+        "counts": {
+          "38-35": 1,
+          "38\u201335": 2,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 0,
+          "loud": 0,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "shot-list.json"
+      },
+      {
+        "counts": {
+          "38-35": 0,
+          "38\u201335": 2,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 5,
+          "loud": 1,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "screenplay.md"
+      },
+      {
+        "counts": {
+          "38-35": 2,
+          "38\u201335": 0,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 0,
+          "loud": 3,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "sound-palette.md"
+      },
+      {
+        "counts": {
+          "38-35": 9,
+          "38\u201335": 0,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 0,
+          "loud": 0,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "verify.sh"
+      },
+      {
+        "counts": {
+          "38-35": 5,
+          "38\u201335": 3,
+          "entertain": 0,
+          "exciting": 0,
+          "hail mary": 4,
+          "loud": 1,
+          "vivid": 0,
+          "watchable": 0
+        },
+        "file": "README.md"
+      }
+    ],
+    "totals": {
+      "38-35": 17,
+      "38\u201335": 10,
+      "entertain": 0,
+      "exciting": 0,
+      "hail mary": 14,
+      "loud": 6,
+      "vivid": 0,
+      "watchable": 0
+    }
+  },
+  "conflict_matrix": {
+    "judge_is_author_cases": [
+      {
+        "authored": [
+          "sound-palette.md",
+          "screenplay.md",
+          "audio/",
+          "verify.sh",
+          "verification.json"
+        ],
+        "judges": [
+          "verify.sh technical gates of the film those artifacts define"
+        ],
+        "slot": "terra"
+      }
+    ],
+    "rows": [
+      {
+        "artifact": "canon.md",
+        "author_is_technical_judge": false,
+        "author_slot": "glm",
+        "task": "1.b",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "shot-list.json",
+        "author_is_technical_judge": false,
+        "author_slot": "glm",
+        "task": "1.b",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "README.md",
+        "author_is_technical_judge": false,
+        "author_slot": "glm",
+        "task": "5.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "capabilities.json",
+        "author_is_technical_judge": false,
+        "author_slot": "sol",
+        "task": "1.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "render.html",
+        "author_is_technical_judge": false,
+        "author_slot": "sol",
+        "task": "2.b",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "shots/",
+        "author_is_technical_judge": false,
+        "author_slot": "sol",
+        "task": "2.b",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "assemble.sh",
+        "author_is_technical_judge": false,
+        "author_slot": "sol",
+        "task": "3.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "final-38-35.mp4",
+        "author_is_technical_judge": false,
+        "author_slot": "sol",
+        "task": "3.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "sound-palette.md",
+        "author_is_technical_judge": true,
+        "author_slot": "terra",
+        "task": "1.c",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "screenplay.md",
+        "author_is_technical_judge": true,
+        "author_slot": "terra",
+        "task": "2.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "audio/",
+        "author_is_technical_judge": true,
+        "author_slot": "terra",
+        "task": "2.c",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "verify.sh",
+        "author_is_technical_judge": true,
+        "author_slot": "terra",
+        "task": "4.a",
+        "technical_judge_slot": "terra"
+      },
+      {
+        "artifact": "verification.json",
+        "author_is_technical_judge": true,
+        "author_slot": "terra",
+        "task": "4.a",
+        "technical_judge_slot": "terra"
+      }
+    ],
+    "sensory_judge": {
+      "authored_film_artifacts": [],
+      "identity": "out-of-roster isolated claude",
+      "judge_is_author": false
+    },
+    "source": "film collaboration task ids mapped from report filenames 1.a-sol through 5.a-glm; slot names are not stored in the film files"
+  },
+  "films": {
+    "audit": {
+      "audio_codec": "aac",
+      "beat_energy": [
+        {
+          "duration_s": 4.0,
+          "frames": 120,
+          "id": "s01",
+          "mean_ydif": 1.2921,
+          "t_in": 0.0,
+          "t_out": 4.0
+        },
+        {
+          "duration_s": 4.0,
+          "frames": 120,
+          "id": "s02",
+          "mean_ydif": 2.2323,
+          "t_in": 4.0,
+          "t_out": 8.0
+        },
+        {
+          "duration_s": 10.0,
+          "frames": 300,
+          "id": "s03",
+          "mean_ydif": 2.1716,
+          "t_in": 8.0,
+          "t_out": 18.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 240,
+          "id": "s04",
+          "mean_ydif": 1.6233,
+          "t_in": 18.0,
+          "t_out": 26.0
+        },
+        {
+          "duration_s": 7.0,
+          "frames": 210,
+          "id": "s05",
+          "mean_ydif": 1.2867,
+          "t_in": 26.0,
+          "t_out": 33.0
+        },
+        {
+          "duration_s": 7.0,
+          "frames": 210,
+          "id": "s06",
+          "mean_ydif": 7.1093,
+          "t_in": 33.0,
+          "t_out": 40.0
+        }
+      ],
+      "bit_rate": 23402682,
+      "bytes": 117013410,
+      "catch_t": 18.0,
+      "channels": 2,
+      "container_fps": 30.0,
+      "distinct_rendered_frames": 400,
+      "drop_to_catch": {
+        "post_lufs": -15.0,
+        "post_s": [
+          18.0,
+          22.0
+        ],
+        "pre_lufs": -13.2,
+        "pre_s": [
+          14.0,
+          18.0
+        ],
+        "rule": "4s ending at catch-beat t_in versus 4s starting there; no declared dynamics window in the shot list",
+        "span_lu": -1.8
+      },
+      "duplication_factor": 3.0,
+      "duration_s": 40.0,
+      "effective_motion_hz": 10.0,
+      "height": 1080,
+      "integrated_lufs": -14.0,
+      "lra_lu": 16.5,
+      "motion": {
+        "distinct_rendered_frames": 400,
+        "fps_distinct": 10,
+        "frames_per_distinct": 3,
+        "output_fps_declared": 30,
+        "records_match_declared_count": true,
+        "sequence_frame_count": 400,
+        "source": "shots/seq/sequence.json strip tile sum versus container frame count",
+        "strip_png_files": 50,
+        "strip_records": 50,
+        "tiles_sum": 400
+      },
+      "output_frames": 1200,
+      "r_frame_rate": "30/1",
+      "sample_rate": 48000,
+      "sha256": "6a90e78a280115b4748bd439a46537660c85cf6b4ab342791d12b25061bf489f",
+      "short_term_lufs_max": -12.3,
+      "short_term_lufs_min": -31.5,
+      "short_term_windows": [
+        {
+          "lufs": -14.6,
+          "t": 0.0
+        },
+        {
+          "lufs": -13.8,
+          "t": 4.0
+        },
+        {
+          "lufs": -12.3,
+          "t": 8.0
+        },
+        {
+          "lufs": -13.1,
+          "t": 12.0
+        },
+        {
+          "lufs": -14.0,
+          "t": 16.0
+        },
+        {
+          "lufs": -15.1,
+          "t": 20.0
+        },
+        {
+          "lufs": -13.9,
+          "t": 24.0
+        },
+        {
+          "lufs": -14.7,
+          "t": 28.0
+        },
+        {
+          "lufs": -25.2,
+          "t": 32.0
+        },
+        {
+          "lufs": -31.5,
+          "t": 36.0
+        }
+      ],
+      "true_peak_dbtp": -2.7,
+      "video_codec": "h264",
+      "width": 1920
+    },
+    "reference": {
+      "adjacent_4s_drop_to_catch": {
+        "post_lufs": -9.7,
+        "post_s": [
+          47.0,
+          51.0
+        ],
+        "pre_lufs": -9.1,
+        "pre_s": [
+          43.0,
+          47.0
+        ],
+        "rule": "same 4s-adjacent rule as the audit film, for a like-for-like span",
+        "span_lu": -0.6
+      },
+      "audio_codec": "aac",
+      "beat_energy": [
+        {
+          "duration_s": 6.0,
+          "frames": 144,
+          "id": "s01",
+          "mean_ydif": 2.7822,
+          "t_in": 0.0,
+          "t_out": 6.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 192,
+          "id": "s02",
+          "mean_ydif": 5.1244,
+          "t_in": 6.0,
+          "t_out": 14.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 192,
+          "id": "s03",
+          "mean_ydif": 4.236,
+          "t_in": 14.0,
+          "t_out": 22.0
+        },
+        {
+          "duration_s": 10.0,
+          "frames": 240,
+          "id": "s04",
+          "mean_ydif": 6.2469,
+          "t_in": 22.0,
+          "t_out": 32.0
+        },
+        {
+          "duration_s": 10.0,
+          "frames": 240,
+          "id": "s05",
+          "mean_ydif": 2.971,
+          "t_in": 32.0,
+          "t_out": 42.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 192,
+          "id": "s06",
+          "mean_ydif": 7.5387,
+          "t_in": 42.0,
+          "t_out": 50.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 192,
+          "id": "s07",
+          "mean_ydif": 9.5916,
+          "t_in": 50.0,
+          "t_out": 58.0
+        },
+        {
+          "duration_s": 8.0,
+          "frames": 192,
+          "id": "s08",
+          "mean_ydif": 10.3026,
+          "t_in": 58.0,
+          "t_out": 66.0
+        },
+        {
+          "duration_s": 6.0,
+          "frames": 144,
+          "id": "s09",
+          "mean_ydif": 3.2665,
+          "t_in": 66.0,
+          "t_out": 72.0
+        }
+      ],
+      "bit_rate": 22822493,
+      "bytes": 205402437,
+      "catch_t": 47.0,
+      "channels": 2,
+      "container_fps": 24.0,
+      "distinct_rendered_frames": 1728,
+      "distinct_source": "ffprobe nb_frames matches timeline.json video.frames",
+      "drop_to_catch": {
+        "post_lufs": -9.5,
+        "post_s": [
+          47.0,
+          52.0
+        ],
+        "pre_lufs": -22.7,
+        "pre_s": [
+          34.0,
+          41.0
+        ],
+        "rule": "windows parsed from timeline.json audio.dynamics_check, measured fresh",
+        "span_lu": 13.2
+      },
+      "duplication_factor": 1.0,
+      "duration_s": 72.0,
+      "effective_motion_hz": 24.0,
+      "height": 1080,
+      "integrated_lufs": -9.9,
+      "lra_lu": 13.6,
+      "output_frames": 1728,
+      "r_frame_rate": "24/1",
+      "sample_rate": 48000,
+      "sha256": "1e40a4d299572f5cb97893d2eef5e66574c64084dec4df9ea0c1a371598c126f",
+      "short_term_lufs_max": -8.6,
+      "short_term_lufs_min": -24.0,
+      "short_term_windows": [
+        {
+          "lufs": -11.0,
+          "t": 0.0
+        },
+        {
+          "lufs": -10.9,
+          "t": 4.0
+        },
+        {
+          "lufs": -8.6,
+          "t": 8.0
+        },
+        {
+          "lufs": -9.6,
+          "t": 12.0
+        },
+        {
+          "lufs": -10.2,
+          "t": 16.0
+        },
+        {
+          "lufs": -9.7,
+          "t": 20.0
+        },
+        {
+          "lufs": -9.8,
+          "t": 24.0
+        },
+        {
+          "lufs": -10.3,
+          "t": 28.0
+        },
+        {
+          "lufs": -24.0,
+          "t": 32.0
+        },
+        {
+          "lufs": -22.6,
+          "t": 36.0
+        },
+        {
+          "lufs": -14.5,
+          "t": 40.0
+        },
+        {
+          "lufs": -9.3,
+          "t": 44.0
+        },
+        {
+          "lufs": -9.1,
+          "t": 48.0
+        },
+        {
+          "lufs": -9.8,
+          "t": 52.0
+        },
+        {
+          "lufs": -9.1,
+          "t": 56.0
+        },
+        {
+          "lufs": -9.9,
+          "t": 60.0
+        },
+        {
+          "lufs": -10.7,
+          "t": 64.0
+        },
+        {
+          "lufs": -11.3,
+          "t": 68.0
+        }
+      ],
+      "shot_owners": [
+        "astra",
+        "grok",
+        "sol"
+      ],
+      "timeline_declared_frames": 1728,
+      "true_peak_dbtp": -1.3,
+      "video_codec": "h264",
+      "width": 1920
+    }
+  },
+  "generated_at": "2026-09-29T02:28:19Z",
+  "judge_packs": {
+    "audit": {
+      "beat_timing": [
+        {
+          "duration_s": 4.0,
+          "id": "s01",
+          "t_in": 0.0,
+          "t_out": 4.0
+        },
+        {
+          "duration_s": 4.0,
+          "id": "s02",
+          "t_in": 4.0,
+          "t_out": 8.0
+        },
+        {
+          "duration_s": 10.0,
+          "id": "s03",
+          "t_in": 8.0,
+          "t_out": 18.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s04",
+          "t_in": 18.0,
+          "t_out": 26.0
+        },
+        {
+          "duration_s": 7.0,
+          "id": "s05",
+          "t_in": 26.0,
+          "t_out": 33.0
+        },
+        {
+          "duration_s": 7.0,
+          "id": "s06",
+          "t_in": 33.0,
+          "t_out": 40.0
+        }
+      ],
+      "caption_call_transcript": [
+        "Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play.",
+        "Everybody deep. Protect, then throw it as far as it will go.",
+        "Takes the snap... steps up... and launches it toward the goal line\u2014",
+        "TIPPED... CAUGHT! IN THE END ZONE! AT ZERO! TOUCHDOWN HOME!",
+        "The try is waived \u2014 it cannot change the winner. HOME wins it, thirty-eight to thirty-five!",
+        "38\u201335. HOME. December night. Fictional simulation.",
+        "Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play.",
+        "Takes the snap. Steps up. Hail Mary, launched toward the goal line.",
+        "Tipped. Caught. In the end zone. At zero. Touchdown, HOME.",
+        "The try is waived. It cannot change the winner. HOME wins it, thirty-eight to thirty-five."
+      ],
+      "container_fps": 30.0,
+      "distinct_rendered_frames": 400,
+      "drop_to_catch": {
+        "post_lufs": -15.0,
+        "post_s": [
+          18.0,
+          22.0
+        ],
+        "pre_lufs": -13.2,
+        "pre_s": [
+          14.0,
+          18.0
+        ],
+        "rule": "4s ending at catch-beat t_in versus 4s starting there; no declared dynamics window in the shot list",
+        "span_lu": -1.8
+      },
+      "drop_to_catch_span_lu": -1.8,
+      "duration_s": 40.0,
+      "effective_motion_hz": 10.0,
+      "integrated_lufs": -14.0,
+      "lra_lu": 16.5,
+      "output_frames": 1200,
+      "per_beat_frame_difference_energy": [
+        {
+          "id": "s01",
+          "mean_ydif": 1.2921,
+          "t_in": 0.0,
+          "t_out": 4.0
+        },
+        {
+          "id": "s02",
+          "mean_ydif": 2.2323,
+          "t_in": 4.0,
+          "t_out": 8.0
+        },
+        {
+          "id": "s03",
+          "mean_ydif": 2.1716,
+          "t_in": 8.0,
+          "t_out": 18.0
+        },
+        {
+          "id": "s04",
+          "mean_ydif": 1.6233,
+          "t_in": 18.0,
+          "t_out": 26.0
+        },
+        {
+          "id": "s05",
+          "mean_ydif": 1.2867,
+          "t_in": 26.0,
+          "t_out": 33.0
+        },
+        {
+          "id": "s06",
+          "mean_ydif": 7.1093,
+          "t_in": 33.0,
+          "t_out": 40.0
+        }
+      ],
+      "scoreboard_timeline": [
+        {
+          "clock": "0:04",
+          "id": "s01",
+          "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:04 Q4",
+          "t_in": 0.0,
+          "t_out": 4.0
+        },
+        {
+          "clock": "0:04",
+          "id": "s02",
+          "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:04 Q4",
+          "t_in": 4.0,
+          "t_out": 8.0
+        },
+        {
+          "clock": "0:04 \u2192 0:00 (dies while the ball is in the air)",
+          "id": "s03",
+          "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:0N Q4",
+          "t_in": 8.0,
+          "t_out": 18.0
+        },
+        {
+          "clock": "0:00",
+          "id": "s04",
+          "line": "HOME 38 \u00b7 AWAY 35 | 0:00 Q4",
+          "t_in": 18.0,
+          "t_out": 26.0
+        },
+        {
+          "clock": "FINAL",
+          "id": "s05",
+          "line": "FINAL \u00b7 TRY WAIVED \u00b7 AWAY 35 \u00b7 HOME 38",
+          "t_in": 26.0,
+          "t_out": 33.0
+        },
+        {
+          "clock": "\u2014",
+          "id": "s06",
+          "line": "38\u201335 \u00b7 HOME \u00b7 FICTIONAL SIMULATION",
+          "t_in": 33.0,
+          "t_out": 40.0
+        }
+      ],
+      "short_term_lufs_max": -12.3,
+      "short_term_lufs_min": -31.5,
+      "true_peak_dbtp": -2.7
+    },
+    "reference": {
+      "beat_timing": [
+        {
+          "duration_s": 6.0,
+          "id": "s01",
+          "t_in": 0.0,
+          "t_out": 6.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s02",
+          "t_in": 6.0,
+          "t_out": 14.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s03",
+          "t_in": 14.0,
+          "t_out": 22.0
+        },
+        {
+          "duration_s": 10.0,
+          "id": "s04",
+          "t_in": 22.0,
+          "t_out": 32.0
+        },
+        {
+          "duration_s": 10.0,
+          "id": "s05",
+          "t_in": 32.0,
+          "t_out": 42.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s06",
+          "t_in": 42.0,
+          "t_out": 50.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s07",
+          "t_in": 50.0,
+          "t_out": 58.0
+        },
+        {
+          "duration_s": 8.0,
+          "id": "s08",
+          "t_in": 58.0,
+          "t_out": 66.0
+        },
+        {
+          "duration_s": 6.0,
+          "id": "s09",
+          "t_in": 66.0,
+          "t_out": 72.0
+        }
+      ],
+      "caption_call_transcript": [
+        "Four seconds left. HOME down three. One play for a championship.",
+        "Here's the snap... he's flushed... he steps up... and LAUNCHES it!",
+        "It's up for grabs in the end zone!",
+        "CAUGHT! TOUCHDOWN HOME! THE HOME WIN THE SUPER BOWL!",
+        "Thirty-eight to thirty-five!"
+      ],
+      "container_fps": 24.0,
+      "distinct_rendered_frames": 1728,
+      "drop_to_catch": {
+        "post_lufs": -9.5,
+        "post_s": [
+          47.0,
+          52.0
+        ],
+        "pre_lufs": -22.7,
+        "pre_s": [
+          34.0,
+          41.0
+        ],
+        "rule": "windows parsed from timeline.json audio.dynamics_check, measured fresh",
+        "span_lu": 13.2
+      },
+      "drop_to_catch_span_lu": 13.2,
+      "duration_s": 72.0,
+      "effective_motion_hz": 24.0,
+      "integrated_lufs": -9.9,
+      "lra_lu": 13.6,
+      "output_frames": 1728,
+      "per_beat_frame_difference_energy": [
+        {
+          "id": "s01",
+          "mean_ydif": 2.7822,
+          "t_in": 0.0,
+          "t_out": 6.0
+        },
+        {
+          "id": "s02",
+          "mean_ydif": 5.1244,
+          "t_in": 6.0,
+          "t_out": 14.0
+        },
+        {
+          "id": "s03",
+          "mean_ydif": 4.236,
+          "t_in": 14.0,
+          "t_out": 22.0
+        },
+        {
+          "id": "s04",
+          "mean_ydif": 6.2469,
+          "t_in": 22.0,
+          "t_out": 32.0
+        },
+        {
+          "id": "s05",
+          "mean_ydif": 2.971,
+          "t_in": 32.0,
+          "t_out": 42.0
+        },
+        {
+          "id": "s06",
+          "mean_ydif": 7.5387,
+          "t_in": 42.0,
+          "t_out": 50.0
+        },
+        {
+          "id": "s07",
+          "mean_ydif": 9.5916,
+          "t_in": 50.0,
+          "t_out": 58.0
+        },
+        {
+          "id": "s08",
+          "mean_ydif": 10.3026,
+          "t_in": 58.0,
+          "t_out": 66.0
+        },
+        {
+          "id": "s09",
+          "mean_ydif": 3.2665,
+          "t_in": 66.0,
+          "t_out": 72.0
+        }
+      ],
+      "scoreboard_timeline": [
+        {
+          "from": 6.0,
+          "line": "HOME 32 AWAY 35 clock 0:04 status None",
+          "to": 24.0
+        },
+        {
+          "from": 24.0,
+          "line": "HOME 32 AWAY 35 clock countdown status None",
+          "to": 28.0
+        },
+        {
+          "from": 28.0,
+          "line": "HOME 32 AWAY 35 clock 0:00 status None",
+          "to": 47.0
+        },
+        {
+          "from": 47.0,
+          "line": "HOME 38 AWAY 35 clock 0:00 status TOUCHDOWN",
+          "to": 50.0
+        },
+        {
+          "from": 50.0,
+          "line": "HOME 38 AWAY 35 clock None status FINAL",
+          "to": 66.0
+        }
+      ],
+      "short_term_lufs_max": -8.6,
+      "short_term_lufs_min": -24.0,
+      "true_peak_dbtp": -1.3
+    }
+  },
+  "method": {
+    "acceptance_files": [
+      "canon.md",
+      "shot-list.json",
+      "screenplay.md",
+      "sound-palette.md",
+      "verify.sh",
+      "README.md"
+    ],
+    "audit_motion": "sum of shots/seq/sequence.json strip tiles versus ffprobe nb_frames and r_frame_rate",
+    "drop_to_catch": "audit uses 4s on either side of the catch-beat t_in; reference uses timeline audio.dynamics_check ranges, measured fresh",
+    "frame_difference": "ffmpeg signalstats YDIF mean inside each beat",
+    "judge_pack_rule": "judge_packs omit paths, slot names, and model names; do not paste conflict_matrix into the judge prompt",
+    "loudness": "ffmpeg ebur128=peak=true, whole file and -ss/-t 4s windows",
+    "reference_motion": "ffprobe nb_frames compared with timeline.json video.frames"
+  },
+  "schema_version": 1
+}

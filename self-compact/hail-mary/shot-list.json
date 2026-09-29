@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary/shot-list.json",
+  "task": "1.b canon card + shot list",
+  "canon": "self-compact/hail-mary/canon.md",
+  "fiction_label": "FICTIONAL SIMULATION — Redhawk Forge and Bayline Kings are invented teams; no real league, club, broadcaster, or player names, marks, logos, uniforms, or likenesses.",
+  "render": {
+    "resolution": "1920x1080",
+    "fps": 30,
+    "duration_s": 40.0,
+    "container": "h264 + aac 48kHz stereo"
+  },
+  "ledger": {
+    "bay": { "points": 35, "td": 5, "xp": 5, "fg": 0 },
+    "frg_pre_final": { "points": 32, "td": 4, "xp": 2, "fg": 2 },
+    "final_play": { "type": "td", "points": 6, "try": "waived" },
+    "final": { "bay": 35, "frg": 38, "winner": "FRG" },
+    "situation": { "quarter": "Q4", "clock_start": "0:04", "down": "4th & 14", "ball_on": "FRG 32", "yards_to_end_line": 68, "timeouts": "none for either side" }
+  },
+  "beats": [
+    {
+      "id": "s01",
+      "title": "One play left",
+      "t_in_s": 0.0,
+      "t_out_s": 4.0,
+      "duration_s": 4.0,
+      "camera": "high wide over the stadium, slow push toward the line of scrimmage; night lights, breath vapor",
+      "scoreboard": { "line": "BAY 35 · FRG 32 | 4TH & 14 | 0:04 Q4", "clock": "0:04" },
+      "captions": ["Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play."],
+      "audio_cues": ["crowd.bed", "pa.horn", "call.radio"]
+    },
+    {
+      "id": "s02",
+      "title": "The huddle and the snap",
+      "t_in_s": 4.0,
+      "t_out_s": 8.0,
+      "duration_s": 4.0,
+      "camera": "low behind the offense, handheld shake; line set, receivers wide",
+      "scoreboard": { "line": "BAY 35 · FRG 32 | 4TH & 14 | 0:04 Q4", "clock": "0:04" },
+      "captions": ["Everybody deep. Protect, then throw it as far as it will go."],
+      "audio_cues": ["hit.helmet", "ref.whistle", "crowd.rise"]
+    },
+    {
+      "id": "s03",
+      "title": "The throw",
+      "t_in_s": 8.0,
+      "t_out_s": 18.0,
+      "duration_s": 10.0,
+      "camera": "track the ball: snap, step-up, launch; arc follow shot as the clock dies under it",
+      "scoreboard": { "line": "BAY 35 · FRG 32 | 4TH & 14 | 0:0N Q4", "clock": "0:04 → 0:00 (dies while the ball is in the air)" },
+      "captions": ["Takes the snap... steps up... and launches it toward the goal line—"],
+      "audio_cues": ["hit.snap", "ball.hiss", "crowd.rise", "call.radio"]
+    },
+    {
+      "id": "s04",
+      "title": "The catch at zero",
+      "t_in_s": 18.0,
+      "t_out_s": 26.0,
+      "duration_s": 8.0,
+      "camera": "end-zone reverse angle, 40% slow motion: tip, hands, turf, official's arms up",
+      "scoreboard": { "line": "FRG 38 · BAY 35 | 0:00 Q4", "clock": "0:00", "note": "insert flips from 35-32 to 38-35 exactly at the catch" },
+      "captions": ["TIPPED... CAUGHT! IN THE END ZONE! AT ZERO! TOUCHDOWN FORGE!"],
+      "audio_cues": ["ball.tip", "hit.catch", "crowd.roar_peak", "call.radio"]
+    },
+    {
+      "id": "s05",
+      "title": "The roar",
+      "t_in_s": 26.0,
+      "t_out_s": 33.0,
+      "duration_s": 7.0,
+      "camera": "handheld field rush: bench empties, helmets flying, confetti guns",
+      "scoreboard": { "line": "FINAL · TRY WAIVED · BAY 35 · FRG 38", "clock": "FINAL" },
+      "captions": ["The try is waived — it cannot change the winner. Redhawk Forge wins it, thirty-eight to thirty-five!"],
+      "audio_cues": ["crowd.roar_peak", "sting.final", "call.radio"]
+    },
+    {
+      "id": "s06",
+      "title": "Closing card",
+      "t_in_s": 33.0,
+      "t_out_s": 40.0,
+      "duration_s": 7.0,
+      "camera": "static card, slow vignette close; fiction label legible for the full beat",
+      "scoreboard": { "line": "38–35 · REDHAWK FORGE · FICTIONAL SIMULATION", "clock": "—" },
+      "captions": ["38–35. Forge. December night. Fictional simulation."],
+      "audio_cues": ["sting.final", "crowd.bed"]
+    }
+  ]
+}

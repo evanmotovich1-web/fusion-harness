@@ -1,0 +1,6 @@
+# Heavy media excluded from git — regenerable via ./assemble.sh and ./verify.sh.
+# Kept: frames.json, frames.sha256, seq/sequence.json, loudnorm.json.
+final-38-35.mp4
+shots/**/*.png
+audio/*.wav
+verify-frames/

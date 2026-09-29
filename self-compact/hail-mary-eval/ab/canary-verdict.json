@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary-eval/ab/canary-verdict.json",
+  "rubric_body_sha256": "88ace4f20cec840c042a28bfdddb9a54baabde64946284bb726febd35ad69925",
+  "seed": 38035,
+  "method": "mechanical triage over the raw judge JSON, per the PASS conditions stated in canary.md; raw text is the record",
+  "known_mutation_limitation": "the C2 mutation changed only the s04/s06 clock FIELDS; the s04 line string still reads 0:00 Q4, so the defect was detectable only from the clock field. The judge caught it and additionally flagged the internal inconsistency. This makes the C2 test stricter than a clean mutation, not weaker.",
+  "caught": {
+    "C1": {
+      "pass": true,
+      "reason": "final_play=4 terms=['39', 'error']"
+    },
+    "C0": {
+      "pass": true,
+      "reason": "complete=True hallucinated_defect=False",
+      "per_film_terms": [],
+      "note": "hallucination test uses only that film's own text; pair-level fields are excluded"
+    },
+    "C2": {
+      "pass": true,
+      "reason": "final_play=4 clock_terms=['0:03', 'clock', 'still']"
+    },
+    "C3": {
+      "pass": true,
+      "reason": "loud=2 flat_terms=['flat']"
+    }
+  },
+  "judge_valid": true,
+  "judge_stability": {
+    "method": "the clean pack C0 is judged in all three canary calls; its axis scores measure run-to-run variance for byte-identical input",
+    "observations": [
+      {
+        "tag": "canary-call-1",
+        "side": "B",
+        "scores": {
+          "vivid": 3,
+          "loud": 3,
+          "exciting": 3,
+          "final_play": 5
+        }
+      },
+      {
+        "tag": "canary-call-2",
+        "side": "A",
+        "scores": {
+          "vivid": 3,
+          "loud": 3,
+          "exciting": 3,
+          "final_play": 5
+        }
+      },
+      {
+        "tag": "canary-call-3",
+        "side": "A",
+        "scores": {
+          "vivid": 3,
+          "loud": 5,
+          "exciting": 4,
+          "final_play": 5
+        }
+      }
+    ],
+    "per_axis": {
+      "vivid": {
+        "values": [
+          3,
+          3,
+          3
+        ],
+        "min": 3,
+        "max": 3,
+        "spread": 0,
+        "distinct": [
+          3
+        ]
+      },
+      "loud": {
+        "values": [
+          3,
+          3,
+          5
+        ],
+        "min": 3,
+        "max": 5,
+        "spread": 2,
+        "distinct": [
+          3,
+          5
+        ]
+      },
+      "exciting": {
+        "values": [
+          3,
+          3,
+          4
+        ],
+        "min": 3,
+        "max": 4,
+        "spread": 1,
+        "distinct": [
+          3,
+          4
+        ]
+      },
+      "final_play": {
+        "values": [
+          5,
+          5,
+          5
+        ],
+        "min": 5,
+        "max": 5,
+        "spread": 0,
+        "distinct": [
+          5
+        ]
+      }
+    },
+    "unstable_axes": [
+      "loud",
+      "exciting"
+    ],
+    "implication": "a planted-defect pass proves the judge is sensitive; it does not prove the judge is stable. Any A/B axis margin less than or equal to spread_max is reported as a tie or unsupported, per rubric R4b",
+    "spread_max": 2
+  },
+  "rule_applied": "canary.md: judge valid iff C0 passes and C1-C3 all pass; otherwise the A/B verdict is void and R4a applies",
+  "raw_dir": "raw/"
+}

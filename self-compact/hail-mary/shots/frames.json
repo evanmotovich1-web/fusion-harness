@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "artifact": "shots/frames.json",
+  "task": "2.b deterministic frame capture",
+  "generated_by": "capture.mjs",
+  "chrome": {
+    "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "version": "Google Chrome 154.0.8037.58"
+  },
+  "determinism": {
+    "flags": [
+      "--headless=new",
+      "--disable-gpu",
+      "--hide-scrollbars",
+      "--window-size=1920,1080",
+      "--force-device-scale-factor=1",
+      "--allow-file-access-from-files",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-sync",
+      "--disable-background-networking",
+      "--disable-component-update",
+      "--disable-default-apps",
+      "--disable-client-side-phishing-detection",
+      "--mute-audio"
+    ],
+    "grain_seed_rule": "38 + round(t * 30)",
+    "catch_fraction": 0.35,
+    "note": "One Chrome launch per frame at a fixed t, no profile directory. Re-running with the same inputs must reproduce these sha256 values."
+  },
+  "inputs": {
+    "render.html": "99fdd0079481a510d7eaaeff89c432b40997d14f7854f8dfd0637a58cea05775",
+    "shot-list.json": "a45c224c8c11fb4eb6bcf80a9d8ca780a504854b945664ed6da902d3b6e72877"
+  },
+  "resolution": "1920x1080",
+  "fps": 30,
+  "frames": [
+    {
+      "index": 0,
+      "name": "f01_s01_t02000.png",
+      "beat": "s01",
+      "tag": "mid",
+      "t_s": 2,
+      "frame_index": 60,
+      "grain_seed": 98,
+      "look": "s01",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:04 Q4",
+      "clock": "0:04",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:04",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 2766928,
+      "sha256": "d6cd2ce42e06cfd877c71bed68bd235b87209f07b4aa23fe6c70338db0ae0c76"
+    },
+    {
+      "index": 1,
+      "name": "f02_s02_t06000.png",
+      "beat": "s02",
+      "tag": "mid",
+      "t_s": 6,
+      "frame_index": 180,
+      "grain_seed": 218,
+      "look": "s02",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:04 Q4",
+      "clock": "0:04",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:04",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3283904,
+      "sha256": "86771c81f068619c342da0f7a3e4e65c237b0042a00ab0002dc48614784b46e9"
+    },
+    {
+      "index": 2,
+      "name": "f03_s03_t08000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 8,
+      "frame_index": 240,
+      "grain_seed": 278,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:04 Q4",
+      "clock": "0:04",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:04",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3297195,
+      "sha256": "ef3ccd4ff631f2ee928997e4105a3239bc6c8b164e45007408eb90cc4d5b30f1"
+    },
+    {
+      "index": 3,
+      "name": "f04_s03_t10000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 10,
+      "frame_index": 300,
+      "grain_seed": 338,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:03 Q4",
+      "clock": "0:03",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:03",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3301302,
+      "sha256": "0608f5907a533baf09ff52d08b20ba9fc747ec18f03dd64b2ac77d285c74e3f5"
+    },
+    {
+      "index": 4,
+      "name": "f05_s03_t12000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 12,
+      "frame_index": 360,
+      "grain_seed": 398,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:02 Q4",
+      "clock": "0:02",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:02",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3306749,
+      "sha256": "b94735db9007231658a2119e773cd6c3832ee089797265d999af9f2a1791b4a0"
+    },
+    {
+      "index": 5,
+      "name": "f06_s03_t13000.png",
+      "beat": "s03",
+      "tag": "mid",
+      "t_s": 13,
+      "frame_index": 390,
+      "grain_seed": 428,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:02 Q4",
+      "clock": "0:02",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:02",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3312220,
+      "sha256": "d4025ebc9ae71f4854ab9924c9cd597e9bfd78fcdbadab523afc441e68cecf69"
+    },
+    {
+      "index": 6,
+      "name": "f07_s03_t14000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 14,
+      "frame_index": 420,
+      "grain_seed": 458,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:01 Q4",
+      "clock": "0:01",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:01",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3311239,
+      "sha256": "70bf37494f515f17f11457fddb5a14849a31fffaf305c4515b31496cfb5f9938"
+    },
+    {
+      "index": 7,
+      "name": "f08_s03_t16000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 16,
+      "frame_index": 480,
+      "grain_seed": 518,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:00",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3307702,
+      "sha256": "26c9285c86552e21efaf40dbae1465c84929de9e9991d7eec8adcb5927664b4c"
+    },
+    {
+      "index": 8,
+      "name": "f09_s03_t17950.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 17.95,
+      "frame_index": 539,
+      "grain_seed": 577,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:00",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3307558,
+      "sha256": "ab815e966f5f7ad526292b5aa9a03b7d93755b929f66b3bd371fd28f3d48f64f"
+    },
+    {
+      "index": 9,
+      "name": "f10_s03_t18000.png",
+      "beat": "s03",
+      "tag": "clock",
+      "t_s": 18,
+      "frame_index": 540,
+      "grain_seed": 578,
+      "look": "s03",
+      "scoreboard_line": "BAY 35 · FRG 32 | 4TH & 14 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:00",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 3306921,
+      "sha256": "f601010b819aca2d487b3d68776aabc0cbbda65f740b28f31005bbcb48b94baf"
+    },
+    {
+      "index": 10,
+      "name": "f11_s04_t19600.png",
+      "beat": "s04",
+      "tag": "pre-catch",
+      "t_s": 19.6,
+      "frame_index": 588,
+      "grain_seed": 626,
+      "look": "s04",
+      "scoreboard_line": "BAY 35 · FRG 32 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 32,
+        "clock": "0:00",
+        "situation": "4th & 14 · FRG 32",
+        "quarter": "Q4"
+      },
+      "bytes": 2845828,
+      "sha256": "9cd10447d4eb15f88eea4ec7fe9730e41282c908923bcf813471abc8069ce15b"
+    },
+    {
+      "index": 11,
+      "name": "f12_s04_t20800.png",
+      "beat": "s04",
+      "tag": "catch",
+      "t_s": 20.8,
+      "frame_index": 624,
+      "grain_seed": 662,
+      "look": "s04",
+      "scoreboard_line": "FRG 38 · BAY 35 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 38,
+        "clock": "0:00",
+        "situation": "Q4 · 0:00",
+        "quarter": "Q4"
+      },
+      "bytes": 2813094,
+      "sha256": "d798410ca5a9d9b96e3afd82fd67952482d29c3bdc65030795b90ab398201520"
+    },
+    {
+      "index": 12,
+      "name": "f13_s04_t22000.png",
+      "beat": "s04",
+      "tag": "mid",
+      "t_s": 22,
+      "frame_index": 660,
+      "grain_seed": 698,
+      "look": "s04",
+      "scoreboard_line": "FRG 38 · BAY 35 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 38,
+        "clock": "0:00",
+        "situation": "Q4 · 0:00",
+        "quarter": "Q4"
+      },
+      "bytes": 2855017,
+      "sha256": "41d97e37179ebb9aedbccd1aaf8f4978d5fcbff55c04983716f9da1c7c74c3fa"
+    },
+    {
+      "index": 13,
+      "name": "f14_s04_t23600.png",
+      "beat": "s04",
+      "tag": "post-catch",
+      "t_s": 23.6,
+      "frame_index": 708,
+      "grain_seed": 746,
+      "look": "s04",
+      "scoreboard_line": "FRG 38 · BAY 35 | 0:00 Q4",
+      "clock": "0:00",
+      "ledger": {
+        "bay": 35,
+        "frg": 38,
+        "clock": "0:00",
+        "situation": "Q4 · 0:00",
+        "quarter": "Q4"
+      },
+      "bytes": 2922465,
+      "sha256": "7252dee1214bce68d829e7b2542947116f43d8f7805899fd546f2247600a216b"
+    },
+    {
+      "index": 14,
+      "name": "f15_s05_t29500.png",
+      "beat": "s05",
+      "tag": "mid",
+      "t_s": 29.5,
+      "frame_index": 885,
+      "grain_seed": 923,
+      "look": "s05",
+      "scoreboard_line": "FINAL · TRY WAIVED · BAY 35 · FRG 38",
+      "clock": "FINAL",
+      "ledger": {
+        "bay": 35,
+        "frg": 38,
+        "clock": "FINAL",
+        "situation": "FINAL · TRY WAIVED",
+        "quarter": "Q4"
+      },
+      "bytes": 2731473,
+      "sha256": "7e0c2a04b384163330960c4e0d93347c61f3f6be44575c6724584414e12d85bf"
+    },
+    {
+      "index": 15,
+      "name": "f16_s06_t36500.png",
+      "beat": "s06",
+      "tag": "mid",
+      "t_s": 36.5,
+      "frame_index": 1095,
+      "grain_seed": 1133,
+      "look": "s06",
+      "scoreboard_line": "38–35 · REDHAWK FORGE · FICTIONAL SIMULATION",
+      "clock": "-",
+      "ledger": {
+        "bay": 35,
+        "frg": 38,
+        "clock": "-",
+        "situation": "FINAL · TRY WAIVED",
+        "quarter": "Q4"
+      },
+      "bytes": 97041,
+      "sha256": "046f112260e5a97d7ef3dc7a9a0fa241197ffe77c83d22c1a6f57b5337fc62ef"
+    }
+  ],
+  "totals": {
+    "frames": 16,
+    "bytes": 46766636,
+    "capture_ms": 19045
+  }
+}

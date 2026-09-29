@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "artifact": "self-compact/hail-mary/capabilities.json",
+  "task": "1.a capability probe",
+  "generated_at": "2026-09-28T23:12:15Z",
+  "scope": "Presence and version of local render/encode/measure tools only. No generation calls, no external API calls, no credits spent.",
+  "host": {
+    "uname": "Darwin arm64",
+    "repo_root": "/Users/evanmotovich/fusion-harness",
+    "ffmpeg_sha256_prefix": "9f5ddd4f8b36eb07",
+    "python3": "/opt/homebrew/bin/python3 (Python 3.14.7)",
+    "node": "/Users/evanmotovich/.local/bin/node (v26.8.1)",
+    "homebrew_prefix": "/opt/homebrew"
+  },
+  "tools": {
+    "ffmpeg": {
+      "present": true,
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "version": "9.0.1",
+      "configure": "--enable-shared --enable-pthreads --enable-version3 --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon"
+    },
+    "ffprobe": {
+      "present": true,
+      "path": "/opt/homebrew/bin/ffprobe",
+      "version": "9.0.1"
+    },
+    "chrome_headless": {
+      "present": true,
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "path_matches_nano_media_constant": true,
+      "nano_media_ref": "extensions/fusion-harness/modules/nano-media.ts:35",
+      "version": "Google Chrome 153.0.8010.54"
+    },
+    "whisper_asr": {
+      "present": false,
+      "checked_names": ["whisper", "whisper-cli", "whisper-cpp", "mlx_whisper"],
+      "consequence": "Audio cannot be re-transcribed locally. Any verification step that must prove spoken text must read the authored text, not the waveform. See constraints_for_downstream_tasks C3."
+    },
+    "say_tts": {
+      "present": true,
+      "path": "/usr/bin/say",
+      "voices_listed": 184,
+      "verified": "Rendered the phrase \"It is caught! It is caught! Forge wins it!\" to /tmp with voice Daniel: 2.975 s, 1 ch 22050 Hz lpcm AIFF. Converted to 48 kHz stereo PCM wav with afconvert, confirmed by ffprobe."
+    },
+    "afconvert": { "present": true, "path": "/usr/bin/afconvert" },
+    "afinfo": { "present": true, "path": "/usr/bin/afinfo" },
+    "sips": { "present": true, "path": "/usr/bin/sips" }
+  },
+  "ffmpeg_capabilities": {
+    "encoders_present": ["libx264", "libx264rgb", "libx265", "aac", "aac_at", "libmp3lame", "libopus"],
+    "muxers_present": ["mp4", "matroska", "wav"],
+    "filters_present": [
+      "drawbox", "overlay", "scale", "pad", "xfade", "zoompan", "concat", "fps", "format", "setpts", "tpad", "fade",
+      "gradients", "color", "testsrc2", "cellauto", "mandelbrot", "life", "noise",
+      "sine", "anoisesrc", "aevalsrc", "amix", "afade", "acrossfade", "loudnorm", "ebur128", "alimiter",
+      "acompressor", "compand", "equalizer", "highpass", "lowpass", "tremolo", "aecho", "areverse", "atempo",
+      "volume", "pan", "aformat", "atrim", "asetpts", "adelay", "apad", "asplit", "showwaves", "showspectrum"
+    ],
+    "filters_absent": ["drawtext"],
+    "text_overlay": {
+      "supported_by_ffmpeg": false,
+      "reason": "This ffmpeg build has no --enable-libfreetype and no libass, so the drawtext filter does not exist. Text cannot be burned in by ffmpeg.",
+      "workaround": "All text (scoreboard, captions, closing card) is rasterized in Chrome canvas by render.html and arrives in ffmpeg as pixels. This is the O2 design and it is already proven by smoke test S1."
+    }
+  },
+  "disk": {
+    "volume": "/System/Volumes/Data",
+    "size": "1.8Ti",
+    "available_gb": 1001,
+    "verdict": "sufficient for a ~40 s 1080p30 h264 deliverable plus intermediate frames and wav bed"
+  },
+  "smoke_tests": [
+    {
+      "id": "S1",
+      "name": "canvas frame to mp4 with lavfi audio",
+      "steps": "Wrote an inline HTML canvas (1920x1080, 38-35 scoreboard text) to /tmp, screenshotted it with headless Chrome --window-size=1920,1080, encoded it with ffmpeg as a 1 s loop plus a lavfi sine track.",
+      "result": "pass",
+      "evidence": "frame.png 35317 bytes, sips reports 1920x1080. ffprobe on the mp4: video h264 1920x1080 r_frame_rate 30/1, audio aac 48000 Hz 1 ch, format duration 1.000000. Full decode check (`-f null -`) exited 0.",
+      "significance": "Proves the whole O2 rail end to end: Chrome rasterizes text, ffmpeg encodes, ffprobe measures. No external service involved."
+    },
+    {
+      "id": "S2",
+      "name": "lavfi synthesis plus loudness measurement",
+      "steps": "amix of anoisesrc (pink) and sine through loudnorm with print_format=json; separate ebur128=peak=true pass.",
+      "result": "pass",
+      "evidence": "loudnorm reported input_i -25.61, input_tp -14.27, output_i -13.99, output_tp -2.66. ebur128 reported I -20.6 LUFS, Peak -7.8 dBFS for a bare pink-noise source.",
+      "significance": "Both loudness measurement paths work. Target -16 to -12 LUFS integrated and true peak <= -1 dBTP is measurable from the finished file."
+    },
+    {
+      "id": "S3",
+      "name": "local TTS commentary and wav conversion",
+      "steps": "say -v Daniel -o call.aiff, afinfo for duration, afconvert -f WAVE -d LEI16@48000 -c 2",
+      "result": "pass",
+      "evidence": "call.aiff 135308 bytes, 2.975 s. call.wav pcm_s16le 48000 Hz 2 ch per ffprobe.",
+      "significance": "Commentary voice can be synthesized locally with no download and no external model."
+    }
+  ],
+  "render_decision": {
+    "primary_rail": "O2",
+    "primary_rail_definition": "Deterministic local render: render.html draws each beat on a 1920x1080 canvas, headless Chrome screenshots the frames into shots/, ffmpeg assembles frames plus a locally synthesized audio bed into final-38-35.mp4.",
+    "external_generation_rail": "deferred",
+    "external_generation_may_block_any_task": false,
+    "never_a_dependency": true,
+    "rationale": [
+      "Every step of O2 is present and was proven working on this host (S1, S2, S3).",
+      "No credits, no API keys, and no network are needed, so no task can stall on access or budget.",
+      "The same input bytes produce the same frames, so the artifact is reproducible and probe-verifiable inside the repo.",
+      "The one ffmpeg gap, drawtext, does not touch O2 because Chrome rasterizes all text."
+    ],
+    "residual_limitation": "O2 produces a stylized broadcast look, not photoreal footage. A photoreal upgrade would require an external generation rail and is out of scope for this build."
+  },
+  "constraints_for_downstream_tasks": [
+    {
+      "id": "C1",
+      "applies_to": ["2.b", "3.a"],
+      "constraint": "No ffmpeg drawtext. Burn every scoreboard value, caption, and card in Chrome canvas via render.html. Do not plan any drawtext call."
+    },
+    {
+      "id": "C2",
+      "applies_to": ["3.a"],
+      "constraint": "Final encode uses -c:v libx264, -c:a aac -ar 48000, mp4 muxer. Loudness normalized with loudnorm to the -16..-12 LUFS / <= -1 dBTP window and measured back with ebur128."
+    },
+    {
+      "id": "C3",
+      "applies_to": ["3.b"],
+      "constraint": "No local ASR. Spoken-call verification cannot re-transcribe the waveform. Verify call text against the authored source (shot-list.json / screenplay.md) and verify audio by cue id, start time, and duration from the wav files plus afinfo or ffprobe, not by speech recognition."
+    },
+    {
+      "id": "C4",
+      "applies_to": ["2.c"],
+      "constraint": "All audio is synthesized locally from ffmpeg lavfi sources (anoisesrc, sine, aevalsrc) and /usr/bin/say for voice. No downloaded samples."
+    },
+    {
+      "id": "C5",
+      "applies_to": ["2.b", "3.a"],
+      "constraint": "Write intermediates under self-compact/hail-mary/shots/ and audio/. Do not touch the three modified tracked files (duckdb20_fusion_lab/lab.sql, extensions/fusion-harness/fusion-harness.ts, justfile). No commit, no push."
+    }
+  ],
+  "probe_commands": [
+    "command -v ffmpeg ffprobe whisper whisper-cli mlx_whisper python3 node",
+    "ffmpeg -version | head -4",
+    "ffmpeg -hide_banner -filters | awk '{print $2}'   # membership test for 47 named filters",
+    "ffmpeg -hide_banner -encoders | grep -E 'libx264|aac|libopus'",
+    "ffmpeg -hide_banner -muxers | grep -E 'mp4|matroska|wav'",
+    "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --hide-scrollbars --window-size=1920,1080 --screenshot=frame.png file://$W/t.html",
+    "ffmpeg -loop 1 -i frame.png -f lavfi -i sine=frequency=440:duration=1 -t 1 -r 30 -pix_fmt yuv420p -c:v libx264 -crf 18 -c:a aac -ar 48000 -shortest probe.mp4",
+    "ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate -show_entries format=duration -of json probe.mp4",
+    "ffmpeg -f lavfi -i anoisesrc=d=2:c=pink:a=0.4 -filter_complex loudnorm=I=-14:TP=-1:print_format=json -f null -",
+    "say -v Daniel -o call.aiff \"It is caught! It is caught! Forge wins it!\" && afinfo call.aiff",
+    "afconvert -f WAVE -d LEI16@48000 -c 2 call.aiff call.wav",
+    "df -h ."
+  ],
+  "unverified_by_this_probe": [
+    "Whether the host has network access to any external video generation service. Not tested, deliberately, because no task may depend on it.",
+    "Actual wall-clock cost of rendering a 40 s 1080p30 sequence frame by frame. Estimate only: S1 encoded 30 identical frames in under a second; the real cost is the Chrome screenshot loop and is bounded by the number of distinct frames."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tag": "canary-call-1",
+  "argv": [
+    "claude",
+    "-p",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--disallowedTools",
+    "Bash,Read,Grep,Glob,WebFetch,WebSearch,Task,Edit,Write"
+  ],
+  "env": {
+    "VAULT_SEMANTIC_HOOK_DISABLE": "1"
+  },
+  "prompt_sha256": "68727ed3ed476a8f7bb0ced8e4f1a607a5698e638e4f4e47916ec37a20ba0071",
+  "prompt_bytes": 7714,
+  "stdout_path": "ab/raw/canary-call-1.txt",
+  "stderr_path": "ab/raw/canary-call-1.stderr.txt",
+  "stdout_bytes": 1639,
+  "exit_code": 0,
+  "elapsed_s": 14.97,
+  "raw_stdout": "{\"film_A\": {\"vivid\": 3, \"loud\": 3, \"exciting\": 3, \"final_play\": 4, \"one_line\": \"Same measurements as B, but the s04 scoreboard reads HOME 39 while the transcript, s05 and s06 all say 38\u201335, so A has an internal score error.\"}, \"film_B\": {\"vivid\": 3, \"loud\": 3, \"exciting\": 3, \"final_play\": 5, \"one_line\": \"Same measurements as A, with a scoreboard (HOME 38 \u00b7 AWAY 35 at 0:00) that matches the transcript and the final card.\"}, \"overall_winner\": \"B\", \"what_the_packs_cannot_show\": \"The two packs are identical except for one scoreboard string in s04 (A: HOME 39, B: HOME 38). Only that text separates them, so the audio and frame data cannot separate the films. Frame-difference energy is a coarse motion proxy. It is low and flat from s01 to s05 (1.29 to 2.23 mean_ydif) and spikes to 7.11 only in s06, the end card, so motion does not peak at the catch. I can't tell what kind of motion that is (camera, players or graphics), how varied the images are, or their quality. Loudness is wide (LRA 16.5 LU, short-term -31.5 to -12.3 LUFS, true peak -2.7 dBTP), but the level drops 1.8 LU after the catch beat instead of rising, so the audio arc doesn't clearly support a catch climax. I can't hear the mix, music or crowd. For final_play I only have caption and transcript text, including 'TIPPED... CAUGHT! IN THE END ZONE! AT ZERO! TOUCHDOWN HOME!' and a scoreboard entry saying the clock dies while the ball is in the air. Nothing shows that the pictures or audio deliver the catch. Both packs also carry 'Fictional simulation' labelling, so I can't judge realism. Scores are low-confidence, and B's win rests on one text discrepancy.\"}\n",
+  "rubric_body_sha256": "88ace4f20cec840c042a28bfdddb9a54baabde64946284bb726febd35ad69925"
+}

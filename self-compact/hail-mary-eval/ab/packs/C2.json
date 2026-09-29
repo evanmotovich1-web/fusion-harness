@@ -1,0 +1,159 @@
+{
+ "beat_timing": [
+  {
+   "duration_s": 4.0,
+   "id": "s01",
+   "t_in": 0.0,
+   "t_out": 4.0
+  },
+  {
+   "duration_s": 4.0,
+   "id": "s02",
+   "t_in": 4.0,
+   "t_out": 8.0
+  },
+  {
+   "duration_s": 10.0,
+   "id": "s03",
+   "t_in": 8.0,
+   "t_out": 18.0
+  },
+  {
+   "duration_s": 8.0,
+   "id": "s04",
+   "t_in": 18.0,
+   "t_out": 26.0
+  },
+  {
+   "duration_s": 7.0,
+   "id": "s05",
+   "t_in": 26.0,
+   "t_out": 33.0
+  },
+  {
+   "duration_s": 7.0,
+   "id": "s06",
+   "t_in": 33.0,
+   "t_out": 40.0
+  }
+ ],
+ "caption_call_transcript": [
+  "Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play.",
+  "Everybody deep. Protect, then throw it as far as it will go.",
+  "Takes the snap... steps up... and launches it toward the goal line\u2014",
+  "TIPPED... CAUGHT! IN THE END ZONE! AT ZERO! TOUCHDOWN HOME!",
+  "The try is waived \u2014 it cannot change the winner. HOME wins it, thirty-eight to thirty-five!",
+  "38\u201335. HOME. December night. Fictional simulation.",
+  "Thirty-five to thirty-two. Fourth and fourteen. Four seconds. One play.",
+  "Takes the snap. Steps up. Hail Mary, launched toward the goal line.",
+  "Tipped. Caught. In the end zone. At zero. Touchdown, HOME.",
+  "The try is waived. It cannot change the winner. HOME wins it, thirty-eight to thirty-five."
+ ],
+ "container_fps": 30.0,
+ "distinct_rendered_frames": 400,
+ "drop_to_catch": {
+  "post_lufs": -15.0,
+  "post_s": [
+   18.0,
+   22.0
+  ],
+  "pre_lufs": -13.2,
+  "pre_s": [
+   14.0,
+   18.0
+  ],
+  "rule": "4s ending at catch-beat t_in versus 4s starting there; no declared dynamics window in the shot list",
+  "span_lu": -1.8
+ },
+ "drop_to_catch_span_lu": -1.8,
+ "duration_s": 40.0,
+ "effective_motion_hz": 10.0,
+ "integrated_lufs": -14.0,
+ "lra_lu": 16.5,
+ "output_frames": 1200,
+ "per_beat_frame_difference_energy": [
+  {
+   "id": "s01",
+   "mean_ydif": 1.2921,
+   "t_in": 0.0,
+   "t_out": 4.0
+  },
+  {
+   "id": "s02",
+   "mean_ydif": 2.2323,
+   "t_in": 4.0,
+   "t_out": 8.0
+  },
+  {
+   "id": "s03",
+   "mean_ydif": 2.1716,
+   "t_in": 8.0,
+   "t_out": 18.0
+  },
+  {
+   "id": "s04",
+   "mean_ydif": 1.6233,
+   "t_in": 18.0,
+   "t_out": 26.0
+  },
+  {
+   "id": "s05",
+   "mean_ydif": 1.2867,
+   "t_in": 26.0,
+   "t_out": 33.0
+  },
+  {
+   "id": "s06",
+   "mean_ydif": 7.1093,
+   "t_in": 33.0,
+   "t_out": 40.0
+  }
+ ],
+ "scoreboard_timeline": [
+  {
+   "clock": "0:04",
+   "id": "s01",
+   "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:04 Q4",
+   "t_in": 0.0,
+   "t_out": 4.0
+  },
+  {
+   "clock": "0:04",
+   "id": "s02",
+   "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:04 Q4",
+   "t_in": 4.0,
+   "t_out": 8.0
+  },
+  {
+   "clock": "0:04 \u2192 0:00 (dies while the ball is in the air)",
+   "id": "s03",
+   "line": "AWAY 35 \u00b7 HOME 32 | 4TH & 14 | 0:0N Q4",
+   "t_in": 8.0,
+   "t_out": 18.0
+  },
+  {
+   "clock": "0:03",
+   "id": "s04",
+   "line": "HOME 38 \u00b7 AWAY 35 | 0:00 Q4",
+   "t_in": 18.0,
+   "t_out": 26.0
+  },
+  {
+   "clock": "FINAL",
+   "id": "s05",
+   "line": "FINAL \u00b7 TRY WAIVED \u00b7 AWAY 35 \u00b7 HOME 38",
+   "t_in": 26.0,
+   "t_out": 33.0
+  },
+  {
+   "clock": "0:02",
+   "id": "s06",
+   "line": "38\u201335 \u00b7 HOME \u00b7 FICTIONAL SIMULATION",
+   "t_in": 33.0,
+   "t_out": 40.0
+  }
+ ],
+ "short_term_lufs_max": -12.3,
+ "short_term_lufs_min": -31.5,
+ "true_peak_dbtp": -2.7
+}

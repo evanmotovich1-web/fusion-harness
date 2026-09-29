@@ -1,0 +1,23 @@
+{
+  "tag": "canary-call-2",
+  "argv": [
+    "claude",
+    "-p",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--disallowedTools",
+    "Bash,Read,Grep,Glob,WebFetch,WebSearch,Task,Edit,Write"
+  ],
+  "env": {
+    "VAULT_SEMANTIC_HOOK_DISABLE": "1"
+  },
+  "prompt_sha256": "27f0deed5f7e966c4e38d301c71d12b992b62de194fdc898f2dc09179f518177",
+  "prompt_bytes": 7712,
+  "stdout_path": "ab/raw/canary-call-2.txt",
+  "stderr_path": "ab/raw/canary-call-2.stderr.txt",
+  "stdout_bytes": 1927,
+  "exit_code": 0,
+  "elapsed_s": 14.95,
+  "raw_stdout": "{\"film_A\": {\"vivid\": 3, \"loud\": 3, \"exciting\": 3, \"final_play\": 5, \"one_line\": \"The transcript and scoreboard agree on a Hail Mary caught at 0:00, but the audio and motion data show a weak build and release.\"},\n\"film_B\": {\"vivid\": 3, \"loud\": 3, \"exciting\": 3, \"final_play\": 4, \"one_line\": \"The transcript is identical to A's, but its scoreboard clock fields (0:03 at the catch beat, 0:02 on the end card) conflict with 'at zero'.\"},\n\"overall_winner\": \"A\",\n\"what_the_packs_cannot_show\": \"The two packs have identical numbers for every measurement: frame-difference energy, loudness, LRA, true peak, drop-to-catch, and the transcript. So vivid, loud and exciting cannot separate the films, and both get the same scores. The only differences are two scoreboard clock fields. In B, s04 reads '0:03' and s06 reads '0:02'. A reads '0:00' and '\u2014'. The s04 line text in B still says '0:00', so the clock field may be a metadata slip rather than what is on screen. That is why A wins only narrowly, on final_play. The loudness data does not show a peak at the catch. Level drops 1.8 LU after the catch beat (-13.2 to -15.0 LUFS), and there is no declared dynamics window. Motion energy is lowest around the catch (s04 at 1.62) and spikes at the end (s06 at 7.11), which is not the usual build to a climax. The packs say nothing about picture content, ball flight, whether the catch is visible, or audio content. They do not show whether the deep pass was actually rendered, or whether the s06 spike is a title card or something else. The final_play score rests on the caption transcript, which is narration, not proof of what the video shows. The transcript lines are duplicated (a long and a short version of each call), and the pack does not say which version is used in the film. The clip has 400 distinct frames out of 1200 output frames at an effective 10 Hz, so the motion is choppy, but the packs do not show how that looks.\"}\n",
+  "rubric_body_sha256": "88ace4f20cec840c042a28bfdddb9a54baabde64946284bb726febd35ad69925"
+}
