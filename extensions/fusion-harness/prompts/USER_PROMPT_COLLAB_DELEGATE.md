@@ -11,7 +11,7 @@ Requirements:
 - A slot may own several tasks (they run one at a time on that slot); assign meaningful work to every configured slot, including yourself.
 - IDs use dependency groups such as 1.a/1.b then 2.a.
 - depends_on is authoritative; no cycles or unknown tasks.
-- mode is read or write. Read tasks may overlap anything; write tasks are always serialized by the harness against one shared CWD.
+- mode is read or write. Read tasks may overlap anything; write tasks are always serialized by the harness against one shared CWD. Read executors get read/grep/find/ls ONLY — no command execution: they cannot run tests, validation, builds, or linters. Any task that must execute anything is mode write, serialized as the harness's sole writer.
 - Make ownership and handoffs concrete. Do not invent isolated worktrees.
 - You have read-only tools. The harness—not you—writes your JSON response to {{PLAN_PATH}}.
 - Never modify the project in this phase.
