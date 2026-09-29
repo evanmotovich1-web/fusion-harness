@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N1",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "request": {
+        "text": "Orion delivered 18 sensors on 2026-09-02. The shipment was not late.",
+        "strength": 1,
+        "method": "rewrite",
+        "protected": [
+          "Orion",
+          "18",
+          "2026-09-02"
+        ]
+      }
+    }
+  ]
+}

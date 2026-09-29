@@ -1,0 +1,397 @@
+{
+  "evidence_id": "web-855ffcc4acf7e64dde4e",
+  "source_url": "https://bito.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.314295+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://bito.ai/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/855ffcc4acf7e64dde4e.html",
+  "capture_sha256": "bb7b42d395b2e12739a2f7ebe2fe1cf0a40de5fd08164de51e9be76b62f2fb28",
+  "bytes_saved": 262144,
+  "title": "AI model router for Claude Code, Cursor, Codex | Bito",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Governor understands your code and routes each request to the best model, two levers that cut coding agent costs in half without touching quality."
+    },
+    {
+      "key": "og:title",
+      "value": "AI model router for Claude Code, Cursor, Codex | Bito"
+    },
+    {
+      "key": "og:description",
+      "value": "Governor understands your code and routes each request to the best model, two levers that cut coding agent costs in half without touching quality."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Bito"
+    }
+  ],
+  "text": "AI model router for Claude Code, Cursor, Codex | Bito\nSkip to content\nWe tested 20+ AI models to measure the cost-quality frontier.\nSee who won\nStart free\nProducts\nContext engine\nAutonomous agents\nDesign & scoping\nGrounded coding\nAI code reviews\nPlatform\nResources\nAI model research\nBlog\nCase studies\nCompare AI tools\nDocumentation\nSWE-Bench Pro evaluation\nYouTube\nPricing\nDocs\nSign in\nStart free\nProducts\nContext engine\nAutonomous agents\nDesign & scoping\nGrounded coding\nAI code reviews\nPlatform\nResources\nAI model research\nBlog\nCase studies\nCompare AI tools\nDocumentation\nSWE-Bench Pro evaluation\nYouTube\nPricing\nDocs\nSign in\nStart free\nSign in\nStart free\nCut your agent bill in half\nGovernor grounds every request in your code and routes it to the best model, so quality holds while spend falls.\nWorks across\nClaude Code",
+  "links": [
+    {
+      "href": "https://gmpg.org/xfn/11",
+      "rel": "profile"
+    },
+    {
+      "href": "https://www.redditstatic.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://bat.bing.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.mxpnl.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://static.ads-twitter.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://snap.licdn.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://static.klaviyo.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://static.hotjar.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://script.hotjar.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://googleads.g.doubleclick.net",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://static-tracking.klaviyo.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://assets.apollo.io",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://tag.clearbitscripts.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://bito.ai/wp-content/fonts/inter-v20-latin-regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/2026/05/chevron-down.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://bito.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://bito.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbito.ai%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://bito.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbito.ai%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/reset.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/theme.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1789667068",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.2.4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/elementor/css/custom-pro-widget-nav-menu.min.css?ver=1789667068",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=4.2.3",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1789667068",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=4.2.4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.2.4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/elementor/css/custom-widget-icon-box.min.css?ver=1789667068",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.2.4",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor-pro/assets/css/widget-nested-carousel.min.css?ver=4.2.3",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/elementor/css/custom-widget-accordion.min.css?ver=1789667068",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=6.8.3",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1789667180",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://bito.ai/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://bito.ai/wp-json/wp/v2/pages/87997",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://bito.ai/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://bito.ai/",
+      "rel": "shortlink"
+    },
+    {
+      "href": "/wp-content/uploads/2026/05/chevron-down.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/wp-content/uploads/2026/05/chevron-down.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/2022/03/cropped-android-icon-192x192-1-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/2022/03/cropped-android-icon-192x192-1-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://bito.ai/wp-content/uploads/2022/03/cropped-android-icon-192x192-1-180x180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#content",
+      "rel": null
+    },
+    {
+      "href": "/benchmarks/ai-coding-model-cost/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/home/welcome",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/context-engineering/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/ai-autonomous-engineering/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/technical-design-and-scoping/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/grounded-coding/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/ai-code-review-agent/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/platform/",
+      "rel": null
+    },
+    {
+      "href": "/benchmarks/ai-coding-model-cost/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/blogs/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/case-studies/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/compare/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.bito.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/benchmarks/swe-bench-pro-evaluation/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@bitoai?sub_confirmation=1",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.bito.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/home/welcome",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/context-engineering/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/ai-autonomous-engineering/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/technical-design-and-scoping/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/grounded-coding/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/product/ai-code-review-agent/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/platform/",
+      "rel": null
+    },
+    {
+      "href": "/benchmarks/ai-coding-model-cost/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/blogs/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/case-studies/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/compare/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.bito.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/benchmarks/swe-bench-pro-evaluation/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@bitoai?sub_confirmation=1",
+      "rel": null
+    },
+    {
+      "href": "https://bito.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.bito.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/home/welcome",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://alpha.bito.ai/home/welcome",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.4144
+}

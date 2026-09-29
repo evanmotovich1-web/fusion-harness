@@ -1,0 +1,16 @@
+[
+  {
+    "entry": "./extensions/self-compact/",
+    "rpcSuccess": true,
+    "selfCompactCommandFound": true,
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "entry": "./extensions/self-compact/self-compact.ts",
+    "rpcSuccess": true,
+    "selfCompactCommandFound": true,
+    "exit": 0,
+    "stderr": ""
+  }
+]

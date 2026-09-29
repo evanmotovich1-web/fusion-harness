@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-35263a4d9893739c0efa",
+      "source_url": "https://www.trypencil.com/",
+      "final_url": "https://trypencil.com/",
+      "publisher": "www.trypencil.com",
+      "retrieved_at": "2026-09-20T21:00:10.779603+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pencil — The AI Operating System for Marketing"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Marketing has an AI operating system. Pencil aggregates every AI model, enforces enterprise governance, and turns production savings into media growth."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pencil — The AI Operating System for Marketing"
+        },
+        {
+          "locator": "text characters 0:255",
+          "excerpt": "Pencil — The AI Operating System for Marketing\nLoading...\n'\nBook a Demo\nThe Platform\nFor Enterprise\nScribble\nIntegrations\nWorkflows\nCanvas\nContent Hub\nArticles\nNews\nCase Studies\nThe Help Center\nCompany\nPricing\nCommunity\nLogin\nPencil\nPencil Pro\nLogin\nPenci"
+        },
+        {
+          "locator": "text characters 215:527",
+          "excerpt": "nity\nLogin\nPencil\nPencil Pro\nLogin\nPencil\nPencil Pro\nMarketing has an\nAI operating system now\nThe only platform that aggregates every AI model, enforces enterprise governance, and turns production savings into media growth.\nBook a demo\nCreator:\nView full prompt\nView full prompt\nView full prompt\nNext\nProven acro"
+        },
+        {
+          "locator": "text characters 279:591",
+          "excerpt": "as an\nAI operating system now\nThe only platform that aggregates every AI model, enforces enterprise governance, and turns production savings into media growth.\nBook a demo\nCreator:\nView full prompt\nView full prompt\nView full prompt\nNext\nProven across global brands\n50\n%\nReduction in creative\nproduction costs\n79\n"
+        },
+        {
+          "locator": "text characters 618:930",
+          "excerpt": "ts scaled\nsimultaneously\nThe Best Models. One Platform. Zero Lock-In.\nAI moves fast, and walled gardens lock you into one vendor. Pencil brings the best models from OpenAI, Google, Adobe, Runway, and Bria into one orchestration layer, so you can always use the right model and benefit from new ones as they launc"
+        },
+        {
+          "locator": "text characters 1615:1927",
+          "excerpt": "s in eight weeks.\nRetail\nCase Study\n●\nMoodlings\nMeet the Moodlings\nAn AI-generated brand featured in Google's Veo 3 launch.\nFood & Bev\nCase Study\n●\nDiageo\nHow Diageo Scaled Seasonal Content with AI\nFrom Christmas to Lunar New Year, tailored content at scale.\nFood & Bev\nUnified AI Infrastructure\nThe Engine of Yo"
+        },
+        {
+          "locator": "text characters 1740:2052",
+          "excerpt": "ood & Bev\nCase Study\n●\nDiageo\nHow Diageo Scaled Seasonal Content with AI\nFrom Christmas to Lunar New Year, tailored content at scale.\nFood & Bev\nUnified AI Infrastructure\nThe Engine of Your AI\nStrategy\nIntegrate the world’s leading AI models into one secure environment. Orchestrate your global workflows with br"
+        }
+      ],
+      "capture_path": "discovery/captures/35263a4d9893739c0efa.html",
+      "capture_sha256": "722824fcf5c9eb9b4f37ee2bbe4f1b697117de26f90002d232c1ed10120fdfdc",
+      "record_path": "discovery/records/35263a4d9893739c0efa.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r025-18cf1328038c23ec5b17",
+      "source_url": "https://trypencil.com/pricing",
+      "publisher": "trypencil.com",
+      "retrieved_at": "2026-09-20T21:35:31.858255+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://trypencil.com/pricing",
+      "capture_path": "cases/025/research/captures/18cf1328038c23ec5b17.html",
+      "capture_sha256": "c8a5b6cff35f399122c4fe38427528d25e153eac34bc0251e13cf24346629367",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/025/research/records/18cf1328038c23ec5b17.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing — Plans for Teams & Enterprise | Pencil"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "See Pencil's pricing and plans for teams and enterprises — double ad performance and cut production costs with AI. Compare tiers and book a demo."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing — Plans for Teams & Enterprise | Pencil"
+        },
+        {
+          "locator": "text characters 130:2617",
+          "excerpt": "ws\nCanvas\nContent Hub\nArticles\nNews\nCase Studies\nThe Help Center\nCompany\nPricing\nCommunity\nLogin\nPencil\nPencil Pro\nLogin\nPencil\nPencil Pro\nSimple, scalable AI pricing\nJoin 35,000+ teams making 2,000,000+ ads with Pencil\nMonthly Billing\nAnnual Billing\nsave 20%\nCore\nFor solo entrepreneurs\n$\n14\nper month, billed monthly\n50 generations\nper month\nGet Started\nEssential Features:\nSelf-serve AI Agents to generate text, images, video, ad creatives and more\nRealtime AI insights and Scores\nLaunch & track ads on Facebook, Instagram, TikTok, YouTube, Google Display, DV360 & LinkedIn\n1 workspace\nChat support\nMost Popular\nGrowth\nFor fast-growing teams\n$\n55\nper month, billed monthly\n250 generations\nper month\nGet Started\nEverything in Core, plus:\nMore generations at lower generations cost\nUnlimited workspaces\nDirect access to product team & roadmap\nMost Popular\nPro\nSelf-serve for enterprises\nCustom pricing\nUnlimited generations\nGet a Demo\nEverything in Growth, plus:\nCommitted consumption pricing for generations across AI models and modalities\nBulk AI generation using feeds across audiences, markets & products\nUnlimited users, brands & markets with entity & role access controls\nEnterprise-ready terms of service including IP assignment, “no train”, indemnification, data ringfencing & AI governance controls\nComplete GenAI training curriculum\nDedicated customer success\nMost Popular\nCore\nFor solo entrepreneurs\n$\n11\nper month, billed annually\n50 generations\nper month\nGet Started\nEssential Features:\nSelf-serve AI Agents to generate text, images, video, ad creatives and more\nRealtime AI insights and Scores\nLaunch & track ads on Facebook, Instagram, TikTok, YouTube, Google Display, DV360 & LinkedIn\n1 workspace\nChat support\nMost Popular\nGrowth\nFor fast-growing teams\n$\n44\nper month, billed annually\n250 generations\nper month\nGet Started\nEverything in Core, plus:\nMore generations at lower\ngenerations cost\nUnlimited workspaces\nDirect access to product team & roadmap\nMost Popular\nPro\nSelf-serve for enterprises\nCustom pricing\nUnlimited generations\nGet a Demo\nEverything in Growth, plus:\nCommitted consumption pricing for generations across AI models and modalities\nBulk AI generation using feeds across audiences, markets & products\nUnlimited users, brands & markets with entity & role access controls\nEnterprise-ready terms of service including IP assignment, “no train”, indemnification, data ringfencing & AI governance controls\nComplete GenAI training curriculum\nDedicated custome"
+        },
+        {
+          "locator": "text characters 232:495",
+          "excerpt": "l\nPencil Pro\nLogin\nPencil\nPencil Pro\nSimple, scalable AI pricing\nJoin 35,000+ teams making 2,000,000+ ads with Pencil\nMonthly Billing\nAnnual Billing\nsave 20%\nCore\nFor solo entrepreneurs\n$\n14\nper month, billed monthly\n50 generations\nper month\nGet Started\nEssential"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r025-7bb651f7681f2fe35728",
+      "source_url": "https://trypencil.com/integrations",
+      "publisher": "trypencil.com",
+      "retrieved_at": "2026-09-20T21:35:31.879827+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://trypencil.com/integrations",
+      "capture_path": "cases/025/research/captures/7bb651f7681f2fe35728.html",
+      "capture_sha256": "8dc572ddc5c9751f4589f4e9ee0079679bc62d9e78ee75df8e1fc5f11f5ab763",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/025/research/records/7bb651f7681f2fe35728.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Integrations | Pencil"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Pencil with every leading AI model and publish directly to Google Ads, Facebook & Instagram. One platform, unlimited flexibility."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Integrations | Pencil"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-cf668e938c509fba5d12",
+      "source_url": "https://www.adcreative.ai/",
+      "final_url": "https://www.adcreative.ai/",
+      "publisher": "www.adcreative.ai",
+      "retrieved_at": "2026-09-20T21:00:10.607310+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Ad Creative Generator for High-Converting Ads | AdCreative.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Generate high-performing ad creatives, images, videos, and copy with AI. Built for marketers to scale campaigns and improve ROAS."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Ad Creative Generator for High-Converting Ads | AdCreative.ai"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Ad Creative Generator for High-Converting Ads | AdCreative.ai\nBy clicking “\nAccept\n,” you agree to the use of cookies for personalised ads, site analytics, and improved user experience. We, along with our partners, such as\nGoogle\n, may pro"
+        },
+        {
+          "locator": "text characters 0:304",
+          "excerpt": "AI Ad Creative Generator for High-Converting Ads | AdCreative.ai\nBy clicking “\nAccept\n,” you agree to the use of cookies for personalised ads, site analytics, and improved user experience. We, along with our partners, such as\nGoogle\n, may process your data for these purposes. View our\nCookies Policy\n.\nA"
+        },
+        {
+          "locator": "text characters 809:1121",
+          "excerpt": "bmitting the form.\nPreferences\nQuick Business Fit Check\nIs AdCreative.ai right for your business?\nWhat’s your biggest challenge?\nSelect your bottleneck to see if we can help you.\nI struggle to make video ads\nI need too many ad sizes for each platform\nI’m spending money, but ads aren’t working well\nI don’t have "
+        },
+        {
+          "locator": "text characters 1111:1423",
+          "excerpt": "on’t have enough creative variations\n+4.2M businesses used AdCreative.ai to overcame their biggest business challanges.\nEasily create video ads for every use case\nCreate high-performing video ads for any use case: UGC-style content, product videos, stock visuals, or fashion clips. Just upload an image — we hand"
+        },
+        {
+          "locator": "text characters 1416:1728",
+          "excerpt": "we handle the rest.\nTry For Free Now\n+4.2M businesses used AdCreative.ai to overcame their biggest business challanges.\nUnderstand why your ads underperform\n+ create new ads built on what works\nAnalyze your creative performance and generate high-performing new ads trained on patterns learned from\n$35B+ in ad sp"
+        },
+        {
+          "locator": "text characters 1719:2031",
+          "excerpt": " in ad spend data\n.\nTry For Free Now\n+4.2M businesses used AdCreative.ai to overcame their biggest business challanges.\nCreate every ad size and variation you need in seconds\nChoose from our countless ready-made templates or create your own, then generate unlimited on-brand ads for every format and platform.\nTr"
+        }
+      ],
+      "capture_path": "discovery/captures/cf668e938c509fba5d12.html",
+      "capture_sha256": "21254839e5bf3c3d5adafa8c129bead3e405c9e2186ceb983d22a2de4334c869",
+      "record_path": "discovery/records/cf668e938c509fba5d12.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

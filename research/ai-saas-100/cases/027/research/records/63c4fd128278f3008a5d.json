@@ -1,0 +1,414 @@
+{
+  "evidence_id": "r027-63c4fd128278f3008a5d",
+  "source_url": "https://botpress.com/pricing",
+  "publisher": "botpress.com",
+  "retrieved_at": "2026-09-20T21:35:37.399049+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://botpress.com/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "cases/027/research/captures/63c4fd128278f3008a5d.html",
+  "capture_sha256": "6764f8c00fc93e4bfd2a2f7234dc3c0b235c19ccecc1e282decfade73254f7db",
+  "bytes_saved": 262144,
+  "title": "Botpress Pricing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "With a generous free tier and no upfront commitment, getting started with Botpress is easy. Our pay-per-usage pricing scales with your growth. Start building for free."
+    },
+    {
+      "key": "og:title",
+      "value": "Botpress Pricing"
+    },
+    {
+      "key": "og:description",
+      "value": "With a generous free tier and no upfront commitment, getting started with Botpress is easy. Our pay-per-usage pricing scales with your growth. Start building for free."
+    }
+  ],
+  "text": "Botpress Pricing\nBotpress\nPlatform\nBuild\nBotpress Viber\nNatural language builder\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolution to 67¢ With Botpress\nAll case studies\nResources\nBuild\nDocs\nAPI\nChangelog\nPartners\nBecome a Partner\nHire an expert\nLearn\nBlog\nLibrary\nCommunity\nDiscord\nEvents\nVideos\nCompare\nThe 10 Best AI Agents for Customer Support in 2026\nDocs\nEnterprise\nPricing\nLog in\nGet a demo\nTry for free\nPriced for the work it does, not the seats it fills.\nUnlimited AI agents and AI spend included.\nAnnual ·\nSave 20%\nMonthly\n1200\nconversations/mo\n100\n1.2k\n3k\n10k\nWe recommend\nEnterprise Plan\nFree\n$0\n25 conversations\nNo top-ups or overages\nGet started free\nIncludes:\n3 seats\nSeats are the number of people who can access and work in your workspace.\n3 AI agents\nAutomated agents that handle conversations on your behalf.\nResolution SLA\nYour customer resolution guarantee.\nHelp Center\nA public-facing knowledge base for your customers to self-serve.\nCommunity support\nAn active Discord community of bot builders, plus resources like documentation, Botpress Academy and our YouTube channel.\nPlus\n$150/mo\nbilled annually\n250 conversations/mo included\npacks of 100 for $65 ($0.65/convo)\nGet started\nIncludes everything in Free, and:\n$25 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited AI agents\nAutomated agents that handle conversations on your behalf.\nWhitelabel webchat\nRemove Botpress branding from your chat widget.\nHelp Center + custom domain\nA public-facing knowledge base for your customers to self-serve, complete with your branding.\nTechnical support via live chat\nGet help from Botpress support engineers through live chat.\nTeam\nYour best fit\n$750/mo\nbilled annually\n1,500 conversations/mo included\npacks of 100 for $50 ($0.50/convo)\nGet started\nIncludes everything in Plus, and:\n$150 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited seats\nSeats are the number of people who can access and work in your workspace.\nTeams, routing & RBAC\nGroup your agents into teams, set routing rules, and manage permissions across your workspace.\nTeam analytics\nPerformance metrics broken down by team and agent.\nReal-time collaboration\nMultiple team members can build and edit bots simultaneously in the Studio.\nEnterprise\nCustom\nCustom conversation volume\nCustom pricing\nTalk to sales\nIncludes everything in Team, plus:\nDedicated support\nDirect access to a Botpress support engineer for your team.\nUptime SLA\nPlatform availability guarantee.\nSecurity review\nDedicated security review for your organization.\nCustom storage\nStorage limits tailored to your organization's needs.\nVoice channel\nStorage limits tailored to your organization's needs.\nBuilt and managed for you.\nCustom AI agents for customer support, lead generation, and product recommendation—built and maintained by our experts to maximize ROI.\nContact us\nFull plan comparison.\nTrusted by thousands of companies.\n4.5 rating\nFree\nGet started\nPlus\nGet started\nTeam\nGet started\nEnterprise\nTalk to sales\nConversations\nIncluded conversations\n25\n250/mo\n1,500/mo\nCustom\nAdditonal conversations\n—\n$65/100 convos\n$50/100 convos\nCustom\nAuto-recharge on overage\n—\nWorkspace\nSeats\n3\n3\nUnlimited\nUnlimited\nAI agents\n3\nUnlimited\nUnlimited\nUnlimited\nBotpress Viber\nBotpress Studio\nBotpress Desk\nAI usage\nAI usage included\nAI usage meter (Studio/ADK)\nAuto-recharge on overage\n—\nChannels\nWebchat\nWhatsApp\nWebchat white-labelling\n—\nVoice\n—\n—\n—\nHelp Center\nHelp Center\nCustom domain\n—\nCollaboration features\nTeams & RBAC\n—\n—\nRouting & assignment\n—\n—\nTeam analytics\n—\n—\nStorage\nTable rows\n1K\n100K\n500K\nCustom\nVector storage\n100MB\n1GB\n5GB\nCustom\nFile storage\n100MB\n10GB\n50GB\nCustom\nStorage add-on\n—\n$40/mo\nStorage add-on includes 100,000 table rows, 1GB vector storage, and 10GB file storage.\n$40/mo\nStorage add-on includes 100,000 table rows, 1GB vector storage, and 10GB file storage.\nCustom\nSupport\nImport and export AI agents between workspaces\n—\n—\n—\nCreate a public profile and share your Botpress development projects\n—\n—\n—\nSecurity & Compliance\nAccess a detailed log of changes made within a Workspace\nRestrict access to your bot only from trusted domains\nA formal DPA confirming how we handle your data\nA formal BAA confirming HIPAA compliance\nDefine custom data retention and residency policies\nFAQs\nWhat counts as a conversation?\nAny exchange with at least two messages from the end user in the billing month counts as a conversation. A conversation that spans two months counts in both months.\nMultiple anonymous sessions each count as separate conversations.\nFor voice calls, 3 minutes counts as 1 conversation.\nAI-only and human-assisted conversations are counted the same, as well as emulator conversations.\nWhat happens when I hit my conversation limit?\nYou never get cut off. Once you reach 95% of your quota, a pack of 100 conversations is automatically added to your account. You'll be notified at 75% and 100% of your quota, and on every pack purchase. Packs persist month-to-month until you remove them in billing settings. Unused conversations in a pack expire at month end — they don't roll over.\nCan I turn off auto-recharge for conversation packs?\nNo. Pausing conversations means pausing the product entirely — whether an AI agent or a human is handling it. Instead, you'll get early warnings at 75% and 100% so you can right-size your plan before overages kick in.\nHow do AI spend credit grants work?\nWhen your workspace reaches 95% of its AI spend limit, we automatically purchase a $10 credit grant of AI spend on your behalf, sold at cost. Unlike conversation packs, credit grants don't expire at month end — any unused balance carries over for up to 12 months from the end of the month it was purchased in.\nCredit grant auto-recharge isn't available on Free/Community plans. For paid plans, the $10 amount and 95% trigger point aren't configurable yet — settings to customize your recharge threshold, purchase size, and a monthly spend cap are coming soon.\nWhy do you price on conversations instead of resolutions?\nConversations are predictable — you know your monthly cost before the month starts. Resolution pricing creates disputes over what \"resolved\" means and, perversely, raises your bill when your bot gets smarter. With conversation pricing, a better bot means lower headcount cost — not a higher invoice.\nWhat storage is included?\nThree types: table rows (structured data in Botpress Tables), vector storage (knowledge base embeddings), and file storage (uploaded PDFs, images, etc.). Free is hard-capped with no add-ons. Plus and Team include generous limits that scale with tier, and both can expand storage for $40/mo — which adds 100K table rows, 1GB vector, and 10GB file storage.\nIs this the same pricing for Botpress Desk, Botpress Studio, Botpress Viber, and Botpress ADK?\nYes. Plans, prices, and conversation counts are identical across Botpress Desk, Botpress Studio, Botpress Viber, and Botpress ADK, regardless of which you use or how many. Everyone gets the same AI spend meter and category breakdown, no matter which product they're building with.\nWhat's the difference between Plus and Team?\nPlus is for solo operators or small groups — you get 3 seats, unlimited AI agents, WhatsApp, and whitelabel webchat. Team is for organized support operations that need to scale. It adds unlimited seats, Teams, RBAC, routing and assignment rules, team-level analytics, and Help Center authentication.\nWhat is Botpress for Good?\nBotpress for Good is our commitment to furthering humanitarian causes by making Botpress more affordable for nonprofit organizations, educational institutions, and open-source projects. To learn more about the Botpress for Good program,\nplease submit an application.\nStill have questions?\nGet in touch\nEvery AI support tool has a ceiling. This isn’t one of them.\nGet a demo\nTry for free\n© 2026 Botpress\nPlatform\nPricing\nAI-native Helpdesk\nAgent Studio\nAutonomous Engine\nKnowledge Bases",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/css/botpress-production.shared.19e5170e3.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8878772637f1f7a109128e_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887680628e755606a2406b_bp-logo.jpg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876800d6e3c2e33b747bd_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876810551d667a25125aa_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/fr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/it/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/ar/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/pt/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117738747.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117738747.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/viber",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-agent-studio",
+      "rel": null
+    },
+    {
+      "href": "/built-for-you",
+      "rel": null
+    },
+    {
+      "href": "/features/engine",
+      "rel": null
+    },
+    {
+      "href": "/features/knowledge-bases",
+      "rel": null
+    },
+    {
+      "href": "/features/tables",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/intercom-integration",
+      "rel": null
+    },
+    {
+      "href": "/zendesk-integration",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/hubspot-0fa7d",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/salesforce",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/webchat",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/whatsapp",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/slack",
+      "rel": null
+    },
+    {
+      "href": "/hub",
+      "rel": null
+    },
+    {
+      "href": "/customer-support",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/escalation-handoff",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ai-actions",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-deflection",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-management",
+      "rel": null
+    },
+    {
+      "href": "/industries/saas",
+      "rel": null
+    },
+    {
+      "href": "/industries/healthcare",
+      "rel": null
+    },
+    {
+      "href": "/industries/education",
+      "rel": null
+    },
+    {
+      "href": "/industries/retail",
+      "rel": null
+    },
+    {
+      "href": "/industries/fintech",
+      "rel": null
+    },
+    {
+      "href": "/customers/super-dispatch",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/api-reference/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/changelog/",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/get-matched",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/botpress",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/blog/ai-agent-customer-support",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/?ref=navbar",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "/contact-us/managed-plan",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/botpress/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://cbihu.share.hsforms.com/2IeiWl9UZQxKw4lIRMwxqIw",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/botpress/",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/ai-agent-studio?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/autonomous?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases?ref=footer",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.782304
+}

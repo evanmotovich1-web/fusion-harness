@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "seed": "ai-saas-100:KHPZw6:v1",
+  "algorithm": "sha256-stratified-small-first-v1",
+  "target": 100,
+  "target_per_category": 10,
+  "planned_source_types": [
+    "AI directories",
+    "launch directories",
+    "official product websites"
+  ],
+  "planned_sources": [
+    "https://www.futuretools.io/",
+    "https://www.uneed.best/",
+    "https://www.producthunt.com/"
+  ],
+  "collection_limit": "At most 20 displayed leads per source/category per pass, at most two passes. Bounded individual public-page captures, no credentials or paid calls.",
+  "supplement_policy": "If directory extraction is insufficient, explicitly label model-knowledge leads as unverified until first-party identity verification. Record this discovery-frame deviation. Never describe the resulting frame as an unbiased sample of all AI SaaS.",
+  "identity_rule": "Official page must connect the name/domain to a concrete AI-assisted software workflow. HTTP success alone is insufficient. Manually review supporting excerpts before eligibility.",
+  "small_company_rule": "E1 requires a dated solo-founder or <=10-person-team statement within 24 months. E2 unknown. E3 supported larger. Do not infer smallness or adoption from appearance or familiarity.",
+  "customer_count_default": null,
+  "categories": {
+    "C01": "Writing, editing, and translation",
+    "C02": "Marketing, SEO, and social content",
+    "C03": "Sales research, outreach, and proposals",
+    "C04": "Customer support and knowledge assistants",
+    "C05": "Meetings, transcription, and audio processing",
+    "C06": "Documents, extraction, and research",
+    "C07": "Images, design, and product photography",
+    "C08": "Video generation, editing, and repurposing",
+    "C09": "Coding, testing, and developer workflows",
+    "C10": "Vertical business and administrative workflows"
+  },
+  "ambiguous_name": "norvjx ai",
+  "ambiguous_name_rule": "Exact-name queries first. No similar-name substitution without authoritative linkage or user confirmation.",
+  "access_restrictions": [
+    "No authentication",
+    "No purchases",
+    "No paid API calls",
+    "No access-control bypass",
+    "All subprocesses foreground",
+    "All commands bounded to 60 seconds"
+  ],
+  "official_seed_collection_started_at_utc": "2026-09-20T21:00:09.401262+00:00",
+  "frame_deviations": [
+    "Three directory homepages attempted. Futuretools returned HTTP 308 error, Product Hunt exposed no extractable listing text in bounded static capture, Uneed yielded a small current launch list. Supplementing with 150 explicitly model-knowledge leads (15 per category), each requiring live first-party verification. Not the originally proposed three-source-per-category discovery frame.",
+    "Inspected ten apparently relevant launch leads among the first twenty Uneed homepage entries and followed their linked public official sites. Lead selection was purposive, not random. All 160 leads are retained before canonical-domain deduplication.",
+    "The original target of 20 eligible identities per category was not reached. The recorded pool still permits sampling 100 verified identities plus alternates. No claim of representative or small-company-only sampling.",
+    "Current first-party present-tense solo-developer self-description is treated as dated observation for E1, with publication date explicitly unknown. Founder counts alone do not establish company size."
+  ]
+}

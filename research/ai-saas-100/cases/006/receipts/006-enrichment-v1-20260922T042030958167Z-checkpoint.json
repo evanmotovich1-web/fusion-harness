@@ -1,0 +1,28 @@
+{
+  "baseline_executed": false,
+  "case_id": "006",
+  "central_workflow_complete": false,
+  "component_status": "tested",
+  "cost_classification": "unknown",
+  "historical_files_changed": [],
+  "inference_executed": false,
+  "passed_component_rows": 32,
+  "product_accepted": false,
+  "receipt": {
+    "path": "cases/006/receipts/006-enrichment-v1-20260922T042030958167Z.json",
+    "sha256": "f5abe241ebb928b112a5523e6d3e8f9db3d887a01d35acbad52ed90609141a8e"
+  },
+  "recorded_at": "2026-09-22T04:20:30.995787+00:00",
+  "remaining": [
+    "Central model-dependent behavior",
+    "Generic-model baseline",
+    "Independent hidden review"
+  ],
+  "schema_version": 1,
+  "source_snapshot": {
+    "path": "cases/006/implementation/source-history/6f24b856868f71c36afd03f6c22cf041dac5c32c52de2685e358b605bbc58064/manifest.json",
+    "sha256": "3ba21b27163bfebee7a1f8fa6dbb05400ae43ed10724215b39c31cc7e864f592"
+  },
+  "sources_changed_during_run": [],
+  "total_component_rows": 32
+}

@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-09-26T05:26:04.996327+00:00",
+  "result": "no failure reproduced",
+  "registry": "12 configured hooks enabled and trusted; hooks/list returned no configuration errors",
+  "scope": "10 isolated plugin/herdr command probes using diagnostic session data; 2 vault hooks with normal local cache/search access. Does not reproduce unknown original error or active review/loop/broker workflows.",
+  "configuration_changes": false,
+  "probes": [
+    {
+      "hook": "herdr-start",
+      "exit": 0,
+      "seconds": 0.015,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "companion-start",
+      "exit": 0,
+      "seconds": 0.041,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "companion-end",
+      "exit": 0,
+      "seconds": 0.086,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "companion-stop",
+      "exit": 0,
+      "seconds": 0.071,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "ralph-stop",
+      "exit": 0,
+      "seconds": 0.007,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "session-start-seen-skills",
+      "exit": 0,
+      "seconds": 0.031,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "session-start-profiler",
+      "exit": 0,
+      "seconds": 0.037,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "inject-claude-md",
+      "exit": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "session-end-cleanup",
+      "exit": 0,
+      "seconds": 0.027,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "posttooluse-skill-telemetry",
+      "exit": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdoutBytes": 0
+    },
+    {
+      "hook": "vault-start",
+      "exit": 0,
+      "seconds": 1.251,
+      "stderr": "",
+      "stdoutBytes": 3857
+    },
+    {
+      "hook": "vault-prompt",
+      "exit": 0,
+      "seconds": 0.57,
+      "stderr": "",
+      "stdoutBytes": 1184
+    }
+  ]
+}

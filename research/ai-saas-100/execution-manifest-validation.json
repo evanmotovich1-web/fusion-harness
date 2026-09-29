@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "task_id": "2.c",
+  "validated_at": "2026-09-22T04:10:57.562005+00:00",
+  "manifest": {
+    "path": "execution-manifest.json",
+    "sha256": "e1bb58591622321e95ee35572c367bfd653ad4c811b6034be18895793f585280"
+  },
+  "validator": {
+    "path": "tools/validate_execution_manifest.py",
+    "sha256": "21d7e73aa5c4a06d28b90495d73823abc3b8889df661d3f7bc9cf8cd0c8d75ba"
+  },
+  "integrity": {
+    "valid": true,
+    "verified_unique_files": 83,
+    "source_components": 20,
+    "case_ids": [
+      "001",
+      "002",
+      "003",
+      "033"
+    ],
+    "suite_execution_performed": false
+  },
+  "negative_checks": [
+    {
+      "test": "changed_source",
+      "rejected": true,
+      "reason": "Hash mismatch: cases/001/implementation/workflow.py"
+    },
+    {
+      "test": "changed_snapshot",
+      "rejected": true,
+      "reason": "Hash mismatch: source-archive/sha256/65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+    },
+    {
+      "test": "unbound_component",
+      "rejected": true,
+      "reason": "Command component missing source binding"
+    },
+    {
+      "test": "fixed_output_writer",
+      "rejected": true,
+      "reason": "Historical writer invocation forbidden"
+    },
+    {
+      "test": "blocked_arm_command",
+      "rejected": true,
+      "reason": "Blocked arm has executable commands"
+    },
+    {
+      "test": "answers_as_input",
+      "rejected": true,
+      "reason": "Job data not hash-bound"
+    }
+  ],
+  "source_snapshot_policy": "Every executing campaign component is independently bound; no opaque manifest-only source binding. Standard library/runtime binary not archived.",
+  "scope": "Integrity validation only. Existing suite successes are retained evidence, not fresh execution in this task. No inference or product acceptance.",
+  "product_acceptance": false
+}

@@ -1,0 +1,506 @@
+{
+  "evidence_id": "r032-e70fca0623ded71b5c71",
+  "source_url": "https://www.qodo.ai/features/qodo-git/",
+  "publisher": "www.qodo.ai",
+  "retrieved_at": "2026-09-20T21:35:37.963865+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.qodo.ai/features/qodo-git/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "cases/032/research/captures/e70fca0623ded71b5c71.html",
+  "capture_sha256": "54c242edb3e8c261d576113725427c4b30e0b5747db1adfd2bc3af2b1c5c5a5d",
+  "bytes_saved": 124499,
+  "title": "Git Plugin | AI Code Review Agent for Confident Commits | Qodo",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Qodo Git Plugin is an AI-powered code review tool that helps developers catch bugs early, auto-generate PR descriptions, and streamline reviews right in Git. Trusted by thousands of developers daily."
+    },
+    {
+      "key": "og:title",
+      "value": "Git Plugin"
+    },
+    {
+      "key": "og:description",
+      "value": "Qodo Git Plugin is an AI-powered code review tool that helps developers catch bugs early, auto-generate PR descriptions, and streamline reviews right in Git. Trusted by thousands of developers daily."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Qodo"
+    }
+  ],
+  "text": "Git Plugin | AI Code Review Agent for Confident Commits | Qodo\nSkip to content\nLog in\nPlatform\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nPlatform\nAI Code Quality and Governance Platfom\nEnterprise grade code review across the SDLC\nPull request review\nGit integration\nFull codebase intelligence\nContext Engine\nCodebase Quality\nRules, standards, and code health\nAgentic Toolbox\nA CLI-powered quality counterpart for coding agents\nResources\nBook a Demo\nStart Trial\nBook a Demo\nStart Trial\nExplore\nLearning\nWebinars, tutorials and interviews\nDocs\nGet started with Qodo\nBlog\nTech content and product updates\nAI Code Review Benchmark\nMeasuring issue finding in PR reviews\nThe Agentic Review Podcast\nCode Quality & AI Development\nCommunity\nOpen Source\nFree for open source projects\nEvents & Webinars\nJoin us wherever you are\nSuper Qodoer\nQodo Ambassador Program\nCompany\nAbout\nOur mission, team and investors\nCareers\nBecome part of the team\nContact\nWe love hearing from you\nPricing\nEnterprise\nLog in\nLog in\nBook a Demo\nStart Trial\n904.2K\n648.6K\n13.1K\nAI code review built for\nreal\nissues, not noise\n.\nAn AI PR review system built to find real issues, enforce standards, and keep reviews focused.\nStart Trial for Free\nSupporting\nBenchmark\nA major leap in\ndepth, accuracy and precision\nThis benchmark tests AI code review performance on complex, production PRs that mirror the challenges of enterprise software development. The result is a practical measure of how well tools detect real issues, not surface level noise. Qodo delivered the highest overall performance of precision and recall.\nlearn more\nCode reviews that get what “good” means to you.\nImprove code quality by making pull request reviews faster, clearer, and easier to act on.\nFind issues with high precision\nQodo’s agentic PR review focuses on issues that matter, lowers noise, and gives developers a faster path to resolution.\nEnforce your rules and standards\nQodo reviews pull requests with full organizational and historical context, surfacing critical issues and enforcing consistent standards across teams.\nStreamline review workflows\nStreamline the PR process by automating PR descriptions, test coverage, docs, and more.\nCatch cross-repo breaking changes\nQodo maps how your repos depend on each other and flags breaking changes across them before they reach production.\nHOW QODO FINDS WHAT MATTERS\nNot more comments.\nBetter ones.\ncontext engine\nBetter reviews start with the best context.\nBefore suggesting anything, Qodo’s agents gather context from across your entire codebase.\nMulti-repo codebase intelligence\nPull request history awareness\nTicket context\ncross-repo review\nbeta\nCatch breaking changes before they ship.\nA change to a shared package, API, or schema in one repo can quietly break consumers in another. Qodo reads the repos a change affects and surfaces the conflict during review, so it gets fixed before merge instead of in production.\nlearn more\nagent suite\nSpecialized agents with one review mission.\nWhen a review is triggered, agents are deployed to carry out and find specific issues. They choose use tools to gather context.\nlearn more\nrules enforcement\nRules created and enforced, automatically.\nQodo’s platform auto-generates rules and automatically enforces.\nlearn more\nsee qodo in action\nThe anatomy of a Qodo\ncode suggestion\nMission-critical issues first\nQodo prioritizes your PR feedback by severity, flagging blockers instantly. Fix what’s critical, ignore what isn't, and ship faster.\nImplementation-ready prompts for any AI coding agent\nQodo automatically generates a high-fidelity Agent Prompt containing the exact issue context, affected code ranges, and technical strategies—ready to be pasted into your AI coding assistant for an instant fix\nRequirement validation for every PR\nQodo analyzes requirements from linked tickets and flags when your code only partially implements them. Detailed descriptions explain exactly what's missing, and evidence sections link directly to the original specifications\nAdvantages\nEnterprise complexity,\nhandled\n.\nsomething about complex enterprise environments\nDeploy anywhere\nSingle and multi-tenant, on-prem\nGit agnostic\nOne platform for GitHub, GitLab, Bitbucket, Azure DevOps\nSecure and compliant\nZero data retention, SOC2 certified, RBAC\nQodo is an\nAI code review\nplatform that brings automated, context-aware review into your IDE, pull requests, CLI, and Git workflows. It’s built for complex codebases, with context across multi-repos, to surface critical issues early, enforce standards, shorten feedback cycles, and ship better code faster. In Qodo, AI code review, code quality, and SDLC governance come together in one platform for teams that care as much about\nhow code is reviewed\nas how fast it ships.\nProducts\nGit Integration\nProduct updates\nReport Issues\nResources\nBlog\nDocs\nEvents\nMedia Kit\nQodo Trust Center\nLearn\nCode Review Academy\nAI For Coding\nQodo & Google Cloud\nQodo & Copilot\nQodo & Windsurf\nQodo & Amazon Q\nQodo & Tabnine\nQodo & Cursor\nGlossary\nAbout\nPricing\nOur Mission\nMeet The Team\nCareers\nBacked By\nData Privacy And Security\nWe support all major programming languages\nAvailable now on\n@ 2026 Qodo. All Rights Reserved.\nTerms of Use\nPrivacy Policy\nData Processing Addendum",
+  "links": [
+    {
+      "href": "https://www.qodo.ai/features/qodo-git/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/images/ds-bg-hero-platform.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.qodo.ai/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/comments/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2Ffeatures%2Fqodo-git%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2Ffeatures%2Fqodo-git%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-header/style-index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-hero/style-index.css?ver=1789740417",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-media-content/style-index.css?ver=1789740537",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-icon-tiles/style-index.css?ver=1789740243",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-video-mascot/style-index.css?ver=1789740537",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-progress-slider/style-index.css?ver=1789740537",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-advantages/style-index.css?ver=1789740243",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-footer/style-index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/icons/icons-custom.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/css/index.css?ver=1789740230",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-json/wp/v2/pages/16628",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.qodo.ai/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://www.qodo.ai/?p=16628",
+      "rel": "shortlink"
+    },
+    {
+      "href": "https://tag.clearbitscripts.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://tag.clearbitscripts.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#wp--skip-link--target",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai?product_source=login",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://www.qodo.ai/products/",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/ai-code-review-platform/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-git/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-context-engine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-rules/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-agentic-toolbox/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/resources/",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/resources/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/qodo-documentation",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/ai-code-review-benchmark/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/podcasts/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/solutions/open-source/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/events/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/community/super-qodoer/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/careers/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/contact/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/solutions/enterprise/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai?product_source=login",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://app.qodo.ai/?product_type=qodo-merge&product_source=marketing",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.qodo.ai/book-a-demo/",
+      "rel": null
+    },
+    {
+      "href": "https://app.qodo.ai/home",
+      "rel": null
+    },
+    {
+      "href": "https://marketplace.visualstudio.com/items?itemName=Codium.codium",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://plugins.jetbrains.com/plugin/21206-codiumai--meaningful-tests-in-python-powered-by-testgpt",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://github.com/marketplace/qodo-merge-pro",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/get-started/",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-we-built-a-real-world-benchmark-for-ai-code-review",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/governance/cross-repo-code-review",
+      "rel": "nofollow"
+    },
+    {
+      "href": "/blog/the-next-generation-of-ai-code-review-from-isolated-to-system-intelligence/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/qodo-documentation/code-review/getting-started/usage-guide/code-review",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/Codium-ai",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.youtube.com/@QodoAI",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.linkedin.com/company/qodoai",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://x.com/QodoAI",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/features/qodo-git/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/whats-new",
+      "rel": "nofollow"
+    },
+    {
+      "href": "https://www.qodo.ai/report-issues/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.qodo.ai/qodo-documentation",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/events/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/media-kit/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.qodo.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/academy/",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ai-coding-assistant-tools/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-google-cloud/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-github-copilot/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-windsurf/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-amazon-q/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-tabnine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/qodo-cursor/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/glossary/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#our-mission",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#about-team",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/careers/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/about/#backed-by",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/blog/qodo-security-our-commitment-to-data-privacy-and-security/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/programming-language-support/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/terms/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/privacy-policy/",
+      "rel": null
+    },
+    {
+      "href": "https://www.qodo.ai/data-processing-addendum/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.169658
+}

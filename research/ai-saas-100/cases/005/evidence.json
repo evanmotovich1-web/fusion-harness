@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-8ac2ac7d2fd7c0bf8a00",
+      "source_url": "https://www.frase.io/",
+      "final_url": "https://www.frase.io/",
+      "publisher": "www.frase.io",
+      "retrieved_at": "2026-09-20T21:00:10.232543+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Frase — SEO & GEO Content Platform for AI Search"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "The content operating system for AI search. Frase writes and optimizes content that ranks on Google and gets cited by AI — SEO, GEO, and AEO in one loop."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Frase — Rank on Google. Get Cited by AI."
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Frase runs the whole content loop: research, writing, optimization, and publishing. Stop juggling five tools. Join thousands of content teams."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Frase"
+        },
+        {
+          "locator": "text characters 151:463",
+          "excerpt": " in a brief.\nTopic Clusters\nMap the cluster around every topic.\nWrite\nAI Agent\nDraft with your brand in context.\nBrand Voice\nKeep every draft sounding like you.\nOptimize\nContent Optimization\nScore and lift pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search "
+        },
+        {
+          "locator": "text characters 351:663",
+          "excerpt": " lift pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent G"
+        },
+        {
+          "locator": "text characters 355:667",
+          "excerpt": "t pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard"
+        },
+        {
+          "locator": "text characters 383:695",
+          "excerpt": "mization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard\nCatch ranking decay and shi"
+        },
+        {
+          "locator": "text characters 795:1107",
+          "excerpt": "ole content loop in one place.\nExplore the platform\nUse Frase in your AI tools\nRun Frase from Claude, Cursor, and any MCP tool.\nMCP server, CLI & API\nAutonomy\nLet Frase publish on its own, keep every page under review, or anywhere in between. You set the dial.\nHow autonomy works\nMultilingual\nWrite natively in 7"
+        },
+        {
+          "locator": "text characters 1288:1600",
+          "excerpt": "s\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nStart free trial →\nStart free trial →\nPlatform\nListen\nFrase Answers\nCreate\nResearch\nSEO Research\nTopic Clusters\nWrite"
+        }
+      ],
+      "capture_path": "discovery/captures/8ac2ac7d2fd7c0bf8a00.html",
+      "capture_sha256": "1334feae585a1c77c49acf68adf4b6abef3934dd2994f49aa880bdf09685324f",
+      "record_path": "discovery/records/8ac2ac7d2fd7c0bf8a00.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r005-0a378604b626fc53c906",
+      "source_url": "https://www.frase.io/integrations",
+      "publisher": "www.frase.io",
+      "retrieved_at": "2026-09-20T21:35:25.748538+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.frase.io/integrations",
+      "capture_path": "cases/005/research/captures/0a378604b626fc53c906.html",
+      "capture_sha256": "dadc7812c5305499516954d5527e7b13e468dbf6c62acee5cd2e73985b12ff6d",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/005/research/records/0a378604b626fc53c906.json",
+      "research_role": "integrations",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Frase Integrations — Publish to WordPress, Webflow, Sanity, Wix & FraseCMS | Frase"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Connect Frase to WordPress, Webflow, Sanity, Wix, and FraseCMS, plus Google Search Console, Google Docs, Notion, Slack, a REST API, and MCP. Publish, track, import, and automate — every integration included from $39/mo."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Frase Integrations — Publish to WordPress, Webflow, Sanity, Wix & FraseCMS | Frase"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Frase.io"
+        },
+        {
+          "locator": "text characters 523:1062",
+          "excerpt": "FraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard\nCatch ranking decay and ship the fix.\nBacklinks\nFind link gaps, draft the outreach.\nPlatform Overview\nSee how Frase runs the whole content loop in one place.\nExplore the platform\nUse Frase in your AI tools\nRun Frase from Claude, Cursor, and any MCP tool.\nMCP server, CLI & API\nAutonomy\nLet Frase publish on its own, keep every page under review, or anywhere in between. You set the dial.\nHow au"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r005-ad5027ce3ed22ab33526",
+      "source_url": "https://www.frase.io/pricing",
+      "publisher": "www.frase.io",
+      "retrieved_at": "2026-09-20T21:35:25.748447+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.frase.io/pricing",
+      "capture_path": "cases/005/research/captures/ad5027ce3ed22ab33526.html",
+      "capture_sha256": "e3e54bac3a8617e564639339bf6500e35002ee4e061601985eef64545fbeb617",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/005/research/records/ad5027ce3ed22ab33526.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Frase Pricing | SEO & GEO Content Platform Plans"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Frase plans and pricing. Starter, Professional and Scale, from $39 a month billed yearly. Free 7-day trial, no credit card."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Frase plans and pricing"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Starter, Professional and Scale, from $39 a month billed yearly. Free 7-day trial, no credit card."
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Frase"
+        },
+        {
+          "locator": "text characters 2074:4559",
+          "excerpt": "ree Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nThe content operating system for AI search\nPlans and\npricing.\nPick the plan that matches your team.\nMonthly\nYearly\nSave 20%\nBilled once a year. Switch back to monthly whenever you want.\nStarter\nRun the core loop on one site.\nBest for\nsolos, freelancers, and single-site teams\n$39\n/mo\nbilled yearly · $49/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\n1 seat, 1 site\n10 articles and 50 audit pages each month\nPublish to WordPress, Webflow, Sanity, or Wix, or host on FraseCMS\nSEO and GEO scores, plus AI Visibility on ChatGPT and Google AI\nContent Guard watches 10 pages for Google decay\nThe agent publishes on its own when you let it, on any content type\nFrase Answers, a free conversational widget that captures what your visitors want, so you can create content for it\nRunning low on room? Upgrade in a click. Until you do, Starter holds at its monthly limits.\nMost popular\nProfessional\nThe whole loop, built for a content team.\nBest for\nin-house teams and growing SMBs\n$103\n/mo\nbilled yearly · $129/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\nEverything in Starter, plus:\n3 seats and 5 sites, with extra seats at $29/mo\n40 articles and 250 audit pages each month\nA content calendar, internal linking suggestions, and one piece turned into posts for every channel\nAI crawler monitoring, plus Perplexity added to AI Visibility\nContent Guard watches 75 pages for Google decay\nOptional pay-as-you-go when a month runs long, off by default\nNeed more room? Add seats, audit pages, or AI prompts as you go.\nScale\nRun the loop across many sites, with more done for you.\nBest for\nagencies and multi-site brands\n$239\n/mo\nbilled yearly · $299/mo month to month\nStart free trial\nFree 7-day trial. No credit card.\nEverything in Professional, plus:\n5 seats and up to 10 domains, with extra seats at $29/mo\n100 articles and 1,000 audit pages each month\nContent Guard watches 300 pages, plus Claude and Gemini added to AI Visibility\nClient-ready reports you can export for every client\nTurn the agent loose across every site you run, not just one\nNeed more room? Add seats, audit pages, or AI prompts as you go.\nWant white-label reports or a branded client portal?\nSee Enterprise.\nEnterprise\nThe loop at organization scale, on your terms.\nBest for\nlarge orgs and agencies needing security or white-label\nCustom\nscoped to your org\nTalk to sales\nCustom seats and domains\nWhite-la"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-c1b17e00d4f5c5354b78",
+      "source_url": "https://surferseo.com/",
+      "final_url": "https://surferseo.com/",
+      "publisher": "surferseo.com",
+      "retrieved_at": "2026-09-20T21:00:10.239691+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Positive Surfer - AI Visibility Platform for maximum organic growth Surfer | SEO Content Optimization Platform Surfer | SEO Content Optimization Platform"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Track and improve your brand's visibility across Google and AI search engines like ChatGPT, Gemini, and Perplexity. Surfer is built for marketing & SEO teams ready for the AI era."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Positive Surfer - AI Visibility Platform for maximum organic growth"
+        },
+        {
+          "locator": "text characters 0:260",
+          "excerpt": "Positive Surfer - AI Visibility Platform for maximum organic growth\nGet a FREE AI Visibility Audit\n—straight to your inbox. No account or credit card required.\nGenerate now\nSkip to main content\nSign up\nMenu\nBoost visibility in\nGoogle\nAI Overviews\nGemini\nChatGP"
+        },
+        {
+          "locator": "text characters 9:321",
+          "excerpt": "Surfer - AI Visibility Platform for maximum organic growth\nGet a FREE AI Visibility Audit\n—straight to your inbox. No account or credit card required.\nGenerate now\nSkip to main content\nSign up\nMenu\nBoost visibility in\nGoogle\nAI Overviews\nGemini\nChatGPT\nClaude\nPerplexity\nand beyond.\nPlatform\nSolutions\nResources\n"
+        },
+        {
+          "locator": "text characters 164:476",
+          "excerpt": "rate now\nSkip to main content\nSign up\nMenu\nBoost visibility in\nGoogle\nAI Overviews\nGemini\nChatGPT\nClaude\nPerplexity\nand beyond.\nPlatform\nSolutions\nResources\nPricing\nAbout Positive\nLogin\nBook a demo\nStart for Free\nPositive\n— Turning reach into relationship\nPositive\nSparking connections that drive growth\nDiscover"
+        },
+        {
+          "locator": "text characters 531:843",
+          "excerpt": "Positive Signitic\nEmail signature management solution\nPositive Surfer\nAI SEO and content intelligence platform\nPositive Iconosquare\nSocial media management and analytics platform\nPlatform\n— online visibility, simplified.\nBoost visibility in\nGoogle\nAI Overviews\nGemini\nChatGPT\nClaude\nPerplexity\nand beyond.\nChange"
+        },
+        {
+          "locator": "text characters 709:1021",
+          "excerpt": "\nPlatform\n— online visibility, simplified.\nBoost visibility in\nGoogle\nAI Overviews\nGemini\nChatGPT\nClaude\nPerplexity\nand beyond.\nChangelog\n/\nMCP\n/\nAPI\nMonitor AI Search Visibility\nTrack how your brand appears in AI tools like ChatGPT.\nImprove Existing Pages\nSpot weak pages, fix content gaps, and grow traffic.\nCr"
+        },
+        {
+          "locator": "text characters 797:1109",
+          "excerpt": "i\nChatGPT\nClaude\nPerplexity\nand beyond.\nChangelog\n/\nMCP\n/\nAPI\nMonitor AI Search Visibility\nTrack how your brand appears in AI tools like ChatGPT.\nImprove Existing Pages\nSpot weak pages, fix content gaps, and grow traffic.\nCreate Content that Ranks\nWrite articles that rank — fast — using real-time SEO data.\nFind"
+        }
+      ],
+      "capture_path": "discovery/captures/c1b17e00d4f5c5354b78.html",
+      "capture_sha256": "609a0b2f32ee3502a1112fde0bd715781d337293db69f21ea6d0f28e9166e80b",
+      "record_path": "discovery/records/c1b17e00d4f5c5354b78.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

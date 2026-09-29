@@ -1,0 +1,27 @@
+{
+  "id": "constitution",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03",
+  "accessed_utc": "2026-09-25T02:51:54.055928+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:51:58 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "1447666",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Expires": "Fri, 25 Sep 2026 03:21:58 GMT",
+    "Cache-Control": "max-age=1800",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 1447666,
+  "sha256": "103c5fa2e713556fabf8d421e8560df6e84bd9c7213d4c57495765ce82274923",
+  "file": "constitution.html"
+}

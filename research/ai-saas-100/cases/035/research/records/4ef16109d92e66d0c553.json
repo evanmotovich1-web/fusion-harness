@@ -1,0 +1,874 @@
+{
+  "evidence_id": "r035-4ef16109d92e66d0c553",
+  "source_url": "https://www.copy.ai/prices",
+  "publisher": "www.copy.ai",
+  "retrieved_at": "2026-09-20T21:35:38.181956+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.copy.ai/prices",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/035/research/captures/4ef16109d92e66d0c553.html",
+  "capture_sha256": "4692812bbd254d6b44b4de2894907f6449fb47001699f9f2f28e8e8bf6fc88d2",
+  "bytes_saved": 224601,
+  "title": "Plans & Pricing | Copy.ai",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Whether you need simple generative AI tools or complex AI-powered workflows, Copy.ai offers a secure and reliable generative AI platform as you scale."
+    },
+    {
+      "key": "og:title",
+      "value": "Copy.ai: The only AI platform purpose-built for outcomes"
+    },
+    {
+      "key": "og:description",
+      "value": "Our AI OS replaces the chaos of disparate tools, simplifying and automating your workflow. Spend your time where it truly matters—innovating, making key decisions, and driving your business forward."
+    }
+  ],
+  "text": "Plans & Pricing | Copy.ai\nPlatform\nOverview\nHow it Works\nPlatform Components\nPowering GTM AI\nWorkflows\nWhat are Workflows?\nBuilding Workflows\nCopy Agents\nIntelligence Layer\nTables\nActions\nBrand Voice\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks of Workflows\nIntroducing Tables: The Heart of Your Unified Data Strategy\nWhat's the Difference Between LLMs? & How to Choose the Right One\nUse cases\nSales\nProspecting Cockpit\nInbound Lead Processing\nDeal Coaching & Forecasting\nMarketing\nAccount Based Marketing\nContent Creation\nTranslation & Localization\nOperations\nLead + Account Intelligence\nCRM Enrichment\nGTM Systems Integrations\nFeatured Resources\nCold Email Best Practices Guide: 2025 Edition\nAI for Thought Leadership: How to Get the Most from Your Leaders\nHow to Prospect for Sales in an AI-Driven World\nResources\nBy Team\nMarketing\nSales\nOperations\nLearn More\nBlog\nFor The Enterprise\nTrust Center\nWebinars\nGet Help\nHelp Center\nContact Support\nChangelog\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks of Workflows\nIntroducing Tables: The Heart of Your Unified Data Strategy\nHow Automated Workflows and SOC 2 Compliance Protect Your Data\nPricing\nGTM AI\nRole\nMarketing\nSales\nOperations\nSales Development\nLEarn More\nWhy GTM AI\nGoodbye, Copilots\nThe Problem with AI SDRs\nFEATURED RESOURCES\nHow to Go from GTM Bloat to Velocity\nGTM AI: A New Approach for Getting Rid of GTM Bloat\nAI Copilots & The Illusion of Progress\nLogin\nGet a Demo\nGet a Demo\nPlatform\nOverview\nHow it Works\nPlatform Components\nPowering GTM AI\nWorkflows\nWhat are Workflows?\nBuilding Workflows\nCopy Agents\nIntelligence Layer\nTables\nActions\nBrand Voice\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks of Workflows\nIntroducing Tables: The Heart of Your Unified Data Strategy\nWhat's the Difference Between LLMs? & How to Choose the Right One\nUse cases\nSales\nProspecting Cockpit\nInbound Lead Processing\nDeal Coaching & Forecasting\nMarketing\nAccount Based Marketing\nContent Creation\nTranslation & Localization\nOperations\nLead + Account Intelligence\nCRM Enrichment\nGTM Systems Integrations\nFeatured Resources\nCold Email Best Practices Guide: 2025 Edition\nAI for Thought Leadership: How to Get the Most from Your Leaders\nHow to Prospect for Sales in an AI-Driven World\nResources\nBy Team\nMarketing\nSales\nOperations\nLearn More\nBlog\nFor The Enterprise\nTrust Center\nWebinars\nGet Help\nHelp Center\nContact Support\nChangelog\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks of Workflows\nIntroducing Tables: The Heart of Your Unified Data Strategy\nHow Automated Workflows and SOC 2 Compliance Protect Your Data\nPricing\nGTM AI\nRole\nMarketing\nSales\nOperations\nSales Development\nLEarn More\nWhy GTM AI\nGoodbye, Copilots\nThe Problem with AI SDRs\nFEATURED RESOURCES\nHow to Go from GTM Bloat to Velocity\nGTM AI: A New Approach for Getting Rid of GTM Bloat\nAI Copilots & The Illusion of Progress\nLogin\nContact Sales\nTry for free\nCopy.ai pricing\nSelf-Serve\nEnterprise\nEnterprise\nFor orgs ready to power their GTM with AI.\nAll Advanced features, plus:\nGet a custom demo\nGet a custom demo\nGet a custom demo\nGuided Jumpstart Implementation\nAPI Access & Bulk Workflow Runs\n20+ Tech Integrations & API Access\nUnlimited Customizable Workflows\nDesignated Account & Support Team\nEnterprise Grade Security Protocols\nChat\nFor small teams starting to drive real business value with AI\n5 Seat\nUnlimited Words in Chat\nUnlimited Chat Projects\nAccess to OpenAI, Anthropic, and Gemini models\nMonthly\n|\nAnnually\n20% Saving\n$29/mo\nBilled monthly\nGet started\nGet started\nMonthly\n|\nAnnually\n20% Saving\n$24/mo\nBilled $288/yr\nGet started\nGet started\nGrowth\nFor businesses harnessing AI for exponential growth\n75 Seats\nUnlimited Words in Chat\n20K Workflow Credits/Mo\n$1,000/mo\nBilled $12,000/yr\nGet started\nGet started\nExpansion\nFor enterprises expanding their AI Automations\n150 Seats\nUnlimited Words in Chat\n45K Workflow Credits/Mo\n$2,000/mo\nBilled $24,000/yr\nContact Accounts Team\nContact Accounts Team\nScale\nFor organizations ready to deploy Generative AI at scale\n200 Seats\nUnlimited Words in Chat\n75K Workflow Credits/Mo\n$3,000/mo\nBilled $36,000/yr\nContact Accounts Team\nContact Accounts Team\nTrusted by\n17 million\nusers at leading companies\nGuided implementation\n“Copy.ai navigated through our rigorous security protocols. They set a new standard for efficient onboarding and instilled confidence in our partnership from day one.”\nCMO @ Fortune 500 Cybersecurity Company\nGuided onboarding with AI experts for fast time to value\nCodify your unique processes + best practices with AI\nSet up integrations with all key GTM systems\nFortune 500 companies are adopting Copy.ai with fast, tangible results\nSales collateral creation\nDriving personalized sales enablement across $650m partner sales channel\n“The value of our AI application layer is that it’s very flexible, like a Swiss Army knife. The way our vendor partnership builds out APIs makes it easy to brainstorm ideas and start on new use cases.”\n$\n2.6\nM\nin cost savings\n$\n650\nM\npartner sales channel\nmarketing content creation\nDriving accurate content generation across 100,000+ product review catalog sites\n“We had a huge backlog of products that didn’t have unique copy for. Now we have a content system that scales.”\n80\n%\ncut operational costs\n300\n%\nimproved coverage\nFrequently asked questions\nWhat are Workflows?\nA Workflow is a set of AI-powered actions that are stitched together to codify a process or best practices (eg. create account plan, write SEO article). Copy.ai makes it easy to create customizable, intelligent workflows that combine research, content generation, and tool integrations. These workflows serve to codify your complex business processes, and extend best practices across your entire team.\nWhat are Workflow credits?\nA credit represents a specific amount of computational power necessary to execute the tasks within a given workflow (eg. generate content, perform internet research, scanning websites, etc.).\nWhat is a credit worth?\nA credit's value depends on the complexity of the tasks performed within Copy.ai, such as generating text, or using the API. Each workflow run might have different credit consumption, depending on the steps and content it generates.\nHow much does a Workflow run cost?\nHow much a workflow run costs depends on the complexity of the workflow. The more steps and content a workflow generates, the more it'll cost in credits. You can see how much a run costs by opening the side panel and looking at the \"Credits used\" for the run.\nCan I add credits later?\nYes, Copy.ai allows for flexible, usage-based pricing. Our team will work with yours to scope your use cases and accurately estimate the credits necessary to fulfill those use cases. But as you discover more opportunities for AI to add value across your organization, you can easily add credits to your balance.\nFor self-serve users: Can I change my plan later?\nYes, you can upgrade or downgrade at any time. If you choose to upgrade, you'll pay a prorated amount for the rest of the month. If you choose to downgrade, you'll be credited on next month's bill.\nSee the Copy.ai platform in action\nGet a demo and discover how sales and marketing teams use Copy.ai to add an AI superpower to their revenue engine.\nExplore the Platform\nExplore the Platform\nExplore the Platform\nPlatform\nOverview\nHow it Works\nPlatform Components\nPowering GTM AI\nWorkflows\nWhat are Workflows?\nBuilding Workflows\nCopy Agents\nIntelligence layer\nTables\nActions\nInfobase\nBrand Voice\nChat\nUse Cases\nSales\nProspecting Cockpit\nInbound Lead Processing\nDeal Coaching & Forecasting\nMarketing\nAccount Based Marketing\nContent Creation\nTranslation & Localization\nOperations\nLead + Account Intelligence\nCRM Enrichment\nGTM Systems Integrations\nResources\nBy Team\nMarketing\nSales\nOperations\nLearn more\nBlog\nEvents\nFor The Enterprise\nTrust Center\nWebinars\nGet help\nHelp Center\nContact Support\nChangelog\nOther pages\nBy Role\nSales\nMarketing\nLearn\nHome\nPricing\nGTM AI\nCareers\nFree Tools\nPodcasts\nGet Support\nLive Training\nHelp Docs\nCommunity\n© 2025 CopyAI, Inc\nPrivacy Notice\nTerms of Service\nStatus",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/css/copyai-new.shared.ccd26fe0d.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/css/copyai-new.67616c7bc750d63690614e68.708999ef1.opt.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/6793eea386b5ac27242bb8eb_favicon_32x32px%20(1).png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/6793eea6a090d6d2f4fa5570_favicon_256x256%20(2).png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.copy.ai/prices",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/6704bab22dc1c39de3ade22a_graph--mobile.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "https://app.enzuzo.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/how-it-works",
+      "rel": null
+    },
+    {
+      "href": "/platform/platform-components",
+      "rel": null
+    },
+    {
+      "href": "/platform/powering-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/platform/what-are-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/building-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/copy-agents",
+      "rel": null
+    },
+    {
+      "href": "/platform/tables",
+      "rel": null
+    },
+    {
+      "href": "/platform/actions",
+      "rel": null
+    },
+    {
+      "href": "/platform/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-power-of-actions-for-gtm-teams",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-tables",
+      "rel": null
+    },
+    {
+      "href": "/blog/difference-between-llms",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/prospecting-cockpit",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-lead-processing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/deal-management-forecasting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-based-marketing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/content-creation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/localization-translation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/lead-account-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/gtm-systems-integrations",
+      "rel": null
+    },
+    {
+      "href": "/blog/cold-email-best-practices-guide-2024-edition",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-for-thought-leadership",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-prospect-for-sales",
+      "rel": null
+    },
+    {
+      "href": "/resources/marketing",
+      "rel": null
+    },
+    {
+      "href": "/resources/sales",
+      "rel": null
+    },
+    {
+      "href": "/resources/operations",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copy.ai/",
+      "rel": null
+    },
+    {
+      "href": "/webinars",
+      "rel": null
+    },
+    {
+      "href": "https://support.copy.ai/en",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-power-of-actions-for-gtm-teams",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-tables",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-automated-workflows-and-soc-2-compliance-protect-your-data",
+      "rel": null
+    },
+    {
+      "href": "/prices",
+      "rel": null
+    },
+    {
+      "href": "/prices",
+      "rel": "prerender"
+    },
+    {
+      "href": "/planning/marketing",
+      "rel": null
+    },
+    {
+      "href": "/planning/sales",
+      "rel": null
+    },
+    {
+      "href": "/planning/operations",
+      "rel": null
+    },
+    {
+      "href": "/planning/sales-development",
+      "rel": null
+    },
+    {
+      "href": "/gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/goodbye-copilots",
+      "rel": null
+    },
+    {
+      "href": "/injured",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-illusion-of-progress-the-marginal-gains-from-ai-copilots",
+      "rel": null
+    },
+    {
+      "href": "https://app.copy.ai/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.copy.ai/login",
+      "rel": "prerender"
+    },
+    {
+      "href": "/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/request-a-demo",
+      "rel": "prerender"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/platform/how-it-works",
+      "rel": null
+    },
+    {
+      "href": "/platform/platform-components",
+      "rel": null
+    },
+    {
+      "href": "/platform/powering-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/platform/what-are-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/building-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/copy-agents",
+      "rel": null
+    },
+    {
+      "href": "/platform/tables",
+      "rel": null
+    },
+    {
+      "href": "/platform/actions",
+      "rel": null
+    },
+    {
+      "href": "/platform/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-power-of-actions-for-gtm-teams",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-tables",
+      "rel": null
+    },
+    {
+      "href": "/blog/difference-between-llms",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/prospecting-cockpit",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-lead-processing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/deal-management-forecasting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-based-marketing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/content-creation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/localization-translation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/lead-account-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/gtm-systems-integrations",
+      "rel": null
+    },
+    {
+      "href": "/blog/cold-email-best-practices-guide-2024-edition",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-for-thought-leadership",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-prospect-for-sales",
+      "rel": null
+    },
+    {
+      "href": "/resources/marketing",
+      "rel": null
+    },
+    {
+      "href": "/resources/sales",
+      "rel": null
+    },
+    {
+      "href": "/resources/operations",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copy.ai/",
+      "rel": null
+    },
+    {
+      "href": "/webinars",
+      "rel": null
+    },
+    {
+      "href": "https://support.copy.ai/en",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-power-of-actions-for-gtm-teams",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-tables",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-automated-workflows-and-soc-2-compliance-protect-your-data",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/planning/marketing",
+      "rel": null
+    },
+    {
+      "href": "/planning/sales",
+      "rel": null
+    },
+    {
+      "href": "/planning/operations",
+      "rel": null
+    },
+    {
+      "href": "/planning/sales-development",
+      "rel": null
+    },
+    {
+      "href": "/gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/goodbye-copilots",
+      "rel": null
+    },
+    {
+      "href": "/injured",
+      "rel": null
+    },
+    {
+      "href": "/blog/introducing-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-illusion-of-progress-the-marginal-gains-from-ai-copilots",
+      "rel": null
+    },
+    {
+      "href": "https://app.copy.ai/login",
+      "rel": null
+    },
+    {
+      "href": "/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/request-a-demo",
+      "rel": "prerender"
+    },
+    {
+      "href": "https://app.copy.ai/checkout?plan=monthly&tier=1",
+      "rel": null
+    },
+    {
+      "href": "https://app.copy.ai/checkout?plan=annual&tier=1",
+      "rel": null
+    },
+    {
+      "href": "https://app.copy.ai/checkout?plan=annual&tier=3",
+      "rel": null
+    },
+    {
+      "href": "https://www.copy.ai/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.copy.ai/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.copy.ai/request-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/platform/how-it-works",
+      "rel": null
+    },
+    {
+      "href": "/platform/how-it-works",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/platform-components",
+      "rel": null
+    },
+    {
+      "href": "/platform/platform-components",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/powering-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "/platform/powering-gtm-ai",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/what-are-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/what-are-workflows",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/building-workflows",
+      "rel": null
+    },
+    {
+      "href": "/platform/building-workflows",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/copy-agents",
+      "rel": null
+    },
+    {
+      "href": "/platform/copy-agents",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/tables",
+      "rel": null
+    },
+    {
+      "href": "/platform/tables",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/actions",
+      "rel": null
+    },
+    {
+      "href": "/platform/actions",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/features/infobase",
+      "rel": null
+    },
+    {
+      "href": "/features/infobase",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/platform/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/platform/brand-voice",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/chat",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/prospecting-cockpit",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/prospecting-cockpit",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/inbound-lead-processing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-lead-processing",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/deal-management-forecasting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/deal-management-forecasting",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/account-based-marketing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-based-marketing",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/content-creation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/content-creation",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/localization-translation",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/localization-translation",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/lead-account-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/lead-account-intelligence",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/use-cases/gtm-systems-integrations",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/gtm-systems-integrations",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/resources/marketing",
+      "rel": null
+    },
+    {
+      "href": "/resources/marketing",
+      "rel": "prerender"
+    },
+    {
+      "href": "/resources/sales",
+      "rel": null
+    },
+    {
+      "href": "/resources/sales",
+      "rel": "prerender"
+    },
+    {
+      "href": "/resources/operations",
+      "rel": null
+    },
+    {
+      "href": "/resources/operations",
+      "rel": "prerender"
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/webinars",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": "prerender"
+    },
+    {
+      "href": "https://trust.copy.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copy.ai/",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/webinars",
+      "rel": null
+    },
+    {
+      "href": "/webinars",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://support.copy.ai/en",
+      "rel": null
+    },
+    {
+      "href": "https://support.copy.ai/en",
+      "rel": "prefetch"
+    },
+    {
+      "href": "mailto:copyaisupport@fullcast.com?subject=Copy.ai%20Customer%20Support%20Submission",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": "prefetch"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/archive/email-marketers-old",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/prices",
+      "rel": null
+    },
+    {
+      "href": "/prices",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://www.copy.ai#why-gtm-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.copy.ai#why-gtm-ai",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://jobs.lever.co/CopyAI",
+      "rel": null
+    },
+    {
+      "href": "https://jobs.lever.co/CopyAI",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": "prerender"
+    },
+    {
+      "href": "https://www.copy.ai/podcasts",
+      "rel": null
+    },
+    {
+      "href": "https://www.copy.ai/podcasts",
+      "rel": "prefetch"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://support.copy.ai/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/privacy-notice",
+      "rel": null
+    },
+    {
+      "href": "/privacy-notice",
+      "rel": "prefetch"
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": "prefetch"
+    },
+    {
+      "href": "https://status.copy.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://status.copy.ai/",
+      "rel": "prerender"
+    },
+    {
+      "href": "https://www.linkedin.com/company/copyai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/887950931991543/",
+      "rel": null
+    },
+    {
+      "href": "https://www.twitter.com/copy_ai",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.289039
+}

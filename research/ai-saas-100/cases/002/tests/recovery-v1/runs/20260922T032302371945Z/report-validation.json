@@ -1,0 +1,14 @@
+{
+  "report": {
+    "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/replacement-report.md",
+    "sha256": "5210e34cb79d0194a10844469b44de2a17512318ed5b6c96605df5513d41a5ae"
+  },
+  "metadata_lines": 1,
+  "metadata_keys": [
+    "schema_version",
+    "status",
+    "summary"
+  ],
+  "status": "passed",
+  "scope": "Local check against the task-specified metadata shape, not a harness-parser modification or acceptance receipt"
+}

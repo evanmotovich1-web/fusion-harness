@@ -1,0 +1,73 @@
+"""Bounded foreground runner for local-only pilot regressions; saves every attempt."""
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import platform
+import subprocess
+import sys
+import time
+
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / 'tools'))
+from receipt import receipt_template, unknown_metric
+
+
+def ref(path):
+    return {'path': str(path.relative_to(ROOT)), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
+def main():
+    summaries = []
+    for cid in ['001', '002', '003']:
+        case = ROOT / 'cases' / cid
+        folder = case / 'receipts'
+        folder.mkdir(exist_ok=True)
+        stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+        run_id = cid + '-local-' + stamp
+        started = datetime.now(timezone.utc).isoformat()
+        command = [sys.executable, '-B', str(case / 'tests/run.py')]
+        tick = time.monotonic()
+        result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=15)
+        elapsed = time.monotonic() - tick
+        ended = datetime.now(timezone.utc).isoformat()
+        out = folder / (run_id + '.stdout.json')
+        err = folder / (run_id + '.stderr.txt')
+        with out.open('x') as f:
+            f.write(result.stdout)
+        with err.open('x') as f:
+            f.write(result.stderr)
+        try:
+            parsed = json.loads(result.stdout)
+            results = parsed['results']
+        except (ValueError, KeyError):
+            results = []
+        receipt = receipt_template(cid, run_id)
+        receipt.update(status='completed' if result.returncode == 0 else 'failed', started_at=started, ended_at=ended,
+                       command=command, cwd=str(ROOT), implementation=ref(case / 'implementation/workflow.py'),
+                       fixtures=ref(case / 'tests/fixtures.json'), input_bundle=ref(case / 'tests/fixtures.json'),
+                       outputs=[ref(out), ref(err)], runtime={'python': platform.python_version(), 'platform': platform.system()},
+                       configuration={'network': False, 'mode': 'local_partial_regression', 'concurrency': 1,
+                                      'model_calls': 0, 'runner': ref(case / 'tests/run.py'),
+                                      'semantic_quality_scored': False, 'timeout_seconds': 15},
+                       exit_status=result.returncode, test_results=[{'test_id': r['test_id'], 'outcome': r['outcome']} for r in results],
+                       execution_kind='real', inference_executed=False,
+                       quality=[unknown_metric('points', 'semantic_quality')],
+                       errors=[result.stderr] if result.returncode else [],
+                       missing_capabilities=['Generic-model baseline unavailable', 'Independent hidden evaluation unavailable'],
+                       human_interventions=['Builder authored and inspected all fixtures. These are fixed regression tests.'],
+                       latency={'value': elapsed, 'unit': 'seconds', 'classification': 'measured', 'category': 'latency', 'assumptions': [], 'unknown_reason': None},
+                       product_acceptance=False, original_product_status='not_observed')
+        if cid != '002':
+            receipt['missing_capabilities'].append('Central AI workflow not executed')
+        path = folder / (run_id + '.json')
+        with path.open('x') as f:
+            json.dump(receipt, f, indent=2)
+        summaries.append({'case_id':cid,'receipt_path':str(path.relative_to(ROOT)), 'passed_local_regressions':sum(r['outcome']=='passed' for r in results),
+                          'local_regressions':len(results),'central_workflow_accepted':False,'elapsed_seconds':elapsed})
+    print(json.dumps(summaries, indent=2))
+    return 0 if all(s['passed_local_regressions'] == 20 for s in summaries) else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

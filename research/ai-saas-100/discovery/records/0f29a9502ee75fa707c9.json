@@ -1,0 +1,169 @@
+{
+  "evidence_id": "web-0f29a9502ee75fa707c9",
+  "source_url": "https://www.chatbase.co/",
+  "retrieved_at": "2026-09-20T21:00:23.183677+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.chatbase.co/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/0f29a9502ee75fa707c9.html",
+  "capture_sha256": "a97366b00428ad543522321ebbb8080c69a02b279c36dc3eb2c80c23fad33d18",
+  "bytes_saved": 262144,
+  "title": "AI Agents for Customer Experience & Support | Chatbase Chatbase Expandable Expandable Expandable Expandable Diamond row divider Thinking",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses."
+    },
+    {
+      "key": "application-name",
+      "value": "Chatbase: The Leading AI Customer Support Agent Platform"
+    },
+    {
+      "key": "og:title",
+      "value": "AI Agents for Customer Experience & Support | Chatbase"
+    },
+    {
+      "key": "og:description",
+      "value": "Chatbase is the AI customer experience platform. Its AI agents resolve complex queries and reduce ticket volume in every channel for over 10,000 businesses."
+    }
+  ],
+  "text": "AI Agents for Customer Experience & Support | Chatbase\nProduct\nSolutions\nResources\nCustomers\nEnterprise\nPricing\n4.8\nThe leading AI agent for CX\nConversational\nagents\nfor\ncustomer\nexperience\nAI agents that meet customers at every stage of their journey, across chat, email, and voice, to resolve issues end to end and increase revenue.\nStart free trial\nGet a demo\nOne agent for every customer interaction,\nruns support, sales, and product guidance 24/7\nMy order arrived damaged — can you help?\nSo sorry about that — a free replacement is on its way and arrives Thursday.\nAI Agent\nSupport agent\nResolve complex support queries accurately across live chat, email, phone, Slack, and more.\nIs Pro worth it for my team?\nFor a team, yes — Pro adds five seats, and yearly billing saves you 20%.\nAI Agent\nSales agent\nEngage prospects, answer product questions, and guide conversations toward revenue.\nWhat's your brand about?\nWe make gear built to last — for people who love the outdoors.\nAI Agent\nProduct guidance agent\nHelp customers find info and understand your products with a clear, on-brand voice.\n\"Chatbase is a strong signal of how customer support will evolve. It is an early adopter of the agentic approach, which will become increasingly effective, trusted, and prominent.\"\nMarc Manara,\nHead of Startups\nThe agent lifecycle\n01\nBuild\nConnect your data sources, define your agent's role, and set guardrails. No code required — ready in minutes.\n02\nTest\nRun real customer scenarios before going live. Validate accuracy, brand consistency, and edge case handling across every channel.\n03\nDeploy\nPublish your agent across chat, WhatsApp, email, Slack, and more with a single click. Goes live instantly.\n04\nOptimize\nTrack resolution rates, review escalations, and refine instructions. Your agent improves with every conversation.\nCreate Agent\nInstructions\nYou are an AI agent helping customers with inquiries and requests. Represent the company by providing friendly, efficient service. Listen carefully, understand their needs, and resolve issues with care.\nBranding\nAccent color\nProcedure\n1.\nGreet customer, ask about return.\n2.\nRequest order number or email.\n3.\nUse\nlookup_order\nfor details.\n4.\nConfirm customer's return.\n5.\nCheck return window eligibility.\nModel\nClaude Sonnet 4.6\nGuardrails\nAvoid promising upcoming features or artist availability. Don't handle refunds; direct users to billing support or a human agent. Explain content availability varies by license.\nActions\nGet invoices\nGet slots\nRetrieve products\nThe agent lifecycle\n01\nBuild\nConnect your data sources, define your agent's role, and set guardrails. No code required — ready in minutes.\nInstructions\nYou are an AI agent helping customers with inquiries and requests. Represent the company by providing friendly, efficient service. Listen carefully, understand their needs, and resolve issues with care.\nBranding\nAccent color\nProcedure\n1.\nGreet customer, ask about return.\n2.\nRequest order number or email.\n3.\nUse\nlookup_order\nfor details.\n4.\nConfirm customer's return.\n5.\nCheck return window eligibility.\nModel\nClaude Sonnet 4.6\nGuardrails\nAvoid promising upcoming features or artist availability. Don't handle refunds; direct users to billing support or a human agent. Explain content availability varies by license.\nActions\nGet invoices\nGet slots\nRetrieve products\n02\nTest\n03\nDeploy\n04\nOptimize\nCreate Agent\nAplazo\nstreamlines shopper and merchant support with AI agents across 50K+ merchants\nLearn more\nThe complete product suite for customer-facing agents.\nBuild, deploy and optimize across every channel, on one platform.\nProcedures\nwritten in plain language,\nfollowed step by step with actions built in.\n1\n.\nAsk for order number and email to locate order.\n2\n.\nUse\nlookup_order\nto retrieve the order details.\n3\n.\nConfirm which item the customer wants to return.\n4\n.\nCheck the return window eligibility.\n5\n.\nCheck the customer information.\n6\n.\nUse\npayment_info\nto retrieve payment details.\nUpgrade plan\nCancel subscription\nOrder status lookup\nUpgrade plan\nCancel subscription\nWidgets\nlet agents respond with\ninteractive components, not just text.\nYour package is in transit and will arrive in 2 days.\nYour package is\nIn-transit\nUpdated 2m ago\nAI Agent\nHelpdesk\nbuilt for AI and humans\nworking from the same conversation.\nHelpdesk\nStatus\nRequestor\nTicket details\nLast updated\nNew\nJane Doe\nPayment issue\nI was charged twice for my subscription this month. Can someone look into this ASAP?\n30m\nNew\nJohn Smith\nLogin problem\nI can’t log in even after resetting my password twice. Keeps showing an error.\n45m\nOn hold\nAlice Jones\nBug report\nThe dashboard freezes every time I try to export a report. Please check.\n50m\nClosed\nBob Brown\nAccount cancellation\nI canceled my plan last week but just got billed again. What’s happening?\n1h\nClosed\nSara Wilson\nFeature request\nWould love a dark mode option for better readability at night.\n2h\nOn hold\nMark Lee\nIntegration help\nNeed help setting up the Slack integration — can’t find the API key.\n2h\nOn you\nEmily Clark\nOnboarding question\nHow do I invite team members to join our workspace?\n3h\nBackstage\nis your agent, offstage.\nAsk it about customers, tell it what to fix.\nSummarize issues customers are facing\nCompleted\n3\nactions\nSummary of customer issues this week.\nPricing and billing\n0\nAccount setup\n0\nAPI integration\n0\nProduct features and usage\n0\nBug reports and errors\n0\nAI Agent\nAnalytics\non topics, sentiment, and trends.\nPositive\n713\nJul 5\n541\nIntegrations\nwith CRMs, helpdesks, and more.",
+  "links": [
+    {
+      "href": "/__cb/_next/static/immutable/media/83afe278b6a6bb3c-s.p.45535valc9rzk.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/media/caa3a2e1cccd8315-s.p.0zr6hhvz-h9nw.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/ProzaDisplay-SemiBoldItalic.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/ProzaDisplay-BoldItalic.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://img.youtube.com/vi/Ifkqr_9sZwI/maxresdefault.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://img.youtube.com/vi/wUW8i-8POnM/maxresdefault.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://img.youtube.com/vi/W-zq6g9lM7A/maxresdefault.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/media/grain.2yo71lp6k8fnp.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/media/hero-bg.098jdqowb0l1f.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/0gl6xc-q1du5k.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/2-5wzhu8qppjo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/1t4cxi75rdbk2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/3u2p097r6uft5.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/30xcl-i71evfh.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/__cb/_next/static/immutable/chunks/0c3qvn961npnn.js",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/ProzaDisplay-SemiBoldItalic.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/ProzaDisplay-BoldItalic.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.chatbase.co",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard?next=create-new-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/customers/opal",
+      "rel": null
+    },
+    {
+      "href": "/customers/thotis-media",
+      "rel": null
+    },
+    {
+      "href": "/customers/aplazo",
+      "rel": null
+    },
+    {
+      "href": "/customers/jumia",
+      "rel": null
+    },
+    {
+      "href": "/dashboard?next=create-new-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/dashboard?next=create-new-chatbot",
+      "rel": null
+    },
+    {
+      "href": "/customers/aplazo",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1465
+}

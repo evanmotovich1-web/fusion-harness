@@ -1,0 +1,23 @@
+{
+  "test_id": "W-A3",
+  "outcome": "passed",
+  "variants": [
+    {
+      "variant": 0,
+      "outcome": "passed",
+      "reason": null
+    },
+    {
+      "variant": 1,
+      "outcome": "passed",
+      "reason": null
+    },
+    {
+      "variant": 2,
+      "outcome": "passed",
+      "reason": null
+    }
+  ],
+  "scope": "exposed assertion checks only; weighted scoring and acceptance require independent review",
+  "product_acceptance": false
+}

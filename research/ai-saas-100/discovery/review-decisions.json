@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "reviewer": "terra",
+  "review_method": "Read captured first-party titles, metadata, visible workflow text, and selected follow-up pages. Approval establishes only public product identity and advertised AI-assisted workflow, not working functionality, small-company status, adoption, or commercial value.",
+  "reviewed_seed_approvals": ["Wordtune", "Jenni", "HyperWrite", "Sudowrite", "Rytr", "HIX.AI", "Smodin", "ProWritingAid", "LanguageTool", "Paperpal", "Compose AI", "Type", "Grammarly", "Copy.ai", "Jasper", "Writesonic", "Anyword", "Frase", "Surfer", "Scalenut", "NeuronWriter", "SEOWriting", "Predis", "Ocoya", "AdCreative.ai", "Pencil", "Simplified", "Lavender", "Regie.ai", "Instantly", "Smartlead", "Lemlist", "Clay", "Apollo", "Twain", "Autobound", "Persana", "Tidio", "Chatbase", "SiteGPT", "CustomGPT", "DocsBot", "Chatling", "Botsonic", "Wonderchat", "My AskAI", "Forethought", "Botpress", "Fathom", "Fireflies", "tl;dv", "MeetGeek", "Grain", "Krisp", "Notta", "Otter", "Jamie", "Sembly", "Avoma", "Voicenotes", "Sonix", "PDF.ai", "ChatPDF", "Humata", "AskYourPDF", "Elicit", "Consensus", "Explainpaper", "Afforai", "Docsumo", "Nanonets", "Parsio", "Pebblely", "Flair", "Mokker", "Claid", "Photoroom", "Pixelcut", "PicWish", "Magic Studio", "Recraft", "Kittl", "Stockimg", "Pictory", "InVideo", "Fliki", "Steve AI", "OpusClip", "Vizard", "Klap", "Munch", "Wisecut", "Submagic", "Captions", "HeyGen", "Synthesia", "Colossyan", "Tabnine", "CodiumAI", "CodeRabbit", "Bito", "Sourcegraph", "CodeWP", "Qodo", "Cursor", "Replit", "Bolt", "Blackbox", "Reclaim", "Motion", "Trevor", "Taskade", "TaskMagic", "Bardeen", "Decktopus", "Beautiful.ai", "Kickresume", "Rezi", "WonsultingAI", "Formula Bot"],
+  "explicit_exclusions": {
+    "Outranking": "Official static captures describe AI SEO software but do not visibly establish the product brand. Excluded conservatively pending stronger brand-domain evidence.",
+    "Saleshandy": "Identity is visible, but bounded homepage/pricing captures do not substantiate the AI-assisted workflow. Not treated as nonexistent.",
+    "Fin": "HTTP 200 capture contains no extractable title, metadata, or workflow text. HTTP success is not identity verification.",
+    "Clockwise": "Official page states product no longer available from March 27, 2026. Excluded as discontinued rather than treating historical capabilities as an active service.",
+    "Taploop": "Directory describes AI marketing operator, but linked first-party domain now presents a subscription marketplace. Conflicting identity/workflow evidence retained; excluded.",
+    "TalaForge": "Verified AI companion identity, but principal consumer relationship workflow falls outside the ten business/productivity strata. Excluded from this discovery frame, not a commercial rejection.",
+    "FlipWorth": "Official capture describes resale valuation but does not establish an AI-assisted workflow. Pending additional evidence."
+  },
+  "default_unapproved_reason": "Public request failed or no reviewed first-party evidence supports eligibility. See capture error. Not proof of nonexistence or business failure.",
+  "category_overrides": {
+    "HIX.AI": {"category": "C10", "reason": "Current homepage emphasizes multipurpose AI agent workspace and administrative deliverables, rather than only writing."},
+    "Sembly": {"category": "C10", "reason": "Current homepage emphasizes AI professional-services documents and presentations."},
+    "AskYourPDF": {"category": "C04", "reason": "Current homepage headline emphasizes website support chatbot trained on content."},
+    "Munch": {"category": "C02", "reason": "Observed redirect lands at Munch Studio, currently marketed as automated social content rather than the former video-clipping-only workflow."},
+    "Bardeen": {"category": "C03", "reason": "Current homepage primarily markets lead sourcing, qualification, and enrichment."},
+    "Taskade": {"category": "C09", "reason": "Current homepage primarily markets app building with agents and workflows."}
+  },
+  "official_name_overrides": {"HIX.AI": "HIX AI", "Surfer": "Positive Surfer", "Afforai": "Logically", "Munch": "Munch Studio", "CodiumAI": "Qodo", "CodeWP": "Telex", "Formula Bot": "Better Analyst"},
+  "additional_identity_sources": {"Jamie": ["https://www.meetjamie.ai/pricing"]},
+  "small_company_decisions": {
+    "LinkBunny": {
+      "tier": "E1",
+      "classification": "vendor_claim",
+      "source_url": "https://getlinkbunny.com/about",
+      "excerpt": "LinkBunny is built by Hwee-Boon Yar, a solo indie developer who has been writing and delivering software for 30 years.",
+      "locator": "text: ABOUT LINKBUNNY",
+      "basis": "Present-tense first-party solo-developer self-description observed in this dated capture. Publication date is not supplied. Contemporary observation, not an independently audited headcount or dated founding announcement.",
+      "headcount": null,
+      "unknown_reason": "Exact current employee count and parent ownership not independently established."
+    }
+  },
+  "unknown_size_notes": {"My AskAI": "About page names two founders, not total current staff. Size remains unknown.", "Trevor": "About page names two founders and historical start date, not total current staff. Size remains unknown."},
+  "special_limitations": {
+    "LinkBunny": "Agent-assisted backlink marketplace/API. Does not establish a proprietary or hosted inference engine. Future reproduction must distinguish agent-side decisions from marketplace operations. Never publish backlinks during testing.",
+    "TaskMagic": "Static HTML displays zero Users/Paying Customers beside other scale claims. Likely dynamic counters are unverified. Do not treat static zeros as evidence of zero users.",
+    "Telex": "Observed redirect from CodeWP establishes a destination alias, not proof of legal ownership transfer. Canonical public landing path is retained.",
+    "WonsultingAI": "Dedicated AI software product path on a broader services-company domain. Preserve the path. Do not treat the entire consultancy as the product."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "evidence_id": "web-9c0914eebe066018b5a4",
+  "source_url": "https://myaskai.com/",
+  "retrieved_at": "2026-09-20T21:00:23.687792+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://myaskai.com/",
+  "content_type": "text/html",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/9c0914eebe066018b5a4.html",
+  "capture_sha256": "ee3cb11fdf648f5ff94053a03a3b9d0ae3912455226d3c6203edb7456646ae5f",
+  "bytes_saved": 46134,
+  "title": "AI Customer Service Agent for Your Helpdesk | My AskAI",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team & customers time."
+    },
+    {
+      "key": "og:title",
+      "value": "AI Customer Service Agent for Your Helpdesk | My AskAI"
+    },
+    {
+      "key": "og:site_name",
+      "value": "AI Customer Service Agent for Your Helpdesk | My AskAI"
+    },
+    {
+      "key": "og:description",
+      "value": "Deflect support requests by 75% with an AI customer service agent. Add to your existing live chat providers, like Intercom, Zendesk or Freshdesk. And start saving your team & customers time."
+    }
+  ],
+  "text": "AI Customer Service Agent for Your Helpdesk | My AskAI",
+  "links": [
+    {
+      "href": "https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=128,h=,f=auto,dpr=1,fit=contain/d260/f1762778659096x792805343488060400/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://myaskai.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://7ac07acbae116a5155080d295197d8d6.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/d260/f1762778639023x981515749356831000/meta.png",
+      "rel": "image_src"
+    },
+    {
+      "href": "https://d3ne4nhehdgzqi.cloudfront.net/package/run_css/e26b726b95aaf32c9cfff75365846b9a95a30ff587b0a46c3f43fc2cd1063b29/no-code-ai-model-trainer/live/index/xfalse/xfalse/run.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "//meta.cdn.bubble.io/f1680271457857x336483009628357300/owl.carousel.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "//meta.cdn.bubble.io/f1680271495251x342890714585694800/owl.theme.default.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://myaskai.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/zh?lang=zh_cn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/es?lang=es_es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/fr?lang=fr_fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/de?lang=de_de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/nl?lang=nl_nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/ru?lang=ru_ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/uk?lang=uk_ua",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/pt?lang=pt_pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/pl?lang=pl_pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/it?lang=it_it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/ar?lang=ar_ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/ja?lang=ja_jp",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/hi?lang=hi_in",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://myaskai.com/lang/bn?lang=bn_bn",
+      "rel": "alternate"
+    }
+  ],
+  "elapsed_seconds": 0.2349
+}

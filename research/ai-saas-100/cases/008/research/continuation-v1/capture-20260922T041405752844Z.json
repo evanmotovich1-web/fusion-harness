@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "008",
+  "source_url": "https://fireflies.ai/pricing",
+  "purpose": "Unclear monthly versus annual price and transcription allowance",
+  "retrieved_at": "2026-09-22T04:14:05.752867+00:00",
+  "source_type": "first_party_public_page",
+  "classification": "vendor_claims_only",
+  "method": "Credential-free bounded HTTPS GET",
+  "status": 200,
+  "error": null,
+  "maximum_bytes": 1048576,
+  "total_deadline_seconds": 8,
+  "limitations": "Static vendor content only, not service execution, customer verification or checkout.",
+  "final_url": "https://fireflies.ai/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "truncated": false,
+  "bytes_read": 1011374,
+  "captures": [
+    {
+      "path": "cases/008/research/continuation-v1/capture-20260922T041405752844Z.html",
+      "sha256": "749e5a67aca8d5d642afd839089a60c3398eda9dace583dac29b7f0d779dca4d"
+    },
+    {
+      "path": "cases/008/research/continuation-v1/capture-20260922T041405752844Z.txt",
+      "sha256": "9903673963a32ff866976bac5518d8de7a05ab08f1ebbdbe5c09dc920d246f60"
+    }
+  ],
+  "elapsed_seconds": 0.8600955419999998
+}

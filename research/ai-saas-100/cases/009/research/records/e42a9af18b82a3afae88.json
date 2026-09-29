@@ -1,0 +1,246 @@
+{
+  "evidence_id": "r009-e42a9af18b82a3afae88",
+  "source_url": "https://www.chatpdf.com/docs/api/backend",
+  "publisher": "www.chatpdf.com",
+  "retrieved_at": "2026-09-20T21:35:26.189444+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.chatpdf.com/docs/api/backend",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "cases/009/research/captures/e42a9af18b82a3afae88.html",
+  "capture_sha256": "5f70f8b89c21a9aa0c2b851455979c8c53cdc5f32257e2b28bcbc2a4dc8c56a0",
+  "bytes_saved": 262144,
+  "title": "ChatPDF Backend API - extract information and chat with PDFs",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+    },
+    {
+      "key": "og:title",
+      "value": "ChatPDF AI | Chat with any PDF | Free"
+    },
+    {
+      "key": "og:description",
+      "value": "ChatPDF brings ChatGPT-style intelligence and PDF AI technology together for smarter document understanding. Summarize, chat, and analyze."
+    }
+  ],
+  "text": "ChatPDF Backend API - extract information and chat with PDFs\nBack to ChatPDF\nChatPDF API\nThe ChatPDF backend API allows you to programmatically extract information from PDF files and create custom chatbots based on your PDFs.\nSources\nBefore asking questions to a PDF, you need to add it to ChatPDF as a source. There are three ways to do so:\nUpload the PDF on ChatPDF.com manually\nAdd a PDF from a publicly accessible URL via API\nUpload a PDF file from your computer via API\nPDFs are limited to 2,000 pages or 32 MB per file.\nChats\nTo ask questions to a PDF, use the chat endpoint, which expects a source ID and an array of messages. To ask a single question, send one message with the role\nuser\n. To ask a follow-up question, send multiple messages, where AI-responses should have the role\nassistant\n. The ChatPDF chat API is stateless, which means that you need to send all relevant messages in one request, previous messages to the same source are not automatically included.\nAdd PDF manually on ChatPDF.com\nAfter uploading a PDF to chatpdf.com, you can use the PDF with the API. To do so, open the chat and copy the source ID from the URL bar. If your URL is\nhttps://www.chatpdf.com/c/zNXgrtLfhbFw7KabJgE1\nthe corresponding source ID is\ncha_zNXgrtLfhbFw7KabJgE1\n. Note the\ncha_\nprefix.\nAdd PDF via URL\nIf your PDF file is publicly accessible via a URL, this is the easiest way to send it to ChatPDF. This endpoint returns a source ID that can be used to interact with the PDF file.\nEndpoint\nPOST\nhttps://api.chatpdf.com/v1\n/sources/add-url\nRequest\n{ \"url\": \"https://uscode.house.gov/static/constitution.pdf\" }\nResponse\n{ \"sourceId\": \"src_xxxxxx\" }\nExample\nShow Example Code\nAdd PDF via File Upload\nAdd a PDF file by uploading it to ChatPDF as a multipart form data. You can only upload one file at a time. This endpoint returns a source ID that can be used to interact with the PDF file.\nEndpoint\nPOST\nhttps://api.chatpdf.com/v1\n/sources/add-file\nRequest\n<form data, see example>\nResponse\n{ \"sourceId\": \"src_xxxxxx\" }\nExample\nShow Example Code\nChat with PDF\nSend a chat message to a PDF file using its source ID.\nEndpoint\nPOST\nhttps://api.chatpdf.com/v1\n/chats/message\nRequest\nAsk a single question:\n{ \"sourceId\": \"src_xxxxxx\", \"messages\": [ { \"role\": \"user\", \"content\": \"how much is the world?\" } ] }\nAsk a follow-up question:\n{ \"sourceId\": \"src_xxxxxx\", \"messages\": [ { \"role\": \"user\", \"content\": \"How much is the world?\" }, { \"role\": \"assistant\", \"content\": \"The world is 10 dollars.\" }, { \"role\": \"user\", \"content\": \"Where can I buy it?\" } ] }\nYou can include up to 6 messages in one request. If the total number of\nOpenAI tokens\nin the these messages exceed 2,500, older messages are ignored until that limit is no longer exceeded.\nResponse\n{ \"content\": \"The world is 10 dollars.\" }\nExample\nShow Example Code\nReference Sources\nChatPDF can include references to the PDF pages that were used to generate the response. To do so, include the\nreferenceSources: true\nfield in the request body:\n{ \"referenceSources\": true, \"sourceId\": \"src_xxxxxx\", \"messages\": [ { \"role\": \"user\", \"content\": \"how much is the world?\" } ] }\nThe response will include inline references in the form [P<N>], e.g. [P2], [P234], and an additional field\nreferences\n:\n{ \"content\": \"The world is 10 dollars [P2] and can be bought at the supermarket [P5].\", \"references\": [ { \"pageNumber\": 2 }, { \"pageNumber\": 5 } ] }\nStream Response\nYou can optionally stream the response word by word. To do so, include the\nstream: true\nfield in the request body:\n{ \"stream\": true, \"sourceId\": \"src_xxxxxx\", \"messages\": [ { \"role\": \"user\", \"content\": \"how much is the world?\" } ] }\nShow Example Code\nDelete PDF\nDelete one or multiple PDF files from ChatPDF using their source IDs.\nEndpoint\nPOST\nhttps://api.chatpdf.com/v1\n/sources/delete\nRequest\n{ \"sources\": [\"src_xxxxxx\"] }\nResponse\nThis endpoint returns an empty response.\nExample\nShow Example Code",
+  "links": [
+    {
+      "href": "/_next/static/chunks/webpack-9402ed2bcd3bb81e.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtm.js?id=GTM-NKMXBKDL",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.googletagmanager.com/gtag/js?id=G-9TMP1WFPRN",
+      "rel": "preload"
+    },
+    {
+      "href": "https://webapi.chatpdf.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/icon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://www.chatpdf.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.chatpdf.com/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/bg",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/bn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/cs",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/da",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/el",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/fi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/he",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/hu",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/id",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/kn",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ko",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ms",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/no",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pa",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/pt-PT",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ro",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ru",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/sk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/sv",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/ta",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/th",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/tl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/tr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/uk",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/vi",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/zh",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.chatpdf.com/zh-TW",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/static_styles_variant_css2",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.143681
+}

@@ -1,0 +1,15 @@
+{
+  "task_id": "3.b",
+  "first_execution_at_utc": "2026-09-20T21:35:25.687605+00:00",
+  "scope": "Initial read-only inspection preceded this timestamp. This timestamp does not establish continuous activity.",
+  "protected_sha256": {
+    "registry.json": "6b26be918f6f22e824be91da3201df59b7f206962b0a6be91c389d212298030e",
+    "selection.json": "a2d4f99bb4bedc6f22b235c9ed2487520640282b765a2efb917ded218b6590f5",
+    "capabilities.json": "a77ce438eb09481a7253806f402cfde29172e55374f6c5cefe9a474a98c8ed5d",
+    "contract.md": "f00ae5244d7a846f5cd88d9a418f4f0be9d08e59576354fed34f9547fd19e70f",
+    "protocol.md": "29b2c117aa574961439e8991db490167d1adf6b3fec27c6712096fc889001cd4",
+    "pilot-results.json": "9cf20e039483dd40a93f95a41e28afbb831cb0e86247ecc0909fe7924a4ddbf9",
+    "tools/validate.py": "1ad754a4342f3190164573f2aa9f5758eb5a88670d4557effe957bdfc547a12d",
+    "tools/receipt.py": "4610cf7469ea178d1c2d4913a03426c404261ffb8098b978d3d5dcabc52fd52a"
+  }
+}

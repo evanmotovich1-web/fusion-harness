@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "case_id": "007",
+  "exposure": "Builder-visible R9 type-validation regression; not answer evaluation or hidden evaluation",
+  "method_contract": "additional_sources is absent or a list of at most 200 records. Each record has nonempty string id and text. Records remain unresolved passthrough; no date, conflict, relevance, or semantic interpretation is inferred.",
+  "cases": [
+    {
+      "id": "additional-sources-null",
+      "request": {
+        "question": "Escalate?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"],
+        "additional_sources": null
+      },
+      "expected": {"error": "invalid_additional_sources"}
+    },
+    {
+      "id": "additional-sources-string",
+      "request": {
+        "question": "Escalate?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"],
+        "additional_sources": "not-a-record-list"
+      },
+      "expected": {"error": "invalid_additional_sources"}
+    },
+    {
+      "id": "additional-sources-number",
+      "request": {
+        "question": "Escalate?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"],
+        "additional_sources": 7
+      },
+      "expected": {"error": "invalid_additional_sources"}
+    },
+    {
+      "id": "additional-sources-absent",
+      "request": {
+        "question": "Escalate?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"]
+      },
+      "expected": {"unresolved_additional_sources": []}
+    },
+    {
+      "id": "additional-sources-empty",
+      "request": {
+        "question": "Escalate?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"],
+        "additional_sources": []
+      },
+      "expected": {"unresolved_additional_sources": []}
+    },
+    {
+      "id": "additional-sources-nonempty-unresolved",
+      "request": {
+        "question": "Which conflicting policy applies?",
+        "as_of": "2026-09-20",
+        "sources": [],
+        "allowed_actions": ["draft_ticket"],
+        "additional_sources": [
+          {
+            "id": "undated-conflict",
+            "text": "A conflicting source says the return period may be 30 days.",
+            "provenance": "caller-supplied-unverified"
+          }
+        ]
+      },
+      "expected": {
+        "unresolved_additional_sources": [
+          {
+            "id": "undated-conflict",
+            "text": "A conflicting source says the return period may be 30 days.",
+            "provenance": "caller-supplied-unverified"
+          }
+        ]
+      }
+    }
+  ]
+}

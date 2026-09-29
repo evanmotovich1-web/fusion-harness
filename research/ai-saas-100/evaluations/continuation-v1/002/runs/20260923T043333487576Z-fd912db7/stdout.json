@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "system": "independent_local_component",
+  "source": {
+    "snapshot": {
+      "path": "source-archive/sha256/4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    "active": {
+      "path": "cases/002/implementation/workflow.py",
+      "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+    },
+    "active_matches_snapshot_and_manifest": true
+  },
+  "attempts": [
+    {
+      "test_id": "M-N1",
+      "attempt": 1,
+      "attempt_id": "M-N1#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N1",
+      "attempt": 2,
+      "attempt_id": "M-N1#2",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N1",
+      "attempt": 3,
+      "attempt_id": "M-N1#3",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N2",
+      "attempt": 1,
+      "attempt_id": "M-N2#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N3",
+      "attempt": 1,
+      "attempt_id": "M-N3#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N4",
+      "attempt": 1,
+      "attempt_id": "M-N4#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N4",
+      "attempt": 2,
+      "attempt_id": "M-N4#2",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N4",
+      "attempt": 3,
+      "attempt_id": "M-N4#3",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N5",
+      "attempt": 1,
+      "attempt_id": "M-N5#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N6",
+      "attempt": 1,
+      "attempt_id": "M-N6#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N7",
+      "attempt": 1,
+      "attempt_id": "M-N7#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N8",
+      "attempt": 1,
+      "attempt_id": "M-N8#1",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N8",
+      "attempt": 2,
+      "attempt_id": "M-N8#2",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-N8",
+      "attempt": 3,
+      "attempt_id": "M-N8#3",
+      "split": "normal",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A1",
+      "attempt": 1,
+      "attempt_id": "M-A1#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A2",
+      "attempt": 1,
+      "attempt_id": "M-A2#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A3",
+      "attempt": 1,
+      "attempt_id": "M-A3#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A4",
+      "attempt": 1,
+      "attempt_id": "M-A4#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 2,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        },
+        {
+          "variant": 1,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A5",
+      "attempt": 1,
+      "attempt_id": "M-A5#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 2,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        },
+        {
+          "variant": 1,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    },
+    {
+      "test_id": "M-A6",
+      "attempt": 1,
+      "attempt_id": "M-A6#1",
+      "split": "adversarial",
+      "outcome": "failed",
+      "invocations": 1,
+      "variants": [
+        {
+          "variant": 0,
+          "outcome": "failed",
+          "reason": "Input preservation not established"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "group_attempts": 20,
+    "invocations": 22,
+    "planned_group_attempts": 20,
+    "planned_invocations": 22,
+    "denominators_complete": true,
+    "passed": 0,
+    "failed": 20,
+    "blocked": 0,
+    "normal_base_passed": 0,
+    "normal_base_total": 8,
+    "adversarial_base_passed": 0,
+    "adversarial_base_total": 6
+  },
+  "threshold_check": {
+    "note": "Informational only. Weighted scoring, usability judgment, and acceptance require independent review.",
+    "normal_pass_min": 7,
+    "adversarial_pass_min": 5,
+    "normal_base_passed": 0,
+    "adversarial_base_passed": 0,
+    "normal_threshold_met": false,
+    "adversarial_threshold_met": false
+  },
+  "local_component_acceptance": false,
+  "inference_executed": false,
+  "model_requests": 0,
+  "B1": {
+    "status": "blocked_not_executed",
+    "reason": "No authorized inference route",
+    "capability_evidence": {
+      "path": "capabilities-continuation.json",
+      "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+    }
+  },
+  "B3": {
+    "status": "not_observed"
+  },
+  "exposure": "independent_authored_exposed",
+  "hidden_evaluation_established": false,
+  "product_acceptance": false,
+  "limitations": [
+    "Local deterministic subset only; editorial judgment and live marketplace behavior unassessed",
+    "Passing exposed assertions establishes component correctness, not product acceptance",
+    "Audit hooks are instrumentation, not OS containment",
+    "B1 absence is a missing capability, not a failed comparison"
+  ]
+}

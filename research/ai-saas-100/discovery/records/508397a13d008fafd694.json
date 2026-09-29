@@ -1,0 +1,857 @@
+{
+  "evidence_id": "web-508397a13d008fafd694",
+  "source_url": "https://www.kittl.com/",
+  "retrieved_at": "2026-09-20T21:00:45.241681+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.kittl.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/508397a13d008fafd694.html",
+  "capture_sha256": "dbf1f71166c7fc5297ebb0e3677fe0fe9a7a737daeb331a80f5c8cbd985c5b38",
+  "bytes_saved": 262144,
+  "title": "Kittl | The AI-First Design Platform for Creators Kittl Logo Kittl Logo Kittl Logo Kittl Logo",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Kittl is the AI design platform built for creativity. Create with top image gen models, pro editing tools, mockups, and curated assets — free to start."
+    },
+    {
+      "key": "og:title",
+      "value": "Kittl | The AI-First Design Platform for Creators"
+    },
+    {
+      "key": "og:description",
+      "value": "Kittl is the AI design platform built for creativity. Create with top image gen models, pro editing tools, mockups, and curated assets — free to start."
+    }
+  ],
+  "text": "Kittl | The AI-First Design Platform for Creators\nFeatures\nAI Creative Suite\nAI Workflows\nProven shortcuts for merch, marketing and video\nAI Image Generator\nTurn ideas into polished images\nAI Vector Generator\nCreate clean, editable vector artwork\nAI Video Generator\nGenerate and animate using Video AI\nAgentic AI\nYour creative agent for complete design tasks\nBackground Remover\nCleanly remove backgrounds in seconds\nImage Upscaler\nTurn low-res images into high-def assets\nVectorizer\nTransform any image into scalable paths\nEditor\nInfinite Canvas\nEndless space to create\nCollaboration\nCreate together, in real time\nText Effects\nApply instant styles to text\nMake Your Designs Move\nTurn your static designs into motion instantly.\nFor\nFor Small Businesses\nLogo Maker\nBusiness Cards\nMenus\nPackaging\nProduct Labels\nProduct Tags\nProduct Visuals\nFor Sellers\nT-shirts\nHoodies\nPosters\nProduct Mockups\nShopify Banners\nEtsy Banners\nEtsy Listings\nFor Agencies\nAds\nBrochures\nPosters\nMedia Kits\nBrand Kits\nLogo Maker\nTeam Workspace\nFor Designers\nTemplates\nVector Tools\nTypography\nBrand Kits\nLogo Maker\nMockups\nTeam Workspace\nContent\nTemplates\nReady-to-use layouts for branding, print, and digital projects.\nMockups\nProfessional mockups to preview and present your work realistically.\nFonts\nCurated typefaces for consistent, professional typography.\nGraphics\nIcons, illustrations, and visual assets for everyday design needs.\nCompany\nCompany\nAbout Us\nContact\nCareers\nNews & Media\nFeature Request\nCommunity\nBlog\nHelp Center\nYouTube\nDiscord\nPartnerships\nAffiliates\nCreators\nJoin Our Team\nExplore roles and join our team.\nPricing\nAI Creative Suite\nAI Workflows\nProven shortcuts for merch, marketing and video\nAI Image Generator\nTurn ideas into polished images\nAI Vector Generator\nCreate clean, editable vector artwork\nAI Video Generator\nGenerate and animate using Video AI\nAgentic AI\nYour creative agent for complete design tasks\nBackground Remover\nCleanly remove backgrounds in seconds\nImage Upscaler\nTurn low-res images into high-def assets\nVectorizer\nTransform any image into scalable paths\nEditor\nInfinite Canvas\nEndless space to create\nCollaboration\nCreate together, in real time\nText Effects\nApply instant styles to text\nMake Your Designs Move\nTurn your static designs into motion instantly.\nFor Small Businesses\nLogo Maker\nBusiness Cards\nMenus\nPackaging\nProduct Labels\nProduct Tags\nProduct Visuals\nFor Sellers\nT-shirts\nHoodies\nPosters\nProduct Mockups\nShopify Banners\nEtsy Banners\nEtsy Listings\nFor Agencies\nAds\nBrochures\nPosters\nMedia Kits\nBrand Kits\nLogo Maker\nTeam Workspace\nFor Designers\nTemplates\nVector Tools\nTypography\nBrand Kits\nLogo Maker\nMockups\nTeam Workspace\nTemplates\nReady-to-use layouts for branding, print, and digital projects.\nMockups\nProfessional mockups to preview and present your work realistically.\nFonts\nCurated typefaces for consistent, professional typography.\nGraphics\nIcons, illustrations, and visual assets for everyday design needs.\nCompany\nAbout Us\nContact\nCareers\nNews & Media\nFeature Request\nCommunity\nBlog\nHelp Center\nYouTube\nDiscord\nPartnerships\nAffiliates\nCreators\nJoin Our Team\nExplore roles and join our team.\nFeatures\nFor\nContent\nCompany\nPricing\nAI -POWERED DESIGN FOR AMBITIOUS BRANDS\nKittl empowers creators, designers and businesses to produce standout branding and product visuals — faster than ever.\nStart Creating\nFree to use. No credit card required.\nCreate with AI\nBuild Flows\nCreate Mockups\nDesign & Edit\nUse Templates\nLoved by designers at\nKittl genuinely blew me away. The mockups and design tools have replaced hours of searching for assets and endless edits in Photoshop. My ideas come to life in a single platform.”\nDelaney Bianco\nBrand Designer\nDesign and create brands and products, fast.\nBuilt for designers, sellers, and businesses bringing brands, products, and ideas to life.\nWhere AI Meets Professional Design Tools\nSmart flows\nAI image generation\nAI video generation\nBackground remover\nReframe image\nVector editing\nText effects\nMockups\nCustomizable templates\nAll the latest AI models\nin one powerful canvas.\nByteDance\nSeedream 4.5\nSeedream 4\nSeedream 3\nIdeogram\nIdeogram 2.0A\nIdeogram 3 Quality\nGoogle\nNano Banana\nNano Banana 2\nNano Banana Pro\nNano Banana Pro 4K\nGoogle Imagen 4\nOpenAI\nGPT Alpha\nChatGPT Image 1 HD\nChatGPT Image 1\nDALL-E 3\nChatGPT Image 1.5 Medium\nChatGPT Image 1.5 High\nBlack Forest Labs\nFlux 1.1 Pro\nFlux 1.1 Pro Ultra\nFlux Schnell\nFlux 2 [klein]\nFlux 2 Pro HD\nFlux Kontext Pro\nStart creating\nThe best part of Kittl is that you, as a designer, are in control the whole time. It’s not like most AI tools out there, it’s supposed to enhance your creative process, not replace it.\nAsia J.\nUX/UI Designer\nCurated templates and assets for every creative project.\nReady to start creating?\nMonthly\nYearly\nSave up to $200\nFree\nStart creating stunning designs with professional templates.\n$0\n/month\nFree forever\nGet Free\nFeatures:\n5 projects\nProfessionalTemplates\n100 AI Tokens (one-time)\n1M+ Photos, Graphics & Fonts\n5 projects\nProfessional Templates\n100 AI Tokens (one-time)\n1M+ Photos, Graphics &Fonts\nPro\nRecommended\nGreat for individuals who need access to vector files, advanced editing and AI tools.\n$19\n/month\nGet Pro\nFeatures\nUnlimited Projects\n30 AI credits per day\n10GB file storage\nUnlimited Projects\nUp to 2,000 AI Tokens per month\n+10,000 Premium Templates & Mockups\n10GB File Storage\nExpert\nFor professionals that need even faster workflows and consistency in their designs.\n$49\n/month\nGet Expert\nFeatures\nUnlimited projects\n80 AI credits per day\n100GB file storage\nSpeed up your workflow with AI\nUp to 12,000 AI Tokens per month\n+100M Curated Assets\n100GB File Storage\nFree\nStart creating stunning designs with professional templates.\n$0\n/month\nFree forever\nGet Free\nFeatures:\n5 projects\nProfessionalTemplates\n100 AI Tokens (one-time)\n1M+ Photos, Graphics & Fonts\n5 projects\nProfessional Templates\n100 AI Tokens (one-time)\n1M+ Photos, Graphics &Fonts\nPro\nRecommended\nGreat for individuals who need access to vector files, advanced editing and AI tools.\n$19\n$14\n/month\nBilled $168 annually\nGet Pro\nFeatures\nUnlimited Projects\n30 AI credits per day\n10GB file storage\nUnlimited Projects\nUp to 2,000 AI Tokens per month\n+10,000 Premium Templates & Mockups\n10GB File Storage\nExpert\nFor professionals that need even faster workflows and consistency in their designs.\n$49\n$39\n/month\nBilled $468 annually\nGet Expert\nFeatures\nUnlimited projects\n80 AI credits per day\n100GB file storage\nSpeed up your workflow with AI\nUp to 12,000 AI Tokens per month\n+100M Curated Assets\n100GB File Storage\nYour ideas deserve to be seen.\nThe only thing left is for you to make them real.\nStart creating\nEasily create beautiful designs with Kittl using templates of world-class designers.\n© Kittl\n2026\nAI\nFlows\nImage Generation\nVector Generation\nVectorizer\nBackground Remover\nUpscaling\nEditor\nVector Editing\nText Effects\nCollaboration\nInfinite Canvas\nFor\nFor Small Businesses\nFor Sellers\nFor Agencies\nFor Designers\nCompany\nAbout\nCareers\nNews\nContact\nLicensing",
+  "links": [
+    {
+      "href": "/packages/features/website-layouts/features/creative_flows.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/ai_image_gen.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/ai_vector_gen.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/ai_video_gen.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/agentic.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/background_remover.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/image_upscaler.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/vectorizer.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/infinite_canvas.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/teams.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/43fvcnuep658p.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/00e17zmkm283a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1g57mz9h6zo_i.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/3ei2--_ckjl9q.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0tej7o9ac2q97.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/30abbldc_ej15.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/2wt10vzcazddr.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1mxx0g47o1hkl.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/2ur-stbebtokt.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/1erpa6t3_qp6d.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/2035jspneyt22.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/42_meogw6if49.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://gtm.kittl.com/gtm.js?id=GTM-5NXTTCBW",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/text_effects.png",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/features/video_gen_banner.jpg",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/content/templates.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/content/mockups.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/content/fonts.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/content/graphics.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "/packages/features/website-layouts/company/join_our_team.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6853cc7b4d0a9eaff9b69cad/69b184ea6d1a6662937fde82_toggle_smartboards_1200x900px.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6a60d469d4e0e01a80728ff4/6a60d469d4e0e01a80729231_zhxisn36wgbr0ck60lw6.avif",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6a60d469d4e0e01a80728ff4/6a60d469d4e0e01a80729233_toggle_mockups_1200x900px.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.kittl.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "/icon.ico?icon.2be7_gcqg-mz0.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?apple-icon.3l5nqt4zrix42.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/apple-icon1.png?apple-icon1.19__8v9yi6ptq.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/features/ai/workflows",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/image-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vector-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/video-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/agentic-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/ai-background-remover",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai-image-upscaler",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vectorizer",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/editor",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/features/infinite-canvas",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/text-effects",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/video-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/small-business",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/business-cards",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/menus",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/packaging-box",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/labels",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/tags",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/product-visuals",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/sellers",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/t-shirts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/hoodies-and-sweatshirts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/posters",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/shopify-banners",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/etsy-banners",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/etsy-listing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/agencies",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/ads",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/brochures",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/posters",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/media-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/brand-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/designers",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/templates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/vector-suite",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/fonts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/brand-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/fonts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/content-library",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/about",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/blogs/product-updates/",
+      "rel": null
+    },
+    {
+      "href": "https://feedback.kittl.com/feature-requests",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.kittl.com/blogs",
+      "rel": null
+    },
+    {
+      "href": "https://help.kittl.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@Kittldesign",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://discord.gg/kittl",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.kittl.com/partners",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/partners/affiliates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/partners/creators",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/features/ai/workflows",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/image-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vector-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/video-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/agentic-ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/ai-background-remover",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai-image-upscaler",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vectorizer",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/editor",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/features/infinite-canvas",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/text-effects",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/video-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/small-business",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/business-cards",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/menus",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/packaging-box",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/labels",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/tags",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/product-visuals",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/sellers",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/t-shirts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/hoodies-and-sweatshirts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/posters",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/shopify-banners",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/etsy-banners",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/etsy-listing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/agencies",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/create/ads",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/brochures",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/posters",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/media-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/brand-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/designers",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/templates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/vector-suite",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/fonts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates/brand-kits",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/create/logos",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/templates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/mockups",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/fonts",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/content-library",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/about",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/blogs/product-updates/",
+      "rel": null
+    },
+    {
+      "href": "https://feedback.kittl.com/feature-requests",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.kittl.com/blogs",
+      "rel": null
+    },
+    {
+      "href": "https://help.kittl.com",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@Kittldesign",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://discord.gg/kittl",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.kittl.com/partners",
+      "rel": ""
+    },
+    {
+      "href": "https://www.kittl.com/partners/affiliates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/partners/creators",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://app.kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://kittl.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/kittldesign",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/Kittldesign",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/kittldesign/",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://twitter.com/kittldesign",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.pinterest.com/kittldesign",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://www.kittl.com/features/ai",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai/flows",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/image-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vector-generator",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/vectorizer",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/tools/ai-background-remover",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/ai-image-upscaler",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/editor",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/vector-suite",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/text-effects",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/teams",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/features/infinite-canvas",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/small-business",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/sellers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/agencies",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/for/designers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/about",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/blogs/product-updates",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/licensing",
+      "rel": null
+    },
+    {
+      "href": "https://www.kittl.com/legal",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.4702
+}

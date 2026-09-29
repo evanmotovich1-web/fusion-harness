@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "suite_version": "runner-failures-v1",
+  "scope": "Synthetic runner protocol tests, not product fixtures or model results",
+  "held_out": false,
+  "cases": [{"id": "alpha"}, {"id": "beta"}, {"id": "gamma"}]
+}

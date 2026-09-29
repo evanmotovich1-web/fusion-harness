@@ -1,0 +1,581 @@
+{
+  "evidence_id": "web-19743d37915d5bd0c219",
+  "source_url": "https://sourcegraph.com/",
+  "retrieved_at": "2026-09-20T21:00:55.529815+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://sourcegraph.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/19743d37915d5bd0c219.html",
+  "capture_sha256": "898cd3174df580571e7abc05bb43eb6e7e3401c846dea2225b6f4cda1717cf2a",
+  "bytes_saved": 221432,
+  "title": "Code Understanding, Oversight and Evolution | Sourcegraph",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Give humans and agents complete context to understand, oversee, and evolve the world's largest, most complex codebases."
+    },
+    {
+      "key": "og:title",
+      "value": "Sourcegraph — Code Understanding, Oversight and Evolution"
+    },
+    {
+      "key": "og:description",
+      "value": "Give humans and agents complete context to understand, oversee, and evolve the world's largest, most complex codebases."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Sourcegraph"
+    }
+  ],
+  "text": "Code Understanding, Oversight and Evolution | Sourcegraph\nThe codebase visibility security framework ebook | Download now\nPlatform\nSolutions\nResources\nPricing\nSchedule a demo\nDeep Search\nAgentic, natural language AI search\nCode Search\nPowerful search for complex codebases\nAgentic Batch Changes\nNew\nFrontier agent for code change at scale\nInsights\nHigh-level code metrics and analytics\nMCP\nCode graph knowledge for agents\nAPIs\nIntegrate with Sourcegraph\nCLI\nSourcegraph in your terminal\nCode Migrations and Modernization\nModernize and migrate codebases at scale\nCode security\nSecurity visibility and remediation at scale\nCode understanding\nGive every engineer complete codebase context\nAgent effectiveness\nGive AI coding agents the context to succeed\nResources hub\nGuides, reports, and more\nCase studies\nReal-world results from our customers\nEvents\nConferences, webinars, and meetups\nPartners\nCloud, technology, and channel partners\nBlog\nProduct + engineering updates\nChangelog\nWhat's changed in Sourcegraph\nDocumentation\nGet help using Sourcegraph\nSecurity\nExplore our security and compliance portal\nPublic Code Search\nSearch across 1M+ public repositories\nThe\ncontext\nlayer\nfor\nyour\nentire\ncodebase\nEmpower agents and developers to make faster decisions, improve AI-generated code, and execute code changes at scale.\nGet a demo →\nNow generally available\nIntroducing Agentic Batch Changes\nThe frontier agent for code changes at scale.\nLearn more →\nTrusted by 200+ enterprise engineering teams\nThe problem\nA tidal wave of code is coming.\nCode is growing faster than teams can understand or control it.\nAgents\nsee\nonly\nfragments\nof\nthe\nenterprise\ncodebase,\nrebuilding\ncontext\nfor\neach\ntask.\nAs\nagent\nadoption\ngrows,\nthat\nblind\nspot\nbecomes\ninconsistency,\nmissed\nchanges,\nand\nrisk\nat\nscale.\nThis\nis\nwhere\nengineering\nteams\nlose\ncontrol.\nThe solution\nTake back control with complete codebase context\nSourcegraph indexes all of your repositories across the entire codebase, intelligently empowering agents with full context, driving improved outcomes.\nExecute the same task with dramatically different results.\nCoding Agent\nAgent\nRead\nmodels/user.go\nI'll add a Role field to the User struct and update the store methods.\n|\nI'll add a Role field to the User struct and update the store methods.\nEdit\nmodels/user.go\n— added Role string field\nEdit\ndatabase/user_store.go\n— updated Create/Update\nDone! I've added:\nDone! I've added:\nRole field to the User struct\nRole field to the User struct\nUpdated Create and Update to persist the role\nUpdated Create and Update to persist the role\nAdded a GetByRole query method\nAdded a GetByRole query method\nYou'll want to add a migration for the new column and update your auth checks.\nWhat the agent missed\nAuth middleware\n— no role check, any user can access admin routes\nAPI response DTO\n— role never returned to clients\nAudit logging\n— role changes not tracked, no compliance trail\n/admin frontend routes\n— no guard, UI still accessible to all\nInvite flow\n— new users created without a default role\n4 integration tests\n— assert on user shape, will break\nCoding Agent\nAgent\n+\nSourcegraph MCP\nsg mcp\nsg_keyword_search\n\"User struct\" across 2,847 repositories\nFound 31 files referencing User across 7 layers\nmodels/user.go\nmiddleware/auth.go\napi/dto/user_response.go\nroutes/admin/guard.ts\n+27 more files\nThis is a cross-cutting change. Here's my plan:\n|\nThis is a cross-cutting change. Here's my plan:\nPlan\n8 steps\n1.\nDB migration\n2.\nModel\n3.\nAuth middleware\n4.\nAPI DTO\n5.\nAudit logging\n6.\nInvite flow\n7.\nFrontend\n8.\nTests\nEdit\n12 files across 7 layers\nComplete. All layers updated, tests passing. Full diff ready for review.\n|\nComplete. All layers updated, tests passing. Full diff ready for review.\nNothing missed\nAuth middleware\nAPI response DTO\nAudit logging\nFrontend routes\nInvite flow\nIntegration tests\nStripe makes their fleet of internal AI agents more effective with the Sourcegraph MCP server\nRead more ↗\n\"Minions\nare\nconnected\nto\nMCP…\nthis\nis\nhow\nthey\ngather\ncontext:\ninternal\ndocs,\nticket\ndetails,\nbuild\nstatuses,\nand\ncode\nintelligence\nvia\nSourcegraph\nsearch.\"\n— Alistair Gray, Stripe\nSourcegraph\nUnderstand.\nOversee.\nEvolve.\nThe platform that gives you control of your codebase.\nCode understanding.\nUnderstand your codebase, completely. Agents are only as good as the context they receive. Sourcegraph gives them full codebase intelligence.\nDeep Search.\nAsk complex questions in natural language. Get grounded answers with citations. Used by engineering, support, and go-to market teams.\nHow are versioned docs deployed to sourcegraph.com?\nWill Dollman, Security Engineer\nHow do we handle database migrations and schema changes across services?\nErik Seliger, Software Engineer\nWhat design tokens and color variables are used across our UI components?\nTaiyab Raja, Product Designer\nIs there a way to limit or allocate searches on an individual or team level for Deep Search?\nAshley Singh, Account Executive\nMCP Server.\nMake every token count. Give agents complete, SCIP-powered context to produce reliable results with fewer retries and lower inference spend.\nCode Search.\nSearch your entire codebase with exact, deterministic, and exhaustive results. Trusted by enterprise teams for over a decade.\nCode oversight.\nKeep up with what's changing. Understand system-wide impact before changes ship. Track patterns, monitor risk, and stay ahead of issues as code evolves.\nCode Insights.\nTrack migrations, adoption, and risk across your codebase over time.\nCode Monitoring.\nAlert agents and teams when code changes.\nLiving Documentation.\nA continuously updated knowledge base of your codebase.\nCodebase evolution.\nExecute changes safely and at scale. Making one change is easy. Making it everywhere, correctly, is not.\nNew batch change\n›\nOnboarding\nModernization\nCode health\nSecurity\nRun\nAgentic Batch Changes.\nAI agent for large-scale code changes. Migrate, modernize, and remediate across every repository with full control.\nUnderstanding\nOversight\nEvolution\nBuilt for Big Code\nTrusted. Scalable. Enterprise-ready.\nSOC2 Type II + ISO27001 Compliance.\nYour code and data stay secure.\nZero data retention.\nYour LLM inference is never stored beyond what's required and never shared with third parties.\nBuilt to scale.\nHandles the world's largest monorepos and multi-repo architectures.\nEnterprise authentication.\nSSO (SAML, OpenID Connect, OAuth), SCIM provisioning and lifecycle management, and RBAC for secure, centralized authentication.\nDedicated support.\nAccount Managers + Support Engineers provide dedicated help.\nGuide\nThe Sourcegraph guide to surviving Big Code\nDiscover 100 ways to understand, oversee, and evolve large codebases. This guide explores practical ways for navigating Big Code and keeping your team and agents in control.\nDownload guide\nTake control of your codebase\nUnderstand it. Oversee it. Evolve it with confidence at Big Code scale.\nGet a demo →\n✕\nCodeScaleBench Report\nLearn how Sourcegraph makes agents faster, cheaper, and more accurate.\nDownload →\nCode understanding for humans and agents\nPlatform\nDeep Search\nCode Search\nMCP server\nAgentic Batch Changes\nSearch public code\nPricing\nSolutions\nCode Migrations and Modernization\nCode security\nCode understanding\nAgent effectiveness\nResources\nDocumentation\nResource library\nBlog\nChangelog\nCase studies\nPartners\nEvents\nSecurity portal\nCompany\nAbout\nCareers\nContact\nHandbook\nBrand Guide\nSystem status\nTerms of service\nPrivacy policy\nCookie preferences\nDo not sell",
+  "links": [
+    {
+      "href": "./_docssvc/immutable/entry/start.C9QyPUkT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/0bwItTKD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DObMdVBT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/Ct6gPu9y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/myJsNLsG.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/XZB7MQ3X.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/-UyI9lYi.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/C6nRtXnV.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CdLO5njw.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/B17Q6ahh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/entry/app.BWV_5dPk.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/PPVm8Dsz.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DKfudyHT.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CxIeIrGe.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DsnmJJEf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DFTZJPyB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/BbQbsRqI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/BrHEmbcO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DfDrp15m.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DKF3y0Hm.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DNavBS-I.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/nodes/0.BP8q4Or0.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CjdYZyh6.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DynBlgLh.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CMY0bLWD.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DVJrhl0g.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/ysNLnGIJ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/fK6iK2gt.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DptAQN3O.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/nodes/5.DlbMuv5X.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DwUewZRf.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CLnkuw6L.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/RoXIHDzN.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/Brjerpfr.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/Dgru73fR.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/BNHP1Qtd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DuqqIYeP.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/cSwYob2T.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/5U9lTyfn.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DDSe9Q4D.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DTnB-7kX.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/nodes/21.DrgiHZ1Y.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CfvajiMd.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/B4UdWYKZ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DBNyGZ5J.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/Cr3t4b0U.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/BKhGesCB.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DrtTjjsI.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/Dud_u3bQ.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DVmBShKO.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/vv6i5wf5.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/DVinOMzj.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/hrW2f7ou.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/CIHcwBlC.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/immutable/chunks/BJ9ErVoL.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "./_docssvc/env.js",
+      "rel": "modulepreload"
+    },
+    {
+      "href": "data:image/png;base64,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",
+      "rel": "icon"
+    },
+    {
+      "href": "https://sourcegraph.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/0.6JHO-oaE.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/Container.Cn4qktPY.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/Icon.BSsvpd_Q.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/5.MO4nQO7O.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/TileTransition.DHGxubY-.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/CTALink.BvaXp2lL.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/LogoMarquee.DTL2eWje.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/AgentComparison.C917N8WR.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/SurvivalGuideCTA.C2v73_4R.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./_docssvc/immutable/assets/21.6R3POkYf.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://sourcegraph.com/cdn-cgi/content?id=GcO6YZua8XpYO_BngN5I9OQW63kTweLGv7CRx.x_uug-1789938055.7007046-1.2.1.1-ROaFKXxEzUJHk6nj7WSVsO2RiMEV4GvMEsEHaP8Vn3rDl9n9V2MHhvA0ndE98AUI",
+      "rel": "nofollow noopener"
+    },
+    {
+      "href": "https://sourcegraph.com/resources/ebooks/the-codebase-visibility-security-framework",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/contact/request-info",
+      "rel": null
+    },
+    {
+      "href": "/deep-search",
+      "rel": null
+    },
+    {
+      "href": "/code-search",
+      "rel": null
+    },
+    {
+      "href": "/agentic-batch-changes",
+      "rel": null
+    },
+    {
+      "href": "/code-insights",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/docs/api",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/docs/cli",
+      "rel": null
+    },
+    {
+      "href": "/solutions/code-migrations-and-modernization",
+      "rel": null
+    },
+    {
+      "href": "/solutions/security",
+      "rel": null
+    },
+    {
+      "href": "/solutions/code-understanding",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agent-effectiveness",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/docs",
+      "rel": null
+    },
+    {
+      "href": "https://security.sourcegraph.com/",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/search",
+      "rel": null
+    },
+    {
+      "href": "/contact/request-info",
+      "rel": null
+    },
+    {
+      "href": "/agentic-batch-changes",
+      "rel": null
+    },
+    {
+      "href": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/deep-search",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/code-search",
+      "rel": null
+    },
+    {
+      "href": "/code-insights",
+      "rel": null
+    },
+    {
+      "href": "/agentic-batch-changes",
+      "rel": null
+    },
+    {
+      "href": "/resources/ebooks/surviving-big-code",
+      "rel": null
+    },
+    {
+      "href": "/contact/request-info",
+      "rel": null
+    },
+    {
+      "href": "/resources/ebooks/code-scale-bench-report",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/sourcegraph",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://x.com/Sourcegraph",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/4803356/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/c/Sourcegraph",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/deep-search",
+      "rel": null
+    },
+    {
+      "href": "/code-search",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/agentic-batch-changes",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/search",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/solutions/code-migrations-and-modernization",
+      "rel": null
+    },
+    {
+      "href": "/solutions/security",
+      "rel": null
+    },
+    {
+      "href": "/solutions/code-understanding",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agent-effectiveness",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.com/docs",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "https://security.sourcegraph.com/",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/jobs",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.notion.site/d7614e3e9dc04c09ac2d42d57f1816e6?v=2a6d426dbae14390b155120b0c029ce0",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraph.notion.site/Brand-guide-15aa8e11265880a6baecf35d6d3617ac",
+      "rel": null
+    },
+    {
+      "href": "https://sourcegraphstatus.com/",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/terms/privacy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.3437
+}

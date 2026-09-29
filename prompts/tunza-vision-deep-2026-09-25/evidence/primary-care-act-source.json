@@ -1,0 +1,28 @@
+{
+  "id": "primary-care-act-source",
+  "requested_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24/source.pdf",
+  "accessed_utc": "2026-09-25T02:52:49.202965+00:00",
+  "status": 200,
+  "final_url": "https://new.kenyalaw.org/akn/ke/act/2023/13/eng@2023-11-24/source.pdf",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Fri, 25 Sep 2026 02:52:50 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "904649",
+    "Connection": "close",
+    "Content-Disposition": "attachment; filename=Primary Health Care Act.pdf",
+    "Expires": "Sat, 26 Sep 2026 02:52:50 GMT",
+    "Cache-Control": "max-age=86400",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Vary": "Accept-Language, Hx-Request, Hx-Target",
+    "Content-Language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Request-Id": "none",
+    "Strict-Transport-Security": "max-age=15724800; includeSubdomains"
+  },
+  "bytes": 904649,
+  "sha256": "0d602bc6dfeccad023de07021b9cf91976c218f95fdb6dea3842da623a0434ef",
+  "file": "primary-care-act-source.pdf"
+}

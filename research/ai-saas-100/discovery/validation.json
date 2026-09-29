@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task_id": "2.a",
+  "started_at_utc": "2026-09-20T21:10:23.820675+00:00",
+  "ended_at_utc": "2026-09-20T21:10:24.033100+00:00",
+  "elapsed_seconds": 0.212298,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/discovery/build_registry.py",
+    "--check"
+  ],
+  "working_directory": "/Users/evanmotovich/fusion-harness",
+  "exit_status": 0,
+  "stdout": "{\n  \"mode\": \"check\",\n  \"selected\": 100,\n  \"alternates\": 25,\n  \"eligible\": 125,\n  \"excluded\": 34,\n  \"pool_sha256\": \"dc638f82d37dd09a13b2141e3c369bd63fb7b15d9fc590ebc6c819d30de0ddae\",\n  \"pilot_products\": [\n    {\n      \"id\": \"001\",\n      \"name\": \"Smodin\",\n      \"category\": \"C01\"\n    },\n    {\n      \"id\": \"002\",\n      \"name\": \"LinkBunny\",\n      \"category\": \"C02\"\n    },\n    {\n      \"id\": \"003\",\n      \"name\": \"Northlight\",\n      \"category\": \"C03\"\n    }\n  ],\n  \"evidence_records\": 185,\n  \"assertions\": \"passed\"\n}\n\n",
+  "stderr": "",
+  "checks": [
+    "Offline deterministic replay matches all four generated outputs",
+    "All frozen input and source-record hashes match",
+    "100 contiguous selected IDs, 25 disjoint alternates, ten per stratum, three distinct pilot strata",
+    "Every selected/alternate identity has first-party evidence; no execution, adoption, or completion inflation",
+    "All captured-body hashes and every indexed excerpt/locator match their source record",
+    "Ambiguous name remains unresolved with five search-response records, not silently substituted"
+  ],
+  "status": "passed",
+  "network_requests": 0,
+  "model_inference_calls": 0,
+  "scope": "Offline discovery artifacts only, not a product test or campaign acceptance."
+}

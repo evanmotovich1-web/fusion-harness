@@ -1,0 +1,129 @@
+{
+  "evidence_id": "web-5092c1a9d94c652e1ca8",
+  "source_url": "https://www.sudowrite.com/",
+  "retrieved_at": "2026-09-20T21:00:09.404549+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://sudowrite.com/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/5092c1a9d94c652e1ca8.html",
+  "capture_sha256": "dc10891ab315fb9afd78c87a0458b955d1bea9d5cf499a31bc8e36181cc988f3",
+  "bytes_saved": 262144,
+  "title": "Sudowrite - Best AI Writing Partner for Fiction",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Write your novel faster with the best AI tool for fiction. Start for free today and see why The New Yorker calls it \"a salvation\" for writers and why The New York Times, The Verge, and many more love Sudowrite."
+    },
+    {
+      "key": "og:title",
+      "value": "Sudowrite - Best AI Writing Partner for Fiction"
+    },
+    {
+      "key": "og:description",
+      "value": "Write your novel faster with the best AI tool for fiction. Start for free today and see why The New Yorker calls it \"a salvation\" for writers and why The New York Times, The Verge, and many more love Sudowrite."
+    }
+  ],
+  "text": "Sudowrite - Best AI Writing Partner for Fiction\nMuse\nFAQ\nPricing\nLog in\nMuse\nFAQ\nPricing\nNew\nMuse 1.5, our AI model built just for fiction\n->\nNew\nIntroducing Muse 1.5\n->\nTry the\nAI writing\ntool with\nunparalleled\nstory smarts.\nSudowrite\nis the non-judgemental AI writing partner you always wanted.\nTry Sudowrite for free\nTry Sudowrite for free\nTry Sudowrite for free\nSign up with Google\nSign up with Google\nSign up with Google\nAs seen in",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/5P8G75bSTVJjQUUwQiqbW3rrU74.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/5P8G75bSTVJjQUUwQiqbW3rrU74.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/QCeJzXxRJC6SF9Wc7FSkc1qkA.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://sudowrite.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Nanum+Pen+Script:ital,wght@0,400&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "./muse",
+      "rel": null
+    },
+    {
+      "href": "./faq",
+      "rel": null
+    },
+    {
+      "href": "./pricing",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/app",
+      "rel": null
+    },
+    {
+      "href": "./",
+      "rel": null
+    },
+    {
+      "href": "./muse",
+      "rel": null
+    },
+    {
+      "href": "./faq",
+      "rel": null
+    },
+    {
+      "href": "./pricing",
+      "rel": null
+    },
+    {
+      "href": "./muse",
+      "rel": null
+    },
+    {
+      "href": "./muse",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/?GoogleLogin=true",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/?GoogleLogin=true",
+      "rel": null
+    },
+    {
+      "href": "https://editor.sudowrite.com/?GoogleLogin=true",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.5942
+}

@@ -1,0 +1,1694 @@
+{
+  "evidence_id": "r019-7c84afe98c97c47fd958",
+  "source_url": "https://www.docsumo.com/intelligent-document-processing",
+  "publisher": "www.docsumo.com",
+  "retrieved_at": "2026-09-20T21:35:31.159485+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.docsumo.com/intelligent-document-processing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/019/research/captures/7c84afe98c97c47fd958.html",
+  "capture_sha256": "88f12be24a549d38d91d9137884b512dd9bfa17cb29fcc9fd4d36480e69a205c",
+  "bytes_saved": 207699,
+  "title": "Intelligent Document Processing | IDP Guides & Insights",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Explore intelligent document processing with practical workflows, evaluation criteria, and examples focused on accuracy, scale, and measurable outcomes."
+    },
+    {
+      "key": "og:title",
+      "value": "Intelligent Document Processing | IDP Guides & Insights"
+    },
+    {
+      "key": "og:description",
+      "value": "Explore intelligent document processing with practical workflows, evaluation criteria, and examples focused on accuracy, scale, and measurable outcomes."
+    }
+  ],
+  "text": "Intelligent Document Processing | IDP Guides & Insights\nPlatform\nSolutions\nBY TOOLS\nDocument AI Software\nIDP Software\nOCR Software\nCareers\nDocument Automation\nDocument Data Extraction\nDocument Scanning\nBY DOCUMENT TYPES\nBank Statements\nUtility Bills\nCareers\nACORD forms\nInvoices\nBank Checks\nBill of Lading\nBY INDUSTRIES\nCommercial Lending\nFinancial Services\nCareers\nHealthcare\nCommercial Banking\nExplore All Solutions\nCustomers\nPricing\nResources\nLEARN\nBlogs\nCompare\nCase Studies\nFAQs\nSupport Docs\nCareers\nCOMPANY\nAbout Us\nEnterprise Plan\nTerms of Use\nPrivacy Policy\nCareers\nLog In\nTry For Free\nBook A Demo\nOverview\nCapabilities\nBest Software\nGuides\nMost Read Blogs\nCAPABILITIES\nCore IDP Engine\nIntelligent Document Processing\nDocument Intelligence\nDocument Classification\nLayout Detection\nContextual Data Extraction\nMulti-Document Handling\nCross-Document Linking\nOCR & Text Intelligence\nAI OCR\nHandwriting Recognition\nImage Enhancement\nMultilingual OCR\nLow-Resolution Recovery\nText Normalization\nCharacter Error Correction\nSemantic Text Parsing\nData Extraction & Structuring\nTable Extraction\nSchema Mapping\nFew-Shot Model Training\nMulti-Page Table Parsing\nFinancial Field Detection\nWorkflow Automation\nException Handling\nSLA Monitoring\nHuman-in-the-Loop Review\nEvent-Based Triggers\nAuto-Routing\nGovernance & Security\nSOC 2 Compliance\nGDPR Compliance\nHIPAA Compliance\nData Encryption\nRole-Based Access Control\nAutomated Redaction\nPII Detection\nAudit Trails\nAgentic & Advanced AI\nAgentic Document Workflows\nSemantic Search\nAI Summarization\nAgentic Document Processing\nCross-Field Reasoning\nRAG Integration\nReinforcement Learning Optimization\nDocument Embeddings\nBEST SOFTWARE\nOCR & Extraction Tools\nBest OCR Software in 2026\nBest OCR API for Developers\nBest PDF OCR Software\nBest OCR Software for Scanned Documents\nBest AI Data Extraction Tools\nBest Data Extraction Software\nBest AI OCR Tools for Enterprises\nBest Handwriting Recognition Software\nBest Table Extraction Software\nBest Document Parsing Tools\nIntelligent Document Processing (IDP)\nBest Intelligent Document Processing Software\nBest Document Automation Software\nBest Template-Free Data Extraction Software\nBest AI Document Understanding Tools\nTop IDP Platforms for Enterprises\nBest Document AI Platforms\nAccounts Payable & Invoice Automation\nBest Accounts Payable Automation Software\nBest Invoice Processing Software\nBest Purchase Order Automation Software\nBest Invoice OCR Software\nBest Accounts Payable Software with OCR\nBest AP Automation Platforms for Mid-Market\nBest Invoice Data Capture Software\nLending & Financial Services\nBest Bank Statement Extraction Software\nBest Bank Statement OCR Tools\nBest Mortgage Document Automation Software\nBest Underwriting Automation Platforms\nBest Loan Processing Automation Software\nBest Financial Document Processing Software\nBest KYC Document Verification Software\nBest Commercial Real Estate Document Automation Tools\nBest Insurance Document Processing Software\nWorkflow & Integration\nBest Document Workflow Software\nBest Agentic Document Workflow Platform\nBest ERP-Integrated Document Automation Software\nBest RPA and OCR Integration Tools\nBest No-Code Document Automation Tools\nBest API-Based Document Processing Platforms\nGUIDES\nFoundational IDP Guides\nIDP Implementation Challenges\nBuilding an IDP Stack\nMeasuring IDP ROI\nIDP vs OCR\nAccounts Payable & Finance\nPurchase Order Automation\nExpense Management Automation\nDuplicate Invoice Detection\n2-Way vs 3-Way Matching\nAccounts Payable Automation\nInvoice Processing Automation\nLending & BFSI\nIdentity Verification Automation\nCompliance Document Automation\nBank Statement Data Extraction\nLending Automation with AI\nMortgage Document Automation\nInsurance Claims Automation\nTechnical Deep Dives\nIDP vs OCR vs Document AI vs Agentic Processing\nRAG for Document AI\nHuman-in-the-Loop Systems\nExtracting Data from PDFs\nImproving OCR Accuracy\nTable Extraction from Complex PDFs\nLLMs in Document Processing\nIndustry-Specific Guides\nHealthcare Document Processing\nMOST READ BLOGS\nIntelligent Document Processing\nBank Statement Extraction\nInvoice Processing\nOptical Character Recognition\nData Extraction\nRobotic Processing Automation\nWorkflow Automation\nLending\nInsurance\nSAAS\nCommercial Real Estate\nData Entry\nAccounts Payable\nDropdown\nLink 1\nLink 2\nLink 3\nOverview\n>\nMost Read Blogs\n>\nIDP\nIntelligent Document Processing\nExplore intelligent document processing with practical workflows, evaluation criteria, and Docsumo-ready examples that focus on accuracy, scale, and measurable outcomes.\nBlog\nDescription\nTransforming Treasury Operations With Intelligent Document Processing\nHudson partners with Docsumo to achieve 99% automation in check processing, saving treasury teams hundreds of hours monthly while reducing fraud risk through intelligent document processing.\n50 Key Statistics and Trends in Intelligent Document Processing (IDP) for 2025\nDiscover 50 key Intelligent Document Processing trends & stats for 2025! Learn how AI-driven document processing boosts efficiency, accuracy & automation. See why businesses trust Docsumo for 10× faster workflows.\nWhat is Intelligent Document Processing (IDP)?\nLearn about Intelligent Document Processing (IDP) and how it uses AI to automate data extraction, classification, and workflows, improving document management.\nIntelligent Document Processing (IDP) to Optimize Business Operations in Utilities\nExplore how Intelligent Document Processing (IDP) technology overcomes bottlenecks in manual utility data extraction processes and optimizes business operations.\nHow Intelligent Document Processing Transforms the Lending Industry\nLearn about Intelligent Document Processing (IDP) in the lending industry. Check how IDP improves document management workflows and enhances efficiency.\nUnstructured Data Processing Using Intelligent Document Processing (IDP)\nLearn to use Intelligent Document Processing (IDP) to manage unstructured data efficiently. Check how IDP revolutionizes data management across industries.\nFuture of Intelligent Document Processing: How Will Automation Reshape Document Processing?\nLearn about the advancements and possibilities shaping the future of Intelligent Document Processing (IDP). See how IDP enhance accuracy and boost efficiency.\nDoes Intelligent Document Processing (IDP) Use Artificial Intelligence\nLearn if intelligent document processing uses artificial intelligence and explore how IDP with AI enhances document processing.\nHow Intelligent Document Processing (IDP) Transforms Content Management\nLearn to use intelligent document processing in content management. Capture, organize, and utilize data from documents with automation & AI-powered solutions.\n10 Intelligent Document Processing Examples & How They Work\nLearn about the 10 real-world intelligent document processing examples that simplify workflows, improve accuracy, and boost efficiency across industries.\nIntelligent Document Processing in the Commercial Real Estate Industry\nLearn about Intelligent Document Processing (IDP) in commercial real estate. Check how IDP improves document management workflows and enhances efficiency.\n7 Key Intelligent Document Processing Challenges and Their Solutions\nDon't let document processing challenges hold back your business! Explore 7 common intelligent document processing challenges and discover effective solutions.\nTop 6 Intelligent Document Processing Trends 2025\nExplore the top intelligent document processing trends for this year that are changing the businesses capture and analyze data for business decision-making\nHow Does Intelligent Document Processing in Healthcare Industry Boost Efficiency?\nDiscover how IDP automates document processing, improves efficiency, and boosts patient care. Explore use cases and the future of IDP in healthcare.\n8 Ways Intelligent Document Processing Transforms Business Processes\nDiscover how Intelligent Document Processing (IDP) can help revolutionize your business, boost agility, and drive significant transformation in your day-to-day processes.\nBest Utility Bill Management Systems\nA utility bill management system is a software solution that helps businesses accurately store digitized bills, extract relevant data from utility bills, and gain insights from sourced data.\nWhat is Intelligent Document Processing (IDP) Software? [Comprehensive Guide]\nIntelligent Document Processing is an advanced technological solution designed to automate the extraction, processing, and interpretation of data from various documents. It leverages artificial intelligence (AI), machine learning (ML), and optical character recognition (OCR) to transform unstructured data into structured, actionable information.\nMaximizing workflow efficiency: A guide to streamlining document processing\nDocument processing automation is not just a matter of convenience. It is a fundamental aspect of efficiency. Maximizing document management efficiency involves more than shifting from manual to automated processes.\nNanonets vs Docsumo: Choosing the best intelligent document processing AI\nExplore the nuanced differences between Nanonets and Docsumo in our comprehensive comparison guide. Make an informed decision on the right intelligent document processing AI for your business needs. Dive into features, performance, and user experiences to streamline your document workflow effectively.\nRossum vs Docsumo: Choosing the Right Document Processing Solution\nCompare Docsumo and Rossum for streamlined document processing. Explore features, reviews, and insights to make an informed decision for your business.\nEnhance business efficiency with Intelligent Document Processing\nDiscover the transformative power of Intelligent Document Processing (IDP) in revolutionizing document management across finance, insurance, human resources, procurement, and logistics. Dive into this comprehensive guide to learn how to choose the right IDP tool, automate data extraction with AI-driven technologies, leverage natural language processing (NLP), automate workflows, handle exceptions, ensure scalability, and implement robust data security measures.\nHow Digital Transformation and Customer Experience Are Fueling Success\nDigital transformation and customer experience go hand-in-hand. Learn how to leverage digital technologies to deliver exceptional customer experiences.\nAutomated Medicaid Application Processing Guide\nExplore Medicaid's significance, eligibility criteria, its pivotal role during the pandemic, and how Docsumo's document processing platform can simplify Medicaid-related document workflows, ensuring efficient and accurate healthcare access for low-income individuals and families\nThe guide to process automation for unstructured documents\nLearn how artificial intelligence and natural language processing can extract valuable insights from text, images, audio, and more. Discover the benefits, challenges, and best practices for successful automation in handling unstructured documents.\nUnlocking Efficiency and Insights: 10 Powerful Benefits of Intelligent Document Processing\nFrom streamlined data extraction and data-driven decision-making to enhanced accuracy and increased efficiency, IDP is shaping the future of document management and data processing. Learn how IDP can transform your business and drive success.\nThe Power of AI in Document Processing: Benefits, Technologies, and Trends\nDiscover why AI is revolutionizing document processing, its benefits across industries, key technologies like OCR and IDP, and future trends. Explore how Docsumo can help you streamline document workflows with AI-powered solutions.\nStreamlining Customer Onboarding with Automated Document Processing\nDiscover how automating document processing can streamline your customer onboarding process, reduce errors, and enhance efficiency. Learn the benefits, implementation steps, and real-life examples.\nStreamlining invoice approval workflow with document AI\nDiscover how Document AI can streamline and optimize your invoice approval workflow. Learn about automated data extraction, intelligent routing, and real-time tracking. Explore implementation strategies and real-life examples.\nBoosting Productivity: Document AI for Knowledge Management\nDiscover how Document AI can revolutionize knowledge management processes to enhance productivity. Learn about intelligent content organization, search capabilities, and collaboration. Explore implementation strategies and real-life examples.\nStreamlining contract management with document AI\nDiscover how Document AI can revolutionize contract management processes. Learn about intelligent contract analysis, automation, and enhanced compliance. Explore implementation strategies and real-life examples.\nOptimizing customer experience with intelligent document insights\nDiscover how intelligent document insights can revolutionize your customer experience. Learn how document AI enables data-driven decision-making, personalized interactions, and streamlined processes. Explore implementation steps and real-life examples.\nEmpowering talent management and employee onboarding with document AI\nDiscover how Document AI can transform HR processes, including employee onboarding and talent management. Explore intelligent resume screening, automated document processing, and compliance management. Learn from real-life examples and explore implementation strategies.\nOptimizing compliance and risk mitigation with Document AI\nDiscover how document AI can help your business achieve compliance and effectively mitigate risks. Explore the benefits, key features, implementation strategies, and real-life examples.\n10 Ways AI is Transforming Document Processing\nAI-based document processing is transforming the way businesses process documents. Learn how AI technology is improving efficiency, accuracy, and productivity, and transforming decision-making in business operations.\nHow Artificial Intelligence is Revolutionizing Data Capture?\n10 ways in which AI-based document processing is revolutionizing data capture, including adaptive learning, contextual understanding, complex data capture, integration with other technologies, advanced image recognition, and more.\nTransform Your Business With Automated Document Data Capture\nLearn why automated document data capture is crucial for your business and how it can improve efficiency, reduce costs, and increase productivity. Read on to explore real-world examples from the banking, logistics, healthcare, and insurance industries.\n5 Unavoidable Risks of Manual Document Processing\nManual document processing can create security and compliance vulnerabilities, waste human resources, and decrease productivity. This article delves into the top 5 unavoidable risks of manual document processing and explains how automated document processing can overcome these risks.\nWhy Does Your Business Need Document Automation in 2025?\nLearn how Intelligent Document Processing (IDP) and document automation can help your business save time, improve efficiency, and reduce the probability of errors.\nIntelligent Document Processing Workflow : How does intelligent document processing work?\nLearn about Intelligent Document Processing (IDP) and how it automates data capture and extraction from unstructured, semi-structured, and structured documents. Discover the benefits of IDP workflow, including more than 99% accurate data extraction, reducing operational costs by 60-70%, and improving efficiency by 10X, and explore its real-time use cases.\nThe Beginner’s Guide to Intelligent Document Processing (IDP)\nThis article is a comprehensive guide on intelligent document processing (IDP) for beginners. It covers what IDP is, the technologies that power it, and its real-world applications in various industries. The article also provides use-cases for IDP in accounting, banking, human resources, and insurance. Additionally, the article explores how IDP optimizes an organization's data, removes redundant tasks, and improves productivity by supporting employees in their jobs.\nThe Key Role of Document Processing In Data Management\nAutomated document processing systems streamline business operations and allow organizations to allocate resources to improve core business functionalities. Learn about the relevance of document processing in data management, the types of document processing, and tips to increase efficiency in data management with document processing.\nA quick introduction to Intelligent Text Processing\nIntelligent text processing refers to the use of various technologies and techniques, such as natural language processing (NLP), machine learning (ML), and artificial intelligence (AI), to analyze, understand, and extract valuable insights from unstructured textual data. ‍\nTop 10 AI-Based Document Processing Software for Technology Companies\nWe've accumulated the list of top 10 intelligent document processing software for technology companies in 2023. This article helps you in figure out the best solutions for your consideration set.\nAutomating Document Data Extraction: RPA vs AI\nAs companies are looking to automate their document data extraction, two of the most popular technologies come up – Robotic Process Automation (RPA) and Artificial Intelligence (AI). In this article, we help you decide which one is best suited for your needs out of RPA & AI.\nThe Future Of AI-Powered Document Processing\nIn this article, we discuss the future of Intelligent document processing and document ai technology. Given the benefits of scalability, quicker turn around time, and accuracy, the technology will continue to grow in coming years.\nA Quick Introduction to Zonal OCR\nZonal OCR is a type of Optical Character Recognition used to read any specific area of a document. A quick introduction to Zonal OCR, its applications, and how it works!\nWhat to look for in a Document Processing Software?\nFollow our step-by-step guide to selecting an automated document processing software based on your specific needs, including scale, need for automated document classification, required accuracy, need for customization, and cost/ROI considerations.\nIntroduction to Document Layout - Why OCR Solutions Need it?\nWhat is document layout and what is its importance in data extraction technologies such as Optical Character Recognition. Read this blog to learn about document layout and how does it work.\nHow to train a New Document using Docsumo\nIn this blog, we discuss step-by-step process to train Docsumo API for a new document type. Document is an AI software that automates document data capture & analytics.\nIntelligent Document Processing: Fueling Your Supply Chain with Automation\nRead this article to learn the significance and importance of intelligent document processing (IDP) in automating supply-chain workflow.\nFinancial Statement Spreading — Everything You Need to Know\nDefinition and scope of financial statement spreading. Read this blog to learn about automating financial statement spreading.\nImportance of RPA in Insurance Claim Processing and Why it Works so Well!\nRPA in insurance claims processing connects disparate applications and works with legacy systems to automate claims processing without causing any disruptions. Read this blog to learn different use-cases and benefits of RPA in insurance sector\nHow to Reduce Your Logistics Cost With Automation\nThe growth and development for Logistics sector and automation go hand-in-hand. If you're considering to automate your logistics operations, this blog is a must-read.\nRetail Automation: Use-cases and Benefits of Automation in Retail Industry\nTrends, use-cases, and benefits of automation in retail industry. Read this blog to learn which aspects of your business you can automate to maximize productivity and ROI.\nComprehensive Guide to Purchase Order Processing : What You need to know\nPO processing is the journey of the creation of a purchase order and its review, approval, dispatch, and delivery, going all the way to the closure of invoices and budget checks. Read this blog to learn how to automate PO processing.\nHow to use Purchase Order Automation to Streamline Your Business Operations with Docsumo\nWhat is purchase order and how to automate purchase order for your business. Docsumo streamlines PO processing with automated data capture using Intelligent OCR technology.\nA Quick Introduction to PDF Parser\nPDF parser or PDF scraper is a software used to extract data from PDF documents. A quick introduction to PDF parser and how it works!\nHow to Digitize Paperwork & Establish Paperless Processing at the Workplace\nPost-COVID19, the business world is rapidly moving towards paperless processing at the workplace. What are the factors that fuel this change and on what scale this change is happening, we discuss in this blog.\nWhich data capture solution is for you—OCR or Cognitive?\nTake a look into different data capture solution mechanism and find out which one might suit your business - Template based OCR or AI based cognitive data capture solution.\nThe Ultimate Guide to Mortgage Loan Processing\nA step-by-step guide to mortgage loan forms processing. Learn how you can automate data extraction from mortgage loan application forms and related documents.\nWhy use Automation Software for Document Processing in Logistics\nA quick introduction to supply chain and logistics document processing. Read this blog to learn how Docsumo can help you automate data extraction from different documents types commonly used in logistics industry.\nBenefits of Loan Processing Automation with Docsumo and How it Works\nDefinition of loan processing automation - steps involved in automated loan processing. Read this blog to learn about benefits of automating loan processing.\nBest Intelligent Document Processing Software in 2025\nDiscover the top 10 IDP software options available in 2025, empowering organizations to streamline document management, optimize workflows, and extract valuable insights from unstructured data.\nInsurance Automation for Claims Processing and How it Works\nA quick introduction to different automation technologies used in insurance underwriting and claim processing. Read this blog to learn about benefits of insurance automation and its different use-cases.\nAutomating data extraction for income verification documents for mortgage loans\nImportance and benefits of income document data extraction in BFSI industry. Learn how you can automate data extraction from income verification documents with Docsumo.\nA Comprehensive Look at Intelligent Document Processing Use-cases Across Diverse Industries\nUse-cases of Intelligent Document Processing in different industries - how different industries are approaching and adopting intelligent document processing in their day-to-day operations.\nWhat is an Intelligent Document Processing solution?\nRead this blog to learn about the importance, significance, and benefits of Intelligent Document Processing solutions for different businesses.\nIntelligent Document Processing in Finance - Uncomplicating, Accelerating and Streamlining your organization\nRead this article to learn how different financial services are using IDP for document processing and how the roadmap looks like if you decide to go that way.\nAll you need to know about Hyperautomation and How it works\nHyperautomation is a blend of AI, RPA, and Machine Learning to automate repetitive tasks for businesses and improve operational workflows. Read this blog to learn about benefits and eco-system of Hyperautomation.\nHow advanced image pre-processing has improved OCR Accuracy\nModern AI-driven OCR processes identify textual characters on two levels: they begin with identifying blocks of texts in a specific area – whether in an image or a document. Then, they determine each character in that block.\nWhy your Business needs a Financial Statements Automation Software\nWhy Your Business Needs A Financial Statements Automation Software. Read this blog to learn how to automate data extraction from financial statements.\nHow to Extract Data From Scanned Images/Documents\nBusinesses and individuals, often, have to extract data from scanned images/documents. Read this blog to learn about how you can extract data from scanned images/document with Docsumo's intelligent OCR technology.\nHow Digital Disruption in Insurance is Taking Shape in 2025\nLookout for digital disruptions happening in insurance industry in 2025. Read more to learn how straight-through processing and automated insurance data processing are going to change the insurance industry.\nA Step-by-Step Guide to Consolidated Accounts Statement\nA quick introduction to Consolidated Accounts Statement(CAS) and its importance for investors. We discuss the potential of its automation in this blog.\nClaims Automation : All You need to know about Insurance Claims Processing Automation\nWhat is claim processing? Steps involved in automated claims processing. Benefits of automated insurance claims processing using Artificial Intelligence.\nThe Ultimate Guide for Creating and Automating a Bill of Lading\nBill of Lading : What, How, and Why? A quick introduction to how automation can help you process hundreds of bill of lading documents per day and improve logistics.\nTop 5 Accounting Data Entry Software For Your Business\nFor businesses big and small, here are the top 5 data entry accounting software in the market today.\nRPA in Bank Statement Processing : From Bane to Boon\nBFSI sector is going through a massive owing to RPA adoption. In this blog, we discuss trends, benefits, and adoption rate of automation in bank statement processing.\nA comprehensive guide on automated PDF document processing\nAn introduction to manual and automated pdf data extraction and their limitations. Read more to learn about the trends of automated PDF document processing trends and how you can install automated PDF data capture solution in your system.\nA Practical Guide to Automated Form Processing\nDifferent industries collect data using multiple forms for analysis. In this blog, we discuss how industries process these forms and suggest whether you should go for automated form processing or the manual method.\nSubstantial Growth with Automated Document Processing\nIn this article, we cover different techniques used for document processing along with their pros and cons. This comparison will help you choose the best automated document processing software for your organization.\nReasons why you should consider Docsumo as a substitute to Ant.works\nIf you're looking for options to choose from, for the automated data extraction tool and you want an alternative for Ant.works, read this blog. In this blog, we answer if Docsumo can be a good alternative to Ant.works.\nSimplifying Insurance Forms : Processing and Automation of Acord Form 90\nA quick guide to Acord 90 and its importance. In this blog, we answer why companies are automating data extraction for Acord 90 form processing.\nHow to Automate Acord 28 Forms Processing with Docsumo\nA quick guide to Acord 28 and its importance. In this blog, we answer why companies are automating data extraction for Acord 28 form processing.\nSignificance and Importance of Acord Form 80 Automation\nA quick guide to Acord 80 and its importance. In this blog, we answer why companies are automating data extraction for Acord 80 form processing.\nAutomated Acord 27 Processing with Docsumo | Benefits of Acord Form Automation\nA quick guide to Acord 27 and its importance. In this blog, we answer why companies are automating data extraction for Acord 27 form processing.\nInsurance Form Automation: All you need to know about ACORD 26\nA quick guide to Acord 26 and its importance. In this blog, we answer why companies are automating data extraction for Acord 26 form processing.\nHow to Process Acord 140 Forms with Automated Data Extraction\nA quick guide to Acord 140 and its importance. In this blog, we answer why companies are automating data extraction for Acord 140 form processing.\nAn Introduction to Acord 126 Form Processing and its Automation\nA quick guide to Acord 126 and its importance. In this blog, we answer why companies are automating data extraction for Acord 126 form processing.\nDefinition and Benefits of Acord 131 : Steps to Automate Acord Form 131\nA quick guide to Acord 131 and its importance. In this blog, we answer why companies are automating data extraction for Acord 131 form processing.\nAcord 130 Automation – How it Works?\nA quick guide to Acord 130 and its importance. In this blog, we answer why companies are automating data extraction for Acord 130 form processing.\nGuide to ACORD form 127 Processing and Automation\nA quick guide to Acord 127 and its importance. In this blog, we answer why companies are automating data extraction for Acord 127 form processing.\nWhat is Acord 125 in Insurance? What are the Benefits of Automated Data Extraction from Acord 125?\nA quick introduction to Acord 125 and its importance. Read this blog to learn how to read Acord 125 and automate the data extraction from it.\nAn Introduction to Financial Account Statements and different types\nLearn about different types of financial statements. Read more to learn about benefits and importance of these financial statements for BFSI industry.\nHow does table extraction from PDF/Images work?\nDocsumo has replaced the manual methodology of document processing with automated table extraction from PDF documents. Using intelligent OCR and Artificial Intelligence, Docsumo decreases the odds of mistakes by 95%.\nBest Utility Bill Management Systems\nWhat is Intelligent Document Processing (IDP) Software? [Comprehensive Guide]\nMaximizing workflow efficiency: A guide to streamlining document processing\nNanonets vs Docsumo: Choosing the best intelligent document processing AI\nRossum vs Docsumo: Choosing the Right Document Processing Solution\nEnhance business efficiency with Intelligent Document Processing\nHow Digital Transformation and Customer Experience Are Fueling Success\nAutomated Medicaid Application Processing Guide\nThe guide to process automation for unstructured documents\nUnlocking Efficiency and Insights: 10 Powerful Benefits of Intelligent Document Processing\nThe Power of AI in Document Processing: Benefits, Technologies, and Trends\nStreamlining Customer Onboarding with Automated Document Processing\nStreamlining invoice approval workflow with document AI\nBoosting Productivity: Document AI for Knowledge Management\nStreamlining contract management with document AI\nOptimizing customer experience with intelligent document insights\nEmpowering talent management and employee onboarding with document AI\nOptimizing compliance and risk mitigation with Document AI\n10 Ways AI is Transforming Document Processing\nHow Artificial Intelligence is Revolutionizing Data Capture?\nTransform Your Business With Automated Document Data Capture\n5 Unavoidable Risks of Manual Document Processing\nWhy Does Your Business Need Document Automation in 2025?\nIntelligent Document Processing Workflow : How does intelligent document processing work?\nThe Beginner’s Guide to Intelligent Document Processing (IDP)\nThe Key Role of Document Processing In Data Management\nA quick introduction to Intelligent Text Processing\nTop 10 AI-Based Document Processing Software for Technology Companies\nAutomating Document Data Extraction: RPA vs AI\nThe Future Of AI-Powered Document Processing\nA Quick Introduction to Zonal OCR\nWhat to look for in a Document Processing Software?\nIntroduction to Document Layout - Why OCR Solutions Need it?\nHow to train a New Document using Docsumo\nIntelligent Document Processing: Fueling Your Supply Chain with Automation\nFinancial Statement Spreading — Everything You Need to Know\nImportance of RPA in Insurance Claim Processing and Why it Works so Well!\nHow to Reduce Your Logistics Cost With Automation\nRetail Automation: Use-cases and Benefits of Automation in Retail Industry\nComprehensive Guide to Purchase Order Processing : What You need to know\nHow to use Purchase Order Automation to Streamline Your Business Operations with Docsumo\nA Quick Introduction to PDF Parser\nHow to Digitize Paperwork & Establish Paperless Processing at the Workplace\nWhich data capture solution is for you—OCR or Cognitive?\nThe Ultimate Guide to Mortgage Loan Processing\nWhy use Automation Software for Document Processing in Logistics\nBenefits of Loan Processing Automation with Docsumo and How it Works\nBest Intelligent Document Processing Software in 2025\nInsurance Automation for Claims Processing and How it Works\nAutomating data extraction for income verification documents for mortgage loans\nA Comprehensive Look at Intelligent Document Processing Use-cases Across Diverse Industries\nWhat is an Intelligent Document Processing solution?\nIntelligent Document Processing in Finance - Uncomplicating, Accelerating and Streamlining your organization\nAll you need to know about Hyperautomation and How it works\nHow advanced image pre-processing has improved OCR Accuracy\nWhy your Business needs a Financial Statements Automation Software\nHow to Extract Data From Scanned Images/Documents\nHow Digital Disruption in Insurance is Taking Shape in 2025\nA Step-by-Step Guide to Consolidated Accounts Statement\nClaims Automation : All You need to know about Insurance Claims Processing Automation\nThe Ultimate Guide for Creating and Automating a Bill of Lading\nTop 5 Accounting Data Entry Software For Your Business\nRPA in Bank Statement Processing : From Bane to Boon\nA comprehensive guide on automated PDF document processing\nA Practical Guide to Automated Form Processing\nSubstantial Growth with Automated Document Processing\nReasons why you should consider Docsumo as a substitute to Ant.works\nSimplifying Insurance Forms : Processing and Automation of Acord Form 90\nHow to Automate Acord 28 Forms Processing with Docsumo\nSignificance and Importance of Acord Form 80 Automation\nAutomated Acord 27 Processing with Docsumo | Benefits of Acord Form Automation\nInsurance Form Automation: All you need to know about ACORD 26\nHow to Process Acord 140 Forms with Automated Data Extraction\nAn Introduction to Acord 126 Form Processing and its Automation\nDefinition and Benefits of Acord 131 : Steps to Automate Acord Form 131\nAcord 130 Automation – How it Works?\nGuide to ACORD form 127 Processing and Automation\nWhat is Acord 125 in Insurance? What are the Benefits of Automated Data Extraction from Acord 125?\nAn Introduction to Financial Account Statements and different types\nHow does table extraction from PDF/Images work?\nTransforming Treasury Operations With Intelligent Document Processing\n50 Key Statistics and Trends in Intelligent Document Processing (IDP) for 2025\nWhat is Intelligent Document Processing (IDP)?\nIntelligent Document Processing (IDP) to Optimize Business Operations in Utilities\nHow Intelligent Document Processing Transforms the Lending Industry\nUnstructured Data Processing Using Intelligent Document Processing (IDP)\nFuture of Intelligent Document Processing: How Will Automation Reshape Document Processing?\nDoes Intelligent Document Processing (IDP) Use Artificial Intelligence\nHow Intelligent Document Processing (IDP) Transforms Content Management\n10 Intelligent Document Processing Examples & How They Work\nIntelligent Document Processing in the Commercial Real Estate Industry\n7 Key Intelligent Document Processing Challenges and Their Solutions\nTop 6 Intelligent Document Processing Trends 2025\nHow Does Intelligent Document Processing in Healthcare Industry Boost Efficiency?\n8 Ways Intelligent Document Processing Transforms Business Processes\nJoin 10,000+ Businesses Today\nSave 100+ hours a month by automating all your low-impact tasks so that your team can prioritize faster and accurate business decisions, every time.\nGet Your Free Trial Today\nGet in touch\nPhone:\n+1 (929) 822-4166\nEmail:\nsales@docsumo.com\nAbout Us\nPartners\nPress\nCareers\nFAQs\nSub-processors\nDocument Types\nBank Statements\nUtility Bills\nACORD Forms\nInvoices\nPay Slips\nW9 Forms\nBills of Lading\nBank Checks\nBuyers' Guides\nDocument AI Platform\nOCR Software\nBank Statement Converter\nInvoice Processing Solution\nDocument Automation Platform\nDocument Data Extraction App\nIntelligent Document Processing Tool\nDocument Scanning App\nUse Cases\nAccounts Payable\nRevenue Reconciliation\nCoI Tracking\nCommercial Underwriting\nCRE Underwriting\nFinancial Spreading\nForms Processing\nChecks Processing\nPlatform\nPlatform Overview\nAI Workflow Agents\nNEW\nData Extraction\nPre-trained Models\nTrain Custom Model\nTable Extraction\nHuman-in-the-loop Review\nTouchless Processing\nIntegrations\nCompare\nTungsten Automation Alternatives\nOcrolus Alternatives\nNanonets Alternatives\nABBYY FlexiCapture Alternatives\nRossum Alternatives\nGoogle Document AI Alternatives\nAmazon Textract Alternatives\nSalesforce Einstein Alternatives\nSee more pages...\nResources\nPDF to Text\nCEO's Newsletter\nBlogs\nGlossary\nCase Studies\neBooks\nSupport Docs\nAPI Docs\nSitemap\nTerms of Use\nPrivacy Policy\n©\n2025\nDocsumo. All rights reserved.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/css/docsumo-staging.webflow.shared.9863a0079.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/64be86eaa29fa71f24b00a24_favicon%2032%20px.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/64be86eaa29fa71f24b00661/64be86eaa29fa71f24b00914_favicon.webp",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.docsumo.com/intelligent-document-processing",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/platform/overview",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-ai-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/intelligent-document-processing-platform",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ocr-software",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-data-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-scanning-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-statements",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/utility-bills",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/acord-forms",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/invoices",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-checks",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bill-of-lading",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-lending",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-financial-services",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-healthcare",
+      "rel": null
+    },
+    {
+      "href": "/solutions/idp-for-commercial-banking",
+      "rel": null
+    },
+    {
+      "href": "/solutions",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/customers/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/faqs",
+      "rel": null
+    },
+    {
+      "href": "https://support.docsumo.com/",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/login?utm_source=website&utm_medium=navbar&utm_campaign=login-cta",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/signup?utm_source=website&utm_medium=navbar&utm_campaign=signup-cta",
+      "rel": null
+    },
+    {
+      "href": "/get-started?utm_source=website&utm_medium=navbar&utm_campaign=schedule-demo",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/capabilities",
+      "rel": null
+    },
+    {
+      "href": "/best-software",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/most-read-blogs",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-intelligent-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-document-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-document-classification",
+      "rel": null
+    },
+    {
+      "href": "/blog/layout-detection",
+      "rel": null
+    },
+    {
+      "href": "/blog/contextual-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/multi-document-handling",
+      "rel": null
+    },
+    {
+      "href": "/blog/cross-document-linking",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-ai-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-handwriting-recognition",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-image-enhancement",
+      "rel": null
+    },
+    {
+      "href": "/blog/multilingual-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/low-resolution-recovery",
+      "rel": null
+    },
+    {
+      "href": "/blog/text-normalization",
+      "rel": null
+    },
+    {
+      "href": "/blog/character-error-correction",
+      "rel": null
+    },
+    {
+      "href": "/blog/semantic-text-parsing",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-table-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-schema-mapping",
+      "rel": null
+    },
+    {
+      "href": "/blog/few-shot-model-training",
+      "rel": null
+    },
+    {
+      "href": "/blog/multi-page-table-parsing",
+      "rel": null
+    },
+    {
+      "href": "/blog/financial-field-detection",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-exception-handling",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-sla-monitoring",
+      "rel": null
+    },
+    {
+      "href": "/blog/human-in-the-loop-review",
+      "rel": null
+    },
+    {
+      "href": "/blog/event-based-triggers",
+      "rel": null
+    },
+    {
+      "href": "/blog/auto-routing",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-soc-2-compliance",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-gdpr-compliance",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-hipaa-compliance",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-data-encryption",
+      "rel": null
+    },
+    {
+      "href": "/blog/role-based-access-control",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-redaction",
+      "rel": null
+    },
+    {
+      "href": "/blog/pii-detection",
+      "rel": null
+    },
+    {
+      "href": "/blog/audit-trails",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-agentic-document-workflows",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-semantic-search",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-ai-summarization",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-agentic-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/cross-field-reasoning",
+      "rel": null
+    },
+    {
+      "href": "/blog/rag-integration",
+      "rel": null
+    },
+    {
+      "href": "/blog/reinforcement-learning-optimization",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-embeddings",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-ocr-software-comparison",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ocr-api-for-developers",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-pdf-ocr-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ocr-software-for-scanned-documents",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-ai-data-extraction-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-data-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ai-ocr-tools-for-enterprises",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-handwriting-recognition-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-table-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-parsing-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-intelligent-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-template-free-data-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ai-document-understanding-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/top-idp-platforms-for-enterprises",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-ai-platforms",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-accounts-payable-automation-software-comparison",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-invoice-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-purchase-order-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-invoice-ocr-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-accounts-payable-software-with-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-ap-automation-platforms-for-mid-market",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-invoice-data-capture-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-bank-statement-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-bank-statement-ocr-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-mortgage-document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-underwriting-automation-platforms",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-loan-processing-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-best-financial-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-kyc-document-verification-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-commercial-real-estate-document-automation-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-insurance-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-workflow-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-agentic-document-workflow-platform",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-erp-integrated-document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-rpa-ocr-integration-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-no-code-document-automation-tools",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-api-based-document-processing-platforms",
+      "rel": null
+    },
+    {
+      "href": "/blog/implementation-challenges",
+      "rel": null
+    },
+    {
+      "href": "/blog/building-an-idp-stack",
+      "rel": null
+    },
+    {
+      "href": "/blog/measuring-idp-roi",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-idp-vs-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/purchase-order-automation-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/expense-management-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/duplicate-invoice-detection",
+      "rel": null
+    },
+    {
+      "href": "/blog/2-way-vs-3-way-matching",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-accounts-payable-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-invoice-processing-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/identity-verification-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/compliance-document-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/bank-statement-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/lending-automation-with-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/mortgage-document-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-insurance-claims-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/difference-between-idp-ocr-document-ai-agentic-workflows",
+      "rel": null
+    },
+    {
+      "href": "/blog/rag-for-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/human-in-the-loop-systems",
+      "rel": null
+    },
+    {
+      "href": "/blog/extracting-data-from-pdfs",
+      "rel": null
+    },
+    {
+      "href": "/blog/improving-ocr-accuracy",
+      "rel": null
+    },
+    {
+      "href": "/blog/table-extraction-from-complex-pdfs",
+      "rel": null
+    },
+    {
+      "href": "/blog/llms-in-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-healthcare-document-processing",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/most-read-blogs",
+      "rel": null
+    },
+    {
+      "href": "/intelligent-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/hudson-automates-check-processing-with-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/intelligent-document-processing-market-report-2025",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/what-is",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/utilities-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/lending-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/unstructured-data",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/future",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/artificial-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/content-management",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/examples",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/commercial-real-estate-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/challenges",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/trends",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/healthcare-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/business-processes",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-utility-bill-management-systems",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-intelligent-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-streamline-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/nanonets-vs-docsumo-choosing-the-best-intelligent-document-processing-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/rossum-vs-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-enhance-business-efficiency-with-intelligent-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/digital-transformation-and-customer-experience",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-medicaid-application-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/unstructured-documents-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-benefits",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-document-processing-future",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-customer-onboarding-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-for-invoice-approval",
+      "rel": null
+    },
+    {
+      "href": "/blog/knowledge-management-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-contract-management-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/optimize-customer-experience-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-human-resource-management",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-compliance-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-based-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-based-data-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-data-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/manual-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-workflow",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-beginners-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/role-of-document-processing-in-data-management",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-text-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-ai-software-for-technology-companies",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-data-extraction-rpa-vs-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-future",
+      "rel": null
+    },
+    {
+      "href": "/blog/zonal-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-document-layout",
+      "rel": null
+    },
+    {
+      "href": "/blog/train-new-document",
+      "rel": null
+    },
+    {
+      "href": "/blog/supply-chain-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/spreading-financial-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/rpa-claim-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/reduce-logistics-cost-with-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/retail-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/purchase-order-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/purchase-order-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/pdf-parser",
+      "rel": null
+    },
+    {
+      "href": "/blog/paperless-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/ocr-vs-cognitive-data-capture-solution",
+      "rel": null
+    },
+    {
+      "href": "/blog/mortgage-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/logistics-automation-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/loan-processing-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-intelligent-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/insurance-claim-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/income-verification-documents-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-use-cases",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-solution",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-finance",
+      "rel": null
+    },
+    {
+      "href": "/blog/hyperautomation",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-has-advanced-image-pre-processing-improved-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/financial-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/extract-data-from-scanned-images-documents",
+      "rel": null
+    },
+    {
+      "href": "/blog/digital-disruption-in-insurance",
+      "rel": null
+    },
+    {
+      "href": "/blog/consolidated-accounts-statement",
+      "rel": null
+    },
+    {
+      "href": "/blog/claim-automation-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/bill-of-lading-automation-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-accounting-data-entry-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/bank-statement-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-pdf-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-form-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-processing-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/ant-works-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-90-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-28-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-80-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-27-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-26-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-140-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-126-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-131-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-130-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-127-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-125-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/account-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/table-extraction-from-pdf",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-utility-bill-management-systems",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-intelligent-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-streamline-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/nanonets-vs-docsumo-choosing-the-best-intelligent-document-processing-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/rossum-vs-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-enhance-business-efficiency-with-intelligent-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/digital-transformation-and-customer-experience",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-medicaid-application-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/unstructured-documents-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-benefits",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-document-processing-future",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-customer-onboarding-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-for-invoice-approval",
+      "rel": null
+    },
+    {
+      "href": "/blog/knowledge-management-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-contract-management-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/optimize-customer-experience-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-human-resource-management",
+      "rel": null
+    },
+    {
+      "href": "/blog/automate-compliance-with-document-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-based-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-based-data-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-data-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/manual-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-workflow",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-beginners-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/role-of-document-processing-in-data-management",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-text-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-document-ai-software-for-technology-companies",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-data-extraction-rpa-vs-ai",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-ai-future",
+      "rel": null
+    },
+    {
+      "href": "/blog/zonal-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/what-is-document-layout",
+      "rel": null
+    },
+    {
+      "href": "/blog/train-new-document",
+      "rel": null
+    },
+    {
+      "href": "/blog/supply-chain-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/spreading-financial-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/rpa-claim-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/reduce-logistics-cost-with-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/retail-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/purchase-order-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/purchase-order-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/pdf-parser",
+      "rel": null
+    },
+    {
+      "href": "/blog/paperless-document-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/ocr-vs-cognitive-data-capture-solution",
+      "rel": null
+    },
+    {
+      "href": "/blog/mortgage-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/logistics-automation-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/loan-processing-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-intelligent-document-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/insurance-claim-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/income-verification-documents-data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-use-cases",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-solution",
+      "rel": null
+    },
+    {
+      "href": "/blog/intelligent-document-processing-finance",
+      "rel": null
+    },
+    {
+      "href": "/blog/hyperautomation",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-has-advanced-image-pre-processing-improved-ocr",
+      "rel": null
+    },
+    {
+      "href": "/blog/financial-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/extract-data-from-scanned-images-documents",
+      "rel": null
+    },
+    {
+      "href": "/blog/digital-disruption-in-insurance",
+      "rel": null
+    },
+    {
+      "href": "/blog/consolidated-accounts-statement",
+      "rel": null
+    },
+    {
+      "href": "/blog/claim-automation-process",
+      "rel": null
+    },
+    {
+      "href": "/blog/bill-of-lading-automation-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/best-accounting-data-entry-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/bank-statement-software",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-pdf-capture",
+      "rel": null
+    },
+    {
+      "href": "/blog/automated-form-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/document-processing-automation",
+      "rel": null
+    },
+    {
+      "href": "/blog/ant-works-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-90-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-28-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-80-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-27-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-26-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-140-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-126-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-131-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-130-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-127-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/acord-125-processing",
+      "rel": null
+    },
+    {
+      "href": "/blog/account-statements",
+      "rel": null
+    },
+    {
+      "href": "/blog/table-extraction-from-pdf",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/hudson-automates-check-processing-with-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/intelligent-document-processing-market-report-2025",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/what-is",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/utilities-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/lending-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/unstructured-data",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/future",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/artificial-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/content-management",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/examples",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/commercial-real-estate-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/challenges",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/trends",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/healthcare-industry",
+      "rel": null
+    },
+    {
+      "href": "/blogs/intelligent-document-processing/business-processes",
+      "rel": null
+    },
+    {
+      "href": "https://app.docsumo.com/signup?utm_source=website&utm_medium=global-footer&utm_campaign=signup-cta",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "tel:+1(929)822-4166",
+      "rel": null
+    },
+    {
+      "href": "mailto:sales@docsumo.com",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/resources/partners",
+      "rel": null
+    },
+    {
+      "href": "/press",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/faqs",
+      "rel": null
+    },
+    {
+      "href": "/subprocessors",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-statements",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/utility-bills",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/acord-forms",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/invoices",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/pay-slips",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/w9-forms",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bill-of-lading",
+      "rel": null
+    },
+    {
+      "href": "/solutions/documents/bank-checks",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-ai-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/ocr-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/bank-statement-converter-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/invoice-processing-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-automation-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-data-extraction-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/intelligent-document-processing-platform",
+      "rel": null
+    },
+    {
+      "href": "/solutions/document-scanning-software",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/accounts-payable",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/revenue-reconciliation",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/insurance-tracking",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/commercial-underwriting",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/cre-underwriting",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/financial-spreading",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/forms-processing",
+      "rel": null
+    },
+    {
+      "href": "/solutions/use-cases/check-deposit-operations",
+      "rel": null
+    },
+    {
+      "href": "/platform/overview",
+      "rel": null
+    },
+    {
+      "href": "/platform/ai-agent-library",
+      "rel": null
+    },
+    {
+      "href": "/platform/capability/data-extraction",
+      "rel": null
+    },
+    {
+      "href": "/platform/features/pretrained-models",
+      "rel": null
+    },
+    {
+      "href": "/platform/features/custom-ai-models",
+      "rel": null
+    },
+    {
+      "href": "/platform/features/table-extraction",
+      "rel": null
+    },
+    {
+      "href": "/platform/features/human-in-the-loop",
+      "rel": null
+    },
+    {
+      "href": "/platform/features/touchless-processing",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/compare/tungsten-automation-alternative",
+      "rel": null
+    },
+    {
+      "href": "/compare/ocrolus-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/nanonets-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/abbyy-flexicapture-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/rossum-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/google-doc-ai-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/amazon-textract-alternative-docsumo",
+      "rel": null
+    },
+    {
+      "href": "/compare/salesforce-einstein-vision-ocr-alternative",
+      "rel": null
+    },
+    {
+      "href": "/compare",
+      "rel": null
+    },
+    {
+      "href": "/resources/pdf-to-text-converter",
+      "rel": null
+    },
+    {
+      "href": "https://humansbehindautomation.substack.com/",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/glossary",
+      "rel": null
+    },
+    {
+      "href": "/customers/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/ebooks/document-ai-use-cases-for-retail-and-commercial-banking-in-2024",
+      "rel": null
+    },
+    {
+      "href": "https://support.docsumo.com/",
+      "rel": null
+    },
+    {
+      "href": "https://support.docsumo.com/reference/getting-started-with-your-api",
+      "rel": null
+    },
+    {
+      "href": "/sitemap",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/docsumoai",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCwgXhcMbnMxqjlxxL5NoB5A",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.172502
+}

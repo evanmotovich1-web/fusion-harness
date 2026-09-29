@@ -1,0 +1,733 @@
+{
+  "evidence_id": "web-618fcffd105ae19ff04b",
+  "source_url": "https://www.lemlist.com/",
+  "retrieved_at": "2026-09-20T21:00:22.704958+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.lemlist.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/618fcffd105ae19ff04b.html",
+  "capture_sha256": "7d891d6231d927c83a12bcfe98ae886b562536e1a08102708592d7119c10a281",
+  "bytes_saved": 262144,
+  "title": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals."
+    },
+    {
+      "key": "og:title",
+      "value": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale"
+    },
+    {
+      "key": "og:description",
+      "value": "Cover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals."
+    }
+  ],
+  "text": "lemlist | The AI Outbound Platform for Relevant Outreach at Every Scale\nWebinar\nSeptember 23rd | 5 PM CET, 8 AM PST\nHow to Wire Claude into an Outbound Engine. Built live with the lemlist MCP\nRegister\nProduct\nFIND HIGH-INTENT PROSPECTS\nIdentify ICP-fit accounts and leads, and enrich with verified contact data.\n650 M+ Lead Database\nEmail Finder & Verifier\nPhone Number Finder\nAUTOMATE MULTICHANNEL OUTREACH\nReach leads via email, LinkedIn, calls, WhatsApp, and SMS from one workflow.\nMultichannel Sequences\nLinkedIn Prospecting\nIn-app Calling\nSMS Campaigns\nWhatsApp Prospecting\nUnified Inbox\nSECURE INBOX DELIVERABILITY\nStay out of spam and land in inboxes across all your mailboxes & domains.\nDeliverability Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFounders\nResources\nDEV & SUPPORT\nIntegrations\nAPI Reference\nHelp Center\nOUR CLIENTS\nCustomer Stories\nWall of Love\nOUTBOUND LEARNINGS\nWebinars\nPlaybooks\nBlog\nAI RESOURCES\nlemlist MCP\nlemlist CLI\nClaude Skills\nPricing\nWe're hiring!\nLog in\nGet a demo\nSign up for free\nProduct\nFIND HIGH-INTENT PROSPECTS\nIdentify ICP-fit accounts and leads, and enrich with verified contact data.\n650 M+ Lead Database\nEmail Finder & Verifier\nPhone Number Finder\nAUTOMATE MULTICHANNEL OUTREACH\nReach leads via email, LinkedIn, calls, WhatsApp, and SMS from one workflow.\nMultichannel Sequences\nLinkedIn Prospecting\nIn-app Calling\nSMS Campaigns\nWhatsApp Prospecting\nUnified Inbox\nSECURE INBOX DELIVERABILITY\nStay out of spam and land in inboxes across all your mailboxes & domains.\nDeliverability Setup\nInbox Delivery\nMonitoring & Alerts\nAI-POWERED OUTBOUND\nUse AI to source and research leads, and personalize outreach with relevant context.\nlemAgent\nNew\nIntent Signal Agents\nData Enrichment Agents\nSmart Messaging\nlemlist MCP\nRoles\nLEMLIST FOR\nSales Reps\nRevOps\nSales Leaders\nFounders\nResources\nDEV & SUPPORT\nIntegrations\nAPI Reference\nHelp Center\nOUR CLIENTS\nCustomer Stories\nWall of Love\nOUTBOUND LEARNINGS\nWebinars\nPlaybooks\nBlog\nAI RESOURCES\nlemlist MCP\nlemlist CLI\nClaude Skills\nPricing\nWe're hiring!\nLog in\nGet a demo\nSign up for free\nWelcome, Secret users\n👋\nYou’ve unlocked something special. Let’s get you started\nStart your 30-day free trial\nWelcome Better Growth visitors\n👋\nYou’ve unlocked something special. Let’s get you started\nStart your 30-day free trial\nWelcome Software Scope visitors\n👋\nYou’ve unlocked something special. Let’s get you started\nStart your 30-day free trial\nRoxane t’a donné 1 mois gratuit,\nla chance !\nClique ici pour commencer ton essai\nStart your 30-day free trial\nThe AI Outbound Platform\nfor Relevant Outreach at Every Scale\nCover your TAM with AI agents that research, personalize, and engage prospects on autopilot. Run multichannel outreach for strategic accounts powered by real context and intent signals.\nStart for free\nBook a demo\n14-day free trial. No credit card required.\nLet AI handle it\nLet AI handle it\nFind & enrich leads\nSpot buying intent\nEngage on multi-channels\nAvoid spam\n& 20,000+ other sales teams run their entire outbound in lemlist\n& 20,000+ other sales teams run their entire outbound in lemlist\n& 20,000+ other sales teams run their entire outbound in lemlist\n& 20,000+ other sales teams run their entire outbound in lemlist\n& 20,000+ other sales teams run their entire outbound in lemlist\nFrom full TAM coverage to your top accounts, run outreach that still feels 1:1\n01\n02\n03\n04\n05\n01\nFind leads that match your ICP and their verified contacts\nUpload leads from your CRM or CSV and enrich them with verified emails and phone numbers from the market’s top data providers. Need leads to get started? Use the 600M+ lemlist database and smart filters to find accounts that match your ICP.\nLearn more\n02\n01\n02\nKnow when leads are ready to talk and act immediately\nIntent signal agents suggest, track, and act on high-intent events that show prospects are likely to engage. Using your AI Context Center, agents suggest multichannel sequences, personalized copies, and AI prompts tailored to the trigger.\nLearn more\n03\n02\n03\nScore, segment, and personalize with leads’ unique context\nData enrichment agents pull structured insights from LinkedIn, websites, CRM data, Claap sales recordings, and other internal sources. Turn scattered lead data into actionable context you can use to qualify accounts, prioritize outreach, and tailor every message.\nLearn more\n04\n03\n04\nRun outbound across multiple channels, from the same campaign\nLaunch automated campaigns across email, LinkedIn, calls, WhatsApp, and SMS from one workflow. Manage every conversation in a unified inbox, no matter the sender or channel.\nLearn more\n05\n04\n05\nProtect deliverability across your entire outbound operation\nDeliverability Hub helps you keep emails landing in inboxes, even when sending at scale across multiple mailboxes and domains. Monitor mailbox and domain health, spot issues before performance drops, and get actionable recommendations from one centralized hub.\nLearn more\nBuilt to\nback outbound pros\nlike you\nFor Sales Reps\nFor Sales Leaders\nFor RevOps\nFor Founders\nRecognized by G2. Trusted by thousands.\n4.7\n/\n5\nbased on 1,396 reviews | GDPR Compliant\nRishabh J.\n\"Constantly Improving Features and Strong Campaign Management\"\n5\n/5\nWhat do you like best about lemlist?\nLemlist is constantly upgrading its features, and their CS team is also good. It offers useful features like email warm-up and more. Overall, it provides detailed campaign mapping and a solid set of tools for managing campaigns.\nShevon R.\n\"Game Changer\"\n5\n/5\nWhat do you like best about lemlist?\nWhat I like best about lemlist is the quality of its database combined with its powerful sequencing capabilities. The multichannel outreach is a real game changer. it allows us to engage prospects across email, LinkedIn and more all within a single, streamlined workflow.\nVerified User in Marketing and Advertising\n\"Powerful all-in-one outbound platform with great automation features\"\n5\n/5\nWhat do you like best about lemlist?\nI’ve been using lemlist for my outbound campaigns and I’m extremely happy with the tool. What stands out the most for me is how everything is in one place. Instead of juggling multiple tools, I can handle prospecting, enrichment, outreach campaigns, calling, LinkedIn automation, and deliverability all within a single platform. That alone saves a huge amount of time.\nVerified User in Computer Software\n\"lemlist Covers Every Step with a Personal Touch\"\n4.5\n/5\nWhat do you like best about lemlist?\nI love the fact that you can use lemist for everystep of your process, including manuak steps. You can send emails, interact on linkedin, call and all that with personnal touch on each step. The support team are extremely reactive which is pretty good.\nSee more\nRun lemlist from where you already work\nAI assistants\nSalesforce\nHubSpot\nAttio\nExplore 500+ integrations\nCheck API docs\nSteal the outbound playbooks behind today’s top sales teams\nAchieve 145% Quota by Tom Greenwood, BDR Team Lead at Paddle\nLearn how Tom uses strict routines, protected outreach time, and relevance-first targeting to consistently exceed targets.\nGet the playbook\nBook 120 Quality Calls a week by Conor McCarthy, Sales Lead at lemlist\nDiscover how Conor prioritizes the right accounts and runs organized, multichannel outreach to secure a consistent pipeline.\nGet the playbook\nGet 35% Outbound Pipeline by Jonathan Chemouny, GTM at ElevenLabs\nSee how Jonathan scales outbound fast with creative multichannel tactics, strong signals, and consistent A/B testing.\nGet the playbook\nFrequently Asked Questions\nWhat is lemlist?\nlemlist is an AI-powered sales engagement platform that finds leads, personalizes outreach, and runs multichannel campaigns (email, LinkedIn, calls, WhatsApp, SMS) - all in one place. From lead generation to enrichment, outreach automation, and deliverability, everything works together, so you don’t need multiple tools.\nWho is lemlist for?\nlemlist is built for sales and growth teams who want to spend less time on manual work and more time closing deals.\nIt helps:\n→ Sales leaders ramp teams faster and hit targets\n→ Sales ops streamline workflows and scale efficiently\n→ SDRs and AEs focus on conversations instead of admin\nWhether you're a solo founder, agency, or scaling team, lemlist gives you everything you need to build high-performing motion.\nHow does lemlist help with email deliverability?\nEvery lemlist seat includes built-in deliverability tools, including lemwarm, our automated warm-up and deliverability booster. It helps you build sender reputation, avoid spam, and keep your emails landing where they should, outside of spam.\nDoes lemlist comply with SOC 2 security standards?\nYes, lemlist is SOC 2 certified. This certification ensures that our systems and processes adhere to rigorous controls to protect your data and maintain high security and reliability standards.\nCan I integrate lemlist with my current sales stack?\nYes. lemlist connects seamlessly with tools like HubSpot and Salesforce, so you can even manage lemlist outreach without leaving your CRM. With native integrations, MCP, and API access, it fits right into your team's existing workflow.\nHow can I get started with lemlist and see how it works?\nYou can\nbook a personalized demo\nwith our team or explore lemlist on your own with a\n14-day free trial\n. Once you sign up, the dashboard will guide you through the setup step by step, and if you need help, our support team is just a click away via the in-app chat.\nA calendar full of opportunities starts here.\nStart a 14-day free trial\nBook a demo\nGET STARTED\nPricing\nLog in\nSign up for free\nGet a demo\nPRODUCT\nFind qualified leads\nEnrich contact info\nPersonalize at scale\nAutomate multichannel\nLand out of spam\nIntegrations\nDeveloper API\nSystems status\nRESOURCES\nBlog\nPlaybooks\nYouTube\nFree tools\nOutreach templates\nHelp center\nlemlist Academy\nStructured data for LLMs\nCOMPANY\nJoin us\nPartner with lemlist\nHire a lemlist expert\nLEGAL\nTerms of service\nPrivacy Policy\nSending Policy\nAnti-abuse protection\nData Processing Agreement\n©\n2026\nlempire - All rights reserved.\n🇺🇸 English\n🇫🇷 Français\n🇩🇪 Deutsch\n🇪🇸 Español",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_next/static/chunks/0k9xyboiuybkx.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/10ixibj~k8tve.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/0t-oegike8fyo.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/0k9xyboiuybkx.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/10ixibj~k8tve.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0t-oegike8fyo.css?dpl=dpl_5WSXKfa2YrG7QQPQEUVae8FBaCEP",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/ce5203c9755ac21ad1010d580dd429dc",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/a327b952f10c989e4c701d945b21bc4f",
+      "rel": "preload"
+    },
+    {
+      "href": "/arrow-down.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "/arrow-right.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/1cfec61d1368af0b1910e3af8eae53b3",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/4ffe69bf9711fb86c7fc95c86fbc2b40",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/3e51822f5ec52c364a760d030feb0311",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/44444baa9ee88d54fb4d5c01eee3c018",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/3ab5107dadbe909837de403db7cdf6e0",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/4e861c8189ad6df2855a700ce7c2699a",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/d198deca994a4704c9c5d826dd14d4ac",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/1ef71e713c14cbd0f6ce6935177316d5",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/f8d05dc2e28f437fa0661dce792af343",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/32294705d7af051a13468a020825bcb4",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/70be2a3362972f7220469a17163b0008",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/aea7a4a14c4d7e2a1b8db87de03d485b",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/1e1122013daf29c82cb9236d81436e59",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/cf1f1aa4ce13de0bdd6ee76ace4910b0",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/aeaa90f8b37c94003986d756b1939555",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/898572b9209bfccf03aca8c709b6e2f3",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/616ebe0cbb94a02b5f3f9a1b38c9f8eb",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/f891c87c7ed313b69be8750a1036ba3d",
+      "rel": "preload"
+    },
+    {
+      "href": "/g2-icon.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/d5c112630519e3f4ef94390f497486ad",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/59ba32691bccdede466bd8f946c6297e",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/660c53fe3a657206b2adf40a8ce5f17f",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/c51d0cfd0bb46e002278f2b53ce5050a",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/45a20e8bd2cda8191eb3f0a302143b7d",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/ce2650d6eb18b46fe525df5d8142e215",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/031e05c1c541cd34d70eeb071a84f9b4",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/d0703c503d7ab06332106bce05aef3ff",
+      "rel": "preload"
+    },
+    {
+      "href": "https://web-assets.lemlist.com/prod/a4fe1c7af3ec9e3852c7b13619fffb21",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/react-toastify@11/dist/ReactToastify.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://lemlist.registration.goldcast.io/webinar/4d8932f9-5225-4ecd-990d-49e615828847",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/product/b2b-lead-database",
+      "rel": null
+    },
+    {
+      "href": "/product/email-finder-and-verifier",
+      "rel": null
+    },
+    {
+      "href": "/product/phone-number-finder",
+      "rel": null
+    },
+    {
+      "href": "/product/multichannel-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/linkedin-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/calling",
+      "rel": null
+    },
+    {
+      "href": "/product/sms-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/whatsapp-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/unified-inbox",
+      "rel": null
+    },
+    {
+      "href": "/product/deliverability-setup",
+      "rel": null
+    },
+    {
+      "href": "/product/inbox-delivery",
+      "rel": null
+    },
+    {
+      "href": "/product/monitoring-alerts",
+      "rel": null
+    },
+    {
+      "href": "/product/lemagent",
+      "rel": null
+    },
+    {
+      "href": "/product/intent-signals/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-agentic-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/product/ai",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-mcp",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-reps",
+      "rel": null
+    },
+    {
+      "href": "/for/revops",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-leaders",
+      "rel": null
+    },
+    {
+      "href": "/for/founders",
+      "rel": null
+    },
+    {
+      "href": "/integrations/",
+      "rel": null
+    },
+    {
+      "href": "https://developer.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "https://help.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "/success-stories/",
+      "rel": null
+    },
+    {
+      "href": "/wall-of-love/",
+      "rel": null
+    },
+    {
+      "href": "/our-webinars/",
+      "rel": null
+    },
+    {
+      "href": "/outbound-playbooks/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-mcp",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-cli",
+      "rel": null
+    },
+    {
+      "href": "/claude-skills/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/join-lemlist",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/login",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "/product/b2b-lead-database",
+      "rel": null
+    },
+    {
+      "href": "/product/email-finder-and-verifier",
+      "rel": null
+    },
+    {
+      "href": "/product/phone-number-finder",
+      "rel": null
+    },
+    {
+      "href": "/product/multichannel-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/linkedin-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/calling",
+      "rel": null
+    },
+    {
+      "href": "/product/sms-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/whatsapp-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/unified-inbox",
+      "rel": null
+    },
+    {
+      "href": "/product/deliverability-setup",
+      "rel": null
+    },
+    {
+      "href": "/product/inbox-delivery",
+      "rel": null
+    },
+    {
+      "href": "/product/monitoring-alerts",
+      "rel": null
+    },
+    {
+      "href": "/product/lemagent",
+      "rel": null
+    },
+    {
+      "href": "/product/intent-signals/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-agentic-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/product/ai",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-mcp",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-reps",
+      "rel": null
+    },
+    {
+      "href": "/for/revops",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-leaders",
+      "rel": null
+    },
+    {
+      "href": "/for/founders",
+      "rel": null
+    },
+    {
+      "href": "/integrations/",
+      "rel": null
+    },
+    {
+      "href": "https://developer.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "https://help.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "/success-stories/",
+      "rel": null
+    },
+    {
+      "href": "/wall-of-love/",
+      "rel": null
+    },
+    {
+      "href": "/our-webinars/",
+      "rel": null
+    },
+    {
+      "href": "/outbound-playbooks/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-mcp",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-cli",
+      "rel": null
+    },
+    {
+      "href": "/claude-skills/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/join-lemlist",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/login",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/product/email-finder-and-verifier",
+      "rel": null
+    },
+    {
+      "href": "/product/intent-signals/",
+      "rel": null
+    },
+    {
+      "href": "/product/ai-agentic-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/product/multichannel-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/inbox-delivery",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-reps",
+      "rel": null
+    },
+    {
+      "href": "/for/sales-leaders",
+      "rel": null
+    },
+    {
+      "href": "/for/revops",
+      "rel": null
+    },
+    {
+      "href": "/for/founders",
+      "rel": null
+    },
+    {
+      "href": "/wall-of-love",
+      "rel": null
+    },
+    {
+      "href": "/product/lemlist-mcp",
+      "rel": null
+    },
+    {
+      "href": "/integrations/salesforce",
+      "rel": null
+    },
+    {
+      "href": "/integrations/hubspot",
+      "rel": null
+    },
+    {
+      "href": "/integrations/attio",
+      "rel": null
+    },
+    {
+      "href": "/integrations/",
+      "rel": null
+    },
+    {
+      "href": "https://developer.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "/outbound-playbooks/sales-playbook-from-tom-greenwood-bdr-lead-paddle",
+      "rel": null
+    },
+    {
+      "href": "/outbound-playbooks/conor-mccarthy",
+      "rel": null
+    },
+    {
+      "href": "/outbound-playbooks/jonathan-chemouny",
+      "rel": null
+    },
+    {
+      "href": "https://www.lemlist.com/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.lemlist.com/create-account",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales",
+      "rel": null
+    },
+    {
+      "href": "/product/b2b-lead-database",
+      "rel": null
+    },
+    {
+      "href": "/product/email-finder-and-verifier",
+      "rel": null
+    },
+    {
+      "href": "/product/ai",
+      "rel": null
+    },
+    {
+      "href": "/product/multichannel-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/product/lemwarm",
+      "rel": null
+    },
+    {
+      "href": "/integrations/",
+      "rel": null
+    },
+    {
+      "href": "https://developer.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "https://status.lempire.com/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/playbooks/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/c/lemlist",
+      "rel": null
+    },
+    {
+      "href": "/free-tools/",
+      "rel": null
+    },
+    {
+      "href": "/cold-email-templates",
+      "rel": null
+    },
+    {
+      "href": "https://help.lemlist.com/",
+      "rel": null
+    },
+    {
+      "href": "/gtm-club-waitlist",
+      "rel": null
+    },
+    {
+      "href": "https://www.lemlist.com/ai-info",
+      "rel": null
+    },
+    {
+      "href": "/join-lemlist",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/experts/",
+      "rel": null
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/legal/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/legal/sending-policy",
+      "rel": null
+    },
+    {
+      "href": "/abuse-complaints",
+      "rel": null
+    },
+    {
+      "href": "/legal/dpa",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.3969
+}

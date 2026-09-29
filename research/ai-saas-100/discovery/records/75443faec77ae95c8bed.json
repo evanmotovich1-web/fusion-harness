@@ -1,0 +1,53 @@
+{
+  "evidence_id": "web-75443faec77ae95c8bed",
+  "source_url": "https://codewp.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.545976+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://telex.automattic.ai/from-codewp",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/75443faec77ae95c8bed.html",
+  "capture_sha256": "5bc1ff0add758f38c3ea9878477d8b0de48a49e0b3e4709e5feaf9fe181bb627",
+  "bytes_saved": 2872,
+  "title": "Telex — AI-Assisted Authoring Environment for WordPress",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Transform ideas into fully functional WordPress projects with Telex."
+    },
+    {
+      "key": "og:title",
+      "value": "Telex — AI-Assisted Authoring Environment for WordPress"
+    },
+    {
+      "key": "og:description",
+      "value": "Transform ideas into fully functional WordPress projects with Telex."
+    }
+  ],
+  "text": "Telex — AI-Assisted Authoring Environment for WordPress",
+  "links": [
+    {
+      "href": "/public/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/public/logo192.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/public/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/public/assets/index-Cb3SViFb.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.3283
+}

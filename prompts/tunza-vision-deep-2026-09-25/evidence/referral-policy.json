@@ -1,0 +1,28 @@
+{
+  "id": "referral-policy",
+  "requested_url": "https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy",
+  "accessed_utc": "2026-09-25T02:52:58.203759+00:00",
+  "status": 200,
+  "final_url": "https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "must-revalidate, no-cache, private",
+    "Date": "Fri, 25 Sep 2026 00:55:36 GMT",
+    "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
+    "Link": "<https://health.go.ke/kenya-moves-strengthen-patient-referral-system-through-new-national-policy>; rel=\"canonical\"",
+    "X-UA-Compatible": "IE=edge",
+    "Content-language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "interest-cohort=()",
+    "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "X-Generator": "Drupal 9 (https://www.drupal.org)",
+    "X-Drupal-Cache": "HIT"
+  },
+  "bytes": 54853,
+  "sha256": "f595b5e432c9e342aa70792c86f03664e66535ea4917567aca8a8f2c1f8ffdfa",
+  "file": "referral-policy.html"
+}

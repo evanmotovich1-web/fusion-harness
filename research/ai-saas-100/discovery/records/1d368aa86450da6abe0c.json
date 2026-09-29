@@ -1,0 +1,69 @@
+{
+  "evidence_id": "web-1d368aa86450da6abe0c",
+  "source_url": "https://www.goldmineai.io/",
+  "retrieved_at": "2026-09-20T21:01:53.848319+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.goldmineai.io/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/1d368aa86450da6abe0c.html",
+  "capture_sha256": "04c45407de224d492221460d5e3c36516b3fb6e3dc8ca9abd5e9934136ddab09",
+  "bytes_saved": 9395,
+  "title": "GoldMine AI — Your AI Marketing Team",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "GoldMine AI gives solopreneurs and small teams a fully autonomous online marketing agent — one business brain (your Cortex) that learns over time. You manage by vibing, approving, and deciding."
+    },
+    {
+      "key": "og:title",
+      "value": "GoldMine AI — Your AI Marketing Team"
+    },
+    {
+      "key": "og:description",
+      "value": "A fully autonomous online marketing agent — one business brain (your Cortex) that learns over time. You manage by vibing, approving, and deciding."
+    },
+    {
+      "key": "og:site_name",
+      "value": "GoldMine AI"
+    }
+  ],
+  "text": "GoldMine AI — Your AI Marketing Team",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.goldmineai.io/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/main-BvH7YVOU.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.3952
+}

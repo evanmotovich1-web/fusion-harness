@@ -1,0 +1,445 @@
+{
+  "evidence_id": "web-c9fed23aafd932844c7c",
+  "source_url": "https://botpress.com/",
+  "retrieved_at": "2026-09-20T21:00:24.045109+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://botpress.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/c9fed23aafd932844c7c.html",
+  "capture_sha256": "a3dc0d49952af7e7ab656893c573c4a187011b31c95e8268fa30b9356fbb6927",
+  "bytes_saved": 232982,
+  "title": "Botpress | The enterprise-grade AI agent platform for customer support",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+    },
+    {
+      "key": "og:title",
+      "value": "Botpress | The enterprise-grade AI agent platform for customer support"
+    },
+    {
+      "key": "og:description",
+      "value": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+    }
+  ],
+  "text": "Botpress | The enterprise-grade AI agent platform for customer support\nBotpress\nPlatform\nBuild\nBotpress Viber\nNatural language builder\nBotpress Studio\nVisual AI agent builder\nBuilt by Botpress\nEnd-to-end AI agent service\nBotpress Engine\nThe AI infrastructure\nExplore components\nKnowledge Bases\nTables\nEscalate\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolution to 67¢ With Botpress\nAll case studies\nResources\nBuild\nDocs\nAPI\nChangelog\nPartners\nBecome a Partner\nHire an expert\nLearn\nBlog\nLibrary\nCommunity\nDiscord\nEvents\nVideos\nCompare\nThe 10 Best AI Agents for Customer Support in 2026\nDocs\nEnterprise\nPricing\nLog in\nGet a demo\nTry for free\nThe AI-native customer support platform.\nTakes real action on refunds, account updates, and multi-step workflows. Never hands complexity back to your team.\nGet a demo\nTry for free\nSOC 2 compliant\nNo credit card required\n4.5 rating\nAn AI agent company that built a helpdesk.\nNot the other way around.\n750k\nAI agents built\n10\nyrs\nof AI infrastructure\nMost AI support tools fall apart when a ticket gets complicated.\nBotpress agents are built to handle the tough tickets.\nTest it on your own support tickets\nNo per-seat cost.\nEver.\nNo per-seat cost. Grow your team without growing your software bill.\nAI usage included. Because real AI companies don’t bill separately for AI.\nSave\n$25,500\nper year compared to\nZendesk\nIntercom\nSeats\n4\nConversations/mo\n1,200\nBotpress\n$9,000/yr\nZendesk\n$34,500/yr\nIntercom\n$25,500/yr\nYour team never solves the same problem twice.\nStep 1\nAI handles the ticket\nResolved end-to-end without pulling in your support team.\nStep 2\nHot handoff to a human when needed\nPicks up the ticket with the conversation history, account details, and any troubleshooting steps already attempted.\nStep 3\nThe system learns\nOne resolution becomes permanent knowledge. Every future similar ticket is handled automatically.\nYour AI answers. Ours acts.\nMulti-step workflows\nCoordinates several systems in one motion: updates the record, triggers the next step, closes the loop.\nAccount updates\nChanges a plan, updates billing details, or corrects an account error without routing it to your team.\nOrder corrections\nReissues a shipment, corrects an address, or replaces a damaged order without a human touching the ticket\nRefunds\nApproves and issues the refund directly, under the same conditions a human agent would.\nProactive outreach\nReaches out before the customer has to, when a limit, renewal, or change is coming.\nAutoplay pause\nEnterprise-grade reliability, built over 10 years.\nRobust security\nSOC II certified, GDPR compliant, and penetration tested by KPMG. Your data and your customers' data are protected to the highest industry standard.\nReliable infrastructure\nBuilt on AWS with automatic scaling and zero maintenance required. Botpress handles peak traffic without interruption — your team never has to think about it.\nAI that knows its limits\nBotpress agents are built with escalation rules and fallback logic that determine exactly when AI acts and when it escalates. Full context passed to your team every time — no cold handoffs.\nBuilt for the tickets with no script.\nMost tickets follow a playbook. Some need judgment, and context pulled from more than one place. That's where Botpress is built to hold up, not fall back to a human by default.\nKeep your helpdesk. Level up your AI.\nBotpress works on top of your existing helpdesk, or as a standalone helpdesk.\nNo migration\nConnect to your existing helpdesk in minutes. Your tickets stay intact\nNo helpdesk? No problem.\nBotpress Desk is a full ticket management system. Level up your email inbox strategy.\nNo engineering required\nNo dev resources needed to go live. Build your AI agents with natural language. Connect via OAuth. Start resolving.\nTrusted by businesses\nacross the world.\nLearn about our customers\nHOSTIFAI\n75%\nresolution rate\nBotpress was a great fit because it could reach multiple channels, integrate with existing systems, and leverage an expansive knowledge base. Most importantly, we could get started right away and not worry about servers or maintenance.\nGordon Clark\nFounding Partner, Hanakano Consulting\nWAIVER GROUP\n9x\nincrease in visitor engagement\nEXTENDLY\n30%\ncall reduction\nBuilt for the tough tickets.\nUse your senior support reps wisely. Let AI handle the rest.\nGet a demo\nTry for free\n© 2026 Botpress\nPlatform\nPricing\nAI-native Helpdesk\nAgent Studio\nAutonomous Engine\nKnowledge Bases\nTables\nHub\nIntegrations\nChannels\nLLMs\nResources\nTalk to our Team\nDocumentation\nHire an Expert\nVideos\nCustomer Stories\nAPI Reference\nBlog\nStatus\nTrust Center\nCommunity\nPartners & Affiliates\nDiscord\nCompany\nAbout\nCareers\nLegal\nPrivacy",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/css/botpress-production.shared.19e5170e3.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887877628e755606a27e66_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8878772637f1f7a109128e_Frame%2012.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a887680628e755606a2406b_bp-logo.jpg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876800d6e3c2e33b747bd_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/635c4eeb78332f7971255095/6a8876810551d667a25125aa_bp-logo.jpg",
+      "rel": "icon"
+    },
+    {
+      "href": "https://botpress.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117738747.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117738747.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/viber",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-agent-studio",
+      "rel": null
+    },
+    {
+      "href": "/built-for-you",
+      "rel": null
+    },
+    {
+      "href": "/features/engine",
+      "rel": null
+    },
+    {
+      "href": "/features/knowledge-bases",
+      "rel": null
+    },
+    {
+      "href": "/features/tables",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "/intercom-integration",
+      "rel": null
+    },
+    {
+      "href": "/zendesk-integration",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/hubspot-0fa7d",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/salesforce",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/webchat",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/whatsapp",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/integrations/slack",
+      "rel": null
+    },
+    {
+      "href": "/hub",
+      "rel": null
+    },
+    {
+      "href": "/customer-support",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/escalation-handoff",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ai-actions",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-deflection",
+      "rel": null
+    },
+    {
+      "href": "/customer-support/ticket-management",
+      "rel": null
+    },
+    {
+      "href": "/industries/saas",
+      "rel": null
+    },
+    {
+      "href": "/industries/healthcare",
+      "rel": null
+    },
+    {
+      "href": "/industries/education",
+      "rel": null
+    },
+    {
+      "href": "/industries/retail",
+      "rel": null
+    },
+    {
+      "href": "/industries/fintech",
+      "rel": null
+    },
+    {
+      "href": "/customers/super-dispatch",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/api-reference/",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/changelog/",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/get-matched",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "https://discord.com/invite/botpress",
+      "rel": null
+    },
+    {
+      "href": "/events",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/blog/ai-agent-customer-support",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/?ref=navbar",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/botpress/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/customers/hostifai",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/customers/waiver-group",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/customers/extendly",
+      "rel": null
+    },
+    {
+      "href": "/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://sso.botpress.cloud/registration",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://github.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/botpress/",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/botpress",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/pricing?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "/desk",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/ai-agent-studio?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/autonomous?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/knowledge-bases?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/features/tables?ref=footer",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=Integration",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=Channel",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/hub?type=LLM",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/contact-us",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/",
+      "rel": null
+    },
+    {
+      "href": "/get-matched",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/botpress",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/docs/api-reference/introduction",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://status.botpress.com/",
+      "rel": null
+    },
+    {
+      "href": "https://app.drata.com/trust/9cb618e1-0c38-11ee-865f-029d78a187d9",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "https://discord.gg/botpress",
+      "rel": null
+    },
+    {
+      "href": "/company/about",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/legal",
+      "rel": null
+    },
+    {
+      "href": "https://botpress.com/legal/privacy-statement",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 2.1258
+}

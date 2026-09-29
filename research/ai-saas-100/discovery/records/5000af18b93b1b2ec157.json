@@ -1,0 +1,457 @@
+{
+  "evidence_id": "web-5000af18b93b1b2ec157",
+  "source_url": "https://www.synthesia.io/",
+  "retrieved_at": "2026-09-20T21:00:46.061827+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.synthesia.io/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/5000af18b93b1b2ec157.html",
+  "capture_sha256": "34dbe39fe72fdc582eae8d7edb6ecec1ca21dc2a35211db5b18beb462f1fa47b",
+  "bytes_saved": 262144,
+  "title": "Synthesia: #1 AI Video Platform for Business",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages."
+    },
+    {
+      "key": "og:title",
+      "value": "Synthesia: #1 AI Video Platform for Business"
+    },
+    {
+      "key": "og:description",
+      "value": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 160+ languages."
+    }
+  ],
+  "text": "Synthesia: #1 AI Video Platform for Business\nNew release\nA smarter Assistant and our most lifelike Avatars yet\nTry it now\nWhat do you like best about Synthesia?\nHow easy it is to use and get started! The platform is user friendly - anyone can do it! It's also very easy to download and upload the videos into an LMS or other video hosting platform.\nZach F.\nSenior Learning & Development Analyst\nOne of 2,000+ 5-star reviews on\nPlatform\nCreate\n240+ AI Avatars\n1000+ AI voices\nAI Screen Recorder\nAI Video Generator\nAI Motion Graphics\nLocalize\nAI Dubbing\nNew\nVideo Translator\nMultilingual Player\nCaptions\nManage\nBrand Kit\nLive Collaboration\nOrganization\nPublish\nVersion Control\nAnalytics\nPublic Video Page\nSSO Video Page\nEngage\nInteractivity\nRoleplay Sessions\nNew\nInteractive Avatars\nNew\nAI Safety & Security\nSOC 2 Type II compliant\nISO 42001 compliant\nGDPR compliant\nAll features\nA secure environment for businesses.\nSolutions\nTeams\nLearning & Development\nSales Enablement\nHuman Resources\nMarketing\nIT & Cybersecurity\nKnowledge Management\nUse cases\nTechnical Training\nCompliance Training\nSales Training\nEmployee Development\nSOP\nProduct Video\nIndustries\nManufacturing\nTech & Software\nHealthcare\nFinancial services\nProfessional Services\nRetail\nResources\nResources\nVideo Templates\nSynthesia Blog\nCase Studies\nCustomer Reviews\nLearn\nSynthesia Academy\nLive sessions\nHelp Center\nCompany\nCareers\nResponsible AI\nAI Research\nCase study\nHow Heineken embraces video transformation\nPricing\nEnterprise\nen\nfr\nde\nes\npt-BR\nen\nEnglish\nfr\nFrançais\nde\nDeutsch\nes\nEspañol\npt-BR\nPortuguês (Brasil)\nWant to see this page in\nGerman\n?\nWe’ve got the details in your language, just for you.\nSwitch to\nGerman\nLog in\nBook demo\nGet started\nBook demo\nGet started\nOver 2,000 five-star reviews on g2\nWhat do you like best about Synthesia?\nHow easy it is to use and get started! The platform is user friendly - anyone can do it! It's also very easy to download and upload the videos into an LMS or other video hosting platform.\nZach F.\nSenior Learning & Development Analyst\nOne of 2,000+ 5-star reviews on\nAll-in-one AI Video platform for business\nCreate studio-quality videos with AI avatars and voiceovers in 160+ languages. Save up to 90% of time and cost on video production.\nGet started for FREE\nCreate free AI video\nBook demo\nNo credit card required\nRated 4.7/5 on G2\nAI\nAI\nAI\nAI\nAI\nCreate\nEdit\nCollaborate\nTranslate\nPublish\nTrusted by over 50,000 companies\nof all sizes\nTrain, market and sell like a Fortune 100 company\nGet custom pricing and a personalized tour, and see how teams like yours succeed with Synthesia.\nBook demo\nChange Management\n“It's enterprise-ready and makes video creation easy.”\nPlay story\nPause\nSales enablement\n\"What used to take 4 hours now takes 30 minutes.\"\nPlay story\nPause\nOperations training\n\"The platform is so easy to use and intuitive.\"\nPlay story\nPause\nInternal communications\n“We make videos fast and use them every day.”\nPlay story\nPause\nEmployee training\n“Updating 10,000 courses? Totally doable now.”\nPlay story\nPause\nEmployee training\n\"100 hours of translation done in 10 minutes!\"\nPlay story\nPause\nCompliance training\n\"I don't need a third party anymore. I do it myself\"\nPlay story\nPause\nTechnical training\n“50% faster content. Without sacrificing quality”\nPlay story\nPause\nEmployee training\n\"Teams adopt it fast and use it across the company.\"\nPlay story\nPause\nEmployee training\n“Interactive video is redefining training for us”\nPlay story\nPause\nCompliance training\n“We push updates without touching the LMS.”\nPlay story\nPause\nEmployee training\n\"We saved $56K and hit 100+ custom videos.\"",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://www.synthesia.io/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/fr",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/de",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/es",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/pt-br",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/css/synthesia-staging-eaffee4c3a254eec5b5e4.shared.fc5910520.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/css/synthesia-staging-eaffee4c3a254eec5b5e4.65e89895c5a4b8d764c0d712.658e2ee1d.opt.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/6618fd69d436784c0bba5e9e_webclip.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.synthesia.io/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117265215.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117265215.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://a5173948275490816.cdn.optimizely.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65e89895c5a4b8d764c0e21e_6527f9cf2cfe9fad38bd66bd_basiersquare-medium-webfont.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65e89895c5a4b8d764c0e21d_6527f9cf2cfe9fad38bd66bc_basiersquare-regular-webfont.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.optimizely.com/js/5314775840718848.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.synthesia.io/sv",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/it",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/nl",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.synthesia.io/ja",
+      "rel": "alternate"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/assistant-express-3",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/features/avatars",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-voice-generator",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-screen-recorder",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-video-generator",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-motion-graphics",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-dubbing",
+      "rel": null
+    },
+    {
+      "href": "/features/video-translator",
+      "rel": null
+    },
+    {
+      "href": "/features#multilingual-video-player-card",
+      "rel": null
+    },
+    {
+      "href": "/features#section-localize",
+      "rel": null
+    },
+    {
+      "href": "/features#brand-kit-card",
+      "rel": null
+    },
+    {
+      "href": "/features#live-collaboration-card",
+      "rel": null
+    },
+    {
+      "href": "/features#workspaces-and-organizations-card",
+      "rel": null
+    },
+    {
+      "href": "/features#smart-updates-card",
+      "rel": null
+    },
+    {
+      "href": "/features#analytics-card",
+      "rel": null
+    },
+    {
+      "href": "/features#section-publish",
+      "rel": null
+    },
+    {
+      "href": "/features#sso-video-pages-card",
+      "rel": null
+    },
+    {
+      "href": "/features/interactivity",
+      "rel": null
+    },
+    {
+      "href": "/features/roleplay-sessions",
+      "rel": null
+    },
+    {
+      "href": "/features/avatars/interactive-avatars",
+      "rel": null
+    },
+    {
+      "href": "https://security.synthesia.io/",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/learning-and-development",
+      "rel": null
+    },
+    {
+      "href": "/sales-enablement",
+      "rel": null
+    },
+    {
+      "href": "/human-resources",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/information-technology",
+      "rel": null
+    },
+    {
+      "href": "/knowledge-managers",
+      "rel": null
+    },
+    {
+      "href": "/use-case/technical-training",
+      "rel": null
+    },
+    {
+      "href": "/use-case/compliance-training",
+      "rel": null
+    },
+    {
+      "href": "/use-case/sales-training-enablement",
+      "rel": null
+    },
+    {
+      "href": "/use-case/employee-development",
+      "rel": null
+    },
+    {
+      "href": "/use-case/sop",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product-video",
+      "rel": null
+    },
+    {
+      "href": "/industries/manufacturing",
+      "rel": null
+    },
+    {
+      "href": "/industries/tech",
+      "rel": null
+    },
+    {
+      "href": "/industries/healthcare",
+      "rel": null
+    },
+    {
+      "href": "/industries/financial-services",
+      "rel": null
+    },
+    {
+      "href": "/industries/professional-services",
+      "rel": null
+    },
+    {
+      "href": "/industries/retail",
+      "rel": null
+    },
+    {
+      "href": "/video-templates",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://academy.synthesia.io/",
+      "rel": null
+    },
+    {
+      "href": "https://academy.synthesia.io/pages/live-sessions",
+      "rel": null
+    },
+    {
+      "href": "https://help.synthesia.io/",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/responsible-ai",
+      "rel": null
+    },
+    {
+      "href": "/research",
+      "rel": null
+    },
+    {
+      "href": "/case-studies/heineken",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/fr",
+      "rel": null
+    },
+    {
+      "href": "/de",
+      "rel": null
+    },
+    {
+      "href": "/es",
+      "rel": null
+    },
+    {
+      "href": "/pt-br",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://app.synthesia.io/welcome",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    },
+    {
+      "href": "#footer",
+      "rel": null
+    },
+    {
+      "href": "#footer",
+      "rel": null
+    },
+    {
+      "href": "#footer",
+      "rel": null
+    },
+    {
+      "href": "#footer",
+      "rel": null
+    },
+    {
+      "href": "#footer",
+      "rel": null
+    },
+    {
+      "href": "/book-a-demo",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2223
+}

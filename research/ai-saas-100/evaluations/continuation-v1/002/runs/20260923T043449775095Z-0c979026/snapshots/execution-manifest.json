@@ -1,0 +1,795 @@
+{
+  "schema_version": 1,
+  "task_id": "2.c",
+  "created_at": "2026-09-22T04:10:23.915099+00:00",
+  "scope": "Local-suite integration and integrity only. No execution framework or acceptance.",
+  "runtime": {
+    "observed_python_version": "3.9.6",
+    "dependencies": "Python standard library; POSIX flock for CRM",
+    "interpreter_and_stdlib_hashed": false
+  },
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "source_bindings": [
+    {
+      "active": {
+        "path": "cases/001/implementation/workflow.py",
+        "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74",
+        "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/001/tests/execute_pilots.py",
+        "sha256": "514b1c886616be7322d38386a739d7e8e87f85e6c7139d8719c092bfd42a0d5c"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/514b1c886616be7322d38386a739d7e8e87f85e6c7139d8719c092bfd42a0d5c",
+        "sha256": "514b1c886616be7322d38386a739d7e8e87f85e6c7139d8719c092bfd42a0d5c"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/001/tests/run.py",
+        "sha256": "b5aa4bd3fea0f9674bbad361d4fba648a0df69596275039eb682139869893eb9"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/b5aa4bd3fea0f9674bbad361d4fba648a0df69596275039eb682139869893eb9",
+        "sha256": "b5aa4bd3fea0f9674bbad361d4fba648a0df69596275039eb682139869893eb9"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/002/implementation/workflow.py",
+        "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+        "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/002/tests/repair-v2/adapter.py",
+        "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2",
+        "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/002/tests/repair-v2/run.py",
+        "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416",
+        "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/implementation/demo_persistence.py",
+        "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679",
+        "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/implementation/persistence.py",
+        "sha256": "19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e",
+        "sha256": "19a9967f505f9abcbebd5e31d534435fb30afbcc8371a8917d2499291532a24e"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/implementation/workflow.py",
+        "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4",
+        "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/tests/persistence-v1/execute.py",
+        "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c",
+        "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/tests/persistence-v1/run.py",
+        "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5",
+        "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/tests/run.py",
+        "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8",
+        "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/003/tests/run_repair_v1.py",
+        "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8",
+        "sha256": "c1e0201d850d63de24aca70668a4810ac3d68e0d149bfaab19f920990ad383d8"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/033/implementation/workflow.py",
+        "sha256": "846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825",
+        "sha256": "846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/033/tests/scheduler-v1/checks.py",
+        "sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b",
+        "sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/033/tests/scheduler-v1/execute.py",
+        "sha256": "e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441",
+        "sha256": "e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441"
+      }
+    },
+    {
+      "active": {
+        "path": "cases/033/tests/scheduler-v1/run.py",
+        "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc",
+        "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+      }
+    },
+    {
+      "active": {
+        "path": "tools/receipt.py",
+        "sha256": "4610cf7469ea178d1c2d4913a03426c404261ffb8098b978d3d5dcabc52fd52a"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/4610cf7469ea178d1c2d4913a03426c404261ffb8098b978d3d5dcabc52fd52a",
+        "sha256": "4610cf7469ea178d1c2d4913a03426c404261ffb8098b978d3d5dcabc52fd52a"
+      }
+    },
+    {
+      "active": {
+        "path": "tools/validate.py",
+        "sha256": "1ad754a4342f3190164573f2aa9f5758eb5a88670d4557effe957bdfc547a12d"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/1ad754a4342f3190164573f2aa9f5758eb5a88670d4557effe957bdfc547a12d",
+        "sha256": "1ad754a4342f3190164573f2aa9f5758eb5a88670d4557effe957bdfc547a12d"
+      }
+    },
+    {
+      "active": {
+        "path": "tools/validate_execution_manifest.py",
+        "sha256": "21d7e73aa5c4a06d28b90495d73823abc3b8889df661d3f7bc9cf8cd0c8d75ba"
+      },
+      "snapshot": {
+        "path": "source-archive/sha256/21d7e73aa5c4a06d28b90495d73823abc3b8889df661d3f7bc9cf8cd0c8d75ba",
+        "sha256": "21d7e73aa5c4a06d28b90495d73823abc3b8889df661d3f7bc9cf8cd0c8d75ba"
+      }
+    }
+  ],
+  "runner_jobs": {
+    "path": "execution-jobs.json",
+    "sha256": "8ea03ef083837a6a7faed83c6ffdc4c68d9a093b4e1f432352f3bd79ff80ff32"
+  },
+  "commands": [
+    {
+      "id": "integrity",
+      "entrypoint": {
+        "path": "tools/validate_execution_manifest.py",
+        "sha256": "21d7e73aa5c4a06d28b90495d73823abc3b8889df661d3f7bc9cf8cd0c8d75ba"
+      },
+      "source_components": [
+        "tools/validate_execution_manifest.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/tools/validate_execution_manifest.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 20,
+      "expected_writes": "stdout only",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "pilot-local-batch",
+      "entrypoint": {
+        "path": "cases/001/tests/execute_pilots.py",
+        "sha256": "514b1c886616be7322d38386a739d7e8e87f85e6c7139d8719c092bfd42a0d5c"
+      },
+      "source_components": [
+        "cases/001/tests/execute_pilots.py",
+        "tools/receipt.py",
+        "cases/001/implementation/workflow.py",
+        "cases/001/tests/run.py",
+        "cases/002/implementation/workflow.py",
+        "cases/002/tests/repair-v2/run.py",
+        "cases/002/tests/repair-v2/adapter.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/001/tests/execute_pilots.py",
+        "--jobs",
+        "research/ai-saas-100/execution-jobs.json",
+        "--timeout",
+        "15"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 60,
+      "expected_writes": "Append UUID receipts/raw bytes to cases/001/receipts and cases/002/receipts",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "marketplace-check",
+      "entrypoint": {
+        "path": "cases/002/tests/repair-v2/run.py",
+        "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+      },
+      "source_components": [
+        "cases/002/implementation/workflow.py",
+        "cases/002/tests/repair-v2/run.py",
+        "cases/002/tests/repair-v2/adapter.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/002/tests/repair-v2/run.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 20,
+      "expected_writes": "stdout only",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "crm-components-evidence",
+      "entrypoint": {
+        "path": "cases/003/tests/persistence-v1/execute.py",
+        "sha256": "3ebe44716cfbcbfe9a8ef8468d6ffa903822f6076e9497d15ce2819bc5dd363c"
+      },
+      "source_components": [
+        "cases/003/implementation/workflow.py",
+        "cases/003/implementation/persistence.py",
+        "cases/003/implementation/demo_persistence.py",
+        "cases/003/tests/persistence-v1/run.py",
+        "cases/003/tests/persistence-v1/execute.py",
+        "cases/003/tests/run.py",
+        "cases/003/tests/run_repair_v1.py",
+        "tools/receipt.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/003/tests/persistence-v1/execute.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 60,
+      "expected_writes": "Append timestamped four-suite receipts/summary; content-bound snapshots and temporary synthetic stores",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "crm-demo",
+      "entrypoint": {
+        "path": "cases/003/implementation/demo_persistence.py",
+        "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+      },
+      "source_components": [
+        "cases/003/implementation/workflow.py",
+        "cases/003/implementation/persistence.py",
+        "cases/003/implementation/demo_persistence.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/003/implementation/demo_persistence.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 20,
+      "expected_writes": "stdout and disposable synthetic local store",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "scheduler-evidence",
+      "entrypoint": {
+        "path": "cases/033/tests/scheduler-v1/execute.py",
+        "sha256": "e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441"
+      },
+      "source_components": [
+        "cases/033/implementation/workflow.py",
+        "cases/033/tests/scheduler-v1/checks.py",
+        "cases/033/tests/scheduler-v1/run.py",
+        "cases/033/tests/scheduler-v1/execute.py",
+        "tools/receipt.py",
+        "tools/validate.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/033/tests/scheduler-v1/execute.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 60,
+      "expected_writes": "New cases/033/receipts/scheduler-v1-<UTC>/ and immutable source snapshot; executes archived components",
+      "status": "not_executed_by_integration"
+    },
+    {
+      "id": "scheduler-check",
+      "entrypoint": {
+        "path": "cases/033/tests/scheduler-v1/run.py",
+        "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+      },
+      "source_components": [
+        "cases/033/implementation/workflow.py",
+        "cases/033/tests/scheduler-v1/checks.py",
+        "cases/033/tests/scheduler-v1/run.py"
+      ],
+      "argv": [
+        "python3",
+        "-B",
+        "research/ai-saas-100/cases/033/tests/scheduler-v1/run.py"
+      ],
+      "cwd": "repository_root",
+      "timeout_seconds": 20,
+      "expected_writes": "stdout only",
+      "status": "not_executed_by_integration"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "001",
+      "source_components": [
+        "cases/001/implementation/workflow.py",
+        "cases/001/tests/run.py"
+      ],
+      "suite": {
+        "path": "cases/001/tests/fixtures.json",
+        "sha256": "da17753101d08dc5b2e017933e8a888d137febdc7cae4ead93193bd8a253f4a7"
+      },
+      "suite_entrypoint": {
+        "path": "cases/001/tests/run.py",
+        "sha256": "b5aa4bd3fea0f9674bbad361d4fba648a0df69596275039eb682139869893eb9"
+      },
+      "interface_transformations": [
+        {
+          "path": "cases/001/tests/run.py",
+          "sha256": "b5aa4bd3fea0f9674bbad361d4fba648a0df69596275039eb682139869893eb9"
+        },
+        {
+          "path": "cases/001/implementation/workflow.py",
+          "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+        }
+      ],
+      "comparison": {
+        "ready_inputs": false,
+        "inputs": null,
+        "oracle": {
+          "path": "cases/001/tests/fixtures.json",
+          "sha256": "da17753101d08dc5b2e017933e8a888d137febdc7cae4ead93193bd8a253f4a7"
+        },
+        "reason": "Control-plane tests only. Legacy fixtures embed expected answers. Real rewriting blocked."
+      },
+      "product_acceptance": false,
+      "test_exposure": "Builder-visible regression, not hidden evaluation",
+      "arms": [
+        {
+          "name": "local_component",
+          "status": "runnable_not_executed_by_integration",
+          "command_ids": [
+            "pilot-local-batch"
+          ]
+        },
+        {
+          "name": "B1_generic_model",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        },
+        {
+          "name": "B3_original_product",
+          "status": "not_observed",
+          "command_ids": []
+        },
+        {
+          "name": "B2_central_AI_workflow",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        }
+      ],
+      "receipt_location": "cases/001/receipts/",
+      "scope_note": "Control-plane tests only. Legacy fixtures embed expected answers. Real rewriting blocked."
+    },
+    {
+      "case_id": "002",
+      "source_components": [
+        "cases/002/implementation/workflow.py",
+        "cases/002/tests/repair-v2/run.py",
+        "cases/002/tests/repair-v2/adapter.py"
+      ],
+      "suite": {
+        "path": "cases/002/tests/repair-v2/evaluator.json",
+        "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889"
+      },
+      "suite_entrypoint": {
+        "path": "cases/002/tests/repair-v2/run.py",
+        "sha256": "eeb43fa1df6e3488a2ed61623a429e64ebf05a22f09031d2f116466d021e3416"
+      },
+      "interface_transformations": [
+        {
+          "path": "cases/002/tests/repair-v2/adapter.py",
+          "sha256": "be3d3b193c834d2b4d49ae8c9892c9db5f0b041e771dc8213642a7cc90c130f2"
+        }
+      ],
+      "comparison": {
+        "ready_inputs": true,
+        "inputs": {
+          "path": "cases/002/tests/repair-v2/comparison-inputs.json",
+          "sha256": "d73aef156e8731bf6e1600a0db2a0fb547bfdaadd57551d598dd52cb66bde331"
+        },
+        "oracle": {
+          "path": "cases/002/tests/repair-v2/evaluator.json",
+          "sha256": "f76bdb985466b9ac3b82fd51a86ad151003f56de22467bb15e96ddd4e2bcb889"
+        },
+        "reason": "Complete initial profiles, assignments, explicit operations and clocks. Separate expected traces. Local subset only."
+      },
+      "product_acceptance": false,
+      "test_exposure": "Builder-visible regression, not hidden evaluation",
+      "arms": [
+        {
+          "name": "local_component",
+          "status": "runnable_not_executed_by_integration",
+          "command_ids": [
+            "pilot-local-batch",
+            "marketplace-check"
+          ]
+        },
+        {
+          "name": "B1_generic_model",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        },
+        {
+          "name": "B3_original_product",
+          "status": "not_observed",
+          "command_ids": []
+        }
+      ],
+      "receipt_location": "cases/002/receipts/",
+      "scope_note": "Complete initial profiles, assignments, explicit operations and clocks. Separate expected traces. Local subset only."
+    },
+    {
+      "case_id": "003",
+      "source_components": [
+        "cases/003/implementation/workflow.py",
+        "cases/003/implementation/persistence.py",
+        "cases/003/implementation/demo_persistence.py",
+        "cases/003/tests/persistence-v1/run.py",
+        "cases/003/tests/persistence-v1/execute.py",
+        "cases/003/tests/run.py",
+        "cases/003/tests/run_repair_v1.py"
+      ],
+      "suite": {
+        "path": "cases/003/tests/persistence-v1/fixtures.json",
+        "sha256": "709362107acff5308488d3282edc13a82ecd2542a95528be218a40ecff037125"
+      },
+      "suite_entrypoint": {
+        "path": "cases/003/tests/persistence-v1/run.py",
+        "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5"
+      },
+      "interface_transformations": [
+        {
+          "path": "cases/003/tests/persistence-v1/run.py",
+          "sha256": "32f79db494cf281451336b56af3b4582cf37ec5afae672fe8bde80d796f0e2f5"
+        },
+        {
+          "path": "cases/003/implementation/demo_persistence.py",
+          "sha256": "a7353400f0a0b5b98aadc8d7fead98ba4eae29eb440b69b4db735a9589e65679"
+        }
+      ],
+      "comparison": {
+        "ready_inputs": false,
+        "inputs": null,
+        "oracle": {
+          "path": "cases/003/tests/persistence-v1/fixtures.json",
+          "sha256": "709362107acff5308488d3282edc13a82ecd2542a95528be218a40ecff037125"
+        },
+        "reason": "Structured component fixtures mix answers/inputs and runner-defined control sequences. No complete separated natural-language comparison bundle."
+      },
+      "product_acceptance": false,
+      "test_exposure": "Builder-visible regression, not hidden evaluation",
+      "arms": [
+        {
+          "name": "local_component",
+          "status": "runnable_not_executed_by_integration",
+          "command_ids": [
+            "crm-components-evidence",
+            "crm-demo"
+          ]
+        },
+        {
+          "name": "B1_generic_model",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        },
+        {
+          "name": "B3_original_product",
+          "status": "not_observed",
+          "command_ids": []
+        },
+        {
+          "name": "B2_central_AI_workflow",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        }
+      ],
+      "receipt_location": "cases/003/receipts/",
+      "scope_note": "Structured component fixtures mix answers/inputs and runner-defined control sequences. No complete separated natural-language comparison bundle."
+    },
+    {
+      "case_id": "033",
+      "source_components": [
+        "cases/033/implementation/workflow.py",
+        "cases/033/tests/scheduler-v1/checks.py",
+        "cases/033/tests/scheduler-v1/run.py",
+        "cases/033/tests/scheduler-v1/execute.py"
+      ],
+      "suite": {
+        "path": "cases/033/tests/scheduler-v1/inputs.json",
+        "sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5"
+      },
+      "suite_entrypoint": {
+        "path": "cases/033/tests/scheduler-v1/run.py",
+        "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+      },
+      "interface_transformations": [
+        {
+          "path": "cases/033/tests/scheduler-v1/run.py",
+          "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+        }
+      ],
+      "comparison": {
+        "ready_inputs": true,
+        "inputs": {
+          "path": "cases/033/tests/scheduler-v1/inputs.json",
+          "sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5"
+        },
+        "oracle": {
+          "path": "cases/033/tests/scheduler-v1/oracles.json",
+          "sha256": "85f2bd272b32323cb7d4d533e83852d0967f0c04792eba27b05470736ec22bc7"
+        },
+        "reason": "Complete request and node_limit. Direct schedule(request,node_limit=...) interface. Separate oracle/checker. 87 cases plus 5 checker self-tests."
+      },
+      "product_acceptance": false,
+      "test_exposure": "Builder-visible regression, not hidden evaluation",
+      "arms": [
+        {
+          "name": "local_component",
+          "status": "runnable_not_executed_by_integration",
+          "command_ids": [
+            "scheduler-evidence",
+            "scheduler-check"
+          ]
+        },
+        {
+          "name": "B1_generic_model",
+          "status": "blocked_no_authorized_inference",
+          "command_ids": []
+        },
+        {
+          "name": "B3_original_product",
+          "status": "not_observed",
+          "command_ids": []
+        }
+      ],
+      "receipt_location": "cases/033/receipts/",
+      "scope_note": "Complete request and node_limit. Direct schedule(request,node_limit=...) interface. Separate oracle/checker. 87 cases plus 5 checker self-tests."
+    }
+  ],
+  "additional_data": [
+    {
+      "path": "cases/003/tests/fixtures.json",
+      "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f"
+    },
+    {
+      "path": "cases/003/tests/fixtures.repair-v1.json",
+      "sha256": "d8eb6e9b71177240b54a65465dbf425cde5c6469a25449b6247a26cdde469837"
+    },
+    {
+      "path": "cases/003/implementation/source-history/8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4/before-persistence-v1.json",
+      "sha256": "474af971438bc0e5892703294761ba8c9f1179a2bae30c28b577627a5915ad48"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/conventions.md",
+      "sha256": "d85ef2677fced44cdbb3a66f744021d143feb8569d237a30f4d9459afed069c4"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/conventions-freeze.json",
+      "sha256": "7055fcf3633e72a3343d036f02adf0d52bc9daa7f2707ae1ade2efbf624e6bf8"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/freeze.json",
+      "sha256": "33e9ae8f27f7a63c52950bf717ad25566364c7d67ccaffae908040095327a500"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/materialize.py",
+      "sha256": "b7bbe9793d3de4d55c65ac6022e334512a9bb40a7aadd8ad7aa9e8f218f1db2c"
+    }
+  ],
+  "retained_evidence": [
+    {
+      "path": "cases/001/continuations/v1.json",
+      "sha256": "9174fce5f8d5e4666d520064bcc7a4ba6077e234b03ef328df905b4434a43354"
+    },
+    {
+      "path": "batches/continuation-001.json",
+      "sha256": "4240e0034f04d547a663024dd7f3d48749f82fd4c8b957c957218137759287d3"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/validation.json",
+      "sha256": "602be88da93c297887da42ed20a6b3c8578faefeb0237b705999263c6c3cdc3b"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/source-bundle.json",
+      "sha256": "d04f91488b9794c19265591518f5a7a2e7030a1b93037e71ebda530bb3283d7e"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/repair-v2.receipt.json",
+      "sha256": "1bf168cd0080ddcb7dd7197059cb87b468fac6b3cb3f8ad3f6374d4345149655"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical.receipt.json",
+      "sha256": "be128a7b99627f4cca755912618f24e2f53553fdc925655aab41041687abf38a"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-summary.json",
+      "sha256": "6a714207008e76f92702643515c44ab00bbe0c579ed5aec721763b86ffe30b00"
+    },
+    {
+      "path": "cases/003/implementation/source-history/persistence-v1-c8328cbab5acdb742714198ea1a3b7f325e942f37a034901dadc6c7cea95e339/manifest.json",
+      "sha256": "e94ed3ece00addd9f01343e078dfaf3df3e2ba9bdadee12abd7c916d8135e3d9"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-persistence.json",
+      "sha256": "704a7f8cbe86ed593e5a807b8278ff8ee29b9158cfe8f5ea17561ef2be56aa13"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.json",
+      "sha256": "4d20f6616f9df232aa952a06e8e7889b3d34ddb72d428a9c0b468f4077203ac9"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-legacy.json",
+      "sha256": "77c2250463eece751f09b14e0ce02f2f3d35aabf6dfa179a814c374212e06301"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.json",
+      "sha256": "01aef832f4bef39de6d2470b8b5db2ae5b15dd0bfe09aa507775e17cf30c718b"
+    },
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/receipt.json",
+      "sha256": "3e53a55998f7ad9a99a5948b88aab1ba4d7511f528349f2af963640bce790254"
+    },
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/validation.json",
+      "sha256": "09a8945ba296e4bab0385907ee4a52e9c9bd15dfbd04126a5d8bb429789f6131"
+    }
+  ],
+  "retained_raw_outputs": [
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/repair-v2.stdout.json",
+      "sha256": "06c132c2f79327aa52d8f46e04d0cea36d4c07e60e5c803502c7f18e3ba6ff0e"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/repair-v2.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical.stdout.json",
+      "sha256": "e6dc851ab58a35c36ae59fd899ebc0d6eccd5864022125975e636fdd93f18e5a"
+    },
+    {
+      "path": "cases/002/tests/recovery-v1/runs/20260922T032302371945Z/historical.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-persistence.stdout.json",
+      "sha256": "8cb7c493e28f96a8960e4b6dbf47a6f194f61ccc68626c3a731219d8fdcee3fc"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-persistence.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.stdout.json",
+      "sha256": "e194230926fa44d1efc87da802c02a0cc1050c823018e857265c6d411d7e5e66"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-demo.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-legacy.stdout.json",
+      "sha256": "ea0dbb55f026044856363198f6547e43dabc71ff37b1d8ffb019032f0f5731d2"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-legacy.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.stdout.json",
+      "sha256": "76dd6507fb03b1fde6df4df65ba86ba78f2763b234cb897b48c3934dfa09dc27"
+    },
+    {
+      "path": "cases/003/receipts/003-persistence-v1-20260922T033210014938Z-repair.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/stdout.json",
+      "sha256": "5135543867a60b5cf319f1912150d8fdfc13bed5f187a626e7a9eae97616dc20"
+    },
+    {
+      "path": "cases/033/receipts/scheduler-v1-20260922T034444263126Z/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "execution_policy": [
+    "Validate integrity immediately before one selected foreground command, enforcing its timeout. No unattended batch.",
+    "All executing campaign Python components are individually hash-bound to raw content-addressed snapshots, not only an opaque source manifest.",
+    "Native CRM executor snapshots components, executes active files, and checks unchanged bytes. Scheduler evidence executor runs archived components.",
+    "Legacy fixtures and oracles must not be model input. Cases 001 and 003 lack complete separated comparison inputs.",
+    "Historical preservation manifests contain superseded active hashes and sometimes case-relative paths; do not reinterpret them as current source selections.",
+    "Integrity validation does not rerun suites or establish model performance. Original access is optional for bounded B1/B2 evaluation and required for parity claims."
+  ],
+  "never_execute": [
+    "cases/002/tests/repair-v2/execute.py",
+    "cases/002/tests/repair-v2/validate.py",
+    "cases/001/research/build_dossiers.py",
+    "cases/001/research/capture.py",
+    "cases/033/tests/scheduler-v1/materialize.py"
+  ],
+  "product_acceptance": false
+}

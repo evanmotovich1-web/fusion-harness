@@ -1,0 +1,594 @@
+{
+  "evidence_id": "r005-0a378604b626fc53c906",
+  "source_url": "https://www.frase.io/integrations",
+  "publisher": "www.frase.io",
+  "retrieved_at": "2026-09-20T21:35:25.748538+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.frase.io/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/005/research/captures/0a378604b626fc53c906.html",
+  "capture_sha256": "dadc7812c5305499516954d5527e7b13e468dbf6c62acee5cd2e73985b12ff6d",
+  "bytes_saved": 163050,
+  "title": "Frase Integrations — Publish to WordPress, Webflow, Sanity, Wix & FraseCMS | Frase",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Connect Frase to WordPress, Webflow, Sanity, Wix, and FraseCMS, plus Google Search Console, Google Docs, Notion, Slack, a REST API, and MCP. Publish, track, import, and automate — every integration included from $39/mo."
+    },
+    {
+      "key": "og:title",
+      "value": "Frase Integrations — Publish to WordPress, Webflow, Sanity, Wix & FraseCMS | Frase"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect Frase to WordPress, Webflow, Sanity, Wix, and FraseCMS, plus Google Search Console, Google Docs, Notion, Slack, a REST API, and MCP. Publish, track, import, and automate — every integration included from $39/mo."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Frase.io"
+    }
+  ],
+  "text": "Skip to content\nPlatform\nListen\nFrase Answers\nCapture the questions your visitors actually ask.\nCreate\nResearch\nSEO Research\nContent research that ends in a brief.\nTopic Clusters\nMap the cluster around every topic.\nWrite\nAI Agent\nDraft with your brand in context.\nBrand Voice\nKeep every draft sounding like you.\nOptimize\nContent Optimization\nScore and lift pages for Google.\nGEO Optimization\nTune content to get cited by AI.\nAI Visibility\nMonitor where AI search cites you.\nSite Audit\nFind and prioritize the gaps.\nPublish\nFraseCMS\nHost and publish content that's built to rank.\nIntegrations\nPublish to WordPress, Webflow, Sanity, and Wix.\nMonitor & Fix\nContent Guard\nCatch ranking decay and ship the fix.\nBacklinks\nFind link gaps, draft the outreach.\nPlatform Overview\nSee how Frase runs the whole content loop in one place.\nExplore the platform\nUse Frase in your AI tools\nRun Frase from Claude, Cursor, and any MCP tool.\nMCP server, CLI & API\nAutonomy\nLet Frase publish on its own, keep every page under review, or anywhere in between. You set the dial.\nHow autonomy works\nMultilingual\nWrite natively in 70+ languages, never translated.\nSee multilingual content\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nStart free trial →\nStart free trial →\nPlatform\nListen\nFrase Answers\nCreate\nResearch\nSEO Research\nTopic Clusters\nWrite\nAI Agent\nBrand Voice\nOptimize\nContent Optimization\nGEO Optimization\nAI Visibility\nSite Audit\nPublish\nFraseCMS\nIntegrations\nMonitor & Fix\nContent Guard\nBacklinks\nPlatform Overview\nUse Frase in your AI tools\nAutonomy\nMultilingual\nSolutions\nBy team\nFor Content Marketers\nFor SEO Teams\nBy segment\nFor Agencies\nFor Enterprise\nProof\nCustomer Stories\nResources\nLearn\nBlog\nSEO + GEO Guide\nHelp Center\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nAll Comparisons\nPricing\nLog in\nFrase integrations\nConnect Frase to the tools you already publish with.\nFrase publishes to your CMS, pulls your search performance in, imports the drafts you already have, and pipes alerts to your team — so the whole loop runs in one place instead of six tabs.\nEvery integration is included on every plan. No per-connection fees.\nStart free trial\nBrowse all integrations\n7-day free trial\nNo credit card\nAll integrations included\nTrusted by content and SEO teams at\nPublish\nPush finished content straight to your CMS\nWrite and optimize in Frase, then publish to your site in one click — metadata, images, and formatting intact. No copy-paste, no reformatting, no opening your CMS dashboard.\nWordPress\nFrase publishes drafts, scheduled, or live posts straight to WordPress and fills your Yoast or Rank Math meta fields as it goes.\nWebflow\nFrase maps your Webflow CMS collection once, then one-click publishes every article with SEO-friendly slugs.\nSanity\nFrase reads your schema, converts to native Portable Text, and uploads images to Sanity Assets.\nWix\nFrase publishes optimized articles to your Wix blog with images and metadata in place.\nFraseCMS\nOr host it on FraseCMS, free for 100,000 page views a month, built for AI visibility from the first render.\nTrack\nPull your real search performance into Frase\nConnect Google Search Console so the loop optimizes against what your pages actually do in search, not a guess.\nGoogle Search Console\nFrase pulls clicks, impressions, CTR, and average position for every page, flags pages slipping on Google, and surfaces the ones stuck on page two that need a push.\nExport\nSend content wherever it needs to go\nHand off a draft with formatting intact, or download it in whatever format the next tool expects.\nGoogle Docs\nFrase exports articles, briefs, and research to Google Docs with headings, lists, and links preserved.\nNotion\nFrase pushes content as native Notion blocks your team can edit immediately.\nHTML, Markdown, PDF & text\nDownload any piece as HTML, Markdown, PDF, or plain text for a CMS or workflow that isn't on the list.\nImport\nBring existing drafts in to optimize\nAlready have a draft, a spec, or a published URL? Pull it into Frase and put it under SEO and GEO scoring without retyping a word.\nGoogle Docs & Notion\nSearch your workspace and pull a draft or research page straight into Frase, formatting preserved.\nAny URL\nPaste a URL and Frase extracts the content cleanly, ready to audit and optimize.\nGitHub & Linear\nTurn release notes and issue descriptions into marketing content and product docs.\nTeam & developers\nWire Frase into how your team already works\nGet notified where you work, and automate the rest with an API and the connectors your stack already uses.\nSlack\nFrase posts content-ready, audit-complete, and alert notifications to the channels you choose.\nREST API\nProgrammatic access to content, SERP, and audit endpoints, with webhooks for real-time events. Available on every plan.\nExplore\nZapier, Make & n8n\nConnect Frase to thousands of apps without code — triggers, scenarios, and self-hosted automation.\nClaude, ChatGPT & MCP\nRun research, creation, optimization, and tracking through an MCP-compatible assistant by natural conversation.\nIntegration questions, answered straight.\nAre integrations included on every Frase plan?\nYes. Every plan, starting at $39/mo billed yearly, includes CMS publishing, Google Search Console, imports, exports, Slack notifications, and API access. There are no separate per-integration fees. Frase does sell extra seats, audit credits, and AI prompts as your usage grows, and yearly billing saves 20%.\nWhich CMS platforms can Frase publish to?\nFrase publishes directly to WordPress, Webflow, Sanity, and Wix, or hosts your content on FraseCMS. Connect your CMS once and Frase handles formatting, metadata, featured images, and SEO fields when you click publish — as a draft, scheduled, or live — without opening your CMS dashboard.\nDo I need to install a plugin to publish to WordPress?\nNo. Frase publishes to WordPress directly over its API once you connect your site, so an article goes live without a plugin install. Frase also fills your Yoast or Rank Math meta fields and uploads featured images to your Media Library in the process.\nCan I import content I've already written?\nYes. Frase imports from Google Docs, Notion, GitHub, Linear, and any URL. Search your workspace, pick a repository, or paste a link — Frase extracts the content, preserves the formatting, and makes it ready to audit and optimize right away.\nDoes the API work with automation tools like Zapier?\nYes. The REST API supports webhooks, so it works with Zapier, Make, n8n, and any platform that can call a REST endpoint. Build flows that create briefs, trigger audits, and export optimized content automatically.\nWhat if my CMS isn't on the list?\nExport any piece as HTML, Markdown, PDF, or plain text for a platform that isn't directly supported, or use the REST API to build a custom publishing flow into your own system.\nGet started\nRun the whole content loop in one place.\nConnect your CMS, your search data, and your team in a free trial, and publish your next optimized article without leaving Frase.\nStart free trial\nSee plans\n7-day free trial. No credit card.\nFree 7-day trial\nNo credit card required\nStart free trial →\nThe content operating system for AI search. Frase researches, writes, optimizes, publishes, and monitors content so it ranks on Google and gets cited by AI.\nSOC 2 Type II\nGDPR Compliant\nPlatform\nPlatform Overview\nFrase Answers\nAI Agent\nContent Optimization\nGEO Optimization\nAI Visibility\nContent Guard\nBacklinks\nSite Audit\nFraseCMS\nAutonomy\nUse Frase in your AI tools\nSolutions\nContent Marketers\nSEO Teams\nAgencies\nEnterprise\nCustomer Stories\nFree Tools\nGEO Score Checker\nAI Visibility Checker\nAgent Readiness Checker\nAll Free Tools\nCompare\nvs Semrush\nvs Surfer SEO\nvs Ahrefs\nvs Clearscope\nvs MarketMuse\nvs Conductor\nvs Otterly\nAll Comparisons\nResources\nBlog\nSEO + GEO Guide\nCase Studies\nReviews\nHelp Center\nllms.txt\nCompany\nAbout\nAffiliate Program\nContact\nSecurity\nTerms\nPrivacy\n©\n2026\nFrase. All rights reserved.\nPrivacy\nTerms\nllms.txt\nContact\nFrase Integrations — Publish to WordPress, Webflow, Sanity, Wix & FraseCMS | Frase",
+  "links": [
+    {
+      "href": "/_next/static/css/e09a05363150cf23.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/ee4698f5216cae25.css?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/webpack-27236eb3690087b4.js?dpl=dpl_ADQTn9r6eeQiPP5ZhdtMhHE85rXD",
+      "rel": "preload"
+    },
+    {
+      "href": "https://next.frase.io/answers-widget.js?token=NDU3MWU2ZmItNWY4Ni00MWRjLThlYzEtODMwNGUwN2QzZjY1OmZiY2EyMmE5MjIxMTEwMjc6ZWUwZTk5NmUzZjRjZjUyOQ",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-research",
+      "rel": null
+    },
+    {
+      "href": "/features/clusters",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/brand-voice",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/features/multilingual",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://next.frase.io/sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=integrations_hub&utm_medium=hero&utm_campaign=integrations",
+      "rel": null
+    },
+    {
+      "href": "#publish",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/features/api-integrations",
+      "rel": null
+    },
+    {
+      "href": "/features/mcp",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up?utm_source=integrations_hub&utm_medium=final_cta&utm_campaign=integrations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://signin-next.frase.io/sign-up",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://trust.copysmith.ai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/features",
+      "rel": null
+    },
+    {
+      "href": "/features/answers",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/features/seo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/geo-content-optimization",
+      "rel": null
+    },
+    {
+      "href": "/features/ai-visibility",
+      "rel": null
+    },
+    {
+      "href": "/features/content-guard",
+      "rel": null
+    },
+    {
+      "href": "/features/backlinks",
+      "rel": null
+    },
+    {
+      "href": "/features/auditor",
+      "rel": null
+    },
+    {
+      "href": "/features/cms",
+      "rel": null
+    },
+    {
+      "href": "/features/autonomy",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/solutions/content-marketers",
+      "rel": null
+    },
+    {
+      "href": "/solutions/seo-teams",
+      "rel": null
+    },
+    {
+      "href": "/solutions/agencies",
+      "rel": null
+    },
+    {
+      "href": "/solutions/enterprises",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/tools/geo-score",
+      "rel": null
+    },
+    {
+      "href": "/tools/ai-visibility-checker",
+      "rel": null
+    },
+    {
+      "href": "/tools/agent-readiness",
+      "rel": null
+    },
+    {
+      "href": "/tools",
+      "rel": null
+    },
+    {
+      "href": "/vs/semrush",
+      "rel": null
+    },
+    {
+      "href": "/vs/surfer-seo",
+      "rel": null
+    },
+    {
+      "href": "/vs/ahrefs",
+      "rel": null
+    },
+    {
+      "href": "/vs/clearscope",
+      "rel": null
+    },
+    {
+      "href": "/vs/marketmuse",
+      "rel": null
+    },
+    {
+      "href": "/vs/conductor",
+      "rel": null
+    },
+    {
+      "href": "/vs/otterly",
+      "rel": null
+    },
+    {
+      "href": "/vs",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/seo-geo-guide",
+      "rel": null
+    },
+    {
+      "href": "/case-studies",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://docs.frase.io",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/company/about",
+      "rel": null
+    },
+    {
+      "href": "/partners/affiliates",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/privacy",
+      "rel": null
+    },
+    {
+      "href": "/company/terms",
+      "rel": null
+    },
+    {
+      "href": "/llms.txt",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "https://www.frase.io/integrations",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/mstile-270x270.png",
+      "rel": "msapplication-TileImage"
+    }
+  ],
+  "elapsed_seconds": 0.350492
+}

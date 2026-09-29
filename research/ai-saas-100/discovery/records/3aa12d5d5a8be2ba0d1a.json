@@ -1,0 +1,73 @@
+{
+  "evidence_id": "web-3aa12d5d5a8be2ba0d1a",
+  "source_url": "https://flipworth.app/",
+  "retrieved_at": "2026-09-20T21:01:53.944861+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://flipworth.app/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/3aa12d5d5a8be2ba0d1a.html",
+  "capture_sha256": "8da349ac68dbcc892282d5b6c9d72d69f24d34e8306cded3a535ab2f094b6cb1",
+  "bytes_saved": 6295,
+  "title": "FlipWorth - Snap it. Check it. Flip it.",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "FlipWorth helps you value resale items, compare sold eBay listings, and spot profit before you buy."
+    },
+    {
+      "key": "og:title",
+      "value": "FlipWorth"
+    },
+    {
+      "key": "og:description",
+      "value": "See it. Scan it. Flip it for profit. Check resale values and sold eBay listings before you buy."
+    },
+    {
+      "key": "og:site_name",
+      "value": "FlipWorth"
+    }
+  ],
+  "text": "FlipWorth - Snap it. Check it. Flip it.",
+  "links": [
+    {
+      "href": "/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "/icon-192.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://flipworth.app/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/assets/index-CeEssHU3.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.3255
+}

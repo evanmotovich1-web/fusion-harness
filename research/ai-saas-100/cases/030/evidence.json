@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-7961da55bd49ecea23c8",
+      "source_url": "https://flair.ai/",
+      "final_url": "https://flair.ai/",
+      "publisher": "flair.ai",
+      "retrieved_at": "2026-09-20T21:00:44.978048+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        },
+        {
+          "locator": "metadata[1].og:site_name",
+          "excerpt": "Flair.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning "
+        },
+        {
+          "locator": "text characters 1:313",
+          "excerpt": "I Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free"
+        },
+        {
+          "locator": "text characters 10:322",
+          "excerpt": " Photo Generator & Editor | Create E-Commerce Images | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free\nBook a D"
+        },
+        {
+          "locator": "text characters 79:391",
+          "excerpt": ".ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free\nBook a Demo\nUsed by brands of all sizes and industries\nCreate content that ma"
+        },
+        {
+          "locator": "text characters 99:411",
+          "excerpt": "\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free\nBook a Demo\nUsed by brands of all sizes and industries\nCreate content that matches your brand rul"
+        },
+        {
+          "locator": "text characters 102:414",
+          "excerpt": "terprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free\nBook a Demo\nUsed by brands of all sizes and industries\nCreate content that matches your brand rules "
+        }
+      ],
+      "capture_path": "discovery/captures/7961da55bd49ecea23c8.html",
+      "capture_sha256": "32045b783232fb1892b896d083527b6415e5d899bbdf3038ba49e79dba72dcea",
+      "record_path": "discovery/records/7961da55bd49ecea23c8.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+      "source_url": "https://flair.ai/key-features/flair-api",
+      "publisher": "flair.ai",
+      "retrieved_at": "2026-09-20T21:35:37.815122+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://flair.ai/key-features/flair-api",
+      "capture_path": "cases/030/research/captures/c0ec5be1f7a7f527e4d4.html",
+      "capture_sha256": "ab5d568f37e044d692a7841416f68028465b6a216d5b46a0ae00d8e66d9839b0",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/030/research/records/c0ec5be1f7a7f527e4d4.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Flair API | Flair.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Integrate AI-powered content generation directly into your workflow with our comprehensive API."
+        },
+        {
+          "locator": "metadata[1].og:site_name",
+          "excerpt": "Flair.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Flair API | Flair.ai"
+        },
+        {
+          "locator": "text characters 115:662",
+          "excerpt": "PI\nIntegrate AI-powered content generation directly into your workflow with our comprehensive API.\nHow It Works\n1\nGet API access\nSign up for API access with flexible plans based on your usage requirements and content volume.\n2\nIntegrate with your systems\nUse our SDKs and code examples to seamlessly integrate Flair's AI capabilities into your existing workflows.\n3\nScale your content production\nGenerate thousands of product images, videos, and marketing assets programmatically at scale.\nReady to scale your content creation?\nJoin forward-thinki"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r030-f91bd7f158510b53316b",
+      "source_url": "https://flair.ai/pricing",
+      "publisher": "flair.ai",
+      "retrieved_at": "2026-09-20T21:35:37.709907+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://flair.ai/pricing",
+      "capture_path": "cases/030/research/captures/f91bd7f158510b53316b.html",
+      "capture_sha256": "4ab3daf8e6c2307ee6769fc305956a010acff39a9e714e14f652cefaa1e13d57",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/030/research/records/f91bd7f158510b53316b.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing Plans | AI Photo Editing Software | Flair.ai | Flair.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "View Flair.ai's affordable pricing plans for AI-powered product photography. Choose from starter, professional and enterprise options."
+        },
+        {
+          "locator": "metadata[1].og:site_name",
+          "excerpt": "Flair.ai"
+        },
+        {
+          "locator": "metadata[2].og:title",
+          "excerpt": "Pricing Plans | AI Photo Editing Software | Flair.ai | Flair.ai"
+        },
+        {
+          "locator": "text characters 0:2128",
+          "excerpt": "Pricing Plans | AI Photo Editing Software | Flair.ai | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nAnnual discount\nFree\n$0\nForever\nYour Current Plan\nFeatures:\n1 Custom Model\n5 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n1 video generation\nPro\n$8\nPer month\nGet Pro\nFeatures:\n2 video generations\nFaster Rendering Speed\nImage Upscales\nImage Variations\nPro+\n$26\nPer month\nGet Pro+\nFeatures:\nUp to 8 Standard or 2 Fast Custom Models\n80 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n3 video generations\nFirst Priority Rendering Speed\nImage Upscales\nImage Variations\nCompany Commercial License\nScale\n$\n38\nPer month\nTier 1\nGet Scale Tier\n1\nFeatures:\nUp to 15 Standard or 4 Fast Custom Models\n150 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n5 video generations\nFirst Priority Rendering Speed\nImage Upscales & Variations\nCompany Commercial License\nAI Product Photography API Early Access\nPriority Customer Support\nEnterprise\nCustom\nPer month\nContact us\nFeatures:\nEverything in Pro+\nCustom credit amounts.\nUnlimited API access\nCompany Commercial License\nPriority support\nEnterprise\nFlair Enterprise offers custom model training, SAML-based SSO, unlimited API access, dedicated success manager, and more.\nContact sales\nWhiteglove onboarding support\nCustom Model training\nDedicated Slack channel\nCustom billing\nUnlimited API calls\nDedicated integration support\nCompany\nPricing\nEnterprise\nCareers\nTerms of Service\nBlog\nFAQ\nKey Features\nBulk Content Generation\nOn Model Photography\nAI Product Videos\nAI Marketing & Ads\nAI Human Builder\nFlair API\nProduct Categories\nAI Beauty\nAI Consumer Packaged Goods\nAI Jewelry\nAI Fashion Models\nAI Furniture\nAI Technology\nAI Handbags\nAI Food\nEditing Tools\nRegenerate Product\nRegenerate Human\nMagic Erase\nUpscale\nVirtual Try On\nEnhance Image Resolution\nGenerate Variations\nExtend Image Dimensions\nView all tools\n© 2025 Flair AI. All rights reserved.\nTwitter\nLinkedIn\nInstagram\nYouTube\nEmail"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-fb7a16d773659d8bd691",
+      "source_url": "https://mokker.ai/",
+      "final_url": "https://mokker.ai/",
+      "publisher": "mokker.ai",
+      "retrieved_at": "2026-09-20T21:00:44.978192+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "text characters 0:45",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        },
+        {
+          "locator": "text characters 0:45",
+          "excerpt": "Mokker AI - Instant AI Background Replacement"
+        }
+      ],
+      "capture_path": "discovery/captures/fb7a16d773659d8bd691.html",
+      "capture_sha256": "b0583664428e255ceeb5e754ce2cfe1ee2ab5139f5c02d9753303c1f0269ba1e",
+      "record_path": "discovery/records/fb7a16d773659d8bd691.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

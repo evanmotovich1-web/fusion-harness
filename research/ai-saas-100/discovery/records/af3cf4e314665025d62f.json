@@ -1,0 +1,269 @@
+{
+  "evidence_id": "web-af3cf4e314665025d62f",
+  "source_url": "https://www.trevorai.com/about",
+  "retrieved_at": "2026-09-20T21:02:59.228887+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.trevorai.com/about",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/af3cf4e314665025d62f.html",
+  "capture_sha256": "7d5a51b2d5a35c1e9cd10525289f6469bed57da44cef80b274ab3eab56f80196",
+  "bytes_saved": 27087,
+  "title": "Trevor AI: Team and Story",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Trevor Labs, ltd. is aiming to solve some of the fundamental challenges of time management, in modern-day life, with an artificially intelligent scheduling assistant called Trevor AI"
+    },
+    {
+      "key": "og:title",
+      "value": "Trevor AI: Team and Story"
+    },
+    {
+      "key": "og:description",
+      "value": "Trevor Labs, ltd. is aiming to solve some of the fundamental challenges of time management, in modern-day life, with an artificially intelligent scheduling assistant called Trevor AI"
+    }
+  ],
+  "text": "Trevor AI: Team and Story\nHome\nIntegrations\nTodoist\nGoogle Calendar\nOutlook & Microsoft 365 Calendars\nGoogle Tasks\nMicrosoft To Do\nUse Cases\nAcademics\nC-Level Executives\nCreative Pros\nEntrepreneurs\nFreelancers\nProject Managers\nRemote Workers\nSales & Marketing\nSolopreneurs\nStartup Founders\nStudents\nDocs\nPricing\nSign in\nMeet the team\nThe Short Story\nTrevor Labs, ltd. is aiming to solve some of the fundamental challenges of time management, in modern-day life, with an artificially intelligent scheduling assistant. The company is based in Europe and was started with the support of the\nFounder Institute\n. Trevor Labs was founded in February 2016, by\nGeorge Petrov\n, with its Technical Co-founder\nDmitry Yudakov\njoining soon after. Ever since the co-founders have committed more than 44896 lines of code. The first problem Trevor AI solves is the disconnect between time and task management. With a unique drag & drop interface and some backend magic,\napp.trevorai.com\nwas launched - a web app, available on mobile and desktop that integrates your task list with your Google calendar to help you schedule your tasks. Realistic planning just got a lot easier and scheduling your whole day takes seconds. After aggregating a good amount of data, Trevor Labs also launched a\nMessenger chat bot\nthat automagically helps you find time for your tasks in a very natural way.\nSpecial thanks to our early partners and advisors: Todor Kolev, Ivan Vasilev, Miro Z. and Daniella Ilieva, PhD.\nWhat’s Next\nAt Trevor Labs, we believe that every modern “hero” deserves an AI productivity sidekick - an intelligent software that can recreate the way we naturally manage time in our heads and show us ways we can improve every day.\nIt can offload some of the redundant organizational processes, such as categorization & bundling of tasks,\nautomate rescheduling and scheduling conflicts,\nreduce scheduling decision fatigue with smart suggestions,\npropose schedule optimizations based on behavioral patters and success rates,\nhelp us visualize and make sense of time analytics data collected over time, just to name a few.\nTo validate this hypothesis, the company is focusing on teaching Trevor AI to make sense of the aggregated data so far. Calendar data is incredibly sensitive and we take user privacy very seriously. That being said, Trevor can learn patterns that ultimately help make the user’s schedule more efficient and effective.\nContacts:\ngeorge@trevorlabs.com\nPress Assets:\nGoogle Drive\nExplore Articles:\nHow to Overcome Distraction in the Digital Economy\nWhy Schedule your Tasks? Your Calendar as a Central Planning System\nThe Superpower of a Daily Plan, in the Digital Economy\nPlan your day with Trevor AI - The Ultimate Guide\nThe Minimalist Task Planner App for Clarity, Focus and Deep Work\nA Smart Planner for a Smarter Day\nMEET TREVOR AI, for free\nAvailable on\nWeb\nfor mobile and desktop.\nFree\ntier for personal use.\nPro\nplans available.\nYour data is\nPrivate\nand\nSecure\n.\nFrequently Asked Questions\nWhat are Trevor AI's capabilities?\nTrevor AI is an all-in-one AI planner for your tasks and calendars. Explore all of Trevor AI's capabilities and limitations in our\ndocumentation\n.\nIs Trevor AI a Calendar or a To-do List?\nTrevor AI is a smart planner that integrates both to-do lists and calendars, giving you the best of both worlds. What makes Trevor AI better than either one is the connection it facilitates between tasks and calendar events, as well as all the AI planning features.\nHow does Trevor AI plan my daily tasks?\nTrevor AI offers an intuitive visual planner for your tasks, meetings and events. You can plan your day with AI in 1 click, you can drag & drop your tasks yourself, or you can simply ask Trevor to do it in the chat. Plan your day, your way.\nIs Trevor AI Free?\nYes, a lot of Trevor AI’s features are free for personal use, including some AI planning features. Pro and Executive plans are available for those looking for an extra edge (that pays for itself many times over).\nWhat does the “AI” in Trevor AI do?\nTrevor's AI helps with organizing, planning your tasks tasks—From predicting a task's duration, category and even priority, to suggesting it’s optimal time-slot in your busy schedule, to finally breaking it down for you into 5 manageable steps - Trevor AI is with you all the way.\nHow does Trevor AI compare to Reclaim?\nCompared to Trevor AI, Reclaim seems to have an algorithm that uses strict rules for each task. It works great for habits, but if you have over 25 tasks in your list, it can quickly become overwhelming to set rules for each one. While Trevor’s one-click AI scheduling feature is a direct competitor, you can just as easily drag & drop tasks between your task list and your calendar as much as you want, giving you effortless control over your schedule.\nHow does Trevor AI compare to Motion?\nCompared to Trevor AI, Motion seems to be focused on executives and managers willing to pay a premium for advanced project management features. Trevor AI is the assistant for the everyday hero - by eliminating complexity and offsetting it with powerful AI automations, Trevor makes planning your day truly effortless.\nHow does Trevor AI compare to AkiFlow?\nCompared to Trevor AI, AkiFlow’s main advantage seems to be the number of task integrations you can sync with. Trevor AI focuses on quality over quantity of integrations and provider powerful AI planning features on top of that solid foundation.\nHow does Trevor AI compare to Google Calendar or Microsoft Calendar?\nTrevor AI doesn’t compare with popular calendar platforms, it integrates with them in real-time. You schedule a task - It pops up in Google Calendar. You move it in Google Calendar, it updates in Trevor.\nWhich tools does Trevor AI Integrate with?\nTrevor AI integrates with both task managers and calendar platforms like: Google Calendar, Microsoft Calendar (Outlook & Office365), Apple Calendar, Google Tasks, Microsoft To-Do, and Todoist. For a complete integrations list visit our Integrations page.\nYOUTUBE\nTwitter\nPatreon\nFacebook\nMedium\nF6s\nPrivacy policy\nterms of service\ncookie policy\n© Trevor Labs Ltd.\nBy continuing to browse this site, you consent to our use of cookies for improved navigation and usage analysis. We keep your data private. See our\nCookie Policy\n.\nX",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65718f8444f0f8bfd3a03e64/css/trevor-ai.webflow.shared.17834579b.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65718f8444f0f8bfd3a03e64/657aea867929b6f1c0d4fd12_trevor-favicon-32.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/65718f8444f0f8bfd3a03e64/657aea8cd0f30a5e7bc13ee2_trevor-touch-256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.trevorai.com/about",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/integrations/todoist",
+      "rel": null
+    },
+    {
+      "href": "/integrations/google-calendar",
+      "rel": null
+    },
+    {
+      "href": "/integrations/microsoft-calendars",
+      "rel": null
+    },
+    {
+      "href": "/integrations/google-tasks",
+      "rel": null
+    },
+    {
+      "href": "/integrations/microsoft-to-do",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/academic-professionals",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/executives",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/creative-professionals",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/entrepreneurs",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/freelancers",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/project-managers",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/remote-workers-and-digital-nomads",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/sales-and-marketing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/startup-founders",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/students",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://trevorai.com/#features-pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.trevorai.com",
+      "rel": null
+    },
+    {
+      "href": "http://fi.co/",
+      "rel": null
+    },
+    {
+      "href": "https://bg.linkedin.com/in/george-petrov-a5b25147",
+      "rel": null
+    },
+    {
+      "href": "https://bg.linkedin.com/in/dmitryyudakov",
+      "rel": null
+    },
+    {
+      "href": "https://app.trevorai.com/",
+      "rel": null
+    },
+    {
+      "href": "https://m.me/trevorlabs",
+      "rel": null
+    },
+    {
+      "href": "mailto:george@trevorlabs.com",
+      "rel": null
+    },
+    {
+      "href": "https://drive.google.com/folderview?id=0B0E5slzU8QehS0dqQ0RHVXlhYWc&usp=sharing",
+      "rel": null
+    },
+    {
+      "href": "/blog/how-to-overcome-distraction-in-the-digital-economy",
+      "rel": null
+    },
+    {
+      "href": "/blog/why-schedule-your-task-your-calendar-as-a-central-planning-system",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-superpower-of-a-daily-plan-in-the-digital-economy",
+      "rel": null
+    },
+    {
+      "href": "/blog/plan-your-day-with-trevor-ai-the-ultimate-guide",
+      "rel": null
+    },
+    {
+      "href": "/blog/the-minimalist-planner-app-for-clarity-focus-and-deep-work",
+      "rel": null
+    },
+    {
+      "href": "/blog/smart-planner",
+      "rel": null
+    },
+    {
+      "href": "https://app.trevorai.com",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://www.f6s.com/trevorlabs",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@trevorai",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/trevorlabs",
+      "rel": null
+    },
+    {
+      "href": "https://www.patreon.com/trevor_AI",
+      "rel": null
+    },
+    {
+      "href": "http://facebook.com/trevorlabs/",
+      "rel": null
+    },
+    {
+      "href": "https://medium.com/@trevorlabs",
+      "rel": null
+    },
+    {
+      "href": "https://www.f6s.com/trevorlabs",
+      "rel": null
+    },
+    {
+      "href": "https://app.trevorai.com/app/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "https://www.iubenda.com/privacy-policy/7790939/cookie-policy",
+      "rel": null
+    },
+    {
+      "href": "https://www.iubenda.com/privacy-policy/7790939/cookie-policy",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.1017
+}

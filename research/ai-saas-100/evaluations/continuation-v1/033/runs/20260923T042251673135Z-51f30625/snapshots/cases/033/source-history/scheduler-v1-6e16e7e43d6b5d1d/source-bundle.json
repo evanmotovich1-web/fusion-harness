@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "created_at": "2026-09-22T03:44:44.262707+00:00",
+  "members": [
+    {
+      "active_path": "cases/033/implementation/workflow.py",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/implementation/workflow.py",
+      "sha256": "846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825"
+    },
+    {
+      "active_path": "cases/033/implementation/README.md",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/implementation/README.md",
+      "sha256": "60c79a11ad217186cfb07ec77233ebe88074cd64688d8983b53321eb15be7518"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/conventions.md",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/conventions.md",
+      "sha256": "d85ef2677fced44cdbb3a66f744021d143feb8569d237a30f4d9459afed069c4"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/conventions-freeze.json",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/conventions-freeze.json",
+      "sha256": "7055fcf3633e72a3343d036f02adf0d52bc9daa7f2707ae1ade2efbf624e6bf8"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/freeze.json",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/freeze.json",
+      "sha256": "33e9ae8f27f7a63c52950bf717ad25566364c7d67ccaffae908040095327a500"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/inputs.json",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/inputs.json",
+      "sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/oracles.json",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/oracles.json",
+      "sha256": "85f2bd272b32323cb7d4d533e83852d0967f0c04792eba27b05470736ec22bc7"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/checks.py",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/checks.py",
+      "sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/materialize.py",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/materialize.py",
+      "sha256": "b7bbe9793d3de4d55c65ac6022e334512a9bb40a7aadd8ad7aa9e8f218f1db2c"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/run.py",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/run.py",
+      "sha256": "93a8dbc25c7bf758e738d0f6e24b261d2ef0364e76c22d4e5e49eeb337f9b8dc"
+    },
+    {
+      "active_path": "cases/033/tests/scheduler-v1/execute.py",
+      "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/tests/scheduler-v1/execute.py",
+      "sha256": "e617b05cd803957eba0eab9f0c95287cab854e470f680c89df671c49bc34b441"
+    }
+  ]
+}

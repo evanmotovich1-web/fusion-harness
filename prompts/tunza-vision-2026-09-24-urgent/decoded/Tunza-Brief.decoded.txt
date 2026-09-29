@@ -1,0 +1,260 @@
+SOURCE	/Users/evanmotovich/Library/Application Support/Claude/scratch-workspaces/a0b63f67-044e-4c45-b8f5-fba24dc623b0/bc5f6544-13b9-47d0-8595-f1cd4139ad81/scratch-2026-09-17-d56432/Tunza-Brief.pdf
+BYTES	15956
+TITLE	Tunza  Brief + ML Primer
+AUTHOR	Evan Motovich
+CREATIONDATE	D:20260916221230-04'00'
+PRODUCER	ReportLab PDF Library - (opensource)
+PAGES_KIDS	4
+
+----- DECODED TEXT -----
+----- PAGE 1 -----
+Tunza brief + ML primer, 2026-09-16. Sources: second-brain wiki (QUERY-tunza-model-design, repos/medical-triage, me/expertise) + ~/code/medical-triage. Uncited figures (100k CHPs, 9M households, Epic sepsis) need citations before external use.
+Page 1 of 3
+Tunza  the brief
+"Healthcare anywhere, anytime." The decision before the clinic: when someone is sick and care is far away, the question is not what is
+the diagnosis? but what should happen next?
+1. What Tunza is (one paragraph)
+Tunza is a bilingual AI symptom-triage product for rural, low-income communities  first built for Kenya. A person (or a Community Health
+Promoter, CHP) enters symptoms, optional vitals and a photo; Tunza returns possible conditions, an urgency level ( self-care / see-clinic /
+urgent), plain-language next steps and red-flag warning signs, then finds the nearest facility. Doctors have accounts, a realtime dashboard
+of urgent cases, and push notifications. The long-term product is a case-prioritisation engine for Kenya's eCHIS so overwhelmed clinics
+see the sickest child first.
+2. What exists today (verified in the repo, not the deck)
+Layer
+What is actually there
+Triage engine
+A constrained system prompt in front of Anthropic claude-sonnet-4-5. Rules: be conservative and escalate when in doubt,
+never claim certainty, 6th-grade reading level, no drug names/dosages, respond in the user's language, strict JSON output
+(conditions, urgency, nextSteps, redFlags). Images are examined as supporting evidence. No model is trained; no weights
+are owned.
+App
+Next.js 14 + TypeScript + Tailwind, deployed on Vercel. Package name tunza. 30 commits, last 2026-07-29 (middleware
+auth-refresh fix).
+Data
+Supabase (Postgres). Migrations: initial schema, nearby cases (geohash), doctors, doctor_notifications fan-out,
+push_subscriptions. Cases persist only for authenticated users; DB failure never blocks a triage result.
+Facilities
+Google Places lookup from coarse coordinates  coordinates are never stored or logged.
+Doctor side (v8)
+Doctor accounts (P1), realtime urgent case_signals dashboard with directions (P2), notification fan-out with read/unread (P3),
+Web Push service worker + dispatch route (P4).
+Org
+GitHub org tunza-labs created 2026-09-10; repo moved there. Local path: ~/code/medical-triage.
+3. The channel and the customer
+eCHIS = Kenya's electronic Community Health Information System, carried by CHPs into ~9M households (your figure  100k+ CHPs;
+needs a citation before an investor sees it). Access is restricted to CHPs and very few private companies  so the route in is an NGO
+partnership.
+The gap you named: eCHIS has no acuity and no case ordering  "no system for determining this sick child should go first." Second
+gap: no consumer surface to ask "what should I do?"
+The chain when a case ranks #1: score ® facility information system ® facility routes it ® the CHP handling the case acts. A score in a
+database changes nothing until a named human behaves differently.
+The outcome loop: CHP and patient self-report what went right/wrong through the app ® that record becomes the dataset ® the
+dataset becomes the model. NGO relationship is the moat around the data; data is the moat around the model.
+4. Decisions already made (2026-08-27 grilling)  these constrain the ML
+Decision
+Consequence for the model
+Over-refer. "Even if one child is saved are you
+telling me it's not worth it."
+Tune for sensitivity; accept the precision cost. Binding constraint becomes the receiving
+facility's capacity, not the CHP's trust.
+K is per-facility, not global. Each facility sets its
+own cutoff.
+Model outputs a comparable score; scores must be calibrated across facilities (stricter than
+ranking).
+Ranker under a hard capacity constraint (top-K),
+not urgent/not-urgent classifier.
+The ordering product survives in an overwhelmed clinic  the customer's permanent condition.
+That is why it is the durable product.
+Protocol-first architecture (leaning, not locked).
+Day one = WHO IMCI danger signs encoded as rules + constrained LLM, zero training data.
+Year two = trained ranker built from the outcome record.
+
+----- PAGE 2 -----
+Tunza brief + ML primer, 2026-09-16. Sources: second-brain wiki (QUERY-tunza-model-design, repos/medical-triage, me/expertise) + ~/code/medical-triage. Uncited figures (100k CHPs, 9M households, Epic sepsis) need citations before external use.
+Page 2 of 3
+The ML you need to know  ground floor to Tunza
+Vocabulary you already have (QAD, distillation, quantization) sits above this floor. Everything below is what an investor or ML hire will
+assume you know.
+5. Supervised learning in one table
+Term
+Meaning
+For Tunza
+A row (example)
+One unit the model learns from: features X +
+label Y.
+One child visit: symptoms, vitals, age, photo, location, time plus what
+happened next.
+Features (X)
+The inputs known at prediction time.
+Only what the CHP knows in the hut. Anything learned later is a leak.
+Label (Y) / ground
+truth
+The answer you want to predict; someone
+must produce it, at some time.
+OPEN. Candidates: clinician's discharge acuity; admitted/referred within 48h;
+death/severe outcome within 7d; CHP self-report. Who writes it and when
+decides everything.
+Training
+Adjust model parameters to reduce error on
+the labelled rows.
+You have zero labelled outcomes today  the cold-start problem.
+Train / validation /
+test split
+Learn on one set, tune on a second, report on
+a third the model never saw.
+Split by facility or time, not randomly  otherwise you measure
+memorisation of a clinic.
+Overfitting
+Model memorises the training rows and fails
+on new ones.
+Small, self-collected data makes this likely. Baselines and holdouts are the
+defence.
+Leakage
+A feature that secretly contains the answer.
+"Was referred" as a feature when the label is "needed referral."
+Baseline
+The dumb thing you must beat.
+IMCI danger-sign rules. If a rules card ties your model, you have no model
+story.
+Calibration
+A score of 0.8 means ~80% of such cases
+are truly urgent.
+Required for per-facility K to be comparable. Check with a reliability curve; fix
+with Platt/isotonic scaling.
+6. Classification vs ranking  and why Tunza is a ranker
+A classifier answers "urgent or not?" for one case with a threshold. A ranker orders all open cases by risk; the facility takes the top K it can
+absorb today. Ranking metrics: precision@K (of the K you sent, how many were truly urgent), recall@K (of all truly urgent, how many were
+in the top K), AUC (probability a random urgent case scores above a random non-urgent one). Because K varies by facility, you need a
+calibrated score and you report precision@K at each site's K.
+7. The four numbers every triage conversation uses
+Metric
+Definition
+Why it matters here
+Sensitivity (recall)
+Of truly urgent cases, % the model flags.
+Your over-refer decision = maximise this. Missing a sick child is the cost you
+refused to pay.
+Specificity
+Of non-urgent cases, % the model correctly
+leaves alone.
+At low prevalence this is the lever on precision, not sensitivity.
+Precision (PPV)
+Of cases flagged urgent, % that truly were.
+The number the CHP and the clinic feel. Too low = alert fatigue = app ignored.
+Prevalence (base rate)
+% of all cases that are truly urgent.
+Set by the population, not by you. It dominates precision.
+8. The base-rate trap (placeholder numbers  substitute your own; the shape survives)
+Take 10,000 child visits at 2% prevalence = 200 truly urgent. A model with 90% sensitivity / 90% specificity flags 180 of the 200 true urgents
+ and also flags 10% of the 9,800 non-urgent = 980 false urgents. Precision = 180 / 1,160 » 15%: about six false alarms for every real one.
+Raise specificity to 99% and false urgents fall to 98 ® precision » 65%. Raise sensitivity to 99% instead and precision barely moves (»17%).
+Lesson: when the thing you hunt is rare, specificity  not sensitivity  controls whether humans keep trusting the tool.
+Reference failure to cite: the Epic sepsis model  external validation found AUC » 0.63, PPV » 12%, fired on ~18% of admissions; clinicians stopped
+looking. Same structure Tunza faces at scale.
+9. How an LLM prompt differs from a trained model
+Today (prompt): zero data needed, ships instantly, general medical knowledge, conservative by instruction. Cannot learn your
+population, cannot be calibrated, no asset you own, per-call cost, and you cannot prove a number for it without an eval set.
+Tomorrow (trained ranker): needs labelled outcomes, learns local prevalence and presentation, produces calibrated scores, is an
+owned asset  and inherits every bias in the data you collected.
+Middle path (the honest pitch): rules (IMCI/ETAT) for hard danger signs + LLM for language and next-steps + a logged outcome
+record. The record is the year-two model's training set.
+
+----- PAGE 3 -----
+Tunza brief + ML primer, 2026-09-16. Sources: second-brain wiki (QUERY-tunza-model-design, repos/medical-triage, me/expertise) + ~/code/medical-triage. Uncited figures (100k CHPs, 9M households, Epic sepsis) need citations before external use.
+Page 3 of 3
+Tunza's ML design tree  risks, open questions, and the pitch
+Status: design tree in progress (LOW confidence, n=1 grilling). Open questions are yours to answer  no agent answers them for you.
+10. Proposed architecture (protocol-first, three stages)
+Stage
+What runs
+Data needed
+What you can claim
+V1  now
+Encoded WHO IMCI / ETAT danger signs (rules)
+® hard override to urgent. Constrained LLM for
+conditions, next steps, language. Every case +
+outcome logged.
+None labelled. Protocol is public.
+Safety floor is a published clinical standard,
+not a model. Zero training data required.
+V2  612 mo
+Simple ranker (logistic regression /
+gradient-boosted trees) on structured features,
+trained on logged outcomes; LLM unchanged.
+~thousands of rows with a
+defined Y; random-sample active
+follow-up.
+Precision@K per facility vs the rules
+baseline, on a facility-held-out test set.
+V3  year 2+
+Calibrated cross-facility ranker; possibly fine-tuned
+small model for local language + image findings.
+Multi-facility data under a signed
+data-sharing agreement.
+Owned asset: the outcome dataset and the
+model trained on it.
+11. Risks already named to you (accept or reject  not settled)
+Feedback-loop bias. If outcomes are only observed for cases the model ranked high, the model confirms itself forever; every eval looks
+great while low-ranked children are missed. Same as a loan-default model trained only on approved applicants. Defence: observe
+outcomes on a random sample regardless of rank.
+Survivorship bias in self-report. Families least likely to type an outcome are the ones whose child got much worse. Passive self-report
+drifts the data toward "everything went fine." Defence: active follow-up on a random sample  a real cost line missing from every deck.
+Base rates beat model quality (section 8). Plan the precision floor before the first pilot, or the CHP stops opening the app.
+Distribution shift. A model trained in one county, season, or clinic mix degrades elsewhere. Split by facility/time; re-check calibration per
+site.
+Data rights. eCHIS data is Kenyan MoH property. "Connected to eCHIS" is not "licensed to train on eCHIS." Kenya's Data Protection Act
+2019 applies. The claimed asset depends on a data-sharing agreement nobody has named yet.
+12. Open questions  answer these before the next pitch
+#
+Question
+Why it blocks
+1
+What is Y? What is in the label column of one row, who
+produced it, and when?
+No Y, no supervised model, no asset. Everything in section 10 hangs on it.
+2
+Cold start. Day one, zero labelled outcomes  what does V1
+rank on?
+Candidates: prompt (status quo), coded protocol (IMCI/ETAT), model trained on
+outside data. Leaning protocol; not locked.
+3
+Precision floor. How many false urgents before a CHP stops
+opening the app?
+Sets the specificity target and the per-facility K. You correctly refused
+placeholder numbers  now supply real ones from a pilot.
+4
+One product or two? Prioritisation-for-eCHIS (B2G/NGO) vs
+consumer symptom Q&A (B2C).
+Different buyers, different data, different companies.
+5
+Data-sharing agreement. Who signs, what can be used for
+training, where is it stored?
+Parked, not asked. The moat is not real until this exists.
+6
+Does QAD/distillation apply here at all?
+That research was accuracy recovery for a quantized student in the EvanAI lane
+ nothing to do with triage labels. Probably no.
+13. How to say it in a room (30-second version)
+"Kenya has put 100k+ community health promoters into ~9M households and digitised their reporting through eCHIS  but eCHIS cannot
+tell a clinic which child to see first. Tunza ships day one on published WHO danger-sign protocol plus a constrained language model, in the
+user's language, and logs every case and outcome. That outcome record  gathered through an NGO partner under a data-sharing
+agreement  is the dataset nobody else has. In year two it trains a calibrated, per-facility ranker that puts the sickest child at the top of an
+overwhelmed clinic's list. We chose to over-refer: a false alarm costs a little time; a miss costs a child."
+14. Questions you will be asked  and the honest answers
+They ask
+You say
+"Is there a model?"
+"Not yet. Today it is protocol + a constrained LLM. The model is the year-two asset built from the outcome record; that
+is deliberate."
+"What is your label?"
+Only answer once you have decided (Q1). Do not improvise one in the room.
+"What is your accuracy?"
+"We report precision@K per facility against the IMCI-rules baseline on a facility-held-out set. Any number I give before
+a pilot is a placeholder."
+"Who owns the data?"
+"Kenyan MoH. Our right to train comes from a data-sharing agreement via the NGO partner  the agreement is the
+moat."
+"Why won't clinicians ignore
+it?"
+"Because the facility sets its own K. We never send more than it can absorb; the model orders, the human acts."
+

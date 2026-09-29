@@ -1,0 +1,15 @@
+{
+  "evidence_id": "r014-7be757ddcb09e6f9956c",
+  "source_url": "https://jenni.ai/features",
+  "publisher": "jenni.ai",
+  "retrieved_at": "2026-09-20T21:35:26.655858+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": "failed",
+  "error": "HTTPError: HTTP Error 404: Not Found",
+  "elapsed_seconds": 0.106866
+}

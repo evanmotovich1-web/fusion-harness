@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "exposure": "independent_authored_exposed",
+  "held_out": false,
+  "source_report": "/tmp/fusion-harness-plXwRt/collaborate/reports/1.d-glm.md",
+  "source_report_sha256": "fe90c5f4499e6fe7297cd00583b8002d30d5d7d0a857c644693c93c76d549a6c",
+  "materialized_at": "2026-09-22T03:59:28.330146+00:00",
+  "groups_per_case": {
+    "normal": 8,
+    "adversarial": 6
+  },
+  "cases": [
+    "001",
+    "002",
+    "003",
+    "033"
+  ],
+  "repeat_groups": [
+    "N1",
+    "N4",
+    "N8"
+  ],
+  "extra_repeats": 2,
+  "thresholds": {
+    "normal_mean_score_min": 80,
+    "normal_pass_min": 7,
+    "normal_count": 8,
+    "adversarial_pass_min": 5,
+    "adversarial_count": 6,
+    "critical_failures_max": 0,
+    "paired_usable_fraction_min": 0.9,
+    "weights": {
+      "correctness": 50,
+      "coverage": 20,
+      "constraints": 20,
+      "usability": 10
+    }
+  },
+  "limits": {
+    "foreground_seconds": 60,
+    "network_mutations": 0
+  },
+  "acceptance_limits": [
+    "Exposed suite cannot establish hidden evaluation.",
+    "No product acceptance from evaluator self-tests.",
+    "Semantic review required for rewriting.",
+    "Missing inference blocks model arms, not their replacement with canned answers.",
+    "Every parameterized group requires all variants; report group and invocation denominators separately."
+  ]
+}

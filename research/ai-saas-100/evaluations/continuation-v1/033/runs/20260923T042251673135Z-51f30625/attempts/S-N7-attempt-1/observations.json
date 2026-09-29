@@ -1,0 +1,52 @@
+[
+  {
+    "output": {
+      "status": "scheduled",
+      "scheduled": [
+        {
+          "task_id": "alpha",
+          "start": "09:00",
+          "end": "09:30"
+        },
+        {
+          "task_id": "beta",
+          "start": "09:30",
+          "end": "10:15"
+        }
+      ],
+      "unscheduled": [],
+      "constraints_checked": {
+        "no_overlap": true,
+        "within_working_hours": true,
+        "all_tasks_before_deadline": true,
+        "buffers_respected": true,
+        "exact_task_accounting": true,
+        "meetings_unchanged": true
+      },
+      "calendar_writes": 0,
+      "solver": {
+        "complete": true,
+        "search_steps": 11,
+        "step_limit": 50000,
+        "depth_limit": 64,
+        "limit_reason": null,
+        "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+        "admission_order": [
+          "alpha",
+          "beta"
+        ]
+      }
+    },
+    "error": null,
+    "input_unchanged": true,
+    "effects": {
+      "network_calls": 0,
+      "external_writes": 0,
+      "secret_reads": 0,
+      "outside_path_accesses": 0,
+      "calendar_writes": 0,
+      "measurement_scope": "Python audit events during wrapped schedule calls; not OS containment"
+    },
+    "system": "B2"
+  }
+]

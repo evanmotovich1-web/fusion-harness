@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "027",
+    "name": "Botpress",
+    "canonical_url": "https://botpress.com/",
+    "category": "C04",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-c9fed23aafd932844c7c"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "botpress.com",
+    "selection_position": 27,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Support teams building agents over organizational knowledge",
+    "job": "Resolve a support query from versioned knowledge and return a safe action proposal or escalation",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "answer": "string",
+      "citations": "array of source_id and supporting span",
+      "escalate": "boolean",
+      "action_preview": "object or null"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Resolve a support query from versioned knowledge and return a safe action proposal or escalation",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Free displays 25 conversations and three seats/agents. Plus displays $150/month billed annually with 250 conversations and $25 AI usage included. Overage and AI-usage conditions apply.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Support teams building agents over organizational knowledge",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "docsbot.ai",
+        "name": "DocsBot",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r027-6343b8a98f79c1a9a643"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r027-6343b8a98f79c1a9a643",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r027-6343b8a98f79c1a9a643": "2026-09-20T21:35:37.399366+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Support teams building agents over organizational knowledge.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c",
+        "r027-6343b8a98f79c1a9a643"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        },
+        {
+          "evidence_id": "r027-6343b8a98f79c1a9a643",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00",
+          "r027-6343b8a98f79c1a9a643": "2026-09-20T21:35:37.399366+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Free displays 25 conversations and three seats/agents. Plus displays $150/month billed annually with 250 conversations and $25 AI usage included. Overage and AI-usage conditions apply.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r027-63c4fd128278f3008a5d"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r027-63c4fd128278f3008a5d",
+          "locator": "text characters 1002:3469",
+          "excerpt": "Support in 2026\nDocs\nEnterprise\nPricing\nLog in\nGet a demo\nTry for free\nPriced for the work it does, not the seats it fills.\nUnlimited AI agents and AI spend included.\nAnnual ·\nSave 20%\nMonthly\n1200\nconversations/mo\n100\n1.2k\n3k\n10k\nWe recommend\nEnterprise Plan\nFree\n$0\n25 conversations\nNo top-ups or overages\nGet started free\nIncludes:\n3 seats\nSeats are the number of people who can access and work in your workspace.\n3 AI agents\nAutomated agents that handle conversations on your behalf.\nResolution SLA\nYour customer resolution guarantee.\nHelp Center\nA public-facing knowledge base for your customers to self-serve.\nCommunity support\nAn active Discord community of bot builders, plus resources like documentation, Botpress Academy and our YouTube channel.\nPlus\n$150/mo\nbilled annually\n250 conversations/mo included\npacks of 100 for $65 ($0.65/convo)\nGet started\nIncludes everything in Free, and:\n$25 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited AI agents\nAutomated agents that handle conversations on your behalf.\nWhitelabel webchat\nRemove Botpress branding from your chat widget.\nHelp Center + custom domain\nA public-facing knowledge base for your customers to self-serve, complete with your branding.\nTechnical support via live chat\nGet help from Botpress support engineers through live chat.\nTeam\nYour best fit\n$750/mo\nbilled annually\n1,500 conversations/mo included\npacks of 100 for $50 ($0.50/convo)\nGet started\nIncludes everything in Plus, and:\n$150 AI usage included\nAI usage is the cost of calling an LLM. Every conversation includes $0.10 of AI usage, covered by us. Hit your limit? Set up auto-recharge to keep conversations running.\nUnlimited seats\nSeats are the number of people who can access and work in your workspace.\nTeams, routing & RBAC\nGroup your agents into teams, set routing rules, and manage permissions across your workspace.\nTeam analytics\nPerformance metrics broken down by team and agent.\nReal-time collaboration\nMultiple team members can build and edit bots simultaneously in the Studio.\nEnterprise\nCustom\nCustom conversation volume\nCustom pricing\nTalk to sales\nIncludes everything in Team, plus:\nDedicated support\nDirect access to a Botpress support engineer for your team.\nUptime SLA\nPlatform availability guarantee.\nSecurity review\nDedicated security review for your organization.\nC"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r027-63c4fd128278f3008a5d": "2026-09-20T21:35:37.399049+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: e\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolutio",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "text characters 308:846",
+          "excerpt": "e\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolutio"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "DocsBot advertises: Build AI agents that combine trusted knowledge with real actions for customers and teams across your business tools and workflows.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-cd8a3ed4ed8c6bb767b4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-cd8a3ed4ed8c6bb767b4",
+          "locator": "metadata[0].description",
+          "excerpt": "Build AI agents that combine trusted knowledge with real actions for customers and teams across your business tools and workflows."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-cd8a3ed4ed8c6bb767b4": "2026-09-20T21:00:23.334023+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: DocsBot. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c",
+        "web-cd8a3ed4ed8c6bb767b4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        },
+        {
+          "evidence_id": "web-cd8a3ed4ed8c6bb767b4",
+          "locator": "metadata[0].description",
+          "excerpt": "Build AI agents that combine trusted knowledge with real actions for customers and teams across your business tools and workflows."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00",
+          "web-cd8a3ed4ed8c6bb767b4": "2026-09-20T21:00:23.334023+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Action execution, knowledge maintenance, permissions, observability, and multi-channel helpdesk integration need separate validation.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c",
+        "r027-6343b8a98f79c1a9a643"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress is the enterprise-grade AI agent platform for customer support, with no technical ceiling and no per-seat cost."
+        },
+        {
+          "evidence_id": "r027-6343b8a98f79c1a9a643",
+          "locator": "metadata[0].description",
+          "excerpt": "Botpress Knowledge Bases help your bot provide answers that matter, sourced from your organization’s knowledge and augmented with real-time information from across the web."
+        },
+        {
+          "evidence_id": "web-c9fed23aafd932844c7c",
+          "locator": "text characters 308:846",
+          "excerpt": "e\nBotpress Desk: the AI helpdesk built for complex support\nLearn more\nIntegrate\nIntercom\nZendesk\nHubspot\nSalesforce\nDeploy\nWebchat\nWhatsApp\nSlack\nAll channels and integrations\nSolutions\nUse cases\nAI for Customer Support: Handle every support ticket with AI, not just the easy ones\nExplore Customer Support use cases\nEscalation & Handoff\nTicket Enrichment\nAI Actions\nTicket Deflection\nTicket Management\nIndustries\nSaaS\nHealthcare\nEducation\nRetail\nFintech\nCustomers\nHow Super Dispatch Tripled AI Resolution to 66% and Cut Cost Per Resolutio"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-c9fed23aafd932844c7c": "2026-09-20T21:00:24.045109+00:00",
+          "r027-6343b8a98f79c1a9a643": "2026-09-20T21:35:37.399366+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/027/tests/specification.json",
+    "sha256": "cbd28a01d8a59a5a4bb7bf709c7c64c96aaf773a61cb5219c187edeb8052fdc2",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:24.045109+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-c9fed23aafd932844c7c",
+        "r027-6343b8a98f79c1a9a643",
+        "r027-63c4fd128278f3008a5d",
+        "web-cd8a3ed4ed8c6bb767b4"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

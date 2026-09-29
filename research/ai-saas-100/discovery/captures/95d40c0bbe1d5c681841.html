@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel='preload' href='https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/images/ds-bg-grid.svg' as='image' fetchpriority='high' />
+<link rel='preload' href='https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/images/hero-grid.svg' as='image' fetchpriority='high' />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.4 (Yoast SEO v28.4) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<meta name="description" content="Qodo is an AI code review tool giving teams deep codebase context to move faster and improve code quality, with 15+ agentic workflows for IDEs, PRs and security." />
+	<link rel="canonical" href="https://www.qodo.ai/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Qodo | AI Agents for Code, Review &amp; Workflows" />
+	<meta property="og:description" content="Qodo is an agentic code review and integrity platform for improving code quality at every stage." />
+	<meta property="og:url" content="https://www.qodo.ai/" />
+	<meta property="og:site_name" content="Qodo" />
+	<meta property="article:modified_time" content="2026-09-18T13:53:52+00:00" />
+	<meta property="og:image" content="https://www.qodo.ai/wp-content/uploads/2025/06/social-share-new.webp" />
+	<meta property="og:image:width" content="2400" />
+	<meta property="og:image:height" content="1590" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Qodo | AI Agents for Code, Review &amp; Workflows" />
+	<meta name="twitter:description" content="Qodo is an agentic code review and integrity platform for improving code quality at every stage." />
+	<meta name="twitter:image" content="https://www.qodo.ai/wp-content/uploads/2025/06/social-share-new.webp" />
+	<meta name="twitter:site" content="@QodoAI" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.qodo.ai\/","url":"https:\/\/www.qodo.ai\/","name":"AI Code Review – Qodo: Deploy with confidence","isPartOf":{"@id":"https:\/\/www.qodo.ai\/#website"},"about":{"@id":"https:\/\/www.qodo.ai\/#organization"},"datePublished":"2025-11-05T18:38:05+00:00","dateModified":"2026-09-18T13:53:52+00:00","description":"Qodo is an AI code review tool giving teams deep codebase context to move faster and improve code quality, with 15+ agentic workflows for IDEs, PRs and security.","breadcrumb":{"@id":"https:\/\/www.qodo.ai\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.qodo.ai\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/www.qodo.ai\/#breadcrumb","itemListElement":[]},{"@type":"WebSite","@id":"https:\/\/www.qodo.ai\/#website","url":"https:\/\/www.qodo.ai\/","name":"Qodo","description":"Qodo (formerly Codium) is a quality-first generative AI coding platform that helps developers write, test, and review code within IDE and Git. Our AI code generation offers automated code reviews, contextual suggestions, and comprehensive test generation, ensuring robust, reliable software. Seamless integration maintains high standards of code quality and integrity throughout development.","publisher":{"@id":"https:\/\/www.qodo.ai\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.qodo.ai\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/www.qodo.ai\/#organization","name":"qodo","url":"https:\/\/www.qodo.ai\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.qodo.ai\/#\/schema\/logo\/image\/","url":"https:\/\/www.qodo.ai\/wp-content\/uploads\/2025\/02\/qodo-logo.svg","contentUrl":"https:\/\/www.qodo.ai\/wp-content\/uploads\/2025\/02\/qodo-logo.svg","width":122,"height":38,"caption":"qodo"},"image":{"@id":"https:\/\/www.qodo.ai\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/x.com\/QodoAI","https:\/\/il.linkedin.com\/company\/qodoai","https:\/\/www.youtube.com\/@QodoAI","https:\/\/discord.com\/invite\/SgSxuQ65GF","https:\/\/github.com\/Codium-ai"]}]}</script>
+	<meta name="google-site-verification" content="JsmG1i2yZXsWTfX_lO7RvlJ7S9aUcTeWTGFvKIcAV-c" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<title>AI Code Review – Qodo: Deploy with confidence</title>
+<link data-rocket-prefetch href="https://snap.licdn.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://script.getswan.com" rel="dns-prefetch"><link rel="preload" data-rocket-preload as="image" href="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/images/ds-bg-grid.svg" fetchpriority="high">
+<link rel='dns-prefetch' href='//js.storylane.io' />
+
+<link rel="alternate" type="application/rss+xml" title="Qodo &raquo; Feed" href="https://www.qodo.ai/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Qodo &raquo; Comments Feed" href="https://www.qodo.ai/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.qodo.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.qodo.ai%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-header-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-header/style-index.css?ver=1789740230' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-hero-tabs-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-hero-tabs/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-advantages-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-advantages/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-feature-steps-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-feature-steps/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-icon-tiles-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-icon-tiles/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-feature-showcase-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-feature-showcase/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-testimonials-slider-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-testimonials-slider/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-video-tabs-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-video-tabs/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-recent-posts-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-recent-posts/style-index.css?ver=1789740243' media='all' />
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-faq-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-faq/style-index.css?ver=1789740243' media='all' />
+<style id="wp-block-post-content-inline-css">
+.wp-block-post-content{display:flow-root}
+/*# sourceURL=https://www.qodo.ai/wp-includes/blocks/post-content/style.min.css */
+</style>
+<style id="wp-block-group-inline-css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://www.qodo.ai/wp-includes/blocks/group/style.min.css */
+</style>
+<link data-minify="1" rel='stylesheet' id='acf/ds-block-footer-style-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-footer/style-index.css?ver=1789740230' media='all' />
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<link data-minify="1" rel='stylesheet' id='qodo-icons-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/icons/icons-custom.css?ver=1789740230' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--base: #FFFFFF;--wp--preset--color--purple-50: #DDDCFF;--wp--preset--color--purple-100: #C1BEFE;--wp--preset--color--purple-200: #A8A1FD;--wp--preset--color--purple-300: #9084FC;--wp--preset--color--purple-400: #7968FA;--wp--preset--color--purple-500: #5845F7;--wp--preset--color--purple-600: #3722F3;--wp--preset--color--purple-700: #220EE1;--wp--preset--color--purple-800: #1D0EBB;--wp--preset--color--purple-900: #170D96;--wp--preset--color--purple-950: #120B72;--wp--preset--color--dark-100: #F4F4F4;--wp--preset--color--dark-200: #DFDFDF;--wp--preset--color--dark-300: #C3C3C3;--wp--preset--color--dark-400: #6E6E6E;--wp--preset--color--dark-500: #3D3D3D;--wp--preset--color--dark-600: #2A2A2A;--wp--preset--color--dark-700: #161616;--wp--preset--color--dark-800: #0E0F10;--wp--preset--color--dark-900: #090A0B;--wp--preset--color--pink-50: #FADCF6;--wp--preset--color--pink-100: #F3B5EB;--wp--preset--color--pink-200: #EC8EDF;--wp--preset--color--pink-300: #E468D2;--wp--preset--color--pink-400: #DB43C4;--wp--preset--color--pink-500: #C729AF;--wp--preset--color--pink-600: #9D258E;--wp--preset--color--pink-700: #751F6D;--wp--preset--color--pink-800: #4F184B;--wp--preset--color--pink-900: #2A0E2A;--wp--preset--color--pink-950: #080308;--wp--preset--color--red: #F33E2B;--wp--preset--color--green: #47B25C;--wp--preset--color--green-300: #06e5ad;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 1320px;--wp--style--global--wide-size: 1600px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{--wp--style--root--padding-top: 0;--wp--style--root--padding-right: 1.25rem;--wp--style--root--padding-bottom: 0;--wp--style--root--padding-left: 1.25rem;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-base-color{color: var(--wp--preset--color--base) !important;}.has-purple-50-color{color: var(--wp--preset--color--purple-50) !important;}.has-purple-100-color{color: var(--wp--preset--color--purple-100) !important;}.has-purple-200-color{color: var(--wp--preset--color--purple-200) !important;}.has-purple-300-color{color: var(--wp--preset--color--purple-300) !important;}.has-purple-400-color{color: var(--wp--preset--color--purple-400) !important;}.has-purple-500-color{color: var(--wp--preset--color--purple-500) !important;}.has-purple-600-color{color: var(--wp--preset--color--purple-600) !important;}.has-purple-700-color{color: var(--wp--preset--color--purple-700) !important;}.has-purple-800-color{color: var(--wp--preset--color--purple-800) !important;}.has-purple-900-color{color: var(--wp--preset--color--purple-900) !important;}.has-purple-950-color{color: var(--wp--preset--color--purple-950) !important;}.has-dark-100-color{color: var(--wp--preset--color--dark-100) !important;}.has-dark-200-color{color: var(--wp--preset--color--dark-200) !important;}.has-dark-300-color{color: var(--wp--preset--color--dark-300) !important;}.has-dark-400-color{color: var(--wp--preset--color--dark-400) !important;}.has-dark-500-color{color: var(--wp--preset--color--dark-500) !important;}.has-dark-600-color{color: var(--wp--preset--color--dark-600) !important;}.has-dark-700-color{color: var(--wp--preset--color--dark-700) !important;}.has-dark-800-color{color: var(--wp--preset--color--dark-800) !important;}.has-dark-900-color{color: var(--wp--preset--color--dark-900) !important;}.has-pink-50-color{color: var(--wp--preset--color--pink-50) !important;}.has-pink-100-color{color: var(--wp--preset--color--pink-100) !important;}.has-pink-200-color{color: var(--wp--preset--color--pink-200) !important;}.has-pink-300-color{color: var(--wp--preset--color--pink-300) !important;}.has-pink-400-color{color: var(--wp--preset--color--pink-400) !important;}.has-pink-500-color{color: var(--wp--preset--color--pink-500) !important;}.has-pink-600-color{color: var(--wp--preset--color--pink-600) !important;}.has-pink-700-color{color: var(--wp--preset--color--pink-700) !important;}.has-pink-800-color{color: var(--wp--preset--color--pink-800) !important;}.has-pink-900-color{color: var(--wp--preset--color--pink-900) !important;}.has-pink-950-color{color: var(--wp--preset--color--pink-950) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-green-color{color: var(--wp--preset--color--green) !important;}.has-green-300-color{color: var(--wp--preset--color--green-300) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-base-background-color{background-color: var(--wp--preset--color--base) !important;}.has-purple-50-background-color{background-color: var(--wp--preset--color--purple-50) !important;}.has-purple-100-background-color{background-color: var(--wp--preset--color--purple-100) !important;}.has-purple-200-background-color{background-color: var(--wp--preset--color--purple-200) !important;}.has-purple-300-background-color{background-color: var(--wp--preset--color--purple-300) !important;}.has-purple-400-background-color{background-color: var(--wp--preset--color--purple-400) !important;}.has-purple-500-background-color{background-color: var(--wp--preset--color--purple-500) !important;}.has-purple-600-background-color{background-color: var(--wp--preset--color--purple-600) !important;}.has-purple-700-background-color{background-color: var(--wp--preset--color--purple-700) !important;}.has-purple-800-background-color{background-color: var(--wp--preset--color--purple-800) !important;}.has-purple-900-background-color{background-color: var(--wp--preset--color--purple-900) !important;}.has-purple-950-background-color{background-color: var(--wp--preset--color--purple-950) !important;}.has-dark-100-background-color{background-color: var(--wp--preset--color--dark-100) !important;}.has-dark-200-background-color{background-color: var(--wp--preset--color--dark-200) !important;}.has-dark-300-background-color{background-color: var(--wp--preset--color--dark-300) !important;}.has-dark-400-background-color{background-color: var(--wp--preset--color--dark-400) !important;}.has-dark-500-background-color{background-color: var(--wp--preset--color--dark-500) !important;}.has-dark-600-background-color{background-color: var(--wp--preset--color--dark-600) !important;}.has-dark-700-background-color{background-color: var(--wp--preset--color--dark-700) !important;}.has-dark-800-background-color{background-color: var(--wp--preset--color--dark-800) !important;}.has-dark-900-background-color{background-color: var(--wp--preset--color--dark-900) !important;}.has-pink-50-background-color{background-color: var(--wp--preset--color--pink-50) !important;}.has-pink-100-background-color{background-color: var(--wp--preset--color--pink-100) !important;}.has-pink-200-background-color{background-color: var(--wp--preset--color--pink-200) !important;}.has-pink-300-background-color{background-color: var(--wp--preset--color--pink-300) !important;}.has-pink-400-background-color{background-color: var(--wp--preset--color--pink-400) !important;}.has-pink-500-background-color{background-color: var(--wp--preset--color--pink-500) !important;}.has-pink-600-background-color{background-color: var(--wp--preset--color--pink-600) !important;}.has-pink-700-background-color{background-color: var(--wp--preset--color--pink-700) !important;}.has-pink-800-background-color{background-color: var(--wp--preset--color--pink-800) !important;}.has-pink-900-background-color{background-color: var(--wp--preset--color--pink-900) !important;}.has-pink-950-background-color{background-color: var(--wp--preset--color--pink-950) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-green-background-color{background-color: var(--wp--preset--color--green) !important;}.has-green-300-background-color{background-color: var(--wp--preset--color--green-300) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-base-border-color{border-color: var(--wp--preset--color--base) !important;}.has-purple-50-border-color{border-color: var(--wp--preset--color--purple-50) !important;}.has-purple-100-border-color{border-color: var(--wp--preset--color--purple-100) !important;}.has-purple-200-border-color{border-color: var(--wp--preset--color--purple-200) !important;}.has-purple-300-border-color{border-color: var(--wp--preset--color--purple-300) !important;}.has-purple-400-border-color{border-color: var(--wp--preset--color--purple-400) !important;}.has-purple-500-border-color{border-color: var(--wp--preset--color--purple-500) !important;}.has-purple-600-border-color{border-color: var(--wp--preset--color--purple-600) !important;}.has-purple-700-border-color{border-color: var(--wp--preset--color--purple-700) !important;}.has-purple-800-border-color{border-color: var(--wp--preset--color--purple-800) !important;}.has-purple-900-border-color{border-color: var(--wp--preset--color--purple-900) !important;}.has-purple-950-border-color{border-color: var(--wp--preset--color--purple-950) !important;}.has-dark-100-border-color{border-color: var(--wp--preset--color--dark-100) !important;}.has-dark-200-border-color{border-color: var(--wp--preset--color--dark-200) !important;}.has-dark-300-border-color{border-color: var(--wp--preset--color--dark-300) !important;}.has-dark-400-border-color{border-color: var(--wp--preset--color--dark-400) !important;}.has-dark-500-border-color{border-color: var(--wp--preset--color--dark-500) !important;}.has-dark-600-border-color{border-color: var(--wp--preset--color--dark-600) !important;}.has-dark-700-border-color{border-color: var(--wp--preset--color--dark-700) !important;}.has-dark-800-border-color{border-color: var(--wp--preset--color--dark-800) !important;}.has-dark-900-border-color{border-color: var(--wp--preset--color--dark-900) !important;}.has-pink-50-border-color{border-color: var(--wp--preset--color--pink-50) !important;}.has-pink-100-border-color{border-color: var(--wp--preset--color--pink-100) !important;}.has-pink-200-border-color{border-color: var(--wp--preset--color--pink-200) !important;}.has-pink-300-border-color{border-color: var(--wp--preset--color--pink-300) !important;}.has-pink-400-border-color{border-color: var(--wp--preset--color--pink-400) !important;}.has-pink-500-border-color{border-color: var(--wp--preset--color--pink-500) !important;}.has-pink-600-border-color{border-color: var(--wp--preset--color--pink-600) !important;}.has-pink-700-border-color{border-color: var(--wp--preset--color--pink-700) !important;}.has-pink-800-border-color{border-color: var(--wp--preset--color--pink-800) !important;}.has-pink-900-border-color{border-color: var(--wp--preset--color--pink-900) !important;}.has-pink-950-border-color{border-color: var(--wp--preset--color--pink-950) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-green-border-color{border-color: var(--wp--preset--color--green) !important;}.has-green-300-border-color{border-color: var(--wp--preset--color--green-300) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id="wp-block-template-skip-link-inline-css">
+/*! This file is auto-generated */
+.skip-link.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal!important}.skip-link.screen-reader-text:focus{background-color:#eee;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+/*# sourceURL=/wp-includes/css/wp-block-template-skip-link.min.css */
+</style>
+<link data-minify="1" rel='stylesheet' id='qodo-styles-css' href='https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/css/index.css?ver=1789740230' media='all' />
+<style id="qodo-block-styles-inline-css">
+@media (min-width: 992px) { [data-id="e0c9316b-6235-49db-966b-122255ad7622"] { padding-top: 0px !important;  } }
+@media (min-width: 992px) { [data-id="3b259986-e006-4368-9f50-fe520b6a99fc"] {  margin-bottom: 144px !important; } }
+@media (min-width: 992px) { [data-id="05f5c973-7e7d-4266-97ac-333dffade169"] {  margin-bottom: 176px !important; } }
+@media (min-width: 992px) { [data-id="631e21ff-1c78-404d-964e-66148138043a"] {  margin-bottom: 64px !important; } }
+/*# sourceURL=qodo-block-styles-inline-css */
+</style>
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.qodo.ai/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<script data-minify="1" data-wp-strategy="defer" defer id="acf-ds-block-header-view-script-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-header/script.js?ver=1789740230"></script>
+<script data-minify="1" data-wp-strategy="defer" defer id="acf-ds-block-hero-tabs-view-script-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-hero-tabs/script.js?ver=1789740243"></script>
+<script data-wp-strategy="defer" defer id="acf-ds-block-advantages-view-script-js" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-advantages/script.js?ver=31d6cfe0d16ae931b73c"></script>
+<script data-wp-strategy="defer" defer id="acf-ds-block-icon-tiles-view-script-js" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-icon-tiles/script.js?ver=31d6cfe0d16ae931b73c"></script>
+<script data-wp-strategy="defer" defer id="acf-ds-block-feature-showcase-view-script-js" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-feature-showcase/script.js?ver=31d6cfe0d16ae931b73c"></script>
+<script data-minify="1" data-wp-strategy="defer" defer id="acf-ds-block-testimonials-slider-view-script-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-testimonials-slider/script.js?ver=1789740243"></script>
+<script data-minify="1" data-wp-strategy="defer" defer id="acf-ds-block-video-tabs-view-script-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-video-tabs/script.js?ver=1789740243"></script>
+<script data-wp-strategy="defer" defer id="acf-ds-block-recent-posts-view-script-js" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-recent-posts/script.js?ver=31d6cfe0d16ae931b73c"></script>
+<script data-minify="1" data-wp-strategy="defer" defer id="acf-ds-block-faq-view-script-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-faq/script.js?ver=1789740243"></script>
+<script data-wp-strategy="defer" defer id="acf-ds-block-footer-view-script-js" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/blocks/acf/ds-block-footer/script.js?ver=31d6cfe0d16ae931b73c"></script>
+<link rel="https://api.w.org/" href="https://www.qodo.ai/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.qodo.ai/wp-json/wp/v2/pages/17029" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.qodo.ai/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.qodo.ai/' />
+<!-- Google Tag Manager -->
+		<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-M6PJSFV');</script>
+		<!-- End Google Tag Manager --><!-- Preconnect to the Clearbit domain -->
+		<link rel="preconnect" href="https://tag.clearbitscripts.com">
+		<link rel="dns-prefetch" href="https://tag.clearbitscripts.com">
+		<!-- Defer loading of the Clearbit script -->
+		<script data-minify="1" src="https://www.qodo.ai/wp-content/cache/min/1/v1/pk_e0db99f977de828fb2b45340db595f3f/tags.js?ver=1789740230" defer referrerpolicy="strict-origin-when-cross-origin"></script><!-- swan --><script type="text/rocketlazyloadscript"> (function () { var w = window; var swan = (w.swan = w.swan || []); if (swan.isLoaded) return; swan.isLoaded = true; swan.pk = 'cmaza8t7d0005ju05kr7kowoj'; var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true; script.src = 'https://script.getswan.com?pk=cmaza8t7d0005ju05kr7kowoj'; var head = document.getElementsByTagName('head')[0]; head.appendChild(script); })(); </script><link rel="icon" href="https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png" />
+<meta name="msapplication-TileImage" content="https://www.qodo.ai/wp-content/uploads/2025/03/qodo-fav-300x300.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><meta name="generator" content="WP Rocket 3.23.3.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_iframes wpr_preconnect_external_domains wpr_oci wpr_image_dimensions wpr_minify_css wpr_cdn wpr_desktop" /></head>
+
+<body class="home wp-singular page-template page-template-page-theme-ds page page-id-17029 wp-embed-responsive wp-theme-qodo-theme">
+
+<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Skip to content</a><div  class="wp-site-blocks"><header class="ds-block-header ds-block" >
+	
+	<div  class="ds-block-header__container">
+		<div class="ds-block-header__content">
+							<a href="https://www.qodo.ai/" class="ds-block-header__logo" aria-label="Logo">
+					<img width="135" height="46" src="https://www.qodo.ai/wp-content/uploads/2025/03/qodo-logo.svg" class="attachment-small size-small" alt="" decoding="async" />				</a>
+							<div class="ds-block-header__button-wrapper">
+					<div class="ds-block-header__button">
+						<div class="user-profile-menu ajax-qodo-user-data wp-block-button">
+	</div>
+<div class="ajax-qodo-user-data-logout">
+			<a href="https://app.qodo.ai?product_source=login" target="_blank" rel="nofollow noopener" class="wp-block-button__link wp-element-button">
+			Log in		</a>
+	</div>
+					</div>
+				</div>
+			<button class="ds-block-header__toggle" aria-label="Toggle menu">
+				<span class="ds-block-header__toggle-icon"></span>
+			</button>
+			<div class="ds-block-header__nav">
+				<nav class="ds-block-header__menu">
+					<ul id="menu-header-new" class="ds-block-header__menu-list"><li id="menu-item-13240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-13240"><a href="https://www.qodo.ai/products/"><span class="menu-item-title">Platform<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+<div class="sub-menu-wrapper" data-rel="platform"><div class="sub-menu-container">
+<div class="featured-post -image-only">
+	<a href="/academy" class="featured-post__image-link">
+		<div class="featured-post__image"><img width="700" height="598" src="https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform.webp" class="attachment-large size-large" alt="" loading="lazy" fetchpriority="low" decoding="async" srcset="https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform.webp 700w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-300x256.webp 300w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-37x32.webp 37w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-58x50.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-56x48.webp 56w" sizes="auto, (max-width: 700px) 100vw, 700px" /></div>
+	</a>
+</div>
+<div class="sub-menu-cta-buttons">
+	<div class="wp-block-button is-style-alternative sub-menu-cta-button">
+		<a href=https://www.qodo.ai/book-a-demo/  target=_self class="wp-block-button__link wp-element-button">
+			Book a Demo <span class="icon icon-arrow-right right"></span>		</a>
+			</div>
+		<div class="wp-block-button sub-menu-cta-button">
+		<a href=https://app.qodo.ai/home  target=_self class="wp-block-button__link wp-element-button">
+			Start Trial <span class="icon icon-arrow-right right"></span>		</a>
+			</div>
+	</div>
+<div class="sub-menu-cta-buttons -ds-theme" style="display: none;">
+		<div class="wp-block-button ds-block-header__cta-button is-style-primary">
+			<a
+							href="https://www.qodo.ai/book-a-demo/" target=""  class="wp-block-button__link wp-element-button">
+				Book a Demo			</a>
+
+					</div>
+			<div class="wp-block-button ds-block-header__cta-button is-style-secondary">
+			<a
+							href="https://app.qodo.ai/home" target=""  class="wp-block-button__link wp-element-button">
+				Start Trial			</a>
+
+					</div>
+	</div>
+<ul class="sub-menu">
+	<li id="menu-item-13254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13254"><a href="#"><span class="menu-item-title">Platform<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+	<div class="sub-menu-wrapper" data-rel="platform"><div class="sub-menu-container">
+	<ul class="sub-menu">
+		<li id="menu-item-17090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17090"><a href="https://www.qodo.ai/ai-code-review-platform/"><span class="menu-item-title">AI Code Quality and Governance Platfom</span><span class="menu-item-description">Enterprise grade code review across the SDLC</span></a></li>
+		<li id="menu-item-17088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17088"><a href="https://www.qodo.ai/features/qodo-git/"><span class="menu-item-title">Pull request review</span><span class="menu-item-description">Git integration</span></a></li>
+		<li id="menu-item-17086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17086"><a href="https://www.qodo.ai/features/qodo-context-engine/"><span class="menu-item-title">Full codebase intelligence</span><span class="menu-item-description">Context Engine</span></a></li>
+		<li id="menu-item-18775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18775"><a href="https://www.qodo.ai/qodo-rules/"><span class="menu-item-title">Codebase Quality</span><span class="menu-item-description">Rules, standards, and code health</span></a></li>
+		<li id="menu-item-22011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22011"><a href="https://www.qodo.ai/features/qodo-agentic-toolbox/"><span class="menu-item-title">Agentic Toolbox</span><span class="menu-item-description">A CLI-powered quality counterpart for coding agents</span></a></li>
+	</ul>
+	</div></div>
+</li>
+</ul>
+</div></div>
+</li>
+<li id="menu-item-13257" class="menu-item menu-item-type-post_type_archive menu-item-object-resource menu-item-has-children menu-item-13257"><a href="https://www.qodo.ai/resources/"><span class="menu-item-title">Resources<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+<div class="sub-menu-wrapper" data-rel="resources"><div class="sub-menu-container">
+<div class="featured-post -image-only">
+	<a href="/academy" class="featured-post__image-link">
+		<div class="featured-post__image"><img width="700" height="598" src="https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform.webp" class="attachment-large size-large" alt="" loading="lazy" fetchpriority="low" decoding="async" srcset="https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform.webp 700w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-300x256.webp 300w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-37x32.webp 37w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-58x50.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/08/menu_platform-56x48.webp 56w" sizes="auto, (max-width: 700px) 100vw, 700px" /></div>
+	</a>
+</div>
+<div class="sub-menu-cta-buttons">
+	<div class="wp-block-button is-style-alternative sub-menu-cta-button">
+		<a href=https://www.qodo.ai/book-a-demo/  target=_self class="wp-block-button__link wp-element-button">
+			Book a Demo <span class="icon icon-arrow-right right"></span>		</a>
+			</div>
+		<div class="wp-block-button sub-menu-cta-button">
+		<a href=https://app.qodo.ai/home  target=_self class="wp-block-button__link wp-element-button">
+			Start Trial <span class="icon icon-arrow-right right"></span>		</a>
+			</div>
+	</div>
+<div class="sub-menu-cta-buttons -ds-theme" style="display: none;">
+		<div class="wp-block-button ds-block-header__cta-button is-style-primary">
+			<a
+							href="https://www.qodo.ai/book-a-demo/" target=""  class="wp-block-button__link wp-element-button">
+				Book a Demo			</a>
+
+					</div>
+			<div class="wp-block-button ds-block-header__cta-button is-style-secondary">
+			<a
+							href="https://app.qodo.ai/home" target=""  class="wp-block-button__link wp-element-button">
+				Start Trial			</a>
+
+					</div>
+	</div>
+<ul class="sub-menu">
+	<li id="menu-item-13258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13258"><a href="#"><span class="menu-item-title">Explore<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+	<div class="sub-menu-wrapper" data-rel="resources"><div class="sub-menu-container">
+	<ul class="sub-menu">
+		<li id="menu-item-13261" class="menu-item menu-item-type-post_type_archive menu-item-object-resource menu-item-13261"><a href="https://www.qodo.ai/resources/"><span class="menu-item-title">Learning</span><span class="menu-item-description">Webinars, tutorials and interviews</span></a></li>
+		<li id="menu-item-13262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13262"><a target="_blank" rel="nofollow" href="https://docs.qodo.ai/qodo-documentation"><span class="menu-item-title">Docs</span><span class="menu-item-description">Get started with Qodo</span></a></li>
+		<li id="menu-item-13263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13263"><a href="https://www.qodo.ai/blog/"><span class="menu-item-title">Blog</span><span class="menu-item-description">Tech content and product updates</span></a></li>
+		<li id="menu-item-18654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18654"><a href="https://www.qodo.ai/ai-code-review-benchmark/"><span class="menu-item-title">AI Code Review Benchmark</span><span class="menu-item-description">Measuring issue finding in PR reviews</span></a></li>
+		<li id="menu-item-19651" class="menu-item menu-item-type-post_type_archive menu-item-object-podcast menu-item-19651"><a href="https://www.qodo.ai/podcasts/"><span class="menu-item-title">The Agentic Review Podcast</span><span class="menu-item-description">Code Quality &#038; AI Development</span></a></li>
+	</ul>
+	</div></div>
+</li>
+	<li id="menu-item-13259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13259"><a href="#"><span class="menu-item-title">Community<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+	<div class="sub-menu-wrapper" data-rel="resources"><div class="sub-menu-container">
+	<ul class="sub-menu">
+		<li id="menu-item-13265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13265"><a href="https://www.qodo.ai/solutions/open-source/"><span class="menu-item-title">Open Source</span><span class="menu-item-description">Free for open source projects</span></a></li>
+		<li id="menu-item-13264" class="menu-item menu-item-type-post_type_archive menu-item-object-event menu-item-13264"><a href="https://www.qodo.ai/events/"><span class="menu-item-title">Events &#038; Webinars</span><span class="menu-item-description">Join us wherever you are</span></a></li>
+		<li id="menu-item-20133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20133"><a href="https://www.qodo.ai/community/super-qodoer/"><span class="menu-item-title">Super Qodoer</span><span class="menu-item-description">Qodo Ambassador Program</span></a></li>
+	</ul>
+	</div></div>
+</li>
+	<li id="menu-item-13260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13260"><a href="#"><span class="menu-item-title">Company<button class="submenu-toggle" aria-label="Toggle Submenu"><span class="icon icon-arrow-down"></span></button></span></a>
+	<div class="sub-menu-wrapper" data-rel="resources"><div class="sub-menu-container">
+	<ul class="sub-menu">
+		<li id="menu-item-13266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13266"><a href="https://www.qodo.ai/about/"><span class="menu-item-title">About</span><span class="menu-item-description">Our mission, team and investors</span></a></li>
+		<li id="menu-item-13267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13267"><a href="https://www.qodo.ai/careers/"><span class="menu-item-title">Careers</span><span class="menu-item-description">Become part of the team</span></a></li>
+		<li id="menu-item-13268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13268"><a href="https://www.qodo.ai/contact/"><span class="menu-item-title">Contact</span><span class="menu-item-description">We love hearing from you</span></a></li>
+	</ul>
+	</div></div>
+</li>
+</ul>
+</div></div>
+</li>
+<li id="menu-item-13269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13269"><a href="https://www.qodo.ai/pricing/"><span class="menu-item-title">Pricing</span></a></li>
+<li id="menu-item-13375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13375"><a href="https://www.qodo.ai/solutions/enterprise/"><span class="menu-item-title">Enterprise</span></a></li>
+</ul>				</nav>
+									<div class="ds-block-header__cta">
+						<div class="ds-block-header__button ds-block-header__button--desktop">
+							<div class="user-profile-menu ajax-qodo-user-data wp-block-button">
+	</div>
+<div class="ajax-qodo-user-data-logout">
+			<a href="https://app.qodo.ai?product_source=login" target="_blank" rel="nofollow noopener" class="wp-block-button__link wp-element-button">
+			Log in		</a>
+	</div>
+						</div>
+							<div class="ds-block-header__button ds-block-header__button--mobile hover-no-bg ">
+		<a href=https://app.qodo.ai/?product_type=qodo-merge&amp;product_source=marketing  target=_blank rel=noopener nofollow class="wp-block-button__link wp-element-button">
+			Log in		</a>
+			</div>
+														<div class="ds-block-header__cta-buttons">
+										<div class="wp-block-button ds-block-header__cta-button is-style-primary">
+			<a
+							href="https://www.qodo.ai/book-a-demo/" target=""  class="wp-block-button__link wp-element-button">
+				Book a Demo			</a>
+
+					</div>
+			<div class="wp-block-button ds-block-header__cta-button is-style-secondary">
+			<a
+							href="https://app.qodo.ai/home" target=""  class="wp-block-button__link wp-element-button">
+				Start Trial			</a>
+
+					</div>
+								</div>
+											</div>
+				
+				<div class="ds-block-header__ratings">
+						<div class="ds-ratings block-hero-main__rating">
+				<a href="https://marketplace.visualstudio.com/items?itemName=Codium.codium" target="_blank" rel="nofollow" class="ds-rating-item -icon-vscode "  aria-label="Qodo | VS Code Extension">
+		<span class="ds-rating-item__inner">
+			904.2K		</span>
+	</a>
+			<a href="https://plugins.jetbrains.com/plugin/21206-codiumai--meaningful-tests-in-python-powered-by-testgpt" target="_blank" rel="nofollow" class="ds-rating-item -icon-jetbrains "  aria-label="Qodo | JetBrains Extension">
+		<span class="ds-rating-item__inner">
+			648.6K		</span>
+	</a>
+			<a href="https://github.com/marketplace/qodo-merge-pro" target="_blank" rel="nofollow" class="ds-rating-item -icon-github "  aria-label="Qodo | Qodo Merge">
+		<span class="ds-rating-item__inner">
+			13.1K		</span>
+	</a>
+		</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+<main  id="wp--skip-link--target" class="wp-block-group -theme-ds is-layout-flow wp-block-group-is-layout-flow">
+	<div  class="entry-content wp-block-post-content is-layout-flow wp-block-post-content-is-layout-flow"><section class="ds-block-hero-tabs ds-block -wrapper" >
+	<div class="ds-block-hero-tabs__intro">
+					<div class="ds-block-hero-tabs__intro-content">
+				<h1>Code review for agents.<br />
+<span style="color: #998cfa">Governance for humans.</span></h1>
+<p>Ship trusted software at agent speed, reduce review bottlenecks, and hold the line on quality.</p>
+			</div>
+		
+					<div class="ds-block-hero-tabs__buttons">
+						<div class="wp-block-button ds-block-hero-tabs__button is-style-primary -with-arrow">
+			<a
+							href="/book-a-demo" target=""  class="wp-block-button__link wp-element-button">
+				Book a demo			</a>
+
+					</div>
+			<div class="wp-block-button ds-block-hero-tabs__button is-style-secondary -with-arrow">
+			<a
+							href="https://app.qodo.ai/home" target="_blank"  class="wp-block-button__link wp-element-button" rel="nofollow" >
+				Start Trial			</a>
+
+					</div>
+				</div>
+			</div>
+	<div class="ds-block-hero-tabs__mascot-wrapper">
+		<figure class="ds-block-hero-tabs__mascot">
+			<img decoding="async" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/build/images/mascot-skate.svg" width="196" height="207" alt="Qodo Mascot" />
+		</figure>
+	</div>
+
+			<div class="ds-block-hero-tabs__tabs">
+			<div class="ds-block-hero-tabs__panels">
+									<div
+						class="ds-block-hero-tabs__panel -active"
+						id="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-0"
+						role="tabpanel"
+						aria-labelledby="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-0"
+						data-tab-panel="0"
+						style="--hero-tabs-border-color: #7968FA"											>
+													<iframe loading="lazy"
+								class="ds-block-hero-tabs__iframe"
+								src="about:blank"
+								title="software map"
+							 data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/embeds/dependency-map/index.html"></iframe><noscript><iframe
+								class="ds-block-hero-tabs__iframe"
+								src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/embeds/dependency-map/index.html"
+								title="software map"
+							></iframe></noscript>
+											</div>
+									<div
+						class="ds-block-hero-tabs__panel"
+						id="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-1"
+						role="tabpanel"
+						aria-labelledby="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-1"
+						data-tab-panel="1"
+						style="--hero-tabs-border-color: #bb68fa"						hidden					>
+													<iframe
+								class="ds-block-hero-tabs__iframe"
+								data-src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/embeds/pr-review/index.html"
+								title="pr review"
+							></iframe>
+											</div>
+									<div
+						class="ds-block-hero-tabs__panel"
+						id="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-2"
+						role="tabpanel"
+						aria-labelledby="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-2"
+						data-tab-panel="2"
+						style="--hero-tabs-border-color: #ff7652"						hidden					>
+													<iframe
+								class="ds-block-hero-tabs__iframe"
+								data-src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/embeds/agentic-toolbox/index.html"
+								title="agentic toolbox"
+							></iframe>
+											</div>
+									<div
+						class="ds-block-hero-tabs__panel"
+						id="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-3"
+						role="tabpanel"
+						aria-labelledby="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-3"
+						data-tab-panel="3"
+						style="--hero-tabs-border-color: #87f5d8"						hidden					>
+													<iframe
+								class="ds-block-hero-tabs__iframe"
+								data-src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/embeds/review-standards/index.html"
+								title="Rules &amp; Skills"
+							></iframe>
+											</div>
+							</div>
+
+			<div class="ds-block-hero-tabs__tabs-nav-wrapper">
+				<div class="ds-block-hero-tabs__tabs-nav" role="tablist">
+											<div class="wp-block-button -is-style-tabs">
+							<button
+								type="button"
+								class="wp-block-button__link ds-block-hero-tabs__tab-button -active"
+								id="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-0"
+								role="tab"
+								aria-selected="true"
+								aria-controls="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-0"
+								data-tab-index="0"
+							>
+								software map							</button>
+						</div>
+											<div class="wp-block-button -is-style-tabs">
+							<button
+								type="button"
+								class="wp-block-button__link ds-block-hero-tabs__tab-button"
+								id="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-1"
+								role="tab"
+								aria-selected="false"
+								aria-controls="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-1"
+								data-tab-index="1"
+							>
+								pr review							</button>
+						</div>
+											<div class="wp-block-button -is-style-tabs">
+							<button
+								type="button"
+								class="wp-block-button__link ds-block-hero-tabs__tab-button"
+								id="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-2"
+								role="tab"
+								aria-selected="false"
+								aria-controls="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-2"
+								data-tab-index="2"
+							>
+								agentic toolbox							</button>
+						</div>
+											<div class="wp-block-button -is-style-tabs">
+							<button
+								type="button"
+								class="wp-block-button__link ds-block-hero-tabs__tab-button"
+								id="ds-block-hero-tabs-tab-block_90f49a9ce63509b6c4406ce2cda9245c-3"
+								role="tab"
+								aria-selected="false"
+								aria-controls="ds-block-hero-tabs-panel-block_90f49a9ce63509b6c4406ce2cda9245c-3"
+								data-tab-index="3"
+							>
+								Rules &amp; Skills							</button>
+						</div>
+									</div>
+			</div>
+		</div>
+			<div class="ds-logotypes-slider ds-section-logotypes -mb-default">
+		<div class="ds-logotypes-slider__carousel">
+			<div class="ds-logotypes-slider__carousel-wrapper">
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="97" height="64" src="https://www.qodo.ai/wp-content/uploads/2023/03/Intel-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="82" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/01/logo-hibob.svg" class="attachment-full size-full" alt="Hi Bob, Inc." loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="129" height="34" src="https://www.qodo.ai/wp-content/uploads/2026/04/Nvidia-2.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="224" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/03/logo-macmillan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="130" height="25" src="https://www.qodo.ai/wp-content/uploads/2025/06/monday-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="73" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/10/logo-sansan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="131" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/10/walmart-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="41" height="22" src="https://www.qodo.ai/wp-content/uploads/2025/12/box-logo-white.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+							</div>
+
+			<div class="ds-logotypes-slider__carousel-wrapper">
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="97" height="64" src="https://www.qodo.ai/wp-content/uploads/2023/03/Intel-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="82" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/01/logo-hibob.svg" class="attachment-full size-full" alt="Hi Bob, Inc." loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="129" height="34" src="https://www.qodo.ai/wp-content/uploads/2026/04/Nvidia-2.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="224" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/03/logo-macmillan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="130" height="25" src="https://www.qodo.ai/wp-content/uploads/2025/06/monday-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="73" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/10/logo-sansan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="131" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/10/walmart-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="41" height="22" src="https://www.qodo.ai/wp-content/uploads/2025/12/box-logo-white.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+							</div>
+
+			<div class="ds-logotypes-slider__carousel-wrapper">
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="97" height="64" src="https://www.qodo.ai/wp-content/uploads/2023/03/Intel-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="82" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/01/logo-hibob.svg" class="attachment-full size-full" alt="Hi Bob, Inc." loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="129" height="34" src="https://www.qodo.ai/wp-content/uploads/2026/04/Nvidia-2.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="224" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/03/logo-macmillan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="130" height="25" src="https://www.qodo.ai/wp-content/uploads/2025/06/monday-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="73" height="40" src="https://www.qodo.ai/wp-content/uploads/2024/10/logo-sansan.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="131" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/10/walmart-logo.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+									<figure class="ds-logotypes-slider__item">
+													<img decoding="async" width="41" height="22" src="https://www.qodo.ai/wp-content/uploads/2025/12/box-logo-white.svg" class="attachment-full size-full" alt="" loading="lazy" />											</figure>
+							</div>
+		</div>
+	</div>
+	</section>
+
+
+
+<section class="ds-block ds-block-advantages -wrapper -type-boxed_alt"  data-id="e0c9316b-6235-49db-966b-122255ad7622">
+
+	
+		<header class="ds-section-header ds-block-advantages__header -sm-align-left">
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>Code quality infrastructure for the agent era</h2>
+<p>Qodo provides the shared quality layer that keeps standards consistent, review independent, and decisions traceable.</p>
+			</div>
+			</header>
+	
+	
+			<div class="ds-block-advantages__tiles">
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2025/11/code-analyze.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Turn tribal knowledge into quality controls								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Deterministic, enforceable rules every developer, reviewer, and AI agent follows.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2026/06/governance.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Give coding agents a quality counterpart								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Make review, organizational context and rules available wherever coding agents work.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2025/11/ssl-encrypted.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Bring independent review across the SDLC								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>High-precision multi-agent code review across the SDLC, with full codebase context.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2026/06/enterprise.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Build a system of record for code quality								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Turn review activity into a shared history of quality decisions across the organization.</p>
+								</div>
+							
+													</div>
+									</div>
+					</div>
+	
+	</section>
+
+
+<section class="ds-block-feature-steps ds-block -wrapper -content-right" >
+		<header class="ds-section-header ds-block-feature-steps__header -narrow">
+					<span class="ds-section-header__label -caption">
+				ai code review			</span>
+		
+					<div class="ds-section-header__content -body-large">
+				<h2><strong>High-precision review</strong> on every change</h2>
+<p>Specialized review agents reason over full codebase context to flag real bugs, rule violations, and requirements gaps with less noise.</p>
+			</div>
+			</header>
+	
+			<div class="ds-block-feature-steps__content">
+			<div class="ds-block-feature-steps__box">
+				<div class="ds-block-feature-steps__inner">
+											<figure class="ds-block-feature-steps__media -desktop">
+							<img loading="lazy" decoding="async" width="1072" height="597" src="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1.webp" class="attachment-full size-full" alt="" srcset="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1.webp 1072w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-300x167.webp 300w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-1024x570.webp 1024w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-768x428.webp 768w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-57x32.webp 57w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-58x32.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-86x48.webp 86w" sizes="auto, (max-width: 1072px) 100vw, 1072px" />						</figure>
+																<figure class="ds-block-feature-steps__media -mobile">
+							<img loading="lazy" decoding="async" width="668" height="717" src="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile.webp" class="attachment-full size-full" alt="" srcset="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile.webp 668w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile-279x300.webp 279w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile-30x32.webp 30w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile-58x62.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-1-mobile-45x48.webp 45w" sizes="auto, (max-width: 668px) 100vw, 668px" />						</figure>
+					
+											<div class="ds-block-feature-steps__steps">
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+																									<span class="ds-block-feature-steps__step-label -font-mono">
+														git													</span>
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													01												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														Context aware PR review													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Specialized agents run on every pull request, surfacing real bugs, rule violations, and requirement gaps with full codebase context.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+																									<span class="ds-block-feature-steps__step-label -font-mono">
+														agentic workflows													</span>
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													02												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														Shift left review skills													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Review skills that run inside the developer&#8217;s agent, surfacing rules, findings, and fixes earlier in the lifecycle.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+																									<span class="ds-block-feature-steps__step-label -font-mono">
+														ide													</span>
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													03												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														Local review workflows													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Resolve issues in context. Developers fix flagged code, validate changes, and ship faster without leaving the editor.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+													</div>
+									</div>
+			</div>
+		</div>
+	</section>
+
+
+<section class="ds-block-feature-steps ds-block -wrapper -content-left" >
+		<header class="ds-section-header ds-block-feature-steps__header -narrow">
+					<span class="ds-section-header__label -caption">
+				standards system			</span>
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>Deterministic, enforceable <strong>standards</strong></h2>
+<p>Self-learning rules turn organizational knowledge into machine-readable standards every developer, reviewer, and AI agent can follow.</p>
+			</div>
+			</header>
+	
+			<div class="ds-block-feature-steps__content">
+			<div class="ds-block-feature-steps__box">
+				<div class="ds-block-feature-steps__inner">
+											<figure class="ds-block-feature-steps__media -desktop">
+							<img loading="lazy" decoding="async" width="1050" height="903" src="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2.webp" class="attachment-full size-full" alt="" srcset="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2.webp 1050w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-300x258.webp 300w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-1024x881.webp 1024w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-768x660.webp 768w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-37x32.webp 37w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-58x50.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2-56x48.webp 56w" sizes="auto, (max-width: 1050px) 100vw, 1050px" />						</figure>
+																<figure class="ds-block-feature-steps__media -mobile">
+							<img loading="lazy" decoding="async" width="672" height="990" src="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile.webp" class="attachment-full size-full" alt="" srcset="https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile.webp 672w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile-204x300.webp 204w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile-22x32.webp 22w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile-58x85.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/06/s-image-2mobile-33x48.webp 33w" sizes="auto, (max-width: 672px) 100vw, 672px" />						</figure>
+					
+											<div class="ds-block-feature-steps__steps">
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													01												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														From wikis to agent-enforceable rules													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Rules self-learned from patterns, conventions, and architectural decisions from your codebase and PR history.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													02												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														See if your rules being enforced													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Monitor and understand the impact of rule violations, and track how often issues are resolved before code is merged.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+															<div class="ds-block-feature-steps__step">
+									<div class="ds-block-feature-steps__step-frame">
+										<div class="ds-block-feature-steps__step-inner">
+											<div class="ds-block-feature-steps__step-top">
+												
+												<span class="ds-block-feature-steps__step-number" aria-hidden="true">
+													03												</span>
+											</div>
+
+											<div class="ds-block-feature-steps__step-body">
+																									<h3 class="ds-block-feature-steps__step-heading h6">
+														Maintain rule health													</h3>
+												
+																									<div class="ds-block-feature-steps__step-description -body-medium">
+														<p>Rule effectiveness gets measured continuously, with conflicts and decay surfaced before they erode trust.</p>
+													</div>
+																							</div>
+										</div>
+									</div>
+								</div>
+													</div>
+									</div>
+			</div>
+		</div>
+	</section>
+
+
+
+<section class="ds-block-icon-tiles -wrapper -type-default -mb-default -type-default"  data-id="3b259986-e006-4368-9f50-fe520b6a99fc">
+			<div class="ds-block-icon-tiles__header-wrapper">
+				<header class="ds-section-header ds-block-icon-tiles__header">
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>The governance layer to keep codebases healthy</h2>
+<p>Centralized visibility into risk, relationships, and quality history across every repo and team.</p>
+			</div>
+			</header>
+	
+					</div>
+	
+			<div class="ds-block-icon-tiles__tiles -items-4">
+							
+				<div class="ds-block-icon-tiles__tile -theme-white">
+											<figure class="ds-block-icon-tiles__tile-icon">
+							<img loading="lazy" decoding="async" width="64" height="64" src="https://www.qodo.ai/wp-content/uploads/2026/06/icon-1-2.svg" class="attachment-full size-full" alt="" />						</figure>
+					
+											<h3 class="ds-block-icon-tiles__tile-heading h6">
+							Risk intelligence						</h3>
+					
+											<p class="ds-block-icon-tiles__tile-description -body-medium">
+							Track review findings, resolution rates, and risk concentration across teams and repositories.						</p>
+									</div>
+							
+				<div class="ds-block-icon-tiles__tile -theme-purple">
+											<figure class="ds-block-icon-tiles__tile-icon">
+							<img loading="lazy" decoding="async" width="64" height="64" src="https://www.qodo.ai/wp-content/uploads/2026/06/icon-2-2.svg" class="attachment-full size-full" alt="" />						</figure>
+					
+											<h3 class="ds-block-icon-tiles__tile-heading h6">
+							Audit trail						</h3>
+					
+											<p class="ds-block-icon-tiles__tile-description -body-medium">
+							Every issue and compliance flag logged for full traceability.						</p>
+									</div>
+							
+				<div class="ds-block-icon-tiles__tile -theme-teal">
+											<figure class="ds-block-icon-tiles__tile-icon">
+							<img loading="lazy" decoding="async" width="64" height="64" src="https://www.qodo.ai/wp-content/uploads/2025/11/branch-merge-1.svg" class="attachment-full size-full" alt="" />						</figure>
+					
+											<h3 class="ds-block-icon-tiles__tile-heading h6">
+							Repo relationship mapping						</h3>
+					
+											<p class="ds-block-icon-tiles__tile-description -body-medium">
+							See how repositories, services, and teams are connected to understand how code changes impact the full system						</p>
+									</div>
+							
+				<div class="ds-block-icon-tiles__tile -theme-pearl">
+											<figure class="ds-block-icon-tiles__tile-icon">
+							<img loading="lazy" decoding="async" width="64" height="64" src="https://www.qodo.ai/wp-content/uploads/2026/06/icon-3-2.svg" class="attachment-full size-full" alt="" />						</figure>
+					
+											<h3 class="ds-block-icon-tiles__tile-heading h6">
+							System of record						</h3>
+					
+											<p class="ds-block-icon-tiles__tile-description -body-medium">
+							A complete history of findings, decisions, and codebase health.						</p>
+									</div>
+					</div>
+			</section>
+
+
+<section class="ds-block-feature-showcase ds-block block-acf -wrapper -mb-default"  data-id="05f5c973-7e7d-4266-97ac-333dffade169">
+		<header class="ds-section-header ds-block-feature-showcase__header -two-columns">
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>State of the art context engineering</h2>
+<p>Purpose-built for agentic code review, Qodo’s context engine pulls context from across various context sources to provide a continuous, multi-dimensional understanding of complex coding environments.</p>
+			</div>
+			</header>
+	
+			<div class="ds-block-feature-showcase__content">
+							<div class="ds-block-feature-showcase__media">
+					<figure class="ds-block-feature-showcase__image">
+						<img loading="lazy" decoding="async" width="1464" height="960" src="https://www.qodo.ai/wp-content/uploads/2026/03/nvidia.webp" class="attachment-full size-full" alt="" srcset="https://www.qodo.ai/wp-content/uploads/2026/03/nvidia.webp 1464w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-300x197.webp 300w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-1024x671.webp 1024w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-768x504.webp 768w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-49x32.webp 49w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-58x38.webp 58w, https://www.qodo.ai/wp-content/uploads/2026/03/nvidia-73x48.webp 73w" sizes="auto, (max-width: 1464px) 100vw, 1464px" />					</figure>
+
+											<p class="ds-block-feature-showcase__image-text">
+							Jensen Huang shares how Qodo&#8217;s context engine provides deep agentic code search and retrieval for engineering teams at NVIDIA.						</p>
+					
+							<div class="wp-block-button ds-block-feature-showcase__button is-style-ghost-arrow">
+			<a
+							href="https://developer.nvidia.com/blog/spotlight-qodo-innovates-efficient-code-search-with-nvidia-dgx/" target="_blank"  class="wp-block-button__link wp-element-button" rel="nofollow" >
+				See the full case study			</a>
+
+					</div>
+					</div>
+			
+							<div class="ds-block-feature-showcase__features">
+											<div class="ds-block-feature-showcase__feature" style="--feature-border-color: #7968FA">
+															<div class="ds-block-feature-showcase__feature-label">
+									Rules								</div>
+							
+															<p class="ds-block-feature-showcase__feature-text">
+									Automatically discover and enforce your team’s unique coding standards for total consistency.								</p>
+													</div>
+											<div class="ds-block-feature-showcase__feature" style="--feature-border-color: #87f5d8">
+															<div class="ds-block-feature-showcase__feature-label">
+									Codebase								</div>
+							
+															<p class="ds-block-feature-showcase__feature-text">
+									Builds a deep understanding of your repositories, from structure to dependencies, to see how every change fits.								</p>
+													</div>
+											<div class="ds-block-feature-showcase__feature" style="--feature-border-color: #d2e534">
+															<div class="ds-block-feature-showcase__feature-label">
+									PR History								</div>
+							
+															<p class="ds-block-feature-showcase__feature-text">
+									Indexes past PR code diffs, comments, discussions, and  fixed issues to filter for the most critical and relevant issues.								</p>
+													</div>
+											<div class="ds-block-feature-showcase__feature" style="--feature-border-color: #ff7652">
+															<div class="ds-block-feature-showcase__feature-label">
+									Business Requirements								</div>
+							
+															<p class="ds-block-feature-showcase__feature-text">
+									Aligns technical execution with project goals by pulling context directly from your tickets and specs.								</p>
+													</div>
+									</div>
+					</div>
+	</section>
+
+
+<section class="ds-block-testimonials-slider ds-block -mb-default -type-alternative" >
+	<div class="ds-block-testimonials-slider__wrapper -wrapper ">
+					<div class="ds-block-testimonials-slider__slider swiper" data-slider>
+				<div class="ds-block-testimonials-slider__slider-wrapper swiper-wrapper">
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #89cdf3;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											As we expand the use of AI-assisted development across our platforms, Qodo ensures every line of code meets our standards for performance, security, and compliance. The layer of governance Qodo provides is critical to delivering seamless, reliable travel experiences at a global scale. We are innovating faster while maintaining the trust our customers place in us at every stage of their journey.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Christian Rudolph														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Head of Platform Services														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="83" height="47" src="https://www.qodo.ai/wp-content/uploads/2026/03/tui.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #ff7652;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											Maintaining consistent standards is critical for our engineering teams. Qodo’s Rules System didn’t just surface the standards we had scattered across different places; it operationalized them. The system continuously reinforces how our teams actually review and write code, and we are seeing stronger consistency, faster onboarding, and measurable improvements in review quality across teams.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Ofer Morag Brin														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Head of Mobile Engineering														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="74" height="30" src="https://www.qodo.ai/wp-content/uploads/2026/03/hi-bob.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #87f5d8;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											With Qodo, our engineers review PRs even faster and with increased confidence in what they&#8217;re pushing to production. It catches potential gaps before they become significant and helps the team maintain a high bar for code quality, without slowing anyone down.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Jordan J. Buffaloe														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Senior Product Manager														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="61" height="32" src="https://www.qodo.ai/wp-content/uploads/2026/03/logo-1-1.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #d2e534;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											Pax8 operates with agents as first-class executors in our SDLC and treats AI code quality as a critical capability for modern engineering. Qodo plays an important role in that feedback loop by helping our teams continuously validate code quality, reinforce engineering standards, and make agentic development more trustworthy at scale.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Tyler Kron														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Sr Director of Software Engineering														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="76" height="48" src="https://www.qodo.ai/wp-content/uploads/2026/03/pax.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #bb68fa;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											By incorporating our org-specific requirements, Qodo acts as an intelligent reviewer that captures institutional knowledge and ensures consistency across our entire engineering organization.This contextual awareness means that Qodo becomes more valuable over time, adapting to our specific coding standards and patterns rather than applying generic rules.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Liran Brimer														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Senior Tech Lead														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="144" height="25" src="https://www.qodo.ai/wp-content/uploads/2026/03/monday-logo.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #ff7652;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											Slickdeals partnered with Qodo this year as we began introducing AI into our quality workflows. Our engineering team has quickly embraced Qodo&#8217;s PR recommendations, giving us early, actionable feedback on code quality and shaping how we approach changes during review. We&#8217;re encouraged by the initial impact and look forward to continuing to partner with Qodo as the platform evolves.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Matt Thomas														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															VP of Engineering Operations														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="40" height="40" src="https://www.qodo.ai/wp-content/uploads/2026/05/slick-deals.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #87f5d8;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											Stronger code quality and governance directly support the reliability our students and educators depend on. Greater visibility and consistency are key, and Qodo has helped us sustain that as we grow.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Lori Jonakin														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															VP Engineering														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="129" height="34" src="https://www.qodo.ai/wp-content/uploads/2026/05/macmillan.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+																	<div class="ds-block-testimonials-slider__slide swiper-slide" style="--testimonial-color: #d2e534;">
+							<blockquote class="ds-block-testimonials-slider__slide-inner">
+								<div class="ds-block-testimonials-slider__slide-inner-content">
+																			<p class="ds-block-testimonials-slider__slide-quote -body-large">
+											Qodo does about 90% of that initial code review, and then it&#8217;s really just the final 10% where humans get involved.										</p>
+																												<div class="ds-block-testimonials-slider__slide-info">
+																							<div class="ds-block-testimonials-slider__slide-info-person">
+																											<p class="ds-block-testimonials-slider__slide-info-name">
+															Chris Howard														</p>
+																																								<p class="ds-block-testimonials-slider__slide-info-position">
+															Chief Technology Officer														</p>
+																									</div>
+																																		<figure class="ds-block-testimonials-slider__slide-logo">
+													<img loading="lazy" decoding="async" width="108" height="30" src="https://www.qodo.ai/wp-content/uploads/2026/05/loopup.svg" class="attachment-full size-full" alt="" />												</figure>
+																					</div>
+																	</div>
+							</blockquote>
+						</div>
+									</div>
+			</div>
+							<nav class="ds-block-testimonials-slider__navigation" data-navigation aria-label="Slider navigation">
+				<button class="ds-block-testimonials-slider__nav-button -prev" data-button-prev type="button" aria-label="Previous slide"></button>
+				<button class="ds-block-testimonials-slider__nav-button -next" data-button-next type="button" aria-label="Next slide"></button>
+			</nav>
+			</div>
+</section>
+
+
+
+<section class="ds-block-video-tabs ds-block -wrapper "  data-id="631e21ff-1c78-404d-964e-66148138043a">
+	<div class="ds-block-video-tabs__header-wrapper">
+			<header class="ds-section-header ds-block-video-tabs__header">
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>How <strong>Qodo</strong> Works</h2>
+<p>Review as you write, fix as you go, ship with confidence.</p>
+			</div>
+			</header>
+	
+		<figure class="ds-block-video-tabs__mascot">
+			<img width="196" height="207" decoding="async" src="https://www.qodo.ai/wp-content/themes/qodo-theme/assets/src/images/mascot-skate.svg" alt="Qodo Mascot" />
+		</figure>
+	</div>
+
+			<div class="ds-block-video-tabs__tabs-nav-wrapper">
+			<div class="ds-block-video-tabs__tabs-nav">
+															<div class="wp-block-button -is-style-tabs">
+							<button
+								class="wp-block-button__link ds-block-video-tabs__tab-button -active"
+								data-tab-index="0"
+								aria-label="PR Review"
+							>
+								PR Review							</button>
+						</div>
+																				<div class="wp-block-button -is-style-tabs">
+							<button
+								class="wp-block-button__link ds-block-video-tabs__tab-button"
+								data-tab-index="1"
+								aria-label="Review Standards System"
+							>
+								Review Standards System							</button>
+						</div>
+												</div>
+		</div>
+	
+	<div class="ds-block-video-tabs__video-container">
+									<figure class="ds-block-video-tabs__video-wrapper -active" data-video-index="0">
+																						<div class="ds-block-video-tabs__iframe-wrapper">
+							<iframe
+								loading="lazy"
+								class="ds-block-video-tabs__storylane-iframe"
+								title="Interactive demo"
+								src="about:blank"
+								name="sl-embed"
+								allow="fullscreen"
+								allowfullscreen
+								style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://app.storylane.io/demo/n30pn3mm6fd6?embed=inline">
+							</iframe><noscript><iframe
+								loading="lazy"
+								class="ds-block-video-tabs__storylane-iframe"
+								title="Interactive demo"
+								src="https://app.storylane.io/demo/n30pn3mm6fd6?embed=inline"
+								name="sl-embed"
+								allow="fullscreen"
+								allowfullscreen
+								style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;">
+							</iframe></noscript>
+						</div>
+									</figure>
+							<figure class="ds-block-video-tabs__video-wrapper" data-video-index="1">
+																						<div class="ds-block-video-tabs__iframe-wrapper">
+							<iframe
+								loading="lazy"
+								class="ds-block-video-tabs__storylane-iframe"
+								title="Interactive demo"
+								src="about:blank"
+								name="sl-embed"
+								allow="fullscreen"
+								allowfullscreen
+								style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://app.storylane.io/demo/neapiffxqnlu?embed=inline">
+							</iframe><noscript><iframe
+								loading="lazy"
+								class="ds-block-video-tabs__storylane-iframe"
+								title="Interactive demo"
+								src="https://app.storylane.io/demo/neapiffxqnlu?embed=inline"
+								name="sl-embed"
+								allow="fullscreen"
+								allowfullscreen
+								style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;">
+							</iframe></noscript>
+						</div>
+									</figure>
+						</div>
+</section>
+
+
+
+<section class="ds-block-recent-posts ds-block -wrapper -mb-default -theme-ds" >
+		<header class="ds-section-header ds-block-recent-posts__header -two-columns -align-left">
+					<span class="ds-section-header__label -caption">
+				Blog			</span>
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>Recents posts from our blog</h2>
+<p>Check out our musings on generative AI, code integrity, and other geeky stuff:</p>
+			</div>
+			</header>
+	
+			<div class="ds-block-recent-posts__items">
+				<a href="https://www.qodo.ai/blog/introducing-qodos-software-map/" class="ds-post-tile-card -type-default ">
+					<figure class="ds-post-tile-card__thumbnail">
+				<img loading="lazy" decoding="async" width="1024" height="687" src="https://www.qodo.ai/wp-content/uploads/2026/09/blog-cover-1024x687.webp" class="attachment-large size-large wp-post-image" alt="" />			</figure>
+		
+		<div class="ds-post-tile-card__content">
+			<div class="ds-post-tile-card__meta">
+				<div class="ds-post-tile-card__categories">
+											<span class="ds-post-tile-card__category -caption">
+							GENERAL						</span>
+					
+									</div>
+
+							<span class="ds-post-tile-card__reading-time -body-small">
+					5 min read
+				</span>
+						</div>
+
+			<h3 class="ds-post-tile-card__title h6">
+				Introducing the Software Map in Qodo: Risk, Mapped Across Every Repo			</h3>
+
+		<footer class="ds-post-tile-card__footer">
+							<div class="ds-post-tile-card__author">
+											<figure class="ds-post-tile-card__author-photo">
+							<img loading="lazy" decoding="async" src="https://www.qodo.ai/wp-content/uploads/2023/02/itamar.png" alt="Itamar Friedman" width="32" height="32">
+						</figure>
+					
+					<span class="ds-post-tile-card__author-name -body-small">
+						Itamar Friedman					</span>
+				</div>
+			
+			<span class="ds-post-tile-card__date -body-small">
+				Sep 15.2026			</span>
+		</footer>
+		</div>
+	</a>
+		<a href="https://www.qodo.ai/blog/introducing-qodos-agentic-toolbox/" class="ds-post-tile-card -type-default ">
+					<figure class="ds-post-tile-card__thumbnail">
+				<img loading="lazy" decoding="async" width="1024" height="683" src="https://www.qodo.ai/wp-content/uploads/2026/09/toolbox-Blog-Cover-selection-1024x683.png" class="attachment-large size-large wp-post-image" alt="" />			</figure>
+		
+		<div class="ds-post-tile-card__content">
+			<div class="ds-post-tile-card__meta">
+				<div class="ds-post-tile-card__categories">
+											<span class="ds-post-tile-card__category -caption">
+							GENERAL						</span>
+					
+									</div>
+
+							<span class="ds-post-tile-card__reading-time -body-small">
+					5 min read
+				</span>
+						</div>
+
+			<h3 class="ds-post-tile-card__title h6">
+				Built for Agents, Better Outcomes for Humans: Introducing Qodo’s Agentic Toolbox			</h3>
+
+		<footer class="ds-post-tile-card__footer">
+							<div class="ds-post-tile-card__author">
+											<figure class="ds-post-tile-card__author-photo">
+							<img loading="lazy" decoding="async" src="https://www.qodo.ai/wp-content/uploads/2025/06/elana.k.webp" alt="Elana Krasner" width="32" height="32">
+						</figure>
+					
+					<span class="ds-post-tile-card__author-name -body-small">
+						Elana Krasner					</span>
+				</div>
+			
+			<span class="ds-post-tile-card__date -body-small">
+				Sep 09.2026			</span>
+		</footer>
+		</div>
+	</a>
+		<a href="https://www.qodo.ai/blog/introducing-qodo-for-codex/" class="ds-post-tile-card -type-default ">
+					<figure class="ds-post-tile-card__thumbnail">
+				<img loading="lazy" decoding="async" width="900" height="604" src="https://www.qodo.ai/wp-content/uploads/2026/09/Qodo-x-Codex.png" class="attachment-large size-large wp-post-image" alt="" />			</figure>
+		
+		<div class="ds-post-tile-card__content">
+			<div class="ds-post-tile-card__meta">
+				<div class="ds-post-tile-card__categories">
+											<span class="ds-post-tile-card__category -caption">
+							GENERAL						</span>
+					
+									</div>
+
+							<span class="ds-post-tile-card__reading-time -body-small">
+					6 min read
+				</span>
+						</div>
+
+			<h3 class="ds-post-tile-card__title h6">
+				Introducing Qodo for Codex: Quality Built Into the Agentic Workflow			</h3>
+
+		<footer class="ds-post-tile-card__footer">
+							<div class="ds-post-tile-card__author">
+											<figure class="ds-post-tile-card__author-photo">
+							<img loading="lazy" decoding="async" src="https://www.qodo.ai/wp-content/uploads/2025/06/elana.k.webp" alt="Elana Krasner" width="32" height="32">
+						</figure>
+					
+					<span class="ds-post-tile-card__author-name -body-small">
+						Elana Krasner					</span>
+				</div>
+			
+			<span class="ds-post-tile-card__date -body-small">
+				Sep 09.2026			</span>
+		</footer>
+		</div>
+	</a>
+			</div>
+	
+	<div class="ds-block-recent-posts__button-wrapper">		<div class="wp-block-button ds-block-recent-posts__button is-style-primary -with-arrow">
+			<a
+							href="https://www.qodo.ai/blog/" target=""  class="wp-block-button__link wp-element-button">
+				Browse all posts			</a>
+
+					</div>
+	</div></section>
+
+
+<section class="ds-block ds-block-advantages -wrapper -type-boxed -mb-default" >
+
+	
+		<header class="ds-section-header ds-block-advantages__header -sm-align-left">
+					<span class="ds-section-header__label -caption">
+				security &amp; compliance			</span>
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>We take security, <strong>privacy and compliance seriously.</strong></h2>
+<p>AI code review, built for enterprise grade security.</p>
+			</div>
+			</header>
+	
+	
+			<div class="ds-block-advantages__tiles">
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2025/11/code-analyze.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Zero data retention								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Your code is analyzed and discarded. Nothing stored, logged, or used to train models.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2026/03/soc2-1.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									SOC 2 Type II certified								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Independently audited security controld, not just a self-attestation.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2025/11/ssl-encrypted.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									On-premises deployment								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Deploy entirely within your own infrastructure, with no external data exposure.</p>
+								</div>
+							
+													</div>
+									</div>
+							<div class="ds-block-advantages__tile">
+											<figure class="ds-block-advantages__tile-icon">
+							<img loading="lazy" decoding="async" width="72" height="72" src="https://www.qodo.ai/wp-content/uploads/2025/11/SOC2-certification.svg" class="attachment-full size-full" alt="" />						</figure>
+																<div class="ds-block-advantages__tile-content">
+															<h3 class="ds-block-advantages__tile-heading h6">
+									Single-tenant deployment								</h3>
+							
+															<div class="ds-block-advantages__tile-description">
+									<p>Your own dedicated instance – no shared infrastructure, no shared risk.</p>
+								</div>
+							
+													</div>
+									</div>
+					</div>
+	
+	</section>
+
+
+<section class="block-acf ds-block ds-block-faq -mb-default -wrapper -type-default" >
+
+	<header class="ds-section-header -align-left">
+					<span class="ds-section-header__label -caption">
+				Q&amp;A			</span>
+		
+					<div class="ds-section-header__content -body-large">
+				<h2>Questions?</h2>
+			</div>
+			</header>
+			<div class="ds-block-faq__faqs">
+								<div class="ds-block-faq__item" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-0"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-0"
+							aria-expanded="false"
+						>
+						What is Qodo?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-0"
+							aria-labelledby="ds-block-faq-button-0"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Qodo is an <a href="https://www.qodo.ai/academy/ai-code-review/">AI code review</a> and governance platform for engineering teams shipping at the speed AI writes code. Qodo reviews every pull request with full, cross-repo codebase context, enforces your coding standards, and governs the AI tools and agents shaping how code gets built.</p>
+<p>Qodo runs across two main surfaces, with the same context and review standards in each:</p>
+<ul>
+<li style="font-weight: 400"><b>IDE</b> — real-time code validation while you code</li>
+<li style="font-weight: 400"><b>Git</b> — high-signal pull request reviews</li>
+</ul>
+<p>See the <a href="https://www.qodo.ai/ai-code-review-platform/">platform overview</a> for the full picture.</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-1"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-1"
+							aria-expanded="false"
+						>
+						Why is code review breaking down as AI writes more code?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-1"
+							aria-labelledby="ds-block-faq-button-1"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Code review was designed for one developer, one PR, one senior reviewer who held the codebase in their head. AI breaks that model — <a href="https://www.qodo.ai/academy/ai-generated-code-in-enterprise/">coding agents generate and refactor faster than humans can review</a>, while standards still live in wikis and senior engineers&#8217; heads.</p>
+<p>Process and discipline can&#8217;t scale to AI-speed volume. What&#8217;s needed is a governance harness — quality, standards, and AI tool oversight treated as infrastructure rather than process. Read the full thinking in <a href="https://www.qodo.ai/blog/ai-gave-teams-velocity-the-governance-harness-comes-next/">AI Gave Teams Velocity. The Governance Harness Comes Next.</a></p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-2"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-2"
+							aria-expanded="false"
+						>
+						What makes Qodo different from other AI code review tools?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-2"
+							aria-labelledby="ds-block-faq-button-2"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Qodo is built on three things that make a difference between a useful <a href="https://www.qodo.ai/academy/ai-code-review-tools-comparison-and-benchmarks/">code review tool</a> and a noisy one:</p>
+<ul>
+<li style="font-weight: 400"><b>Precision over volume</b> — specialized agents reason over your full codebase, not just the diff, which is how Qodo holds the <a href="https://www.qodo.ai/ai-code-review-benchmark/">highest F1-score on the AI code review benchmark</a>.</li>
+<li style="font-weight: 400"><b>Depth and speed together</b> — full-context review without slowing the PR down.</li>
+<li style="font-weight: 400"><b>Standards that stay current and governed in one place </b>– <a href="https://www.qodo.ai/qodo-rules/">Rules</a> mined from your PR history, skills surfaced from across your repos, every one enforced on each change and refined by what reviewers accept or reject.</li>
+</ul>
+<p>The result is fewer false positives, faster reviews, and a quality bar that holds as your team scales.</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-3"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-3"
+							aria-expanded="false"
+						>
+						How do you keep coding standards consistent across hundreds of repos and teams?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-3"
+							aria-labelledby="ds-block-faq-button-3"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p><span style="font-weight: 400">Wikis go stale. Linters miss intent. Manual rule writing produces dead documents within a quarter. Standards stay consistent only when they&#8217;re captured from how your team actually reviews, enforced before merge, and updated as the codebase evolves.</span></p>
+<p><span style="font-weight: 400">Qodo&#8217;s</span><a href="https://www.qodo.ai/qodo-rules/"> <span style="font-weight: 400">review standards system</span></a><span style="font-weight: 400"> builds this loop into review.</span><a href="https://docs.qodo.ai/governance/rule-enforcement/rule-miner" rel="nofollow" > <span style="font-weight: 400">Rules Miner</span></a><span style="font-weight: 400"> turns recurring PR comments and reviewer decisions into enforceable rules, automatically, while skills discovered across your repos become first-class standards you can govern the same way. Rules and skills run on every PR, decay when they stop being useful, and stay measurable through a central portal.</span></p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-4"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-4"
+							aria-expanded="false"
+						>
+						How do you catch breaking changes that span multiple repositories?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-4"
+							aria-labelledby="ds-block-faq-button-4"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Most review tools see one repo at a time, so breaking changes in shared SDKs, APIs, or schemas only surface in production — where they&#8217;re most expensive to fix.</p>
+<p>Qodo&#8217;s<a href="https://docs.qodo.ai/governance/cross-repo-code-review" rel="nofollow" > Cross Repo Review</a> reasons across the repos that depend on each other, mapped out visually in the portal so the dependencies are clear at a glance. When a signature change in a shared library could break downstream consumers, Qodo flags it on the PR with a direct link to the affected line, before merge. It also reasons across Git providers, so a service in GitHub and its consumer in GitLab stay connected in the same review.</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item ds-block-faq__item--hide" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-5"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-5"
+							aria-expanded="false"
+						>
+						How do you cut PR review time without sacrificing quality?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-5"
+							aria-labelledby="ds-block-faq-button-5"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Review time drops when the first pass — summarizing the change, checking dependencies, flagging real bugs — happens automatically before a human opens the diff. What&#8217;s left is the high-judgment work where reviewer expertise actually matters.</p>
+<p>Qodo&#8217;s review agents do this on every PR. Specialized agents handle critical issues, duplicated logic, ticket compliance, and rule violations, each delivering findings with severity and structured remediation. Teams report ~1 hour saved per PR and 90% of initial review handled before a human steps in. For the ROI framework, see Academy&#8217;s <a href="https://www.qodo.ai/academy/how-to-build-business-case-for-ai-code-review/">Business Case for AI Code Review</a>.</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item ds-block-faq__item--hide" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-6"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-6"
+							aria-expanded="false"
+						>
+						How do you safely review AI-generated code from Copilot, Cursor, and other agents?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-6"
+							aria-labelledby="ds-block-faq-button-6"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>AI-generated code fails in specific ways — logic errors, duplicated logic, hallucinated APIs, standards drift — that aren&#8217;t caught by linters or generic review. Shipping it safely at scale requires a dedicated verification layer that applies your standards regardless of who wrote the code.</p>
+<p>Qodo is built for this. Review agents catch the failure patterns specific to AI-generated code, and <a href="https://docs.qodo.ai/governance/manage-skills-across-repositories" rel="nofollow" >Skill Review Standards</a> govern the AI tools themselves — every skill file shaping AI behavior gets analytics, one-click enable/disable, and attribution on every finding. AI tools become a managed program, not invisible config</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item ds-block-faq__item--hide" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-7"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-7"
+							aria-expanded="false"
+						>
+						Does Qodo work with our Git providers, IDEs, and languages?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-7"
+							aria-labelledby="ds-block-faq-button-7"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Yes — and unlike most review tools, Qodo applies the <b>same Context Engine, the same rules, and the same review agents across every surface</b>. A team using JetBrains on the IDE side and GitHub on the Git side gets the same standards enforced uniformly. With Cross Repo Review, Qodo even reasons across providers — a service in GitHub and its consumer in GitLab stay connected in the same review.</p>
+<p>Setup takes minutes per repo, no platform migration required.</p>
+<p><b>Git providers</b></p>
+<ul>
+<li style="font-weight: 400">GitHub (cloud and Enterprise Server), GitLab (cloud and self-managed), Bitbucket (Cloud and Data Center), Azure DevOps. Gerrit on Enterprise.</li>
+</ul>
+<p><b>IDEs</b></p>
+<ul>
+<li style="font-weight: 400">VS Code, JetBrains (IntelliJ, PyCharm, WebStorm, GoLand, CLion, RubyMine, PhpStorm), Visual Studio.</li>
+</ul>
+<p><b>Languages</b></p>
+<ul>
+<li style="font-weight: 400">All major languages — Python, Java, JavaScript, TypeScript, Go, C#, .NET, Swift, Kotlin, Ruby, PHP, C++. Full list on the<a href="https://www.qodo.ai/programming-language-support/"> language support page</a>.</li>
+</ul>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item ds-block-faq__item--hide" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-8"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-8"
+							aria-expanded="false"
+						>
+						How does Qodo&#039;s pricing and credit system work?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-8"
+							aria-labelledby="ds-block-faq-button-8"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Qodo&#8217;s Pro Team plan is credit-based at <b>$0.012 per credit, pooled across the team</b>. You buy a credit pack, run reviews against the pool, switch packs anytime, no annual commitment.</p>
+<ul>
+<li style="font-weight: 400"><b>2,500 credits</b> — ~18 reviews/month</li>
+<li style="font-weight: 400"><b>5,000 credits</b> — ~36 reviews/month</li>
+<li style="font-weight: 400"><b>20,000 credits</b> — ~144 reviews/month</li>
+</ul>
+<p>The <b>14-day free trial</b> includes unlimited reviews and credits, no credit card required.</p>
+<p><a href="https://www.qodo.ai/solutions/enterprise/">Enterprise plans</a> add SSO/SAML, BYOK, single-tenant or on-prem deployment, and priority support. Details on the <a href="https://www.qodo.ai/pricing/">pricing page</a>.</p>
+							</div>
+						</div>
+					</div>
+									<div class="ds-block-faq__item ds-block-faq__item--hide" data-item>
+						<button
+							class="ds-block-faq__title"
+							id="ds-block-faq-button-9"
+							type="button"
+							data-button
+							aria-controls="ds-block-faq-panel-9"
+							aria-expanded="false"
+						>
+						How does Qodo meet enterprise security and compliance requirements?						</button>
+						<div
+							class="ds-block-faq__answer"
+							id="ds-block-faq-panel-9"
+							aria-labelledby="ds-block-faq-button-9"
+							inert
+							data-panel
+						>
+							<div class="ds-block-faq__answer-container">
+							<p>Buyers evaluating AI code review tools come back to four questions: is our code retained, who audited the controls, can we control the model, and can we deploy in our own infrastructure. Qodo answers all four:</p>
+<ul>
+<li style="font-weight: 400"><b>Zero data retention</b> — code is analyzed and discarded. Nothing stored, logged, or used to train models.</li>
+<li style="font-weight: 400"><b>SOC 2 Type II</b> certified through independent audit.</li>
+<li style="font-weight: 400"><b>BYOK</b> — bring your own OpenAI, Anthropic, Azure OpenAI, or self-hosted models.</li>
+<li style="font-weight: 400"><b>Flexible deployment</b> — single-tenant SaaS, on-prem, or air-gapped.</li>
+</ul>
+<p>Full details in the <a href="https://trust.qodo.ai/" rel="nofollow" >Qodo Trust Center</a>.</p>
+							</div>
+						</div>
+					</div>
+											<div class="ds-block-faq__button wp-block-button is-style-primary -with-arrow">
+					<button class="ds-block-faq__load-more-button wp-block-button__link" aria-label="See all questions">See all questions</button>
+				</div>
+					</div>
+				<script type="application/ld+json">
+		{
+    "@context": "https:\/\/schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is Qodo?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Qodo is an AI code review and governance platform for engineering teams shipping at the speed AI writes code. Qodo reviews every pull request with full, cross-repo codebase context, enforces your coding standards, and governs the AI tools and agents shaping how code gets built.\nQodo runs across two main surfaces, with the same context and review standards in each:\n\nIDE — real-time code validation while you code\nGit — high-signal pull request reviews\n\nSee the platform overview for the full picture."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why is code review breaking down as AI writes more code?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Code review was designed for one developer, one PR, one senior reviewer who held the codebase in their head. AI breaks that model — coding agents generate and refactor faster than humans can review, while standards still live in wikis and senior engineers&#8217; heads.\nProcess and discipline can&#8217;t scale to AI-speed volume. What&#8217;s needed is a governance harness — quality, standards, and AI tool oversight treated as infrastructure rather than process. Read the full thinking in AI Gave Teams Velocity. The Governance Harness Comes Next."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What makes Qodo different from other AI code review tools?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Qodo is built on three things that make a difference between a useful code review tool and a noisy one:\n\nPrecision over volume — specialized agents reason over your full codebase, not just the diff, which is how Qodo holds the highest F1-score on the AI code review benchmark.\nDepth and speed together — full-context review without slowing the PR down.\nStandards that stay current and governed in one place – Rules mined from your PR history, skills surfaced from across your repos, every one enforced on each change and refined by what reviewers accept or reject.\n\nThe result is fewer false positives, faster reviews, and a quality bar that holds as your team scales."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you keep coding standards consistent across hundreds of repos and teams?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wikis go stale. Linters miss intent. Manual rule writing produces dead documents within a quarter. Standards stay consistent only when they&#8217;re captured from how your team actually reviews, enforced before merge, and updated as the codebase evolves.\nQodo&#8217;s review standards system builds this loop into review. Rules Miner turns recurring PR comments and reviewer decisions into enforceable rules, automatically, while skills discovered across your repos become first-class standards you can govern the same way. Rules and skills run on every PR, decay when they stop being useful, and stay measurable through a central portal."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you catch breaking changes that span multiple repositories?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most review tools see one repo at a time, so breaking changes in shared SDKs, APIs, or schemas only surface in production — where they&#8217;re most expensive to fix.\nQodo&#8217;s Cross Repo Review reasons across the repos that depend on each other, mapped out visually in the portal so the dependencies are clear at a glance. When a signature change in a shared library could break downstream consumers, Qodo flags it on the PR with a direct link to the affected line, before merge. It also reasons across Git providers, so a service in GitHub and its consumer in GitLab stay connected in the same review."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you cut PR review time without sacrificing quality?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Review time drops when the first pass — summarizing the change, checking dependencies, flagging real bugs — happens automatically before a human opens the diff. What&#8217;s left is the high-judgment work where reviewer expertise actually matters.\nQodo&#8217;s review agents do this on every PR. Specialized agents handle critical issues, duplicated logic, ticket compliance, and rule violations, each delivering findings with severity and structured remediation. Teams report ~1 hour saved per PR and 90% of initial review handled before a human steps in. For the ROI framework, see Academy&#8217;s Business Case for AI Code Review."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you safely review AI-generated code from Copilot, Cursor, and other agents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI-generated code fails in specific ways — logic errors, duplicated logic, hallucinated APIs, standards drift — that aren&#8217;t caught by linters or generic review. Shipping it safely at scale requires a dedicated verification layer that applies your standards regardless of who wrote the code.\nQodo is built for this. Review agents catch the failure patterns specific to AI-generated code, and Skill Review Standards govern the AI tools themselves — every skill file shaping AI behavior gets analytics, one-click enable\/disable, and attribution on every finding. AI tools become a managed program, not invisible config"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Qodo work with our Git providers, IDEs, and languages?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — and unlike most review tools, Qodo applies the same Context Engine, the same rules, and the same review agents across every surface. A team using JetBrains on the IDE side and GitHub on the Git side gets the same standards enforced uniformly. With Cross Repo Review, Qodo even reasons across providers — a service in GitHub and its consumer in GitLab stay connected in the same review.\nSetup takes minutes per repo, no platform migration required.\nGit providers\n\nGitHub (cloud and Enterprise Server), GitLab (cloud and self-managed), Bitbucket (Cloud and Data Center), Azure DevOps. Gerrit on Enterprise.\n\nIDEs\n\nVS Code, JetBrains (IntelliJ, PyCharm, WebStorm, GoLand, CLion, RubyMine, PhpStorm), Visual Studio.\n\nLanguages\n\nAll major languages — Python, Java, JavaScript, TypeScript, Go, C#, .NET, Swift, Kotlin, Ruby, PHP, C++. Full list on the language support page."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Qodo's pricing and credit system work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Qodo&#8217;s Pro Team plan is credit-based at $0.012 per credit, pooled across the team. You buy a credit pack, run reviews against the pool, switch packs anytime, no annual commitment.\n\n2,500 credits — ~18 reviews\/month\n5,000 credits — ~36 reviews\/month\n20,000 credits — ~144 reviews\/month\n\nThe 14-day free trial includes unlimited reviews and credits, no credit card required.\nEnterprise plans add SSO\/SAML, BYOK, single-tenant or on-prem deployment, and priority support. Details on the pricing page."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Qodo meet enterprise security and compliance requirements?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Buyers evaluating AI code review tools come back to four questions: is our code retained, who audited the controls, can we control the model, and can we deploy in our own infrastructure. Qodo answers all four:\n\nZero data retention — code is analyzed and discarded. Nothing stored, logged, or used to train models.\nSOC 2 Type II certified through independent audit.\nBYOK — bring your own OpenAI, Anthropic, Azure OpenAI, or self-hosted models.\nFlexible deployment — single-tenant SaaS, on-prem, or air-gapped.\n\nFull details in the Qodo Trust Center."
+            }
+        }
+    ]
+}		</script>
+		</section>
+</div>
+</main>
+
+
+<footer class="ds-block-footer ds-block -wrapper" >
+	<div  class="ds-block-footer__container">
+		<div class="ds-block-footer__top">
+							<div class="ds-block-footer__content">
+											<a href="https://www.qodo.ai/" class="ds-block-footer__logo" aria-label="Logo">
+							<img width="58" height="49" src="https://www.qodo.ai/wp-content/uploads/2025/11/logo-footer-1.svg" class="attachment-footer-logo size-footer-logo" alt="" decoding="async" loading="lazy" />						</a>
+																<p class="ds-block-footer__text">
+							Qodo is an <a href="https://www.qodo.ai/">AI code review</a> platform that brings automated, context-aware review into your IDE, pull requests, CLI, and Git workflows. It&#8217;s built for complex codebases, with context across multi-repos, to surface critical issues early, enforce standards, shorten feedback cycles, and ship better code faster. In Qodo, AI code review, code quality, and SDLC governance come together in one platform for teams that care as much about <em>how code is reviewed</em> as how fast it ships.						</p>
+																<ul class="ds-block-footer__socials">
+															<li class="ds-block-footer__social">
+									<a href="https://github.com/Codium-ai" target="_blank" class="ds-block-footer__social-link" data-title="GitHub" aria-label="GitHub" rel="nofollow">
+										<img width="20" height="21" src="https://www.qodo.ai/wp-content/uploads/2025/01/github-1.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />									</a>
+								</li>
+															<li class="ds-block-footer__social">
+									<a href="https://www.youtube.com/@QodoAI" target="_blank" class="ds-block-footer__social-link" data-title="YouTube" aria-label="YouTube" rel="nofollow">
+										<img width="27" height="19" src="https://www.qodo.ai/wp-content/uploads/2025/01/youtube-1.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />									</a>
+								</li>
+															<li class="ds-block-footer__social">
+									<a href="https://www.linkedin.com/company/qodoai" target="_blank" class="ds-block-footer__social-link" data-title="LinkedIn" aria-label="LinkedIn" rel="nofollow">
+										<img width="20" height="21" src="https://www.qodo.ai/wp-content/uploads/2025/01/linkedin-1.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />									</a>
+								</li>
+															<li class="ds-block-footer__social">
+									<a href="https://x.com/QodoAI" target="_blank" class="ds-block-footer__social-link" data-title="X" aria-label="X" rel="nofollow">
+										<img width="20" height="20" src="https://www.qodo.ai/wp-content/uploads/2025/01/x-1.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />									</a>
+								</li>
+													</ul>
+									</div>
+			
+			<div class="ds-block-footer__menus">
+				<div class="ds-block-footer__menu">
+					<p class="ds-block-footer__menu-title">Products</p>
+					<ul id="menu-footer-products" class="ds-block-footer__menu-list"><li id="menu-item-17094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17094"><a href="https://www.qodo.ai/features/qodo-git/"><span class="menu-item-title">Git Integration</span></a></li>
+<li id="menu-item-18812" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18812"><a target="_blank" rel="nofollow" href="https://docs.qodo.ai/whats-new"><span class="menu-item-title">Product updates</span></a></li>
+<li id="menu-item-13202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13202"><a href="https://www.qodo.ai/report-issues/"><span class="menu-item-title">Report Issues</span></a></li>
+</ul>				</div>
+
+				<div class="ds-block-footer__menu">
+					<p class="ds-block-footer__menu-title">Resources</p>
+					<ul id="menu-footer-resources" class="ds-block-footer__menu-list"><li id="menu-item-13203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13203"><a href="https://www.qodo.ai/blog/"><span class="menu-item-title">Blog</span></a></li>
+<li id="menu-item-13204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13204"><a href="https://docs.qodo.ai/qodo-documentation"><span class="menu-item-title">Docs</span></a></li>
+<li id="menu-item-13205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13205"><a href="https://www.qodo.ai/events/"><span class="menu-item-title">Events</span></a></li>
+<li id="menu-item-13207" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13207"><a href="https://www.qodo.ai/media-kit/"><span class="menu-item-title">Media Kit</span></a></li>
+<li id="menu-item-13208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13208"><a href="https://trust.qodo.ai/"><span class="menu-item-title">Qodo Trust Center</span></a></li>
+</ul>				</div>
+
+				<div class="ds-block-footer__menu">
+					<p class="ds-block-footer__menu-title">Learn</p>
+					<ul id="menu-footer-learn" class="ds-block-footer__menu-list"><li id="menu-item-20049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20049"><a href="https://www.qodo.ai/academy/"><span class="menu-item-title">Code Review Academy</span></a></li>
+<li id="menu-item-13190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13190"><a href="/blog/best-ai-coding-assistant-tools/"><span class="menu-item-title">AI For Coding</span></a></li>
+<li id="menu-item-20051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20051"><a href="https://www.qodo.ai/qodo-google-cloud/"><span class="menu-item-title">Qodo &amp; Google Cloud</span></a></li>
+<li id="menu-item-20052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20052"><a href="https://www.qodo.ai/qodo-github-copilot/"><span class="menu-item-title">Qodo &#038; Copilot</span></a></li>
+<li id="menu-item-20053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20053"><a href="https://www.qodo.ai/qodo-windsurf/"><span class="menu-item-title">Qodo &#038; Windsurf</span></a></li>
+<li id="menu-item-20054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20054"><a href="https://www.qodo.ai/qodo-amazon-q/"><span class="menu-item-title">Qodo &#038; Amazon Q</span></a></li>
+<li id="menu-item-20055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20055"><a href="https://www.qodo.ai/qodo-tabnine/"><span class="menu-item-title">Qodo &#038; Tabnine</span></a></li>
+<li id="menu-item-20056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20056"><a href="https://www.qodo.ai/qodo-cursor/"><span class="menu-item-title">Qodo &#038; Cursor</span></a></li>
+<li id="menu-item-13196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13196"><a href="https://www.qodo.ai/glossary/"><span class="menu-item-title">Glossary</span></a></li>
+</ul>				</div>
+
+				<div class="ds-block-footer__menu">
+					<p class="ds-block-footer__menu-title">About</p>
+					<ul id="menu-footer-about" class="ds-block-footer__menu-list"><li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="https://www.qodo.ai/pricing/"><span class="menu-item-title">Pricing</span></a></li>
+<li id="menu-item-79" class="hash-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-79"><a href="https://www.qodo.ai/about/#our-mission"><span class="menu-item-title">Our Mission</span></a></li>
+<li id="menu-item-80" class="hash-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="https://www.qodo.ai/about/#about-team"><span class="menu-item-title">Meet The Team</span></a></li>
+<li id="menu-item-13183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13183"><a href="https://www.qodo.ai/careers/"><span class="menu-item-title">Careers</span></a></li>
+<li id="menu-item-13184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13184"><a href="https://www.qodo.ai/about/#backed-by"><span class="menu-item-title">Backed By</span></a></li>
+<li id="menu-item-13185" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13185"><a href="https://www.qodo.ai/blog/qodo-security-our-commitment-to-data-privacy-and-security/"><span class="menu-item-title">Data Privacy And Security</span></a></li>
+</ul>				</div>
+			</div>
+		</div>
+		<div class="ds-block-footer__bottom">
+			<div class="ds-block-footer__bottom-logos">
+									<div class="ds-block-footer__languages">
+													<p class="ds-block-footer__languages-title ds-block-footer__icons-title">We support all major programming languages</p>
+												<div class="ds-block-footer__languages-list">
+																								<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="Python (VS Code &amp; JetBrains)" aria-label="Python (VS Code &amp; JetBrains)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/python.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="TypeScript (VS Code &amp; JetBrains)" aria-label="TypeScript (VS Code &amp; JetBrains)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/typescript.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="JavaScript (VS Code &amp; JetBrains)" aria-label="JavaScript (VS Code &amp; JetBrains)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="32" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/js.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="Java (VS Code &amp; JetBrains)" aria-label="Java (VS Code &amp; JetBrains)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="25" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/java.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="Kotlin (VS Code)" aria-label="Kotlin (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="28" height="28" src="https://www.qodo.ai/wp-content/uploads/2025/01/kotlin.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="Go Programming (VS Code)" aria-label="Go Programming (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="32" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/06/go.webp" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="PHP (VS Code)" aria-label="PHP (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/php.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="C++ (VS Code)" aria-label="C++ (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="32" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/c-1.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="Swift (VS Code)" aria-label="Swift (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/Swift.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																																	<a href="https://www.qodo.ai/programming-language-support/" target="_self" class="ds-block-footer__languages-item" data-title="C# (VS Code)" aria-label="C# (VS Code)">
+																											<figure class="ds-block-footer__languages-item">
+											<img width="30" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/c.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																										</a>
+																						</div>
+					</div>
+													<div class="ds-block-footer__available">
+													<p class="ds-block-footer__available-title ds-block-footer__icons-title">Available now on</p>
+												<div class="ds-block-footer__available-list">
+																																		<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/vscode.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/jet-brains.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/WebStorm.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/inteliij.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/clion.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="33" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/pc.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																																																				<figure class="ds-block-footer__available-item">
+											<img width="34" height="32" src="https://www.qodo.ai/wp-content/uploads/2025/01/go.svg" class="attachment-footer-icons size-footer-icons" alt="" loading="lazy" />										</figure>
+																															</div>
+					</div>
+													<div class="ds-block-footer__partners">
+																					<figure class="ds-block-footer__partner-logo">
+									<img width="50" height="48" src="https://www.qodo.ai/wp-content/uploads/2025/01/aws.svg" class="attachment-footer-partners size-footer-partners" alt="" loading="lazy" />								</figure>
+																													<figure class="ds-block-footer__partner-logo">
+									<img width="50" height="48" src="https://www.qodo.ai/wp-content/uploads/2025/06/delottie.webp" class="attachment-footer-partners size-footer-partners" alt="" loading="lazy" />								</figure>
+																													<figure class="ds-block-footer__partner-logo">
+									<img width="92" height="40" src="https://www.qodo.ai/wp-content/uploads/2025/06/microsoft.webp" class="attachment-footer-partners size-footer-partners" alt="" loading="lazy" />								</figure>
+																													<figure class="ds-block-footer__partner-logo">
+									<img width="104" height="40" src="https://www.qodo.ai/wp-content/uploads/2025/06/nvidia.webp" class="attachment-footer-partners size-footer-partners" alt="" loading="lazy" />								</figure>
+																													<figure class="ds-block-footer__partner-logo">
+									<img width="44" height="40" src="https://www.qodo.ai/wp-content/uploads/2025/06/aicpa.webp" class="attachment-footer-partners size-footer-partners" alt="" loading="lazy" />								</figure>
+																			</div>
+							</div>
+			<div class="ds-block-footer__bottom-content">
+									<p class="ds-block-footer__copyright">
+											@ 2026 Qodo. All Rights Reserved.					</p>
+								<div class="ds-block-footer__menu-bottom">
+					<ul id="menu-footer-secondary" class="ds-block-footer__menu-bottom-list"><li id="menu-item-10698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10698"><a href="https://www.qodo.ai/terms/"><span class="menu-item-title">Terms of Use</span></a></li>
+<li id="menu-item-10697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10697"><a href="https://www.qodo.ai/privacy-policy/"><span class="menu-item-title">Privacy Policy</span></a></li>
+<li id="menu-item-10696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10696"><a href="https://www.qodo.ai/data-processing-addendum/"><span class="menu-item-title">Data Processing Addendum</span></a></li>
+</ul>				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="ds-block-footer__event-bar">
+			</div> -->
+</footer>
+
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/qodo-theme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/rocketlazyloadscript"> _linkedin_partner_id = "4646812"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/rocketlazyloadscript"> (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk); </script><noscript><img height="1" width="1" style="display:none;" src="https://px.ads.linkedin.com/collect/?pid=4646812&fmt=gif" /></noscript><script id="wpil-frontend-script-js-extra">
+var wpilFrontend = {"ajaxUrl":"/wp-admin/admin-ajax.php","postId":"17029","postType":"post","openInternalInNewTab":"0","openExternalInNewTab":"0","disableClicks":"0","openLinksWithJS":"0","trackAllElementClicks":"0","clicksI18n":{"imageNoText":"Image in link: No Text","imageText":"Image Title: ","noText":"No Anchor Text Found"}};
+//# sourceURL=wpil-frontend-script-js-extra
+</script>
+<script id="wpil-frontend-script-js" src="https://www.qodo.ai/wp-content/plugins/link-whisper-premium/js/frontend.min.js?ver=1789468493" data-rocket-defer defer></script>
+<script data-minify="1" id="storylane-js" src="https://www.qodo.ai/wp-content/cache/min/1/js/v2/storylane.js?ver=1789740243" data-rocket-defer defer></script>
+<script id="qodo-scripts-js-extra">
+var qodoData = {"ajax_url":"https://www.qodo.ai/wp-admin/admin-ajax.php","ajax_url_app_qodo_user_data":"https://www.qodo.ai/wp-content/themes/qodo-theme/inc/hooks/get-app-qodo-user-info-ajax-hook.php"};
+//# sourceURL=qodo-scripts-js-extra
+</script>
+<script data-minify="1" id="qodo-scripts-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/themes/qodo-theme/assets/build/js/index.js?ver=1789740230" data-rocket-defer defer></script>
+<script data-minify="1" id="page-links-to-js" src="https://www.qodo.ai/wp-content/cache/min/1/wp-content/plugins/page-links-to/dist/new-tab.js?ver=1789740230" data-rocket-defer defer></script>
+<script>window.lazyLoadOptions={elements_selector:"iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.qodo.ai/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360">',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3d26c280b040f8c',t:'MTc4OTc1NjIzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

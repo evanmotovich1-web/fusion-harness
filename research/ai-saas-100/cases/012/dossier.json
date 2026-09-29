@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "012",
+    "name": "Replit",
+    "canonical_url": "https://replit.com/",
+    "category": "C09",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-b8dc840fe34230025b1f"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "replit.com",
+    "selection_position": 12,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Founders and operators building small apps from natural-language requirements",
+    "job": "Generate a runnable local web app from a concrete specification and pass functional tests",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "files": "relative-path to source mapping",
+      "run_instructions": "string",
+      "test_results": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version"
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Generate a runnable local web app from a concrete specification and pass functional tests",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Core displays $20 and $18/month billed annually, including $20 toward model usage. Pro displays $100 and $90/month billed annually. Usage charging remains distinct from subscription cost.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Founders and operators building small apps from natural-language requirements",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "bolt.new",
+        "name": "Bolt",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Founders and operators building small apps from natural-language requirements.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Core displays $20 and $18/month billed annually, including $20 toward model usage. Pro displays $100 and $90/month billed annually. Usage charging remains distinct from subscription cost.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r012-d66542f783c611971c26"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r012-d66542f783c611971c26",
+          "locator": "text characters 674:2822",
+          "excerpt": "Dashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nLog in\nCreate account\nPricing\nChoose the best plan for you.\nMonthly\nYearly\nUp to 10% off\nCore\n$20\n$18 / month, billed annually\nAI integrations\nUp to 30 hours of chat on Free Mode\nUp to 60 projects on Free Mode\n$20 towards most powerful models\nPlan mode\nUnlimited workspaces\nTry now\nPro\n$100\n$90 / month, billed annually\n10 parallel agents\nPremium Support\nEverything in Core plus:\nEven more Free Mode usage to chat and create\n$100 towards most powerful models\nUp to 15 collaborators\nInvite up to 50 viewers\nDatabase rollback up to 28 days\nUpgrade to Pro\nEnterprise\nCustom\nEnterprise-grade security and control\nCustom seat limits\nSSO/SAML\nAdvanced privacy controls\nSingle-tenant environments\nStatic outbound IPs\nand much more\nContact sales\nGet started\n*Prices are subject to tax depending on your location. Replit Agent is powered by large language models. While it can produce powerful results, its behavior is probabilistic - meaning it may occasionally make mistakes.\nFrequently asked questions\nWhat are all the features included in these plans?\nHow do credits work?\nWhat happens when I run out of credits?\nWhat comes with my subscription?\nWhat plan is best for me?\nWhat is Effort-Based Pricing (pay-as-you-go)?\nHow can I control what I spend on Replit?\nHow can I see how much I'm spending?\nDo you offer invoicing instead of credit card payments?\nDo you offer annual plans at a discount?\nStill have questions?\nYou can see more details in our\nBilling docs\n. If you're interested in the Enterprise plan,\ncontact us\n. For support, sign in to Replit and use the ? on the top right corner of the page for help.\nCA\n73°F\nMade in sunny California.\nAll rights reserved. Copyright © 2026 Replit, Inc.\nHandy Links\nResources\nHelp\nHow to guides\nStatus\nCertifications\nPartnerships\nLegal\nTerms of Service\nPro Agreement\nEnterprise Agreement\nPrivacy\nSubprocessors\nDPA\nReport Abuse\nCompany\nAbout\nNews\nCareers\nBrand Center\nContact Us\nSocial\nX / Twitter\nYouTube\nLinkedin\nInstagram\nFacebook\nTikTok"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r012-d66542f783c611971c26": "2026-09-20T21:35:26.333636+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r012-0bc3718b3b246df0d32b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r012-0bc3718b3b246df0d32b",
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r012-0bc3718b3b246df0d32b": "2026-09-20T21:35:26.390724+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Bolt advertises: Build and scale high-performing websites & apps using your words. Join millions and start building today.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-34ea67d75a31b4177a53"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-34ea67d75a31b4177a53",
+          "locator": "metadata[0].description",
+          "excerpt": "Build and scale high-performing websites & apps using your words. Join millions and start building today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-34ea67d75a31b4177a53": "2026-09-20T21:00:55.713426+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Bolt. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f",
+        "web-34ea67d75a31b4177a53"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "evidence_id": "web-34ea67d75a31b4177a53",
+          "locator": "metadata[0].description",
+          "excerpt": "Build and scale high-performing websites & apps using your words. Join millions and start building today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00",
+          "web-34ea67d75a31b4177a53": "2026-09-20T21:00:55.713426+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Integrated runtime, deployment, databases, collaboration, and connector reliability may remain valuable beyond generating source files.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f",
+        "r012-0bc3718b3b246df0d32b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "evidence_id": "web-b8dc840fe34230025b1f",
+          "locator": "metadata[1].og:description",
+          "excerpt": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required."
+        },
+        {
+          "evidence_id": "r012-0bc3718b3b246df0d32b",
+          "locator": "metadata[0].description",
+          "excerpt": "Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-b8dc840fe34230025b1f": "2026-09-20T21:00:55.594077+00:00",
+          "r012-0bc3718b3b246df0d32b": "2026-09-20T21:35:26.390724+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/012/tests/specification.json",
+    "sha256": "2ca3433519d24f5d462e618111e4467363ae9bd6b83affc6ab314d3b29634cb9",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review"
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review"
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:55.594077+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-b8dc840fe34230025b1f",
+        "r012-0bc3718b3b246df0d32b",
+        "r012-d66542f783c611971c26",
+        "web-34ea67d75a31b4177a53"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

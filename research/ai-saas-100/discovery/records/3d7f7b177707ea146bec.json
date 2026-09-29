@@ -1,0 +1,73 @@
+{
+  "evidence_id": "web-3d7f7b177707ea146bec",
+  "source_url": "https://www.decktopus.com/",
+  "retrieved_at": "2026-09-20T21:00:56.095582+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.decktopus.com/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/3d7f7b177707ea146bec.html",
+  "capture_sha256": "d28f9b034b3dc57149977b801512d6f6d059bf6a464085e3ef87e24e58bbf14c",
+  "bytes_saved": 262144,
+  "title": "Decktopus AI | Make presentations with AI | AI Presentation Assistant",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Decktopus is an AI presentation maker, that will create amazing presentations in seconds. You only need to type the presentation title and your presentation is ready."
+    },
+    {
+      "key": "og:title",
+      "value": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+    },
+    {
+      "key": "og:description",
+      "value": "Decktopus is an AI presentation maker, that will create amazing presentations in seconds. You only need to type the presentation title and your presentation is ready."
+    }
+  ],
+  "text": "Decktopus AI | Make presentations with AI | AI Presentation Assistant",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/8Ctw6L5oMPhLxSVXKmZUCcbzcg.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/8Ctw6L5oMPhLxSVXKmZUCcbzcg.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/8Ctw6L5oMPhLxSVXKmZUCcbzcg.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.decktopus.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.decktopus.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.decktopus.com/pt",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.decktopus.com/ar",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.decktopus.com/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    }
+  ],
+  "elapsed_seconds": 0.2293
+}

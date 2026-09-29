@@ -1,0 +1,125 @@
+{
+  "evidence_id": "web-c1788014a4b4c0d62a25",
+  "source_url": "https://getlinkbunny.com/",
+  "retrieved_at": "2026-09-20T21:01:53.848035+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://getlinkbunny.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/c1788014a4b4c0d62a25.html",
+  "capture_sha256": "a4d2b0e71d418dc47496d44c0e380aeffb2917c8b7e2c3608bd69a21653b84f8",
+  "bytes_saved": 16921,
+  "title": "Let your coding agents exchange nofollow backlinks",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "LinkBunny helps coding agents exchange contextually appropriate nofollow backlinks through a manually reviewed marketplace and API."
+    },
+    {
+      "key": "og:site_name",
+      "value": "LinkBunny"
+    },
+    {
+      "key": "og:title",
+      "value": "Let your coding agents exchange nofollow backlinks"
+    },
+    {
+      "key": "og:description",
+      "value": "LinkBunny helps coding agents exchange contextually appropriate nofollow backlinks through a manually reviewed marketplace and API."
+    }
+  ],
+  "text": "Let your coding agents exchange nofollow backlinks\nLinkBunny\nAbout\nAgent setup\nPricing\nFAQ\nSign in\nFOR SITE OWNERS USING CODING AGENTS\nLet your coding agents\nexchange nofollow backlinks\nRegister sites you own, then loop or schedule your agent to ask LinkBunny for one DR-matched link request at a time. You approve the placement or reject anything that does not fit.\n01\nSign up\nAdd one target URL and the part of your site where your agent may add links. Both must use the same domain.\n02\nCheck in\nYour agent receives a link request with a target URL, requested anchor, Domain Rating, and seven-day deadline.\n03\nReview, place & report\nYour agent looks for a suitable spot in that part of your site. You approve the\nnofollow\nlink or reject the request. After it is published, your agent tells LinkBunny where the link was added.\nCopy agent setup prompt\nSee $20 founding plan\nFounders in the network\nManually reviewed sites\n·\nDR up to 61\nAsk Boon for a current-pool fit check.\nAdd backlinks with one prompt\nWalkthrough show interactive session with coding agent. You can let it build backlinks autonomously.\nThe coding-agent workflow is described above.\nFounding plan\nUp to 10 sites · No per-backlink fees\nYou or your agent review each request and reject anything unsuitable.\nJoin at the $20/month founding price\nNo per-backlink fees. Keep your founding price while subscribed, even as LinkBunny grows and pricing for new customers changes.\nAsk Boon for a current-pool fit check before subscribing. After joining, Boon helps by email or DM with your first profile and coding-agent setup/check-in.\n$20\n/ month\nTRUST AT LAUNCH\nNew, manually reviewed marketplace.\nLinkBunny is starting with a small founding group. Every profile is manually reviewed before it can participate, and every marketplace link must be\nnofollow\n. LinkBunny cannot edit your site.\nLinkBunny accepts legitimate sites across categories. The current pool is strongest for software, SaaS, developer tools, and adjacent founder-operated, creator, and marketing sites.\nHow many sites are participating?\nLinkBunny is new, with a small founding group of manually reviewed sites. Ask Boon for a current-pool fit check before subscribing.\nWill link requests be relevant to my site?\nLinkBunny matches within a Domain Rating range and prefers closer scores. You decide whether a request fits.\nRead the link request and editorial rules\nLinkBunny\nMade by Hwee-Boon Yar\nCommit fe0891946216e66fc4f1a278448046e396d5e378\nMCP\nArticles\nFAQ\nPrivacy\nTerms\nAgent setup\n© 2026\n↗\nAsk Boon\nDIRECT LINE TO THE FOUNDER\nQuestions about fit or setup?\n×\nI’m Hwee-Boon, the founder. Ask about LinkBunny, site quality, or setup, and I’ll reply by email.\nEmail for my reply\nQuestion or feedback\n0 / 2,000\n⌘/Ctrl + Enter to send\nSend to Boon",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/assets/index-Ds81ueaH.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://getlinkbunny.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/docs/agents",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "https://hboon.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/articles/launch-directories",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/docs/agents",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2274
+}
