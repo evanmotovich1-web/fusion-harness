@@ -318,7 +318,7 @@ export default function selfCompact(pi: ExtensionAPI): void {
 	let generation = 0;
 	let attempted = false;
 	let needsRelief = false;
-	const apiBase = (process.env.SELF_COMPACT_API_URL ?? "http://127.0.0.1:8787").replace(/\/$/, "");
+	const apiBase = (process.env.SELF_COMPACT_API_URL ?? "http://127.0.0.1:8788").replace(/\/$/, "");
 	const apiTokenFile = process.env.SELF_COMPACT_TOKEN_FILE ?? path.join(os.homedir(), ".config/self-compact/token");
 	const ephemeralId = randomUUID().replace(/-/g, "");
 	let apiTimer: ReturnType<typeof setInterval> | null = null;

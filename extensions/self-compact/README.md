@@ -20,7 +20,7 @@ loads `com.evan.self-compact-api` through launchd. Pi deduplicates that path if 
 launcher also passes the same file with `-e`. Factory seats use their own pinned
 copy because they start Pi with `--no-extensions`.
 
-The API binds only to `127.0.0.1:8787` and requires the private token at
+The API binds only to `127.0.0.1:8788` and requires the private token at
 `~/.config/self-compact/token`. It reports measured usage through
 `GET /v1/sessions`, accepts `POST /v1/sessions/<id>/compact` with `{}`, and
 reports completion in session status. The Pi extension claims requests while

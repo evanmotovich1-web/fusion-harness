@@ -43,7 +43,7 @@ def install_pi_settings(path: Path, extension: Path = EXTENSION) -> bool:
 def plist(api: Path = API, python: str = sys.executable) -> dict:
     return {
         "Label": LABEL,
-        "ProgramArguments": [python, str(api)],
+        "ProgramArguments": [python, str(api), "--port", "8788"],
         "RunAtLoad": True,
         "KeepAlive": True,
         "StandardOutPath": str(Path.home() / "Library/Logs/self-compact-api.log"),

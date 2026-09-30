@@ -101,7 +101,7 @@ def command(session_id: str, action: str, data: dict, path: Path = STATE) -> dic
     return {"ok": True}
 
 
-def make_server(host: str = "127.0.0.1", port: int = 8787, state: Path = STATE,
+def make_server(host: str = "127.0.0.1", port: int = 8788, state: Path = STATE,
                 token_file: Path = TOKEN) -> ThreadingHTTPServer:
     if host not in {"127.0.0.1", "::1"}:
         raise ValueError("self-compact API must bind to loopback")
@@ -163,7 +163,7 @@ def make_server(host: str = "127.0.0.1", port: int = 8787, state: Path = STATE,
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=8787)
+    parser.add_argument("--port", type=int, default=8788)
     args = parser.parse_args()
     make_server(args.host, args.port).serve_forever()
 
