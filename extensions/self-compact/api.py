@@ -19,6 +19,9 @@ STATE = Path(os.environ.get("SELF_COMPACT_DB", Path.home() / ".cache/self-compac
 TOKEN = Path(os.environ.get("SELF_COMPACT_TOKEN_FILE", Path.home() / ".config/self-compact/token"))
 SESSION = re.compile(r"^/v1/sessions/([0-9a-f]{32,64})(?:/(compact|claim|result))?$")
 MAX_BODY = 1024
+CLAIM_LEASE_SECONDS = 60
+SESSION_FIELDS = ("id", "used", "window", "level", "request", "result", "updated_at")
+SESSION_SELECT = ", ".join(SESSION_FIELDS)
 
 
 def db(path: Path) -> sqlite3.Connection:
@@ -28,8 +31,14 @@ def db(path: Path) -> sqlite3.Connection:
     conn.execute("""CREATE TABLE IF NOT EXISTS sessions (
         id TEXT PRIMARY KEY, used INTEGER, window INTEGER, soft INTEGER,
         warning INTEGER, force INTEGER, level TEXT, request INTEGER NOT NULL DEFAULT 0,
-        result TEXT, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        claimed_at INTEGER, result TEXT, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     )""")
+    if "claimed_at" not in {row[1] for row in conn.execute("PRAGMA table_info(sessions)")}:
+        try:
+            conn.execute("ALTER TABLE sessions ADD COLUMN claimed_at INTEGER")
+        except sqlite3.OperationalError as error:
+            if "duplicate column name" not in str(error):
+                raise
     return conn
 
 
@@ -71,9 +80,15 @@ def update(session_id: str, data: dict, path: Path = STATE) -> dict:
 
 def sessions(path: Path = STATE) -> list[dict]:
     with db(path) as conn:
-        rows = conn.execute("SELECT id, used, window, level, request, result, updated_at "
-                            "FROM sessions ORDER BY updated_at DESC LIMIT 100").fetchall()
-    return [dict(zip(("id", "used", "window", "level", "request", "result", "updated_at"), row)) for row in rows]
+        rows = conn.execute(f"SELECT {SESSION_SELECT} FROM sessions "
+                            "ORDER BY updated_at DESC LIMIT 100").fetchall()
+    return [dict(zip(SESSION_FIELDS, row)) for row in rows]
+
+
+def session(session_id: str, path: Path = STATE) -> dict | None:
+    with db(path) as conn:
+        row = conn.execute(f"SELECT {SESSION_SELECT} FROM sessions WHERE id=?", (session_id,)).fetchone()
+    return dict(zip(SESSION_FIELDS, row)) if row else None
 
 
 def command(session_id: str, action: str, data: dict, path: Path = STATE) -> dict:
@@ -84,18 +99,23 @@ def command(session_id: str, action: str, data: dict, path: Path = STATE) -> dic
         if action == "compact":
             if data:
                 raise ValueError("compact takes no body fields")
-            conn.execute("UPDATE sessions SET request=1, result=NULL WHERE id=?", (session_id,))
+            conn.execute("UPDATE sessions SET request=1, claimed_at=NULL, result=NULL WHERE id=?", (session_id,))
         elif action == "claim":
             if data:
                 raise ValueError("claim takes no body fields")
-            if exists[0] == 1:
-                conn.execute("UPDATE sessions SET request=2 WHERE id=?", (session_id,))
-                return {"ok": True, "compact": True}
-            return {"ok": True, "compact": False}
+            conn.execute("""UPDATE sessions SET request=1, claimed_at=NULL
+                WHERE id=? AND request=2 AND
+                (claimed_at IS NULL OR claimed_at <= CAST(strftime('%s','now') AS INTEGER) - ?)""",
+                (session_id, CLAIM_LEASE_SECONDS))
+            claimed = conn.execute("""UPDATE sessions
+                SET request=2, claimed_at=CAST(strftime('%s','now') AS INTEGER)
+                WHERE id=? AND request=1""", (session_id,)).rowcount == 1
+            return {"ok": True, "compact": claimed}
         elif action == "result":
             if set(data) != {"status"} or data["status"] not in {"completed", "failed"}:
                 raise ValueError("invalid result")
-            conn.execute("UPDATE sessions SET request=0, result=? WHERE id=?", (data["status"], session_id))
+            conn.execute("UPDATE sessions SET request=0, claimed_at=NULL, result=? WHERE id=?",
+                         (data["status"], session_id))
         else:
             raise ValueError("unknown action")
     return {"ok": True}
@@ -133,7 +153,7 @@ def make_server(host: str = "127.0.0.1", port: int = 8788, state: Path = STATE,
                 return
             match = SESSION.fullmatch(self.path)
             if match and match[2] is None:
-                row = next((row for row in sessions(state) if row["id"] == match[1]), None)
+                row = session(match[1], state)
                 self.send(200 if row else 404, {"ok": bool(row), "session": row})
                 return
             self.send(404, {"ok": False, "error": "not found"})

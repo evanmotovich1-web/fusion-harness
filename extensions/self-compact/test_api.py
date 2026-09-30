@@ -1,4 +1,5 @@
 import json
+import sqlite3
 import stat
 import tempfile
 import threading
@@ -65,6 +66,53 @@ class ApiTests(unittest.TestCase):
             bad.exception.close()
         self.assertEqual(self.call("/v1/sessions")["sessions"], [])
         self.assertNotIn(b"secret", self.state.read_bytes())
+
+    def test_individual_lookup_is_not_limited_to_recent_sessions(self):
+        self.call(f"/v1/sessions/{SID}", TELEMETRY)
+        with sqlite3.connect(self.state) as conn:
+            conn.execute("UPDATE sessions SET updated_at='2000-01-01' WHERE id=?", (SID,))
+            conn.executemany("""INSERT INTO sessions
+                (id, used, window, soft, warning, force, level)
+                VALUES (?, 250, 1000, 200, 350, 400, 'soft')""",
+                ((f"{number:064x}",) for number in range(101)))
+        self.assertEqual(len(self.call("/v1/sessions")["sessions"]), 100)
+        self.assertNotIn(SID, {row["id"] for row in self.call("/v1/sessions")["sessions"]})
+        self.assertEqual(self.call(f"/v1/sessions/{SID}")["session"]["used"], 250)
+
+    def test_expired_claim_can_be_reclaimed_once(self):
+        self.call(f"/v1/sessions/{SID}", TELEMETRY)
+        self.call(f"/v1/sessions/{SID}/compact", {})
+        self.assertTrue(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        self.assertFalse(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        with sqlite3.connect(self.state) as conn:
+            claimed_at = conn.execute("SELECT claimed_at FROM sessions WHERE id=?", (SID,)).fetchone()[0]
+            self.assertIsNotNone(claimed_at)
+            conn.execute("UPDATE sessions SET claimed_at=? WHERE id=?",
+                         (claimed_at - api.CLAIM_LEASE_SECONDS - 1, SID))
+        self.assertTrue(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        self.assertFalse(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        self.call(f"/v1/sessions/{SID}/result", {"status": "completed"})
+        self.assertFalse(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        self.assertEqual(self.call(f"/v1/sessions/{SID}")["session"]["result"], "completed")
+        self.assertNotIn("claimed_at", self.call(f"/v1/sessions/{SID}")["session"])
+        with sqlite3.connect(self.state) as conn:
+            self.assertIsNone(conn.execute("SELECT claimed_at FROM sessions WHERE id=?", (SID,)).fetchone()[0])
+
+    def test_existing_database_is_migrated_for_claim_leases(self):
+        self.state.parent.mkdir(parents=True)
+        with sqlite3.connect(self.state) as conn:
+            conn.execute("""CREATE TABLE sessions (
+                id TEXT PRIMARY KEY, used INTEGER, window INTEGER, soft INTEGER,
+                warning INTEGER, force INTEGER, level TEXT, request INTEGER NOT NULL DEFAULT 0,
+                result TEXT, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+            )""")
+            conn.execute("""INSERT INTO sessions
+                (id, used, window, soft, warning, force, level, request)
+                VALUES (?, 250, 1000, 200, 350, 400, 'soft', 2)""", (SID,))
+        self.assertTrue(self.call(f"/v1/sessions/{SID}/claim", {})["compact"])
+        with sqlite3.connect(self.state) as conn:
+            columns = {row[1] for row in conn.execute("PRAGMA table_info(sessions)")}
+        self.assertIn("claimed_at", columns)
 
     def test_installer_adds_one_global_entry_without_changing_other_settings(self):
         settings = self.root / "settings.json"
