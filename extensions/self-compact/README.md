@@ -8,6 +8,26 @@ cd "$YOUR_WORKING_DIR"
 pi -e "$YOUR_WORKING_DIR/extensions/self-compact/self-compact.ts"
 ```
 
+For normal Pi sessions on this Mac, install the same file in Pi's global extension
+setting and start the local control API:
+
+```bash
+python3 extensions/self-compact/install.py
+```
+
+The installer adds the exact extension path to `~/.pi/agent/settings.json` and
+loads `com.evan.self-compact-api` through launchd. Pi deduplicates that path if a
+launcher also passes the same file with `-e`. Factory seats use their own pinned
+copy because they start Pi with `--no-extensions`.
+
+The API binds only to `127.0.0.1:8788` and requires the private token at
+`~/.config/self-compact/token`. It reports measured usage through
+`GET /v1/sessions`, accepts `POST /v1/sessions/<id>/compact` with `{}`, and
+reports completion in session status. The Pi extension claims requests while
+idle and uses its existing compaction lifecycle. Session IDs are hashes of
+session paths; prompts and summaries are never sent to the API. If the API is
+down, local threshold handling still works.
+
 The shorter directory form also works. Paste this as one line:
 
 ```bash

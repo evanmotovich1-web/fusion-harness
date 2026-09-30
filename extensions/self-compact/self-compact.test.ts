@@ -180,3 +180,38 @@ test("empty explicit prompt is rejected rather than silently using the file", as
  expect(await h.fire("tool_call",{toolName:"self_compaction"})).toMatchObject({block:true});
  expect(h.notices.join()).toContain("prompt must not be empty");
 });
+
+test("API request uses native compaction and reports completion without session text", async () => {
+ const tokenFile = join(fixture(), "token"); writeFileSync(tokenFile, "a".repeat(64));
+ const before = globalThis.fetch;
+ const priorToken = process.env.SELF_COMPACT_TOKEN_FILE;
+ const priorPoll = process.env.SELF_COMPACT_API_POLL_MS;
+ const priorDisable = process.env.SELF_COMPACT_API_DISABLE;
+ process.env.SELF_COMPACT_TOKEN_FILE = tokenFile;
+ process.env.SELF_COMPACT_API_POLL_MS = "50";
+ delete process.env.SELF_COMPACT_API_DISABLE;
+ const calls: Array<{ url: string; body: any; authorization: string }> = [];
+ let claimed = false;
+ globalThis.fetch = (async (url: string, init: any) => {
+  const body = JSON.parse(init.body);
+  calls.push({ url, body, authorization: init.headers.Authorization });
+  const reply = url.endsWith("/claim") && !claimed ? (claimed = true, { compact: true }) : { ok: true, compact: false };
+  return { ok: true, json: async () => reply } as any;
+ }) as any;
+ try {
+  const h = harness(); h.usage(100000); await h.fire("session_start");
+  await new Promise(resolve => setTimeout(resolve, 130));
+  expect(h.compacts).toHaveLength(1);
+  h.compacts[0].onComplete({});
+  await new Promise(resolve => setTimeout(resolve, 10));
+  expect(calls.some(call => call.url.endsWith("/result") && call.body.status === "completed")).toBe(true);
+  expect(calls.every(call => call.authorization === `Bearer ${"a".repeat(64)}`)).toBe(true);
+  expect(JSON.stringify(calls)).not.toContain("Goal: finish");
+  await h.fire("session_shutdown");
+ } finally {
+  globalThis.fetch = before;
+  if (priorToken === undefined) delete process.env.SELF_COMPACT_TOKEN_FILE; else process.env.SELF_COMPACT_TOKEN_FILE = priorToken;
+  if (priorPoll === undefined) delete process.env.SELF_COMPACT_API_POLL_MS; else process.env.SELF_COMPACT_API_POLL_MS = priorPoll;
+  if (priorDisable === undefined) delete process.env.SELF_COMPACT_API_DISABLE; else process.env.SELF_COMPACT_API_DISABLE = priorDisable;
+ }
+});

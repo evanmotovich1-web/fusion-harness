@@ -1,6 +1,8 @@
 /** Standalone Pi self-compaction. See README.md and the saved implementation plan. */
 import type { ExtensionAPI, ExtensionContext } from "@earendil-works/pi-coding-agent";
+import { createHash, randomUUID } from "node:crypto";
 import * as fs from "node:fs";
+import * as os from "node:os";
 import * as path from "node:path";
 
 // ═══════════════════════════ Public constants ═══════════════════════════
@@ -316,6 +318,58 @@ export default function selfCompact(pi: ExtensionAPI): void {
 	let generation = 0;
 	let attempted = false;
 	let needsRelief = false;
+	const apiBase = (process.env.SELF_COMPACT_API_URL ?? "http://127.0.0.1:8788").replace(/\/$/, "");
+	const apiTokenFile = process.env.SELF_COMPACT_TOKEN_FILE ?? path.join(os.homedir(), ".config/self-compact/token");
+	const ephemeralId = randomUUID().replace(/-/g, "");
+	let apiTimer: ReturnType<typeof setInterval> | null = null;
+	let apiSessionId = ephemeralId;
+	let apiContext: ExtensionContext | null = null;
+	let apiPolling = false;
+	const apiEnabled = process.env.SELF_COMPACT_API_DISABLE !== "1";
+	const pollMs = Math.max(50, Number(process.env.SELF_COMPACT_API_POLL_MS ?? 5000) || 5000);
+	function sessionId(ctx: ExtensionContext): string {
+		const file = ctx.sessionManager.getSessionFile?.();
+		return file ? createHash("sha256").update(file).digest("hex") : ephemeralId;
+	}
+	async function apiPost(route: string, body: Record<string, unknown> = {}): Promise<Record<string, unknown> | null> {
+		if (!apiEnabled) return null;
+		let secret: string;
+		try { secret = fs.readFileSync(apiTokenFile, "utf8").trim(); } catch { return null; }
+		try {
+			const response = await fetch(`${apiBase}/v1/sessions/${apiSessionId}${route}`, {
+				method: "POST", headers: { Authorization: `Bearer ${secret}`, "Content-Type": "application/json" },
+				body: JSON.stringify(body), signal: AbortSignal.timeout(300),
+			});
+			return response.ok ? await response.json() as Record<string, unknown> : null;
+		} catch { return null; }
+	}
+	function publish(ctx: ExtensionContext): Promise<Record<string, unknown> | null> | undefined {
+		const usage = ctx.getContextUsage();
+		if (!thresholds || usage?.tokens == null) return;
+		return apiPost("", { used: usage.tokens, window: thresholds.window, soft: thresholds.soft,
+			warning: thresholds.warning, force: thresholds.force, level });
+	}
+	async function pollApi() {
+		if (!apiContext || apiPolling || inFlight || pending || !apiContext.isIdle()) return;
+		apiPolling = true;
+		try {
+			await publish(apiContext);
+			const response = await apiPost("/claim");
+			if (response?.compact && apiContext.isIdle()) {
+				resume = true;
+				request(apiContext);
+			} else if (response?.compact) {
+				await apiPost("/compact");
+			}
+		} finally { apiPolling = false; }
+	}
+	function startApi(ctx: ExtensionContext) {
+		apiContext = ctx;
+		apiSessionId = sessionId(ctx);
+		if (!apiEnabled || apiTimer) return;
+		apiTimer = setInterval(() => { void pollApi(); }, pollMs);
+		apiTimer.unref();
+	}
 
 	function reset() {
 		generation++;
@@ -385,6 +439,7 @@ export default function selfCompact(pi: ExtensionAPI): void {
 			}
 		}
 		widget(ctx, tokens);
+		void publish(ctx);
 	}
 	function request(ctx: ExtensionContext) {
 		if (inFlight || configError) return;
@@ -395,6 +450,7 @@ export default function selfCompact(pi: ExtensionAPI): void {
 				onComplete: () => {
 					if (current !== generation) return;
 					inFlight = false;
+					void apiPost("/result", { status: "completed" });
 					// Lifecycle event resets state before this callback. Resume exactly once.
 					if (resume) {
 						resume = false;
@@ -403,9 +459,9 @@ export default function selfCompact(pi: ExtensionAPI): void {
 							{ triggerTurn: true, deliverAs: "followUp" });
 					}
 				},
-				onError: error => { if (current === generation) fail(ctx, error.message); },
+				onError: error => { if (current === generation) { fail(ctx, error.message); void apiPost("/result", { status: "failed" }); } },
 			});
-		} catch (error) { fail(ctx, String(error)); }
+		} catch (error) { fail(ctx, String(error)); void apiPost("/result", { status: "failed" }); }
 	}
 	const recoverNote = (ctx: ExtensionContext) => {
 		for (const entry of ctx.sessionManager.getBranch()) {
@@ -415,11 +471,11 @@ export default function selfCompact(pi: ExtensionAPI): void {
 			if (entry.type === "compaction") note = "";
 		}
 	};
-	const resetSession = async (_event: unknown, ctx: ExtensionContext) => { reset(); recoverNote(ctx); check(ctx); };
+	const resetSession = async (_event: unknown, ctx: ExtensionContext) => { reset(); startApi(ctx); recoverNote(ctx); check(ctx); };
 	pi.on("session_start", resetSession);
 	// Pi 0.84 emits session_start with reason resume/new/fork for transitions.
 	pi.on("session_tree", resetSession);
-	pi.on("session_shutdown", async () => reset());
+	pi.on("session_shutdown", async () => { if (apiTimer) clearInterval(apiTimer); apiTimer = null; apiContext = null; reset(); });
 	pi.on("model_select", async (_event, ctx) => {
 		thresholds = null; cache = null; level = "ok"; blocked = false; attempted = false; check(ctx);
 	});
