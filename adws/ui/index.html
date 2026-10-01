@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workflow Builder Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Workflow Builder Desk</h1>
+  <p id="status" class="muted">Loading…</p>
+</header>
+<main>
+  <section>
+    <h2>Submit a build request</h2>
+    <p class="muted">Queued to <code>adws/queue/</code> for the builder. "Queue + build (stub)" also runs
+      <code>adw_workflow_builder.py --fixtures --stub-agents</code> on it right here. No live mode exists in this UI.</p>
+    <textarea id="request" rows="4" placeholder="Build a workflow named … that must gate …"></textarea>
+    <div class="actions">
+      <button id="queue-only">Queue only</button>
+      <button id="queue-build" class="primary">Queue + build (stub)</button>
+    </div>
+    <pre id="submit-result" class="card muted">—</pre>
+  </section>
+
+  <section>
+    <h2>Builds <span class="muted">per-agent tools · time · model · cost</span></h2>
+    <div class="scroll"><table id="builds"></table></div>
+    <div id="build-detail" class="detail hidden">
+      <h3 id="detail-title"></h3>
+      <div class="scroll"><table id="detail-agents"></table></div>
+      <h3>Phases</h3>
+      <div class="scroll"><table id="detail-phases"></table></div>
+      <h3>Requirements</h3>
+      <div class="scroll"><table id="detail-reqs"></table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built workflows <span class="muted">registry.json read per request — new builds appear without a restart · status from real data</span></h2>
+    <div class="scroll"><table id="workflows"></table></div>
+    <h3>In progress <span class="muted">needs human · running · queued, not yet consumable results</span></h3>
+    <div class="scroll"><table id="incomplete"></table></div>
+    <pre id="launch-result" class="card muted">—</pre>
+  </section>
+
+  <section>
+    <h2>Seats <span class="muted">display-only model lanes — no launch from the desk</span></h2>
+    <div class="scroll"><table id="seats"></table></div>
+  </section>
+
+  <section>
+    <h2>Queued requests <span class="muted">not yet consumed</span></h2>
+    <div class="scroll"><table id="queued"></table></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
