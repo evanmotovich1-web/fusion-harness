@@ -1,0 +1,9 @@
+{
+  "pi_tools": [
+    "read",
+    "write"
+  ],
+  "writes": [
+    "adws/built/echo-check/**"
+  ]
+}

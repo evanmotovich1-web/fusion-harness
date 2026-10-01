@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "workflows": [
+    {
+      "id": "echo-check",
+      "name": "Echo Check",
+      "version": 1,
+      "entrypoint": "adws/built/echo-check/adw_echo_check.py",
+      "spec_path": "adws/built/echo-check/config.json",
+      "built_at": "2026-10-01T05:40:00+00:00",
+      "build_run_id": "echo-check-rebuild",
+      "status": "validated",
+      "acceptance": {
+        "requirements_total": 1,
+        "verified": 1,
+        "blocked": 0
+      },
+      "source_request": "Build a workflow named echo-check that must gate a greeting is a nonempty string."
+    }
+  ]
+}

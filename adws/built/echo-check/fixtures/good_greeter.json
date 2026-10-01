@@ -1,0 +1,10 @@
+{
+  "gate": "greeting_nonempty",
+  "result": "ok",
+  "results": {
+    "greeting_nonempty": {
+      "gate": "greeting_nonempty",
+      "result": "ok"
+    }
+  }
+}
