@@ -1,0 +1,4 @@
+{
+  "pi_tools": ["read", "grep", "find", "ls", "write"],
+  "writes": ["run-dir/spec_writer.output.json"]
+}

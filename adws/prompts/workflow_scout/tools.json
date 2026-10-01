@@ -1,0 +1,4 @@
+{
+  "pi_tools": ["read", "grep", "find", "ls"],
+  "writes": []
+}

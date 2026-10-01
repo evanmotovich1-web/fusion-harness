@@ -1,0 +1,4 @@
+{
+  "seat": "workflow_scout",
+  "pi_tools": ["read", "grep", "find", "ls", "memory_search"]
+}

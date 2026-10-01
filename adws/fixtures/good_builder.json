@@ -1,0 +1,17 @@
+{
+  "fill": "from_spec",
+  "summary": "implemented the echo-check workflow from the approved spec: gates.py checks the greeting value is a nonempty string, prompt bundle and good/bad fixtures for the greeter seat, focused tests, README with stub and refusal runs",
+  "claimed_paths": [
+    "adws/built/echo-check/adw_echo_check.py",
+    "adws/built/echo-check/config.json",
+    "adws/built/echo-check/gates.py",
+    "adws/built/echo-check/README.md",
+    "adws/built/echo-check/tests/test_echo_check.py",
+    "adws/built/echo-check/prompts/greeter/system.md",
+    "adws/built/echo-check/prompts/greeter/user.md",
+    "adws/built/echo-check/prompts/greeter/soft_notice.md",
+    "adws/built/echo-check/prompts/greeter/tools.json",
+    "adws/built/echo-check/fixtures/good_greeter.json",
+    "adws/built/echo-check/fixtures/bad_greeter.json"
+  ]
+}

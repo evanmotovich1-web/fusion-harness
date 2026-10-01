@@ -1,0 +1,4 @@
+{
+  "pi_tools": ["read", "grep", "ls", "write"],
+  "writes": ["run-dir/reviewer.output.json"]
+}
