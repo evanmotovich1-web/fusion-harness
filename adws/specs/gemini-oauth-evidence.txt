@@ -1,0 +1,226 @@
+Gemini OAuth implementation evidence — delegated task 2.b
+Validated 2026-10-01T00:07:54Z in /Users/evanmotovich/fusion-harness.
+Decision: O1 from adws/specs/gemini-oauth-decision.md.
+
+IMPLEMENTED
+- .pi/fusion-harness/model-stack-gemini-oauth.yaml
+  xai/grok-4.7 architect; google-vertex/gemini-3.7-flash primary/Main.
+  Two slots, medium thinking, shared communication prompt on both.
+- justfile: only added fusion-gemini; auth preflight refuses before launch.
+- .env.example: project/location and optional service-account path documented.
+- README.md: manual ADC OAuth setup, billing, independent API-key path.
+- This evidence file.
+
+LIMITS
+The repository integration and missing-auth refusal are verified. No actual Google
+OAuth login or live Gemini request occurred. gcloud is not installed and the
+default ADC file is absent. This feature is not ready for a live run until Evan
+completes setup. Vertex is billed, not free Gemini subscription access. Auth
+readiness checks configured credentials, not live access/permissions/billing.
+All validation tool calls were bounded to 60 seconds; explicit Python
+subprocess timeouts were at most 35 seconds. Later probes use PI_OFFLINE=1,
+with PI_SKIP_VERSION_CHECK=1 on the runtime probes. No credential-printing command, token,
+API key value or private credential content was captured. No global auth/model
+configuration was edited. Temporary test fixtures were removed before return.
+
+BEFORE IMPLEMENTATION — ACTUAL CLI OUTPUT
+$ pi auth check --provider google-vertex
+exit: 1
+stdout:
+not_ready
+stderr: empty
+
+$ pi --no-extensions --list-models google-vertex
+exit: 0
+stdout:
+No models matching "google-vertex"
+stderr: empty
+
+Machine checks (existence only, credential contents never read):
+gcloud installed: False
+Default ADC file exists: False
+
+AFTER IMPLEMENTATION — ACTUAL CLI OUTPUT
+$ PI_OFFLINE=1 pi auth check --provider google-vertex
+exit: 1
+stdout:
+not_ready
+stderr: empty
+
+$ PI_OFFLINE=1 pi --no-extensions --list-models
+exit: 0
+stdout:
+provider       model                context  max-out  thinking  images
+deepseek       deepseek-flash       1M       384K     yes       yes
+deepseek       deepseek-v4-pro      1M       384K     yes       no
+openai-codex   gpt-5.3-codex-spark  128K     128K     yes       no
+openai-codex   gpt-5.5              272K     128K     yes       yes
+openai-codex   gpt-5.6-luna         272K     128K     yes       yes
+openai-codex   gpt-5.6-sol          272K     128K     yes       yes
+openai-codex   gpt-5.6-terra        272K     128K     yes       yes
+openai-codex   gpt-6-astra          272K     128K     yes       yes
+openai-codex   gpt-6-luna           272K     128K     yes       yes
+openai-codex   gpt-6-sol            272K     128K     yes       yes
+openai-codex   gpt-6.1-sol          272K     128K     yes       yes
+xai            grok-4.3             1M       30K      yes       yes
+xai            grok-4.5             500K     500K     yes       yes
+xai            grok-4.6             500K     500K     yes       yes
+xai            grok-4.7             500K     500K     yes       yes
+zai-coding-cn  glm-4.6v             128K     32.8K    yes       yes
+zai-coding-cn  glm-5.3              1M       131.1K   yes       no
+zai-coding-cn  glm-5.3-flash        1M       131.1K   yes       yes
+zai-coding-cn  glm-5.3-highspeed    1M       131.1K   yes       no
+stderr: empty
+
+The actual child-visible catalog has no google-vertex rows before Evan's login.
+The xAI architect is present. Do not report the Vertex slot as authenticated.
+
+MISSING-AUTH LAUNCH REFUSAL — ACTUAL RECIPE
+$ PI_OFFLINE=1 just fusion-gemini --no-session --no-tools --mode rpc
+stdin: DEVNULL
+exit: 1
+stdout:
+not_ready
+stderr:
+Gemini OAuth is not configured. Run: gcloud auth application-default login
+Set GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION in .env. See README.md for installation and billing.
+error: recipe `fusion-gemini` failed on line 64 with exit code 1
+
+The recipe stops at auth preflight, so fh-stack and the live host never launch.
+This is the supported nonzero, actionable missing-auth path.
+
+DIRECT HARNESS STACK REJECTION — ACTUAL RPC PROBE
+$ PI_OFFLINE=1 pi --offline --no-extensions --no-skills --no-prompt-templates --no-themes --no-context-files --no-approve --no-tools --no-session --mode rpc -e ./extensions/fusion-harness/fusion-harness.ts --fh-config .pi/fusion-harness/model-stack-gemini-oauth.yaml
+stdin: DEVNULL; no prompts sent
+exit: 0
+stdout:
+{"type":"extension_ui_request","id":"8223e982-5ca3-40b2-99e9-e389739844b0","method":"notify","message":"fusion-harness: configured model stack is not runnable:\n- flux: no configured authentication for google-vertex/gemini-3.7-flash","notifyType":"error"}
+{"type":"extension_error","extensionPath":"/Users/evanmotovich/fusion-harness/extensions/fusion-harness/fusion-harness.ts","event":"session_start","error":"fusion-harness: configured model stack is not runnable:\n- flux: no configured authentication for google-vertex/gemini-3.7-flash"}
+{"type":"extension_error","extensionPath":"/Users/evanmotovich/fusion-harness/extensions/fusion-harness/fusion-harness.ts","event":"session_start","error":"fusion-harness: configured model stack is not runnable:\n- flux: no configured authentication for google-vertex/gemini-3.7-flash"}
+stderr: empty
+
+Important: Pi RPC exits 0 when stdin closes despite these extension_error events.
+The initial validation incorrectly asserted nonzero plus stderr text and failed.
+This is recorded, not concealed as a passing native exit-code check. No extension
+source change is authorized here. The new recipe instead checks pi auth check's
+nonzero status before starting Pi. RPC consumers must inspect protocol errors.
+
+FOCUSED REGRESSION TEST
+$ bun test extensions/fusion-harness/tests/model-stack.test.ts
+exit: 0
+bun test v1.4.0 (34cbb9a40)
+17 pass
+0 fail
+25 expect() calls
+Ran 17 tests across 1 file. [81.00ms]
+
+No full test suite was run. The suite creates and removes its own temp fixtures.
+
+NEW YAML AND CONFIGURED-AUTH CHECK — IN-MEMORY SDK, FIXTURES ONLY
+A bounded Python subprocess ran bun -e with loadModelStack and the installed
+ModelRuntime, ModelRegistry and AuthStorage classes. It used:
+  credentials: AuthStorage.inMemory()
+  modelsPath: null (in-memory model store, no global models.json)
+  allowModelNetwork: false
+  PI_OFFLINE=1
+  GEMINI_API_KEY and GOOGLE_CLOUD_API_KEY removed from the subprocess environment
+  GOOGLE_APPLICATION_CREDENTIALS pointing to a private temporary fixture path
+  fixture-only project/location settings
+No session, prompt, getAuth/credential print, token refresh or model call was made.
+
+Assertions:
+  Two slots with the exact expected architect/Main model ids.
+  Every slot has medium thinking and one resolved shared prompt append.
+  Installed model exists and model.thinkingLevelMap.medium is non-null.
+  registry.hasConfiguredAuth(model) equals fixture-file existence.
+
+An initial probe used the obsolete supportedThinkingLevels property and failed
+with TypeError. Installed catalog uses thinkingLevelMap. The corrected probe:
+
+SCENARIO: missing ADC fixture
+exit: 0
+PASS YAML: two slots, one architect, Vertex Main, medium thinking, shared prompts
+PASS catalog: google-vertex/gemini-3.7-flash, medium thinking supported
+PASS in-memory registry: hasConfiguredAuth=false; no stored/API-key credentials; fixture mode only
+
+SCENARIO: empty ADC existence fixture
+exit: 0
+PASS YAML: two slots, one architect, Vertex Main, medium thinking, shared prompts
+PASS catalog: google-vertex/gemini-3.7-flash, medium thinking supported
+PASS in-memory registry: hasConfiguredAuth=true; no stored/API-key credentials; fixture mode only
+
+The temporary file contained only {}. This proves the configured-auth mechanism
+can recognize ambient ADC without an API key; it does NOT prove usable OAuth.
+An existence-only check can accept invalid credential bytes. Never use that
+fixture to enable a real run. Actual machine auth remains not_ready.
+
+RECIPE ARGUMENT FORWARDING — FAKE PI, NOT REAL AUTH OR A MODEL RUN
+A temporary executable named pi returned ready for the exact auth-check argv
+and printed other argv as JSON. PATH was scoped to this subprocess only.
+$ just fusion-gemini --no-session 'a prompt with spaces # (safe)'
+exit: 0
+stdout:
+ready
+FIXTURE_LAUNCH_ARGS=["-e", "extensions/fusion-harness/fusion-harness.ts", "-e", "extensions/self-compact/self-compact.ts", "--fh-config", ".pi/fusion-harness/model-stack-gemini-oauth.yaml", "--no-session", "a prompt with spaces # (safe)"]
+stderr:
+just fh-stack .pi/fusion-harness/model-stack-gemini-oauth.yaml "$@"
+shift; pi -e extensions/fusion-harness/fusion-harness.ts -e extensions/self-compact/self-compact.ts --fh-config '.pi/fusion-harness/model-stack-gemini-oauth.yaml' "$@"
+
+Assertions passed: the selected YAML is forwarded and the prompt remains one
+argument. The fake ready output is only fixture evidence, not Evan's login.
+
+SCOPE/PRESERVATION CHECKS
+$ git diff --check -- .env.example README.md justfile
+exit: 0; no output
+
+Final artifact checks passed for all five scoped outputs: file existence,
+clean whitespace, no credential-pattern matches, empty GEMINI_API_KEY and
+GOOGLE_CLOUD_PROJECT examples, README markdown/footer, and parseable retained
+RPC error records. just --list discovers fusion-gemini. git diff --no-index
+--check /dev/null passed for both new files. Scoped git status reports the
+three edited existing files and two new files, with no staging performed.
+
+Removing only the new Gemini recipe block reconstructs HEAD:justfile byte-for-byte.
+Existing fusion/fusion5 API-key recipe/configuration remains unchanged.
+
+Before/after SHA-256 matched for these individual neighbors:
+  duckdb20_fusion_lab/lab.sql
+    bbb4875b93e4e6ffc4720925def4df64806f52abe2f92ba1d0f1621252add06e
+  extensions/self-compact/api.py
+    2f944dc2efe4d1ac8198a02fbbfee018f913ee5ceb9c1aed03e9c1b5c545563a
+  extensions/self-compact/test_api.py
+    e2c8b9d944585aba7e0c0f116ff4a6acdb3e38fb2c0603b5fc87ca373d3d89de
+  extensions/self-compact/VERIFICATION.md
+    8f9f4569ac41f71a7803a40608a3e8315693cc703457b0b76941b6ec20f2187e
+  .pi/fusion-harness/model-stack-fusion.yaml
+    dc4dc3a90891caa8adf195d806dacde3d775513ca05f6931fe1de9a480b2b2f8
+  .pi/fusion-harness/model-stack-fusion-5.yaml
+    daab3f767bc5be8fc0c2faaa8bbf4c226a960e35ab051f925023f14a35dbbe4d
+
+Additional snapshots before runtime checks and after them were byte-identical:
+  extensions: 182 files
+    9bdf6a98f8bc141db7449cec438dac4e19ccf3b5d441fdb60aefc3c1f44a4734
+  homecare: 1018 files
+    346951545f48db385e0f6cad92d0ef12bcfe92ee82b141a30a6abfba2b531ffb
+Tree hashes concatenate sorted relative path + NUL + file bytes + NUL.
+These scoped checks do not replace the harness's repository-state measurement.
+Read-only git status/show/diff were used; no commit, push, fetch, merge, reset,
+stash, cleanup, publication, deployment or background process was performed.
+
+MANUAL HANDOFF TO EVAN
+A1. brew install google-cloud-cli
+A2. Use a project with billing and the Vertex AI API enabled.
+A3. gcloud auth application-default login
+A4. Set GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION in .env.
+    Export the same variables in the shell used for standalone pi checks.
+    Keep credential files private. No GEMINI_API_KEY is needed for ADC.
+A5. pi auth check --provider google-vertex
+    pi --no-extensions --list-models google-vertex
+    Expect ready and google-vertex/gemini-3.7-flash, then just fusion-gemini.
+    Live permission/model access remains unverified until an approved live call.
+
+COLLABORATION HANDOFF
+Task 4.b (terra): add ADW recipes in other justfile lines, leave fusion-gemini intact.
+Task 5.a (sol): reuse these scoped checks and report OAuth as awaiting operator
+setup, not successfully authenticated. Preserve the distinction between actual
+missing-auth refusal, fixture configuration checks, and live execution.
