@@ -487,11 +487,34 @@ function plist(): string {
 `;
 }
 
+/** One machine-pressure sample (swap, load, biggest processes) so a later slowdown has history to compare against. */
+export function resourceSample(now = new Date()): Record<string, unknown> {
+	const swap = spawnSync("sysctl", ["-n", "vm.swapusage"], { encoding: "utf8" }).stdout?.trim() ?? "";
+	const ps = spawnSync("ps", ["-axo", "rss=,comm="], { encoding: "utf8" }).stdout ?? "";
+	const top = ps
+		.split("\n")
+		.map((line) => /^\s*(\d+)\s+(.+)$/.exec(line))
+		.filter((m): m is RegExpExecArray => !!m)
+		.map((m) => ({ rssMb: Math.round(Number(m[1]) / 1024), proc: path.basename(m[2]) }))
+		.sort((a, b) => b.rssMb - a.rssMb)
+		.slice(0, 5);
+	return { at: now.toISOString(), swap, load: os.loadavg().map((n) => Math.round(n * 100) / 100), freeMb: Math.round(os.freemem() / 1048576), top };
+}
+
+function logResources(): void {
+	try {
+		fs.appendFileSync(path.join(LOOP_DIR, "resources.jsonl"), `${JSON.stringify(resourceSample())}\n`);
+	} catch {
+		// Telemetry must never block a tick.
+	}
+}
+
 async function main() {
 	const [cmd = "status", ...rest] = process.argv.slice(2);
 	const cfg = config();
 	const deps = realDeps(cfg);
 	if (cmd === "tick") {
+		logResources();
 		const result = await tick({ ...deps, afterTick: () => { cleanupWorktrees(); refreshRunner(cfg); } }, cfg);
 		if (result.outcome === "busy" || result.outcome === "idle") console.log(`${result.outcome}: ${result.detail}`);
 	} else if (cmd === "status") {
