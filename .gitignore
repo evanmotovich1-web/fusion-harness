@@ -58,3 +58,9 @@ planf1/
 /publication.wave*.pending.json
 .hermes/plans/
 live_final_generation/
+
+# ADW builder runtime (never commit local execution state).
+adws/data/*.db
+adws/**/*.db
+adws/queue/
+adws/reports/launches/

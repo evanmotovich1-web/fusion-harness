@@ -1,0 +1,11 @@
+{
+  "verdict": "approve",
+  "findings": [
+    {
+      "id": "req-1",
+      "status": "met",
+      "text": "the greeting requirement maps to phase p1, gate greeting_nonempty, and verifier test_greeting_nonempty; the gate checks a nonempty string value, not a name"
+    }
+  ],
+  "summary": "the verbatim request has exactly one requirement and it is mapped to a phase, gate and verifier with no narrowing"
+}

@@ -1,0 +1,5 @@
+{
+  "fill": "refused",
+  "claimed_paths": ["adws/adw_workflow_builder.py"],
+  "failure": "diff_claims_real: path outside allowlist: adws/adw_workflow_builder.py"
+}

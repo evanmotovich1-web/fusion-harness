@@ -81,6 +81,28 @@ just fh-workhorse   # cheap pair · just fh-sota for the frontier pair
 
 The extension selects the configured primary builder as Pi's live host model. Invalid/unavailable stacks fail startup.
 
+### Gemini with OAuth (Vertex AI)
+
+`just fusion-gemini` selects `google-vertex/gemini-3.7-flash` as Main, with `xai/grok-4.7` as architect and medium thinking. It uses Google's Application Default Credentials (ADC) OAuth, not the removed Gemini CLI subscription provider. **Vertex AI is billed to your Google Cloud project, not free subscription access.** The xAI slot needs its own configured authentication.
+
+Complete these steps yourself. The recipe never installs tools or starts login:
+
+1. **A1:** On macOS, install gcloud: `brew install google-cloud-cli`.
+2. **A2:** Select a Google Cloud project with billing and the Vertex AI API enabled.
+3. **A3:** Run `gcloud auth application-default login` and complete the browser OAuth flow. Keep its credential file private.
+4. **A4:** Set `GOOGLE_CLOUD_PROJECT` and `GOOGLE_CLOUD_LOCATION` in `.env` (for example, location `us-central1`). `just` exports these variables. Alternatively, `GOOGLE_APPLICATION_CREDENTIALS` can point to a private service-account file, but that is not the user OAuth login above.
+5. **A5:** In a shell with those two variables exported, verify and launch:
+
+   ```bash
+   pi auth check --provider google-vertex
+   pi --no-extensions --list-models google-vertex
+   just fusion-gemini
+   ```
+
+Expect `ready` and a `google-vertex` row for `gemini-3.7-flash`. `ready` checks configured credentials, not live project permissions or a successful model call. Without auth, the recipe exits nonzero with a gcloud setup pointer before launching Pi. The existing stack validator checks `hasConfiguredAuth` and clean-room child visibility before selecting Main. After authentication, `/fh-model` can select the Vertex model like other built-in models.
+
+`GEMINI_API_KEY` remains the independent, optional `google/*` AI Studio path used by `just fusion` and `just fusion5`. OAuth does not generate an API key. To use ADC specifically, do not configure a higher-priority stored Vertex API key or `GOOGLE_CLOUD_API_KEY`. Do not commit `.env` or credentials. Decision and local verification: [Gemini OAuth decision](adws/specs/gemini-oauth-decision.md) and [evidence](adws/specs/gemini-oauth-evidence.txt).
+
 ## Model stack configuration
 
 `--fh-config <path>` accepts an explicit YAML list with 2 or more slots:
@@ -422,3 +444,6 @@ Follow the [IndyDevDan YouTube channel](https://www.youtube.com/@indydevdan) to 
 Stay Focused and Keep Building
 
 - IndyDevDan
+
+---
+Governed by AGENTS.md — see AGENTS.md for the rules this file operates under.

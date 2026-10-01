@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "echo-check",
+  "name": "Echo Check",
+  "request_verbatim": "Build a workflow named echo-check that must gate a greeting is a nonempty string.",
+  "router": {
+    "triggers": [
+      "echo-check",
+      "greeting"
+    ],
+    "refusals": [
+      {
+        "reason": "not_workflow",
+        "example": "write a poem about the sea"
+      },
+      {
+        "reason": "forbidden_target",
+        "example": "edit sssf and add a button"
+      },
+      {
+        "reason": "needs_human",
+        "example": "build me a workflow for my business"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "req-1",
+      "text": "gate a greeting is a nonempty string",
+      "phase_id": "p1",
+      "gate": "greeting_nonempty",
+      "verifier": "test_greeting_nonempty",
+      "evidence": [
+        "validate:echo-check-rebuild"
+      ],
+      "status": "verified",
+      "blocker": null
+    }
+  ],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "greet",
+      "kind": "agent",
+      "owner": "greeter",
+      "gate": "greeting_nonempty",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "req-1.json"
+      ],
+      "retries": 1
+    }
+  ],
+  "seats": [
+    {
+      "name": "greeter",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "write"
+      ],
+      "writes": [
+        "adws/built/echo-check/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    }
+  ],
+  "artifacts": {
+    "entrypoint": "adws/built/echo-check/adw_echo_check.py",
+    "files": [
+      "adws/built/echo-check/adw_echo_check.py",
+      "adws/built/echo-check/config.json",
+      "adws/built/echo-check/gates.py",
+      "adws/built/echo-check/README.md",
+      "adws/built/echo-check/tests/test_echo_check.py",
+      "adws/built/echo-check/prompts/greeter/system.md",
+      "adws/built/echo-check/prompts/greeter/user.md",
+      "adws/built/echo-check/prompts/greeter/soft_notice.md",
+      "adws/built/echo-check/prompts/greeter/tools.json",
+      "adws/built/echo-check/fixtures/good_greeter.json",
+      "adws/built/echo-check/fixtures/bad_greeter.json"
+    ]
+  },
+  "switches": {
+    "dry_run": true,
+    "stub_agents": true
+  },
+  "blockers": []
+}

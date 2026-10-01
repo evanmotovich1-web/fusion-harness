@@ -54,6 +54,16 @@ fusion *ARGS:
 fusion5 *ARGS:
     just fh-stack .pi/fusion-harness/model-stack-fusion-5.yaml "$@"
 
+# Gemini Main via Google Cloud ADC OAuth, with an xAI Grok architect (Vertex is billed).
+[positional-arguments]
+fusion-gemini *ARGS:
+    @if ! pi auth check --provider google-vertex; then \
+        printf '%s\n' 'Gemini OAuth is not configured. Run: gcloud auth application-default login' \
+            'Set GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION in .env. See README.md for installation and billing.' >&2; \
+        exit 1; \
+    fi
+    just fh-stack .pi/fusion-harness/model-stack-gemini-oauth.yaml "$@"
+
 # self-compact agent brief shared by Claude Code, Codex CLI, and Pi.
 SELF_COMPACT_BRIEF := "self-compact/SELF_COMPACT_AGENT_BRIEF.md"
 
@@ -125,3 +135,16 @@ compound-fusion-local *ARGS:
 [positional-arguments]
 compound-fusion5 *ARGS:
     fusion 5 --append-system-prompt "$(cat {{compound}})" "$@"
+
+# ── ADW workflow builder (adws/) ──────────────────────────────────────────────
+
+# Serve the workflow-builder desk UI. Localhost only; Ctrl-C to stop.
+desk-adw PORT="8797":
+    python3 adws/server.py --port {{PORT}}
+
+# Run the workflow-builder ADW with pass-through args. Stub examples:
+#   just adw-builder --request adws/fixtures/requests/toy_complete.md --fixtures --stub-agents
+#   just adw-builder --request adws/queue/<queued-file>.md --fixtures --stub-agents
+[positional-arguments]
+adw-builder *ARGS:
+    python3 adws/adw_workflow_builder.py "$@"

@@ -1,0 +1,40 @@
+{
+  "patterns": [
+    {
+      "code": "P1",
+      "citation": "adws/specs/prior-adw-patterns.md#pattern-catalog",
+      "why": "code orchestrates; the greeting gate is a code check after a typed agent envelope"
+    },
+    {
+      "code": "M5",
+      "citation": "adws/specs/prior-adw-patterns.md#this-repositorys-marketing-workflow",
+      "why": "front-door router with named refusals; non-workflow and forbidden asks never reach an agent"
+    },
+    {
+      "code": "M6",
+      "citation": "adws/specs/prior-adw-patterns.md#this-repositorys-marketing-workflow",
+      "why": "each seat loads its 4 prompt files from disk, so the generated workflow stays editable"
+    },
+    {
+      "code": "A2",
+      "citation": "adws/specs/prior-adw-patterns.md#what-perfect-for-the-request-can-objectively-mean",
+      "why": "the greeting requirement must map to a phase, a named gate and a verifier, not prose"
+    },
+    {
+      "code": "R5",
+      "citation": "adws/specs/prior-adw-patterns.md#failure-modes-the-builder-must-not-reproduce",
+      "why": "the greeting gate must check the value is a nonempty string, not just sound strong"
+    }
+  ],
+  "tools": ["read", "write"],
+  "risks": [
+    "R10: a single requirement is easy to drop into prose; it needs its own requirements[] row",
+    "R1: if the request names a tool outside read/grep/find/ls/write/edit/bash it is a preflight blocker, not a capability"
+  ],
+  "requirement_notes": [
+    {
+      "requirement": "gate a greeting is a nonempty string",
+      "coverage": "P1/A2: one agent phase, one named gate, one focused verifier"
+    }
+  ]
+}

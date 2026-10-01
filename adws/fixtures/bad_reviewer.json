@@ -1,0 +1,4 @@
+{
+  "_invalid": true,
+  "failure": "reviewer: fixture gate failed — verdict_consistent: approval may not coexist with unmet/blocking findings"
+}

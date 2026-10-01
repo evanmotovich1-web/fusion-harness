@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "partial-check",
+  "name": "Partial Check",
+  "request_verbatim": "Build a workflow named partial-check that must record a greeting and an unmeetable side effect.",
+  "router": {
+    "triggers": ["partial-check", "greeting"],
+    "refusals": [
+      { "reason": "not_workflow", "example": "write a poem about the sea" },
+      { "reason": "forbidden_target", "example": "push the new workflow to origin and deploy it to production" }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "req-1",
+      "text": "record a greeting",
+      "phase_id": "p1",
+      "gate": "greeting_recorded",
+      "verifier": "test_greeting_recorded",
+      "evidence": [],
+      "status": "blocked",
+      "blocker": null
+    },
+    {
+      "id": "req-2",
+      "text": "an unmeetable side effect",
+      "phase_id": "p2",
+      "gate": "side_effect_check",
+      "verifier": "recorded-blocker",
+      "evidence": [],
+      "status": "blocked",
+      "blocker": "unmeetable: no local executor can satisfy this requirement; needs a human decision before it can ever be verified"
+    }
+  ],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "record-greeting",
+      "kind": "agent",
+      "owner": "recorder",
+      "gate": "greeting_recorded",
+      "inputs": ["request"],
+      "outputs": ["req-1.json"],
+      "retries": 1
+    },
+    {
+      "id": "p2",
+      "name": "side-effect",
+      "kind": "code",
+      "owner": "code",
+      "gate": "side_effect_check",
+      "inputs": ["req-1.json"],
+      "outputs": ["req-2.json"],
+      "retries": 0
+    }
+  ],
+  "seats": [
+    {
+      "name": "recorder",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": ["read", "write"],
+      "writes": ["adws/built/partial-check/**"],
+      "prompt_files": ["system.md", "user.md", "soft_notice.md", "tools.json"]
+    }
+  ],
+  "artifacts": {
+    "entrypoint": "adws/built/partial-check/adw_partial_check.py",
+    "files": [
+      "adws/built/partial-check/adw_partial_check.py",
+      "adws/built/partial-check/config.json",
+      "adws/built/partial-check/gates.py",
+      "adws/built/partial-check/README.md",
+      "adws/built/partial-check/tests/test_partial_check.py",
+      "adws/built/partial-check/prompts/recorder/system.md",
+      "adws/built/partial-check/prompts/recorder/user.md",
+      "adws/built/partial-check/prompts/recorder/soft_notice.md",
+      "adws/built/partial-check/prompts/recorder/tools.json",
+      "adws/built/partial-check/fixtures/good_recorder.json",
+      "adws/built/partial-check/fixtures/bad_recorder.json"
+    ]
+  },
+  "switches": { "dry_run": true, "stub_agents": true },
+  "blockers": [
+    "req-2 unmeetable: no local executor can satisfy this requirement; needs a human decision before it can ever be verified"
+  ]
+}

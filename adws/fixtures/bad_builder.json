@@ -1,0 +1,4 @@
+{
+  "_invalid": true,
+  "failure": "builder: fixture gate failed — diff_claims_real: content hash unchanged: adws/built/<name>/gates.py"
+}
