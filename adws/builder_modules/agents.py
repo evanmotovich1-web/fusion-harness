@@ -7,18 +7,68 @@ after the attempt from the JSONL the runner wrote.
 from __future__ import annotations
 
 import json
+import os
 import shlex
+import signal
 import subprocess
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from .paths import KNOWN_TOOLS, fixtures_dir, model_name, thinking_name
+from .paths import KNOWN_TOOLS, ROOT, fixtures_dir, model_name, thinking_name
 from .prompts import load_prompt_files, render
 from .synthesize import reviewer_envelope, scout_envelope, synthesize_spec
 
 PI_PATH = "pi"
 JSON_RETRIES = 2
+
+
+def _kill_group(proc: subprocess.Popen) -> None:
+    try:
+        os.killpg(proc.pid, signal.SIGKILL)
+    except (ProcessLookupError, PermissionError, OSError):
+        proc.kill()
+    try:
+        proc.communicate(timeout=5)
+    except subprocess.TimeoutExpired:
+        pass
+
+
+def _inside_repo(raw: str) -> bool:
+    try:
+        resolved = Path(raw).resolve()
+    except OSError:
+        return False
+    try:
+        resolved.relative_to(ROOT.resolve())
+        return True
+    except ValueError:
+        return False
+
+
+def _persist_stdout_envelope(stdout: str, output: Path) -> None:
+    """Write-less seats never touch the disk. Keep the last JSON object from pi stdout."""
+    if output.is_file() and output.stat().st_size:
+        return
+    last = None
+    for line in stdout.splitlines():
+        line = line.strip()
+        if not line.startswith("{"):
+            continue
+        try:
+            event = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(event, dict):
+            last = event
+    if not isinstance(last, dict):
+        return
+    text = last.get("text") or last.get("message") or ""
+    if isinstance(text, str) and text.strip().startswith("{"):
+        output.write_text(text.strip() + "\n")
+        return
+    if any(key in last for key in ("patterns", "schema_version", "verdict", "fill")):
+        output.write_text(json.dumps(last) + "\n")
 MAX_GATE_ATTEMPTS = 3
 OUTSIDE_STEMS = {"out-of-scope-write", "out_of_scope_write", "out-of-scope"}
 SHELL_BAD = {"&&", "||", ";", "|", ">", ">>", "<", "&"}
@@ -117,13 +167,22 @@ class PiRunner:
         self.timeout_s = timeout_s
 
     def run(self, call: AgentCall) -> None:
+        proc = subprocess.Popen(
+            call.argv, cwd=str(ROOT), stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            start_new_session=True,
+        )
+        try:
+            stdout, stderr = proc.communicate(timeout=self.timeout_s)
+        except subprocess.TimeoutExpired as exc:
+            _kill_group(proc)
+            raise TimeoutError(f"pi timed out after {self.timeout_s}s") from exc
         with call.log_path.open("a") as handle:
-            proc = subprocess.run(
-                call.argv, stdin=subprocess.DEVNULL, stdout=handle, stderr=subprocess.PIPE,
-                text=True, timeout=self.timeout_s, check=False,
-            )
+            if stdout:
+                handle.write(stdout if stdout.endswith("\n") else stdout + "\n")
+        _persist_stdout_envelope(stdout or "", call.output_path)
         if proc.returncode != 0:
-            raise RuntimeError(f"pi exited {proc.returncode}: {(proc.stderr or '')[-800:]}")
+            raise RuntimeError(f"pi exited {proc.returncode}: {(stderr or '')[-800:]}")
 
 
 def resolve_model(model: str | None = None) -> tuple[str, str]:
@@ -268,6 +327,10 @@ def audit_calls(calls: list[dict], pi_tools: list[str], write_targets: list[Path
                 problems.append(f"{tool} to {raw} is outside the path allowlist")
         if tool == "bash":
             problems.extend(_audit_bash(str(args.get("command") or ""), write_targets))
+        if tool in {"find", "grep", "ls", "read"}:
+            raw = str(args.get("path") or "")
+            if raw.startswith("/") and not _inside_repo(raw):
+                problems.append(f"{tool} path {raw} is outside the repo")
     return problems
 
 
@@ -411,10 +474,13 @@ class PhaseRunner:
         tools = files["tools"]
         pi_tools = list(tools.get("pi_tools") or [])
         output = self.run_dir / f"{agent}.output.json"
+        from .paths import PATTERNS_PATH
         values = {
             "agent": agent,
             "request": self.request,
-            "output_path": output,
+            "output_path": str(output.resolve()),
+            "patterns_path": str(PATTERNS_PATH.resolve()),
+            "repo_root": str(ROOT.resolve()),
             "batch_json": json.dumps(batch, indent=2),
             "failures": "",
         }
@@ -440,9 +506,16 @@ class PhaseRunner:
             allowed = allowed_mutation_roots(self.run_dir, write_targets)
             before_fs = _snapshot(watch)
             started = time.perf_counter()
-            self.runner.run(AgentCall(
-                agent, attempt, system, prompt, argv, output, log_path, pi_tools, write_targets,
-            ))
+            try:
+                self.runner.run(AgentCall(
+                    agent, attempt, system, prompt, argv, output, log_path, pi_tools, write_targets,
+                ))
+            except (TimeoutError, RuntimeError, OSError) as exc:
+                elapsed = max(1, int((time.perf_counter() - started) * 1000))
+                history.append(AttemptRecord(attempt, False, [str(exc)], [], elapsed))
+                self.log(f"AGENT {agent} → GATE {agent} FAIL")
+                self.log(f"SOFT NOTICE: runner failed: {exc}")
+                return PhaseResult(None, [f"runner failed: {exc}"], attempt, False, history)
             calls = tool_calls(log_path)[before:]
             mutated = unclaimed_writes(before_fs, _snapshot(watch), allowed)
             try:

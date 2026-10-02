@@ -53,14 +53,27 @@ def route(request: str, stem: str = "") -> dict:
     concrete = any(token in text for token in CONCRETE) or bool(re.search(r"(?m)^\s*[-*]\s+\S", request or ""))
     if stem_l in COMPLETE_STEMS:
         concrete = True
+    deliverables = [item.strip(" .") for item in re.findall(r"\bone for\s+([^,.;]+)", text)]
     if stem_l in VAGUE_STEMS or not concrete:
-        return {
-            "route": "needs_human",
-            "reason": "needs_human: request does not name a checkable outcome",
-            "questions": [
+        questions = []
+        if len(deliverables) >= 2:
+            questions = [f"What check proves the {name} workflow worked?" for name in deliverables]
+        else:
+            questions = [
                 "What should the workflow do, in one sentence the builder must not narrow?",
                 "What check proves it worked (gate name and the evidence file)?",
                 "May it write files, and only under which directory?",
-            ],
+            ]
+        if "higgsfield" in text:
+            questions.append(
+                "Higgsfield is not a local tool. Should that capability stay blocked until a human wires it?"
+            )
+        if deliverables:
+            lines = "\n".join(f"- {name}: <EVAN: fill>" for name in deliverables)
+            questions.append("Paste answers back in this shape:\n" + lines)
+        return {
+            "route": "needs_human",
+            "reason": "needs_human: request does not name a checkable outcome",
+            "questions": questions,
         }
     return {"route": "build", "reason": "workflow-build ask with a checkable outcome", "questions": []}

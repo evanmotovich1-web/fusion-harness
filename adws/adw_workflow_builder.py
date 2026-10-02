@@ -69,12 +69,21 @@ def install_socket_guard() -> None:
 
 def load_request(raw: str) -> tuple[str, str, str]:
     text = (raw or "").strip()
+    # A slash inside a sentence ("excel/presentation") is not a missing file.
+    # Only a path-shaped argument that does not exist is a refusal.
+    path_like = text.startswith(("/", "./", "../")) or (
+        " " not in text and text.endswith((".md", ".txt", ".json"))
+    )
     candidates = [Path(text), Path.cwd() / text, ADWS_ROOT / text, ADWS_ROOT / "fixtures" / "requests" / Path(text).name]
-    for path in candidates:
-        if path.is_file():
-            return path.read_text(), str(path), path.stem
-    if "/" in text or text.endswith(".md"):
-        raise FileNotFoundError(text)
+    if path_like or ("/" in text and " " not in text):
+        for path in candidates:
+            try:
+                if path.is_file():
+                    return path.read_text(), str(path), path.stem
+            except OSError:
+                continue
+        if path_like:
+            raise FileNotFoundError(text)
     return text, "argv", ""
 
 
@@ -103,6 +112,7 @@ class Run:
         self.lines: list[str] = []
         digest = hashlib.sha256(request.encode()).hexdigest()
         telemetry.start_run(self.conn, self.run_id, ref, digest)
+        telemetry.abandon_other_running(self.conn, self.run_id)
 
     def log(self, line: str) -> None:
         stamped = f"[{time.strftime('%H:%M:%S')}] {line}"
@@ -205,7 +215,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--reports-dir", default="")
     parser.add_argument("--max-revisions", type=int, default=2)
     parser.add_argument("--run-id", default="")
+    # The SSSF desk appends this to every launch. Ignore it and the click dies
+    # before intake. When set, it is the run id so the desk row and this run match.
+    parser.add_argument("--adw-id", default="")
     args = parser.parse_args(argv)
+    if args.adw_id and not args.run_id:
+        args.run_id = args.adw_id
     if args.stub_agents or args.fixtures:
         install_socket_guard()
     try:
