@@ -609,7 +609,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 							const outcome = taskStates[verifier.id] === "blocked" ? taskOutcomes.get(verifier.id) : undefined;
 							const owner = outcome?.repair_target ? plan.tasks.find((task) => task.id === outcome.repair_target) : undefined;
 							const rejection = taskReports.get(verifier.id) ?? "";
-							const eligible = verifier.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && lastRejection.get(verifier.id) !== rejection;
+							const eligible = verifier.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && (taskStates[owner.id] === "completed" || taskStates[owner.id] === "no_op") && lastRejection.get(verifier.id) !== rejection;
 							return eligible ? { verifier, owner: owner!, rejection } : undefined;
 						}).find(Boolean);
 						if (repair && !stopper.stopped()) {
@@ -621,10 +621,14 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 							await h.save(collabDir, "repairs.json", JSON.stringify(repairLog, null, 2));
 							taskStates[owner.id] = "writing";
 							await executeTask(owner, `OWNER REPAIR — cycle ${cycle}. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`);
-							if (!stopper.stopped() && taskStates[owner.id] === "completed") {
-								// The repair changed the owner's output: every other accepted descendant is stale.
-								for (const id of collaborationDescendantIds(plan.tasks, owner.id)) {
-									if (id !== verifier.id && taskStates[id] === "completed") taskStates[id] = "pending";
+							if (!stopper.stopped() && (taskStates[owner.id] === "completed" || taskStates[owner.id] === "no_op")) {
+								// A completed repair changed the owner's output: every other accepted descendant is stale.
+								// A no_op repair (the owner says the fix already landed) changed nothing, but the verifier
+								// must still re-read the current files, or its stale rejection blocks the whole graph.
+								if (taskStates[owner.id] === "completed") {
+									for (const id of collaborationDescendantIds(plan.tasks, owner.id)) {
+										if (id !== verifier.id && taskStates[id] === "completed") taskStates[id] = "pending";
+									}
 								}
 								taskStates[verifier.id] = "reading";
 								await executeTask(verifier, `Reverification after owner repair cycle ${cycle}. Original rejected acceptance remains binding:\n${rejection}`);

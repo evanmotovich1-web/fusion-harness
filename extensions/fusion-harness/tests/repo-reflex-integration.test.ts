@@ -24,7 +24,7 @@ const calls: ChildCall[] = [];
 let blockTaskId: string | null = null;
 let repairFixture = false;
 let repairFixed = false;
-let repairBehavior: "success" | "rejected" | "uncertain" | "decision" | "permission" = "success";
+let repairBehavior: "success" | "no_op" | "rejected" | "uncertain" | "decision" | "permission" = "success";
 let malformedTaskId: string | null = null;
 let malformedOnce = false;
 let independentFixture = false;
@@ -117,7 +117,9 @@ mock.module("../modules/child-runner.ts", () => ({
 			}
 			if (rejectionsBeforeFix > 0) rejectionsBeforeFix--;
 			repairFixed = repairBehavior !== "rejected" && rejectionsBeforeFix === 0;
-			run.text = 'FH_TASK_OUTCOME: {"schema_version":1,"status":"completed","summary":"repair executed"}';
+			run.text = repairBehavior === "no_op"
+				? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"no_op","summary":"fix already present"}'
+				: 'FH_TASK_OUTCOME: {"schema_version":1,"status":"completed","summary":"repair executed"}';
 		} else if (repairFixture && opts.prompt.includes("executing delegated task 2.a") && !repairFixed) {
 			run.text = repairBehavior === "decision"
 				? 'FH_TASK_OUTCOME: {"schema_version":1,"status":"needs_decision","summary":"requires permission","decision":{"question":"approve?","options":["yes","no"]}}'
@@ -466,6 +468,15 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a"))).toHaveLength(4);
 		expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(true);
 		expect(JSON.parse(readFileSync(join(fh.artifacts, "collaborate/repairs.json"), "utf8"))).toHaveLength(3);
+	});
+	test("a no_op owner repair still sends the verifier back to re-read the files", async () => {
+		repairFixture = true;
+		repairBehavior = "no_op";
+		const fh = harness(repo());
+		await fh.run("owner says the fix already landed");
+		expect(calls.filter((call) => call.prompt.includes("OWNER REPAIR"))).toHaveLength(1);
+		expect(calls.filter((call) => call.prompt.includes("executing delegated task 2.a") || call.prompt.includes("Reverification after owner repair"))).toHaveLength(2);
+		expect(calls.some((call) => call.prompt.includes("executing delegated task 3.a"))).toBe(true);
 	});
 	test("a blocked task does not stop an independent branch", async () => {
 		independentFixture = true;
