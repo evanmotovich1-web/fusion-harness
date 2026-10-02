@@ -501,9 +501,25 @@ export function resourceSample(now = new Date()): Record<string, unknown> {
 	return { at: now.toISOString(), swap, load: os.loadavg().map((n) => Math.round(n * 100) / 100), freeMb: Math.round(os.freemem() / 1048576), top };
 }
 
+/** A warning when swap is nearly full or one process holds 8 GB or more, since eval times stretch under memory pressure. */
+export function pressureWarning(sample: Record<string, unknown>): string | undefined {
+	const m = /total = ([\d.]+)M\s+used = ([\d.]+)M/.exec(String(sample.swap ?? ""));
+	const swapPct = m ? (Number(m[2]) / Number(m[1])) * 100 : 0;
+	const big = ((sample.top as Array<{ rssMb: number; proc: string }>) ?? []).find((p) => p.rssMb >= 8192);
+	const parts = [swapPct >= 85 ? `swap ${swapPct.toFixed(0)}% used` : "", big ? `${big.proc} holds ${(big.rssMb / 1024).toFixed(1)} GB` : ""].filter(Boolean);
+	return parts.length ? `machine pressure: ${parts.join(", ")}; eval times in this window are unreliable` : undefined;
+}
+
 function logResources(): void {
 	try {
-		fs.appendFileSync(path.join(LOOP_DIR, "resources.jsonl"), `${JSON.stringify(resourceSample())}\n`);
+		const sample = resourceSample();
+		fs.appendFileSync(path.join(LOOP_DIR, "resources.jsonl"), `${JSON.stringify(sample)}\n`);
+		const warning = pressureWarning(sample);
+		const rot = path.join(VAULT, "ROT.md");
+		const today = new Date().toISOString().slice(0, 10);
+		if (warning && fs.existsSync(rot) && !fs.readFileSync(rot, "utf8").includes(`${today} — fusion eval loop: machine pressure`)) {
+			fs.appendFileSync(rot, `- ${today} — fusion eval loop: ${warning} (log: ${LOG})\n`);
+		}
 	} catch {
 		// Telemetry must never block a tick.
 	}
