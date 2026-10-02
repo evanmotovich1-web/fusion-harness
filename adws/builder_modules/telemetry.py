@@ -25,6 +25,17 @@ def unknown_cost() -> str:
     return json.dumps(UNKNOWN_COST)
 
 
+def abandon_other_running(conn, current_run_id: str) -> None:
+    """Close rows a dead process left as running. Does not touch the current run."""
+    conn.execute(
+        "UPDATE runs SET ended_at=?, run_status='abandoned', acceptance_status='blocked', "
+        "acceptance_reason='abandoned: previous process died before finish' "
+        "WHERE run_status='running' AND run_id!=?",
+        (now_iso(), current_run_id),
+    )
+    conn.commit()
+
+
 def start_run(conn, run_id: str, request_ref: str, config_hash: str) -> None:
     conn.execute(
         "INSERT OR REPLACE INTO runs (run_id, request_ref, config_hash, started_at, run_status, acceptance_status) "
