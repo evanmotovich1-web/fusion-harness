@@ -59,6 +59,26 @@ class BuilderCoreTest(unittest.TestCase):
                     reports = list((tmp / "reports").rglob("questions.md"))
                     self.assertTrue(reports and "What should the workflow do" in reports[0].read_text())
 
+    def test_workflow_spec_may_mention_git_push_without_refusing(self):
+        """A workflow spec that names a landing push is not itself a push command.
+
+        Session 8a35b8a5 died in 0.42s with zero phases because the router
+        matched `git push` inside the spec and refused before any agent spend.
+        A bare publish ask still refuses. A build ask that mentions the words
+        must not.
+        """
+        sys.path.insert(0, str(ROOT / "adws"))
+        from builder_modules.router import route
+
+        bare = route("please git push and deploy to production")
+        self.assertEqual(bare["route"], "forbidden_target")
+        spec = route(
+            "Build a new factory ADW: research.learn. It must gate citations "
+            "verified. Landing after green is git push and gh pr merge."
+        )
+        self.assertNotEqual(spec["route"], "forbidden_target", spec)
+        self.assertNotIn("git push", spec["reason"])
+
     def test_complete_registers_and_is_idempotent(self):
         text = "Build a workflow named echo-check that must gate a greeting is a nonempty string."
         code, log, tmp = run(text, ["--run-id", "once"])
