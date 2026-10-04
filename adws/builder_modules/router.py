@@ -8,13 +8,19 @@ import re
 VAGUE_STEMS = {"toy_vague", "toy-vague", "vague", "needs_human"}
 COMPLETE_STEMS = {"toy_complete", "toy-complete"}
 
-FORBIDDEN = (
+# Targets the builder must never edit, even inside a workflow spec.
+HARD_FORBIDDEN = (
     (r"\bsssf\b", "sssf"),
     (r"/users/evanmotovich/code/sssf", "sssf path"),
     (r"\bbuilder_modules\b", "builder itself"),
     (r"adw_workflow_builder", "builder itself"),
     (r"\bhomecare/", "homecare tree"),
     (r"\bextensions/", "extensions tree"),
+)
+# A bare "git push / deploy" ask is a forbidden target. The same words inside a
+# workflow-build spec are instructions for the workflow being built, not a
+# command for this process. Session 8a35b8a5 died on the second case.
+PUBLISH_FORBIDDEN = (
     (r"\bgit\s+push\b", "git push"),
     (r"\bgit\s+commit\b", "git commit"),
     (r"\bdeploy\b", "deploy"),
@@ -40,14 +46,18 @@ def route(request: str, stem: str = "") -> dict:
     """Return {route, reason, questions}. route is build | not_workflow | forbidden_target | needs_human."""
     text = " ".join((request or "").lower().split())
     stem_l = _stem(stem)
-    for pattern, why in FORBIDDEN:
+    for pattern, why in HARD_FORBIDDEN:
         if re.search(pattern, text):
             return {"route": "forbidden_target", "reason": f"forbidden_target: {why}", "questions": []}
+    intent = any(phrase in text for phrase in WORKFLOW_INTENT) or stem_l in COMPLETE_STEMS or stem_l in VAGUE_STEMS
+    if not intent:
+        for pattern, why in PUBLISH_FORBIDDEN:
+            if re.search(pattern, text):
+                return {"route": "forbidden_target", "reason": f"forbidden_target: {why}", "questions": []}
     if any(re.search(rf"\b{re.escape(word)}\b", text) for word in NOT_WORKFLOW if " " not in word) or any(
         phrase in text for phrase in NOT_WORKFLOW if " " in phrase
     ):
         return {"route": "not_workflow", "reason": "not_workflow: not a workflow-build ask", "questions": []}
-    intent = any(phrase in text for phrase in WORKFLOW_INTENT) or stem_l in COMPLETE_STEMS or stem_l in VAGUE_STEMS
     if not intent:
         return {"route": "not_workflow", "reason": "not_workflow: no workflow-build intent", "questions": []}
     concrete = any(token in text for token in CONCRETE) or bool(re.search(r"(?m)^\s*[-*]\s+\S", request or ""))
