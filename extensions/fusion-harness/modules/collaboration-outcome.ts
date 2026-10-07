@@ -70,7 +70,7 @@ function nonEmptyString(value: unknown, label: string): string {
 
 function validateOutcome(value: unknown): CollaborationTaskOutcome {
 	const raw = record(value, "task outcome");
-	assertExactKeys(raw, ["schema_version", "status", "summary", "decision", "repair_target"], "task outcome");
+	// Unknown top-level keys (e.g. changed_paths) are ignored; the return value is rebuilt from known fields only.
 	if (raw.schema_version !== COLLABORATION_OUTCOME_SCHEMA_VERSION) {
 		throw new Error(`task outcome.schema_version must be ${COLLABORATION_OUTCOME_SCHEMA_VERSION}`);
 	}

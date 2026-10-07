@@ -537,6 +537,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 						} catch (error) {
 							// A read-only task can safely be rerun once. Never invent a metadata
 							// receipt from prose, and never replay a write with uncertain effects.
+							// A write may only get one read-only receipt retry after its work has stopped.
 							const reason = error instanceof Error ? error.message : String(error);
 							if (!write && !stopper.stopped()) {
 								await h.save(reportsDir, `${task.id}-attempt-${attempt}-invalid.md`, rawReport);
@@ -547,6 +548,15 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 								try { outcome = parseCollaborationTaskOutcome(run.text).outcome; }
 								catch (retryError) { executionFailure ??= `task ${task.id} (${slot.id}) failed closed after report retry: ${retryError instanceof Error ? retryError.message : String(retryError)}`; }
 							} else executionFailure ??= `task ${task.id} (${slot.id}) failed during report retry: ${runError(run)}`;
+							} else if (!stopper.stopped()) {
+								await h.save(reportsDir, `${task.id}-attempt-${attempt}-invalid.md`, rawReport);
+								await runChild({ run, prompt: `RECEIPT RETRY (read-only): your previous report failed the outcome contract (${reason}). Do not perform any new work or modify anything. Restate your final report for work you actually completed, ending in exactly one valid FH_TASK_OUTCOME metadata line.\n\n${COLLABORATION_OUTCOME_INSTRUCTION}`, systemPrompt: slot.systemPrompt, appendSystemPrompts: slot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: slot.thinking, ...h.slotNextSpawn(slot, run, initialSpawns.get(slot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+								childOk = runOk(run) && !stopper.stopped();
+								rawReport = childOk ? run.text : `FAILED: ${runError(run)}`;
+								if (childOk) {
+									try { outcome = parseCollaborationTaskOutcome(run.text).outcome; }
+									catch (retryError) { executionFailure ??= `task ${task.id} (${slot.id}) failed closed after receipt retry: ${retryError instanceof Error ? retryError.message : String(retryError)}`; }
+								} else executionFailure ??= `task ${task.id} (${slot.id}) failed closed after receipt retry: ${runError(run)}`;
 							} else executionFailure ??= `task ${task.id} (${slot.id}) failed closed: ${reason}`;
 						}
 					} else {
