@@ -36,14 +36,29 @@ CONCRETE = (
     "must", "should", "gate", "verify", "check", "output", "phase",
     "requirement", "nonempty", "fixture", "when ", "exit ",
 )
+# Named SSSF desk recipes. A Tunza-shaped ask is the live chip, not a stub.
+EXISTING_RECIPES = {
+    "tunza": "just tunza",
+}
+_NAMED_WORKFLOW = re.compile(
+    r"\b(?:named|id)\s+([a-z0-9][a-z0-9._-]*)"
+    r"|\b(?:new\s+factory\s+)?adw:\s*([a-z0-9][a-z0-9._-]*)"
+)
 
 
 def _stem(stem: str) -> str:
     return (stem or "").lower()
 
 
+def _named_new_workflow(text: str) -> str | None:
+    match = _NAMED_WORKFLOW.search(text or "")
+    if not match:
+        return None
+    return next((group for group in match.groups() if group), None)
+
+
 def route(request: str, stem: str = "") -> dict:
-    """Return {route, reason, questions}. route is build | not_workflow | forbidden_target | needs_human."""
+    """Return {route, reason, questions}. route is build | not_workflow | forbidden_target | needs_human | existing_recipe."""
     text = " ".join((request or "").lower().split())
     stem_l = _stem(stem)
     for pattern, why in HARD_FORBIDDEN:
@@ -63,6 +78,18 @@ def route(request: str, stem: str = "") -> dict:
     concrete = any(token in text for token in CONCRETE) or bool(re.search(r"(?m)^\s*[-*]\s+\S", request or ""))
     if stem_l in COMPLETE_STEMS:
         concrete = True
+    if stem_l not in VAGUE_STEMS:
+        new_id = _named_new_workflow(text)
+        for recipe_id, command in EXISTING_RECIPES.items():
+            if not re.search(rf"\b{re.escape(recipe_id)}\b", text):
+                continue
+            if new_id and new_id not in EXISTING_RECIPES and concrete:
+                break
+            return {
+                "route": "existing_recipe",
+                "reason": f"existing factory recipe — run {command}",
+                "questions": [],
+            }
     deliverables = [item.strip(" .") for item in re.findall(r"\bone for\s+([^,.;]+)", text)]
     if stem_l in VAGUE_STEMS or not concrete:
         questions = []
