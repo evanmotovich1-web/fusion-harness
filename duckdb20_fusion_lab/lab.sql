@@ -11,8 +11,8 @@
 --   5. Nested schemas, JSON mutation, FETCH FIRST, OVERLAY,
 --      UNNEST in GROUP BY, MERGE, NEAREST join, dialect mode,
 --      timezone conversion
--- Not in this file: quack/CONNECT (extension not installed, no network),
--- async I/O, on-disk storage format v2, stable C API.
+-- Not in this file: a live quack_serve / CONNECT session (LOAD quack works;
+-- no server was left running), async I/O, on-disk storage format v2, stable C API.
 -- USING KEY runs, but this alpha returns b=0.0, not the blog's 2.5.
 
 -- ---------------------------------------------------------------------------

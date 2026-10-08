@@ -1,5 +1,17 @@
 # Self-compaction verification — 2026-09-25
 
+## Current record — 2026-09-30
+
+Refreshed after the uncommitted API lease and session-lookup changes in `api.py` and `test_api.py`. This section is the current SHA and test count. Sections below are the 2026-09-25 and 2026-09-26 record and still say 63 tests. `verify.py` was not re-run on 2026-09-30 because it rewrites logs outside the two files this refresh is allowed to change. The running LaunchAgent was not restarted. Nothing was committed.
+
+| Item | Result |
+| --- | --- |
+| `extensions/self-compact/self-compact.ts` SHA-256 | `8c54a26da482f8e60c05e4860723a09175d1464dd940b399e0eab78cf7402bfd` |
+| `bun test extensions/self-compact/self-compact.test.ts` | Exit 0; **64 passed, 0 failed**, 128 `expect()` calls, one file. Bun 1.4.0. |
+| `python3 extensions/self-compact/test_api.py -v` | Exit 0; **6 passed, 0 failed**, 3.054s. Re-run against the landed `api.py`. |
+
+The TypeScript SHA-256 was recomputed from the working tree and matches the pin carried from the prior self-compact.ts check. `verification/results.json` stores that hash, the current `self-compact.test.ts`, `api.py`, and `test_api.py` hashes, and these counts. Prompt-file hashes were recomputed and are unchanged. The `checks` array in that JSON is still the 2026-09-26 `verify.py` snapshot.
+
 The implementation plan was saved at
 `self-compact/plans/2026-09-25-standalone-compaction.md` before this session's code
 changes. An older untracked extension and plan already existed; this work completed
