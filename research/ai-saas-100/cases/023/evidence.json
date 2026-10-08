@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-a021421682130e5ad8a0",
+      "source_url": "https://www.sembly.ai/",
+      "final_url": "https://www.sembly.ai/",
+      "publisher": "www.sembly.ai",
+      "retrieved_at": "2026-09-20T21:00:36.539183+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Agentic AI for Professional Services | Sembly AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Sembly — agentic AI platform for professional services. Build on-brand client documents and presentations from scratch. Try it free."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Agentic AI for Professional Services | Sembly AI"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Sembly AI"
+        },
+        {
+          "locator": "text characters 0:250",
+          "excerpt": "Agentic AI for Professional Services | Sembly AI\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany "
+        },
+        {
+          "locator": "text characters 0:288",
+          "excerpt": "Agentic AI for Professional Services | Sembly AI\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Mic"
+        },
+        {
+          "locator": "text characters 0:305",
+          "excerpt": "Agentic AI for Professional Services | Sembly AI\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndus"
+        },
+        {
+          "locator": "text characters 69:381",
+          "excerpt": "ution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & C"
+        },
+        {
+          "locator": "text characters 554:866",
+          "excerpt": "m\nTrust Center\nHelp Center\nPricing\nSign in\nStart free\n→\nWhy Sembly\n#1 AI Solution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndus"
+        },
+        {
+          "locator": "text characters 630:942",
+          "excerpt": "ution for Professional Services\nHow It Works\nHow It Compares to Other AI Platforms\nROI Calculator\nProduct\nArtifacts\nAgency\nClients & Branding\nMeetings\nAutomations\nSolutions\nCompany size\nEnterprise\nSMBs\nFreelancers & Micro-entities\nIndustries\nManagement Consultancy\nProject Management\nIT Outsourcing\nMarketing & C"
+        }
+      ],
+      "capture_path": "discovery/captures/a021421682130e5ad8a0.html",
+      "capture_sha256": "7512f3dc90b37a76c71ba6c32822fdff093d1b7062d0b2d57cb376906dcc57a7",
+      "record_path": "discovery/records/a021421682130e5ad8a0.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r023-53959c979f43772cecda",
+      "source_url": "https://www.sembly.ai/pricing/",
+      "publisher": "www.sembly.ai",
+      "retrieved_at": "2026-09-20T21:35:31.528119+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.sembly.ai/pricing/",
+      "capture_path": "cases/023/research/captures/53959c979f43772cecda.html",
+      "capture_sha256": "bb96fd834ad09cea4be5a1c62f925ec573551268698bed320029c2342bb06f5c",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/023/research/records/53959c979f43772cecda.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Pricing and Plans | Sembly AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Explore subscription options for freelancers, growing teams, and enterprises. Compare features, user limits, and production capacity."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Pricing and Plans | Sembly AI"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Sembly AI"
+        },
+        {
+          "locator": "text characters 1184:3670",
+          "excerpt": "Center\nHelp Center\nPricing\nSign in\nStart free\n→\nPricing\nChoose your production capacity\nEvery plan runs the same agentic platform. Plans differ by the clients you manage, the brandings you apply, and the deliverables you generate.\nMonthly\nAnnual\n· lower price\nBasic\nFor one practitioner running a full client roster.\n$10\nper month, billed annually\nChoose Basic Plan\n✓ 1 user, 25 clients, 50 brand packages\n✓ 2,500 credits per user each month\n✓ Unlimited capture and transcription in 45+ languages\n✓ Notes, summaries, tasks, and basic AI chat\n✓ 1 year of history\nMost popular\nPro\nFor teams up to 40 with several active client accounts.\n$20\nper user / month, billed annually\nChoose Pro Plan →\n✓ Up to 40 users, 100 clients, 200 brand packages\n✓ 3,000 credits per user each month\n✓ Multi-meeting AI chat and advanced search\n✓ Workspace automations, webhooks, and MCP access\n✓ Everything in Basic, plus 2 years of history\nMAX\nFor organizations up to 500 with high production volume.\n$30\nper user / month, billed annually\nChoose MAX Plan\n✓ 3 to 500 users, 500 clients, 1,000 brand packages\n✓ 3,500 credits per user\n✓ HD video capture and unlimited history\n✓ Custom SSO, audit log, and HIPAA compliance\n✓ Everything in Pro, plus priority support\nHow do the plans compare?\nCompare our plans and choose the best fit.\nFree Trial\n$0\nStart free\nBasic\n$10 / month\nChoose Basic\nPro\n$20 / user / month\nChoose Pro\nMAX\n$30 / user / month\nChoose MAX\nEnterprise\nCustom\nTalk to sales\nWorkspace\nMaximum users\n1\n1\n40\n500\nUnlimited\nMinimum users\n1\n1\n1\n3\n10\nCredits\nMonthly credits per user\n750\n2,500\n3,000\n3,500\n3,500\nOne-time bonus credits (new workspace)\n1,750\n2,500\n2,500\n2,500\nCustom\nAdditional Credits for Purchase\n—\n✓\n✓\n✓\n✓\nStudio\nClients per workspace\n5\n25\n100\n500\nCustom\nBrand packages per workspace\n5\n50\n200\n1,000\nCustom\nChat history\n2 months\n1 year\n2 years\nUnlimited\nUnlimited\nArtifact history\n2 months\n1 year\n2 years\nUnlimited\nUnlimited\nIntegrations, per user\n3\n3\n5\n20\n20\nIntegrations, workspace-wide\n—\n—\n5\n20\n20\nNotes\nMeeting transcription\n✓\n✓\n✓\n✓\n✓\nTranscript search\n✓\n✓\n✓\n✓\n✓\nMeeting notes and summaries\n✓\n✓\n✓\n✓\n✓\nTasks\n✓\n✓\n✓\n✓\n✓\nBasic AI chat\n✓\n✓\n✓\n✓\n✓\nCustom meeting notes templates\n—\n—\n✓\n✓\n✓\nMulti-meeting AI chat\n—\n—\n✓\n✓\n✓\nAdvanced transcript search\n—\n—\n✓\n✓\n✓\nSentiment analysis\n—\n—\n✓\n✓\n✓\nCollections of meetings\n—\n—\n✓\n✓\n✓\nRisks, issues, and notable events\n—\n—\n✓\n✓\n✓\nAuto-sharing\n—\n—\n✓\n✓\n✓\nRetention settings\n—\n—\n✓\n✓\n✓\nAnalytics dashboard\n—\n—\n✓\n✓\n✓\nMeeting capture\nGoogle Meet, Teams, Zoom,"
+        },
+        {
+          "locator": "text characters 1950:2504",
+          "excerpt": "each month\n✓ Multi-meeting AI chat and advanced search\n✓ Workspace automations, webhooks, and MCP access\n✓ Everything in Basic, plus 2 years of history\nMAX\nFor organizations up to 500 with high production volume.\n$30\nper user / month, billed annually\nChoose MAX Plan\n✓ 3 to 500 users, 500 clients, 1,000 brand packages\n✓ 3,500 credits per user\n✓ HD video capture and unlimited history\n✓ Custom SSO, audit log, and HIPAA compliance\n✓ Everything in Pro, plus priority support\nHow do the plans compare?\nCompare our plans and choose the best fit.\nFree Trial\n"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r023-ba96b6dc156fa0fe5e2a",
+      "source_url": "https://www.sembly.ai/how-it-works/",
+      "publisher": "www.sembly.ai",
+      "retrieved_at": "2026-09-20T21:35:31.539680+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.sembly.ai/how-it-works/",
+      "capture_path": "cases/023/research/captures/ba96b6dc156fa0fe5e2a.html",
+      "capture_sha256": "0d16e7ff3c01521ae0a5d0d79c8513f5dd0b98e0a9d85c66f2b18243d491a36f",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/023/research/records/ba96b6dc156fa0fe5e2a.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "How Sembly Works | Sembly AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Discover how to use Sembly to generate client brand kits, capture meetings, and create on-brand documents automatically."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "How Sembly Works | Sembly AI"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Sembly AI"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-3d7f7b177707ea146bec",
+      "source_url": "https://www.decktopus.com/",
+      "final_url": "https://www.decktopus.com/",
+      "publisher": "www.decktopus.com",
+      "retrieved_at": "2026-09-20T21:00:56.095582+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Decktopus is an AI presentation maker, that will create amazing presentations in seconds. You only need to type the presentation title and your presentation is ready."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+        },
+        {
+          "locator": "text characters 0:69",
+          "excerpt": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+        },
+        {
+          "locator": "text characters 0:69",
+          "excerpt": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+        },
+        {
+          "locator": "text characters 0:69",
+          "excerpt": "Decktopus AI | Make presentations with AI | AI Presentation Assistant"
+        }
+      ],
+      "capture_path": "discovery/captures/3d7f7b177707ea146bec.html",
+      "capture_sha256": "d28f9b034b3dc57149977b801512d6f6d059bf6a464085e3ef87e24e58bbf14c",
+      "record_path": "discovery/records/3d7f7b177707ea146bec.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

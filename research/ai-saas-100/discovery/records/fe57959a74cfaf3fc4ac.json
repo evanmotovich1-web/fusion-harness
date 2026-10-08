@@ -1,0 +1,109 @@
+{
+  "evidence_id": "web-fe57959a74cfaf3fc4ac",
+  "source_url": "https://consensus.app/",
+  "retrieved_at": "2026-09-20T21:00:37.135668+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://consensus.app/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/fe57959a74cfaf3fc4ac.html",
+  "capture_sha256": "049271d04fb5ef57815e4d28393c39bf1b9ba38e6fa85d78292d13bf8f2772be",
+  "bytes_saved": 28373,
+  "title": "Consensus: AI for Research",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "Consensus: AI for Research"
+    },
+    {
+      "key": "description",
+      "value": "Consensus is an AI academic search engine for peer-reviewed literature—your research OS for finding, organizing, and analyzing science 10x faster."
+    },
+    {
+      "key": "og:description",
+      "value": "Consensus is an AI academic search engine for peer-reviewed literature—your research OS for finding, organizing, and analyzing science 10x faster."
+    }
+  ],
+  "text": "Consensus: AI for Research\nSkip to main content\nResearch starts here\nSources\nCorpus\nDeep\nFilter",
+  "links": [
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://consensus.app/search/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/fonts/CircularXXWeb-Regular.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/CircularXXWeb-Medium.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/CircularXXWeb-Bold.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/fonts/RedditMono-VariableFont_wght.ttf",
+      "rel": "preload"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/images/icon-384.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_next/static/css/c7a28ab0bb8c1ccf.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/c7a28ab0bb8c1ccf.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/2372b7a001e5b49c.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/2372b7a001e5b49c.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://clerk.consensus.app/npm/@clerk/ui@1/dist/ui.browser.js",
+      "rel": "preload"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1591
+}

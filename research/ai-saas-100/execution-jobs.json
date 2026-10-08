@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "001",
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "cases/001/tests/run.py"
+    ],
+    "runner": "cases/001/tests/run.py",
+    "suite": "cases/001/tests/fixtures.json",
+    "implementation": "cases/001/implementation/workflow.py",
+    "input_bundle": "cases/001/tests/fixtures.json",
+    "input_bundle_scope": "Control-plane regression with embedded evaluator material; not a model input"
+  },
+  {
+    "case_id": "002",
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "cases/002/tests/repair-v2/run.py"
+    ],
+    "runner": "cases/002/tests/repair-v2/run.py",
+    "suite": "cases/002/tests/repair-v2/evaluator.json",
+    "implementation": "cases/002/implementation/workflow.py",
+    "input_bundle": "cases/002/tests/repair-v2/comparison-inputs.json",
+    "input_bundle_scope": "Complete state/request bundle separate from evaluator; explicit operations dispatched by adapter.py"
+  }
+]

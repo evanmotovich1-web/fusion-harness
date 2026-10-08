@@ -1,0 +1,329 @@
+{
+  "evidence_id": "web-9e9e4ef2204e9995e49e",
+  "source_url": "https://www.beautiful.ai/",
+  "retrieved_at": "2026-09-20T21:00:56.115732+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.beautiful.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/9e9e4ef2204e9995e49e.html",
+  "capture_sha256": "8aceeae34eb525a9065759cab9d92560fd8e0b04789a8955888ea12cb96fb31f",
+  "bytes_saved": 262144,
+  "title": "AI Presentation Software for Teams",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "The AI presentation platform built for enterprise teams. Beautiful.ai keeps every deck on-brand and ready to share across the whole company."
+    },
+    {
+      "key": "og:title",
+      "value": "AI Presentation Software for Teams"
+    },
+    {
+      "key": "og:description",
+      "value": "The AI presentation platform built for enterprise teams. Beautiful.ai keeps every deck on-brand and ready to share across the whole company."
+    }
+  ],
+  "text": "AI Presentation Software for Teams\nSkip to main content\nProduct\nDiscover Our Product\nHow it works\nFeature overview & explainer video\nSmart Slides\nFast editing with auto-aligning layouts\nAI Presentations\nTry our new AI workflow today\nBrand control\nCohesive visual styling & settings\nPresentation workflows\nScaling presentations for businesses\nData visualization\nDynamic graphs, charts, & data slides\nIntegrations\nConnect your favorite tools\nSolutions\nBusiness Need\nIndividuals\nConsultants & agencies\nSmaller businesses\nLarger enterprises\nUse cases\nMarketing presentations\nSales presentations\nStartup pitches\nReporting & analytics\nTraining & development\nFree plans for students\nTemplates\nSlide templates\nPresentation templates\nPricing\nEnterprise\nResources\nLatest feature updates\nCustomer stories\nHelp center\nBlog\nROI Calculator\nBook a demo\nBook a demo\nBook a demo\nTry it free\nTry it free\nTry it free\nLog in\nLog in\nLog in\nProduct\nDiscover Our Product\nHow it works\nFeature overview & explainer video\nSmart Slides\nFast editing with auto-aligning layouts\nAI Presentations\nTry our new AI workflow today\nBrand control\nCohesive visual styling & settings\nPresentation workflows\nScaling presentations for businesses\nData visualization\nDynamic graphs, charts, & data slides\nIntegrations\nConnect your favorite tools\nSolutions\nBusiness Need\nIndividuals\nConsultants & agencies\nSmaller businesses\nLarger enterprises\nUse cases\nMarketing presentations\nSales presentations\nStartup pitches\nReporting & analytics\nTraining & development\nFree plans for students\nTemplates\nSlide templates\nPresentation templates\nPricing\nEnterprise\nResources\nLatest feature updates\nCustomer stories\nHelp center\nBlog\nROI Calculator\nBook a demo\nBook a demo\nBook a demo\nTry it free\nTry it free\nTry it free\nLog in\nLog in\nLog in\nGet started\nGet started\nGet started\nA faster way to create\nprofessional presentations\nFrom sales to strategy, Beautiful.ai helps teams create polished presentations that reflect your brand everywhere they’re shared. Build faster with AI, professional templates, and auto-aligning Smart Slides that get you to work-ready decks 10x faster.\nStart a free trial\nStart a free trial\nStart a free trial\nWatch demo\nWatch demo\nWatch demo",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/59deb588800ae30001ec19c9/css/beautifulai.shared.2338de7a3.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/59deb588800ae30001ec19c9/691b4ac8c1ffe0a062a23de7_BAI%20Favicon.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/59deb588800ae30001ec19c9/691b4ae4a724e6c686bfb035_BAI%20symbol%3Dfull%20color%20black.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://vz-3cd3e5fb-391.b-cdn.net",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.beautiful.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "https://www.beautiful.ai/?",
+      "rel": null
+    },
+    {
+      "href": "/presentation-software",
+      "rel": null
+    },
+    {
+      "href": "/smart-slides",
+      "rel": null
+    },
+    {
+      "href": "/presentation-maker",
+      "rel": null
+    },
+    {
+      "href": "/brand-controls-themes",
+      "rel": null
+    },
+    {
+      "href": "/presentation-workflows",
+      "rel": null
+    },
+    {
+      "href": "/data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/pro",
+      "rel": null
+    },
+    {
+      "href": "/consultants-and-agencies",
+      "rel": null
+    },
+    {
+      "href": "/teams",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/sales",
+      "rel": null
+    },
+    {
+      "href": "/startups",
+      "rel": null
+    },
+    {
+      "href": "/reporting-analytics",
+      "rel": null
+    },
+    {
+      "href": "/education",
+      "rel": null
+    },
+    {
+      "href": "/slide-templates",
+      "rel": null
+    },
+    {
+      "href": "/presentations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/product-updates",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://support.beautiful.ai",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/demorequest",
+      "rel": null
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/presentation-software",
+      "rel": null
+    },
+    {
+      "href": "/smart-slides",
+      "rel": null
+    },
+    {
+      "href": "/presentation-maker",
+      "rel": null
+    },
+    {
+      "href": "/brand-controls-themes",
+      "rel": null
+    },
+    {
+      "href": "/presentation-workflows",
+      "rel": null
+    },
+    {
+      "href": "/data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/pro",
+      "rel": null
+    },
+    {
+      "href": "/consultants-and-agencies",
+      "rel": null
+    },
+    {
+      "href": "/teams",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/sales",
+      "rel": null
+    },
+    {
+      "href": "/startups",
+      "rel": null
+    },
+    {
+      "href": "/reporting-analytics",
+      "rel": null
+    },
+    {
+      "href": "/education",
+      "rel": null
+    },
+    {
+      "href": "/slide-templates",
+      "rel": null
+    },
+    {
+      "href": "/presentations",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/product-updates",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "https://support.beautiful.ai",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/roi-calculator",
+      "rel": null
+    },
+    {
+      "href": "/demorequest",
+      "rel": null
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    },
+    {
+      "href": "/onboarding",
+      "rel": null
+    },
+    {
+      "href": "#demo-video",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2078
+}

@@ -1,0 +1,85 @@
+{
+  "evidence_id": "r024-5ca7863192cbf49afe05",
+  "source_url": "https://www.compose.ai/pricing",
+  "publisher": "www.compose.ai",
+  "retrieved_at": "2026-09-20T21:35:31.720884+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.compose.ai/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/024/research/captures/5ca7863192cbf49afe05.html",
+  "capture_sha256": "c3d1414b6fbff477289ad6ee51b8c77c84ba45c6244cd39add8dc5ab38e81771",
+  "bytes_saved": 5369,
+  "title": "Compose AI | Pricing",
+  "metadata": [],
+  "text": "Compose AI | Pricing\nGet the most from AI\nChoose a plan that works for you. Cancel any time.\nRefund Policy\n|\nManaging Your Subscription\nFooter\nUse Cases\nCopywriting\nBlogging\nRecruiting\nSocial Media\nTry Compose AI on\nFacebook\nLinkedIn\nInstagram\nCompany\nHomepage\nGet Started\nExtension",
+  "links": [
+    {
+      "href": "/compose_logo_128.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/_next/static/css/d8cad556be2f051b.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/d8cad556be2f051b.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://intercom.help/compose-69ac66b1c271/en/articles/8397142-refund-policy-our-commitment-to-your-satisfaction",
+      "rel": null
+    },
+    {
+      "href": "https://intercom.help/compose-69ac66b1c271/en/articles/8289357-managing-your-compose-ai-subscription",
+      "rel": null
+    },
+    {
+      "href": "/copywriting",
+      "rel": null
+    },
+    {
+      "href": "/blogging",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/social-media",
+      "rel": null
+    },
+    {
+      "href": "/facebook",
+      "rel": null
+    },
+    {
+      "href": "/linkedin",
+      "rel": null
+    },
+    {
+      "href": "/instagram",
+      "rel": null
+    },
+    {
+      "href": "https://compose.ai",
+      "rel": null
+    },
+    {
+      "href": "https://welcome.compose.ai",
+      "rel": null
+    },
+    {
+      "href": "https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.102947
+}

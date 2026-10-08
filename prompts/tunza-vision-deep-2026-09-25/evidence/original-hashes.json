@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-09-25T02:51:45.398144+00:00",
+  "files": [
+    {
+      "path": "/Users/evanmotovich/Downloads/Tunza Vision.pdf",
+      "bytes": 34003,
+      "sha256": "df107bed48cc668a977767543595359fe25ee9632736703e8563a945cff6405a"
+    },
+    {
+      "path": "/Users/evanmotovich/output/pdf/Tunza Vision.pdf",
+      "bytes": 34003,
+      "sha256": "df107bed48cc668a977767543595359fe25ee9632736703e8563a945cff6405a"
+    },
+    {
+      "path": "/Users/evanmotovich/output/pdf/Tunza Vision.md",
+      "bytes": 5175,
+      "sha256": "5a8c3cc2ece287665ab61ce29a56870020686df2fc31dabd957c502d514c155a"
+    },
+    {
+      "path": "/tmp/tunza-who-annual-report-2025.pdf",
+      "bytes": 33296408,
+      "sha256": "30df6fac2f218c453683822d324487de9a0c656a9f2be11339de7be410be31ba"
+    }
+  ]
+}

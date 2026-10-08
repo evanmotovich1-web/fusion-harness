@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "task_id": "1.d",
+  "collaboration": "fusion-harness-1wQDAO",
+  "recorded_at_utc": "2026-09-22T03:33:52.192881+00:00",
+  "timestamp_scope": "Observed local UTC clock after read-only evidence inspection. Not a campaign start time or evidence of continuous execution since the prior assessment.",
+  "assessment_status": "completed",
+  "inference_status": "not_executed",
+  "usable_authorized_route_established": false,
+  "source_artifacts": [
+    {
+      "path": "capabilities.json",
+      "sha256": "a77ce438eb09481a7253806f402cfde29172e55374f6c5cefe9a474a98c8ed5d"
+    },
+    {
+      "path": "cases/001/research/inference-probes.json",
+      "sha256": "9852d604113dba671c4757a29db81627bf603391af39e71e9d95e9abaec0a589"
+    }
+  ],
+  "assessment_scope": {
+    "inspected": [
+      "Retained capability assessment and spending restriction",
+      "Retained loopback metadata probe results",
+      "Current task authorization and exposed tool descriptors",
+      "Campaign tools directory listing"
+    ],
+    "exposed_tools": ["read", "grep", "find", "ls", "bash", "edit", "write", "parallel tool wrapper"],
+    "exposed_configuration_finding": "The task and tool interfaces expose local execution and file access, but no separately callable inference interface, named no-additional-charge endpoint, or authorized subscription invocation procedure. Existing campaign tools are README.md, receipt.py and validate.py, not an inference adapter.",
+    "provider_configuration_files_inspected": false,
+    "environment_values_inspected": false,
+    "secret_values_inspected": false,
+    "home_directory_scanned": false,
+    "model_weights_searched_or_downloaded": false,
+    "limits": "This is a bounded assessment of retained and directly exposed evidence, not an exhaustive inventory of installed providers, accounts or services. It does not establish that no usable route exists elsewhere."
+  },
+  "retained_observations": {
+    "prior_probe_started_at": "2026-09-20T21:20:12.028070+00:00",
+    "loopback_metadata_endpoints": [
+      {"url": "http://127.0.0.1:11434/api/tags", "historical_result": "connection refused"},
+      {"url": "http://127.0.0.1:1234/v1/models", "historical_result": "connection refused"}
+    ],
+    "freshness_caveat": "These are historical failures, not a fresh assertion about current service availability. No positive configuration or authorization evidence justifies another probe in this task.",
+    "current_assistant_session": "Available for this conversation, but not evidence of a reproducible free endpoint that concrete workflows can invoke."
+  },
+  "precise_capability_gap": {
+    "missing": [
+      "A concrete callable endpoint or installed invocation route documented as currently authorized for these workflows",
+      "Explicit evidence that the route incurs no additional charge under current authorization",
+      "An executable request contract and observable output, model identity, usage and latency"
+    ],
+    "effect": "Cannot execute or compare real-model rewriting, natural-language CRM interpretation, or the generic-model baseline under the current evidence and spending restriction.",
+    "not_a_blocker_for": "Offline deterministic workflow development and local regression testing remain permitted.",
+    "stop_condition": "No authorized no-additional-charge route was established. Stop probing rather than guess endpoints, inspect secrets, install services, download models, or launch provider calls.",
+    "resume_condition": "New explicit evidence identifying a permitted callable no-additional-charge route, or a separately authorized budget and invocation route. Then run one bounded real request before writing a workflow adapter."
+  },
+  "execution_evidence": {
+    "kind": "non_execution_record",
+    "new_network_requests": 0,
+    "new_loopback_requests": 0,
+    "model_requests": 0,
+    "request": null,
+    "output": null,
+    "model": null,
+    "configuration": null,
+    "latency_seconds": null,
+    "usage": null,
+    "unknown_reason": "No model request attempted because no authorized callable no-additional-charge route was established.",
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "No inference run or billing receipt exists. This is not a zero-cost inference measurement. Current harness inference charges are not exposed."
+    },
+    "purchases_made": false,
+    "paid_provider_calls_made": false,
+    "authorized_additional_spend_usd": 0
+  },
+  "adapter": {
+    "created": false,
+    "reason": "An adapter without a verified usable route would be an untested placeholder."
+  },
+  "preservation": {
+    "capabilities_json_modified": false,
+    "historical_probe_record_modified": false,
+    "harness_settings_modified": false,
+    "permissions_modified": false,
+    "services_installed_or_started": false,
+    "background_processes_started": false
+  },
+  "handoff": "Use this dated non-execution evidence when recording inference blockers. Do not count it as model execution, failed model performance, pilot acceptance or sustained campaign activity. Continue authorized local work without repeating the old probes unless new route evidence arrives.",
+  "product_acceptance": false
+}

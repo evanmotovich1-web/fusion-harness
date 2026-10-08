@@ -1,0 +1,825 @@
+{
+  "evidence_id": "web-e13c31a44874bf56ad06",
+  "source_url": "https://instantly.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.704626+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://instantly.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/e13c31a44874bf56ad06.html",
+  "capture_sha256": "295240847342858b5be45803d9a60fd8ed113530dca5a243567fabc35c0987d4",
+  "bytes_saved": 143665,
+  "title": "Sales Engagement and Lead Intelligence | Instantly",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+    },
+    {
+      "key": "og:title",
+      "value": "Sales Engagement and Lead Intelligence | Instantly"
+    },
+    {
+      "key": "og:description",
+      "value": "Turn leads into clients with automated outreach, a B2B lead database, email deliverability tools, and an AI-powered CRM. Start free today."
+    }
+  ],
+  "text": "Sales Engagement and Lead Intelligence | Instantly\nGet the same outreach system behind Instantly’s own growth, set up your business\nLearn more\nLearn more\nProducts\nAI & Automation\nAI Sales Agent\nAI Reply Agent\nAI Agents\nAI SDR\nAI BDR\nAutomations\nLead Finder Agent\nNew\nInstantly AI\nLead Generation & Data\nLead Database\nVerification\nWebsite Visitors\nOutreach & Engagement\nOutreach\nCRM\nManaged Services\nDeliverability & Infrastructure\nAirMail\nNew\nEmail Accounts\nDeliverability\nInbox Placement\nRead The Cold Email Bench Report 2026\nExplore the latest trends\nUse Cases\nSales & Growth\nSales\nSales Development\nMarketing\nDevelopers\nNew\nBusiness Types\nAgencies\nFreelancers\nFounders\nAdvanced & Specialized\nEnterprise\nVIP Service\nRead The Cold Email Bench Report 2026\nExplore the latest trends\nResources\nKnowledge Hub\nInstantly Academy\nReviews\nBlog\nDaily Live Show\nDevelopers\nNew\nDemo Video\nNew\nInstantly Community\nSlack Community\nFacebook Group\nInstantly Creators\nPartners & Programs\nPartner Programs\nExperts\nMeet Our Partners\nAffiliate\nRefer A Friend\nSolution Partners\nTech & Support\nAPI\nHelp Desk\nCareers\nRead The Cold Email Bench Report 2026\nExplore the latest trends\nPricing\nRead The Cold Email Bench Report 2026\nExplore the latest trends\nGet a Demo\nLogin\nLogin\nGet a Demo\nGet Started\nGet Started\nGet Started\nFind Clients\nGet more clients by chatting to AI\nAsk Co-pilot to\ncreate a campaign...\nLet’s Copilot to find leads, emails, write copy and generate campaigns from start to finish automatically.\nWARP Mode\nCheckbox\nLet’s Copilot to find leads, emails, write copy and generate campaigns from start to finish automatically.\nCreate Sales Agent\nCreate Reply Agent\nFind Leads\nGet Started\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nUsed by the world's leading companies\nReach Clients On Autopilot\nUse Instantly AI to find perfect leads, create AI Sales Agents\nand automate your outreach & sales.\nStart For Free\nAutomate Your Outreach\nCreate & Launch campaigns in minutes.\nLet Instantly AI craft and personalize outreach at scale.\nStart For Free\nAI Workflows\nWorkflows that just work. When a lead visits your site, replies, or books a meeting, Instantly automatically routes them, tags them, and triggers next‑step campaigns—no manual setup needed.\nStart For Free\nConnect Your Tools\nInstantly works perfectly with all the products you're already using.\nStart For Free\nOptimized For Revenue\nTrack campaign performance beyond vanity metrics with Opportunities, Pipeline, Conversions, and Revenue.\nAutomatically pause the campaigns that need work and scale the ones that drive real business growth.\nStart For Free\nConnect Instantly to ChatGPT\nHandle everyday outbound work through a conversation. Find leads, create campaigns, organize and move leads, reply to prospects, or create agents that run your outbound autonomously.\nChatGPT\nClaude (Coming soon)\nConnect to ChatGPT\nCustomer Testimonials\nReal Results. Real Customers.\n\"The AI Reply Bot has been the best feature by far. It doesn't just save time - it's the reason clients stick with Instantly long term. Nobody wants to chase leads manually.\"\nJackson Kingsley\nFounder, Video Business Mastery\n\"Instantly has become one of the core pieces of our outbound infrastructure. It allows us to manage campaigns at scale while maintaining strong deliverability and giving our team the visibility we need to continuously improve performance. It's been instrumental in helping us build predictable outbound systems for our clients.\"\nTristan Wilhelmsen\nFounder, Forge Strategy\n\"We manage hundreds of mailboxes across dozens of concurrent campaigns, and deliverability is everything to us. Instantly gives us the control and visibility to keep clients landing in the inbox at scale.\"\nJosh Michaels\nFounder, Three Red Boxes\n\"As a 17-year-old company owner primarily serving clients and their email marketing needs, I have not run into a better end-to-end email system for B-to-B cold outreach and demand generation.\"\nTravis Piepho\nPartner, Prospectr Digital\n\"In cold email, deliverability is the number one thing.. if you don't have that, you have nothing. I wouldn't trust anyone else but Instantly to deliver the essentials. Reliable accounts, consistent warmup, and inbox placement we can count on.\nIt took a process that used to be a constant pain and made it dependable enough to build our whole operation on top of. We've never been happier with that side of our business.\"\nPerrin Moncur\nFounder, Rev Ascension\n\"Instantly has become the backbone of our outbound operations. Managing more than 17k mailboxes across multiple client accounts requires a platform that's reliable and easy to scale, and Instantly has delivered exactly that.\"\nJosh Withfield\nFounder, Content Marketing Media\n\"Instantly centralizes all of our cold emailing so we can focus on generating thousands of opportunities per year for our clients.\"\nPranam Lipinski\nFounder, Email Outreach Company\n\"We run cold email for performance marketing agencies, and Instantly is the platform we build every client on. It scales with us. Instantly.ai is the only sequencer we trust.\"\nAlexander Tsvetkov\nFounder, Cold Labs\n\"With Instantly I can replicate the production of a large sales team for my clients. The platform keeps getting better, staying on top of trends and deliverability. They really are a huge part of what I do.\"\nSean Wilson\nFounder, Vertical\n\"We've tested a lot of sequencers & ultimately Instantly has been the most helpful in generating revenue for our clients. It has all the functionality any advanced cold email initiative needs, while still being super user friendly.\"\nMike Ellis\nCo-Founder, Kale Acquisition\n“Instantly became the backbone of our outreach — over 100,000 emails sent across 20+ domains with 20%+ reply rates and a steady stream of qualified leads. It’s not just a sending tool, it’s our growth engine.”\nBriken Bufi\nCEO & Co-Founder of Aella Creative Force\n\"Instantly nails what most email tools get wrong - it's actually intuitive to set up and use. The integrations work seamlessly, and the UX doesn't make you want to pull your hair out.\"\nAlex Baldovin\nCEO, Authbound\nUnlock the power of AI\nWith\nGet started now to access exclusive templates and elevate your projects to the next level.\nStop letting poor deliverability kill your pipeline. Join 50,000+ sales teams who've made the switch to Instantly for better inbox placement, higher response rates, and more closed deals.\nGet Started\nNo credit card required.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nProducts\nAI Sales Agent\nOutreach\nLead Database\nVerification\nCRM\nWebsite Visitors\nInbox Placement\nDeliverability\nEmail Accounts\nInstantly AI\nAutomations\nLead Finder Agent\nAI Agents\nAI BDR\nAI Reply Agent\nAirMail\nManaged Services\nUse Cases\nAgencies\nFreelancers\nEnterprise\nFounders\nSales\nMarketing\nSales Development\nResources\nInstantly Academy\nDevelopers\nAPI\nHelp Desk\nBlog\nDaily Live Show\nDemo Video\nCareers\nAffiliate\nFacebook Group\nSlack Community\nPartner Programs\nSolution Partners\nExperts\nInstantly Creators\nMeet Our Partners\nRefer a Friend\nReviews\nQuick Links\nPricing\nPopular Resources\nCold Email\nAI Sales Agent\nAI Agent Frameworks\nApollo Alternatives\nLemlist Alternatives\nRocketReach Alternatives\nBest Cold Email Software\nAI Prospecting Tools\nCompany\nTerms\nAI Sales Agent Terms\nPrivacy\nDon’t Sell My Info\nPrivacy Center\nCookie Declaration\nProducts\nOutreach\nCRM\nVerification\nLead Database\nWebsite Visitors\nInbox Placement\nDeliverability\nEmail Accounts\nInstantly AI\nAI Sales Agent\nAutomations\nLead Finder Agent\nAI Agents\nAI Reply Agent\nAirmail\nAI Sales Agent\nUse Cases\nAgencies\nFreelancers\nEnterprise\nFounders\nSales\nVIP Service\nMarketing\nSales Development\nResources\nInstantly Academy\nAPI\nBlog\nDaily Live Show\nDemo Video\nHelp Desk\nInstantly Accelerator\nCareers\nAffiliate\nFacebook Group\nSlack Community\nExperts\nInstantly vs Apollo\nMeet Our Partners\nRefer a Friend\nReviews\nQuick Links\nPricing\nPopular Resources\nCold Email\nAI Sales Agent\nAI Agent Frameworks\nApollo Alternatives\nLemlist Alternatives\nRocketReach Alternatives\nBest Cold Email Software\nAI Prospecting Tools\nCompany\nTerms\nPrivacy\nDon’t Sell My Info\nPrivacy Center\nCookie Declaration\n© 2026 Instantly. All rights reserved.\nSitemap\nEnglish\nEnglish\nFind clients Instantly\nLog in\nSign Up",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/css/instantlycf.webflow.shared.0a6737cd1.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/63f62e4f7dc7e3426e9b7874_cleaned_rounded_favicon.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/63f62e4d1df86f1bf7f133d5_cleaned_rounded.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://instantly.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/sales-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/reply-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/ai-sdr-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-bdr",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/automations",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/lead-generation-agent",
+      "rel": null
+    },
+    {
+      "href": "/copilot",
+      "rel": null
+    },
+    {
+      "href": "/b2b-lead-finder",
+      "rel": null
+    },
+    {
+      "href": "/email-verification",
+      "rel": null
+    },
+    {
+      "href": "/website-visitors",
+      "rel": null
+    },
+    {
+      "href": "/outreach",
+      "rel": null
+    },
+    {
+      "href": "/crm",
+      "rel": null
+    },
+    {
+      "href": "/vip",
+      "rel": null
+    },
+    {
+      "href": "/airmail",
+      "rel": null
+    },
+    {
+      "href": "/email-accounts",
+      "rel": null
+    },
+    {
+      "href": "/email-warmup",
+      "rel": null
+    },
+    {
+      "href": "/inbox-placement",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/cold-email-benchmark-report-2026",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@InstantlyAI",
+      "rel": null
+    },
+    {
+      "href": "/sales",
+      "rel": null
+    },
+    {
+      "href": "/sales-development",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "/agency",
+      "rel": null
+    },
+    {
+      "href": "/freelancers",
+      "rel": null
+    },
+    {
+      "href": "/founders",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/vip",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/cold-email-benchmark-report-2026",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@InstantlyAI",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "/resources/show",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "/demo-video",
+      "rel": null
+    },
+    {
+      "href": "/slack-community",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/coldemailmasterclass",
+      "rel": null
+    },
+    {
+      "href": "/creators",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/experts",
+      "rel": null
+    },
+    {
+      "href": "/marketplace",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "/refer-a-friend",
+      "rel": null
+    },
+    {
+      "href": "/solution-partners",
+      "rel": null
+    },
+    {
+      "href": "https://developer.instantly.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://help.instantly.ai/en/",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/cold-email-benchmark-report-2026",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@InstantlyAI",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/cold-email-benchmark-report-2026",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "https://chatgpt.com/plugins/plugin_asdk_app_6a0c111db3e081918e05f333267f98ef",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/sales-agent",
+      "rel": null
+    },
+    {
+      "href": "/outreach",
+      "rel": null
+    },
+    {
+      "href": "/b2b-lead-finder",
+      "rel": null
+    },
+    {
+      "href": "/email-verification",
+      "rel": null
+    },
+    {
+      "href": "/crm",
+      "rel": null
+    },
+    {
+      "href": "/website-visitors",
+      "rel": null
+    },
+    {
+      "href": "/inbox-placement",
+      "rel": null
+    },
+    {
+      "href": "/email-warmup",
+      "rel": null
+    },
+    {
+      "href": "/email-accounts",
+      "rel": null
+    },
+    {
+      "href": "/copilot",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/automations",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/lead-generation-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/ai-bdr",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/reply-agent",
+      "rel": null
+    },
+    {
+      "href": "/airmail",
+      "rel": null
+    },
+    {
+      "href": "/vip",
+      "rel": null
+    },
+    {
+      "href": "/agency",
+      "rel": null
+    },
+    {
+      "href": "/freelancers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/founders",
+      "rel": null
+    },
+    {
+      "href": "/sales",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/sales-development",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "/developers",
+      "rel": null
+    },
+    {
+      "href": "https://developer.instantly.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://help.instantly.ai/en/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/live/sQIWhts8sGo?si=cafAAn_gVjXoIG7-",
+      "rel": null
+    },
+    {
+      "href": "/demo-video",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/coldemailmasterclass",
+      "rel": null
+    },
+    {
+      "href": "/slack-community",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/solution-partners",
+      "rel": null
+    },
+    {
+      "href": "/experts",
+      "rel": null
+    },
+    {
+      "href": "/creators",
+      "rel": null
+    },
+    {
+      "href": "/marketplace",
+      "rel": null
+    },
+    {
+      "href": "/refer-a-friend",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/cold-email/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/ai-sales-agent/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/ai-agent-frameworks/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/apollo-alternatives/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/lemlist-alternative/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/rocketreach-alternatives/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/best-cold-email-software-for-b2b-marketing-teams-2026/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/best-ai-sales-prospecting-tools/",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/sales-agent-terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/privacy/opt-out?comet_token_override=34967373305527400693866001412585108803017679407",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/privacy/info?comet_token_override=820923030382246070234077429281280031282237164922",
+      "rel": null
+    },
+    {
+      "href": "/cookie-notice",
+      "rel": null
+    },
+    {
+      "href": "/outreach",
+      "rel": null
+    },
+    {
+      "href": "/crm",
+      "rel": null
+    },
+    {
+      "href": "/email-verification",
+      "rel": null
+    },
+    {
+      "href": "/b2b-lead-finder",
+      "rel": null
+    },
+    {
+      "href": "/website-visitors",
+      "rel": null
+    },
+    {
+      "href": "/inbox-placement",
+      "rel": null
+    },
+    {
+      "href": "/email-warmup",
+      "rel": null
+    },
+    {
+      "href": "/email-accounts",
+      "rel": null
+    },
+    {
+      "href": "/copilot",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/sales-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/automations",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/lead-generation-agent",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/reply-agent",
+      "rel": null
+    },
+    {
+      "href": "/airmail",
+      "rel": null
+    },
+    {
+      "href": "/ai-agents/sales-agent",
+      "rel": null
+    },
+    {
+      "href": "/agency",
+      "rel": null
+    },
+    {
+      "href": "/freelancers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/founders",
+      "rel": null
+    },
+    {
+      "href": "/sales",
+      "rel": null
+    },
+    {
+      "href": "/vip",
+      "rel": null
+    },
+    {
+      "href": "/marketing",
+      "rel": null
+    },
+    {
+      "href": "/sales-development",
+      "rel": null
+    },
+    {
+      "href": "/academy",
+      "rel": null
+    },
+    {
+      "href": "https://developer.instantly.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/live/sQIWhts8sGo?si=cafAAn_gVjXoIG7-",
+      "rel": null
+    },
+    {
+      "href": "/demo-video",
+      "rel": null
+    },
+    {
+      "href": "https://help.instantly.ai/en/",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/affiliate",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/coldemailmasterclass",
+      "rel": null
+    },
+    {
+      "href": "/slack-community",
+      "rel": null
+    },
+    {
+      "href": "/experts",
+      "rel": null
+    },
+    {
+      "href": "/instantly-vs-apollo-alternative",
+      "rel": null
+    },
+    {
+      "href": "/marketplace",
+      "rel": null
+    },
+    {
+      "href": "/refer-a-friend",
+      "rel": null
+    },
+    {
+      "href": "/reviews",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/cold-email/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/ai-sales-agent/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/ai-agent-frameworks/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/apollo-alternatives/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/lemlist-alternative/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/rocketreach-alternatives/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/best-cold-email-software-for-b2b-marketing-teams-2026/",
+      "rel": null
+    },
+    {
+      "href": "https://instantly.ai/blog/best-ai-sales-prospecting-tools/",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/privacy/opt-out?comet_token_override=34967373305527400693866001412585108803017679407",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/privacy/info?comet_token_override=820923030382246070234077429281280031282237164922",
+      "rel": null
+    },
+    {
+      "href": "/cookie-notice",
+      "rel": null
+    },
+    {
+      "href": "/sitemap",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@InstantlyAI",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/instantlyapp",
+      "rel": null
+    },
+    {
+      "href": "https://www.facebook.com/groups/coldemailmasterclass",
+      "rel": null
+    },
+    {
+      "href": "/slack-community",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/InstantlyAI?lang=en",
+      "rel": null
+    },
+    {
+      "href": "https://www.instagram.com/instantly.ai/",
+      "rel": null
+    },
+    {
+      "href": "/?r=0",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/login",
+      "rel": null
+    },
+    {
+      "href": "https://app.instantly.ai/auth/signup",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1508
+}

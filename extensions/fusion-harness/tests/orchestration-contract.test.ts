@@ -81,6 +81,14 @@ describe("orchestration contracts", () => {
     expect(source).toContain("await ensureSummary(artifactsDir");
   });
 
+  test("collaboration plans reserve command execution for write mode", () => {
+    const delegate = prompt("USER_PROMPT_COLLAB_DELEGATE.md");
+    expect(delegate).toContain("Read executors get read/grep/find/ls ONLY — no command execution: they cannot run tests, validation, builds, or linters.");
+    expect(delegate).toContain("Any task that must execute anything is mode write");
+    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+    expect(cmdBuild).toContain("tools: write ? FULL_TOOLS : READONLY_TOOLS");
+  });
+
   test("lanes: builders write in parallel worktrees, only the architect writes the checkout", () => {
     // Every builder child runs with FULL tools but its cwd is its own lane, never ctx.cwd.
     expect(source).toContain("cwd: lane.path");

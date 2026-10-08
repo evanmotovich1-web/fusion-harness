@@ -1,0 +1,381 @@
+{
+  "evidence_id": "web-51a194b50948c600523e",
+  "source_url": "https://grain.com/",
+  "retrieved_at": "2026-09-20T21:00:36.299571+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://grain.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/51a194b50948c600523e.html",
+  "capture_sha256": "41d8ca8032d99c2a125e9edd14ac2e5808026fa12d8e595f9a1ccfe44a257f42",
+  "bytes_saved": 172217,
+  "title": "Grain | The AI Notetaker Built for Growing Teams",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Grain gives you accurate meeting summaries, account insights, and coaching suggestions in an easy-to-use product built for growing teams."
+    },
+    {
+      "key": "og:title",
+      "value": "Grain | The AI Notetaker Built for Growing Teams"
+    },
+    {
+      "key": "og:description",
+      "value": "Grain gives you AI-powered meeting recording for everyone, not just sales."
+    }
+  ],
+  "text": "Grain | The AI Notetaker Built for Growing Teams\nGrain Homepage\nProduct\nGrain AI\nIntegrations\nChangelog\nUse Cases\nSales\nAgencies & Consultants\nProduct & User Research\nCustomer Success\nHiring & Recruiting\nRemote Teams\nCompany\nAbout Us\nCareers\nCustomers\nResources\nBlog\nAI Workflows\nHelp Center\nSelf-guided Product Tour\nContact Us\nCompare\nGong\nClari\nJiminny\nPricing\nGrain for Sales\nSign In\nGet Grain for Free\nBook a Demo\nGet Grain Free\nSign In\nBook a Demo\nBook my demo\nGet started free\n300+ reviews\n250+ testimonials\nThe AI notetaker for\nagents\nand teams\nGrain captures and enriches your meetings, then delivers them to Claude, ChatGPT, or any AI tool so your agents can do the work. Start recording in minutes.\nGet started - free forever\nBook my demo\nFree forever\nBots optional\nNo credit card required\nWorks with:\nWant help onboarding your team?\nTop teams use Grain to power their AI\nSOC 2 audited\nGDPR compliant\nEverything your AI agents and team need from meetings\nGrain is free to use, simple to set up, and cost-effective for your entire company.\nUniversal capture\nCapture every meeting, everywhere.\nContext for AI\nEnrich your transcripts with the full picture, not just raw text.\nAI agent integrations\nPower your agents to do the work after the meeting.\nTeam collaboration\nAccelerate team learning and alignment.\nUniversal capture\nCapture your meetings, on any platform, with or without a bot\nBot-less transcription\nGrain transcribes your computer's audio without meeting bots joining your call.\nVideo recording with bots\nGet video recordings with the Grain bot in the meeting even when you can't attend.\nCapture rules\nType notes, tag important moments, or clip segments to perfect your insights during your meeting.\nBot-less transcription\nGrain transcribes your computer's audio without meeting bots joining your call.\nVideo recording with bots\nGet video recordings with the Grain bot in the meeting even when you can't attend.\nCapture rules\nSet rules for which meetings get recorded, so everything you want is captured without thinking about it.\nContext for AI\nGive your agents the full picture behind every meeting\nEnriched transcripts\nTranscripts with participant and cross-meeting context. Available in 100+ languages in clean Markdown.\nYour notes, in the context\nAdd notes, clips, and action items during meetings that sync to the transcript and flow to your AI agents.\nAction-items & AI notes\nAction items and meeting summaries for every meeting shareable from Grain or sent straight to your inbox.\nEnriched transcripts\nTranscripts with participant and cross-meeting context. Available in 100+ languages in clean Markdown.\nYour notes, in the context\nAdd notes, flags, and action items during meetings that sync to the transcript and flow to your AI agents.\nAction-items & AI notes\nAction items and meeting summaries for every meeting shareable from Grain or sent straight to your inbox.\nAI agent integrations\nPut your meeting data to work in Claude, ChatGPT, or any AI tool\nOne-click AI export\nBulk download enriched Markdown transcripts or open them directly in Claude or ChatGPT.\nMCP Server & API\nLet your AI agents query transcripts, search across meetings, and access your full meeting history.\nAsk anything inside Grain\nAsk questions across your entire meeting library and get answers with precise citations in Grain.\nOne-click AI export\nBulk download enriched Markdown transcripts or open them directly in Claude or ChatGPT.\nMCP Server & API\nLet your AI agents query transcripts, search across meetings, and access your full meeting history.\nAsk anything inside Grain\nAsk questions across your entire meeting library and get answers with precise citations in Grain.\nTeam collaboration\nKeep your whole team in sync, automatically\nSharing\nShare clips, projects, and full meeting recordings with teammates and clients so everyone can stay in sync.\nTeams\nCreate teams for automatic group sharing. Only the right people get access automatically.\nCRM sync\nSync notes and properties to HubSpot or Salesforce contacts and deals so your reps can skip the data entry.\nSharing\nShare clips, projects, and full meeting recordings with teammates and clients so everyone can stay in sync.\nTeams\nCreate teams for automatic group sharing. Only the right people get access automatically.\nCRM sync\nSync notes and properties to HubSpot or Salesforce contacts and deals so your reps can skip the data entry.\n↗ Customer results\nTeams using Grain are hyper productive\n75%+\nAction items handled by agents\nAgents complete most follow-up tasks directly from Grain meeting context.\n8+\nhours saved\nSaved weekly per person\nRecaps, follow-ups, and CRM updates happen without manual work.\n3x\nfaster\nFrom meeting to work done\nTeams finish follow-up work three times faster after each meeting.\nBased on Grain customer interviews, 2026\nGrain integrations + AI destinations\nIntegrations with Claude, ChatGPT, Slack, HubSpot, Zapier, API and more make it effortless to get your meeting data wherever you need it.\nExplore Integrations\nFrequently Asked Questions\nWhat is Grain?\nGrain is an AI notetaker and conversation intelligence platform that records video calls, Slack huddles, and in-person meetings to provide accurate summaries, insights, and coaching feedback. Unlike other notetaking tools, Grain captures all meeting content: video, desktop captured audio, and resulting transcripts and notes. We make it easy to share meaningful data with your clients and collaborators, and to transform your meeting data into actionable insights and deliverables using AI technology.\nWho is Grain for?\nGrain serves any team that relies on meetings, but we specialize in small to mid-market and enterprise sales, customer success, and product teams. These teams benefit most from automated meeting capture, call analysis, team coaching features, and AI-powered deliverables using meeting data that save time and improve collaboration.\nHow do I use Grain with my team?\nSend clips, share notes, and deliver feedback to teammates with Grain's built-in Teams feature. Create groups to organize and automatically share specific meeting types with exactly who needs access, streamlining collaboration.\n‍\nHow much does Grain cost?\nGrain offers a free plan with unlimited meetings for teams. Paid plans start at $15/month per user for unlimited meetings, advanced AI, conversational intelligence, and additional features. No hidden fees or long-term contracts required.\nWhat's included in the free plan?\nThe free plan includes unlimited recordings, transcripts, basic AI notes, a collaborative workspace, and desktop capture. You can use Grain for free forever, with a 45-minute meeting limit and 90-day meeting history. Upgrade for advanced AI features, conversational intelligence, priority support, unlimited meeting length, and unlimited meeting history.\nHow much time do I save with Grain vs. manual note-taking?\nOn average, users save about 10 minutes per meeting by eliminating manual note-taking and follow-ups. Over a month, that's 20+ hours per team member that can be reinvested in coaching, strategy, or revenue-driving activities instead.\nIs Grain secure and compliant?\nYes. Grain holds SOC 2 Type II. All data is hosted on AWS infrastructure in the USA within a dedicated virtual private cloud (VPC). Grain conducts annual penetration testing by third-party firms (Prescient Security) and maintains an A+ Qualys/SSL Labs rating. User authentication uses Google, Microsoft, or SSO, with SAML for enterprise clients coming soon. For more details, see\nhttps://grain.com/security\n.\nDo I need permission to record meetings with Grain?\nIn most regions you are required to inform participants that a meeting is being recorded, and in some jurisdictions you must obtain explicit consent from all parties. Grain helps by clearly indicating when a bot is present or recording, but you remain responsible for complying with local recording and privacy laws.\nDoes Grain share my data with AI providers?\nGrain uses AI models to provide its services. Neither Grain nor its subprocessors use your data for model training. See a list of our subprocessors here:\nhttps://grain.com/grain-subprocessors\n.\n‍\nCan I delete my meetings and data from Grain?\nYes. You can delete individual meetings, entire sets of recordings, or your workspace data from within Grain. When you delete content, it is removed from your workspace and associated sharing targets, and Grain enforces backend deletion according to its data retention and security policies.\nHow do CRM integrations work?\nGrain integrates with Salesforce, HubSpot, Pipedrive, and other leading CRMs to automatically sync meeting summaries, transcripts, and insights to deal records. See how each integration works at\nhttps://grain.com/integrations\n.\nHow does Grain compare to competitors like Fathom, Gong, or tl;dv?\nGrain offers simple, transparent pricing starting at $15/month with no hidden fees or contracts. Unlike enterprise-heavy alternatives, Grain delivers powerful conversation intelligence at a fraction of typical costs while maintaining ease of use and fast deployment.\nWhy should we transcribe our meetings?\nTranscripts create a searchable record of work completed in meetings, which AI then converts into actionable summaries. Without transcripts, meeting outcomes remain invisible to the organization, creating inefficiencies in follow-up and institutional knowledge sharing.\nWhat languages does Grain support?\nGrain supports over 130 languages for meeting transcription and AI notes. Common languages like English, Spanish, French, German, Italian, Portuguese, and Japanese deliver the highest accuracy with speaker recognition and punctuation. Over 100 additional languages including Arabic, Hebrew, and Thai are also supported.\nTry Grain today. It’s free forever.\nCapture every meeting. Enrich your transcripts. Feed your AI.\nTranscribe and summarize meetings, no bots required.\n14-day free trial\nFree and paid seats\nCancel anytime\nGet started free\nBook a demo\nTry for free\nLearn more\nStart a 14-day free Trial\n97% of teams stay on Grain after 12 months.\nhello@grain.com\nFollow Grain on LinkedIn\nFollow Grain on Twitter\nFollow Grain on YouTube\nFollow Grain on Facebook\nProduct\nIntegrations\nSecurity\nPrivacy\nInteractive Demo\nPricing\nDownload\nUse Cases\nSales\nProduct & Research\nCustomer Success\nHiring & Recruiting\nRemote Teams\nCompany\nAbout Us\nCustomers\nCareers\nContact Us\nResources\nBlog\nHelp Center\nAI Workflows\nIntegrations\nChangelog\nSelf-guided Product Tour\nFAQ\nSubscribe to our newsletter\nGet monthly email updates about the improvements and roadmaps we might change\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nGrain Homepage\n©\n2026\nGrain Intelligence Inc. All rights reserved.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/5f5e90c17e7c9eb95c7acb17/css/grainweb.webflow.shared.dafc11d45.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/5f5e90c17e7c9eb95c7acb17/css/grainweb.webflow.6553adca89bb880f7017147f.6d73a1442.opt.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/5f5e90c17e7c9eb95c7acb17/61d3457a519242f2c75c725c_favicon.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/5f5e90c17e7c9eb95c7acb17/5f7c00be1be3c48c24ce7977_Grain-Web-Clip.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://grain.com",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/release-notes",
+      "rel": null
+    },
+    {
+      "href": "/conversation-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/use-case/agencies-and-consultants",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product",
+      "rel": null
+    },
+    {
+      "href": "/use-case/customer-success",
+      "rel": null
+    },
+    {
+      "href": "/use-case/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/use-case/team-meetings",
+      "rel": null
+    },
+    {
+      "href": "/company",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/ai-workflows",
+      "rel": null
+    },
+    {
+      "href": "https://support.grain.com/en/",
+      "rel": null
+    },
+    {
+      "href": "/resource/self-guided-product-tour",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/compare/gong",
+      "rel": null
+    },
+    {
+      "href": "/compare/clari",
+      "rel": null
+    },
+    {
+      "href": "/compare/jiminny",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/conversation-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "#get-started-section",
+      "rel": null
+    },
+    {
+      "href": "/live-demo",
+      "rel": null
+    },
+    {
+      "href": "/app/signup",
+      "rel": null
+    },
+    {
+      "href": "/login",
+      "rel": null
+    },
+    {
+      "href": "/live-demo",
+      "rel": null
+    },
+    {
+      "href": "/live-demo",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://www.g2.com/products/grain/reviews",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/live-demo",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "#ai-meeting-notes",
+      "rel": null
+    },
+    {
+      "href": "#meeting-automation",
+      "rel": null
+    },
+    {
+      "href": "#coaching",
+      "rel": null
+    },
+    {
+      "href": "#team-collaboration",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "https://grain.com/security",
+      "rel": null
+    },
+    {
+      "href": "https://grain.com/grain-subprocessors",
+      "rel": null
+    },
+    {
+      "href": "https://grain.com/integrations",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/live-demo",
+      "rel": null
+    },
+    {
+      "href": "https://grain.com/app/signup",
+      "rel": null
+    },
+    {
+      "href": "#https://support.grain.com/en/articles/12022918-desktop-capture-ai-notes-for-every-meeting-without-a-bot",
+      "rel": null
+    },
+    {
+      "href": "/app/signup",
+      "rel": null
+    },
+    {
+      "href": "mailto:hello@grain.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/grainhq/",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://twitter.com/GrainHQ",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCJ8JwSUW68njZbycrxhTGMQ",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://www.facebook.com/usegrain/",
+      "rel": "noopener"
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/resource/self-guided-product-tour",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/conversation-intelligence",
+      "rel": null
+    },
+    {
+      "href": "/use-case/product",
+      "rel": null
+    },
+    {
+      "href": "/use-case/customer-success",
+      "rel": null
+    },
+    {
+      "href": "/use-case/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/use-case/team-meetings",
+      "rel": null
+    },
+    {
+      "href": "/company",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "mailto:hello@grain.com?subject=Hello%20Grain%20Team%20(footer)",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://support.grain.com/en/",
+      "rel": null
+    },
+    {
+      "href": "/ai-workflows",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/release-notes",
+      "rel": null
+    },
+    {
+      "href": "/resource/self-guided-product-tour",
+      "rel": null
+    },
+    {
+      "href": "/faq",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1878
+}

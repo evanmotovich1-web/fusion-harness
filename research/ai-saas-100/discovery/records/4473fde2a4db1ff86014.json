@@ -1,0 +1,61 @@
+{
+  "evidence_id": "web-4473fde2a4db1ff86014",
+  "source_url": "https://elicit.com/",
+  "retrieved_at": "2026-09-20T21:00:37.070131+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://elicit.com/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/4473fde2a4db1ff86014.html",
+  "capture_sha256": "c28068e8aa0f0caa3c18bb0cfb1b0f0d32ccba4310343bd09ff83ca39e919328",
+  "bytes_saved": 262144,
+  "title": "Elicit: AI for scientific research",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Use AI to search, summarize, extract data from, and chat with over 125 million papers. Used by over 2 million researchers in academia and industry."
+    },
+    {
+      "key": "og:title",
+      "value": "Elicit: AI for scientific research"
+    },
+    {
+      "key": "og:description",
+      "value": "Use AI to search, summarize, extract data from, and chat with over 125 million papers. Used by over 2 million researchers in academia and industry."
+    }
+  ],
+  "text": "Elicit: AI for scientific research",
+  "links": [
+    {
+      "href": "https://elicit.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://framerusercontent.com/images/GBpaTmhagvahuZIt8uDryBpioi4.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/nTulAU73crVvwMnbFVIXh8QTIfo.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/GWXKVhGBLC34aTLlmLIMsRVb4.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    }
+  ],
+  "elapsed_seconds": 0.3178
+}

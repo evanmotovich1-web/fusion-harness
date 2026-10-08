@@ -1,0 +1,638 @@
+{
+  "evidence_id": "r006-efc7c1c3dcb4c9d73daa",
+  "source_url": "https://www.clay.com/integrations",
+  "publisher": "www.clay.com",
+  "retrieved_at": "2026-09-20T21:35:25.748784+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.clay.com/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "cases/006/research/captures/efc7c1c3dcb4c9d73daa.html",
+  "capture_sha256": "2bfe58139303fed8506f2c51d0b2704738ce6a40a7830ad9605c46ec52a74a6a",
+  "bytes_saved": 262144,
+  "title": "Integrations | Clay.com",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Discover what data you can find with Clay's 50+ built-in data providers from title to work email address to department headcount growth."
+    },
+    {
+      "key": "og:title",
+      "value": "Integrations | Clay.com"
+    },
+    {
+      "key": "og:description",
+      "value": "Discover what data you can find with Clay's 50+ built-in data providers from title to work email address to department headcount growth."
+    }
+  ],
+  "text": "Integrations | Clay.com\nThe most creative minds in GTM. October 8, San Francisco\nGet tickets\n→\nCopy logo to clipboard (png)\nCopied!\nCopy logo to clipboard (png)\nCopied!\nDownload brand assets\nDownloaded!\nBack\nProduct\nProduct\nSolutions\nSolutions\nResources\nResources\nCompany\nCompany\nPricing\nPricing\n⌘\nK\nLog in\nGet a demo\nStart free trial\nData infrastructure\nAudiences\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long form description will go in this slot here.\nAI formatting\nLink long form description will go in this slot here.\nExecution\nAds\nSync targeted ad audiences to Linkedin, Meta, and Google\nSequencer\nUse Clay's native sequencer or automate messaging\nClay MCP\nGive reps the best prospecting data in their AI tools\nData foundations\nCRM enrichment\nLink long form description will go in this slot here.\nTAM sourcing\nLink long form description will go in this slot here.\nTerritory planning\nLink long form description will go in this slot here.\nReverse ETL\nLink long form description will go in this slot here.\nPipeline generation\nOutbound\nLink long form description will go in this slot here.\nAutomated inbound\nBuild ads audiences and sync them to major ad platforms\nPLG assist\nLink long form description will go in this slot here.\nABM\nLink long form description will go in this slot here.\nRep productivity\nRep prospecting\nLink long form description will go in this slot here.\nAccount research\nLink long form description will go in this slot here.\nRep assist\nLink long form description will go in this slot here.\nDepartment\nGTM Ops\nLink long form description will go in this slot here.\nMarketing\nLink long form description will go in this slot here.\nSales\nLink long form description will go in this slot here.\nEnterprise\nLink long form description will go in this slot here.\nStartup\nLink long form description will go in this slot here.\nIntercom\nGrew their outbound-sourced pipeline by +140%\nLearn to build on Clay\nUniversity\nLink long form description will go in this slot here.\nGuides\nLink long form description will go in this slot here.\nLivestreams\nLink long form description will go in this slot here.\nCohort live classes\nLink long form description will go in this slot here.\nConnect with GTM engineers\nClay community\nLink long form description will go in this slot here.\nSlack\nLink long form description will go in this slot here.\nLive events\nLink long form description will go in this slot here.\nStartup program\nLink long form description will go in this slot here.\nCampus ambassadors\nLink long form description will go in this slot here.\nWork with GTM engineers\nFind Clay experts\nLink long form description will go in this slot here.\nGTM Engineer job board\nLink long form description will go in this slot here.\nPartner with Clay\nBecome a partner\nLink long form description will go in this slot here.\nSolution partners\nLink long form description will go in this slot here.\nIntegration partners\nLink long form description will go in this slot here.\nPrivate Equity\nLink long form description will go in this slot here.\nClay Community\nIn Nigeria, she built a life where money wouldn’t decide\nOUR COMPANY\nAbout\nLink long form description will go in this slot here.\nCareers\nLink long form description will go in this slot here.\nOpen roles\nLink long form description will go in this slot here.\nBlog\nGET IN TOUCH\nContact\nLink long form description will go in this slot here.\nPress\nLink long form description will go in this slot here.\nSOCIALS\nLinkedIn\nLink long form description will go in this slot here.\nYouTube\nLink long form description will go in this slot here.\nArticle – NY Times\nClay allows employees to sell shares at a $5b valuation.\nProduct\nUse Cases\nSolutions\nResources\nCompany\nPricing\nData infrastructure\nAudiences\nCentralize your first and third party data sources in Clay\nData marketplace\nBuy data from 200+ providers in one place\nSignals and Intent\nTrack job changes promotions or other signals\nWaterfall\nCombine multiple data providers for the best coverage\nAgents\nClaygents\nResearch target companies and people with AI\nAccount Agents\nResearch target companies and people with AI\nAgent plugin CLI/API\nBuild in Clay directly via a coding agent with API and CLI\nMCP for reps\nTrack job changes promotions or other signals\nOrchestration\nWorkflows\nLink long form description will go in this slot here.\nFunctions\nLink long form description will go in this slot here.\nAI formatting\nLink long form description will go in this slot here.\nExecution\nAds\nSync targeted ad audiences to Linkedin, Meta, and Google\nSequencer\nUse Clay's native sequencer or automate messaging\nClay MCP\nGive reps the best prospecting data in their AI tools\nCRM enrichment\nLink long form description will go in this slot here.\nRep prospecting\nLink long form description will go in this slot here.\nAutomated inbound\nBuild ads audiences and sync them to major ad platforms\nABM\nLink long form description will go in this slot here.\nReverse ETL\nLink long form description will go in this slot here.\nOutbound\nLink long form description will go in this slot here.\nPLG assist\nLink long form description will go in this slot here.\nTAM sourcing\nLink long form description will go in this slot here.\nAccount research\nLink long form description will go in this slot here.\nRep assist\nLink long form description will go in this slot here.\nTerritory planning\nLink long form description will go in this slot here.\nBY CUSTOMERS\nCustomers\nLink long form description will go in this slot here.\nIntercom\nLink long form description will go in this slot here.\nMerge\nLink long form description will go in this slot here.\nLovable\nLink long form description will go in this slot here.\nRootly\nLink long form description will go in this slot here.\nRegency Supply\nLink long form description will go in this slot here.\nCRM enrichment\nKeep your CRM clean with the highest quality data\nData foundations\nCRM enrichment\nLink long form description will go in this slot here.\nTAM sourcing\nLink long form description will go in this slot here.\nTerritory planning\nLink long form description will go in this slot here.\nReverse ETL\nLink long form description will go in this slot here.\nPipeline generation\nOutbound\nLink long form description will go in this slot here.\nAutomated inbound\nBuild ads audiences and sync them to major ad platforms\nPLG assist\nLink long form description will go in this slot here.\nABM\nLink long form description will go in this slot here.\nRep productivity\nRep prospecting\nLink long form description will go in this slot here.\nAccount research\nLink long form description will go in this slot here.\nRep assist\nLink long form description will go in this slot here.\nDepartment\nGTM Ops\nLink long form description will go in this slot here.\nMarketing\nLink long form description will go in this slot here.\nSales\nLink long form description will go in this slot here.\nEnterprise\nLink long form description will go in this slot here.\nStartup\nLink long form description will go in this slot here.\nIntercom\nGrew their outbound-sourced pipeline by +140%\nLearn to build on Clay\nUniversity\nLink long form description will go in this slot here.\nGuides\nLink long form description will go in this slot here.\nLivestreams\nLink long form description will go in this slot here.\nCohort live classes\nLink long form description will go in this slot here.\nConnect with GTM engineers\nClay community\nLink long form description will go in this slot here.\nSlack\nLink long form description will go in this slot here.\nLive events\nLink long form description will go in this slot here.\nStartup program\nLink long form description will go in this slot here.\nCampus ambassadors\nLink long form description will go in this slot here.\nWork with GTM engineers\nFind Clay experts\nLink long form description will go in this slot here.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/css/fs-clay.shared.852e9fb65.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab841a6313dc068fb8_dot-com_favicon_2026_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab841a6313dc068fb8_dot-com_favicon_2026_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab03ef81bab42cb009_dot-com_favicon_2026_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab3c92c9caa6245619_dot-com_favicon_2026_512.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92abeec5075ebf511920_dot-com_favicon_2026_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab2ebcb50096cbd51a_dot-com_favicon_2026_512.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.clay.com/integrations",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.intellimize.co/snippet/117293819.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://api.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://log.intellimize.co",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://117293819.intellimizeio.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.sculpt.clay.com",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://app.clay.com/",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.clay.com/signup?source=nav",
+      "rel": null
+    },
+    {
+      "href": "/audiences",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/signals",
+      "rel": null
+    },
+    {
+      "href": "/waterfall-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/claygent",
+      "rel": null
+    },
+    {
+      "href": "/account-agents",
+      "rel": null
+    },
+    {
+      "href": "/agent-plugin",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/workflows",
+      "rel": null
+    },
+    {
+      "href": "/functions",
+      "rel": null
+    },
+    {
+      "href": "/ai-formula",
+      "rel": null
+    },
+    {
+      "href": "/ads",
+      "rel": null
+    },
+    {
+      "href": "/sequencer",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/tam-sourcing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/territory-planning",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/reverse-etl",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/outbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/plg-assist",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/abm",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-research",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-assist",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-gtm-ops",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-marketing",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-sales",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/customers/intercom",
+      "rel": null
+    },
+    {
+      "href": "https://university.clay.com/",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/livestreams",
+      "rel": null
+    },
+    {
+      "href": "https://university.clay.com/cohorts",
+      "rel": null
+    },
+    {
+      "href": "https://community.clay.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.clay.com/slack-community",
+      "rel": null
+    },
+    {
+      "href": "https://luma.com/claylive?k=c",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/clay-campus-ambassadors",
+      "rel": null
+    },
+    {
+      "href": "/experts",
+      "rel": null
+    },
+    {
+      "href": "/job-board",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/partners/solutions",
+      "rel": null
+    },
+    {
+      "href": "/partners/integrations",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-private-equity",
+      "rel": null
+    },
+    {
+      "href": "https://www.clay.com/blog/sandra-uche",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/jobs",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/contact",
+      "rel": null
+    },
+    {
+      "href": "/press",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/grow-with-clay/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@GrowWithClay",
+      "rel": null
+    },
+    {
+      "href": "https://www.nytimes.com/2026/01/28/business/dealbook/clay-start-up-tender-offers.html?unlocked_article_code=1.H1A.LBNX.YbS98P3kIG8Q&smid=url-share",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/audiences",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/signals",
+      "rel": null
+    },
+    {
+      "href": "/waterfall-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/claygent",
+      "rel": null
+    },
+    {
+      "href": "/account-agents",
+      "rel": null
+    },
+    {
+      "href": "/agent-plugin",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/workflows",
+      "rel": null
+    },
+    {
+      "href": "/functions",
+      "rel": null
+    },
+    {
+      "href": "/ai-formula",
+      "rel": null
+    },
+    {
+      "href": "/ads",
+      "rel": null
+    },
+    {
+      "href": "/sequencer",
+      "rel": null
+    },
+    {
+      "href": "/mcp",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/abm",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/reverse-etl",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/outbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/plg-assist",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/tam-sourcing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-research",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-assist",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/territory-planning",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/customers/intercom",
+      "rel": null
+    },
+    {
+      "href": "/customers/merge",
+      "rel": null
+    },
+    {
+      "href": "/customers/lovable",
+      "rel": null
+    },
+    {
+      "href": "/customers/rootly",
+      "rel": null
+    },
+    {
+      "href": "/customers/regency-supply",
+      "rel": null
+    },
+    {
+      "href": "https://www.clay.com/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/crm-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/tam-sourcing",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/territory-planning",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/reverse-etl",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/outbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound-enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/plg-assist",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/abm",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-prospecting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/account-research",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/rep-assist",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-gtm-ops",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-marketing",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-sales",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/customers/intercom",
+      "rel": null
+    },
+    {
+      "href": "https://university.clay.com/",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/livestreams",
+      "rel": null
+    },
+    {
+      "href": "https://university.clay.com/cohorts",
+      "rel": null
+    },
+    {
+      "href": "https://community.clay.com/",
+      "rel": null
+    },
+    {
+      "href": "https://www.clay.com/slack-community",
+      "rel": null
+    },
+    {
+      "href": "https://luma.com/claylive?k=c",
+      "rel": null
+    },
+    {
+      "href": "/clay-for-startups",
+      "rel": null
+    },
+    {
+      "href": "/clay-campus-ambassadors",
+      "rel": null
+    },
+    {
+      "href": "/experts",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.174781
+}

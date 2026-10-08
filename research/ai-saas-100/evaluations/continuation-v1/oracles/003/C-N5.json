@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-N5",
+  "requires_inference": true,
+  "kind": "crm",
+  "expected_contacts": [
+    {
+      "id": "c1",
+      "name": "Mira",
+      "email": "MIRA@example.invalid",
+      "status": "new",
+      "note": ""
+    },
+    {
+      "id": "c2",
+      "name": "Mira",
+      "email": "mira@example.invalid",
+      "status": "new",
+      "note": "Existing note"
+    },
+    {
+      "id": "c3",
+      "name": "Noor",
+      "email": "noor@example.invalid",
+      "status": "new",
+      "note": ""
+    }
+  ],
+  "preapproval_unchanged": true
+}

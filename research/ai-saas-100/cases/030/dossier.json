@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "030",
+    "name": "Flair",
+    "canonical_url": "https://flair.ai/",
+    "category": "C07",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-7961da55bd49ecea23c8"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "flair.ai",
+    "selection_position": 30,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "E-commerce teams producing branded product photos",
+    "job": "Create a product scene from an original synthetic product cutout and a constrained visual brief",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "image_path": "PNG or JPEG",
+      "generation_receipt": "object",
+      "preservation_report": "object"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Create a product scene from an original synthetic product cutout and a constrained visual brief",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "Displayed plans include Free $0, Pro $8/month, Pro+ $26/month and Scale $38/month. An annual-discount control is present, so monthly-versus-annual selection is unverified.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "E-commerce teams producing branded product photos",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "mokker.ai",
+        "name": "Mokker",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available product and follow-up captures without establishing a reliable current paying-customer count. Absence or incomplete rendering does not mean zero users."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Inspected available public descriptions. No proprietary training corpus, exclusive provider rights, patented advantage, or unique customer data access independently established. Private contracts and model internals were not accessed."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-7961da55bd49ecea23c8",
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-7961da55bd49ecea23c8": "2026-09-20T21:00:44.978048+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Integrate AI-powered content generation directly into your workflow with our comprehensive API.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r030-c0ec5be1f7a7f527e4d4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+          "locator": "metadata[0].description",
+          "excerpt": "Integrate AI-powered content generation directly into your workflow with our comprehensive API."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r030-c0ec5be1f7a7f527e4d4": "2026-09-20T21:35:37.815122+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: E-commerce teams producing branded product photos.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8",
+        "r030-c0ec5be1f7a7f527e4d4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-7961da55bd49ecea23c8",
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        },
+        {
+          "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+          "locator": "metadata[0].description",
+          "excerpt": "Integrate AI-powered content generation directly into your workflow with our comprehensive API."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-7961da55bd49ecea23c8": "2026-09-20T21:00:44.978048+00:00",
+          "r030-c0ec5be1f7a7f527e4d4": "2026-09-20T21:35:37.815122+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "Displayed plans include Free $0, Pro $8/month, Pro+ $26/month and Scale $38/month. An annual-discount control is present, so monthly-versus-annual selection is unverified.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r030-f91bd7f158510b53316b"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r030-f91bd7f158510b53316b",
+          "locator": "text characters 0:2128",
+          "excerpt": "Pricing Plans | AI Photo Editing Software | Flair.ai | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nAnnual discount\nFree\n$0\nForever\nYour Current Plan\nFeatures:\n1 Custom Model\n5 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n1 video generation\nPro\n$8\nPer month\nGet Pro\nFeatures:\n2 video generations\nFaster Rendering Speed\nImage Upscales\nImage Variations\nPro+\n$26\nPer month\nGet Pro+\nFeatures:\nUp to 8 Standard or 2 Fast Custom Models\n80 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n3 video generations\nFirst Priority Rendering Speed\nImage Upscales\nImage Variations\nCompany Commercial License\nScale\n$\n38\nPer month\nTier 1\nGet Scale Tier\n1\nFeatures:\nUp to 15 Standard or 4 Fast Custom Models\n150 generated images\nInstant image generation and Ad generation cost 4x times the generated image quota\n5 video generations\nFirst Priority Rendering Speed\nImage Upscales & Variations\nCompany Commercial License\nAI Product Photography API Early Access\nPriority Customer Support\nEnterprise\nCustom\nPer month\nContact us\nFeatures:\nEverything in Pro+\nCustom credit amounts.\nUnlimited API access\nCompany Commercial License\nPriority support\nEnterprise\nFlair Enterprise offers custom model training, SAML-based SSO, unlimited API access, dedicated success manager, and more.\nContact sales\nWhiteglove onboarding support\nCustom Model training\nDedicated Slack channel\nCustom billing\nUnlimited API calls\nDedicated integration support\nCompany\nPricing\nEnterprise\nCareers\nTerms of Service\nBlog\nFAQ\nKey Features\nBulk Content Generation\nOn Model Photography\nAI Product Videos\nAI Marketing & Ads\nAI Human Builder\nFlair API\nProduct Categories\nAI Beauty\nAI Consumer Packaged Goods\nAI Jewelry\nAI Fashion Models\nAI Furniture\nAI Technology\nAI Handbags\nAI Food\nEditing Tools\nRegenerate Product\nRegenerate Human\nMagic Erase\nUpscale\nVirtual Try On\nEnhance Image Resolution\nGenerate Variations\nExtend Image Dimensions\nView all tools\n© 2025 Flair AI. All rights reserved.\nTwitter\nLinkedIn\nInstagram\nYouTube\nEmail"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r030-f91bd7f158510b53316b": "2026-09-20T21:35:37.709907+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: PI\nIntegrate AI-powered content generation directly into your workflow with our comprehensive API.\nHow It Works\n1\nGet API access\nSign up for API access with flexible plans based on your usage requirements and content volume.\n2\nIntegrate with your systems\nUse our SDKs and code examples to seamlessly integrate Flair's AI capabilities into your existing workflows.\n3\nScale your content production\nGenerate thousands of product images, videos, and marketing assets programmatically at scale.\nReady to scale your content creation?\nJoin forward-thinki",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r030-c0ec5be1f7a7f527e4d4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+          "locator": "text characters 115:662",
+          "excerpt": "PI\nIntegrate AI-powered content generation directly into your workflow with our comprehensive API.\nHow It Works\n1\nGet API access\nSign up for API access with flexible plans based on your usage requirements and content volume.\n2\nIntegrate with your systems\nUse our SDKs and code examples to seamlessly integrate Flair's AI capabilities into your existing workflows.\n3\nScale your content production\nGenerate thousands of product images, videos, and marketing assets programmatically at scale.\nReady to scale your content creation?\nJoin forward-thinki"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r030-c0ec5be1f7a7f527e4d4": "2026-09-20T21:35:37.815122+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Mokker advertises: Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-fb7a16d773659d8bd691"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-fb7a16d773659d8bd691",
+          "locator": "metadata[0].description",
+          "excerpt": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-fb7a16d773659d8bd691": "2026-09-20T21:00:44.978192+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Mokker. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8",
+        "web-fb7a16d773659d8bd691"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-7961da55bd49ecea23c8",
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        },
+        {
+          "evidence_id": "web-fb7a16d773659d8bd691",
+          "locator": "metadata[0].description",
+          "excerpt": "Upload a photo of a product and Mokker AI magically replaces the background in a realistic way - no more photoshop looks. Try it for free."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-7961da55bd49ecea23c8": "2026-09-20T21:00:44.978048+00:00",
+          "web-fb7a16d773659d8bd691": "2026-09-20T21:00:44.978192+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-7961da55bd49ecea23c8",
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-7961da55bd49ecea23c8": "2026-09-20T21:00:44.978048+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Product fidelity, custom models, shared brand assets, batch processing, and API licensing may matter beyond prompt-based background generation.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8",
+        "r030-c0ec5be1f7a7f527e4d4"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-7961da55bd49ecea23c8",
+          "locator": "metadata[0].description",
+          "excerpt": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+        },
+        {
+          "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+          "locator": "metadata[0].description",
+          "excerpt": "Integrate AI-powered content generation directly into your workflow with our comprehensive API."
+        },
+        {
+          "evidence_id": "r030-c0ec5be1f7a7f527e4d4",
+          "locator": "text characters 115:662",
+          "excerpt": "PI\nIntegrate AI-powered content generation directly into your workflow with our comprehensive API.\nHow It Works\n1\nGet API access\nSign up for API access with flexible plans based on your usage requirements and content volume.\n2\nIntegrate with your systems\nUse our SDKs and code examples to seamlessly integrate Flair's AI capabilities into your existing workflows.\n3\nScale your content production\nGenerate thousands of product images, videos, and marketing assets programmatically at scale.\nReady to scale your content creation?\nJoin forward-thinki"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-7961da55bd49ecea23c8": "2026-09-20T21:00:44.978048+00:00",
+          "r030-c0ec5be1f7a7f527e4d4": "2026-09-20T21:35:37.815122+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/030/tests/specification.json",
+    "sha256": "80c3217372dd00457529c7012fbc90bd8e25594a15159a37e43385075a180f22",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review",
+      "Authorized actual image/video generation and visual evaluation; JSON descriptions are insufficient."
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:44.978048+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-7961da55bd49ecea23c8",
+        "r030-c0ec5be1f7a7f527e4d4",
+        "r030-f91bd7f158510b53316b",
+        "web-fb7a16d773659d8bd691"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

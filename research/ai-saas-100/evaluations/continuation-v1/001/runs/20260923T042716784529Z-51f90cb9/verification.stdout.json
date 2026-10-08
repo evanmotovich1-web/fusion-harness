@@ -1,0 +1,19 @@
+{
+  "status": "verified",
+  "receipt_sha256": "f6211042f54beec87f5340ee5d0d9f70b8713a0d8eeb7641945eef29405fa3ed",
+  "artifact_hashes_verified": 170,
+  "frozen_artifacts_verified": 38,
+  "group_attempts": 20,
+  "local_invocations": 22,
+  "group_outcomes": {
+    "blocked": 15,
+    "passed": 5
+  },
+  "invocation_outcomes": {
+    "blocked": 15,
+    "passed": 7
+  },
+  "capability_sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda",
+  "source_sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74",
+  "product_acceptance": false
+}

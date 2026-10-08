@@ -1,0 +1,341 @@
+{
+  "evidence_id": "web-b2ef0092a9e247029a7c",
+  "source_url": "https://www.regie.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.704462+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://regie.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/b2ef0092a9e247029a7c.html",
+  "capture_sha256": "e3db3409f66dd8f479bbb29b97f6ba74034bc048d8d91e0a1d005a7ed8eff905",
+  "bytes_saved": 162211,
+  "title": "Regie.ai - The AI Sales Assistant for Sellers",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "AI agents that source, enrich, dial, and email from your own inbox, plus LinkedIn tasks. One workspace, $49/mo. Start free."
+    },
+    {
+      "key": "application-name",
+      "value": "Regie.ai"
+    },
+    {
+      "key": "og:title",
+      "value": "Regie.ai - The AI Sales Assistant for Sellers"
+    },
+    {
+      "key": "og:description",
+      "value": "AI agents that source, enrich, dial, and email from your own inbox, plus LinkedIn tasks. One workspace, $49/mo. Start free."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Regie.ai"
+    }
+  ],
+  "text": "Regie.ai - The AI Sales Assistant for Sellers\nSkip to content\n10,000 free credits\nMeet RegieGO, the future of outbound.\nSign up this week and get 10,000 credits.\nUse code\nWELCOME10K\nClaim credits\nProducts\nSections of the home page\nAI Agents\nPrompt to do anything\nRelevant Messaging\nPersonalized, sent for you\nChannel Orchestration\nCalls, queued and ready\nSales-Ready AI\nYour list, ready to work\nAlways-On Pipeline\nVerified data, no gaps\nUse Cases\nCold Outbound\nAI prospecting without the science project\nStrategic Prospecting\nBreak into the accounts that decide your year\nPower Dialer\nParallel dialing with the research done\nRun Your Day\nMake your follow-through as inevitable as your quota reset\nSee all use cases →\nWho It's For\nFor Prospecting Reps\nFull-cycle AEs, SDRs & founding reps\nFor Founders\nFounder-led selling in a box\nWhy RegieGO →\nPricing\nLog in\nGet a demo\nStart free\nThe fastest path from ICP to pipeline\nRegieGO is an agentic sales workspace with built-in enrichment, emailing, dialing and workflows that gets you prospecting end to end from a single chat.\nStart free\nSee how it works\nAI Agents\nDelegate the boring parts of pipeline generation to\nAI\nPrompt Regie once and it handles your sourcing, ranking, call prep, and follow-ups so you spend the day talking to active prospects instead of chasing them.\nTry agents\nRelevant Messaging\nShow up with a message that\nmoves buyers to act\nRegie learns your voice and your company's pitch, finds the 'why-now' on every account, and writes every message with a compelling reason to respond, so you see higher reply rates and more booked meetings.\nTry relevant messaging\nRegieGO\nEmail Composer\nWhy-Now\nNorthwind Cloud\nPriya Rao\n·\nVP Sales\nSeries C closed · 3d ago\nNew VP Sales started\nHiring 12 AEs\nTrained on your voice\nEmail Composer\nFrom: You\nTo:\nPriya Rao\nWhy-Now\nNorthwind Cloud\nPriya Rao\n·\nVP Sales\nSeries C closed · 3d ago\nNew VP Sales started\nHiring 12 AEs\nTrained on your voice\nEmail Composer\nFrom: You\nTo:\nPriya Rao\nChannel Orchestration\nDominate the phone, email and social from\none platform\nRegie weaves your touchpoints across channels into cohesive plays that build familiarity, so your prospecting returns compound with every activity via a tool that gets smarter with each interaction.\nExplore Channel Orchestration\nRegieGO\nOutreach Play\nOutreach Play\nNorthwind Cloud\nPriya Rao\nVP Sales\nMulti-channel outreach play\n3 channels · 1 sequence · Run by Regie\nEmail\nLinkedIn\nPhone\nExecution Timeline\nEmail\nDay 1\nLinkedIn\nDay 2\nEmail Follow-up\nDay 4\nPhone Call\nDay 6\nConnection Likelihood\n18\n%\nOutreach Play\nNorthwind Cloud\nPriya Rao\nVP Sales\nMulti-channel outreach play\n3 channels · 1 sequence · Run by Regie\nEmail\nLinkedIn\nPhone\nExecution Timeline\nEmail\nDay 1\nLinkedIn\nDay 2\nEmail Follow-up\nDay 4\nPhone Call\nDay 6\nConnection Likelihood\n18\n%\nSales-Ready AI\nUse AI that already knows\nthe sales game\nThe original genAI sales platform, Regie has delivered and analyzed billions of sales messages. The result is a product pre-baked with the prompts and automations you need to start driving high-quality engagement on day one.\nTry sales-ready AI\nRegieGO\nSales-Ready AI\nConnectors\nTools & Connectors\nAlready in place\nHubSpot CRM\nWaiting…\nGmail\nWaiting…\nLinkedIn\nWaiting…\nDialer\nWaiting…\nEnrichment\nWaiting…\nPre-built plays · ready to run\nWaiting…\nWaiting…\nWaiting…\nDay 1 activity\nOutreach Sent\n--\nDials Made\n--\nMeetings Booked\n--\nConnectors\nTools & Connectors\nAlready in place\nHubSpot CRM\nWaiting…\nGmail\nWaiting…\nLinkedIn\nWaiting…\nDialer\nWaiting…\nEnrichment\nWaiting…\nPre-built plays · ready to run\nWaiting…\nWaiting…\nWaiting…\nDay 1 activity\nOutreach Sent\n--\nDials Made\n--\nMeetings Booked\n--\nAlways-On Pipeline\nControl your own scalable\npipeline engine\nTake the guesswork and luck out of prospecting by having Regie do your ops and admin for you: tracking why-now signals, recommending and enriching contacts, automating your plays, and reporting back with results.\nExplore Always-On Pipeline\nRegieGO\nAlways-On Pipeline\nTracking why-now signals, always on.\nNorthwind Cloud\nSeries C closed · detected today\nVertex Labs\nNew VP Sales started · detected today\nLumen Health\nHiring 12 AEs · detected today\nTurning them into plays that run daily.\nPost-funding outreach\nRunning daily\nNew-exec intro play\nRunning daily\nHiring-surge play\nRunning daily\nReporting back with results today.\n--\nAccounts Worked\n--\nReplies\nTracking why-now signals, always on.\nNorthwind Cloud\nSeries C closed · detected today\nVertex Labs\nNew VP Sales started · detected today\nLumen Health\nHiring 12 AEs · detected today\nTurning them into plays that run daily.\nPost-funding outreach\nRunning daily\nNew-exec intro play\nRunning daily\nHiring-surge play\nRunning daily\nReporting back with results today.\n--\nAccounts Worked\n--\nReplies\nBy Regie.ai\nProduct\nAI Agents\nRelevant Messaging\nChannel Orchestration\nSales-Ready AI\nAlways-On Pipeline\nPower Dialer\nIntegrations\nFor Prospecting Reps\nFor Founders\nCompany\nAbout us\nWhy RegieGO\nGet a demo\nCareers\nContact us\nResources\nPricing\nCustomer Stories\nBlogs\nAI Prompt Library\nCold Calling 101\nGuides\nWebinars & Videos\nResources\nUse Cases\nCold Outbound\nSpeed to Lead\nWebsite Visitor Identification\nStrategic Prospecting\nLead Enrichment\nRun Your Day\nAll Use Cases\n©\n2026\nRegie.ai. All rights reserved.\nPrivacy\nTerms\nDo Not Sell or Share My Personal Information\nCookie preferences\nWe use cookies\nEssential cookies keep the site working. With your permission we also use analytics and marketing cookies. Details in our\nPrivacy Policy\n.\nReject all\nAccept all\nManage preferences",
+  "links": [
+    {
+      "href": "/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/cc2b2ba9b11d3453-s.p.3mm4bn5tfabgi.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/chunks/4591hnjw1uw2i.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/2x6pz97wt_kox.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/chunks/0dk_14w2_fmo8.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://regie.ai",
+      "rel": "author"
+    },
+    {
+      "href": "/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://regie.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/favicon.ico?favicon.23inhmdkz2s3y.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/icon.png?icon.27lxxb4ap21gh.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-icon.png?apple-icon.0e-eqbrxfnpds.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=promo-welcome10k",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=promo-welcome10k",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/#ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/#relevant-messaging",
+      "rel": null
+    },
+    {
+      "href": "/#channel-orchestration",
+      "rel": null
+    },
+    {
+      "href": "/#sales-ready-ai",
+      "rel": null
+    },
+    {
+      "href": "/#always-on-pipeline",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/outbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/named-account-signals",
+      "rel": null
+    },
+    {
+      "href": "/dialer",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/run-your-day",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/prospecting-reps",
+      "rel": null
+    },
+    {
+      "href": "/founders",
+      "rel": null
+    },
+    {
+      "href": "/why-regie",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=header",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=home-hero",
+      "rel": null
+    },
+    {
+      "href": "#ai-agents",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=feature-ai-agents",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=feature-relevant-messaging",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=feature-channel-orchestration",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=feature-sales-ready-ai",
+      "rel": null
+    },
+    {
+      "href": "https://go.regie.ai/sign-in?ref=feature-always-on-pipeline",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/regie-ai",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/regieai",
+      "rel": null
+    },
+    {
+      "href": "/#ai-agents",
+      "rel": null
+    },
+    {
+      "href": "/#relevant-messaging",
+      "rel": null
+    },
+    {
+      "href": "/#channel-orchestration",
+      "rel": null
+    },
+    {
+      "href": "/#sales-ready-ai",
+      "rel": null
+    },
+    {
+      "href": "/#always-on-pipeline",
+      "rel": null
+    },
+    {
+      "href": "/dialer",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/prospecting-reps",
+      "rel": null
+    },
+    {
+      "href": "/founders",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/why-regie",
+      "rel": null
+    },
+    {
+      "href": "/demo",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "mailto:hello@regie.ai",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/prompt-library",
+      "rel": null
+    },
+    {
+      "href": "/resources/category/cold-calling",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "/webinars-and-videos",
+      "rel": null
+    },
+    {
+      "href": "/resources",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/outbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/inbound",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/website-retargeting",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/named-account-signals",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/use-cases/run-your-day",
+      "rel": null
+    },
+    {
+      "href": "/use-cases",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/do-not-sell",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.4789
+}

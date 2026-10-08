@@ -1,0 +1,7 @@
+{
+  "test_id": "S-A4",
+  "attempt": 1,
+  "input_sha256": "aee342fe7b5699be9772545ae5f907a5cd6935fa756f681e537d58bfb808be21",
+  "oracle_sha256": "05eadfcc28453761b134822d48c5333b1a5c3ad89e70b117584792a1f65cdea2",
+  "oracle_supplied_to_scheduler": false
+}

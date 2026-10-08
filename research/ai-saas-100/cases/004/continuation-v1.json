@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "case_id": "004",
+  "name": "LanguageTool",
+  "recorded_at": "2026-09-22T04:25:39.602841+00:00",
+  "scope": "Bounded follow-up to existing dossier; no rediscovery or accepted product",
+  "research_status": "bounded_followup_completed_commercial_research_incomplete",
+  "research_findings": {
+    "path": "cases/004/research/continuation-v1/findings.md",
+    "sha256": "06229c552051573924169c62f8d71d9b28c7bab9056e88b3aa65fd91848397f6"
+  },
+  "new_source_record": {
+    "path": "cases/004/research/continuation-v1/capture-20260922T041401432516Z.json",
+    "sha256": "7f6099ada5f861520bfee088ef7c5dff682ea893a8fb016fb461361bff8c9fed"
+  },
+  "original_dossier": {
+    "path": "cases/004/dossier.json",
+    "sha256": "4710241593818039039440facd5fbb6dcbe6d4b45232980ee54ba49fa1ff9eb3"
+  },
+  "frozen_original_specification": {
+    "path": "cases/004/tests/specification.json",
+    "sha256": "0ace548d99c4f172dfec2f316a000af3b505e1a07acc25babecebe129c56b7ad"
+  },
+  "historical_preservation": {
+    "path": "cases/004/research/continuation-v1/preservation.json",
+    "sha256": "6b1961a748ce25058ee6a943fa0342de1dffbc7427d5b9b9431d3f4309d3f54a"
+  },
+  "historical_files_changed": [],
+  "work_completed": "source_followup_only",
+  "implementation": null,
+  "source_snapshot": null,
+  "execution_receipt": null,
+  "component_checks_passed": 0,
+  "original_workflow_tests_passed": null,
+  "test_count_scope": "Builder-visible component rows, including reused historical inputs; not independent product observations",
+  "central_workflow_complete": false,
+  "product_status": "incomplete",
+  "accepted": false,
+  "blockers": [
+    "No authorized correction engine executed",
+    "Semantic preservation and protected-term evaluation absent",
+    "Generic-model comparison absent",
+    "Independent hidden evaluation and acceptance absent"
+  ],
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "baseline_status": "not_executed",
+  "original_product_status": "not_observed",
+  "inference_executed": false,
+  "commercial_verdict": "insufficient_evidence",
+  "operating_cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "No billing or resource allocation measurement"
+  },
+  "additional_paid_calls": 0,
+  "public_source_requests": 1,
+  "handoff": "Inspect source-bound component receipts where present. Resolve documented capability gaps before central workflow evaluation. Preserve old dossier as historical evidence and integrate this supplement through the campaign owner."
+}

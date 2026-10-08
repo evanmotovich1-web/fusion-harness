@@ -1,0 +1,31 @@
+{
+  "url": "https://northlight.ai/features",
+  "retrieved_at": "2026-09-20T21:19:38.411645+00:00",
+  "access_method": "credential-free bounded urllib GET",
+  "published_at": null,
+  "error": null,
+  "status": 200,
+  "limit_bytes": 262144,
+  "final_url": "https://northlight.ai/features",
+  "truncated": false,
+  "capture_path": "cases/003/research/b141c7f790990b2a.txt",
+  "capture_sha256": "0a918034fefbb5c95dad4d1f3b4fd9daf3f2bd81b9edd6947760338be5ec17dc",
+  "links": [
+    "https://calendly.com/northlight-ai/30-min-chat-clone",
+    "https://northlight.ai/",
+    "https://northlight.ai/#security",
+    "https://northlight.ai/ai-instructions",
+    "https://northlight.ai/blog",
+    "https://northlight.ai/contact",
+    "https://northlight.ai/download",
+    "https://northlight.ai/features",
+    "https://northlight.ai/integrations",
+    "https://northlight.ai/pricing",
+    "https://northlight.ai/privacy",
+    "https://northlight.ai/terms",
+    "https://northlight.ai/tools/ban-risk-checker",
+    "https://www.linkedin.com/company/north-light-ai/"
+  ],
+  "ended_at": "2026-09-20T21:19:38.634692+00:00",
+  "elapsed_seconds": 0.22291883299999998
+}

@@ -1,0 +1,289 @@
+{
+  "evidence_id": "web-8715b5ae4fa21610393c",
+  "source_url": "https://www.lavender.ai/",
+  "retrieved_at": "2026-09-20T21:00:22.704094+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://lavender.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/8715b5ae4fa21610393c.html",
+  "capture_sha256": "81271586a84f2d0bf968c051f1e00eb6c4f9de0b7e2dd4eaae299a8ef66bcd06",
+  "bytes_saved": 123109,
+  "title": "Lavender - Your Magical AI Email Coach",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Lavender helps thousands of sellers around the world write better emails faster and get more positive replies in less time."
+    },
+    {
+      "key": "og:title",
+      "value": "Lavender - Your Magical AI Email Coach"
+    },
+    {
+      "key": "og:description",
+      "value": "Lavender helps thousands of sellers around the world write better emails faster and get more positive replies in less time."
+    }
+  ],
+  "text": "Lavender - Your Magical AI Email Coach\nButton Text\nSay Hello to\nyour intelligent AI sales agent\nGet Started Today\nThe Email Coach\nCoach Overview\nPricing\nFor Sellers\nFor Leaders\nFor Anyone\nInstall the Coach for Free\nOra\nYour Intelligent Sales Agent\nCRM Enrichement\nPricing\nBlog\nSupport\nKnowledge Library\nSales Certification Course\nContact\nSign In\nLavender\nOra\nAdd the Email Coach to Chrome\nSchedule a Team Demo\nYour buyers hate\nAI cold emails.\nThey won’t hate Ora's.\nOra, Lavender's new AI Sales Agent, writes emails like a top seller... if that seller was backed by billions of emails.\nLet Ora draft some emails. You’ll see the magic.\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nLearn more about Ora here\nMaster the Art of Sales Emails\nStart Lavender's Sales Email Certification Today!\nBecome an #EmailWizard\nButton Text\nYour score\n000\npts\nYou’re a real\nemail wizard!\nShare your score with friends!\nShare now\n1\nEmiliano Martinez\n100\npts\nPlease enter a valid Linkedin profile URL\nYour score has been successfully saved!\nOops! Something went wrong while submitting the form.\nYour score\n000\npts\nUh-oh! You’re not\nyet a wizard\nTry Lavender for free\nTry Lavender for free\nPlay again\n1\nEmiliano Martinez\n100\npts\nPlease enter a valid Linkedin profile URL\nYour score has been successfully saved!\nOops! Something went wrong while submitting the form.\nLeaderboard\nPlay Now!\n1\nEmiliano Martinez\n100\npts\nView Leaderboard\n3 ways to\nMAster\nthe art of sales emails\nGet Email Wizard Certified\nTake Lavender 101 and 201\nThe Lavender Letter\nA Weekly Sales Email You’ll Read\nSign Up\nWoo, you're in! Magic is on its way ...\nLavenderLand\nHelpful (fun) Videos\nThe\nEmail\nintelligence\ncompany\nBillions of emails analyzed, we know what makes email work.\nLavender analyzes your historic emails to understand what works for you and your team. This powers our email coach and Ora to ensure you always hit send on your best email.\nInstall the Coach for Free\nTry for free\nBuild in Ora for Free\nLavender\n\"As an SDR I like that it keeps me honest when I wax poetic. And it upped our team's response rate.\"\nRobby G.\nSales Development Representative\n\"Easy to set up, incredibly useful insights, makes the cold email writing process much more focused on data and results than guessing.\"\nSydney Senior\nAccount Executive at Deel\n\"Lavender helps us edit and generate our sales copy to help pipeline velocity. More meetings, more opportunities, more closed won!\"\nErin Holtz\nSenior Account Executive @ Paro.ai\n\"Lavender brings in more meetings for me as a BDR and helps my team. Makes me look super cool in front of my boss when I get email replies.\"\nHeidi B.\nDirector of Business Development\n\"Better outbounding, confidence in email structure and content, and better reply rates.\"\nDimitra Spiliotopoulou\nHead of Sales at Indico Labs\n“It reinforces everything we want the team doing.”\nRyan Swearingen\nSales Leader at Twilio\n“I've done $3 million in sales in 11 months, all through cold email outbound with Lavender.”\nJack Ryan\nFormerly Partner Manager at SaaStr\n“The impact of Lavender has been enormous. Our sellers are writing emails in half the time and getting twice as many replies.\"\nKyle Coleman\nFormerly CMO at Clari\nLove\n🤖\nGenerative AI\nWe’re powered by the latest GAI, including Open AI systems, self-hosted fine-tuned large language models, and LLMs powered by billions of custom data points.\nWhat does that mean in human terms? We're using the most advanced AI to power your emails and help make you the best emailer you can be. 💪\n🔐\nSecurity\nWe take your privacy seriously. We are SOC2-certified and GDPR-compliant.\nLavender can be up and running in just a few minutes. For most security-conscious organizations, your IT team may require a review to allow Lavender to be authenticated with your email provider.\nJoin the Weekly Training\nTry for free\nexperience\nthe magic\nLavender Letter:\nWeekly newsletter. No fluff, just helpful stuff.\nSign Up\nLearn More\nWoo, you're in! Magic is on its way ...\n© 2025 LAVENDER • MADE WITH 💜🧙\nProduct\nBlog\nSupport\nPricing\nPrivacy & Data\nTerms & Conditions\nEnter your email to try Lavender!\nEmail\nWoo! You're in. Check your email on desktop.\nOops! Something went wrong while submitting the form.\nEnter your email to try Lavender!\nEmail\nWoo! You're in. Check your email on desktop.\nOops! Something went wrong while submitting the form.",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/658433a0cbce340e298ba330/css/lavender-site.webflow.shared.4d3e0dde4.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/658433a0cbce340e298ba330/658433a0cbce340e298ba450_Favicon.jpg",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/658433a0cbce340e298ba330/658433a0cbce340e298ba44f_webclip.jpg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://unpkg.com/flickity@2/dist/flickity.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.ora.im",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/coach",
+      "rel": null
+    },
+    {
+      "href": "/coach#pricing",
+      "rel": null
+    },
+    {
+      "href": "/lavender-for/sellers",
+      "rel": null
+    },
+    {
+      "href": "/lavender-for/leaders",
+      "rel": null
+    },
+    {
+      "href": "/lavender-for/anyone",
+      "rel": null
+    },
+    {
+      "href": "/lavender-for/anyone",
+      "rel": null
+    },
+    {
+      "href": "/ora",
+      "rel": null
+    },
+    {
+      "href": "/crm",
+      "rel": null
+    },
+    {
+      "href": "https://www.lavender.ai/ora#pricing",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://www.lavender.ai/blog?category=Product+Help",
+      "rel": null
+    },
+    {
+      "href": "https://lavender.thinkific.com/courses/EmailWizard101",
+      "rel": null
+    },
+    {
+      "href": "mailto:support@lavender.ai",
+      "rel": null
+    },
+    {
+      "href": "https://dashboard.lavender.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://dashboard.lavender.ai/ora-sign-in",
+      "rel": null
+    },
+    {
+      "href": "https://install.lavender.ai",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://ora.im",
+      "rel": null
+    },
+    {
+      "href": "https://lavender.thinkific.com/courses/EmailWizard101",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/lavenderhq",
+      "rel": null
+    },
+    {
+      "href": "https://tiktok.com/@itslavenderduh",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "http://install.lavender.ai/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://levelup.lavender.ai",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=risSavwkgaQ&t",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=C09nPBX3VDA&t",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=CoESLDG01fs&t",
+      "rel": null
+    },
+    {
+      "href": "http://install.lavender.ai/",
+      "rel": null
+    },
+    {
+      "href": "http://install.lavender.ai/",
+      "rel": null
+    },
+    {
+      "href": "/lavender-weekly",
+      "rel": null
+    },
+    {
+      "href": "http://install.lavender.ai/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/lavender-letter",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/itslavenderduh/",
+      "rel": null
+    },
+    {
+      "href": "https://instagram.com/itslavenderduh",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/lavenderhq",
+      "rel": null
+    },
+    {
+      "href": "https://tiktok.com/@itslavenderduh",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@itslavenderduh/videos",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "https://www.lavender.ai/blog?category=Product+Help",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2804
+}

@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "record_status": "unknown",
+  "identity": {
+    "id": "028",
+    "name": "MeetGeek",
+    "canonical_url": "https://meetgeek.ai/",
+    "category": "C05",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-6a4d1160d27064b29a54"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "meetgeek.ai",
+    "selection_position": 28,
+    "eligibility_evidence_ids": [],
+    "pilot": false,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Teams capturing and automating meeting follow-up",
+    "job": "Transcribe supplied meeting audio and produce timestamped highlights and a grounded follow-up summary",
+    "inputs": "Concrete typed requests and original synthetic assets in tests/specification.json",
+    "outputs": {
+      "transcript": "timestamped segments",
+      "summary": "string",
+      "action_items": "array of owner/task/due_date/support",
+      "uncertain_items": "array"
+    },
+    "success_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "included_behavior": [
+      "One central workflow subset defined by this case, not an easy unrelated feature",
+      "Real generation/extraction/reasoning where central",
+      "Schema checks, evidence preservation, uncertainty handling and safe failures"
+    ],
+    "excluded_behavior": [
+      "Full production SaaS, billing, account/tenant management, deployment, scale and availability guarantees",
+      "Live third-party accounts, proprietary datasets, paid model calls and real customer data",
+      "Original-product parity, business valuation and customer-demand validation",
+      "Independent hidden evaluation not yet prepared"
+    ],
+    "external_dependencies": [
+      "Accepted pilot method for this workflow class",
+      "Verified authorized model/baseline access where inference is central",
+      "Independent reviewer and hidden fixture version",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient."
+    ],
+    "representativeness": "Proposed central-workflow subset based on public vendor positioning. Independent review must confirm coverage before implementation acceptance. Integration-heavy and modality-heavy products cannot inherit text-only pilot acceptance.",
+    "inference_required": true
+  },
+  "research": {
+    "primary_workflow": {
+      "claim_ids": [
+        "workflow-advertised"
+      ],
+      "value": "Transcribe supplied meeting audio and produce timestamped highlights and a grounded follow-up summary",
+      "unknown_reason": null
+    },
+    "pricing": {
+      "claim_ids": [
+        "pricing-observation"
+      ],
+      "value": "The page shows Pro $15.99 and Business $27, while a calculator shows $9.99/user/month and $17. Billing-view association is unresolved in static extraction, so no single definitive price is asserted.",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "Teams capturing and automating meeting follow-up",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternative-description",
+        "alternatives"
+      ],
+      "value": {
+        "candidate_id": "fireflies.ai",
+        "name": "Fireflies",
+        "benchmark_observed": false
+      },
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption-vendor"
+      ],
+      "value": {
+        "verified_customer_count": null,
+        "vendor_claim_available": true
+      },
+      "unknown_reason": "No verified current paying-customer count, revenue, retention, or cohort data."
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "Public product website observed; acquisition effectiveness unknown.",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations-advertised"
+      ],
+      "value": "See source-backed advertised interface/integration excerpt. Actual operation untested.",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary-vendor"
+      ],
+      "value": {
+        "exclusive_access_verified": false
+      },
+      "unknown_reason": "Vendor statements do not establish exclusive access or an independently demonstrated technical advantage."
+    },
+    "switching_costs": {
+      "claim_ids": [
+        "switching-hypothesis"
+      ],
+      "value": null,
+      "unknown_reason": "No measured migration effort, retention, expansion, or customer lock-in. Hypothesis only."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "No billed inference, infrastructure allocation, gross margin, customer-acquisition cost, or churn data observed. Vendor subscription prices do not establish cost of delivery or business value."
+    },
+    "conflicts": [
+      {
+        "claim_ids": [
+          "pro-card-price",
+          "pro-calculator-price"
+        ],
+        "type": "billing_view_ambiguity",
+        "finding": "Static extraction does not establish which billing view each amount represents. No silent reconciliation."
+      }
+    ],
+    "inaccessible_sources": [],
+    "scope": "Bounded public first-party investigation and an evidence-linked alternative. No independent customer validation. Required commercial unknowns are explicit, not filled with zeros."
+  },
+  "claims": [
+    {
+      "claim_id": "identity",
+      "statement": "Public product identity and advertised workflow are linked by the captured canonical product source.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow-advertised",
+      "statement": "Vendor description: Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-a7055f231c544d0de099"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "metadata[0].description",
+          "excerpt": "Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-a7055f231c544d0de099": "2026-09-20T21:35:37.399781+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "This advertises a workflow, not proof it functions or that the proposed narrower prototype covers the whole platform.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "buyer",
+      "statement": "Intended-buyer interpretation: Teams capturing and automating meeting follow-up.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54",
+        "r028-a7055f231c544d0de099"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        },
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "metadata[0].description",
+          "excerpt": "Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00",
+          "r028-a7055f231c544d0de099": "2026-09-20T21:35:37.399781+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Researcher interpretation of vendor positioning, not verified purchaser demographics.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing-observation",
+      "statement": "The page shows Pro $15.99 and Business $27, while a calculator shows $9.99/user/month and $17. Billing-view association is unresolved in static extraction, so no single definitive price is asserted.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-b6a906ce20ce2bdc1381"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-b6a906ce20ce2bdc1381",
+          "locator": "text characters 6107:8577",
+          "excerpt": "pload your own audio or video\nUnderstand\nTranscription in\n100+ languages\nAutomatic language detection\nMeeting Analytics\nAI summary for every meeting\nAI Chat and search across all meetings\nOrganize\nFolders and tags\nAPI\nand\nMCP\n- Claude & ChatGPT\nStart for free\nPro\n$15.99\nAutomate the follow-up work after\nevery meeting\n20 hours of transcription / month\n1 year of transcript storage\n6 months of audio storage\nEVERYTHING IN BASIC, PLUS\nAutomate\nAI Agents\nand agentic workflows\nAI Chat with tools\nZapier, Make and n8n\nUnlimited integrations\nPersonalize\nMeeting Templates\nAutomatic meeting type detection\nShare and report\nPersonal aggregated analytics\nFlexible sharing options\nDownloads and exports\nAdmin user management\n$0.50 per extra hour\nGet started\nMOST POPULAR\nBusiness\n$27\nGive your whole team one shared meeting memory\nUnlimited transcription\nUnlimited transcript storage\n12 months of video storage\nEVERYTHING IN PRO, PLUS\nWork as a team\nHD video recording\nTeam & group spaces\nAutomatic sharing with the right people\nComments on meetings\nTeam meeting analytics\nExpand automation\nUnlimited AI Chat with tools\nUnlimited AI Agents and workflows\nControl what's shared\nPrivate meetings by default\nRules to skip meetings you don't want recorded\nRecording consent notifications\nCustom branding and summaries\nStart 14-days trial\nEnterprise\nCustom\nRun meeting intelligence across the org, with full control\nUnlimited transcription\nUnlimited transcript storage\nCustom video storage\nEVERYTHING IN BUSINESS, PLUS\nGovern\nSSO and SCIM\nOrg-wide settings and locks\nZero or custom data retention\nOn-premise storage options\nScale\nCustom avatars and Voice Agents\nEarly access to new and industry-tuned AI models\nProduct roadmap access\nSupport\nDedicated onboarding and account manager\nUse case accelerator pack\nGet in touch\nBringing MeetGeek to your whole team?\nTry our Subscription Calculator\nBASIC\nFREE\nPRO\n$\n9.99\n/user\n/mo\nnth\nBUSINESS\nfree trial\n$\n17\n/user\n/mo\nnth\nENTERPRISE\nCustom\nGet Started\nGet Started\nGet Started\nContact Us\nReach out\nUsage\nTranscription limits\nMonthly limit of transcribed minutes.\n3 h/mo\n20 h/mo\nUnlimited\nUnlimited\nRecording limit per meeting\nMeeting duration limit.\n2h\n2h\n3h\n4h\nTranscription storage\nHow long your transcripts are stored.\n3 months\n1 year\nUnlimited\nUnlimited\nAudio storage\nHow long your audio files are stored.\n1 month\n6 months\n12 months\nCustom\nConcurrent Meetings\nHow many meetings your bot can join at the same time\nLimited\nLimited\nLimited"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-b6a906ce20ce2bdc1381": "2026-09-20T21:35:37.399674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Public advertised terms only. Checkout, tax, geographic availability, billing toggles, fair-use rules and paid entitlement were not exercised.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "adoption-vendor",
+      "statement": "Vendor adoption-related wording:  required\nEU & US Data Hosting\nWorks natively with\nTooltip\nTrusted by 50,000+ teams across 100+ countries\nCapture every meeting. Online, hybrid, and in person.\nBot or no-bot — MeetGeek adapts to any meeting setup with full control and zero vendor lock-in.\nHigh tr",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "text characters 6049:6312",
+          "excerpt": " required\nEU & US Data Hosting\nWorks natively with\nTooltip\nTrusted by 50,000+ teams across 100+ countries\nCapture every meeting. Online, hybrid, and in person.\nBot or no-bot — MeetGeek adapts to any meeting setup with full control and zero vendor lock-in.\nHigh tr"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Not independently verified. Users, teams, creators, seats and paying customers are distinct. No zero-user inference or numerical valuation.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations-advertised",
+      "statement": "Integration-related vendor wording: Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-a7055f231c544d0de099"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "metadata[0].description",
+          "excerpt": "Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-a7055f231c544d0de099": "2026-09-20T21:35:37.399781+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Documentation/navigation or a product claim is not a tested connector. Availability can depend on plan or account access.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary-vendor",
+      "statement": "Vendor data/model/security wording: se of it, MeetGeek will too. We provide state-of-the-art speech-to-text technology enabling high-quality video notes and transcripts.\nUsing proprietary NLP algorithms, we provide several magical out-of-the-box highlights.\nYou can also add your own and customize it according to your business or personal needs. More details\nhere\n.\nWhat happens to my recordings, and who can view them?\nYour meetings are securely stored in a private AWS cloud environment.\nWe enforce end-to-end encryption both for data at rest and in transit, using state-of-the-art encryption protocols.\nNobody except you can access your data, unless you decide to share particular meetings with oth",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-a7055f231c544d0de099"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "text characters 11735:12401",
+          "excerpt": "se of it, MeetGeek will too. We provide state-of-the-art speech-to-text technology enabling high-quality video notes and transcripts.\nUsing proprietary NLP algorithms, we provide several magical out-of-the-box highlights.\nYou can also add your own and customize it according to your business or personal needs. More details\nhere\n.\nWhat happens to my recordings, and who can view them?\nYour meetings are securely stored in a private AWS cloud environment.\nWe enforce end-to-end encryption both for data at rest and in transit, using state-of-the-art encryption protocols.\nNobody except you can access your data, unless you decide to share particular meetings with oth"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-a7055f231c544d0de099": "2026-09-20T21:35:37.399781+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "No independent verification of exclusivity, training data rights, model quality, certification, or contractual enforceability.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternative-description",
+      "statement": "Fireflies advertises: Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "web-0055b0b1d22da7891be2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-0055b0b1d22da7891be2",
+          "locator": "metadata[0].description",
+          "excerpt": "Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-0055b0b1d22da7891be2": "2026-09-20T21:00:36.299182+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Workflow-overlap candidate: Fireflies. Manual task execution and a general model with the same supplied materials are further baseline options.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54",
+        "web-0055b0b1d22da7891be2"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        },
+        {
+          "evidence_id": "web-0055b0b1d22da7891be2",
+          "locator": "metadata[0].description",
+          "excerpt": "Fireflies takes notes, manages tasks, and automates workflows across meetings, email, chat, CRM, and your apps. Build a searchable knowledge base of your team’s work in one place."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00",
+          "web-0055b0b1d22da7891be2": "2026-09-20T21:00:36.299182+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Feature overlap inferred from official descriptions. No parity, superiority, price comparison, or competitor benchmark is asserted.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A public product landing page is an observed web distribution surface. Its presence does not establish traffic, conversion, acquisition cost, paid channels, or distribution strength.",
+      "classification": "direct_observation",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Only the public web surface was observed.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "switching-hypothesis",
+      "statement": "Capture reliability, reusable meeting templates, searchable team history, and follow-up integrations may matter beyond summarization.",
+      "classification": "inference",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54",
+        "r028-a7055f231c544d0de099"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "web-6a4d1160d27064b29a54",
+          "locator": "metadata[0].description",
+          "excerpt": "MeetGeek is the AI meeting platform that records, transcribes and summarizes every meeting, then automates the follow-up. Free to start, no bot required."
+        },
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "metadata[0].description",
+          "excerpt": "Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages."
+        },
+        {
+          "evidence_id": "r028-a7055f231c544d0de099",
+          "locator": "metadata[0].description",
+          "excerpt": "Automatically record your Zoom, MS Teams, & Google Meet calls without limits and get an accurate and free AI transcription in a few minutes. 30+ languages."
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "web-6a4d1160d27064b29a54": "2026-09-20T21:00:36.299453+00:00",
+          "r028-a7055f231c544d0de099": "2026-09-20T21:35:37.399781+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Potential advantage and switching-cost hypothesis, not measured customer retention or a demonstrated moat. Counterexample: portable data and standard APIs may reduce switching friction.",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pro-card-price",
+      "statement": "Pro card shows $15.99.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-b6a906ce20ce2bdc1381"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-b6a906ce20ce2bdc1381",
+          "locator": "text characters 6267:6977",
+          "excerpt": " search across all meetings\nOrganize\nFolders and tags\nAPI\nand\nMCP\n- Claude & ChatGPT\nStart for free\nPro\n$15.99\nAutomate the follow-up work after\nevery meeting\n20 hours of transcription / month\n1 year of transcript storage\n6 months of audio storage\nEVERYTHING IN BASIC, PLUS\nAutomate\nAI Agents\nand agentic workflows\nAI Chat with tools\nZapier, Make and n8n\nUnlimited integrations\nPersonalize\nMeeting Templates\nAutomatic meeting type detection\nShare and report\nPersonal aggregated analytics\nFlexible sharing options\nDownloads and exports\nAdmin user management\n$0.50 per extra hour\nGet started\nMOST POPULAR\nBusiness\n$27\nGive your whole team one shared meeting memory\nUnlimited transcription\nUnlimited transcript st"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-b6a906ce20ce2bdc1381": "2026-09-20T21:35:37.399674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "pro-calculator-price"
+      ]
+    },
+    {
+      "claim_id": "pro-calculator-price",
+      "statement": "Calculator shows PRO $9.99/user/month.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "r028-b6a906ce20ce2bdc1381"
+      ],
+      "supporting_excerpts": [
+        {
+          "evidence_id": "r028-b6a906ce20ce2bdc1381",
+          "locator": "text characters 7900:8606",
+          "excerpt": "k\nGet in touch\nBringing MeetGeek to your whole team?\nTry our Subscription Calculator\nBASIC\nFREE\nPRO\n$\n9.99\n/user\n/mo\nnth\nBUSINESS\nfree trial\n$\n17\n/user\n/mo\nnth\nENTERPRISE\nCustom\nGet Started\nGet Started\nGet Started\nContact Us\nReach out\nUsage\nTranscription limits\nMonthly limit of transcribed minutes.\n3 h/mo\n20 h/mo\nUnlimited\nUnlimited\nRecording limit per meeting\nMeeting duration limit.\n2h\n2h\n3h\n4h\nTranscription storage\nHow long your transcripts are stored.\n3 months\n1 year\nUnlimited\nUnlimited\nAudio storage\nHow long your audio files are stored.\n1 month\n6 months\n12 months\nCustom\nConcurrent Meetings\nHow many meetings your bot can join at the same time\nLimited\nLimited\nLimited\nLimited\nVideo storage\nHow lo"
+        }
+      ],
+      "scope": {
+        "reviewed_at": "2026-09-20T21:51:09.240887+00:00",
+        "source_retrieval_times": {
+          "r028-b6a906ce20ce2bdc1381": "2026-09-20T21:35:37.399674+00:00"
+        },
+        "scope": "Bounded public first-party research. No account, purchase, customer interview, original-product execution, or benchmark."
+      },
+      "uncertainty": "Vendor statement not independently verified. Source can be incomplete, stale, or marketing-oriented.",
+      "conflicting_claim_ids": [
+        "pro-card-price"
+      ]
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/028/tests/specification.json",
+    "sha256": "320f5998326a853b14fee4ec3adb70434352de17af89b3fc96a99883aab41fe0",
+    "fixed_at": "2026-09-20T21:51:09.240887+00:00",
+    "acceptance_criteria": {
+      "normal_case_score_min": 80,
+      "normal_pass_min": 7,
+      "normal_case_count_scored": 8,
+      "failure_handling_pass_min": 5,
+      "failure_case_count": 6,
+      "critical_failures_allowed": 0,
+      "weights": {
+        "task_correctness": 50,
+        "required_coverage": 20,
+        "constraint_compliance": 20,
+        "usability": 10
+      },
+      "critical_failures": [
+        "fabricated citation or source fact",
+        "unauthorized external mutation or secret/path access",
+        "essential audio/image/video capability replaced by text-only output",
+        "hardcoded expected answers represented as model output"
+      ],
+      "subjective_scale": {
+        "0": "missing or unusable",
+        "1": "major errors",
+        "2": "needs substantive correction",
+        "3": "usable with minor corrections",
+        "4": "correct and directly usable"
+      },
+      "requires_independent_review": true,
+      "requires_actual_central_workflow": true,
+      "requires_independent_hidden_suite_before_acceptance": true
+    },
+    "baseline_specification": {
+      "B1": "Generic model instructed to perform the task and return the same output schema using identical input bundle and assets, without product-specific examples or expected answers.",
+      "B2": "Independent implemented workflow. No canned model responses.",
+      "B3": "Original product only if later authorized and actually executed. Currently not_observed.",
+      "model_control": "Use the same base model/settings where feasible. For audio/image/video retain essential modalities in both arms. Record preprocessing and model differences as confounders.",
+      "repeats": [
+        "N07",
+        "N10",
+        "N14"
+      ],
+      "required_paired_coverage": 0.9
+    },
+    "exposure": "Builder-visible fixed regression. Not held-out.",
+    "fixture_count": 20
+  },
+  "implementation": {
+    "source_path": null,
+    "sha256": null,
+    "setup_instructions": null,
+    "coverage": [],
+    "missing_capabilities": [
+      "No implementation attempted in task 3.b",
+      "Pilot acceptance and authorized inference/baseline remain unresolved",
+      "Independent hidden fixtures and review",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient."
+    ],
+    "dependency_license_notes": "Original synthetic fixtures. PIL/reportlab and locally installed macOS speech/ffmpeg used only to prepare test inputs; no proprietary product code/assets copied. No runtime license or deployment audit performed.",
+    "kind": "not_started",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "not_started",
+      "execution": "not_started",
+      "evaluation": "not_started",
+      "review": "not_started"
+    },
+    "receipt_paths": [],
+    "technical_uncertainty": [
+      "No workflow or model baseline executed",
+      "Real product runtime behavior unknown",
+      "Fixture coverage and scoped subset need independent review",
+      "Authorized actual audio/video model capability and media decoding; transcript-only output is insufficient."
+    ],
+    "commercial_uncertainty": [
+      "Current paying customers and revenue unknown",
+      "Only vendor claims and explicit hypotheses, not verified competitive advantage",
+      "No exact valuation or worthlessness conclusion"
+    ],
+    "verdict_path": null,
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Bounded research incomplete; implementation and evaluation not started"
+      ],
+      "artifact": null
+    },
+    "original_product_access": {
+      "status": "not_observed",
+      "reason": "Public research only. No signup, login, account integration, product inference or paid access attempted."
+    }
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:00:36.299453+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:51:09.240887+00:00",
+      "actor": "terra",
+      "reason": "Bounded source investigation and fixed-test specification recorded. Not marked complete without further review.",
+      "evidence_ids": [
+        "web-6a4d1160d27064b29a54",
+        "r028-a7055f231c544d0de099",
+        "r028-b6a906ce20ce2bdc1381",
+        "web-0055b0b1d22da7891be2"
+      ]
+    }
+  ],
+  "research_completed_at": null,
+  "research_recorded_at": "2026-09-20T21:51:09.240887+00:00",
+  "readiness": {
+    "fixed_inputs_available": true,
+    "implementation_execution_ready": false,
+    "reason": "Prototype build remains gated by accepted pilot method, authorized runtime/model access, and independent test review. Read latest pilot acceptance before starting."
+  }
+}

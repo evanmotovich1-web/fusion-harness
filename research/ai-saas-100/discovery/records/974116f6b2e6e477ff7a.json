@@ -1,0 +1,705 @@
+{
+  "evidence_id": "web-974116f6b2e6e477ff7a",
+  "source_url": "https://www.bardeen.ai/",
+  "retrieved_at": "2026-09-20T21:00:55.984888+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.bardeen.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/974116f6b2e6e477ff7a.html",
+  "capture_sha256": "2657041b2576d267418a091995fddea71a699139aa18757baf0a2f309993ea3c",
+  "bytes_saved": 176154,
+  "title": "Bardeen: Find and reach leads no one else can.",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Source leads with our agentic web scraper, qualify them with AI and reach them with contact enrichment."
+    },
+    {
+      "key": "og:title",
+      "value": "Bardeen: Find and reach leads no one else can."
+    },
+    {
+      "key": "og:description",
+      "value": "Source leads with our agentic web scraper, qualify them with AI and reach them with contact enrichment."
+    }
+  ],
+  "text": "Bardeen: Find and reach leads no one else can.\nHome\nProduct\nWeb Scraper\nThe most powerful web scraper on the internet.\nWeb Search\nStop Googling your leads manually.\nEnrichment\nReach your future customers with validated phone numbers & emails.\nAI Tools\nPinpoint the best leads with zero manual work.\nIntegrations\nSync lead data to major spreadsheet apps.\nSolutions\nSolopreneurs\nThe scrappy growth hacker’s secret weapon.\nMusic\nFind tomorrow’s stars before anyone else.\nReal Estate\nYour edge in hyper-local lead sourcing.\nRecruiting\nFind hidden candidates, fast.\nPrivate Equity\nDiscover companies before they raise.\nEvent Services\nFill your pipeline with real local opportunities.\nTemplates\nResources\nBlog\nLearn about Scraping, the latest in AI and product updates.\nCustomer Stories\nSee how industry leaders and innovators use Bardeen.\nAbout\nWe're transforming the way work is done.\nCareers\nWe're looking for innovative minds to join our team.\nCommunity\nAsk questions, get tips, and meet other Bardeen users.\nPricing\nGet started\nBardeen\nHome\nTemplates\nPricing\nProduct\nScraper\nWeb Search\nEnrichment\nAI Tools\nIntegrations\nSolutions\nSolopreneurs\nMusic\nReal Estate\nRecruiting\nPrivate Equity\nEvent Services\nResources\nBlog\nCustomer Stories\nAbout\nCareers\nCommunity\nHome\nProduct\nWeb Scraper\nThe most powerful web scraper on the internet.\nWeb Search\nStop Googling your leads manually.\nEnrichment\nReach your future customers with validated phone numbers & emails.\nAI Tools\nPinpoint the best leads with zero manual work.\nIntegrations\nSync lead data to major spreadsheet apps.\nSolutions\nSolopreneurs\nThe scrappy growth hacker’s secret weapon.\nMusic\nFind tomorrow’s stars before anyone else.\nReal Estate\nYour edge in hyper-local lead sourcing.\nRecruiting\nFind hidden candidates, fast.\nPrivate Equity\nDiscover companies before they raise.\nEvent Services\nFill your pipeline with real local opportunities.\nTemplates\nResources\nBlog\nLearn about Scraping, the latest in AI and product updates.\nCustomer Stories\nSee how industry leaders and innovators use Bardeen.\nAbout\nWe're transforming the way work is done.\nCareers\nWe're looking for innovative minds to join our team.\nCommunity\nAsk questions, get tips, and meet other Bardeen users.\nPricing\nGet started\nBardeen\nHome\nTemplates\nPricing\nProduct\nScraper\nWeb Search\nEnrichment\nAI Tools\nIntegrations\nSolutions\nSolopreneurs\nMusic\nReal Estate\nRecruiting\nPrivate Equity\nEvent Services\nResources\nBlog\nCustomer Stories\nAbout\nCareers\nCommunity\nFind and reach leads no one else can.\nSource leads with our agentic web scraper, qualify them with AI and reach them with contact enrichment.\nGet started\nScraper\nExtract data from any website.\nBuild your own or use our premium scrapers to scrape leads from where they live.\nLearn More\nExplore Scraper Templates\nWeb Search\nResearch leads with AI search.\nResearch or generate leads at scale using leading AI and websearch providers, or leverage AI to instantly find answers on a website.\nLearn More\nEnrichment\nEnrich with validated contact info.\nInstantly find verified contact info and actually reach your leads.\nLearn More\nQualification\nQualify leads with the power of AI.\nDescribe your ideal lead so AI can prioritize which ones to pursue.\nLearn More\nExport your data\nCSV\nGoogle Sheets\nAirtable\nNotion\nImplement AI faster across your industry.\nYour leads aren’t all in one place – only you know how to find them. Use Bardeen to build a target lead list tailored to your industry.\nSolopreneurs\nSolopreneurs waste hours on research, outreach, and workflows, slowing growth and stealing time from building business.\nBardeen automates your workflows end-to-end with AI-powered agents, all without needing a Clay-level budget.\nLearn More\nReal Estate\nReal estate agents spend countless hours tracking ever-changing listings and updating client data instead of closing deals.\nBardeen automates real estate prospecting by scraping listings, enriching contacts, and AI-tagging properties.\nLearn More\nMusic\nMusic discovery tools often miss emerging talent by relying on static data, limited coverage, and popularity metrics.\nWith Bardeen you can find music artists by scraping blogs, charts, and socials, and enrich contacts for fast outreach.\nLearn More\n\"Our Sales and Ops teams can do more in less time to help serve our customers better.\"\nAlex Bouaziz\nCo-Founder & CEO at deel.\n60h saved\non prospecting per week\nCaroline\nSales\n15h saved\nby team per week\nPat\nTalent Research\n98%\nexpense reduction\nChris\nCEO\n5h\nsaved per webscraping task\nSaad\nSenior Research Analyst\n75% boosted\nefficiency on building lead lists\nAlex\nCo-Founder & CEO\n15h saved\nper week\nEltjo\nDirector of Sales\nAutomated\ndata entry\nTufan\nMarket Development Managaer\nEnterprise-grade security\nSOC 2 Type II, GDPR and CASA Tier 2 and 3 certified — so you can automate with confidence at any scale.\nFrequently asked questions\nWhat is Bardeen?\nBardeen is an automation and workflow platform designed to help GTM teams eliminate manual tasks and streamline processes. It connects and integrates with your favorite tools, enabling you to automate repetitive workflows, manage data across systems, and enhance collaboration.\nWhat tools does Bardeen replace for me?\nBardeen acts as a bridge to enhance and automate workflows. It can reduce your reliance on tools focused on data entry and CRM updating, lead generation and outreach, reporting and analytics, and communication and follow-ups.\nWho benefits the most from using Bardeen?\nBardeen is ideal for GTM teams across various roles including Sales (SDRs, AEs), Customer Success (CSMs), Revenue Operations, Sales Engineering, and Sales Leadership.\nHow does Bardeen integrate with existing tools and systems?\nBardeen integrates broadly with CRMs, communication platforms, lead generation tools, project and task management tools, and customer success tools. These integrations connect workflows and ensure data flows smoothly across systems.\nWhat are common use cases I can accomplish with Bardeen?\nBardeen supports a wide variety of use cases across different teams, such as:\n‍\nSales\n: Automating lead discovery, enrichment and outreach sequences. Tracking account activity and nurturing target accounts.\n‍\nCustomer Success\n: Preparing for customer meetings, analyzing engagement metrics, and managing renewals.\n‍\nRevenue Operations\n: Monitoring lead status, ensuring data accuracy, and generating detailed activity summaries.\n‍\nSales Leadership\n: Creating competitive analysis reports, monitoring pipeline health, and generating daily/weekly team performance summaries.\nProduct\nWeb Scraper\nWeb Search\nEnrichment\nAI Tools\nIntegrations\nSolutions\nSolopreneurs\nMusic\nReal Estate\nRecruiting\nPrivate Equity\nEvent Services\nAbout\nPricing\nAbout Bardeen\nManifesto\nCareers\nResearch\nContact\nResources\nBlog\nCustomer Stories\nRelease Notes\nBest Tools\nGuides\nSupport\nHelp Center\nCommunity\nApp FAQs\nAnswers\nScraper Templates\nGitHub\nYouTube\nCrunchbase\nMonster.com\nUpwork\nShow all\nProduct Hunt\nRealtor\nFacebook\nInstagram\nZillow\nFollow\nYoutube\nLinkedIn\nProduct Hunt Product of the Month\n© Copyright 2025 Bardeen Inc. All rights reserved.\nPrivacy Policy\nPrivacy & Security\nTerms of Service\nCookie Policy\nDo not sell or share my personal information\nCookie Policy\nBy clicking\n“Accept”\n, you agree to the storing of cookies. View our\nPrivacy Policy\nfor more information.\nAccept\nDeny\nPreferences\nCookie Policy\nBy clicking\n“Accept”\n, you agree to the storing of cookies. View our\nPrivacy Policy\nfor more information.\nAccept\nDeny\nPreferences\nPrivacy Preference Center\nWhen you visit websites, they may store or retrieve data in your browser. This storage is often necessary for the basic functionality of the website. The storage may be used for marketing, analytics, and personalization of the site, such as storing your preferences. Privacy is important to us, so you have the option of disabling certain types of storage that may not be necessary for the basic functioning of the website. Blocking categories may impact your experience on the website.\nReject all cookies\nAllow all cookies\nManage Consent Preferences by Category\nEssential\nAlways Active\nThese items are required to enable basic website functionality.\nMarketing\nEssential\nThese items are used to deliver advertising that is more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Advertising networks usually place them with the website operator’s permission.\nPersonalization\nEssential\nThese items allow the website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features. For example, a website may provide you with local weather reports or traffic news by storing data about your current location.\nAnalytics\nEssential\nThese items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually doesn’t collect information that identifies a visitor.\nConfirm my preferences and close",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67a4e756231fbcd6386ec06a/css/new-bardeen.webflow.shared.900e9da64.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67a4e756231fbcd6386ec06a/68ef828ec51fd3fb419ea873_Bardeen-FavIcon.svg",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/67a4e756231fbcd6386ec06a/68ef8291b04588fc181bb136_Bardeen-Webclip.svg",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.bardeen.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/private-equity",
+      "rel": null
+    },
+    {
+      "href": "/event-services",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "https://app.dover.com/jobs/bardeen",
+      "rel": null
+    },
+    {
+      "href": "https://community.bardeen.ai/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.bardeen.ai/start",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/private-equity",
+      "rel": null
+    },
+    {
+      "href": "/event-services",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "https://app.dover.com/jobs/bardeen",
+      "rel": null
+    },
+    {
+      "href": "https://community.bardeen.ai/?_gl=1*2kgp8t*_gcl_au*MTU4MjkxMzA4NS4xNzU5Mzk5ODE4LjIxMDc3NTYxNzYuMTc2MjIxNzA2Mi4xNzYyMjE3Mzg1",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/private-equity",
+      "rel": null
+    },
+    {
+      "href": "/event-services",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "https://app.dover.com/jobs/bardeen",
+      "rel": null
+    },
+    {
+      "href": "https://community.bardeen.ai/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "https://www.bardeen.ai/start",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/private-equity",
+      "rel": null
+    },
+    {
+      "href": "/event-services",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "https://app.dover.com/jobs/bardeen",
+      "rel": null
+    },
+    {
+      "href": "https://community.bardeen.ai/?_gl=1*2kgp8t*_gcl_au*MTU4MjkxMzA4NS4xNzU5Mzk5ODE4LjIxMDc3NTYxNzYuMTc2MjIxNzA2Mi4xNzYyMjE3Mzg1",
+      "rel": null
+    },
+    {
+      "href": "https://www.bardeen.ai/start",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-casfari-a-real-estate-company-saves-13-hours-every-day-automating-lead-qualification",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-bardeen-automates-daily-market-research-for-humanes-talent-team",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-this-founder-built-a-talent-marketplace-using-nocode-ai-and-automations",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-leading-management-consulting-firm-kearney-boosted-research-efficiency-with-bardeen",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-deel-sales-and-ops-teams-do-more-in-less-time",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-sdrs-at-easydmarc-save-15-hrs-automating-lead-management-with-bardeen-and-hubspot",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories/how-jotform-market-development-team-automates-market-research",
+      "rel": null
+    },
+    {
+      "href": "/scraper",
+      "rel": null
+    },
+    {
+      "href": "/web-search",
+      "rel": null
+    },
+    {
+      "href": "/enrichment",
+      "rel": null
+    },
+    {
+      "href": "/ai",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/solopreneurs",
+      "rel": null
+    },
+    {
+      "href": "/music",
+      "rel": null
+    },
+    {
+      "href": "/real-estate",
+      "rel": null
+    },
+    {
+      "href": "/recruiting",
+      "rel": null
+    },
+    {
+      "href": "/private-equity",
+      "rel": null
+    },
+    {
+      "href": "/event-services",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/manifesto",
+      "rel": null
+    },
+    {
+      "href": "https://app.dover.com/jobs/bardeen",
+      "rel": null
+    },
+    {
+      "href": "/research",
+      "rel": null
+    },
+    {
+      "href": "https://support.bardeen.ai/hc/en-us/requests/new",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/release-notes",
+      "rel": null
+    },
+    {
+      "href": "/best",
+      "rel": null
+    },
+    {
+      "href": "/guides",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://support.bardeen.ai/",
+      "rel": null
+    },
+    {
+      "href": "https://community.bardeen.ai/",
+      "rel": null
+    },
+    {
+      "href": "/app-faqs",
+      "rel": null
+    },
+    {
+      "href": "/answers",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=GitHub",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=YouTube",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Crunchbase",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Monster.com",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Upwork",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Product+Hunt",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Realtor",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Facebook",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Instagram",
+      "rel": null
+    },
+    {
+      "href": "/templates?website_equal=Zillow",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/c/Bardeenai",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/bardeen/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.producthunt.com/products/bardeen",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/cookiespolicy",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2406
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "task_id": "2.a",
+  "recorded_at_utc": "2026-09-22T03:47:58.286258+00:00",
+  "bounded_work_status": "completed",
+  "case_id": "001",
+  "product_status": "blocked",
+  "accepted_products": 0,
+  "incomplete_products": 1,
+  "current_evidence": {
+    "path": "cases/001/continuations/v1.json",
+    "sha256": "9174fce5f8d5e4666d520064bcc7a4ba6077e234b03ef328df905b4434a43354"
+  },
+  "decision": "Preserve the blocked workflow. Do not add another wrapper, canned rewrite, or rule-based substitute. Do not repeat capability probes without new route evidence.",
+  "remaining_blockers": [
+    "Verified authorized callable inference for B1 and B2",
+    "Actual product outputs and equivalent complete baseline inputs",
+    "Independent semantic evaluation covering negation, uncertainty, attribution, quantities and causality",
+    "Independent unexposed test version before acceptance"
+  ],
+  "execution_handoff": {
+    "existing_local_control_plane_command": "python3 -B research/ai-saas-100/cases/001/tests/run.py",
+    "command_scope": "Optional control-plane regression only, not genuine rewriting. Not rerun in this task.",
+    "inference_command": null,
+    "inference_command_unavailable_reason": "No verified route exists in the retained assessment, so no valid executable inference command can be supplied.",
+    "resume_steps": [
+      "Obtain new explicit route and no-additional-charge authorization evidence; do not inspect secrets or invent provider settings.",
+      "Prove that route with one bounded real request and record output, model/settings, usage, latency and cost classification.",
+      "Archive existing source bytes before integrating the verified invocation into run(), preserving validate_request() and audit_response().",
+      "Prepare complete B1/B2 input bundles with expected answers stored separately; freeze new tests before evaluation and disclose any builder exposure.",
+      "Run real rewriting and generic baseline on equivalent inputs. Save prompts, raw outputs, hashes, attempts and errors.",
+      "Apply literal audits plus independent semantic scoring. Keep original service not_observed unless actually tested; require independent review before acceptance."
+    ]
+  },
+  "preservation_validation": {
+    "retained_hashes_unchanged": true,
+    "references": [
+      {
+        "path": "capabilities-continuation.json",
+        "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+      },
+      {
+        "path": "cases/001/implementation/workflow.py",
+        "sha256": "65fa7e23434d11c2457fcf49ba24485288e5d25867833e80fb9ffb9224760f74"
+      },
+      {
+        "path": "cases/001/tests/fixtures.json",
+        "sha256": "da17753101d08dc5b2e017933e8a888d137febdc7cae4ead93193bd8a253f4a7"
+      },
+      {
+        "path": "cases/001/tests/specification.md",
+        "sha256": "02c0ba8f8acea7198f68a7c972bd88856ff15035b38c1cae40018cacf3afc2b2"
+      },
+      {
+        "path": "cases/001/tests/freeze.json",
+        "sha256": "06b8b25ec62f125c56543f6915d7d05ea0c67a217df912255a371a396d83a52e"
+      },
+      {
+        "path": "cases/001/receipts/baseline-blocked.json",
+        "sha256": "4104540c87febe9b92d6409213e0901d81ccd9386bfc4bb9ef473d28a08019d5"
+      }
+    ]
+  },
+  "product_acceptance": false
+}

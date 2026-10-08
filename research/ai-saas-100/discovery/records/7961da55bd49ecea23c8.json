@@ -1,0 +1,353 @@
+{
+  "evidence_id": "web-7961da55bd49ecea23c8",
+  "source_url": "https://flair.ai/",
+  "retrieved_at": "2026-09-20T21:00:44.978048+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://flair.ai/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/7961da55bd49ecea23c8.html",
+  "capture_sha256": "32045b783232fb1892b896d083527b6415e5d899bbdf3038ba49e79dba72dcea",
+  "bytes_saved": 138140,
+  "title": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Flair.ai"
+    },
+    {
+      "key": "og:title",
+      "value": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai"
+    },
+    {
+      "key": "og:description",
+      "value": "Create studio-quality e-commerce photoshoots in seconds with our drag-and-drop AI editor. Try it free today."
+    }
+  ],
+  "text": "AI Product Photo Generator & Editor | Create E-Commerce Images | Flair.ai\nFlair.ai\nFeatures\nPricing\nEnterprise\nCommunity Gallery\nResources\nTry Flair AI\nfor free\nThe\nThe\nAI\nAI\ndesign\ndesign\ntool\ntool\nfor\nfor\nproduct\nphotoshoots\nBuild stunning AI product content with your team in real-time.\nGet Started\n- It's Free\nBook a Demo\nUsed by brands of all sizes and industries\nCreate content that matches your brand rules and aesthetic.\nGenerate on brand content for all your business needs.\nOn Model Photography\nProduct Videos\nMarketing & Ads\nProduct Photography\n3D element\nStage scenes digitally with drag & drop props. Bring it to life with AI.\nDrag and Drop Canvas\nMix & match product with templates\nTest design concepts that convert customers with one click. Build reusable templates at scale.\nStart with templates\nNEW FEATURE\nFashion photoshoots\nFit your clothing and jewelry onto AI generated models with patterns and logos preserved. Create high-quality on-model imagery at scale.\nTry AI Fashion for Free\nAI Ad Generation\nGenerate high-quality ads for your products with brand consistency alongside a library of templates.\nAI Human Models\nBuild custom AI human models based on features and scale them across all your brand assets. Choose from a range of features including hair color, body type, and more.\nHow does Flair compare?\nSee how Flair stacks up against other AI product photography platforms\nFeatures\nFlair\nPebbely\nBotika\nClaid\nCustom model image generation\nCreate images with models trained on your products\nOn model photography\nGenerate images with products on models\nInstant image generation\nQuickly generate product images without training\nBackground image regeneration\nRecreate and modify image backgrounds\nVideo generation\nCreate product videos with AI\nAd generation\nGenerate advertising creative automatically\nAI editing tools\nEdit and refine images with AI assistance\nOn Brand Customization\nBrand asset management\nManage your brand assets in one place\nHuman builder\nCreate and customize human models\nCustom background and assets\nAdd your own backgrounds and props\nAdditional Features\nTeam collaboration\nWork together with your team in real-time\nAPI access\nAccess via API for integration\nDesign with Flair\nGet Started\nGet Started\nCompany\nPricing\nEnterprise\nCareers\nTerms of Service\nBlog\nFAQ\nKey Features\nBulk Content Generation\nOn Model Photography\nAI Product Videos\nAI Marketing & Ads\nAI Human Builder\nFlair API\nProduct Categories\nAI Beauty\nAI Consumer Packaged Goods\nAI Jewelry\nAI Fashion Models\nAI Furniture\nAI Technology\nAI Handbags\nAI Food\nEditing Tools\nRegenerate Product\nRegenerate Human\nMagic Erase\nUpscale\nVirtual Try On\nEnhance Image Resolution\nGenerate Variations\nExtend Image Dimensions\nView all tools\n© 2025 Flair AI. All rights reserved.\nTwitter\nLinkedIn\nInstagram\nYouTube\nEmail",
+  "links": [
+    {
+      "href": "https://flair.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "mask-icon"
+    },
+    {
+      "href": "/_next/static/media/ec9107400f020d32-s.p.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/db5fea07dc596642-s.p.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/media/4cbb41122a86caae-s.p.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/860aff40eace10fe.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/860aff40eace10fe.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/css/0bf2aaf757553eb3.css",
+      "rel": "preload"
+    },
+    {
+      "href": "/_next/static/css/0bf2aaf757553eb3.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://community.flair.ai/explore",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.flair.ai",
+      "rel": null
+    },
+    {
+      "href": "https://app.flair.ai",
+      "rel": null
+    },
+    {
+      "href": "https://w5um0lo5i9o.typeform.com/to/WaYTKFJ8",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.swimoutlet.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://us.shein.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://bonobos.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.bcg.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.samsonite.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://jlobeauty.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.amazon.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.swimoutlet.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://us.shein.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://bonobos.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.bcg.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.samsonite.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://jlobeauty.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.amazon.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.swimoutlet.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://us.shein.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://bonobos.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.bcg.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.samsonite.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://jlobeauty.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.amazon.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://app.flair.ai",
+      "rel": null
+    },
+    {
+      "href": "https://app.flair.ai/models",
+      "rel": null
+    },
+    {
+      "href": "https://app.flair.ai",
+      "rel": null
+    },
+    {
+      "href": "https://app.flair.ai",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/resources/blog",
+      "rel": null
+    },
+    {
+      "href": "/resources/faq",
+      "rel": null
+    },
+    {
+      "href": "/key-features/bulk-content-generation",
+      "rel": null
+    },
+    {
+      "href": "/key-features/on-model-photography",
+      "rel": null
+    },
+    {
+      "href": "/key-features/ai-product-videos",
+      "rel": null
+    },
+    {
+      "href": "/key-features/ai-marketing-and-ads",
+      "rel": null
+    },
+    {
+      "href": "/key-features/ai-human-builder",
+      "rel": null
+    },
+    {
+      "href": "/key-features/flair-api",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/beauty",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/consumer-packaged-goods",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/jewelry",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/fashion-models",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/furniture",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/tech",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/handbags",
+      "rel": null
+    },
+    {
+      "href": "/product-category-features/food",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/regenerate-product",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/regenerate-human",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/magic-erase",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/upscale",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/virtual-try-on",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/enhance-resolution",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/variations",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/extend-image",
+      "rel": null
+    },
+    {
+      "href": "/editing-tool-features/all-editing-tools",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/flairAI_",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/tryflairai/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/flairai_",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@flairAI_",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/cdn-cgi/l/email-protection#691a1c1919061b1d290f0508001b470800",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2476
+}

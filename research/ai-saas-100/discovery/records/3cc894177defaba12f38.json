@@ -1,0 +1,453 @@
+{
+  "evidence_id": "web-3cc894177defaba12f38",
+  "source_url": "https://www.tabnine.com/",
+  "retrieved_at": "2026-09-20T21:00:55.313558+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.tabnine.com/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/3cc894177defaba12f38.html",
+  "capture_sha256": "220e5a670b856db2f5dcf1c40341d261139d2c17b056a539be385f6f61ac759b",
+  "bytes_saved": 241744,
+  "title": "Tabnine AI Code Assistant | Smarter AI Coding Agents. Total Enterprise Control.",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Tabnine is the AI code assistant that accelerates and simplifies software development while keeping your code private, secure, and compliant."
+    },
+    {
+      "key": "og:title",
+      "value": "Tabnine AI Code Assistant | Smarter AI Coding Agents. Total Enterprise Control."
+    },
+    {
+      "key": "og:description",
+      "value": "Tabnine is the AI code assistant that accelerates and simplifies software development while keeping your code private, secure, and compliant."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Tabnine"
+    }
+  ],
+  "text": "Tabnine AI Code Assistant | Smarter AI Coding Agents. Total Enterprise Control.\nTabnine acquired.\nTabnine has been acquired by Tricentis, the global leader in agentic quality engineering.\nRead more\nMenu\nProducts\nTabnine AI Coding Platform\n–\nAI chat, completions, and agentic workflows across IDE and CLI\nTabnine Context Engine\n–\nOrganizational intelligence that gives agents system-level understanding\nHow it works\nThe\nTabnine Agentic\nPlatform\n–\nOrg-Native AI Agents that plan & execute workflows with enterprise context\nIndustry-leading\nAI code assistant\n–\nShip better software faster with the original AI developer tool\nRun AI workflows in the\nCLI\n–\nBring AI-powered coding, automation, and agents into your terminal.\nAl chat\nthat supports the entire SDLC\n–\nImprove your code with AI-powered chat at every stage of development\nTotal code privacy\n& zero data retention\n–\nSecure the confidentiality and integrity of your codebase\nComplete protection\nfrom IP issues\n–\nEnsure copyright compliance with code scanning and license-compliant models\nPricing\nAI Coding Platform\n–\nAI chat completions and agentic workflows for software development\nEnterprise Context Engine\n–\nOrganizational intelligence that gives agents system-level understanding\nDocs\nResources\n//\nFeatured Article\n//\nIntroducing the Tabnine Enterprise Context Engine\nGiving AI the understanding required to operate safely in real production environments Over the past…\nContinue\n//\nFeatured Product News\n//\nIntroducing the Tabnine CLI\nInfoWorld’s 2025 Technology of the Year\nIntroducing Provenance and Attribution\nMore\n//\nFeatured Thought Leadership\n//\nBefore You Scale AI for Software Dev, Fix How You Measure…\nVibe coding your way into a tsunami of technical debt\nYour AI Doesn’t Need More Training—It Needs Context.\nMore\nGuides and Reports\nVideos\nBlog\nProduct Comparisons\nAl technology guide\nMachine learning guide\nClose\nLog in\nGet a demo\nThe Missing Layer in Enterprise AI:\nContext\nTabnine provides the context enterprises need to make Al reliable, safe, and effective-through our Al Coding Suite or the standalone Enterprise Context Engine.\nLoved by millions of developers\nG2\nG2\nInfoWorld\nTabnine named a Visionary in the September 2025 Gartner® Magic Quadrant™ for AI Code Assistants.\nRead the report.\nOrganizational Intelligence\nfor Agentic Systems\nTabnine provides the context layer that makes AI reliable in the enterprise. Our AI Coding Platform brings that context into the developer workflow, and the Enterprise Context Engine makes it available to any agent or tool—across preferred models, IDEs, and deployment environments.\nTabnine provides the context layer that makes AI reliable in the enterprise. Our AI Coding Platform brings that context into the developer workflow, and the Enterprise Context Engine makes it available to any agent or tool—across preferred models, IDEs, and deployment environments.\nEnterprise Context for Smarter Agents\nTabnine's Enterprise Context Engine is what makes AI coding truly enterprise-ready. Instead of guessing from generic training data, it learns your organization's unique architecture, frameworks, and coding standards. It adapts to your mixed stacks and legacy systems, ensuring every suggestion aligns with your security, compliance, and performance requirements. By embedding enterprise knowledge directly into the coding experience, Tabnine transforms AI from a novelty into a governed, context-aware teammate that codes the way your enterprise works.\nLearn More\n→\nBuilt for Mission-Critical and Highly Secure Environments\nDeploy anywhere — SaaS, on-prem, or fully air-gapped — and keep everything inside. Tabnine gives mission-critical teams the control and compliance to scale AI securely across the enterprise.\nLearn More\n→\nYour AI control plane for trusted software development.\nTabnine gives you centralized visibility, granular access controls, policy enforcement, and full auditability across users, teams, and workspaces — all in one secure place.\nLearn More\n→\nLearn why millions of developers choose Tabnine and why Tabnine is a 2025 Gartner Magic Quadrant Visionary.\nRead the Magic Quadrant\nFrom our blog\nTabnine Named a Visionary in the 2025 Gartner® Magic Quadrant™ for AI Code Assistants\n3 min read\n/\nSeptember 18, 2025\nWe’re proud to announce that Tabnine has been named a Visionary in the 2025 Gartner® Magic Quadrant™ for AI Code…\nRead more\nTabnine Named a Leader in Omdia Universe 2025 Report: No-Low-Pro IDE Assistants\n5 min read\n/\nMay 13, 2025\nWe’re proud to share that Tabnine has been officially named a Leader in the Omdia Universe: No-Low-Pro IDE Assistants, 2025…\nRead more\nAI Code Assistant Buyer’s Guide\n2 min read\n/\nJanuary 23, 2025\nThe pressure to adopt generative AI is intense. Yet the field is so new, how do you choose which tool…\nRead more\nTabnine is the\noriginal AI coding assistant\ntrusted by millions of developers and thousands of companies\n//\nThe product is stable and mature, works well out of the box and integrates well with the codebase - it offers both the possibility to\nconnect external repositories for code indexing\nthat is later offered as suggestions when working with the product, as well as the possibility to feed specific files, functions, properties, etc. into the chat you are using right now for enhanced context awareness when generating an answer.\n//\nGartner Peer Insights\n{\n}\n//\nIt's\nunmatched in trustworthiness and enterprise readiness.\nI appreciate its intelligent code completion that suggests single tokens or multi-line blocks based on the project context, and I love the personalized suggestions that learn my coding style, variable naming, and architectural patterns over time\n//\nG2\n{\n}\n//\nWe've been working with the team at Tabnine for a little over a year now through the full process of testing and deciding to move forward with the Tabnine product, through implementation and ongoing onboarding throughout our engineering organization. Throughout the experience,\nthe team at Tabnine has been responsive and proactive\nin working with us through the process.\n//\nGartner Peer Insights\n{\n}\n//\nTabnine provides impressive code completion functionality\nand helps boost your development productivity. It works seamlessly with most of the popular modern IDEs.\n//\nWisang Eom\nManaging Director, LG Electronics\n{\n}\n//\nThe core reason about going towards using Tabnine is the security aspect. It is hard to have guarantees on companies that rely a lot on controlling whole ecosystems, even if they assure you they don't collect your data.\nWe love the fact about being able to deploy Tabnine on our on-premise hardware without relying on being connected all time.\n//\nG2\n{\n}\n//\nI have to say, there are times when using @tabnine with @phpstorm where\nthe completions and predictions are down right uncanny.\n//\n@superxtranormal\nX review\n{\n}\n//\nThey have a good variety of AI models, including the most recent ones. Their support is great and responds, at most, within hours of the inquiry / issue. Whenever a new major feature is released, they offer us the opportunity to understand how it works and how to best integrate it into our daily workflows, coupled with a demonstration of said functionality. The documentation is also comprehensive.\n//\nGartner Peer Insights\n{\n}\n//\n[Tabnine Enterprise] has helped us to ensure code consistency across our organization,\nresulting in faster and more efficient code reviews. Just as important,\nour developers love working with it.\n//\nAmit Tal\nVP Engineering, ReasonLabs\n{\n}\n//\nWith Tabnine I was able to\nincrease productivity in software development\n, and also increase the efficiency of the code\n//\nGartner Peer Insights\n{\n}\n//\nTabnine is amazing!!!\nYou should really try it 🧑‍💻\n//\n@qwabs94\nX review\n{\n}\n//\nI've been using Tabnine and\nit really saves a lot of time,\nespecially when writing repeat patterns (like copying multiple structs or implementing interfaces). Reduces speed of some actions by 20% easily.\n//\n@CryptoAspect\nX review\n{\n}\n//\nI love it. From those I've tried (Copilot and CodeWhisperer),\nI like Tabnine best.\n//\nRastislav S.\nVS Code Marketplace review\n{\n}\n//\nI must say,\nout of all the coding AI assistants out there, Tabnine is superior.\nIt offers creating tests, explaining the code, fixing the code, and documenting — all seamlessly in the IDE. No other assistant currently does this...\n//\nIgor G.\nLinkedIn review\n{\n}\n//\nI love it!!!\nI'm working with PHP, JavaScript, HTML5, JQuery, and CSS and Tabnine is smart with the suggestions.\n//\nmgiraldo\n{\n}\n//\nOk @tabnine is getting really good.\nI refactored a React component and went to then use it and it automatically completed not just the name, but the correct props to it and they aren't common to anything else in the codebase. :mind-blown:\n//\n@fwiles\nX review\n{\n}\n//\nLove the help I get from Tabnine when coding.\nIt is very useful. It also learns from my existing workspace which is a plus to maintain the same coding standards.\n//\nJayeshkumar P.\nVS Code Marketplace review\n{\n}\n//\n🔥Speaking of which —\nam loving @Tabnine's feature-set for source code completions:\n✅ Fine-tuning models on repos/internal codebases.\n✅ Self-hosting is supported (local servers or private cloud).\n✅ On-demand statistics for how useful the extension has been.\n//\n@DynamicWebPaige\nX review\n{\n}\n//\nTabnine is one of my favorite coding partners.\nI have been using it for a year now, and I highly recommend it.\n//\n@RoshanCodes_\nX review\n{\n}\n//\nTabnine continues to be\nmy all-time favourite AI coding assistant.\n//\nHarley F.\nLinkedIn review\n{\n}\n//\nSo far\nthe best VS Code extension I ever came across\n😍 #tabnine\n//\nIsuru V.\nLinkedIn review\n{\n}\n//\nThe product is incredibly innovative,\nand the Support team is fantastic as well.\n//\nPheonix_JK\nVS Code Marketplace review\n{\n}\n//\nGreat plugin and\nmore advanced than other code completion.\nLearns your style quickly and helps new coders understand faster.\n//\nDavid C.\nVS Code Marketplace review\n{\n}\n//\nTabnine isn't just a plugin, but\nan indispensable asset for developers.\n//\nJason I.\nJetBrains Marketplace review\n{\n}\n//\nIt has been a fantastic experience. If you have a lot of code to work with,\nTabnine does a much better job than GitHub Copilot in its custom suggestions.\n//\nGuy R.\nJetBrains Marketplace review\n{\n}\n//\nI am absolutely mind blown to witness this level of AI.\nIt appears like Tabnine could read your mind, even for comments.\nIt's extremely useful and the only autocomplete suggestion plugin that works in my experience.\n//\nPablo D.\nJetBrains Marketplace review\n{\n}\n//\nI like looking at Tabnine’s widget dashboard and seeing how much of my code was generated by Tabnine. The percentage is always insanely high, cause I just hit Tab, Tab, Tab and I’ve got my code.\nLove working with it.\n//\nKevin Tuuri\nSolutions Architect, Sada\n{\n}\n//\nTabnine has boosted developer productivity for CI&T:\nThe company’s developers accept 90% of the tool’s single-line coding suggestions, resulting in an 11% productivity increase across projects.\n//\nLuis Ribiero\nHead of Engineering, CI&T\n{\n}\n//\nThe (too big) latency was the main reason why we did not choose SourceGraph Cody as our AI tool for development. We had the Enterprise Cloud version. In the end\nwe chose Tabnine as it had better results and significantly lower latency.\n//\n@_Codito_\nX review\n{\n}\n//\nTabnine has become an absolute game changer for me.\nI can't imagine programming without it anymore.\nWhether Tabnine has gotten significantly better, or I've just gotten better at utilizing its features, the results are undeniable. Huge kudos to your entire team for creating such a valuable tool.\n//\nPaul P.\nUser review\n{\n}\nFAQ\nFAQ\nDoes Tabnine understand my architecture?\nYes. Tabnine maps dependencies, architecture, and workflows to deliver more relevant and accurate code suggestions.\nCan I control what context Tabnine uses?\nYes. You can configure precise context settings to ensure Tabnine only uses information you approve.\nWhat types of context does Tabnine ingest?\nTabnine can use your current file, open files, terminal output, and repository history to improve accuracy.\nWhat types of AI agents does Tabnine provide?\nTabnine offers AI agents for every stage of the SDLC, from planning and code creation to testing and documentation.\nCan developers choose their preferred LLM?\nYes. Tabnine supports multiple models and lets developers select the one they prefer.\nIs Tabnine Zero Trust–compliant?\nYes. In air-gapped or secure environments, no data leaves your infrastructure.\nTabnine\nAbout\nCareers\nContact Us\nPartners\nProduct\nPlans & Pricing\nSupported IDEs\nDocumentation\nResources\nCode Privacy\nPrivacy Policy\nTerms of Use\nTrust Center\nTabnine Cookie Policy\nKnowledge Center\nAI code generation\nCode refactoring\nCode debugging\nCode documentation\nUnit testing\n//\nTabnine is the AI coding platform you can deploy anywhere, cloud, on-prem, or air-gapped, while accelerating software development and keeping your code private, secure, and compliant.\n//",
+  "links": [
+    {
+      "href": "https://cdn.vector.co",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://app.factors.ai",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.rudderlabs.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdnjs.cloudflare.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://global.ketchcdn.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://js-eu1.hs-scripts.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://app.worknet.ai",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.ketchjs.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://assets.apollo.io",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.metadata.io",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://fast.wistia.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://code.jquery.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/themes/tabnine/assets/fonts/L0x7DF4xlVMF-BfR8bXMIjhOm32WWpCBC10.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/themes/tabnine/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/ubermenu/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/uploads/2026/01/canon4.png",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.tabnine.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "//code.jquery.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tabnine.com%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tabnine.com%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/themes/tabnine/dist/css/app-be0f106d50.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/themes/tabnine/assets/css/slick.min.css?ver=1.8.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/themes/tabnine/assets/css/select2.min.css?ver=1.8.1",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/tablepress/css/build/default.css?ver=3.3.3",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.8.5",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/ubermenu/assets/css/skins/minimal.css?ver=51e4e5cbe5c0014e59f96f737b97c6cc",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css?ver=51e4e5cbe5c0014e59f96f737b97c6cc",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=WYCJ5xnMNPvNNiA",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-json/",
+      "rel": "https://api.w.org/"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-json/wp/v2/pages/12493",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.tabnine.com/xmlrpc.php?rsd",
+      "rel": "EditURI"
+    },
+    {
+      "href": "https://www.tabnine.com/",
+      "rel": "shortlink"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/uploads/2024/09/cropped-tabnine-favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/uploads/2024/09/cropped-tabnine-favicon-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://www.tabnine.com/wp-content/uploads/2024/09/cropped-tabnine-favicon-180x180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://www.tabnine.com/blog/a-new-chapter-for-tabnine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/platform",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-context-engine",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/platform/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/ai-code-assistant/",
+      "rel": null
+    },
+    {
+      "href": "/platform-cli",
+      "rel": null
+    },
+    {
+      "href": "/ai-chat/",
+      "rel": null
+    },
+    {
+      "href": "/code-privacy/",
+      "rel": null
+    },
+    {
+      "href": "/protection/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/pricing-enterprise-context-engine",
+      "rel": null
+    },
+    {
+      "href": "https://docs.tabnine.com/main",
+      "rel": null
+    },
+    {
+      "href": "/resources/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/introducing-the-tabnine-enterprise-context-engine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/introducing-the-tabnine-enterprise-context-engine/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/introducing-the-tabnine-cli/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/infoworld-tech-of-the-year-2025/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/introducing-provenance-and-attribution-minimize-ip-liability-for-genai-output/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/before-you-scale-ai-for-software-dev-fix-how-you-measure-productivity/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/how-to-avoid-vibe-coding-your-way-into-a-tsunami-of-tech-debt/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/your-ai-doesnt-need-more-training-it-needs-context/",
+      "rel": null
+    },
+    {
+      "href": "/blog/",
+      "rel": null
+    },
+    {
+      "href": "/resources/",
+      "rel": null
+    },
+    {
+      "href": "/resources/#videos",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/comparisons/",
+      "rel": null
+    },
+    {
+      "href": "/blog/ai-technology-powering-the-ai-revolution/",
+      "rel": null
+    },
+    {
+      "href": "/blog/real-world-machine-learning-models-use-cases-operations/",
+      "rel": null
+    },
+    {
+      "href": "https://console.tabnine.com/app/sign-in-emt",
+      "rel": null
+    },
+    {
+      "href": "/contact-us/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/gartner-2025-magic-quadrant",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-context-engine",
+      "rel": null
+    },
+    {
+      "href": "/code-privacy/",
+      "rel": null
+    },
+    {
+      "href": "/platform/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/gartner-2025-magic-quadrant/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/tabnine-named-a-visionary-in-the-2025-gartner-magic-quadrant-for-ai-code-assistants/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/tabnine-named-a-leader-in-omdias-2025-universe-report/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/ai-code-assistant-buyers-guide/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/about/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/careers/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/contact-us/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/partners/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/pricing/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/install/",
+      "rel": null
+    },
+    {
+      "href": "https://docs.tabnine.com/main",
+      "rel": null
+    },
+    {
+      "href": "/resources/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/code-privacy/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/privacy-policy/",
+      "rel": "privacy-policy"
+    },
+    {
+      "href": "https://www.tabnine.com/terms-of-use/",
+      "rel": null
+    },
+    {
+      "href": "https://trust.tabnine.com/?_gl=1*razzyp*_gcl_au*MTYxMzIxNzQwMC4xNzA4MzM4NTQ3",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/cookie-policy/",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/ai-code-generation-how-it-works-and-9-tools-you-should-know/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/code-refactoring-with-generative-ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/code-debugging-definition-techniques-automating-with-generative-ai/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/code-documentation-types-tools-and-challenges/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/unit-testing-definition-pros-cons-and-best-practices/",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/tabnine",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC3ZLFXRRmK3XbT5Oq0qPLqA",
+      "rel": null
+    },
+    {
+      "href": "https://twitter.com/tabnine",
+      "rel": null
+    },
+    {
+      "href": "https://www.tabnine.com/blog/",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2156
+}

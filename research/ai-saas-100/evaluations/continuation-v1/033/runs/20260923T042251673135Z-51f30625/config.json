@@ -1,0 +1,11 @@
+{
+  "source_snapshot": {
+    "path": "cases/033/source-history/scheduler-v1-6e16e7e43d6b5d1d/source-bundle.json",
+    "sha256": "b56716aa6409f153050fb4ff344c98941494cb43fc021fb479776ee449f5ae48"
+  },
+  "freeze": {
+    "path": "evaluations/continuation-v1/033/runs/20260923T042251673135Z-51f30625/freeze.json",
+    "sha256": "91d9bf99ae3b82a03789240bd8adad60aa1333d3eb3070c7aa4d3b236b3b8edf"
+  },
+  "inference_enabled": false
+}

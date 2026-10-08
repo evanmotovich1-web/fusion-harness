@@ -1,0 +1,66 @@
+{
+  "evidence_id": "r012-0bc3718b3b246df0d32b",
+  "source_url": "https://replit.com/integrations",
+  "publisher": "replit.com",
+  "retrieved_at": "2026-09-20T21:35:26.390724+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "integrations",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://replit.com/integrations",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/012/research/captures/0bc3718b3b246df0d32b.html",
+  "capture_sha256": "b55e473ca57ecf2980b0105eb31dbc59c209fbe16664c07f832dc621f33bf7de",
+  "bytes_saved": 11449,
+  "title": "Replit Integrations — Browse 450+ Connectors | Replit",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Browse 450+ Replit integrations and connectors — Stripe, Slack, Notion, Google Workspace, and more. Connect your tools and let Replit Agent build your app."
+    },
+    {
+      "key": "og:title",
+      "value": "Connect Tools. Ship Products. — 450+ Replit Integrations"
+    },
+    {
+      "key": "og:description",
+      "value": "The largest integration library in AI. Find the connector you need and tell Replit Agent what to build — auth, wiring, and UI handled for you."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Replit"
+    }
+  ],
+  "text": "Replit Integrations — Browse 450+ Connectors | Replit",
+  "links": [
+    {
+      "href": "https://integrations-hub.replit.app/api/static/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://replit.com/integrations",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cdn.replit.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.replit.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://integrations-hub.replit.app/api/static/replit_brand_kit/fonts/diatype-variable.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://integrations-hub.replit.app/api/static/assets/index-vY0e6-HQ.css",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 0.222945
+}

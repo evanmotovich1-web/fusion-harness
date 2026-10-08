@@ -1,0 +1,233 @@
+{
+  "evidence_id": "web-9586bf4d44c807eeb54d",
+  "source_url": "https://type.ai/",
+  "retrieved_at": "2026-09-20T21:00:09.996841+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://type.ai/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/9586bf4d44c807eeb54d.html",
+  "capture_sha256": "93934b2c45d9e3436c700c8d5d047d42da684ff0783dd70f90aa0ad940d8dcd3",
+  "bytes_saved": 53440,
+  "title": "Type.ai: Free AI book writer and editor",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Type.ai is the AI editor for storytellers. Join 300k+ writers who use Type to write books, novels, screenplays, fan fiction, and long-form stories."
+    },
+    {
+      "key": "og:title",
+      "value": "Type.ai: Free AI book writer and editor"
+    },
+    {
+      "key": "og:description",
+      "value": "Type.ai is the AI editor for storytellers. Join 300k+ writers who use Type to write books, novels, screenplays, fan fiction, and long-form stories."
+    }
+  ],
+  "text": "Type.ai: Free AI book writer and editor\nResources\nFree writing tools\nBlog\nPricing\nLog in\nTry for free ->\nThe intelligent editor for storytellers.\nFinish your next book, screenplay, or story with the AI editor for professional storytelling.\nStart with Google\nTry for free ->\nTry for free ->\nYour browser does not support the video tag.\nPlay video\nTrusted by 300k+ writers\nMeet your new creative partner.\nState-of-the-art intelligence inside a deep workflow for writers.\nremember everything\nWrite and chat in one place.\nYour draft and AI assistant are deeply integrated in Type. No more copy-pasting between tools.\nStart editing ->\nDeep AI integration\nSave rich details about your story.\nSave your characters, settings, and scenes so Type can give you delightfully specific suggestions.\nCraft your story ->\nFeature-Rich editor\nWrite in your style.\nCreate custom writing rules to help amplify the quirks that make your writing unique.\nCreate a style ->\nMultimodal Publishing\nGet to publish-ready faster.\nExport a draft as a DOCX, PDF, or view-only URL. Or pick a voice and generate a high-quality narrated track.\nGet to done ->\nAll inside a modern word processor\nOffline mode. Keyboard shortcuts. Version history. Type goes beyond the basics to deliver a complete workflow for professional storytellers.\nFull offline capability\nWrite anywhere, anytime, even without an internet connection.\nPrivate and secure\nNo AI models are trained on your data, ever.\nRich formatting support\nEmbed images, tables, code, and math blocks.\nKeyboard shortcuts\nNavigate the entire app without leaving your keyboard.\nFrequently asked questions\nWhat kind of writing is Type.ai best for?\nType.ai excels at writing books, novels, screenplays, stories, or any type of creative long-form writing that requires careful crafting, editing, and review.\nDoes Type.ai train on my data?\nNo, Type does not train any AI models on your data. All of your uploads and documents in Type remain private to you. You can read Type's full privacy policy\nhere\n.\nWhat exactly is Type.ai?\nType.ai is the most popular alternative to ChatGPT and Claude for long-form creative writing tasks that require a deep editing process. Type.ai has a feature-rich document editor with deeply embedded AI features for generating, revising, and reviewing documents. You'll also find tools for easily organizing your work.\nCan I edit an entire book in Type.ai?\nYes, you can edit an entire book or novel in Type.ai. Type's editing and writing features are designed to work on documents as long as 150,000 words. For manuscripts longer than 150k words, we recommend breaking it up into multiple documents.\nCan I edit and generate Word documents in Type.ai?\nYes, you can import and edit Word documents and PDFs inside Type's editor. You can also use Type's AI to generate entire documents and export them as Word docs, PDFs, and AI narrated audio files.\nDoes Type.ai remember things about my story?\nYes, Type's \"Notes\" feature remembers rich details about your characters, story, and world. You can manually edit any story note you'd like, or ask Type Chat to make changes. Type takes all of your Notes into consideration when you ask it for writing help.\nStart writing today\nfor free.\nKeep access to your drafts for free, forever.\nPlans starting at\n$\n8\n12\n/month\n$12/month\nThank you! Your submission has been received!\nOops! Something went wrong while submitting the form.\nLatest version of Type with access to all premium features\nPremium AI models from Anthropic, OpenAI, and Google\nPriority support via email\n30-day money-back guarantee\nPay annually and save 33%\nSee pricing and plans ->\nFree Writing Tools\nAI Story Generator\nAI Novel Writer\nAI Book Writer\nFan Fiction Generator\nCharacter Name Generator\nPlot Generator\nBook Title Generator\nParagraph Rewriter\nSentence Rewriter\nEmail Generator\nProduct Comparisons\nSudowrite\nSquibler\nNovelcrafter\nChatGPT\nClaude\nhello@type.ai\n© TypeAI Inc. 2026\nResources\nFree writing tools\nBlog\nFAQs\nWriting templates\nCompany\nCareers\nTerms of Service\nPrivacy Policy",
+  "links": [
+    {
+      "href": "https://cdn.prod.website-files.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6552b89c2624b95125bb6da0/css/type-ai.webflow.shared.fa2b66bae.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6552b89c2624b95125bb6da0/68f131f694278ecf9e5f404c_favicon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "https://cdn.prod.website-files.com/6552b89c2624b95125bb6da0/68f131b46e5c52b4d5696e56_TYPE-Icon-ShapesSm-W-256.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://type.ai",
+      "rel": "canonical"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/ai-writing-tools",
+      "rel": null
+    },
+    {
+      "href": "https://blog.type.ai",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/login.html",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/login.html?signup=true",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/ai-story-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-novel-writer",
+      "rel": null
+    },
+    {
+      "href": "/ai-book-writer",
+      "rel": null
+    },
+    {
+      "href": "/ai-story-generator/free-fanfic-generator",
+      "rel": null
+    },
+    {
+      "href": "/character-name-generator",
+      "rel": null
+    },
+    {
+      "href": "/plot-generator",
+      "rel": null
+    },
+    {
+      "href": "/book-title-generator",
+      "rel": null
+    },
+    {
+      "href": "/ai-writing-tools/paragraph-rewriter",
+      "rel": null
+    },
+    {
+      "href": "/ai-writing-tools/sentence-rewriter",
+      "rel": null
+    },
+    {
+      "href": "#",
+      "rel": null
+    },
+    {
+      "href": "/best-sudowrite-alternative",
+      "rel": null
+    },
+    {
+      "href": "/best-squibler-alternative",
+      "rel": null
+    },
+    {
+      "href": "/best-novelcrafter-alternative",
+      "rel": null
+    },
+    {
+      "href": "/type-vs-chatgpt",
+      "rel": null
+    },
+    {
+      "href": "/type-vs-claude",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://www.youtube.com/@typedotai",
+      "rel": null
+    },
+    {
+      "href": "https://www.linkedin.com/company/type-ai/",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/typedotai",
+      "rel": null
+    },
+    {
+      "href": "/ai-writing-tools",
+      "rel": null
+    },
+    {
+      "href": "https://blog.type.ai",
+      "rel": null
+    },
+    {
+      "href": "https://blog.type.ai/faqs",
+      "rel": null
+    },
+    {
+      "href": "/templates",
+      "rel": null
+    },
+    {
+      "href": "https://www.ycombinator.com/companies/type/jobs",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/privacy-policy",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.1947
+}

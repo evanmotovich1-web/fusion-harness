@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "task_id": "2.d",
+  "owner": "drift",
+  "recorded_at": "2026-09-22T04:25:39.621907+00:00",
+  "scope": "Truthful continuation ledger for 004-008, not five accepted reproductions",
+  "products": [
+    {
+      "case_id": "004",
+      "name": "LanguageTool",
+      "checkpoint": {
+        "path": "cases/004/continuation-v1.json",
+        "sha256": "11e729539a54f8d63f939ac10bc0d8f2c0c9bad59a98edd1746a03105f745d35"
+      },
+      "accepted": false,
+      "component_tested": false,
+      "research_only": true,
+      "status": "incomplete"
+    },
+    {
+      "case_id": "005",
+      "name": "Frase",
+      "checkpoint": {
+        "path": "cases/005/continuation-v1.json",
+        "sha256": "00341724f4e64c58f76aae8d750f7d9511e7118ddf9af32c2a619f01acab5c6c"
+      },
+      "accepted": false,
+      "component_tested": false,
+      "research_only": true,
+      "status": "incomplete"
+    },
+    {
+      "case_id": "006",
+      "name": "Clay",
+      "checkpoint": {
+        "path": "cases/006/continuation-v1.json",
+        "sha256": "6ab5b238e9072f98ecf587c4981031e1de4d86497f912ac5c173410095c62a4f"
+      },
+      "accepted": false,
+      "component_tested": true,
+      "research_only": false,
+      "status": "incomplete"
+    },
+    {
+      "case_id": "007",
+      "name": "Botsonic",
+      "checkpoint": {
+        "path": "cases/007/continuation-v1.json",
+        "sha256": "5cb8f36a36318dfbd37a3774b9a16d2223bd08ca19d31de07a654f745f79474a"
+      },
+      "accepted": false,
+      "component_tested": true,
+      "research_only": false,
+      "status": "incomplete"
+    },
+    {
+      "case_id": "008",
+      "name": "Fireflies",
+      "checkpoint": {
+        "path": "cases/008/continuation-v1.json",
+        "sha256": "19ce0090aeea672d8aa493e5027dad8335f88f394053979ed8b5676ad35cc13c"
+      },
+      "accepted": false,
+      "component_tested": false,
+      "research_only": true,
+      "status": "incomplete"
+    }
+  ],
+  "counts": {
+    "assigned": 5,
+    "public_followups_attempted": 5,
+    "public_followups_captured": 5,
+    "local_components_implemented_and_tested": 2,
+    "research_only_products": 3,
+    "component_test_rows_passed": 64,
+    "central_workflows_completed": 0,
+    "accepted_products": 0,
+    "incomplete_products": 5,
+    "products_with_capability_blockers": 5,
+    "generic_model_baselines_executed": 0,
+    "original_products_executed": 0
+  },
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "commercial_verdict": "insufficient_evidence",
+  "cost": {
+    "value": null,
+    "unit": "USD",
+    "classification": "unknown",
+    "reason": "No billed inference, provider usage, or local-resource allocation measured"
+  },
+  "additional_paid_calls": 0,
+  "purchases": 0,
+  "actual_active_seconds": null,
+  "active_time_reason": "Not instrumented; no sustained-duration claim",
+  "baseline_inference_or_parity_claim": false,
+  "shared_registry_modified": false,
+  "preservation": "All 62 pre-existing files across these five cases retain their original hashes",
+  "handoff": {
+    "006": "Review exact-domain/provider merge method, provenance and uncertainty before extending to model-dependent behavior",
+    "007": "Review temporal corpus and exact-span audits separately from absent answer generation",
+    "004_005_008": "Retain research supplements and capability gaps. No placeholders generated."
+  }
+}

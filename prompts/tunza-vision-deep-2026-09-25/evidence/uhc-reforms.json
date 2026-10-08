@@ -1,0 +1,28 @@
+{
+  "id": "uhc-reforms",
+  "requested_url": "https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat",
+  "accessed_utc": "2026-09-25T02:53:13.991599+00:00",
+  "status": 200,
+  "final_url": "https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat",
+  "headers": {
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "must-revalidate, no-cache, private",
+    "Date": "Fri, 25 Sep 2026 02:53:17 GMT",
+    "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
+    "Link": "<https://www.health.go.ke/health-cs-outlines-uhc-reforms-national-assembly-retreat>; rel=\"canonical\"",
+    "X-UA-Compatible": "IE=edge",
+    "Content-language": "en",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "interest-cohort=()",
+    "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "X-Generator": "Drupal 9 (https://www.drupal.org)",
+    "X-Drupal-Cache": "MISS"
+  },
+  "bytes": 55341,
+  "sha256": "a46ccfbe07cd0d20b8ebe290c5eb86aa2a48388fb58a3be9ea50abbc92e95181",
+  "file": "uhc-reforms.html"
+}

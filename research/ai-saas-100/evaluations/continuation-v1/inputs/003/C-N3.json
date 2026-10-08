@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "test_id": "C-N3",
+  "split": "normal",
+  "exposure": "independent_authored_exposed",
+  "runs": [
+    {
+      "initial_store": {
+        "revision": 1,
+        "contacts": [
+          {
+            "id": "c1",
+            "name": "Mira",
+            "email": "MIRA@example.invalid",
+            "status": "new",
+            "note": ""
+          },
+          {
+            "id": "c2",
+            "name": "Mira",
+            "email": "mira@example.invalid",
+            "status": "qualified",
+            "note": "Existing note"
+          },
+          {
+            "id": "c3",
+            "name": "Noor",
+            "email": "noor@example.invalid",
+            "status": "new",
+            "note": ""
+          }
+        ]
+      },
+      "request": "Set c3's note to \"Demo requested; date not confirmed\". Do not change its status.",
+      "sequence": [
+        "interpret",
+        "propose",
+        "approve_exact",
+        "apply_exact",
+        "fresh_read"
+      ]
+    }
+  ]
+}

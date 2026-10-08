@@ -1,0 +1,229 @@
+{
+  "evidence_id": "web-56e2f9bc00e927ab0e3d",
+  "source_url": "https://customgpt.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.331767+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://customgpt.ai/",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/56e2f9bc00e927ab0e3d.html",
+  "capture_sha256": "1280524e79f20472f33ca7d826677a234aaa4b207fb756c2444b480b87fe8e7f",
+  "bytes_saved": 262144,
+  "title": "CustomGPT.ai | Custom GPTs From Your Content For Business",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "CustomGPT.ai empowers businesses with custom GPTs—AI agents built from your content. Deliver exceptional customer experiences and maximize employee efficiency."
+    },
+    {
+      "key": "og:title",
+      "value": "CustomGPT.ai | Custom GPTs From Your Content For Business"
+    },
+    {
+      "key": "og:description",
+      "value": "CustomGPT.ai empowers businesses with custom GPTs—AI agents built from your content. Deliver exceptional customer experiences and maximize employee efficiency."
+    },
+    {
+      "key": "og:site_name",
+      "value": "CustomGPT.ai"
+    }
+  ],
+  "text": "CustomGPT.ai | Custom GPTs From Your Content For Business",
+  "links": [
+    {
+      "href": "//gmpg.org/xfn/11",
+      "rel": "profile"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/uploads/2026/03/custompt-hero-background.webp",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/uploads/2024/11/Logo.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/uploads/2026/04/university-of-virginia-logo-color.svg",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/fonts/CircularStd-Bold.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/fonts/CircularStd-Book.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/uploads/2025/01/Inter18pt-Light.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/uploads/2025/01/Inter18pt-Bold-2.woff",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/webfonts/fa-solid-900.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/webfonts/fa-brands-400.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/webfonts/fa-regular-400.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/fonts/inter-ucc73fwrk3iltehus_nvmrmxcp50sjia1zl7.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/fonts/inter-ucc53fwrk3iltcvneqg7ca725jhhknnqk6l5uum.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/perfmatters/customgpt.ai/css/front.used.css?ver=1789131870",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/perfmatters/customgpt.ai/css/front.used.css?ver=1789131870",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://js.hs-banner.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://js.hscollectedforms.net",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://js.hsadspixel.net",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://js.hs-analytics.net",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://ddwl4m2hdecbv.cloudfront.net",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdp.customer.io",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://static.ads-twitter.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://www.googletagmanager.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn-cookieyes.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.customgpt.ai",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://app.firsttouch.ai",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://a.omappapi.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://cdn.firstpromoter.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/perfmatters/customgpt.ai/fonts/3572001b4d4b.google-fonts.min.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/perfmatters/customgpt.ai/fonts/3572001b4d4b.google-fonts.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/perfmatters/customgpt.ai/fonts/3572001b4d4b.google-fonts.min.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://customgpt.ai/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://customgpt.ai/comments/feed/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://customgpt.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcustomgpt.ai%2F",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://customgpt.ai/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcustomgpt.ai%2F&format=xml",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto-child/assets/css/header.css?cgptv=88774dce7cd9",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto-child/style.css?cgptv=88774dce7cd9",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/core/reset.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/core/wordpress.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/core/screen.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/modulobox.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/menus/left-align-menu.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/themify-icons.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/cache/min/1/wp-content/themes/starto/css/tooltipster.css?ver=1789059424",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/themes/starto/style.css?cgptv=88774dce7cd9",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://customgpt.ai/wp-content/plugins/elementor/assets/css/frontend.min.css?cgptv=88774dce7cd9",
+      "rel": "stylesheet"
+    }
+  ],
+  "elapsed_seconds": 1.6629
+}

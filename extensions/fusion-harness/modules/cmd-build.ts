@@ -357,7 +357,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 				// A builder out of provider quota is benched for this run instead of stalling
 				// everyone until its reset (run futyZD sat ~1.5h on two z.ai models). The
 				// architect is required, so it waits — visibly, with the reset time.
-				const quotaBenched = new Map<string, { model: string; until: string; error: string }>();
+				const quotaBenched = new Map<string, { model: string; until?: string; error: string; reason: "provider quota" | "proposal failed — provider unavailable" }>();
 				await Promise.all(runs.map(async (run) => {
 					const slot = run.slot!;
 					const own = new AbortController();
@@ -369,7 +369,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 							ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: architect ${slot.name} (${slot.model}) is out of provider quota — waiting, next try ${until}`);
 							return;
 						}
-						quotaBenched.set(slot.id, { model: slot.model, until, error: error.slice(0, 200) });
+						quotaBenched.set(slot.id, { model: slot.model, until, error: error.slice(0, 200), reason: "provider quota" });
 						ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: benched ${[...quotaBenched.keys()].join(", ")} (provider quota) — continuing with the rest`);
 						own.abort();
 					};
@@ -378,34 +378,47 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 					} finally {
 						stopper.signal.removeEventListener("abort", onStop);
 					}
+					if (!runOk(run) && !stopper.stopped() && !quotaBenched.has(slot.id)) {
+						quotaBenched.set(slot.id, { model: slot.model, error: runError(run).slice(0, 200), reason: "proposal failed — provider unavailable" });
+					}
 					const benched = quotaBenched.get(slot.id);
-					await h.save(proposalsDir, `${slot.id}.md`, benched ? `BENCHED: ${slot.model} is out of provider quota (next try ${benched.until}); left out of this run.\n${benched.error}` : runOk(run) ? run.text : `FAILED: ${runError(run)}`);
+					await h.save(proposalsDir, `${slot.id}.md`, benched
+						? benched.reason === "provider quota"
+							? `BENCHED: ${slot.model} is out of provider quota (next try ${benched.until}); left out of this run.\n${benched.error}`
+							: `BENCHED: ${slot.model} proposal failed — provider unavailable; left out of this run.\n${benched.error}`
+						: run.text);
 				}));
 				if (quotaBenched.size) {
 					await h.save(collabDir, "quota-benched.json", JSON.stringify(Object.fromEntries(quotaBenched), null, 2));
-					ctx.ui.notify(`fh-collaborate: left out ${[...quotaBenched.entries()].map(([id, b]) => `${id} (${b.model}, quota until ~${b.until})`).join(", ")}`, "warning");
+					ctx.ui.notify(`fh-collaborate: left out ${[...quotaBenched.entries()].map(([id, b]) => `${id} (${b.model}, ${b.reason}${b.until ? ` until ~${b.until}` : ""})`).join(", ")}`, "warning");
 				}
-				const activeSlots = slots.filter((slot) => !quotaBenched.has(slot.id));
+				const activeSlots = slots.filter((slot) => runOk(runBySlot.get(slot.id)!));
 				if (stopper.stopped()) {
 					h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped during planning; completed proposals remain on disk.");
 					return;
 				}
 				// The proposals render like /fh-opinion — the intermediate step is part of the output.
 				h.panel({ kind: "multi", command: "fh-collaborate", title: "⇄ PROPOSALS — how each agent would do the work", ok: runs.every(runOk), prompt, sources: runs.map(toStat), answers: runs.map((run) => ({ role: run.role, model: run.model, text: runOk(run) ? run.text : `FAILED: ${runError(run)}`, slotId: run.slot!.id, slotName: run.slot!.name, color: run.slot!.color, primary: run.slot!.primary })), artifactsDir, ...h.totals(runs, startedAt) }, runs.map((run) => `## ${run.slot!.name}\n${runOk(run) ? run.text : `FAILED: ${runError(run)}`}`).join("\n\n"));
-				if (runs.filter(runOk).length < 2) {
-					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, "Collaboration needs at least two successful plans.");
+				if (!activeSlots.length) {
+					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, "no successful proposals — every configured slot is unavailable");
+					return;
+				}
+				const successfulActiveRuns = activeSlots.filter((slot) => runOk(runBySlot.get(slot.id)!)).length;
+				if (successfulActiveRuns < Math.min(2, activeSlots.length)) {
+					h.panel({ kind: "error", command: "fh-collaborate", ok: false, sources: runs.map(toStat), artifactsDir, ...h.totals(runs, startedAt) }, "Collaboration needs at least two successful plans when two or more slots are available.");
 					return;
 				}
 
 				// ── Phase 2: the ARCHITECT merges the proposals into ONE delegation DAG ──
-				const architectRun = runBySlot.get(stack.architect.id)!;
+				const architectSlot = activeSlots.find((slot) => slot.id === stack.architect.id) ?? activeSlots.find((slot) => slot.primary) ?? activeSlots[0]!;
+				const architectRun = runBySlot.get(architectSlot.id)!;
 				const planPath = path.join(collabDir, "plan.json");
 				let planError = "";
 				for (let attempt = 1; attempt <= 3; attempt++) {
 					ctx.ui.setStatus(CUSTOM_TYPE, `collaborate: architect merging plans into a delegation graph${attempt > 1 ? ` (repair ${attempt - 1})` : ""}…`);
-					const benchedNote = quotaBenched.size ? `\n\nUNAVAILABLE THIS RUN (provider quota exhausted): ${[...quotaBenched.keys()].join(", ")}. Assign them NO tasks; every other slot still needs meaningful work.` : "";
+					const benchedNote = quotaBenched.size ? `\n\nUNAVAILABLE THIS RUN (provider unavailable): ${[...quotaBenched.keys()].join(", ")}. Assign them NO tasks; every other slot still needs meaningful work.` : "";
 					const delegatePrompt = withHarnessRepoState(collabDelegatePrompt(stack, prompt, collabDir, planPath) + benchedNote + (planError ? `\n\nPREVIOUS PLAN VALIDATION FAILED:\n${planError}\nRewrite the complete corrected plan.` : ""), repoCardMarkdown);
-					await runChild({ run: architectRun, prompt: delegatePrompt, systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: READONLY_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run: architectRun, prompt: delegatePrompt, systemPrompt: contractSystemPrompt(architectSlot.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: architectSlot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: architectSlot.thinking, ...h.slotNextSpawn(architectSlot, architectRun, initialSpawns.get(architectSlot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					if (stopper.stopped()) {
 						h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped while the architect was producing the delegation graph.");
 						return;
@@ -596,7 +609,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 							const outcome = taskStates[verifier.id] === "blocked" ? taskOutcomes.get(verifier.id) : undefined;
 							const owner = outcome?.repair_target ? plan.tasks.find((task) => task.id === outcome.repair_target) : undefined;
 							const rejection = taskReports.get(verifier.id) ?? "";
-							const eligible = verifier.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && taskStates[owner.id] === "completed" && lastRejection.get(verifier.id) !== rejection;
+							const eligible = verifier.mode === "read" && owner?.mode === "write" && owner.assignee !== verifier.assignee && verifier.depends_on.includes(owner.id) && (taskStates[owner.id] === "completed" || taskStates[owner.id] === "no_op") && lastRejection.get(verifier.id) !== rejection;
 							return eligible ? { verifier, owner: owner!, rejection } : undefined;
 						}).find(Boolean);
 						if (repair && !stopper.stopped()) {
@@ -608,10 +621,14 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 							await h.save(collabDir, "repairs.json", JSON.stringify(repairLog, null, 2));
 							taskStates[owner.id] = "writing";
 							await executeTask(owner, `OWNER REPAIR — cycle ${cycle}. Repair only your original implementation scope; no live/release, publication, new permissions or weakened acceptance. Rejection evidence:\n${rejection}`);
-							if (!stopper.stopped() && taskStates[owner.id] === "completed") {
-								// The repair changed the owner's output: every other accepted descendant is stale.
-								for (const id of collaborationDescendantIds(plan.tasks, owner.id)) {
-									if (id !== verifier.id && taskStates[id] === "completed") taskStates[id] = "pending";
+							if (!stopper.stopped() && (taskStates[owner.id] === "completed" || taskStates[owner.id] === "no_op")) {
+								// A completed repair changed the owner's output: every other accepted descendant is stale.
+								// A no_op repair (the owner says the fix already landed) changed nothing, but the verifier
+								// must still re-read the current files, or its stale rejection blocks the whole graph.
+								if (taskStates[owner.id] === "completed") {
+									for (const id of collaborationDescendantIds(plan.tasks, owner.id)) {
+										if (id !== verifier.id && taskStates[id] === "completed") taskStates[id] = "pending";
+									}
 								}
 								taskStates[verifier.id] = "reading";
 								await executeTask(verifier, `Reverification after owner repair cycle ${cycle}. Original rejected acceptance remains binding:\n${rejection}`);
@@ -637,7 +654,7 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 					const facts = ["# BLOCKED — final write integration, live/release and publication not authorized", executionFailure ?? "Acceptance remains blocked.", ...plan.tasks.map((task) => `- ${task.id}: ${taskStates[task.id]} — ${taskOutcomes.get(task.id)?.summary ?? "not accepted"}`)].join("\n");
 					// Persist host facts first: a failed/uncertain digest child must not erase them.
 					await h.save(collabDir, "final.md", facts);
-					await runChild({ run: architectRun, prompt: `READ-ONLY BLOCKED DIGEST\n${facts}\nReports: ${reportsDir}\nSummarize completed execution separately from accepted deliverables, blocked research/integration, missing approvals and next owner actions. Do not claim success or perform repairs, live validation, release or writes. Last word: architect.`, systemPrompt: stack.architect.systemPrompt, appendSystemPrompts: stack.architect.appendSystemPrompts, tools: READONLY_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run: architectRun, prompt: `READ-ONLY BLOCKED DIGEST\n${facts}\nReports: ${reportsDir}\nSummarize completed execution separately from accepted deliverables, blocked research/integration, missing approvals and next owner actions. Do not claim success or perform repairs, live validation, release or writes. Last word: architect.`, systemPrompt: architectSlot.systemPrompt, appendSystemPrompts: architectSlot.appendSystemPrompts, tools: READONLY_TOOLS, thinking: architectSlot.thinking, ...h.slotNextSpawn(architectSlot, architectRun, initialSpawns.get(architectSlot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 					const digest = `${facts}\n\n## Architect digest\n${runOk(architectRun) ? architectRun.text : `Unavailable: ${runError(architectRun)}. No replay attempted.`}`;
 					await h.save(collabDir, "final.md", digest);
 					h.panel({ kind: "collab", command: "fh-collaborate", ok: false, agent: toStat(architectRun), artifactsDir }, digest);
@@ -655,11 +672,11 @@ export function registerCollaborateCommand(pi: ExtensionAPI, h: HarnessDeps): Co
 				activeWriters++;
 				maxConcurrentWriteEnabledChildren = Math.max(maxConcurrentWriteEnabledChildren, activeWriters);
 				try {
-					await runChild({ run: architectRun, prompt: withHarnessRepoState(collabCoordinatePrompt(prompt, reportsDir, planPath), repoCardMarkdown), systemPrompt: contractSystemPrompt(stack.architect.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: stack.architect.appendSystemPrompts, tools: FULL_TOOLS, thinking: stack.architect.thinking, ...h.slotNextSpawn(stack.architect, architectRun, initialSpawns.get(stack.architect.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
+					await runChild({ run: architectRun, prompt: withHarnessRepoState(collabCoordinatePrompt(prompt, reportsDir, planPath), repoCardMarkdown), systemPrompt: contractSystemPrompt(architectSlot.systemPrompt, "SYSTEM_PROMPT_COLLAB_COORDINATOR.md"), appendSystemPrompts: architectSlot.appendSystemPrompts, tools: FULL_TOOLS, thinking: architectSlot.thinking, ...h.slotNextSpawn(architectSlot, architectRun, initialSpawns.get(architectSlot.id)!, ctx), cwd: ctx.cwd, timeoutMs: h.childTimeoutMs(), signal: stopper.signal });
 				} finally {
 					activeWriters--;
 				}
-				taskExecutions.push({ taskId: "final", slot: stack.architect.id, mode: "write", startedAt: finalStartedAt, endedAt: Date.now(), ok: runOk(architectRun) && !stopper.stopped() });
+				taskExecutions.push({ taskId: "final", slot: architectSlot.id, mode: "write", startedAt: finalStartedAt, endedAt: Date.now(), ok: runOk(architectRun) && !stopper.stopped() });
 				if (stopper.stopped()) {
 					h.stoppedPanel("fh-collaborate", runs, artifactsDir, startedAt, "Stopped during final architect integration.");
 					return;

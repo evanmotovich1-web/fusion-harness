@@ -1,0 +1,57 @@
+{
+  "evidence_id": "web-139e71c6a26394f273d8",
+  "source_url": "https://persana.ai/",
+  "retrieved_at": "2026-09-20T21:00:23.162200+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://persana.ai/",
+  "content_type": "text/html",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/139e71c6a26394f273d8.html",
+  "capture_sha256": "90b65b2cf3c9bcf9715c6fb378e5c06e77595fa1c0fb017127e3845a826ce1a0",
+  "bytes_saved": 262144,
+  "title": "Persana AI | 10x Your Sales Prospecting with AI",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale."
+    },
+    {
+      "key": "og:title",
+      "value": "Persana AI | 10x Your Sales Prospecting with AI"
+    },
+    {
+      "key": "og:description",
+      "value": "Find, enrich, and personalize outbound at scale - all in seconds, and book more meetings. Find and target your ideal customer persona at scale."
+    }
+  ],
+  "text": "Persana AI | 10x Your Sales Prospecting with AI",
+  "links": [
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://framerusercontent.com/images/T5s8qrteJM9K2e7yEia7nvzHk.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://persana.ai/",
+      "rel": "canonical"
+    }
+  ],
+  "elapsed_seconds": 0.2233
+}

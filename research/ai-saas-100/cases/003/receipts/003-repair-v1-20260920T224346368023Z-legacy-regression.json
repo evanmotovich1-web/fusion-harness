@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "case_id": "003",
+  "run_id": "003-repair-v1-20260920T224346368023Z-legacy-regression",
+  "system": "B2",
+  "status": "completed",
+  "started_at": "2026-09-20T22:43:46.426510+00:00",
+  "ended_at": "2026-09-20T22:43:46.456349+00:00",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "-B",
+    "/Users/evanmotovich/fusion-harness/research/ai-saas-100/cases/003/tests/run.py"
+  ],
+  "cwd": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "implementation": {
+    "path": "cases/003/implementation/workflow.py",
+    "sha256": "8d7f440f41e60d19228535762d96d64f2719d3cfc2aa4489aeac36ca634cc4d4"
+  },
+  "fixtures": {
+    "path": "cases/003/tests/fixtures.json",
+    "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f"
+  },
+  "input_bundle": {
+    "path": "cases/003/tests/fixtures.json",
+    "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f"
+  },
+  "outputs": [
+    {
+      "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-legacy-regression.stdout.json",
+      "sha256": "35e9c23016b5d1f77d07836895339ee54866884e72ae204a3a59a9e023797102"
+    },
+    {
+      "path": "cases/003/receipts/003-repair-v1-20260920T224346368023Z-legacy-regression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "Darwin"
+  },
+  "model": {
+    "provider": null,
+    "requested_id": null,
+    "resolved_version": null,
+    "unknown_reason": "No inference executed"
+  },
+  "configuration": {
+    "mode": "local_partial_regression",
+    "model_calls": 0,
+    "timeout_seconds": 15,
+    "concurrency": 1,
+    "runner": {
+      "path": "cases/003/tests/run.py",
+      "sha256": "a05c5735e57c9e245e5fdd96fde3b5935caa9177181bfd0ca425f5ddb2ac34b8"
+    },
+    "executor": {
+      "path": "cases/003/tests/execute_repair_v1.py",
+      "sha256": "65b652627443924bec3fbc87de6fe42ad239b947e691da0c8ee523eae9f722ea"
+    }
+  },
+  "baseline_id": null,
+  "exit_status": 0,
+  "test_results": [
+    {
+      "test_id": "G01",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G02",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G03",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G04",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G05",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G06",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G07",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G08",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G09",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G10",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G11",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G12",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G13",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "G14",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X01",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X02",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X03",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X04",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X05",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "X06",
+      "outcome": "passed"
+    }
+  ],
+  "quality": [],
+  "latency": {
+    "value": 0.02144945799999999,
+    "unit": "seconds",
+    "classification": "measured",
+    "category": "subprocess_wall_time",
+    "assumptions": [],
+    "unknown_reason": null
+  },
+  "usage": {
+    "value": null,
+    "unknown_reason": "Not measured"
+  },
+  "costs": [
+    {
+      "value": null,
+      "unit": "USD",
+      "classification": "unknown",
+      "category": "unknown",
+      "assumptions": [],
+      "unknown_reason": "Not measured"
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "timeouts": [],
+  "missing_capabilities": [
+    "No inference, baseline, or central CRM workflow execution"
+  ],
+  "redactions": [],
+  "human_interventions": [
+    "Builder-visible repair regressions, not held-out evaluation"
+  ],
+  "execution_kind": "real",
+  "inference_executed": false,
+  "product_acceptance": false,
+  "original_product_status": "not_observed",
+  "expected_exit_status": 0,
+  "repair_check_passed": true
+}

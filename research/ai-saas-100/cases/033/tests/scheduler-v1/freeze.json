@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "fixed_at": "2026-09-22T03:39:33.622816+00:00",
+  "implementation_existed": false,
+  "count": 87,
+  "artifacts": [
+    {
+      "path": "cases/033/tests/scheduler-v1/inputs.json",
+      "sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/oracles.json",
+      "sha256": "85f2bd272b32323cb7d4d533e83852d0967f0c04792eba27b05470736ec22bc7"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/checks.py",
+      "sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/materialize.py",
+      "sha256": "b7bbe9793d3de4d55c65ac6022e334512a9bb40a7aadd8ad7aa9e8f218f1db2c"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/conventions.md",
+      "sha256": "d85ef2677fced44cdbb3a66f744021d143feb8569d237a30f4d9459afed069c4"
+    },
+    {
+      "path": "cases/033/tests/scheduler-v1/conventions-freeze.json",
+      "sha256": "7055fcf3633e72a3343d036f02adf0d52bc9daa7f2707ae1ade2efbf624e6bf8"
+    }
+  ],
+  "held_out": false
+}

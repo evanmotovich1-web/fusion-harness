@@ -1,0 +1,11 @@
+{
+  "primary_url": "https://www.afro.who.int/sites/default/files/2026-04/WHO%20Kenya%20Annual%20Report%202025.pdf",
+  "source_path": "/tmp/tunza-who-annual-report-2025.pdf",
+  "retrieval_date_from_cached_headers": "2026-09-24",
+  "last_modified_from_cached_headers": "2026-04-13",
+  "pdf_sha256": "30df6fac2f218c453683822d324487de9a0c656a9f2be11339de7be410be31ba",
+  "matches_prior_recorded_sha256": true,
+  "verification": "Rehashed cached PDF and freshly extracted all 82 pages with Apple PDFKit on 2026-09-25. Not refetched.",
+  "extraction_script": "/tmp/tunza_extract_pdf.swift",
+  "extracted_file": "who-2025.txt"
+}

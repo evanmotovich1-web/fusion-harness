@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "record_status": "blocked",
+  "identity": {
+    "id": "003",
+    "name": "Northlight",
+    "canonical_url": "https://northlight.ai/",
+    "category": "C03",
+    "identity_status": "verified",
+    "identity_evidence_ids": [
+      "web-fc836c603944acbe2053"
+    ],
+    "aliases": []
+  },
+  "selection": {
+    "candidate_id": "northlight.ai",
+    "selection_position": 3,
+    "eligibility_evidence_ids": [],
+    "pilot": true,
+    "replacement_reference": null
+  },
+  "workflow": {
+    "target_user": "Sales operators maintaining contact data",
+    "job": "Natural-language request to approved CRM update/deduplication",
+    "inputs": "User instruction and contact records; current partial layer accepts explicit structured action instead",
+    "outputs": "Intended: verified CRM changes. Actual: synthetic local previews only",
+    "success_criteria": "Real AI parsing and approved action execution pass frozen rubric without unauthorized writes",
+    "included_behavior": [
+      "Structured update preview",
+      "Email-normalized duplicate proposals",
+      "Unknown/invalid input rejection",
+      "Inert notes",
+      "No input mutation"
+    ],
+    "excluded_behavior": [
+      "Model parsing",
+      "Real CRM persistence",
+      "Desktop control",
+      "LinkedIn/X",
+      "Sending outreach",
+      "Contact enrichment",
+      "Autonomous sequences"
+    ],
+    "external_dependencies": [
+      "Authorized inference",
+      "Approved synthetic integration evaluator",
+      "Independent hidden tests"
+    ]
+  },
+  "research": {
+    "pricing": {
+      "claim_ids": [
+        "pricing"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "buyer": {
+      "claim_ids": [
+        "buyer"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "alternatives": {
+      "claim_ids": [
+        "alternatives"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "adoption": {
+      "claim_ids": [
+        "adoption"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "distribution": {
+      "claim_ids": [
+        "distribution"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "integrations": {
+      "claim_ids": [
+        "integrations"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "proprietary_access": {
+      "claim_ids": [
+        "proprietary_access"
+      ],
+      "value": "See claim; observations and inferences are separately classified",
+      "unknown_reason": null
+    },
+    "switching_costs": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    },
+    "operating_economics": {
+      "claim_ids": [],
+      "value": null,
+      "unknown_reason": "Reviewed public product, pricing and workflow pages do not establish retention/migration costs or cost of delivery. No customer interviews, billing, or provider usage observed."
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "buyer",
+      "statement": "Northlight markets an AI sales/GTM desktop and conversational sales-stack operations.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-fc836c603944acbe",
+        "p003-b141c7f790990b2a"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "workflow",
+      "statement": "The features page advertises conversational CRM updates and contact enrichment/deduplication.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-b141c7f790990b2a"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "pricing",
+      "statement": "The pricing page displays Free with 100 AI requests/month, Pro at $80/month with unlimited AI requests, and custom Enterprise. Billing/usage semantics are not verified.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-b07c5236fed19199"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Static page observation, not purchased or billing-verified",
+      "conflicting_claim_ids": [
+        "pricing_credits"
+      ]
+    },
+    {
+      "claim_id": "pricing_credits",
+      "statement": "The same page also describes credits, 10–20 credits per task, and reset each billing cycle, while its banner advertises a seven-day beta trial. This is unresolved against request-based plan copy.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-b07c5236fed19199"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Conflicting/unclear usage and trial semantics preserved",
+      "conflicting_claim_ids": [
+        "pricing"
+      ]
+    },
+    {
+      "claim_id": "adoption",
+      "statement": "The homepage publishes customer testimonials. No independently verified customer count or revenue is established.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-fc836c603944acbe"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Vendor claim, not independently verified",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "integrations",
+      "statement": "The integrations page lists HubSpot and Salesforce and says 185 integrations, while navigation says 30+ sales tools. Actual working integration coverage was not observed.",
+      "classification": "vendor_claim",
+      "evidence_ids": [
+        "p003-d82e14b6b2e70c20"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Counts/scope differ within the captured page; not silently reconciled",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "alternatives",
+      "statement": "Manual CRM edits and separate sales tools are conceptual alternatives to a unified chat. No specific competing system was benchmarked.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p003-b141c7f790990b2a"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Model-knowledge hypothesis, not competitor research",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "distribution",
+      "statement": "A downloadable desktop and published testimonials may support product-led acquisition. Neither conversion nor trust was measured.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p003-fc836c603944acbe"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Unmeasured acquisition hypothesis",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "proprietary_access",
+      "statement": "Browser-session access and context across sales tools are dependencies that a local JSON preview does not reproduce.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p003-d82e14b6b2e70c20"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "No sessions, integrations, or private data accessed",
+      "conflicting_claim_ids": []
+    },
+    {
+      "claim_id": "edge",
+      "statement": "Reliable integration coverage, permissions and persistent context could be valuable beyond a prompt. Neither reliability nor retention was measured, and conflicting plan/integration copy warrants clarification.",
+      "classification": "inference",
+      "evidence_ids": [
+        "p003-d82e14b6b2e70c20",
+        "p003-b07c5236fed19199"
+      ],
+      "scope": {
+        "observed_at": "2026-09-20T21:29:27.052049+00:00",
+        "scope": "Public pages captured for this pilot"
+      },
+      "uncertainty": "Untested commercial thesis",
+      "conflicting_claim_ids": []
+    }
+  ],
+  "tests": {
+    "specification_path": "cases/003/tests/fixtures.json",
+    "sha256": "5420f8b5db6253c104cdbfd359bb4cbb2dc3d27beb29b8497dc7ede6e9abc72f",
+    "fixed_at": "2026-09-20T21:21:29.048258+00:00",
+    "acceptance_criteria": "protocol.md plus tests/specification.md; thresholds not satisfied by local regressions",
+    "baseline_specification": "Same frozen inputs to B1; currently blocked",
+    "held_out": false
+  },
+  "implementation": {
+    "source_path": "cases/003/implementation/workflow.py",
+    "sha256": "71cbff3059ea041d9e1920dd7767c827ae0b382d13341b6ca033826d43b87135",
+    "setup_instructions": "python3 -B research/ai-saas-100/cases/003/tests/run.py",
+    "coverage": [
+      "Original structured CRM preview subset runs on all 20 frozen scenarios"
+    ],
+    "missing_capabilities": [
+      "Natural-language inference",
+      "Real authorized integration",
+      "Generic-model B1",
+      "Independent hidden tests",
+      "Original-product observations"
+    ],
+    "dependency_license_notes": "Original code written for this campaign. Python standard library only; no vendor code or model weights used.",
+    "kind": "independent_partial",
+    "requires_inference": true
+  },
+  "assessment": {
+    "stage_statuses": {
+      "identity": "passed",
+      "research": "in_progress",
+      "implementation": "blocked",
+      "execution": "blocked",
+      "evaluation": "blocked",
+      "review": "not_started"
+    },
+    "receipt_paths": [
+      "cases/003/receipts/003-local-20260920T212619100032Z.json",
+      "cases/003/receipts/baseline-blocked.json"
+    ],
+    "technical_uncertainty": [
+      "Natural-language inference",
+      "Real authorized integration",
+      "Generic-model B1",
+      "Independent hidden tests",
+      "Original-product observations"
+    ],
+    "commercial_uncertainty": [
+      "Vendor-only research; no demand, retention, billing, or ROI validation"
+    ],
+    "verdict_path": "cases/003/verdict.json",
+    "review": {
+      "reviewer": null,
+      "independent": false,
+      "accepted": false,
+      "unresolved_material_objections": [
+        "Pilot incomplete; independent review pending"
+      ],
+      "artifact": null
+    }
+  },
+  "original_product": {
+    "status": "not_observed",
+    "reason": "No authorized interactive service execution performed. Public page GETs are not workflow trials.",
+    "observed_at": "2026-09-20T21:29:27.052049+00:00"
+  },
+  "status_history": [
+    {
+      "stage": "identity",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:01:54.243766+00:00",
+      "actor": "terra",
+      "reason": "First-party public identity capture",
+      "evidence_ids": [
+        "web-fc836c603944acbe2053"
+      ]
+    },
+    {
+      "stage": "identity",
+      "from": "in_progress",
+      "to": "passed",
+      "at": "2026-09-20T21:08:03.588292+00:00",
+      "actor": "terra",
+      "reason": "Reviewed official identity and advertised workflow, canonicalized and deduplicated. This is not acceptance of functionality.",
+      "evidence_ids": [
+        "web-fc836c603944acbe2053"
+      ]
+    },
+    {
+      "stage": "research",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "not_started",
+      "to": "in_progress",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Bounded pilot research/local implementation attempted",
+      "evidence_ids": []
+    },
+    {
+      "stage": "implementation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Natural-language inference; Real authorized integration; Generic-model B1; Independent hidden tests; Original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "execution",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Natural-language inference; Real authorized integration; Generic-model B1; Independent hidden tests; Original-product observations",
+      "evidence_ids": []
+    },
+    {
+      "stage": "evaluation",
+      "from": "in_progress",
+      "to": "blocked",
+      "at": "2026-09-20T21:29:27.052049+00:00",
+      "actor": "grok",
+      "reason": "Natural-language inference; Real authorized integration; Generic-model B1; Independent hidden tests; Original-product observations",
+      "evidence_ids": []
+    }
+  ],
+  "blockers": [
+    {
+      "scope": "campaign",
+      "cause": "No independently callable authorized inference verified",
+      "affected_stages": [
+        "execution",
+        "evaluation"
+      ],
+      "permitted_next_action": "Verify a no-charge model without inspecting secrets, or request explicit provider budget/authorization",
+      "evidence": [
+        "capabilities.json",
+        "cases/001/research/inference-probes.json"
+      ]
+    },
+    {
+      "scope": "product",
+      "cause": "Only partial representative workflow and builder-visible regression suite",
+      "affected_stages": [
+        "implementation",
+        "execution",
+        "review"
+      ],
+      "permitted_next_action": "Complete missing behavior and obtain independently retained held-out evaluation",
+      "evidence": [
+        "cases/003/tests/specification.md"
+      ]
+    }
+  ],
+  "research_limitations": [
+    "Four first-party pages reviewed per pilot; not extensive independent commercial research",
+    "Pricing copy is not revenue",
+    "Unknown users is not zero users",
+    "Prototype simplicity is not evidence of low company value"
+  ]
+}

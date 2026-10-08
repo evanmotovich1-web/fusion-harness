@@ -1,0 +1,622 @@
+{
+  "evidence_id": "r004-8f12ca3a24fc8dac5f8f",
+  "source_url": "https://languagetool.org/proofreading-api",
+  "publisher": "languagetool.org",
+  "retrieved_at": "2026-09-20T21:35:25.747674+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "workflow",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://languagetool.org/proofreading-api",
+  "content_type": "text/html; charset=UTF-8",
+  "capture_truncated": false,
+  "capture_path": "cases/004/research/captures/8f12ca3a24fc8dac5f8f.html",
+  "capture_sha256": "a1108822e236259f4bcd1b70c35f49f4b22e38202c6d0b62c4e67c43a278d759",
+  "bytes_saved": 82260,
+  "title": "API, Open Source and Developer information - LanguageTool",
+  "metadata": [
+    {
+      "key": "application-name",
+      "value": "LanguageTool"
+    },
+    {
+      "key": "description",
+      "value": "Simplify your proofreading process and integrate LanguageTool’s API for accurate and efficient grammar checking."
+    },
+    {
+      "key": "og:site_name",
+      "value": "LanguageTool"
+    }
+  ],
+  "text": "API, Open Source and Developer information - LanguageTool\nLanguage\nTool\nYour writing assistant\nGrammar Checker\nParaphrasing Tool\nPremium\n-20%\nFor Business\nMore\nSign Up\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\n/\nLog in\nSign Up\nSign up\nToggle Website Navigation\nClose Website Navigation\nGrammar Checker\nChecks your text for grammar mistakes and helps you find the right tone.\nTry Grammar Checker\nParaphrasing Tool\nLets you paraphrase any sentence according to your liking.\nTry Paraphrasing Tool\nPremium\n-20%\nDiscover Premium\n-20%\nBenefit from unlimited paraphrasing and much more.\nUnlock all Premium Features\nLT for Business\nExplore our GDPR-conform solutions to ensure error-free communication and a consistent brand voice.\nRead more\nApps & Add-ons\nChecks your text for grammar mistakes and helps you find the right tone.\nToggle Sub Menu\nBrowser Add-ons\nChrome\nEdge\nFirefox\nOpera\nToggle Sub Menu\nE-Mail Add-ons\nGmail\nOutlook\nBETA\nApple Mail\nThunderbird\nToggle Sub Menu\nOffice Plugins\nGoogle Docs\nWord\nApple Pages\nLibreOffice\nToggle Sub Menu\nApps\nmacOS\nWindows\nMore\nFor Businesses\nProofreading API\nBlog\nCareers\nHelp\nPrivacy\nTerms & Conditions\nImprint\nGo to the Editor\nToggle Dropdown\nCheck Text\nStatistics\nSettings\nLog out\nCheck Text\nStatistics\nSettings\nLog out\nSign up\nLog in\nLanguageTool Proofreading API\nJoin 100+ companies and enhance your software with our HTTP API\nGet developer access to the same technology that powers our Premium grammar, style, and spelling checker. It supports more than 30 languages, including English, French, Spanish, and German. The API can easily be used from any programming language, since it’s based on HTTP and returns simple-structured JSON data.\n100 API calls per day\n250 API calls per day\n500 API calls per day\n1000 API calls per day\n10000 API calls per day\nper month\nBuy Now\nall prices incl. VAT\ncan be canceled any month\nDetails\nAll servers are hosted in Germany, the service is fully GDPR-compliant\nNone of the texts you send to the API are stored to ensure full privacy\nMonthly plans can be canceled any month\nMaximum text length per request: 60,000 characters\nSpecific grammar or style rules can be disabled to meet individual requirements\nThe Personal Dictionary is also available through the API\nShow API documentation\nLanguage\nTool\nCheck your text quickly and easily. Grammar, punctuation, style, and spelling.\nX\nFacebook\nInstagram\nTikTok\nLinkedIn\nLanguages\nFree Spell Checker\nGerman Grammar Checker\nSpanish Grammar Checker\nFrench Grammar Checker\nPortuguese Grammar Checker\nDutch Grammar Checker\nCatalan Grammar Checker\nApps\nmacOS\nWindows\nBrowser Add-ons\nChrome\nMicrosoft Edge\nMozilla Firefox\nOpera\nOffice Plugins\nGoogle Docs\nMicrosoft Word\nApple Pages\nLibreOffice\nE-Mail Add-ons\nGmail\nApple Mail\nOutlook\nBETA\nThunderbird\nProduct\nGrammar Checker\nPunctuation Checker\nParaphrasing Tool\nPremium\nCorrect Grammar in Word Documents\nLanguageTool for Businesses\nLanguageTool for Non-Profits & Students\nLanguageTool for Professional Writers\nProofreading API\nOpen-Source Development\nHelp Center\nCompany\nAbout Us\nMedia Assets\nOpenThesaurus - Synonyme\nSource Code\nCareers\nBlog\nCopyright, Community Guidelines, DSA & other Legal Resources\nMade with ♥ in Europe and the US\nPrivacy\nTerms & Conditions\nImprint\nDo Not Sell or Share My Personal Info\nEnglish\nEnglish\nGerman\nSpanish\nDutch\nFrench\nRussian\nItalian\nCatalan\nPortuguese (BR)\nPortuguese (PT)\nUkrainian\nPolish",
+  "links": [
+    {
+      "href": "https://languagetool.org/css/base.css?id=63d7085543a4f41bfed4b44a4d01b40b",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://languagetool.org/css/website.css?id=3ab74021cf6eedc68d5b230dc1aac499",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://languagetool.org/css/print.css?id=24330adae585d3b6b8b10284aaaf9417",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/fonts/Source-Sans-Pro-latin-win.woff2",
+      "rel": "x-preload"
+    },
+    {
+      "href": "/fonts/Source-Sans-Pro-latin-bold-win.woff2",
+      "rel": "x-preload"
+    },
+    {
+      "href": "/fonts/Source-Sans-Pro-latin-semi-bold-win.woff2",
+      "rel": "x-preload"
+    },
+    {
+      "href": "https://languagetool.org/css/api.css?id=0954d7872908977302a77eb35d2dac18",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://api.languagetoolplus.com/",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://api.languagetool.org/",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-57x57.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-60x60.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-72x72.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-76x76.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-114x114.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-120x120.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-144x144.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-152x152.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/apple-touch-icon-180x180.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/favicon-16x16.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/favicon-32x32.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://languagetool.org/images/favicons/android-chrome-192x192.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/site.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://languagetool.org/insights/rss/",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/proofreading-api",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral",
+      "rel": "chrome-webstore-item"
+    },
+    {
+      "href": "/opensearch.xml",
+      "rel": "search"
+    },
+    {
+      "href": "/sitemap.xml",
+      "rel": "sitemap"
+    },
+    {
+      "href": "https://languagetool.org/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/de/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/es/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/nl/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/fr/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/ru/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/it/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/ca/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/pt-BR/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/pt/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/uk/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/pl/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://languagetool.org/proofreading-api",
+      "rel": "alternate"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/paraphrasing-tool",
+      "rel": null
+    },
+    {
+      "href": "/premium",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/register",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/statistics",
+      "rel": null
+    },
+    {
+      "href": "/editor/settings?ref=home",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/statistics",
+      "rel": null
+    },
+    {
+      "href": "/editor/settings?ref=home",
+      "rel": null
+    },
+    {
+      "href": "/register",
+      "rel": null
+    },
+    {
+      "href": "/user-login",
+      "rel": null
+    },
+    {
+      "href": "/register",
+      "rel": null
+    },
+    {
+      "href": "/register",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/paraphrasing-tool",
+      "rel": null
+    },
+    {
+      "href": "/premium",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/services#browsers",
+      "rel": null
+    },
+    {
+      "href": "https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral",
+      "rel": null
+    },
+    {
+      "href": "https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc",
+      "rel": null
+    },
+    {
+      "href": "https://addons.mozilla.org/firefox/addon/languagetool/",
+      "rel": null
+    },
+    {
+      "href": "https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/",
+      "rel": null
+    },
+    {
+      "href": "/services#mail_clients",
+      "rel": null
+    },
+    {
+      "href": "/google-mail",
+      "rel": null
+    },
+    {
+      "href": "/windows-desktop",
+      "rel": null
+    },
+    {
+      "href": "/apple-mail",
+      "rel": null
+    },
+    {
+      "href": "/thunderbird",
+      "rel": null
+    },
+    {
+      "href": "/services#text_editors",
+      "rel": null
+    },
+    {
+      "href": "/google-docs",
+      "rel": null
+    },
+    {
+      "href": "/word",
+      "rel": null
+    },
+    {
+      "href": "/mac-desktop",
+      "rel": null
+    },
+    {
+      "href": "/libre-office",
+      "rel": null
+    },
+    {
+      "href": "/services#operating_systems",
+      "rel": null
+    },
+    {
+      "href": "/mac-desktop",
+      "rel": null
+    },
+    {
+      "href": "/windows-desktop",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/proofreading-api",
+      "rel": null
+    },
+    {
+      "href": "https://languagetool.org/insights/",
+      "rel": "me"
+    },
+    {
+      "href": "https://languagetooler.workwise.io/",
+      "rel": null
+    },
+    {
+      "href": "https://help.languagetool.org",
+      "rel": null
+    },
+    {
+      "href": "/legal/privacy",
+      "rel": null
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/legal/",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/statistics",
+      "rel": null
+    },
+    {
+      "href": "/editor/settings?ref=home",
+      "rel": null
+    },
+    {
+      "href": "/editor/new",
+      "rel": null
+    },
+    {
+      "href": "/editor/statistics",
+      "rel": null
+    },
+    {
+      "href": "/editor/settings?ref=home",
+      "rel": null
+    },
+    {
+      "href": "/register",
+      "rel": null
+    },
+    {
+      "href": "/user-login",
+      "rel": null
+    },
+    {
+      "href": "https://languagetool.org/http-api/#/default",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/languagetool",
+      "rel": "me"
+    },
+    {
+      "href": "https://www.facebook.com/LanguageTool",
+      "rel": "me"
+    },
+    {
+      "href": "https://www.instagram.com/languagetool/",
+      "rel": "me"
+    },
+    {
+      "href": "https://www.tiktok.com/@languagetool",
+      "rel": "me"
+    },
+    {
+      "href": "https://www.linkedin.com/company/languagetool",
+      "rel": "me"
+    },
+    {
+      "href": "/spellchecking-english",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-german",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-spanish",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-french",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-portuguese",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-dutch",
+      "rel": null
+    },
+    {
+      "href": "/spellchecking-catalan",
+      "rel": null
+    },
+    {
+      "href": "/mac-desktop",
+      "rel": null
+    },
+    {
+      "href": "/windows-desktop",
+      "rel": null
+    },
+    {
+      "href": "https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji?utm_source=lt-homepage&utm_medium=referral",
+      "rel": null
+    },
+    {
+      "href": "https://microsoftedge.microsoft.com/addons/detail/hfjadhjooeceemgojogkhlppanjkbobc",
+      "rel": null
+    },
+    {
+      "href": "https://addons.mozilla.org/firefox/addon/languagetool/",
+      "rel": null
+    },
+    {
+      "href": "https://addons.opera.com/extensions/details/grammar-and-spell-checker-languagetool/",
+      "rel": null
+    },
+    {
+      "href": "/google-docs",
+      "rel": null
+    },
+    {
+      "href": "/word",
+      "rel": null
+    },
+    {
+      "href": "/mac-desktop",
+      "rel": null
+    },
+    {
+      "href": "/libre-office",
+      "rel": null
+    },
+    {
+      "href": "/google-mail",
+      "rel": null
+    },
+    {
+      "href": "/apple-mail",
+      "rel": null
+    },
+    {
+      "href": "/windows-desktop",
+      "rel": null
+    },
+    {
+      "href": "/thunderbird",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/commas",
+      "rel": null
+    },
+    {
+      "href": "/paraphrasing-tool",
+      "rel": null
+    },
+    {
+      "href": "/premium",
+      "rel": null
+    },
+    {
+      "href": "/?source=upload",
+      "rel": null
+    },
+    {
+      "href": "/business",
+      "rel": null
+    },
+    {
+      "href": "/students",
+      "rel": null
+    },
+    {
+      "href": "/professionals",
+      "rel": null
+    },
+    {
+      "href": "/proofreading-api",
+      "rel": null
+    },
+    {
+      "href": "/dev",
+      "rel": null
+    },
+    {
+      "href": "https://help.languagetool.org",
+      "rel": null
+    },
+    {
+      "href": "/about",
+      "rel": null
+    },
+    {
+      "href": "/media-assets",
+      "rel": null
+    },
+    {
+      "href": "https://www.openthesaurus.de/",
+      "rel": "me"
+    },
+    {
+      "href": "https://github.com/languagetool-org/languagetool",
+      "rel": "me"
+    },
+    {
+      "href": "https://languagetooler.workwise.io/",
+      "rel": null
+    },
+    {
+      "href": "https://languagetool.org/insights/",
+      "rel": "me"
+    },
+    {
+      "href": "/legal/copyright-community-guidelines-dsa-other",
+      "rel": null
+    },
+    {
+      "href": "/legal/privacy",
+      "rel": null
+    },
+    {
+      "href": "/legal/terms",
+      "rel": null
+    },
+    {
+      "href": "/legal/",
+      "rel": null
+    },
+    {
+      "href": "/legal/cookie-policy",
+      "rel": "nofollow"
+    }
+  ],
+  "elapsed_seconds": 0.45414
+}

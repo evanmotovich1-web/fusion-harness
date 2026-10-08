@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "001",
+  "test_id": "W-N5",
+  "requires_inference": true,
+  "kind": "rewrite",
+  "semantic_requirements": [
+    "Revenue rises from 80 to 100 USD; profit unchanged; no invented cause.",
+    "No added unsupported claims."
+  ],
+  "requires_changed_readable_text": true,
+  "semantic_review_required": true
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-a9cde6d8599a74fda04d",
+      "source_url": "https://www.notta.ai/",
+      "final_url": "https://www.notta.ai/en/",
+      "publisher": "www.notta.ai",
+      "retrieved_at": "2026-09-20T21:00:36.432805+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Note Taker | Free AI Meeting Transcription"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "AI Note Taker | Free AI Meeting Transcription"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Notta is an AI note taker that transcribes, summarizes, and generates action plans from your meetings, interviews, or recordings. Try it for free now!"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Note Taker | Free AI Meeting Transcription\nFeatures\nCapture\nOnline Meeting Recorder\nRecord via a bot that joins your call\nBot-free Meeting Recorder\nRecord on your device — no bot joins\nUpload & Link Transcription\nTranscribe audio, video fi"
+        },
+        {
+          "locator": "text characters 0:263",
+          "excerpt": "AI Note Taker | Free AI Meeting Transcription\nFeatures\nCapture\nOnline Meeting Recorder\nRecord via a bot that joins your call\nBot-free Meeting Recorder\nRecord on your device — no bot joins\nUpload & Link Transcription\nTranscribe audio, video files, or YouTube links"
+        },
+        {
+          "locator": "text characters 632:944",
+          "excerpt": "etings\nBilingual Translation\nTranslate with the original side by side\nAI features\nAI Notes\nGet summaries & action items\nCross-meeting Q&A\nAsk questions across all your meetings\nMeeting Infographics\nTurn meetings into shareable infographics\nDocument Builder\nCreate PDF, Word, Excel & slides\nSecurity & compliance\n"
+        },
+        {
+          "locator": "text characters 644:956",
+          "excerpt": "gual Translation\nTranslate with the original side by side\nAI features\nAI Notes\nGet summaries & action items\nCross-meeting Q&A\nAsk questions across all your meetings\nMeeting Infographics\nTurn meetings into shareable infographics\nDocument Builder\nCreate PDF, Word, Excel & slides\nSecurity & compliance\nSecurity & C"
+        },
+        {
+          "locator": "text characters 2246:2558",
+          "excerpt": "iệt\nУкраїнська\n한국어\nلعربية\nفارسی\nไทย\nहिन्दी\n繁體中文\nLog in\nStart for Free\nAI Note Taker\nto Visualize Meeting Decisions\nNotta is an AI meeting notetaker that turns your meetings, interviews, or lectures into searchable text or visuals. Transcribe, summarize, collaborate and create all in a single workflow to stay pr"
+        },
+        {
+          "locator": "text characters 2303:2615",
+          "excerpt": "art for Free\nAI Note Taker\nto Visualize Meeting Decisions\nNotta is an AI meeting notetaker that turns your meetings, interviews, or lectures into searchable text or visuals. Transcribe, summarize, collaborate and create all in a single workflow to stay productive.\n🔥 Start for Free\n58 Languages Supported\n120 fre"
+        },
+        {
+          "locator": "text characters 2579:2839",
+          "excerpt": " Free\n58 Languages Supported\n120 free minutes with full transcription\n10M+ users\nSOC-2, GDPR and more\nGenerate instant deliverables to keep your team moving.\nPresentations\nGenerate ready-to-be-shared PPT files\nInfographics\nCreate structured visuals in 5 second"
+        },
+        {
+          "locator": "text characters 1122:1663",
+          "excerpt": "ny browser tab\nNotta Desktop\nRecord bot-free on Mac & Windows\nIntegrations\nZoom\nGoogle Meet\nMicrosoft Teams\nWebex\nSlack\nNotion\nSalesforce\nHubSpot\nGoogle Calendar\nOutlook Calendar\nGoogle Drive\nZapier\nView all integrations\nBuilt for\nBuilt for\nConsultants\nActively listen and understand client needs in meetings rather than note-taking.\nSales\nUnlock hidden insights from sales calls and close more deals.\nCustomer success\nIncrease customer retention and growth with smarter meeting notes.\nMedia & podcasting\nImmediately turn podcasts, interview"
+        }
+      ],
+      "capture_path": "discovery/captures/a9cde6d8599a74fda04d.html",
+      "capture_sha256": "46c3c68b4ff3b8ec8912769e25753b66ee123f4eac45a7b4e2ad53cf0c01d95a",
+      "record_path": "discovery/records/a9cde6d8599a74fda04d.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r018-13130d2fd8a66b26e6fe",
+      "source_url": "https://www.notta.ai/en/pricing",
+      "publisher": "www.notta.ai",
+      "retrieved_at": "2026-09-20T21:35:31.076366+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.notta.ai/en/pricing",
+      "capture_path": "cases/018/research/captures/13130d2fd8a66b26e6fe.html",
+      "capture_sha256": "15df427547abf8729f4dc45b8162a12c5539d9416b60a991d248dd923bb92ee7",
+      "capture_truncated": true,
+      "error": null,
+      "record_path": "cases/018/research/records/13130d2fd8a66b26e6fe.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Notta Pricing: Compare Plans, Features & Costs"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "Notta Pricing: Compare Plans, Features & Costs"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Notta starts with a freemium model, offering recording, transcription, and more. Upgrade for just $8.17/month (billed annually) to unlock transcript exports, translation, custom vocabulary, and seamless collaboration—perfect for professionals who need reliable and efficient meeting documentation."
+        },
+        {
+          "locator": "text characters 2471:4942",
+          "excerpt": "ust getting started with Notta\n$\n0\nUSD\nNo credit card required\n1 seat\n120 transcription minutes/month\nUp to 3 minutes per conversation\n50 file uploads/month\n10 AI Summary/month\nGet Started\nKey Features:\nTranscribe web meetings\nSpeaker identification\nRecommend\nPro\n40% OFF\n40% OFF\n40% OFF\nFor professionals who want more minutes and features\n$\n8.17\nUSD/month\nTotal $97.99 · Billed annually\n1 seat\n1,800 transcription minutes/month\nUp to 5 hours per recording\n100 file uploads/month\n100 AI Summary/month\nGet Pro Plan\nEverything in Free, plus:\nExport transcripts\nTranscript translation\nCustom vocabulary\nRecommend\nBusiness\n40% OFF\n40% OFF\n40% OFF\nFor teams that need collaboration and administration features\n$\n16.67\nUSD/month\nTotal $199.99 · billed annually\nseat(s)\nUnlimited transcription\nUp to 5 hours per recording\n200 file uploads/month\n200 AI Summary/month\nGet Business Plan\nEverything in Pro, plus:\nRecord web meeting video\nAdvanced data security controls\nUsage report\nCRM & Zapier integration\nRecommend\nEnterprise\nFor organizations looking for advanced security, control, and support\nCustom\nStarting from 51 seats\nCustomized transcription\nUp to 5 hours per recording\nUnlimited file uploads\nUnlimited AI summary\nContact Sales\nEverything in Business, plus:\nSAML SSO\nFull data access control\nAudit logs\nFlexible payments\nPriority support\n50% OFF education discount\nGet a 7-day Business trial\nNotta add-on services\nAccess powerful add-on services to solve more problems and boost your efficiency. Available exclusively to Pro, Business, and Enterprise plan users.\nMonolingual Translation\n$\n6\nUSD/month\nTotal $72 · billed annually\nThe above price is the monthly cost for annual billing. Monthly plan cost:\n$\n10\nUSD/month\nPro / Business: Up to 100 times per account per month\nEnterprise: Unlimited\nGet Add-on\nBilingual Transcription & Translation\n$\n9\nUSD/month\nTotal $108 · billed annually\nThe above price is the monthly cost for annual billing. Monthly plan cost:\n$\n15\nUSD/month\nPro / Business: Up to 200 times per account per month\nEnterprise: Unlimited\nGet Add-on\nNotta Brain\nNew\nPro\n$\n93.59\nUSD\n/year\n8,000 AI Credits/month\nGet Add-on\nTrusted by teams at\nCompare plans & features\nFree\nNo credit card required\nGet Started\nPro\n$8.17\nper month, billed annually\nGet Pro Plan\nBusiness\n$16.67\nper month, billed annually\nGet Business Plan\nEnterprise\nCustom\nContact Sales\nUsage\nTranscription quota (no carryover)\n120 minutes per month\n1,800 minutes per month\nUnlimited\nCustomi"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r018-77ef6a41b44f992d0f79",
+      "source_url": "https://www.notta.ai/en/features/ai-transcription",
+      "publisher": "www.notta.ai",
+      "retrieved_at": "2026-09-20T21:35:31.130563+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.notta.ai/en/features/ai-transcription",
+      "capture_path": "cases/018/research/captures/77ef6a41b44f992d0f79.html",
+      "capture_sha256": "a3235691111cd2fe0271b4f51e1385e55fd0d2ca3d8b03106b655b9bdc998a0e",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/018/research/records/77ef6a41b44f992d0f79.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Transcription for Audio and Video - Free & Secure"
+        },
+        {
+          "locator": "metadata[0].og:title",
+          "excerpt": "AI Transcription for Audio and Video - Free & Secure"
+        },
+        {
+          "locator": "metadata[1].description",
+          "excerpt": "Notta is an AI-powered transcription tool that converts audio and video into text in 58 languages, extracting valuable insights from your voice data. Sign up for free!"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-fb82b4567fd1ec6ab3b9",
+      "source_url": "https://sonix.ai/",
+      "final_url": "https://sonix.ai/",
+      "publisher": "sonix.ai",
+      "retrieved_at": "2026-09-20T21:00:36.749320+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "AI Transcription Software: 99% Accuracy in 54+ Languages | Sonix"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Transcribe audio and video to text in minutes with 99% accuracy. 54+ languages, AI summaries, and speaker detection. Try Sonix free — no credit card required."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "AI Transcription Software: 99% Accuracy in 54+ Languages | Sonix"
+        },
+        {
+          "locator": "metadata[3].og:site_name",
+          "excerpt": "Sonix"
+        },
+        {
+          "locator": "text characters 0:242",
+          "excerpt": "AI Transcription Software: 99% Accuracy in 54+ Languages | Sonix\nProduct\nCore Capabilities\nAI Transcription\nConvert audio to text with 99% accuracy.\nAI Translation\nTranslate transcripts into 54+ languages instantly.\nSubtitles & Captions\nAutom"
+        },
+        {
+          "locator": "text characters 21:333",
+          "excerpt": "ware: 99% Accuracy in 54+ Languages | Sonix\nProduct\nCore Capabilities\nAI Transcription\nConvert audio to text with 99% accuracy.\nAI Translation\nTranslate transcripts into 54+ languages instantly.\nSubtitles & Captions\nAutomate frame-perfect captions for video.\nAI Analysis\nGenerate summaries, chapters, and sentime"
+        },
+        {
+          "locator": "text characters 79:391",
+          "excerpt": "apabilities\nAI Transcription\nConvert audio to text with 99% accuracy.\nAI Translation\nTranslate transcripts into 54+ languages instantly.\nSubtitles & Captions\nAutomate frame-perfect captions for video.\nAI Analysis\nGenerate summaries, chapters, and sentiment analysis.\nSonix Editor\nEdit audio by editing text in yo"
+        },
+        {
+          "locator": "text characters 210:522",
+          "excerpt": "ntly.\nSubtitles & Captions\nAutomate frame-perfect captions for video.\nAI Analysis\nGenerate summaries, chapters, and sentiment analysis.\nSonix Editor\nEdit audio by editing text in your browser.\nCollaborative Tools\nMulti-user permissions and read-only sharing.\nThe Platform\nSecurity & Compliance\nSOC 2 Type 2, HIPA"
+        },
+        {
+          "locator": "text characters 740:1052",
+          "excerpt": "a\nTurn hour-long transcripts into actionable intelligence in seconds.\nAI-Powered Intelligence\nTry AI Analysis\nSolutions\nPopular Industries\nLegal & Court Reporting\nFor law enforcement, prosecutors, defense teams, and law firms.\nMedical & Healthcare\nHIPAA-compliant dictation and clinical notes.\nEnterprise & Gover"
+        },
+        {
+          "locator": "text characters 768:1080",
+          "excerpt": " into actionable intelligence in seconds.\nAI-Powered Intelligence\nTry AI Analysis\nSolutions\nPopular Industries\nLegal & Court Reporting\nFor law enforcement, prosecutors, defense teams, and law firms.\nMedical & Healthcare\nHIPAA-compliant dictation and clinical notes.\nEnterprise & Government\nSSO, audit logs, and c"
+        }
+      ],
+      "capture_path": "discovery/captures/fb82b4567fd1ec6ab3b9.html",
+      "capture_sha256": "24e23c43d7463792a45f09270e944191536590005ba5cbab214b70baab078cff",
+      "record_path": "discovery/records/fb82b4567fd1ec6ab3b9.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

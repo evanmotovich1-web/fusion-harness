@@ -1,0 +1,518 @@
+{
+  "evidence_id": "r012-d66542f783c611971c26",
+  "source_url": "https://replit.com/pricing",
+  "publisher": "replit.com",
+  "retrieved_at": "2026-09-20T21:35:26.333636+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://replit.com/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/012/research/captures/d66542f783c611971c26.html",
+  "capture_sha256": "243c559ccb87eef66004e0f92b48281564c07e892f5b498bedd2a6f59f36ccf3",
+  "bytes_saved": 257342,
+  "title": "Pricing and Plans | Replit",
+  "metadata": [
+    {
+      "key": "og:title",
+      "value": "Pricing and Plans"
+    },
+    {
+      "key": "og:description",
+      "value": "See Replit's plans and pricing. Start free, or upgrade for more AI usage, collaborators, and features."
+    },
+    {
+      "key": "og:site_name",
+      "value": "replit"
+    },
+    {
+      "key": "description",
+      "value": "See Replit's plans and pricing. Start free, or upgrade for more AI usage, collaborators, and features."
+    }
+  ],
+  "text": "Pricing and Plans | Replit\nSkip to content\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding Pages\nDashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nContact sales\nLog in\nCreate account\nProducts\nCREATE\nDesign\nApps & Websites\nSlides\nPLATFORM\nAgents\nDatabases\nIntegrations\nSecurity\nSolutions\nBY ROLE\nFounders\nProduct Managers\nDesigners\nEngineers\nOperations\nIT\nBY USE CASE\nApps\nWebsites\nLanding Pages\nDashboards\nPrototypes\nChatbots\nPricing\nEnterprise\nResources\nLEARN & SUPPORT\nDocs\nCommunity\nSupport\nReplit Experts\nPartners\nDISCOVER\nCustomer Stories\nGallery\nBlog\nNewsroom\nLog in\nCreate account\nPricing\nChoose the best plan for you.\nMonthly\nYearly\nUp to 10% off\nCore\n$20\n$18 / month, billed annually\nAI integrations\nUp to 30 hours of chat on Free Mode\nUp to 60 projects on Free Mode\n$20 towards most powerful models\nPlan mode\nUnlimited workspaces\nTry now\nPro\n$100\n$90 / month, billed annually\n10 parallel agents\nPremium Support\nEverything in Core plus:\nEven more Free Mode usage to chat and create\n$100 towards most powerful models\nUp to 15 collaborators\nInvite up to 50 viewers\nDatabase rollback up to 28 days\nUpgrade to Pro\nEnterprise\nCustom\nEnterprise-grade security and control\nCustom seat limits\nSSO/SAML\nAdvanced privacy controls\nSingle-tenant environments\nStatic outbound IPs\nand much more\nContact sales\nGet started\n*Prices are subject to tax depending on your location. Replit Agent is powered by large language models. While it can produce powerful results, its behavior is probabilistic - meaning it may occasionally make mistakes.\nFrequently asked questions\nWhat are all the features included in these plans?\nHow do credits work?\nWhat happens when I run out of credits?\nWhat comes with my subscription?\nWhat plan is best for me?\nWhat is Effort-Based Pricing (pay-as-you-go)?\nHow can I control what I spend on Replit?\nHow can I see how much I'm spending?\nDo you offer invoicing instead of credit card payments?\nDo you offer annual plans at a discount?\nStill have questions?\nYou can see more details in our\nBilling docs\n. If you're interested in the Enterprise plan,\ncontact us\n. For support, sign in to Replit and use the ? on the top right corner of the page for help.\nCA\n73°F\nMade in sunny California.\nAll rights reserved. Copyright © 2026 Replit, Inc.\nHandy Links\nResources\nHelp\nHow to guides\nStatus\nCertifications\nPartnerships\nLegal\nTerms of Service\nPro Agreement\nEnterprise Agreement\nPrivacy\nSubprocessors\nDPA\nReport Abuse\nCompany\nAbout\nNews\nCareers\nBrand Center\nContact Us\nSocial\nX / Twitter\nYouTube\nLinkedin\nInstagram\nFacebook\nTikTok",
+  "links": [
+    {
+      "href": "/public/icons/favicon-prompt-192-rebrand.png",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/public/manifest.json",
+      "rel": "manifest"
+    },
+    {
+      "href": "/public/icons/favicon-prompt-192-rebrand.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "https://replit.com/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "http://sp.replit.com",
+      "rel": "dns-prefetch"
+    },
+    {
+      "href": "/public/fonts/ReplitDiatypeVariable.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/public/fonts/ABCDiatypePlusVariable-Regular.woff2",
+      "rel": "preload"
+    },
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/41ji8_moc_xr2.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/41ji8_moc_xr2.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2w5u-hyoll1np.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2w5u-hyoll1np.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2tm5eg2-0_vvl.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2tm5eg2-0_vvl.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fl6zqnu4a-qf.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fl6zqnu4a-qf.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fam56d992a1h.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2fam56d992a1h.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2oc2caezpl9lo.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/2oc2caezpl9lo.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0-63cr_ydu6cu.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0-63cr_ydu6cu.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1l-10iyowwe5a.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/1l-10iyowwe5a.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0z055mnxmltf7.css",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cdn.replit.com/_next/static/chunks/0z055mnxmltf7.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "#main-content",
+      "rel": null
+    },
+    {
+      "href": "/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/design",
+      "rel": null
+    },
+    {
+      "href": "/products/deployments",
+      "rel": null
+    },
+    {
+      "href": "/slides",
+      "rel": null
+    },
+    {
+      "href": "/products/agent",
+      "rel": null
+    },
+    {
+      "href": "/products/database",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/usecases/founders",
+      "rel": null
+    },
+    {
+      "href": "/usecases/product-managers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/designers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/software-engineers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/operations",
+      "rel": null
+    },
+    {
+      "href": "/usecases/it",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/landing-page-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/dashboards-data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/usecases/rapid-prototyping",
+      "rel": null
+    },
+    {
+      "href": "/usecases/chatbot-builder",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "/enterprise",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://docs.replit.com/getting-started/intro-replit",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "/help",
+      "rel": null
+    },
+    {
+      "href": "https://contra.com/replit",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/gallery",
+      "rel": null
+    },
+    {
+      "href": "https://blog.replit.com/",
+      "rel": null
+    },
+    {
+      "href": "/news",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/design",
+      "rel": null
+    },
+    {
+      "href": "/products/deployments",
+      "rel": null
+    },
+    {
+      "href": "/slides",
+      "rel": null
+    },
+    {
+      "href": "/products/agent",
+      "rel": null
+    },
+    {
+      "href": "/products/database",
+      "rel": null
+    },
+    {
+      "href": "/integrations",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "/usecases/founders",
+      "rel": null
+    },
+    {
+      "href": "/usecases/product-managers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/designers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/software-engineers",
+      "rel": null
+    },
+    {
+      "href": "/usecases/operations",
+      "rel": null
+    },
+    {
+      "href": "/usecases/it",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-app-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/ai-website-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/landing-page-builder",
+      "rel": null
+    },
+    {
+      "href": "/usecases/dashboards-data-visualization",
+      "rel": null
+    },
+    {
+      "href": "/usecases/rapid-prototyping",
+      "rel": null
+    },
+    {
+      "href": "/usecases/chatbot-builder",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://docs.replit.com/getting-started/intro-replit",
+      "rel": null
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "/help",
+      "rel": null
+    },
+    {
+      "href": "https://contra.com/replit",
+      "rel": null
+    },
+    {
+      "href": "/partners",
+      "rel": null
+    },
+    {
+      "href": "/customers",
+      "rel": null
+    },
+    {
+      "href": "/gallery",
+      "rel": null
+    },
+    {
+      "href": "https://blog.replit.com/",
+      "rel": null
+    },
+    {
+      "href": "/news",
+      "rel": null
+    },
+    {
+      "href": "/signup?goto=%2F%7E%3Fupgrade%3Ddirect_pricing%26plan%3Dhacker_pro%26period%3Dyearly",
+      "rel": null
+    },
+    {
+      "href": "/signup?goto=%2F%7E%3Fupgrade%3Ddirect_pricing%26plan%3Dpro%26period%3Dyearly%26tier%3D100",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/enterprise-wizard",
+      "rel": null
+    },
+    {
+      "href": "https://docs.replit.com/category/billing",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://replit.com/enterprise",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://replit.com/additional-resources",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/help",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/build",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://status.replit.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://replit.com/partners/certifications",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/partners",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/pro-agreement",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/enterprise-agreement",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/privacy-policy",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/subprocessors",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/dpa",
+      "rel": null
+    },
+    {
+      "href": "https://docs.replit.com/legal-and-security-info/abuse-report",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/about",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/news",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/careers",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/brand",
+      "rel": null
+    },
+    {
+      "href": "https://replit.com/enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/replit",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@replit",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/repl-it/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.instagram.com/replit",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.facebook.com/replit/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.tiktok.com/@replit",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.12347
+}

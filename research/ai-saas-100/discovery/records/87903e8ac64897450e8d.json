@@ -1,0 +1,137 @@
+{
+  "evidence_id": "web-87903e8ac64897450e8d",
+  "source_url": "https://www.taskmagic.com/",
+  "retrieved_at": "2026-09-20T21:00:55.936859+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://taskmagic.com/",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "discovery/captures/87903e8ac64897450e8d.html",
+  "capture_sha256": "85d05078b2e75e5690133997304887bcff16436a212f437821ff7466c46bd738",
+  "bytes_saved": 69553,
+  "title": "TaskMagic — Automate Any App, Any Website, in Plain English",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "TaskMagic connects to thousands of apps AND automates anything in your browser. Describe what you want in plain English. No code, no complex workflows, no limits."
+    },
+    {
+      "key": "og:title",
+      "value": "TaskMagic — Automate Any App, Any Website, in Plain English"
+    },
+    {
+      "key": "og:description",
+      "value": "Connect to thousands of apps AND automate anything in your browser. One platform. Plain English. No code."
+    }
+  ],
+  "text": "TaskMagic — Automate Any App, Any Website, in Plain English\nHow It Works\nUse Cases\nPricing\nFAQ\nHelp\nLog In\nStart Free Trial\n☰\nNow Live\nConnect Your Apps.\nAutomate Your Browser.\nJust Describe It.\nTaskMagic connects to thousands of apps and automates anything you do in a browser. Tell it what you want in plain English. No code. No complex setup.\nStart Free Trial\nSee It Build\n7-day free trial · 1,000 credits included · $0 today, cancel anytime\n0\nUsers\n0\nPaying Customers\n#263\nInc. 5000\nTrusted by teams at\nMicrosoft\nAmazon\nSalesforce\nCisco\nDeloitte\nAccenture\nSAP\nGartner\nCanva\nClickUp\nMonday.com\nWebflow\nAs seen in\nThe Complete Stack\nEverything Zapier Does.\nPlus Everything It Can't.\nOther tools make you choose: API integrations or browser automation. TaskMagic does both in one platform.\nApp Integrations\nConnect to the tools you already use, just like Zapier or Make. Move data between apps automatically.\nGoogle Sheets, Gmail, Slack\nStripe, HubSpot, Salesforce\nThousands more via API\n+\nBrowser Automation\nAutomate anything you do in Chrome. If a website doesn't have an API, TaskMagic still works.\nScrape data from any site\nFill forms, click buttons, navigate\nNo API or integration needed\nOne platform. Both worlds.\nStop paying for Zapier AND an RPA tool AND manual labor. TaskMagic replaces all three.\nHow It Works\nDescribe It. Run It.\nDone.\nNo workflow builders. No node diagrams. No learning curve. Just say what you need.\n01\nDescribe Your Goal\nTell TaskMagic what you want to automate in everyday language. No technical knowledge needed.\n\"Every morning, check my competitors' pricing and update my spreadsheet.\"\n02\nReview the Plan\nTaskMagic shows you every step before it builds anything. You approve, adjust, or ask for changes. You're always in control.\n03\nRun It Forever\nOnce built, your automation runs for pennies. Schedule it, trigger it, or run it on demand. It just works, every single time.\nSee It In Action\nFrom Prompt to\nAutomation in Seconds\nTell the agent what you want\nEvery morning, pull new leads from my form into a Google Sheet and send me a Slack summary.\nBuild it →\nTrigger\nNew form submission\nStep\nExtract lead fields\nGoogle Sheets\nAdd row\nStep\nCompose summary\nSlack\nSend message\nBuilt in seconds. Every step editable by hand.\nTaskMagic builds a complete automation from a single sentence — then it runs forever without an AI charge.\nWhy People Switch\nAutomation Shouldn't\nRequire a PhD.\nIf you've ever stared at a workflow builder wondering where to start, you're not alone.\nThe old way: pricing that spirals as you scale\nPredictable Pricing\nNo per-task billing that explodes when your automations actually work. One monthly price, predictable credits, no surprises.\nThe old way: node diagrams and webhook configs\nPlain English, Not Flowcharts\nNo drag-and-drop nodes. No webhook setup. No JSON parsing. Just describe what you want in everyday language and TaskMagic handles the rest.\nThe old way: \"sorry, that app isn't supported\"\nNo App Left Behind\nOther tools only work with apps that have API integrations. TaskMagic automates any website, whether it has an API or not. If you can see it in your browser, it's automatable.\nUse Cases\nWhat People Automate\nFrom solopreneurs to agencies, here's what people build with TaskMagic every day.\nCompetitor Monitoring\nTrack pricing, inventory, and product changes across competitor sites daily. Updates land in your spreadsheet automatically.\nLead Generation\nScrape leads from any directory or website, enrich the data, and push it to your CRM. No more hours of manual research.\nData Entry and Sync\nMove data between apps, spreadsheets, and websites automatically. New Stripe customer? It's in your CRM in seconds.\nRecurring Reports\nPull data from dashboards, ad platforms, and analytics tools into unified reports. Schedule it daily, weekly, whatever you need.\nWeb Scraping\nExtract structured data from any website. Product listings, job boards, real estate, research data. No code needed.\nEmail and Outreach\nAutomate personalized outreach, follow-ups, and email workflows across platforms that don't talk to each other natively.\nPricing\nSimple, Predictable Pricing\nSlide to choose your monthly credits. Every plan builds without limits — bigger plans unlock BYOK, teams & MCP.\nFor\n5,000\ncredits / month\n5k\n15k\n25k\n35k\n50k\nSolo\nPro\nBusiness\nScale\nSolo\n$29\n/mo\nIncludes 5,000 credits / month\nStart Free Trial\n7-day free trial · 1,000 credits · $0 today\nHow credits work:\nThe AI builds your automation once — a typical build uses about 150–250 credits. After that, every run costs just a few app credits, and browser automations run free. Even the $29 plan covers ~25 builds a month.\nNeed more than 50,000 credits a month?\nTalk to sales\nabout Enterprise volume & pricing.\nFAQ\nCommon Questions\nWhat is TaskMagic?\nTaskMagic is an AI automation platform that connects to thousands of apps AND automates anything you do in a browser. Describe what you want in plain English, and TaskMagic builds, runs, and maintains the automation for you. No code, no complex workflow builders.\nHow is this different from Zapier or Make?\nZapier and Make only work with apps that have API integrations. If a website or tool doesn't have one, you're out of luck. TaskMagic does everything they do (app-to-app connections) plus automates anything in your browser, whether it has an API or not. And instead of building complex node diagrams, you just describe what you want in plain English.\nDo I need to know how to code?\nNo. You describe what you want in everyday language. No coding, no technical setup, no node diagrams, no webhook configuration. If you can explain what you do manually, TaskMagic can automate it.\nHow do credits work?\nCredits are the one thing you pay for. The AI thinks hard once, while it builds — a typical build uses about 150–250 credits. After that, each run costs just a few app credits, never an AI charge, and hand-built browser automations run on zero credits. Plans start at $29/mo for 5,000 credits and slide up to 50,000.\nDo all plans have the same features?\nEvery plan includes the full builder, unlimited app connections, and unlimited active flows — you never hit a wall on what you can build. Bigger plans unlock more: MCP access and more tables from Pro ($79), team seats and bring-your-own-API-key from Business ($119), and unlimited everything on Scale.\nWhy is running so much cheaper than building?\nMost AI tools run everything through expensive AI models on every execution. TaskMagic uses AI during the build phase, but the resulting automation runs deterministically without AI. You get the intelligence of an AI agent with the efficiency of traditional automation.\nDoes it work on any website?\nYes. TaskMagic automates the browser directly. It works on any website you can open in Chrome. No APIs, integrations, or special access required.\nIs my data private?\nTaskMagic runs locally on your machine via the desktop app and Chrome extension. Your automations execute in your own browser, not in the cloud. Your data never leaves your machine unless you explicitly send it somewhere.\nHow does the free trial work?\nEvery new account starts with a 7-day free trial that includes 1,000 credits — enough for roughly 4–6 automation builds. You add a card at signup but pay $0 today. After 7 days your plan continues at $29/mo unless you cancel, and we email you a reminder 2 days before your trial ends. Cancel anytime during the trial and you won't be charged.\nCan I cancel anytime?\nYes. Every plan is month-to-month with no commitment. Cancel anytime from your account settings.\nReady?\nStop Settling for\nHalf a Solution.\nApp integrations. Browser automation. Plain English. One platform. TaskMagic is the only automation tool that does it all.\nStart Your Free Trial\nSee It Build\nNo per-task fees\nNo long-term contracts\nCancel anytime\nCommunity (4k+ members)\nHelp\nWeb Scrapers\nTerms\nPrivacy\nFair Use\n© 2026 TaskMagic. Built with care in LA.",
+  "links": [
+    {
+      "href": "https://taskmagic.com/",
+      "rel": "canonical"
+    },
+    {
+      "href": "/images/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "https://fonts.googleapis.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.gstatic.com",
+      "rel": "preconnect"
+    },
+    {
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "#how-it-works",
+      "rel": null
+    },
+    {
+      "href": "#use-cases",
+      "rel": null
+    },
+    {
+      "href": "#pricing",
+      "rel": null
+    },
+    {
+      "href": "#faq",
+      "rel": null
+    },
+    {
+      "href": "https://help.taskmagic.com/",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/sign-up",
+      "rel": null
+    },
+    {
+      "href": "#demo",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/sign-up",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/subscription-tiers",
+      "rel": null
+    },
+    {
+      "href": "https://app.taskmagic.com/sign-up",
+      "rel": null
+    },
+    {
+      "href": "#demo",
+      "rel": null
+    },
+    {
+      "href": "https://www.skool.com/taskmagic",
+      "rel": "noopener"
+    },
+    {
+      "href": "https://help.taskmagic.com/",
+      "rel": "noopener"
+    },
+    {
+      "href": "/scrapers",
+      "rel": null
+    },
+    {
+      "href": "/terms",
+      "rel": null
+    },
+    {
+      "href": "/privacy",
+      "rel": null
+    },
+    {
+      "href": "/fair-use",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.2673
+}

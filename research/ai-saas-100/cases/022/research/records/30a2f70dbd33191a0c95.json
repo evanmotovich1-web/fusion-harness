@@ -1,0 +1,774 @@
+{
+  "evidence_id": "r022-30a2f70dbd33191a0c95",
+  "source_url": "https://cursor.com/pricing",
+  "publisher": "cursor.com",
+  "retrieved_at": "2026-09-20T21:35:31.371948+00:00",
+  "published_at": null,
+  "source_type": "first_party_public_page",
+  "access_method": "credential-free urllib HTTPS GET",
+  "research_role": "pricing",
+  "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://cursor.com/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": false,
+  "capture_path": "cases/022/research/captures/30a2f70dbd33191a0c95.html",
+  "capture_sha256": "e485f2ce2156a86433d578db32283b4914a8367fb9e25e2d9a19906ea13ac0de",
+  "bytes_saved": 245452,
+  "title": "Cursor · Pricing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Choose the plan that's right for you"
+    },
+    {
+      "key": "og:title",
+      "value": "Cursor · Pricing"
+    },
+    {
+      "key": "og:description",
+      "value": "Choose the plan that's right for you"
+    },
+    {
+      "key": "og:site_name",
+      "value": "Cursor"
+    }
+  ],
+  "text": "Cursor · Pricing\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nPricing\nMonthly\nYearly\nHobby\nFor the tinkerer\nFree\nIncludes:\n✓\nNo credit card required\n✓\nLimited Agent requests\n✓\nAccess to Composer\nTry Cursor\nIndividual\nFor the agent-curious\n$20\n/ mo.\nPro\nPro+\nUltra\nEverything in Hobby, plus:\n✓\nExtended limits on Agent\n✓\nGenerous limits for Grok\n✓\nAccess to frontier models\n✓\nGrok Bot access\n✓\nMCPs, skills, and hooks\n✓\nCloud agents\n✓\nBugbot on usage-based billing\nGet Pro\nTeams\nFor teams that ship together\n$40\n/ user / mo.\nStandard\nPremium\nEverything on Individual, plus:\n✓\nCentralized team billing and administration\n✓\nTeam marketplace for internal rules, skills, and plugins\n✓\nCloud agents and automations with shared team context\n✓\nGrok Bot access\n✓\nAgentic code reviews with Bugbot\n✓\nUsage analytics to understand team behavior\n✓\nTeam-wide privacy mode\n✓\nSAML/OIDC SSO\nGet Teams\nEnterprise\nFor scaled organizations\nCustom\nEverything on Teams, plus:\n✓\nPooled usage\n✓\nInvoice/PO billing\n✓\nSCIM seat management\n✓\nRepository, model, and MCP access controls\n✓\nAuto-run, browser, and network controls\n✓\nAudit logs and service accounts\n✓\nAI code tracking API\n✓\nAccess, network, and audit controls for Grok Bot\n✓\nPriority support and account management\nContact sales\nTrusted every day by teams that build world-class software.\nQuestions & Answers\nWhat is the right plan for me?\n↓\n↑\nWe recommend Pro+ for daily agent users, and Ultra for agent power users. The Teams plan is recommended for professionals collaborating with others, and larger organizations that need invoicing, pooled usage, or advanced security should choose Enterprise.\nWhat are my payment options?\n↓\n↑\nSelf-serve plans support all major credit and debit cards. For invoice-based billing and wire transfers, please\ncontact us\nto discuss the Enterprise plan.\nHow does usage-based pricing work?\n↓\n↑\nEvery plan includes a set amount of model usage. On-demand usage allows you to continue using models after your included amount is consumed, billed in arrears. See\nour docs\nfor more details.\nAre prices inclusive of taxes?\n↓\n↑\nAll prices are exclusive of any applicable taxes. See our\nTerms of Service\nfor more information.\nHow can I see and manage Cursor's usage in my organization?\n↓\n↑\nAdmins can access usage information and key metrics through the\nAdmin Dashboard\n.\nHow does Cursor use my data?\n↓\n↑\nPrivacy mode can be enabled in settings or by a team admin. When it is enabled, we guarantee that code data is not used for training by us or our model providers. You can learn more on our\nSecurity\npage.\nCan I buy Cursor from a reseller or third party?\n↓\n↑\nNo. Cursor subscriptions are only sold directly through\ncursor.com\n. We do not authorize any resellers or third-party sellers. Subscriptions purchased from any other source are unauthorized and may be fraudulent, insecure, or obtained through abuse of our systems. These accounts may be suspended or terminated at any time. To protect your access and security, purchase Cursor only through our official website.\nWhere can I ask more questions?\n↓\n↑\nYou're welcome to join\nour forum\nand share your thoughts! If you prefer a private conversation, feel free to email us directly at\nhi@cursor.com\n.\nGet started with Cursor.\nDownload\n⤓\nContact Sales\nProduct\nAgents\nTeams\nEnterprise\nPricing\nCode Review\nCLI\nCloud Agents\nComposer\nMarketplace\n↗\nResources\nDownload\nChangelog\nDocs\nLearn\n↗\nValue Calculator\nForum\n↗\nHelp\n↗\nWorkshops\nStatus\n↗\nCompany\nCareers\nBlog\nCommunity\nStudents\nBrand\nFuture\nAnysphere\n↗\nLegal\nTerms of Service\nAcceptable Use Policy\nGrok Bot Terms\nPrivacy Policy\nData Use\nSecurity\nConnect\nX\n↗\nLinkedIn\n↗\nYouTube\n↗\n©\n2026\nAnysphere, Inc.\n🛡\nSOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified\n🌐\nEnglish\n↓\nEnglish\n✓\n简体中文\n日本語\n繁體中文\nEspañol\nFrançais\nPortuguês\n한국어\nDeutsch\nहिन्दी\nSkip to content\nCursor\nModels\n↓\nGrok\nEvals\nProduct\n↓\nAgents\nCloud\nGrok Bot\n↗\nMobile\nAutomations\nCLI\nMarketplace\n↗\nReview\nEnterprise\nPricing\nResources\n↓\nChangelog\nBlog\nDocs\nCommunity\nHelp\n↗\nWorkshops\nForum\n↗\nCareers\nModels\n→\nProduct\n→\nEnterprise\nPricing\nResources\n→\nSign in\nContact\nContact sales\nDownload\nPricing\nMonthly\nYearly\nHobby\nFor the tinkerer\nFree\nIncludes:\n✓\nNo credit card required\n✓\nLimited Agent requests\n✓\nAccess to Composer\nTry Cursor\nIndividual\nFor the agent-curious\n$20\n/ mo.\nPro\nPro+\nUltra\nEverything in Hobby, plus:\n✓\nExtended limits on Agent\n✓\nGenerous limits for Grok\n✓\nAccess to frontier models\n✓\nGrok Bot access\n✓\nMCPs, skills, and hooks\n✓\nCloud agents\n✓\nBugbot on usage-based billing\nGet Pro\nTeams\nFor teams that ship together\n$40\n/ user / mo.\nStandard\nPremium\nEverything on Individual, plus:\n✓\nCentralized team billing and administration\n✓\nTeam marketplace for internal rules, skills, and plugins\n✓\nCloud agents and automations with shared team context\n✓\nGrok Bot access\n✓\nAgentic code reviews with Bugbot\n✓\nUsage analytics to understand team behavior\n✓\nTeam-wide privacy mode\n✓\nSAML/OIDC SSO\nGet Teams\nEnterprise\nFor scaled organizations\nCustom\nEverything on Teams, plus:\n✓\nPooled usage\n✓\nInvoice/PO billing\n✓\nSCIM seat management\n✓\nRepository, model, and MCP access controls\n✓\nAuto-run, browser, and network controls\n✓\nAudit logs and service accounts\n✓\nAI code tracking API\n✓\nAccess, network, and audit controls for Grok Bot\n✓\nPriority support and account management\nContact sales\nTrusted every day by teams that build world-class software.\nQuestions & Answers\nWhat is the right plan for me?\n↓\n↑\nWe recommend Pro+ for daily agent users, and Ultra for agent power users. The Teams plan is recommended for professionals collaborating with others, and larger organizations that need invoicing, pooled usage, or advanced security should choose Enterprise.\nWhat are my payment options?\n↓\n↑\nSelf-serve plans support all major credit and debit cards. For invoice-based billing and wire transfers, please\ncontact us\nto discuss the Enterprise plan.\nHow does usage-based pricing work?\n↓\n↑\nEvery plan includes a set amount of model usage. On-demand usage allows you to continue using models after your included amount is consumed, billed in arrears. See\nour docs\nfor more details.\nAre prices inclusive of taxes?\n↓\n↑\nAll prices are exclusive of any applicable taxes. See our\nTerms of Service\nfor more information.\nHow can I see and manage Cursor's usage in my organization?\n↓\n↑\nAdmins can access usage information and key metrics through the\nAdmin Dashboard\n.\nHow does Cursor use my data?\n↓\n↑\nPrivacy mode can be enabled in settings or by a team admin. When it is enabled, we guarantee that code data is not used for training by us or our model providers. You can learn more on our\nSecurity\npage.\nCan I buy Cursor from a reseller or third party?\n↓\n↑\nNo. Cursor subscriptions are only sold directly through\ncursor.com\n. We do not authorize any resellers or third-party sellers. Subscriptions purchased from any other source are unauthorized and may be fraudulent, insecure, or obtained through abuse of our systems. These accounts may be suspended or terminated at any time. To protect your access and security, purchase Cursor only through our official website.\nWhere can I ask more questions?\n↓\n↑\nYou're welcome to join\nour forum\nand share your thoughts! If you prefer a private conversation, feel free to email us directly at\nhi@cursor.com\n.\nGet started with Cursor.\nDownload\n⤓\nContact Sales\nProduct\nAgents\nTeams\nEnterprise\nPricing\nCode Review\nCLI\nCloud Agents\nComposer\nMarketplace\n↗\nResources\nDownload\nChangelog\nDocs\nLearn\n↗\nValue Calculator\nForum\n↗\nHelp\n↗\nWorkshops\nStatus\n↗\nCompany\nCareers\nBlog\nCommunity\nStudents\nBrand\nFuture\nAnysphere\n↗\nLegal\nTerms of Service\nAcceptable Use Policy\nGrok Bot Terms\nPrivacy Policy\nData Use\nSecurity\nConnect\nX\n↗\nLinkedIn\n↗\nYouTube\n↗\n©\n2026\nAnysphere, Inc.\n🛡\nSOC 2 | ISO27001 | ISO42001 | AIUC-1 Certified\n🌐\nEnglish\n↓\nEnglish\n✓\n简体中文\n日本語\n繁體中文\nEspañol\nFrançais\nPortuguês\n한국어\nDeutsch\nहिन्दी",
+  "links": [
+    {
+      "href": "/marketing-static/_next/static/chunks/15p9_0bg.mv9r.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0-bj.qdghqbe1.css?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/marketing-static/_next/static/chunks/0y6ohv-u0tb1d.js?dpl=dpl_6U79WwN44ZTiNAxj57bjZRqr8YJT",
+      "rel": "preload"
+    },
+    {
+      "href": "https://cursor.com/an/UfoPFiz3bKlZcL0x/",
+      "rel": "preload"
+    },
+    {
+      "href": "https://0ay7zb.cursor.com/analytics/loader-v1.js?key=6f091e8fd6f3c36209a1e08f140c7a4b334baea548f4702052f0732f8d577990",
+      "rel": "preload"
+    },
+    {
+      "href": "/marketing-static/manifest.webmanifest",
+      "rel": "manifest"
+    },
+    {
+      "href": "https://cursor.com/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://cursor.com/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/cn/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ja/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/zh-Hant/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/fr/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/pt-BR/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/ko/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://cursor.com/hi/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "/marketing-static/favicon-light.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/marketing-static/icon-192x192-light.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon-light.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/marketing-static/apple-touch-icon-light.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/api/auth/checkoutDeepControl?yearly=false",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/team/new-team?yearly=false",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=pricing_enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/contact-sales?source=pricing_faq",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/pricing",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/dashboard",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com",
+      "rel": null
+    },
+    {
+      "href": "mailto:hi@cursor.com",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=pricing_footer",
+      "rel": null
+    },
+    {
+      "href": "/en-US/product",
+      "rel": null
+    },
+    {
+      "href": "/en-US/business/teams",
+      "rel": null
+    },
+    {
+      "href": "/en-US/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/en-US/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en-US/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/cli",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/en-US/composer",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/download",
+      "rel": null
+    },
+    {
+      "href": "/en-US/changelog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/cost-savings",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://status.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/careers",
+      "rel": null
+    },
+    {
+      "href": "/en-US/blog",
+      "rel": null
+    },
+    {
+      "href": "/en-US/community",
+      "rel": null
+    },
+    {
+      "href": "/en-US/students",
+      "rel": null
+    },
+    {
+      "href": "/en-US/brand",
+      "rel": null
+    },
+    {
+      "href": "/en-US/future",
+      "rel": null
+    },
+    {
+      "href": "https://anysphere.inc/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/en-US/acceptable-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/terms/grok-bot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/privacy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/data-use",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/cursorai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://anysphere.inc",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "#main",
+      "rel": null
+    },
+    {
+      "href": "/home",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/grok",
+      "rel": null
+    },
+    {
+      "href": "/evals",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/product",
+      "rel": null
+    },
+    {
+      "href": "/cloud",
+      "rel": null
+    },
+    {
+      "href": "https://x.ai/bot",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/mobile",
+      "rel": null
+    },
+    {
+      "href": "/automate",
+      "rel": null
+    },
+    {
+      "href": "/cli",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/changelog",
+      "rel": null
+    },
+    {
+      "href": "/blog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/community",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/careers",
+      "rel": null
+    },
+    {
+      "href": "/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/dashboard",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/contact-sales?source=navbar",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/api/auth/checkoutDeepControl?yearly=false",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/team/new-team?yearly=false",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=pricing_enterprise",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/contact-sales?source=pricing_faq",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/pricing",
+      "rel": null
+    },
+    {
+      "href": "/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/docs/account/teams/dashboard",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com",
+      "rel": null
+    },
+    {
+      "href": "mailto:hi@cursor.com",
+      "rel": null
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "/contact-sales?source=pricing_footer",
+      "rel": null
+    },
+    {
+      "href": "/en-US/product",
+      "rel": null
+    },
+    {
+      "href": "/en-US/business/teams",
+      "rel": null
+    },
+    {
+      "href": "/en-US/enterprise",
+      "rel": null
+    },
+    {
+      "href": "/en-US/pricing",
+      "rel": null
+    },
+    {
+      "href": "/en-US/bugbot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/cli",
+      "rel": null
+    },
+    {
+      "href": "/agents",
+      "rel": null
+    },
+    {
+      "href": "/en-US/composer",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/marketplace",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/download",
+      "rel": null
+    },
+    {
+      "href": "/en-US/changelog",
+      "rel": null
+    },
+    {
+      "href": "/docs",
+      "rel": null
+    },
+    {
+      "href": "https://cursor.com/learn",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/cost-savings",
+      "rel": null
+    },
+    {
+      "href": "https://forum.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://cursor.com/help",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/workshops",
+      "rel": null
+    },
+    {
+      "href": "https://status.cursor.com/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/careers",
+      "rel": null
+    },
+    {
+      "href": "/en-US/blog",
+      "rel": null
+    },
+    {
+      "href": "/en-US/community",
+      "rel": null
+    },
+    {
+      "href": "/en-US/students",
+      "rel": null
+    },
+    {
+      "href": "/en-US/brand",
+      "rel": null
+    },
+    {
+      "href": "/en-US/future",
+      "rel": null
+    },
+    {
+      "href": "https://anysphere.inc/",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "/en-US/terms-of-service",
+      "rel": null
+    },
+    {
+      "href": "/en-US/acceptable-use-policy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/terms/grok-bot",
+      "rel": null
+    },
+    {
+      "href": "/en-US/privacy",
+      "rel": null
+    },
+    {
+      "href": "/en-US/data-use",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    },
+    {
+      "href": "https://x.com/cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.linkedin.com/company/cursorai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/@cursor_ai",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://anysphere.inc",
+      "rel": null
+    },
+    {
+      "href": "/en-US/security",
+      "rel": null
+    }
+  ],
+  "elapsed_seconds": 0.167176
+}

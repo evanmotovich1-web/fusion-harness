@@ -1,0 +1,16 @@
+{
+  "job_id": "52f58b3f-7d49-4d30-bce4-309b1693df69",
+  "params": {
+    "model": "wan3_0",
+    "duration": 7,
+    "resolution": "480p",
+    "aspect_ratio": "9:16",
+    "generate_audio": true,
+    "enable_thinking": true,
+    "count": 1,
+    "prompt": "Create exactly a 7-second vertical 9:16 photorealistic homecare social advertisement with synchronized English dialogue. Two attractive but relatable adults age 25-30: a young woman in a cream cardigan and a young man in a muted teal shirt, standing in a cozy sunlit family kitchen. Natural skin texture, tasteful warm daylight, premium authentic lifestyle commercial. An older mother sits comfortably reading in the softly blurred living room background. Compassionate, optimistic, emotionally believable. Both younger adults remain in the upper two thirds of the frame; leave the bottom quarter uncluttered for a website overlay added in editing.\nSingle smooth medium two-shot with subtle camera push-in. At 0.15-1.7 seconds the woman looks slightly worried and clearly asks, \"Who'll take care of Mom?\" At 1.8-6.5 seconds the man looks at her and answers warmly and clearly, \"You could get paid to care for her. Quick and easy to start.\" Use exactly these lines, in order, no extra speech. Woman has a warm youthful American voice; man has a reassuring youthful American baritone. Excellent natural lip sync, conversational lively pacing, voices distinct and professionally recorded, not robotic, no shouting, no overlapping voices, no voiceover narration. By 6.6 seconds she smiles with relief and they glance warmly toward her mother. Hold this pleasant closing moment until exactly 7 seconds. Very subtle optimistic music below clearly audible dialogue. No generated lettering, captions, logos, watermarks, website, phone screens, or text of any kind; typography will be added in editing. No medical uniforms, no hospital, no cash flying. End naturally, with all speech finished before 6.7 seconds."
+  },
+  "website": "specialistsincare.com",
+  "website_status": "user supplied provisional spelling; not externally verified",
+  "target_duration_seconds": 8
+}

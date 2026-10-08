@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "test_id": "M-A5",
+  "requires_inference": false,
+  "kind": "market_reject",
+  "reject_step": 1
+}

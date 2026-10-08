@@ -1,0 +1,125 @@
+{
+  "evidence_id": "web-e18fccca043f58bd6bf0",
+  "source_url": "https://www.meetjamie.ai/pricing",
+  "retrieved_at": "2026-09-20T21:02:59.229026+00:00",
+  "published_at": null,
+  "publisher": null,
+  "access_method": "credential-free Python urllib HTTPS GET",
+  "source_type": "unclassified",
+  "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution.",
+  "requested_byte_limit": 262144,
+  "status": 200,
+  "final_url": "https://www.meetjamie.ai/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "capture_truncated": true,
+  "capture_path": "discovery/captures/e18fccca043f58bd6bf0.html",
+  "capture_sha256": "925a7a3479e8f148a3e13bf69f66f8daab98d05d289bb212d22e33474aefff25",
+  "bytes_saved": 262144,
+  "title": "Pricing",
+  "metadata": [
+    {
+      "key": "description",
+      "value": "Find a plan to power your meetings. Start for free, upgrade for longer meetings, more usage and team collaboration."
+    },
+    {
+      "key": "og:title",
+      "value": "Jamie - The Meeting Intelligence Platform You Can Trust"
+    },
+    {
+      "key": "og:description",
+      "value": "The meeting intelligence platform you can trust. Jamie turns every meeting into knowledge you can act on, with no bot on the call, data hosted in the EU, ISO 27001 and GDPR."
+    },
+    {
+      "key": "og:site_name",
+      "value": "Jamie"
+    }
+  ],
+  "text": "Pricing\nPricing\nCustomer Stories\nSecurity\nIndustries\nCompany\nBook a demo\nDownload\nFind a plan to power your meetings\nTurn every meeting into accurate notes and knowledge you can act on. Be prepared with custom briefings, find anything in seconds, and let Jamie automatically update the tools you already use.\nPersonal\nBusiness\nAnnual\n-17%\nMonthly\nAnnual\n-17%\nMonthly\nFree\n€0\n/ user / month\nStart free. Upgrade anytime.\nGet Started\n10 AI notes / month\n30min meeting duration limit\nAsk Jamie (Chat)\nPro\nPopular\n€39\nper month, billed annually\nFor high-volume & power users.\nGet Started\nEverything in Plus and\nUnlimited AI notes\n5h meeting duration limit\nSalesforce, HubSpot, Asana, etc.\nMCP for AI tools\nPlus\n€21\nper month, billed annually\nGreat for busy professionals.\nGet Started\n20 AI notes / month\n2h meeting duration limit\nNotion, Google Docs, OneNote\nTrusted by companies like",
+  "links": [
+    {
+      "href": "/",
+      "rel": "preconnect"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/3yz5c4p2a76pd.css",
+      "rel": "stylesheet"
+    },
+    {
+      "href": "/_next/static/immutable/chunks/1fc_9yvic3jo5.js",
+      "rel": "preload"
+    },
+    {
+      "href": "https://www.meetjamie.ai/pricing",
+      "rel": "canonical"
+    },
+    {
+      "href": "https://www.meetjamie.ai/de/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.meetjamie.ai/es/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.meetjamie.ai/pt-BR/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "https://www.meetjamie.ai/pricing",
+      "rel": "alternate"
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon"
+    },
+    {
+      "href": "/favicon.svg",
+      "rel": "icon"
+    },
+    {
+      "href": "/favicon.png",
+      "rel": "icon"
+    },
+    {
+      "href": "/apple-touch-icon.png",
+      "rel": "apple-touch-icon"
+    },
+    {
+      "href": "/",
+      "rel": null
+    },
+    {
+      "href": "/pricing",
+      "rel": null
+    },
+    {
+      "href": "/customer-stories",
+      "rel": null
+    },
+    {
+      "href": "/security",
+      "rel": null
+    },
+    {
+      "href": "https://cal.com/team/meetjamie/get-to-know-jamie",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "/download",
+      "rel": null
+    },
+    {
+      "href": "https://app.meetjamie.ai/?from=meetjamie.ai&plan=free",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://app.meetjamie.ai/?from=meetjamie.ai&plan=pro",
+      "rel": "noreferrer"
+    },
+    {
+      "href": "https://app.meetjamie.ai/?from=meetjamie.ai&plan=plus",
+      "rel": "noreferrer"
+    }
+  ],
+  "elapsed_seconds": 0.1498
+}

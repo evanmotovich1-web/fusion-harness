@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "root": "/Users/evanmotovich/fusion-harness/research/ai-saas-100",
+  "source_snapshot": {
+    "path": "source-archive/sha256/4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb",
+    "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+  },
+  "active_source": {
+    "path": "cases/002/implementation/workflow.py",
+    "sha256": "4f53995db9a3b5ea3306e53c8babfc1a7cf1c7f88983423bd945bbd0e463aaeb"
+  },
+  "evaluator_components": {
+    "adapters": {
+      "path": "evaluations/continuation-v1/adapters.py",
+      "sha256": "216d173890723277224a5f17aeb707ffd42a796a97fa49cb48c3035c598fef3e"
+    },
+    "evaluate": {
+      "path": "evaluations/continuation-v1/evaluate.py",
+      "sha256": "1152e6e682950a3b09c29d28d9d6e35a6b9e67291499dd3332ce3cdc6eb15d17"
+    },
+    "suite": {
+      "path": "evaluations/continuation-v1/suite.json",
+      "sha256": "b75968ea00c55d5a5c25e27dda97b7f12ca0646aa820fd0a17a83791322d7f22"
+    },
+    "freeze": {
+      "path": "evaluations/continuation-v1/selftest-receipts/20260922T040256033925Z-863d211b/freeze.json",
+      "sha256": "f0c0cf1b639cf3b5bdd8b6c00dc02dae490a46ecca20e5ca1350ae157672c079"
+    }
+  },
+  "capability_evidence": {
+    "path": "capabilities-continuation.json",
+    "sha256": "7ed04bc66fbedda6a0cbc94ba1e8f3111516a92de0f53a83f2d4e95fddfd5bda"
+  },
+  "groups": [
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N1.json",
+        "sha256": "94bf56dc6bc17bae7c87410e1b3d774bda305e69815a5d71cfcd063f33b58f0b"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N1.json",
+        "sha256": "752b8b6f45904a4fca656cc08f6f05ea8a68e4560950d92618ee14c8208d7cab"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N2.json",
+        "sha256": "7704087891917a0364b7ba60b5fe6a52bce9112b50ee88a4ba69f4817c1e4c33"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N2.json",
+        "sha256": "b46289ce9f9562fb8b879b5982165ad7ebbe33828d22cb10ed0bf718d7da3828"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N3.json",
+        "sha256": "b66de7aa2875b7c095677e3047d819701ea3025ae1ea81438d22d0445c9575e0"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N3.json",
+        "sha256": "fd715d7ca26624c1e19b2b1feb50cb0343de45b4fe5f89e3a7cc344e69b9d43c"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N4.json",
+        "sha256": "83368663bfc93be4ea935d4604389b3fd36f6e014a016922ea3878fa4722974d"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N4.json",
+        "sha256": "ae7854f8232761eb726c4278a93cff31566414f92144ee783218e1fa34244dfa"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N5.json",
+        "sha256": "9e2724dd94269549610c7c7e1e9ad8c9f02c4e601feb50d4137b5822db1ac180"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N5.json",
+        "sha256": "3588a92f3d6f3f81c7cfa4adc4877c02aa4038fc73af595ebed2cd4b2e1fdb1f"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N6.json",
+        "sha256": "e3842071336eab4440462dc3a614544927fa6002e769923a60b380d28a6fb9ad"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N6.json",
+        "sha256": "17240a6df3b09354936cb98b8e915891260cd00917fa8751e7c05479cadf3ce8"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N7.json",
+        "sha256": "4d2d7b82bc6bda2e29ce3db2b9b6e09840f2d014a4348d5973c48b226a73ed30"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N7.json",
+        "sha256": "3d63311e7a396e4ad8e541ca70f04f15850f97edd16b6a02c54e46ab35bd65a0"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-N8.json",
+        "sha256": "fa9dc431d2f05955f288c22db8fb9eb25192d454c357ccd279f3b136218fba84"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-N8.json",
+        "sha256": "41c64f68f06eca05f03c1ba9ab2ffdd15cbe69fb9c76595f964ba8e6bcd5c6de"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A1.json",
+        "sha256": "700ea8efe17ab9b30ed2a8d15939d4b7a21dac1b7029287240d78a66ce468a4f"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A1.json",
+        "sha256": "77d7b47455d52cdf57ed102d05aa72d5005c2905e916741be9bbbf99e189b532"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A2.json",
+        "sha256": "ccee9f59264c8f41688eabd1f3432419e3655a77f6a2f7242bcde89737fa82a3"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A2.json",
+        "sha256": "0a074f8461b26f33bf973b35e07711759d93414a7112525cb1d129024b4199d4"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A3.json",
+        "sha256": "6883c012e7b5177ead160b90389aa78e1cd224f72a9040a2067ba77822d9925c"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A3.json",
+        "sha256": "92b2959316cd4ef729aff34b21f7544d890ca3fb73d8ca13adf28b1b4e0f0f8d"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A4.json",
+        "sha256": "d27a7a359c01a0c81e7f3b04ce6daabd77417d8f44110dbdc2389f4bc6f99845"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A4.json",
+        "sha256": "260d4f19542a88b7d582a6808d9287cddf143642a0b1e1d09cf1ffc4cd229d9c"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A5.json",
+        "sha256": "e0534d5b9090192e9f80a0f64ae2a27f15d39cdaa7dfb071a28a6d6c7ddfe57f"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A5.json",
+        "sha256": "72de7d7a324c32c0a108d2bcde3adc18850c8e2b602e37a911430e9d1f0070e0"
+      }
+    },
+    {
+      "input": {
+        "path": "evaluations/continuation-v1/inputs/002/M-A6.json",
+        "sha256": "80c6d45647ff1f823de8c9e98c28a26a990ae901bdf8451a5f4afc6930128c06"
+      },
+      "oracle": {
+        "path": "evaluations/continuation-v1/oracles/002/M-A6.json",
+        "sha256": "6046e28a67a49a68aef4fdde16e841bee34d37d2ac57a001b1d12c6725db3ed0"
+      }
+    }
+  ],
+  "planned_group_attempts": 20,
+  "planned_invocations": 22
+}

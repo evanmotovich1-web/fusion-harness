@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "case_id": "002",
+  "recorded_at": "2026-09-20T22:52:29.318731+00:00",
+  "source_bundle": {
+    "path": "cases/002/source-history/repair-v2-60955b5d289a/source-bundle.json",
+    "sha256": "dfa232e163a7ddf3c3c1d21ea3ce6d333075436dd2d36e33ad9683fc56d3b3e4"
+  },
+  "runs": [
+    {
+      "receipt_path": "cases/002/receipts/002-repair-v2-20260920T225229146957Z.json",
+      "passed": 54,
+      "failed": 0,
+      "exit_status": 0
+    },
+    {
+      "receipt_path": "cases/002/receipts/002-legacy-regression-after-repair-20260920T225229278649Z.json",
+      "passed": 20,
+      "failed": 0,
+      "exit_status": 0
+    }
+  ],
+  "accepted_product": false,
+  "scope": "Local repair evidence only. Baseline and independent hidden evaluation remain missing."
+}

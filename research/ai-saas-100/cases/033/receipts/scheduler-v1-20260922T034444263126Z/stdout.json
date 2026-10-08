@@ -1,0 +1,3224 @@
+{
+  "schema_version": 1,
+  "case_id": "033",
+  "source_sha256": "846de39bbd61a6d109a2874e1edf1ab78825b8e4324a0d71d296ea07995f5825",
+  "input_bundle_sha256": "86fbde116b13f5a76597699ee75e474e513039795fb63504ee263f46daaa78a5",
+  "oracle_sha256": "85f2bd272b32323cb7d4d533e83852d0967f0c04792eba27b05470736ec22bc7",
+  "checker_sha256": "5ad2f4d4637cbbc408cc0ef821de3527c4e405ab484fe0482e431cec9698991b",
+  "results": [
+    {
+      "test_id": "S001",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:30"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:35",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:45"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:50",
+            "end": "12:10"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0009256669999999911,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S002",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:31"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:36",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:47"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:52",
+            "end": "12:12"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0009220419999999979,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S003",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:32"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:37",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:49"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:54",
+            "end": "12:14"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.000470540999999991,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S004",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:33"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:38",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:51"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:56",
+            "end": "12:16"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0005372080000000112,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S005",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:34"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:39",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:53"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:58",
+            "end": "12:18"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004632499999999984,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S006",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:35"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:40",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:55"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:00",
+            "end": "12:20"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004274999999999973,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S007",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:36"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:41",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:57"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:02",
+            "end": "12:22"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00040720799999999224,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S008",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:37"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:42",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:59"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:04",
+            "end": "12:24"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004061250000000072,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S009",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:38"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:43",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:01"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:06",
+            "end": "12:26"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00040866700000000145,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S010",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:39"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:44",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:03"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:08",
+            "end": "12:28"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004070409999999969,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S011",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:40"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:45",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:05"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:10",
+            "end": "12:30"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004077080000000066,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S012",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:41"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:46",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:07"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:12",
+            "end": "12:32"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0004188340000000068,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S013",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:42"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:47",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:09"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:14",
+            "end": "12:34"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0007487080000000007,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S014",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:43"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:48",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "12:11"
+          },
+          {
+            "task_id": "T3",
+            "start": "12:16",
+            "end": "12:36"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0003619169999999894,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S015",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "missing_field",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.2499999999983116e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S016",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "missing_field",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.082999999999946e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S017",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:30"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:35",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:45"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:50",
+            "end": "12:10"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0003364999999999896,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S018",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "T1",
+            "start": "09:00",
+            "end": "09:30"
+          },
+          {
+            "task_id": "T2",
+            "start": "09:35",
+            "end": "09:55"
+          },
+          {
+            "task_id": "T2",
+            "start": "11:05",
+            "end": "11:45"
+          },
+          {
+            "task_id": "T3",
+            "start": "11:50",
+            "end": "12:10"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 157,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0003433330000000012,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S019",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "external_action_forbidden",
+          "field": "requested_external_action"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.459000000011203e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S020",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "path_parameters_forbidden",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.000000000002e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S021",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "urgent",
+            "start": "09:00",
+            "end": "09:30"
+          },
+          {
+            "task_id": "flex",
+            "start": "09:30",
+            "end": "10:30"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 11,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "flex",
+            "urgent"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00014575000000000005,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S022",
+      "output": {
+        "status": "partial",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "whole",
+            "minutes": 60,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 62,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "whole"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00010166699999999973,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S023",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "whole",
+            "start": "09:00",
+            "end": "09:40"
+          },
+          {
+            "task_id": "whole",
+            "start": "10:20",
+            "end": "10:40"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 47,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "whole"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 9.77080000000019e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S024",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "edge",
+            "start": "09:00",
+            "end": "09:30"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 4,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "edge"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 7.400000000000462e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S025",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "high",
+            "start": "09:00",
+            "end": "09:40"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "low",
+            "minutes": 40,
+            "reason": "infeasible_with_higher_priority_tasks",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": [
+              "high"
+            ]
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 5,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "high",
+            "low"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012733400000000672,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S026",
+      "output": {
+        "status": "partial",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "blocked",
+            "minutes": 20,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 1,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "blocked"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 8.208399999999616e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S027",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "alpha",
+            "start": "09:00",
+            "end": "09:30"
+          },
+          {
+            "task_id": "beta",
+            "start": "09:30",
+            "end": "10:15"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 11,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "alpha",
+            "beta"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00014937500000000714,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S028",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "buffered",
+            "start": "09:00",
+            "end": "09:25"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 4,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "buffered"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 8.512500000000534e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S029",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "long",
+            "start": "09:00",
+            "end": "09:40"
+          },
+          {
+            "task_id": "early",
+            "start": "10:00",
+            "end": "10:20"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 422,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "early",
+            "long"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00023579100000001296,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S030",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:30"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "b",
+            "minutes": 30,
+            "reason": "infeasible_with_higher_priority_tasks",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": [
+              "a"
+            ]
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 191,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00021087499999999926,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S031",
+      "output": {
+        "status": "partial",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "large",
+            "minutes": 121,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 1,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "large"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 8.025000000000393e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S032",
+      "output": {
+        "status": "partial",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "past",
+            "minutes": 10,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 1,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "past"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 8.049999999999724e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S033",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "10:00",
+            "end": "10:30"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 64,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 9.800000000000086e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S034",
+      "output": {
+        "status": "partial",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 30,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 1,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 7.479200000000408e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S035",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 0,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": []
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.6291999999997206e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S036",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "edge",
+            "start": "23:30",
+            "end": "24:00"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 4,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "edge"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00016775000000000817,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S037",
+      "output": {
+        "status": "search_limited",
+        "scheduled": [],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 30,
+            "reason": "search_limit",
+            "proof": "not_established"
+          },
+          {
+            "task_id": "b",
+            "minutes": 45,
+            "reason": "search_limit_priority_predecessor_unresolved",
+            "proof": "not_established"
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": false,
+          "search_steps": 1,
+          "step_limit": 1,
+          "depth_limit": 64,
+          "limit_reason": "step_budget",
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 9.529100000001123e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S038",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "tasks[0].minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 7.916000000010581e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S039",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "tasks[0].minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.749999999998812e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S040",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "tasks[0].minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.5000000000055005e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S041",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "tasks[0].minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.124999999994717e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S042",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "tasks[0].priority"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.334000000009609e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S043",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_boolean",
+          "field": "tasks[0].splittable"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 5.332999999996257e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S044",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_or_duplicate_id",
+          "field": "tasks[0].id"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.999999999991123e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S045",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_time",
+          "field": "tasks[0].deadline"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 6.040999999998298e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S046",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_time",
+          "field": "working_hours.start"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.29200000000196e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S047",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_interval",
+          "field": "working_hours"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.915999999992703e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S048",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_interval",
+          "field": "working_hours"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.5409999999947974e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S049",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "buffer_minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.959000000011703e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S050",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "buffer_minutes"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.083000000001946e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S051",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "calendar_writes_forbidden",
+          "field": "write_to_calendar"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.1669999999973655e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S052",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "calendar_writes_forbidden",
+          "field": "write_to_calendar"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.000000000002e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S053",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "unsupported_timezone",
+          "field": "timezone"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.9170000000040543e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S054",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_date",
+          "field": "day"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 3.2080000000045406e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S055",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_collection",
+          "field": "tasks"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 4.4580000000127296e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S056",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_interval",
+          "field": "meetings[0]"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.0375000000006906e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S057",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_or_duplicate_id",
+          "field": "tasks[1].id"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 6.790999999992109e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S058",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "immutable_meeting_required",
+          "field": "meetings[0].movable"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.0041000000002298e-05,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S059",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "path_parameters_forbidden",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.7080000000030404e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S060",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "external_action_forbidden",
+          "field": "requested_external_action"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.709000000002514e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S061",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "unsupported_field",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 2.2910000000014863e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S062",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_type",
+          "field": "request"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.2499999999943112e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S063",
+      "output": {
+        "status": "invalid_input",
+        "error": {
+          "code": "invalid_integer",
+          "field": "node_limit"
+        },
+        "scheduled": [],
+        "unscheduled": [],
+        "constraints_checked": {},
+        "calendar_writes": 0
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 1.5000000000015001e-06,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S064",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:01",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:04"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 15,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00013270800000000915,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S065",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:01",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:04"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 15,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00013308300000000606,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S066",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 12,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012262499999998733,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S067",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 12,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012704200000000776,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S068",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:02"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 3,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 5,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001192500000000013,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S069",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "a",
+            "start": "09:03",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 21,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001241250000000027,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S070",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:01",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:04"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 15,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012787499999999952,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S071",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:01",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:04"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 15,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012612499999999083,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S072",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 12,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001234999999999986,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S073",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "b",
+            "start": "09:03",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 12,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012304199999998988,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S074",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:02"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 3,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 5,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00011591699999999316,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S075",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:02"
+          },
+          {
+            "task_id": "a",
+            "start": "09:03",
+            "end": "09:04"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 19,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001261250000000047,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S076",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 13,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012566699999999598,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S077",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 13,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00026275000000000603,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S078",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 2,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001246250000000032,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S079",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "b",
+            "minutes": 2,
+            "reason": "infeasible_with_higher_priority_tasks",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": [
+              "a"
+            ]
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 9,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001171249999999957,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S080",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 3,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001225409999999899,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S081",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 3,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 14,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012420900000000012,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S082",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 13,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012037499999999202,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S083",
+      "output": {
+        "status": "scheduled",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 13,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001229999999999981,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S084",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 2,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012116699999999148,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S085",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "a",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "b",
+            "minutes": 2,
+            "reason": "infeasible_with_higher_priority_tasks",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": [
+              "a"
+            ]
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012379100000001197,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S086",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "b",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "b",
+            "start": "09:04",
+            "end": "09:05"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "a",
+            "minutes": 3,
+            "reason": "infeasible_with_calendar_and_deadline",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": []
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00011979200000000745,
+      "side_effect_attempts": 0
+    },
+    {
+      "test_id": "S087",
+      "output": {
+        "status": "partial",
+        "scheduled": [
+          {
+            "task_id": "a",
+            "start": "09:00",
+            "end": "09:01"
+          },
+          {
+            "task_id": "a",
+            "start": "09:04",
+            "end": "09:06"
+          }
+        ],
+        "unscheduled": [
+          {
+            "task_id": "b",
+            "minutes": 2,
+            "reason": "infeasible_with_higher_priority_tasks",
+            "proof": "exhaustive_search_or_necessary_capacity_bound",
+            "retained_task_ids": [
+              "a"
+            ]
+          }
+        ],
+        "constraints_checked": {
+          "no_overlap": true,
+          "within_working_hours": true,
+          "all_tasks_before_deadline": true,
+          "buffers_respected": true,
+          "exact_task_accounting": true,
+          "meetings_unchanged": true
+        },
+        "calendar_writes": 0,
+        "solver": {
+          "complete": true,
+          "search_steps": 10,
+          "step_limit": 50000,
+          "depth_limit": 64,
+          "limit_reason": null,
+          "objective": "lexicographic_complete_task_admission_by_priority_deadline_id",
+          "admission_order": [
+            "a",
+            "b"
+          ]
+        }
+      },
+      "outcome": "passed",
+      "elapsed_seconds": 0.00012104199999998788,
+      "side_effect_attempts": 0
+    }
+  ],
+  "checker_self_tests": [
+    {
+      "test_id": "checker-overlap",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-missing_minutes",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-invented_task",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-duplicate_work",
+      "outcome": "passed"
+    },
+    {
+      "test_id": "checker-calendar_write_claim",
+      "outcome": "passed"
+    }
+  ],
+  "passed": 87,
+  "failed": 0,
+  "side_effect_attempts": [],
+  "held_out": false,
+  "model_calls": 0,
+  "product_acceptance": false
+}

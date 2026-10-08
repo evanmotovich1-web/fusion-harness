@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "p001-043d8a5343b3ace8",
+      "source_url": "https://smodin.io/free-english-rewriter-and-spinner",
+      "publisher": "Smodin",
+      "retrieved_at": "2026-09-20T21:19:37.381440+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/001/research/043d8a5343b3ace8.txt",
+      "capture_sha256": "5c47eecfb64af64491cecea383900f36a4c582884f8ff6c0525c0e0653835d89",
+      "capture_truncated": true,
+      "excerpts": [
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:39-39",
+          "excerpt": "Smodin offers powerful tools for writers, students, and professionals. Use our free AI paragraph rewriter to make your content unique and engaging!"
+        },
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:73-73",
+          "excerpt": "Our rewriter uses advanced AI to produce natural, unique text while preserving your original meaning. Choose from multiple strength levels to match your needs."
+        },
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:86-86",
+          "excerpt": "Select Strength (1–4). Default is 3 for a balanced rewrite."
+        },
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:122-122",
+          "excerpt": "You can try the rewriter within a character limit. With a Smodin account you get more characters; paid plans offer up to 1 million characters using credits (1 credit per 1000 characters)."
+        },
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:108-108",
+          "excerpt": "I used to rewrite in ChatGPT, clean it up in QuillBot, then check for plagiarism separately. Smodin rewriter plus checker let me do all of that in one place."
+        },
+        {
+          "locator": "cases/001/research/043d8a5343b3ace8.txt:152-152",
+          "excerpt": "Trusted by 1 Million+ users"
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p001-0e3e543d064fd75c",
+      "source_url": "https://smodin.io/pricing",
+      "publisher": "Smodin",
+      "retrieved_at": "2026-09-20T21:19:17.691338+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/001/research/0e3e543d064fd75c.txt",
+      "capture_sha256": "6f365bb6d1cb6fde1f8a1826e432b0c9b866364df074c0e75758f5e7da7ed500",
+      "capture_truncated": true,
+      "excerpts": [
+        {
+          "locator": "cases/001/research/0e3e543d064fd75c.txt:37-37",
+          "excerpt": "Starter"
+        },
+        {
+          "locator": "cases/001/research/0e3e543d064fd75c.txt:38-38",
+          "excerpt": "Premium"
+        },
+        {
+          "locator": "cases/001/research/0e3e543d064fd75c.txt:60-60",
+          "excerpt": "AI Models"
+        },
+        {
+          "locator": "cases/001/research/0e3e543d064fd75c.txt:67-67",
+          "excerpt": "API Access"
+        },
+        {
+          "locator": "cases/001/research/0e3e543d064fd75c.txt:74-74",
+          "excerpt": "Trusted by 1 Million+ users worldwide"
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p001-8ed9b05793c0c98b",
+      "source_url": "https://smodin.io/api",
+      "publisher": "Smodin",
+      "retrieved_at": "2026-09-20T21:19:37.856362+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/001/research/8ed9b05793c0c98b.txt",
+      "capture_sha256": "7f68bb8e79d75b594737167d93454bde77ae3549345f80b1e39cfe4fab14625c",
+      "capture_truncated": true,
+      "excerpts": [
+        {
+          "locator": "cases/001/research/8ed9b05793c0c98b.txt:38-38",
+          "excerpt": "Simple RESTful API with comprehensive documentation and code examples for quick integration."
+        },
+        {
+          "locator": "cases/001/research/8ed9b05793c0c98b.txt:40-40",
+          "excerpt": "Advanced AI models trained specifically for content rewriting, plagiarism detection, and AI content removal."
+        },
+        {
+          "locator": "cases/001/research/8ed9b05793c0c98b.txt:56-56",
+          "excerpt": "Detect duplicate content and ensure originality with our comprehensive plagiarism detection system. Scan against billions of web pages and academic sources."
+        }
+      ],
+      "error": null
+    },
+    {
+      "evidence_id": "p001-a2e0663d6daec6d0",
+      "source_url": "https://smodin.io/",
+      "publisher": "Smodin",
+      "retrieved_at": "2026-09-20T21:19:17.409089+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free bounded urllib GET",
+      "scope_limitations": "Vendor publication only, not independent verification or product execution. Bounded static text capture; may omit dynamic content.",
+      "capture_path": "cases/001/research/a2e0663d6daec6d0.txt",
+      "capture_sha256": "1fba5eac75cddc365b118ca1e32aca62b2dad544ddf4653aab08765beccbf8ce",
+      "capture_truncated": true,
+      "excerpts": [
+        {
+          "locator": "cases/001/research/a2e0663d6daec6d0.txt:25-25",
+          "excerpt": "Powered by Proprietary AI Models"
+        }
+      ],
+      "error": null
+    }
+  ]
+}

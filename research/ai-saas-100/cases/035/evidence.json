@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "evidence_id": "web-6d0785d7911ae429418f",
+      "source_url": "https://www.copy.ai/",
+      "final_url": "https://www.copy.ai/",
+      "publisher": "www.copy.ai",
+      "retrieved_at": "2026-09-20T21:00:10.004038+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Future proof your business with GTM AI"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Introducing the first-ever GTM AI platform. Automate hundreds of tedious, repetitive tasks and empower your team to scale success like never before."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Future proof your business with GTM AI"
+        },
+        {
+          "locator": "text characters 0:278",
+          "excerpt": "Future proof your business with GTM AI\n🎉 The 2026 Benchmarks Report is Finally Here! 🎉\nPlatform\nOverview\nHow it Works\nPlatform Components\nPowering GTM AI\nWorkflows\nWhat are Workflows?\nBuilding Workflows\nCopy Agents\nIntelligence Layer\nTables\nActions\nBrand Voice\nTechnical Resourc"
+        },
+        {
+          "locator": "text characters 81:393",
+          "excerpt": "re! 🎉\nPlatform\nOverview\nHow it Works\nPlatform Components\nPowering GTM AI\nWorkflows\nWhat are Workflows?\nBuilding Workflows\nCopy Agents\nIntelligence Layer\nTables\nActions\nBrand Voice\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks of Workflows\nIntroducing Tables: The Heart of Your Uni"
+        },
+        {
+          "locator": "text characters 718:1030",
+          "excerpt": "ions\nFeatured Resources\nCold Email Best Practices Guide: 2025 Edition\nAI for Thought Leadership: How to Get the Most from Your Leaders\nHow to Prospect for Sales in an AI-Driven World\nResources\nBy Team\nMarketing\nSales\nOperations\nLearn More\nBlog\nFor The Enterprise\nTrust Center\nWebinars\nGet Help\nHelp Center\nContac"
+        },
+        {
+          "locator": "text characters 815:1127",
+          "excerpt": "How to Get the Most from Your Leaders\nHow to Prospect for Sales in an AI-Driven World\nResources\nBy Team\nMarketing\nSales\nOperations\nLearn More\nBlog\nFor The Enterprise\nTrust Center\nWebinars\nGet Help\nHelp Center\nContact Support\nChangelog\nTechnical Resources\nThe Power of \"Actions\" for GTM Teams: The Building Blocks"
+        },
+        {
+          "locator": "text characters 1206:1518",
+          "excerpt": "utomated Workflows and SOC 2 Compliance Protect Your Data\nPricing\nGTM AI\nRole\nMarketing\nSales\nOperations\nSales Development\nLEarn More\nWhy GTM AI\nGoodbye, Copilots\nThe Problem with AI SDRs\nFEATURED RESOURCES\nHow to Go from GTM Bloat to Velocity\nGTM AI: A New Approach for Getting Rid of GTM Bloat\nAI Copilots & Th"
+        },
+        {
+          "locator": "text characters 1278:1590",
+          "excerpt": "\nRole\nMarketing\nSales\nOperations\nSales Development\nLEarn More\nWhy GTM AI\nGoodbye, Copilots\nThe Problem with AI SDRs\nFEATURED RESOURCES\nHow to Go from GTM Bloat to Velocity\nGTM AI: A New Approach for Getting Rid of GTM Bloat\nAI Copilots & The Illusion of Progress\nLogin\nGet a Demo\nGet a Demo\nPlatform\nOverview\nHow"
+        },
+        {
+          "locator": "text characters 3422:3682",
+          "excerpt": "ved!\nOops! Something went wrong while submitting the form.\nTrusted by\n17 million\nusers at leading companies\nDesign Your GTM AI Playbook\nYou can’t rely on dozens of disconnected AI copilots, narrow point solutions, or unconstrained AI agents.\nYour GTM AI strate"
+        }
+      ],
+      "capture_path": "discovery/captures/6d0785d7911ae429418f.html",
+      "capture_sha256": "7a0048dd60d22d12ceaeaf6fa616fbfe4c6d7bd916f231dffa7e863114f8fa5e",
+      "record_path": "discovery/records/6d0785d7911ae429418f.json",
+      "capture_truncated": false,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    },
+    {
+      "evidence_id": "r035-2310e2d0b41301a3d915",
+      "source_url": "https://www.copy.ai/platform/how-it-works",
+      "publisher": "www.copy.ai",
+      "retrieved_at": "2026-09-20T21:35:38.247885+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.copy.ai/platform/how-it-works",
+      "capture_path": "cases/035/research/captures/2310e2d0b41301a3d915.html",
+      "capture_sha256": "08c09fdb34a6374b7afc4a8e863bee41c5f049391ee4ca9cd3e2cc8b90cdc5aa",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/035/research/records/2310e2d0b41301a3d915.json",
+      "research_role": "workflow",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "How It Works: Why Copilots and AI SDRs Are NOT the Solution"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Streamline processes, unify data, and optimize performance across your revenue lifecycle. Leverage intelligent workflows, multi-LLM integration, and usage-based pricing to drive efficiency."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "How It Works: Why Copilots and AI SDRs Are NOT the Solution"
+        }
+      ]
+    },
+    {
+      "evidence_id": "r035-4ef16109d92e66d0c553",
+      "source_url": "https://www.copy.ai/prices",
+      "publisher": "www.copy.ai",
+      "retrieved_at": "2026-09-20T21:35:38.181956+00:00",
+      "published_at": null,
+      "source_type": "first_party_public_page",
+      "access_method": "credential-free urllib HTTPS GET",
+      "scope_limitations": "Bounded static HTML. Public vendor claims only, not execution or independently verified pricing/adoption. Some paths are public URL hypotheses and may be inaccessible or irrelevant.",
+      "status": 200,
+      "final_url": "https://www.copy.ai/prices",
+      "capture_path": "cases/035/research/captures/4ef16109d92e66d0c553.html",
+      "capture_sha256": "4692812bbd254d6b44b4de2894907f6449fb47001699f9f2f28e8e8bf6fc88d2",
+      "capture_truncated": false,
+      "error": null,
+      "record_path": "cases/035/research/records/4ef16109d92e66d0c553.json",
+      "research_role": "pricing",
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Plans & Pricing | Copy.ai"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Whether you need simple generative AI tools or complex AI-powered workflows, Copy.ai offers a secure and reliable generative AI platform as you scale."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Copy.ai: The only AI platform purpose-built for outcomes"
+        },
+        {
+          "locator": "metadata[2].og:description",
+          "excerpt": "Our AI OS replaces the chaos of disparate tools, simplifying and automating your workflow. Spend your time where it truly matters—innovating, making key decisions, and driving your business forward."
+        },
+        {
+          "locator": "text characters 3311:5777",
+          "excerpt": "d Account & Support Team\nEnterprise Grade Security Protocols\nChat\nFor small teams starting to drive real business value with AI\n5 Seat\nUnlimited Words in Chat\nUnlimited Chat Projects\nAccess to OpenAI, Anthropic, and Gemini models\nMonthly\n|\nAnnually\n20% Saving\n$29/mo\nBilled monthly\nGet started\nGet started\nMonthly\n|\nAnnually\n20% Saving\n$24/mo\nBilled $288/yr\nGet started\nGet started\nGrowth\nFor businesses harnessing AI for exponential growth\n75 Seats\nUnlimited Words in Chat\n20K Workflow Credits/Mo\n$1,000/mo\nBilled $12,000/yr\nGet started\nGet started\nExpansion\nFor enterprises expanding their AI Automations\n150 Seats\nUnlimited Words in Chat\n45K Workflow Credits/Mo\n$2,000/mo\nBilled $24,000/yr\nContact Accounts Team\nContact Accounts Team\nScale\nFor organizations ready to deploy Generative AI at scale\n200 Seats\nUnlimited Words in Chat\n75K Workflow Credits/Mo\n$3,000/mo\nBilled $36,000/yr\nContact Accounts Team\nContact Accounts Team\nTrusted by\n17 million\nusers at leading companies\nGuided implementation\n“Copy.ai navigated through our rigorous security protocols. They set a new standard for efficient onboarding and instilled confidence in our partnership from day one.”\nCMO @ Fortune 500 Cybersecurity Company\nGuided onboarding with AI experts for fast time to value\nCodify your unique processes + best practices with AI\nSet up integrations with all key GTM systems\nFortune 500 companies are adopting Copy.ai with fast, tangible results\nSales collateral creation\nDriving personalized sales enablement across $650m partner sales channel\n“The value of our AI application layer is that it’s very flexible, like a Swiss Army knife. The way our vendor partnership builds out APIs makes it easy to brainstorm ideas and start on new use cases.”\n$\n2.6\nM\nin cost savings\n$\n650\nM\npartner sales channel\nmarketing content creation\nDriving accurate content generation across 100,000+ product review catalog sites\n“We had a huge backlog of products that didn’t have unique copy for. Now we have a content system that scales.”\n80\n%\ncut operational costs\n300\n%\nimproved coverage\nFrequently asked questions\nWhat are Workflows?\nA Workflow is a set of AI-powered actions that are stitched together to codify a process or best practices (eg. create account plan, write SEO article). Copy.ai makes it easy to create customizable, intelligent workflows that combine research, content generation, and tool integrations. These workflows serve to codify your complex business processes, and e"
+        }
+      ]
+    },
+    {
+      "evidence_id": "web-81690fdbcd7e34e96ec8",
+      "source_url": "https://www.jasper.ai/",
+      "final_url": "https://www.jasper.ai/",
+      "publisher": "www.jasper.ai",
+      "retrieved_at": "2026-09-20T21:00:10.187035+00:00",
+      "published_at": null,
+      "source_type": "first_party_product_page",
+      "access_method": "credential-free Python urllib HTTPS GET",
+      "status": 200,
+      "excerpts": [
+        {
+          "locator": "title",
+          "excerpt": "Put AI agents to work for marketing | Jasper"
+        },
+        {
+          "locator": "metadata[0].description",
+          "excerpt": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact."
+        },
+        {
+          "locator": "metadata[1].og:title",
+          "excerpt": "Put AI agents to work for marketing | Jasper"
+        },
+        {
+          "locator": "text characters 0:246",
+          "excerpt": "Put AI agents to work for marketing | Jasper\nDownload PNG\nCopy SVG\nAll Logos\nPlatform\nPlatform\nPlatform\nSolutions\nSolutions\nSolutions\nResources\nResources\nResources\nCompany\nCompany\nCompany\nPricing\nPricing\nPricing\nLog In\nFree Trial\nGet A Demo\nGet A"
+        },
+        {
+          "locator": "text characters 410:722",
+          "excerpt": "e is designed to meet marketers where they work—so they can customize AI for how they work.\nGEO & AI Optimization\nWin the new front door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn M"
+        },
+        {
+          "locator": "text characters 438:750",
+          "excerpt": "ers where they work—so they can customize AI for how they work.\nGEO & AI Optimization\nWin the new front door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn More\nLearn More\nAgents\nAgents"
+        },
+        {
+          "locator": "text characters 538:850",
+          "excerpt": "ont door of search\nMeasure how your brand performs across every major AI answer engine, prioritize the actions that matter, and ship brand-governed content at scale.\nLearn More\nLearn More\nLearn More\nAgents\nAgents\nAgents\nPurpose-built agents that execute end-to-end marketing workflows\nOptimization\nOptimization\nR"
+        },
+        {
+          "locator": "text characters 1002:1314",
+          "excerpt": " system that enables repeatability and scale.\nCanvas\nCanvas\nGrid\nGrid\nAI Studio\nAI Studio\nImage Pipelines\nImage Pipelines\nJasper APIs\nJasper APIs\nJasper MCP\nJasper MCP\nImage APIs\nImage APIs\nJasper IQ\nJasper IQ\nJasper IQ\nGoverned marketing decision surface embedding context, rules, and brand logic.\nBrand IQ\nBran"
+        },
+        {
+          "locator": "text characters 1012:1324",
+          "excerpt": "at enables repeatability and scale.\nCanvas\nCanvas\nGrid\nGrid\nAI Studio\nAI Studio\nImage Pipelines\nImage Pipelines\nJasper APIs\nJasper APIs\nJasper MCP\nJasper MCP\nImage APIs\nImage APIs\nJasper IQ\nJasper IQ\nJasper IQ\nGoverned marketing decision surface embedding context, rules, and brand logic.\nBrand IQ\nBrand IQ\nBrand"
+        }
+      ],
+      "capture_path": "discovery/captures/81690fdbcd7e34e96ec8.html",
+      "capture_sha256": "bd726b7d82c0639c99151566c569dd24c6a06b253105a9e5e5b42954de3a7ace",
+      "record_path": "discovery/records/81690fdbcd7e34e96ec8.json",
+      "capture_truncated": true,
+      "error": null,
+      "scope_limitations": "Bounded static HTML capture. Vendor claims not independently verified. No product execution."
+    }
+  ]
+}

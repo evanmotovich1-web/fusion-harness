@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "case_id": "006",
+  "source_url": "https://www.clay.com/pricing",
+  "purpose": "Previously missing subscription amounts and credit semantics",
+  "retrieved_at": "2026-09-22T04:14:04.016141+00:00",
+  "source_type": "first_party_public_page",
+  "classification": "vendor_claims_only",
+  "method": "Credential-free bounded HTTPS GET",
+  "status": 200,
+  "error": null,
+  "maximum_bytes": 1048576,
+  "total_deadline_seconds": 8,
+  "limitations": "Static vendor content only, not service execution, customer verification or checkout.",
+  "final_url": "https://www.clay.com/pricing",
+  "content_type": "text/html; charset=utf-8",
+  "truncated": false,
+  "bytes_read": 534695,
+  "captures": [
+    {
+      "path": "cases/006/research/continuation-v1/capture-20260922T041404016122Z.html",
+      "sha256": "93bceee127e46e8c4e684756fe0e6bd75327c1a073f83b25aaf5837d56917f1a"
+    },
+    {
+      "path": "cases/006/research/continuation-v1/capture-20260922T041404016122Z.txt",
+      "sha256": "8245bd5718ed6e443436f7c87e54852612c2444f78a8c672e3d255eadf23fbca"
+    }
+  ],
+  "elapsed_seconds": 0.898467208
+}
