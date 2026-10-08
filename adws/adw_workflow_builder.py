@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import sys
 import time
@@ -100,7 +101,8 @@ class Run:
         self.ref = ref
         self.stem = stem
         self.run_id = args.run_id or f"{time.strftime('%Y%m%d-%H%M%S')}-{hashlib.sha256(request.encode()).hexdigest()[:6]}"
-        reports = Path(args.reports_dir) if args.reports_dir else ADWS_ROOT / "reports"
+        reports_dir = args.reports_dir or os.environ.get("ADW_REPORTS_DIR") or ""
+        reports = Path(reports_dir) if reports_dir else ADWS_ROOT / "reports"
         self.dir = reports / "runs" / self.run_id
         self.dir.mkdir(parents=True, exist_ok=True)
         self.log_path = self.dir / "run.log"
@@ -239,6 +241,11 @@ def main(argv: list[str] | None = None) -> int:
         )
         run.log("REFUSED needs_human — unknowns marked <EVAN: fill>; no facts invented; no agent spend")
         return run.finish(3, "needs_human", decision["reason"])
+    if decision["route"] == "existing_recipe":
+        run.log(
+            f"EXISTING RECIPE {decision['reason']} — live desk chip; no agent spend"
+        )
+        return run.finish(0, "accepted", decision["reason"])
     if decision["route"] != "build":
         run.log(f"REFUSED {decision['route']} — no agent spend")
         return run.finish(2, "refused", decision["reason"])
