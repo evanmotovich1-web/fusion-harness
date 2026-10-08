@@ -1,4 +1,34 @@
 {
+  "refreshed_at": "2026-09-30T23:26:28Z",
+  "note": "checks[] is the 2026-09-26 verify.py snapshot and was not re-run on 2026-09-30. sha256 and counts are the 2026-09-30 recheck after the uncommitted api.py and test_api.py changes. verify.py was not re-run because it rewrites logs outside this file.",
+  "counts": {
+    "pi": {
+      "argv": [
+        "bun",
+        "test",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/self-compact.test.ts"
+      ],
+      "cwd": "/Users/evanmotovich/fusion-harness/self-compact",
+      "exit": 0,
+      "passed": 64,
+      "failed": 0,
+      "expect_calls": 128,
+      "files": 1,
+      "runner": "bun test v1.4.0 (34cbb9a40)"
+    },
+    "api": {
+      "argv": [
+        "python3",
+        "/Users/evanmotovich/fusion-harness/extensions/self-compact/test_api.py",
+        "-v"
+      ],
+      "cwd": "/Users/evanmotovich/fusion-harness/self-compact",
+      "exit": 0,
+      "passed": 6,
+      "failed": 0,
+      "seconds": 3.054
+    }
+  },
   "checks": [
     {
       "name": "unit",
@@ -116,8 +146,10 @@
     }
   ],
   "sha256": {
-    "extensions/self-compact/self-compact.ts": "afe5055e6b75ab8fc7012d4ff1f042c5b3dfd14d06a81d9c1fd4f63be612d1c3",
-    "extensions/self-compact/self-compact.test.ts": "3d4116e1aa44de8a9211ae11534ac20ecbac8429aa5a79f5da2157bb8d3fb5db",
+    "extensions/self-compact/self-compact.ts": "8c54a26da482f8e60c05e4860723a09175d1464dd940b399e0eab78cf7402bfd",
+    "extensions/self-compact/self-compact.test.ts": "335351e3dc2036be0341223a4e97aa82e05cc36bd5fa11621de664edcf8ef32a",
+    "extensions/self-compact/api.py": "2f944dc2efe4d1ac8198a02fbbfee018f913ee5ceb9c1aed03e9c1b5c545563a",
+    "extensions/self-compact/test_api.py": "e2c8b9d944585aba7e0c0f116ff4a6acdb3e38fb2c0603b5fc87ca373d3d89de",
     ".pi/self-compact/USER_PROMPT_COMPACTION_MESSAGE_.md": "8526a081dec82077fa88f8f8398f4189ebd96eb136ff97ec20616ed4ded8a085",
     ".pi/self-compact/USER_PROMPT_SELF_COMPACT.md": "ee935d4ea0a1ced5f9f15c25b49e52eb32ddd5044fdeb4ba095d2f78da3f1966",
     ".pi/self-compact/USER_SOFT_SELF_COMPACT.md": "2e79df538b9be2213c5980cded2ef2f03641e8187a12034650c0f90c922ef377"
