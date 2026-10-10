@@ -16,6 +16,22 @@
         "blocked": 0
       },
       "source_request": "Build a workflow named echo-check that must gate a greeting is a nonempty string."
+    },
+    {
+      "id": "business-presentations",
+      "name": "Business Presentations",
+      "version": 1,
+      "entrypoint": "adws/built/business-presentations/adw_business_presentations.py",
+      "spec_path": "adws/built/business-presentations/config.json",
+      "built_at": "2026-10-10T17:13:27+00:00",
+      "build_run_id": "host-business-presentations",
+      "status": "validated",
+      "acceptance": {
+        "requirements_total": 3,
+        "verified": 3,
+        "blocked": 0
+      },
+      "source_request": "Build a workflow named business-presentations.\n- The gate must verify the brief is a nonempty string.\n- The gate must verify the storyboard is a nonempty string.\n- The gate must verify the speaker notes are a nonempty string.\n"
     }
   ]
 }

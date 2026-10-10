@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "id": "business-presentations",
+  "name": "Business Presentations",
+  "request_verbatim": "Build a workflow named business-presentations.\n- The gate must verify the brief is a nonempty string.\n- The gate must verify the storyboard is a nonempty string.\n- The gate must verify the speaker notes are a nonempty string.\n",
+  "router": {
+    "triggers": [
+      "business presentations",
+      "workflow"
+    ],
+    "refusals": [
+      {
+        "reason": "not_workflow",
+        "example": "write a poem"
+      },
+      {
+        "reason": "forbidden_target",
+        "example": "edit sssf and deploy"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "req-1",
+      "text": "The gate must verify the brief is a nonempty string.",
+      "phase_id": "p1",
+      "gate": "req_1_gate",
+      "verifier": "test_req_1",
+      "evidence": [
+        "validate:host-business-presentations"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-2",
+      "text": "The gate must verify the storyboard is a nonempty string.",
+      "phase_id": "p2",
+      "gate": "req_2_gate",
+      "verifier": "test_req_2",
+      "evidence": [
+        "validate:host-business-presentations"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-3",
+      "text": "The gate must verify the speaker notes are a nonempty string.",
+      "phase_id": "p3",
+      "gate": "req_3_gate",
+      "verifier": "test_req_3",
+      "evidence": [
+        "validate:host-business-presentations"
+      ],
+      "status": "verified",
+      "blocker": null
+    }
+  ],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "step-1",
+      "kind": "agent",
+      "owner": "worker",
+      "gate": "req_1_gate",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "req-1.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p2",
+      "name": "step-2",
+      "kind": "agent",
+      "owner": "worker",
+      "gate": "req_2_gate",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "req-2.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p3",
+      "name": "step-3",
+      "kind": "agent",
+      "owner": "worker",
+      "gate": "req_3_gate",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "req-3.json"
+      ],
+      "retries": 1
+    }
+  ],
+  "seats": [
+    {
+      "name": "worker",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "write"
+      ],
+      "writes": [
+        "adws/built/business-presentations/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    }
+  ],
+  "artifacts": {
+    "entrypoint": "adws/built/business-presentations/adw_business_presentations.py",
+    "files": [
+      "adws/built/business-presentations/adw_business_presentations.py",
+      "adws/built/business-presentations/config.json",
+      "adws/built/business-presentations/gates.py",
+      "adws/built/business-presentations/README.md",
+      "adws/built/business-presentations/tests/test_business_presentations.py",
+      "adws/built/business-presentations/prompts/worker/system.md",
+      "adws/built/business-presentations/prompts/worker/user.md",
+      "adws/built/business-presentations/prompts/worker/soft_notice.md",
+      "adws/built/business-presentations/prompts/worker/tools.json",
+      "adws/built/business-presentations/fixtures/good_worker.json",
+      "adws/built/business-presentations/fixtures/bad_worker.json"
+    ]
+  },
+  "switches": {
+    "dry_run": true,
+    "stub_agents": true
+  },
+  "blockers": []
+}
