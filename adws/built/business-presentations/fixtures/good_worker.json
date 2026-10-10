@@ -1,0 +1,18 @@
+{
+  "gate": "req_1_gate",
+  "result": "ok",
+  "results": {
+    "req_1_gate": {
+      "gate": "req_1_gate",
+      "result": "ok"
+    },
+    "req_2_gate": {
+      "gate": "req_2_gate",
+      "result": "ok"
+    },
+    "req_3_gate": {
+      "gate": "req_3_gate",
+      "result": "ok"
+    }
+  }
+}
