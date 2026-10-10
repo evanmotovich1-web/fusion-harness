@@ -1,0 +1,38 @@
+{
+  "gate": "brief_exists_nonempty_gate",
+  "result": "ok",
+  "results": {
+    "brief_exists_nonempty_gate": {
+      "gate": "brief_exists_nonempty_gate",
+      "result": "ok"
+    },
+    "workflow_identity_gate": {
+      "gate": "workflow_identity_gate",
+      "result": "ok"
+    },
+    "brief_line_bound_gate": {
+      "gate": "brief_line_bound_gate",
+      "result": "ok"
+    },
+    "brief_citation_gate": {
+      "gate": "brief_citation_gate",
+      "result": "ok"
+    },
+    "brief_missing_error_gate": {
+      "gate": "brief_missing_error_gate",
+      "result": "ok"
+    },
+    "db_session_rows_gate": {
+      "gate": "db_session_rows_gate",
+      "result": "ok"
+    },
+    "fixture_mode_gate": {
+      "gate": "fixture_mode_gate",
+      "result": "ok"
+    },
+    "request_only_router_gate": {
+      "gate": "request_only_router_gate",
+      "result": "ok"
+    }
+  }
+}

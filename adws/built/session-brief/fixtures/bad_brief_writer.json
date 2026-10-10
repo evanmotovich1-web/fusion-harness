@@ -1,0 +1,10 @@
+{
+  "gate": "brief_exists_nonempty_gate",
+  "result": "",
+  "results": {
+    "brief_exists_nonempty_gate": {
+      "gate": "brief_exists_nonempty_gate",
+      "result": ""
+    }
+  }
+}

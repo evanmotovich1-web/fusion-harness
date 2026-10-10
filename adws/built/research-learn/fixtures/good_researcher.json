@@ -1,0 +1,44 @@
+{
+  "gate": "teach_back_report_nonempty",
+  "result": "ok",
+  "results": {
+    "teach_back_report_nonempty": {
+      "gate": "teach_back_report_nonempty",
+      "result": "ok"
+    },
+    "claims_quote_local_page_or_marked_unverified": {
+      "gate": "claims_quote_local_page_or_marked_unverified",
+      "result": "quoted",
+      "claims": [
+        {
+          "quote": "the desk checks quotes in files",
+          "source": "page-01.md"
+        },
+        {
+          "quote": "",
+          "mark": "unverified"
+        }
+      ]
+    },
+    "explainer_html_exists_and_contains_topic": {
+      "gate": "explainer_html_exists_and_contains_topic",
+      "result": "ok"
+    },
+    "quiz_question_with_matching_answer_key": {
+      "gate": "quiz_question_with_matching_answer_key",
+      "result": "ok"
+    },
+    "flashcards_nonempty": {
+      "gate": "flashcards_nonempty",
+      "result": "ok"
+    },
+    "router_request_only_pages_not_forbidden": {
+      "gate": "router_request_only_pages_not_forbidden",
+      "result": "request only"
+    },
+    "fixture_mode_bundled_pages_no_url_fetch": {
+      "gate": "fixture_mode_bundled_pages_no_url_fetch",
+      "result": "bundled pages"
+    }
+  }
+}

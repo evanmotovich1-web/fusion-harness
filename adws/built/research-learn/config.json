@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "id": "research-learn",
+  "name": "Research Learn",
+  "request_verbatim": "Build a workflow named research-learn.\n- The gate must verify the teach-back report is a nonempty string.\n- The gate must verify each claim quotes a string found in a local page file under --pages, or the line is marked unverified.\n- The gate must verify an uncited claim fails with the error citations-missing.\n- The gate must verify the explainer HTML file exists and contains the topic string.\n- The gate must verify the quiz has at least 1 question and a matching answer key.\n- The gate must verify the flashcards file is a nonempty string.\n- The router must judge only the --request string. A --pages path must not be a forbidden target.\n- Fixture mode must pass with the bundled local pages and must not fetch a URL.\n",
+  "router": {
+    "triggers": [
+      "research-learn",
+      "teach-back report from local pages",
+      "explainer, quiz and flashcards from local pages"
+    ],
+    "refusals": [
+      {
+        "reason": "not_workflow",
+        "example": "write a poem about the sea"
+      },
+      {
+        "reason": "forbidden_target",
+        "example": "fetch remote pages for the topic and publish the summary"
+      },
+      {
+        "reason": "needs_human",
+        "example": "build a learning workflow about whatever you find"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "req-1",
+      "text": "The gate must verify the teach-back report is a nonempty string.",
+      "phase_id": "p3",
+      "gate": "teach_back_report_nonempty",
+      "verifier": "test_teach_back_report_nonempty",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-2",
+      "text": "The gate must verify each claim quotes a string found in a local page file under --pages, or the line is marked unverified.",
+      "phase_id": "p4",
+      "gate": "claims_quote_local_page_or_marked_unverified",
+      "verifier": "test_claim_quote_found_in_pages_or_marked_unverified",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-3",
+      "text": "The gate must verify an uncited claim fails with the error citations-missing.",
+      "phase_id": "p4",
+      "gate": "claims_quote_local_page_or_marked_unverified",
+      "verifier": "test_uncited_claim_fails_citations_missing",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-4",
+      "text": "The gate must verify the explainer HTML file exists and contains the topic string.",
+      "phase_id": "p5",
+      "gate": "explainer_html_exists_and_contains_topic",
+      "verifier": "test_explainer_html_exists_and_contains_topic",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-5",
+      "text": "The gate must verify the quiz has at least 1 question and a matching answer key.",
+      "phase_id": "p6",
+      "gate": "quiz_question_with_matching_answer_key",
+      "verifier": "test_quiz_has_question_and_matching_answer_key",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-6",
+      "text": "The gate must verify the flashcards file is a nonempty string.",
+      "phase_id": "p7",
+      "gate": "flashcards_nonempty",
+      "verifier": "test_flashcards_nonempty",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-7",
+      "text": "The router must judge only the --request string. A --pages path must not be a forbidden target.",
+      "phase_id": "p1",
+      "gate": "router_request_only_pages_not_forbidden",
+      "verifier": "test_router_judges_request_only_and_pages_not_forbidden",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-8",
+      "text": "Fixture mode must pass with the bundled local pages and must not fetch a URL.",
+      "phase_id": "p8",
+      "gate": "fixture_mode_bundled_pages_no_url_fetch",
+      "verifier": "test_fixture_mode_passes_without_url_fetch",
+      "evidence": [
+        "repair:repair-7bdec019"
+      ],
+      "status": "verified",
+      "blocker": null
+    }
+  ],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "route",
+      "kind": "code",
+      "owner": "code",
+      "gate": "router_request_only_pages_not_forbidden",
+      "inputs": [
+        "--request string"
+      ],
+      "outputs": [
+        "route.json"
+      ],
+      "retries": 0
+    },
+    {
+      "id": "p2",
+      "name": "preflight-pages",
+      "kind": "code",
+      "owner": "code",
+      "gate": "pages_present_local_no_url_input",
+      "inputs": [
+        "--pages (live: <EVAN: fill> local pages directory; fixture mode: adws/built/research-learn/pages/**)"
+      ],
+      "outputs": [
+        "preflight.json",
+        "pages-index.json"
+      ],
+      "retries": 0
+    },
+    {
+      "id": "p3",
+      "name": "teach-back",
+      "kind": "agent",
+      "owner": "researcher",
+      "gate": "teach_back_report_nonempty",
+      "inputs": [
+        "p2",
+        "request"
+      ],
+      "outputs": [
+        "teach-back.json",
+        "teach-back.md"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p4",
+      "name": "claims",
+      "kind": "agent",
+      "owner": "researcher",
+      "gate": "claims_quote_local_page_or_marked_unverified",
+      "inputs": [
+        "p3",
+        "p2"
+      ],
+      "outputs": [
+        "claims.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p5",
+      "name": "explainer",
+      "kind": "agent",
+      "owner": "explainer",
+      "gate": "explainer_html_exists_and_contains_topic",
+      "inputs": [
+        "p3",
+        "--topic (live: from the run request; fixture default: <EVAN: fill>)"
+      ],
+      "outputs": [
+        "explainer.json",
+        "explainer.html"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p6",
+      "name": "quiz",
+      "kind": "agent",
+      "owner": "quizmaster",
+      "gate": "quiz_question_with_matching_answer_key",
+      "inputs": [
+        "p3",
+        "p4"
+      ],
+      "outputs": [
+        "quiz.json",
+        "answer-key.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p7",
+      "name": "flashcards",
+      "kind": "agent",
+      "owner": "researcher",
+      "gate": "flashcards_nonempty",
+      "inputs": [
+        "p3"
+      ],
+      "outputs": [
+        "flashcards.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p8",
+      "name": "fixtures",
+      "kind": "code",
+      "owner": "code",
+      "gate": "fixture_mode_bundled_pages_no_url_fetch",
+      "inputs": [
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "adws/built/research-learn/pages/**"
+      ],
+      "outputs": [
+        "fixture-run.json"
+      ],
+      "retries": 0
+    },
+    {
+      "id": "p9",
+      "name": "validate",
+      "kind": "code",
+      "owner": "code",
+      "gate": "requirement_coverage_on_final_state",
+      "inputs": [
+        "p1",
+        "p4",
+        "p8"
+      ],
+      "outputs": [
+        "acceptance.json",
+        "requirement-coverage.json"
+      ],
+      "retries": 1
+    }
+  ],
+  "seats": [
+    {
+      "name": "researcher",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "grep",
+        "find",
+        "ls",
+        "write"
+      ],
+      "writes": [
+        "adws/built/research-learn/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    },
+    {
+      "name": "explainer",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "write"
+      ],
+      "writes": [
+        "adws/built/research-learn/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    },
+    {
+      "name": "quizmaster",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "write"
+      ],
+      "writes": [
+        "adws/built/research-learn/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    }
+  ],
+  "artifacts": {
+    "entrypoint": "adws/built/research-learn/adw_research_learn.py",
+    "files": [
+      "adws/built/research-learn/adw_research_learn.py",
+      "adws/built/research-learn/config.json",
+      "adws/built/research-learn/gates.py",
+      "adws/built/research-learn/README.md",
+      "adws/built/research-learn/tests/test_research_learn.py",
+      "adws/built/research-learn/pages/page-01.md",
+      "adws/built/research-learn/pages/page-02.md",
+      "adws/built/research-learn/pages/page-03.md",
+      "adws/built/research-learn/prompts/researcher/system.md",
+      "adws/built/research-learn/prompts/researcher/user.md",
+      "adws/built/research-learn/prompts/researcher/soft_notice.md",
+      "adws/built/research-learn/prompts/researcher/tools.json",
+      "adws/built/research-learn/fixtures/good_researcher.json",
+      "adws/built/research-learn/fixtures/bad_researcher.json",
+      "adws/built/research-learn/prompts/explainer/system.md",
+      "adws/built/research-learn/prompts/explainer/user.md",
+      "adws/built/research-learn/prompts/explainer/soft_notice.md",
+      "adws/built/research-learn/prompts/explainer/tools.json",
+      "adws/built/research-learn/fixtures/good_explainer.json",
+      "adws/built/research-learn/fixtures/bad_explainer.json",
+      "adws/built/research-learn/prompts/quizmaster/system.md",
+      "adws/built/research-learn/prompts/quizmaster/user.md",
+      "adws/built/research-learn/prompts/quizmaster/soft_notice.md",
+      "adws/built/research-learn/prompts/quizmaster/tools.json",
+      "adws/built/research-learn/fixtures/good_quizmaster.json",
+      "adws/built/research-learn/fixtures/bad_quizmaster.json"
+    ]
+  },
+  "switches": {
+    "dry_run": true,
+    "stub_agents": true
+  },
+  "blockers": []
+}

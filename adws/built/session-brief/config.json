@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "id": "session-brief",
+  "name": "Session Brief",
+  "request_verbatim": "Build a workflow named session-brief.\n- The gate must verify the brief file exists and is a nonempty string.\n- The gate must verify the brief is at most 80 lines.\n- The gate must verify every bullet cites a source id or is marked unverified.\n- The gate must verify a missing brief file fails with the error brief-missing.\n- When --db is set, the workflow must read that sqlite file and write the brief from its session rows.\n- Fixture mode must pass without a live database.\n- The router must judge only the --request string. A --db path must not be a forbidden target.\n",
+  "router": {
+    "triggers": [
+      "session-brief",
+      "session brief",
+      "build a session brief workflow"
+    ],
+    "refusals": [
+      {
+        "reason": "not_workflow",
+        "example": "write a poem"
+      },
+      {
+        "reason": "forbidden_target",
+        "example": "edit sssf and deploy"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "req-1",
+      "text": "Build a workflow named session-brief.",
+      "phase_id": "p1",
+      "gate": "workflow_identity_gate",
+      "verifier": "test_workflow_identity",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-2",
+      "text": "The gate must verify the brief file exists and is a nonempty string.",
+      "phase_id": "p3",
+      "gate": "brief_exists_nonempty_gate",
+      "verifier": "test_brief_exists_nonempty",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-3",
+      "text": "The gate must verify the brief is at most 80 lines.",
+      "phase_id": "p4",
+      "gate": "brief_line_bound_gate",
+      "verifier": "test_brief_line_bound",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-4",
+      "text": "The gate must verify every bullet cites a source id or is marked unverified.",
+      "phase_id": "p5",
+      "gate": "brief_citation_gate",
+      "verifier": "test_brief_citation",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-5",
+      "text": "The gate must verify a missing brief file fails with the error brief-missing.",
+      "phase_id": "p6",
+      "gate": "brief_missing_error_gate",
+      "verifier": "test_brief_missing_error",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-6",
+      "text": "When --db is set, the workflow must read that sqlite file and write the brief from its session rows.",
+      "phase_id": "p2",
+      "gate": "db_session_rows_gate",
+      "verifier": "test_db_session_rows",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-7",
+      "text": "Fixture mode must pass without a live database.",
+      "phase_id": "p7",
+      "gate": "fixture_mode_gate",
+      "verifier": "test_fixture_mode",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    },
+    {
+      "id": "req-8",
+      "text": "The router must judge only the --request string. A --db path must not be a forbidden target.",
+      "phase_id": "p8",
+      "gate": "request_only_router_gate",
+      "verifier": "test_request_only_router",
+      "evidence": [
+        "repair:repair-ea16f975"
+      ],
+      "status": "verified",
+      "blocker": null
+    }
+  ],
+  "phases": [
+    {
+      "id": "p1",
+      "name": "record-workflow-identity",
+      "kind": "code",
+      "owner": "code",
+      "gate": "workflow_identity_gate",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "config.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p2",
+      "name": "read-session-rows",
+      "kind": "code",
+      "owner": "code",
+      "gate": "db_session_rows_gate",
+      "inputs": [
+        "p1"
+      ],
+      "outputs": [
+        "session-rows.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p3",
+      "name": "write-brief-from-rows",
+      "kind": "agent",
+      "owner": "brief_writer",
+      "gate": "brief_exists_nonempty_gate",
+      "inputs": [
+        "p2"
+      ],
+      "outputs": [
+        "reports/brief.md"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p4",
+      "name": "verify-brief-length",
+      "kind": "code",
+      "owner": "code",
+      "gate": "brief_line_bound_gate",
+      "inputs": [
+        "p3"
+      ],
+      "outputs": [
+        "gate-results/brief-line-bound.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p5",
+      "name": "verify-brief-citations",
+      "kind": "code",
+      "owner": "code",
+      "gate": "brief_citation_gate",
+      "inputs": [
+        "p3"
+      ],
+      "outputs": [
+        "gate-results/brief-citation.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p6",
+      "name": "verify-missing-brief-error",
+      "kind": "code",
+      "owner": "code",
+      "gate": "brief_missing_error_gate",
+      "inputs": [
+        "p3"
+      ],
+      "outputs": [
+        "gate-results/brief-missing.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p7",
+      "name": "run-fixture-mode",
+      "kind": "code",
+      "owner": "code",
+      "gate": "fixture_mode_gate",
+      "inputs": [
+        "p1"
+      ],
+      "outputs": [
+        "gate-results/fixture-mode.json"
+      ],
+      "retries": 1
+    },
+    {
+      "id": "p8",
+      "name": "judge-request-only",
+      "kind": "code",
+      "owner": "code",
+      "gate": "request_only_router_gate",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "gate-results/request-only-router.json"
+      ],
+      "retries": 1
+    }
+  ],
+  "seats": [
+    {
+      "name": "brief_writer",
+      "model": "deepseek/deepseek-flash",
+      "thinking": "medium",
+      "tools": [
+        "read",
+        "write"
+      ],
+      "writes": [
+        "adws/built/session-brief/**"
+      ],
+      "prompt_files": [
+        "system.md",
+        "user.md",
+        "soft_notice.md",
+        "tools.json"
+      ]
+    }
+  ],
+  "artifacts": {
+    "entrypoint": "adws/built/session-brief/adw_session_brief.py",
+    "files": [
+      "adws/built/session-brief/adw_session_brief.py",
+      "adws/built/session-brief/config.json",
+      "adws/built/session-brief/gates.py",
+      "adws/built/session-brief/README.md",
+      "adws/built/session-brief/tests/test_session_brief.py",
+      "adws/built/session-brief/prompts/brief_writer/system.md",
+      "adws/built/session-brief/prompts/brief_writer/user.md",
+      "adws/built/session-brief/prompts/brief_writer/soft_notice.md",
+      "adws/built/session-brief/prompts/brief_writer/tools.json",
+      "adws/built/session-brief/fixtures/good_brief_writer.json",
+      "adws/built/session-brief/fixtures/bad_brief_writer.json"
+    ]
+  },
+  "switches": {
+    "dry_run": true,
+    "stub_agents": true
+  },
+  "blockers": []
+}

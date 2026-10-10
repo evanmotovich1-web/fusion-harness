@@ -1,0 +1,12 @@
+{
+  "pi_tools": [
+    "read",
+    "grep",
+    "find",
+    "ls",
+    "write"
+  ],
+  "writes": [
+    "adws/built/research-learn/**"
+  ]
+}
