@@ -1,0 +1,10 @@
+{
+  "gate": "claims_quote_local_page_or_marked_unverified",
+  "result": "an uncited claim",
+  "claims": [
+    {
+      "quote": "this sentence is not on any local page",
+      "source": ""
+    }
+  ]
+}

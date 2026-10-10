@@ -32,6 +32,38 @@
         "blocked": 0
       },
       "source_request": "Build a workflow named business-presentations.\n- The gate must verify the brief is a nonempty string.\n- The gate must verify the storyboard is a nonempty string.\n- The gate must verify the speaker notes are a nonempty string.\n"
+    },
+    {
+      "id": "research-learn",
+      "name": "Research Learn",
+      "version": 1,
+      "entrypoint": "adws/built/research-learn/adw_research_learn.py",
+      "spec_path": "adws/built/research-learn/config.json",
+      "built_at": "2026-10-10T20:15:44+00:00",
+      "build_run_id": "repair-7bdec019",
+      "status": "validated",
+      "acceptance": {
+        "requirements_total": 8,
+        "verified": 8,
+        "blocked": 0
+      },
+      "source_request": "Build a workflow named research-learn.\n- The gate must verify the teach-back report is a nonempty string.\n- The gate must verify each claim quotes a string found in a local page file under --pages, or the line is marked unverified.\n- The gate must verify an uncited claim fails with the error citations-missing.\n- The gate must verify the explainer HTML file exists and contains the topic string.\n- The gate must verify the quiz has at least 1 question and a matching answer key.\n- The gate must verify the flashcards file is a nonempty string.\n- The router must judge only the --request string. A --pages path must not be a forbidden target.\n- Fixture mode must pass with the bundled local pages and must not fetch a URL.\n"
+    },
+    {
+      "id": "session-brief",
+      "name": "Session Brief",
+      "version": 1,
+      "entrypoint": "adws/built/session-brief/adw_session_brief.py",
+      "spec_path": "adws/built/session-brief/config.json",
+      "built_at": "2026-10-10T20:15:44+00:00",
+      "build_run_id": "repair-ea16f975",
+      "status": "validated",
+      "acceptance": {
+        "requirements_total": 8,
+        "verified": 8,
+        "blocked": 0
+      },
+      "source_request": "Build a workflow named session-brief.\n- The gate must verify the brief file exists and is a nonempty string.\n- The gate must verify the brief is at most 80 lines.\n- The gate must verify every bullet cites a source id or is marked unverified.\n- The gate must verify a missing brief file fails with the error brief-missing.\n- When --db is set, the workflow must read that sqlite file and write the brief from its session rows.\n- Fixture mode must pass without a live database.\n- The router must judge only the --request string. A --db path must not be a forbidden target.\n"
     }
   ]
 }
