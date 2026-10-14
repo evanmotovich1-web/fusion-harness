@@ -53,10 +53,15 @@ describe("collaboration task outcome parser", () => {
 		].join("\n"))).toThrow("final non-empty line");
 	});
 
-	test("rejects unknown schema fields and status values", () => {
+	test("rejects invalid status and schema_version; drops unknown top-level fields", () => {
 		expect(() => parseCollaborationTaskOutcome(`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":1,"status":"done","summary":"x"}`)).toThrow("status must be one of");
-		expect(() => parseCollaborationTaskOutcome(`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":1,"status":"completed","summary":"x","claim":true}`)).toThrow("unknown field");
+		expect(parseCollaborationTaskOutcome(`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":1,"status":"completed","summary":"x","claim":true}`).outcome).toEqual({ schema_version: 1, status: "completed", summary: "x" });
 		expect(() => parseCollaborationTaskOutcome(`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":2,"status":"completed","summary":"x"}`)).toThrow("schema_version");
+	});
+
+	test("drops informational changed_paths from an otherwise completed outcome", () => {
+		const parsed = parseCollaborationTaskOutcome(`${COLLABORATION_OUTCOME_PREFIX} {"schema_version":1,"status":"completed","summary":"wrote tests","changed_paths":["test_roman.py"]}`);
+		expect(parsed.outcome).toEqual({ schema_version: 1, status: "completed", summary: "wrote tests" });
 	});
 
 	test("needs_decision requires one concrete question with distinct options", () => {

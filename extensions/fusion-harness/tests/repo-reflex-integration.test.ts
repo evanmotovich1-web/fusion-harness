@@ -19,7 +19,7 @@ import { HARNESS_REPO_STATE_HEADER, newRun, withHarnessRepoState, type AgentRun,
 const gitIdentity = ["-c", "user.name=t", "-c", "user.email=t@t"];
 const sh = (cwd: string, args: string[]) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
 
-type ChildCall = { role: string; slot?: string; prompt: string; tools: string; timeoutMs: number; sessionDir: string; sessionId?: string; resume?: string };
+type ChildCall = { role: string; slot?: string; taskId?: string; prompt: string; tools: string; timeoutMs: number; sessionDir: string; sessionId?: string; resume?: string };
 const calls: ChildCall[] = [];
 let blockTaskId: string | null = null;
 let repairFixture = false;
@@ -40,7 +40,10 @@ let onFinalCoordination: (() => void) | null = null;
 mock.module("../modules/child-runner.ts", () => ({
 	runChild: async (opts: any) => {
 		const run: AgentRun = opts.run;
-		calls.push({ role: run.role, slot: run.slot?.id, prompt: opts.prompt, tools: opts.tools, timeoutMs: opts.timeoutMs, sessionDir: opts.sessionDir, sessionId: opts.sessionId, resume: opts.resume });
+		// Receipt retries identify their task through the resumed slot, not an execution prompt.
+		const taskId = opts.prompt.match(/executing delegated task (\d+\.[A-Za-z0-9_-]+)/)?.[1]
+			?? (opts.prompt.startsWith("RECEIPT RETRY (read-only)") ? calls.findLast((call) => call.slot === run.slot?.id && call.taskId)?.taskId : undefined);
+		calls.push({ role: run.role, slot: run.slot?.id, taskId, prompt: opts.prompt, tools: opts.tools, timeoutMs: opts.timeoutMs, sessionDir: opts.sessionDir, sessionId: opts.sessionId, resume: opts.resume });
 		run.status = "working";
 		run.startedAt = Date.now();
 		run.sessionRef = `${run.slot?.id ?? run.role}-${calls.length}`;
@@ -52,7 +55,7 @@ mock.module("../modules/child-runner.ts", () => ({
 			quotaOnceTaskId = null;
 			opts.onQuotaWait?.(0, "429: rate limited, retry after 0 seconds");
 		}
-		const isProposal = !/Merge them into ONE delegation plan|executing delegated task|closing an N-agent collaboration|READ-ONLY BLOCKED DIGEST/.test(opts.prompt);
+		const isProposal = !/Merge them into ONE delegation plan|executing delegated task|closing an N-agent collaboration|READ-ONLY BLOCKED DIGEST|RECEIPT RETRY \(read-only\)/.test(opts.prompt);
 		if (creditDeadSlot && isProposal && (creditDeadSlot === "*" || run.slot?.id === creditDeadSlot)) {
 			run.text = "";
 			run.exitCode = 1;
@@ -136,7 +139,7 @@ mock.module("../modules/child-runner.ts", () => ({
 			});
 		} else if (opts.prompt.includes("FH_TASK_OUTCOME") || opts.prompt.includes("executing delegated task")) {
 			const blocked = blockTaskId && opts.prompt.includes(`task ${blockTaskId}`);
-			const malformed = malformedTaskId && opts.prompt.includes(`task ${malformedTaskId}`);
+			const malformed = malformedTaskId && taskId === malformedTaskId;
 			if (malformed && malformedOnce) malformedTaskId = null;
 			run.text = malformed
 				? "nonempty success prose without outcome metadata"
@@ -779,6 +782,43 @@ describe("/fh-collaborate repository reflexes", () => {
 		expect(calls.some((call) => call.tools === "read,grep,find,ls,bash,edit,write")).toBe(true);
 		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
 		expect(fh.hostMessages).toHaveLength(0);
+	});
+
+	test("write-task missing metadata gets one read-only receipt retry without replaying writes", async () => {
+		const cwd = repo();
+		bigStackSlots = 3; // 1.a is a writer with dependent read/write tasks.
+		malformedTaskId = "1.a";
+		malformedOnce = true;
+		const fh = harness(cwd);
+		await fh.run("repair a writer's missing outcome line");
+
+		const taskCalls = calls.filter((call) => call.taskId === "1.a");
+		expect(taskCalls).toHaveLength(2);
+		expect(taskCalls.map((call) => call.tools)).toEqual(["read,grep,find,ls,bash,edit,write", "read,grep,find,ls"]);
+		expect(taskCalls[1]!.prompt).toStartWith("RECEIPT RETRY (read-only)");
+		expect(taskCalls[1]!.resume).toBe(`${taskCalls[0]!.slot}-${calls.indexOf(taskCalls[0]!) + 1}`);
+		const rejectedReport = join(fh.artifacts, "collaborate/reports/1.a-attempt-1-invalid.md");
+		expect(existsSync(rejectedReport)).toBe(true);
+		expect(readFileSync(rejectedReport, "utf8")).toBe("nonempty success prose without outcome metadata");
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(true);
+		expect(fh.hostMessages).toHaveLength(0);
+	});
+
+	test("persistently malformed write-task receipt fails closed after one read-only retry", async () => {
+		const cwd = repo();
+		bigStackSlots = 3;
+		malformedTaskId = "1.a";
+		const fh = harness(cwd);
+		await fh.run("reject a writer's malformed receipt");
+
+		const taskCalls = calls.filter((call) => call.taskId === "1.a");
+		expect(taskCalls).toHaveLength(2);
+		expect(taskCalls[1]!.prompt).toStartWith("RECEIPT RETRY (read-only)");
+		expect(taskCalls[1]!.tools).toBe("read,grep,find,ls");
+		expect(calls.filter((call) => call.tools === "read,grep,find,ls,bash,edit,write")).toHaveLength(1);
+		expect(JSON.parse(readFileSync(join(fh.artifacts, "summary.json"), "utf8")).ok).toBe(false);
+		expect(calls.some((call) => call.prompt.includes("READ-ONLY BLOCKED DIGEST") && call.tools === "read,grep,find,ls")).toBe(true);
+		expect(fh.panels.some((panel) => panel.details.kind === "collab" && panel.details.ok === false && panel.content.includes("after receipt retry"))).toBe(true);
 	});
 
 	test("non-publish collab injects the measured repo card before proposals", async () => {
