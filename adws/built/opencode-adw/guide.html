@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use OpenCode ADW: native commands, explicit checks, independent review, and recorded proof.">
+  <title>OpenCode ADW</title>
+  <style>
+    :root { color-scheme: light; --ink: #182b32; --muted: #4e6269; --line: #d6dfdd; --accent: #126454; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f6f2; color: var(--ink); font: 16px/1.6 system-ui, sans-serif; }
+    header { background: #152c32; color: #f4f7f3; padding: 44px max(24px, calc((100% - 1000px)/2)); }
+    .eyebrow { margin: 0 0 12px; color: #b7d6cb; font-size: .75rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.3rem, 6vw, 3.8rem); line-height: 1.1; letter-spacing: -.045em; }
+    header p { max-width: 650px; margin: 18px 0 0; color: #d7e4df; }
+    #publication-status { display: inline-block; padding: 5px 11px; margin-top: 24px; border: 1px solid #8da99f; border-radius: 5px; font-size: .82rem; }
+    main, footer { width: min(1000px, calc(100% - 48px)); margin: auto; }
+    main { padding: 30px 0 10px; }
+    .grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; }
+    section { margin-bottom: 24px; padding: 25px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+    h2 { font-size: 1.13rem; line-height: 1.3; margin: 0 0 14px; letter-spacing: -.02em; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    ol { padding-left: 22px; margin: 0; }
+    li + li { margin-top: 9px; }
+    a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    code { font: .86em/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+    .command { padding: 13px 0; border-top: 1px solid var(--line); }
+    .command:first-of-type { border-top: 0; padding-top: 0; }
+    .command-line { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .command p { font-size: .9rem; color: var(--muted); margin: 5px 0 0; }
+    button { flex-shrink: 0; min-height: 36px; padding: 5px 12px; border: 1px solid #a8bdb4; border-radius: 5px; background: #f1f6f1; color: #184d40; font: inherit; font-size: .8rem; cursor: pointer; }
+    button:hover { background: #e3eee6; }
+    :focus-visible { outline: 3px solid #277dce; outline-offset: 4px; }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 0; list-style-position: inside; font-size: .93rem; }
+    .flow li + li { margin: 0; }
+    .note { color: var(--muted); font-size: .88rem; }
+    .terminal { padding: 14px; background: #f1f4ef; border-radius: 6px; margin: 14px 0; }
+    .terminal code { display: block; white-space: pre-wrap; }
+    #copy-status { min-height: 1.6em; margin: 0; color: var(--muted); font-size: .85rem; }
+    footer { padding: 10px 0 30px; font-size: .8rem; color: var(--muted); }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; gap: 0; } section { padding: 21px; } header { padding-top: 32px; } }
+    @media print { header { background: white; color: black; } header p, .eyebrow { color: black; } button { display: none; } section { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Local workflow · quick guide</p>
+    <h1>OpenCode ADW</h1>
+    <p>A deterministic runner for a scoped build, explicit checks, a fresh read-only review, and a recorded handoff.</p>
+    <div id="publication-status" role="status">Publication verification in progress</div>
+  </header>
+  <main>
+    <div class="grid">
+      <div>
+        <section aria-labelledby="start">
+          <h2 id="start">Start in OpenCode</h2>
+          <ol>
+            <li>Restart OpenCode to load the installed native configuration.</li>
+            <li>Open the native agent picker and select <code>opencode-adw</code>.</li>
+            <li>Use a command below. Include the target repository, requested change, and acceptance criteria.</li>
+          </ol>
+          <p class="note">Native configuration currently points to an isolated worktree. Stable-path delivery awaits the parent update.</p>
+        </section>
+        <section aria-labelledby="commands">
+          <h2 id="commands">Native commands</h2>
+          <div class="command">
+            <div class="command-line"><code id="build">/oc-build</code><button type="button" data-copy="build" aria-label="Copy /oc-build">Copy</button></div>
+            <p>Implement the request, run focused checks, then review.</p>
+          </div>
+          <div class="command">
+            <div class="command-line"><code id="takeover">/oc-takeover</code><button type="button" data-copy="takeover" aria-label="Copy /oc-takeover">Copy</button></div>
+            <p>Recover context through the existing session bridge and recent handoffs, then continue. Report any fallback.</p>
+          </div>
+          <div class="command">
+            <div class="command-line"><code id="review">/oc-review</code><button type="button" data-copy="review" aria-label="Copy /oc-review">Copy</button></div>
+            <p>Inspect against requirements without repairs. Checks need an explicit, side-effect-free request.</p>
+          </div>
+          <div class="command">
+            <div class="command-line"><code id="status">/oc-status</code><button type="button" data-copy="status" aria-label="Copy /oc-status">Copy</button></div>
+            <p>Read recorded run and capture states; optionally append a run ID.</p>
+          </div>
+          <p id="copy-status" role="status" aria-live="polite"></p>
+          <noscript><p>Select and copy command text manually; copy buttons require JavaScript.</p></noscript>
+        </section>
+      </div>
+      <div>
+        <section aria-labelledby="desk">
+          <h2 id="desk">Use the live desk</h2>
+          <p>Open <a href="http://127.0.0.1:4610">127.0.0.1:4610</a>. Choose <strong>OpenCode ADW</strong>, fill <strong>Target repository (required)</strong> with the explicit repository path, then describe the change in <strong>Prompt</strong>.</p>
+          <p class="note">Desk launches are build-only. Use the native commands or CLI for review and explicit checks.</p>
+        </section>
+        <section aria-labelledby="execution">
+          <h2 id="execution">What executes</h2>
+          <ol class="flow"><li>Build</li><li>Checks</li><li>Fresh review</li><li>Report / handoff</li></ol>
+          <p>Checks run only when supplied; omitted checks are <code>SKIPPED</code>. A failed check or review fails the run.</p>
+          <p>The recorded default is <code>openai/gpt-6.1-sol</code>. Worker and reviewer use independent sessions on the same model, not cross-model review.</p>
+          <p>Native commands request bounded result capture through the existing vault. CLI capture is a separate step; verify its receipt.</p>
+          <p class="note">The runner never auto-commits or pushes. This installation’s PR was authorized separately; publication remains pending.</p>
+        </section>
+      </div>
+    </div>
+    <section aria-labelledby="proof">
+      <h2 id="proof">Inspect the proof</h2>
+      <p>One real synthetic smoke run (<strong>n=1</strong>) passed all three arithmetic tests and received reviewer <code>PASS</code>. This is narrow integration evidence, not a broad quality or speed result.</p>
+      <p><a href="file:///Users/evanmotovich/.local/share/opencode-adw/runs/ocadw-live-20261014/report.json">Open the local smoke report</a>. Runtime capture output is not yet verified; no successful vault write is claimed here.</p>
+      <p class="note">After parent delivery to the planned stable path, inspect this run in a terminal:</p>
+      <div class="terminal"><code id="report-command">python3 ~/fusion-harness/adws/built/opencode-adw/runtime.py status --adw-id ocadw-live-20261014</code><button type="button" data-copy="report-command" aria-label="Copy report status command">Copy command</button></div>
+    </section>
+  </main>
+  <footer>Local reference · <a href="README.md">CLI, installation, and boundaries</a> · Report files are the source of run state.</footer>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', async function () {
+        const source = document.getElementById(button.dataset.copy);
+        const feedback = document.getElementById('copy-status');
+        try {
+          if (!navigator.clipboard) throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(source.textContent.trim());
+          feedback.textContent = 'Copied. Paste into ' + (button.dataset.copy === 'report-command' ? 'your terminal.' : 'OpenCode and add your request.');
+        } catch (_) {
+          const range = document.createRange();
+          range.selectNodeContents(source);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          feedback.textContent = 'Clipboard unavailable. Text selected; press Command+C on Mac or Ctrl+C on Windows/Linux.';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
