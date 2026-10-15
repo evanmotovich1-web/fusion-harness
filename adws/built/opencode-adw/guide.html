@@ -48,7 +48,7 @@
     <p class="eyebrow">Local workflow · quick guide</p>
     <h1>OpenCode ADW</h1>
     <p>A deterministic runner for a scoped build, explicit checks, a fresh read-only review, and a recorded handoff.</p>
-    <div id="publication-status" role="status">Publication verification in progress</div>
+    <div id="publication-status" role="status">Installed · live-tested · source merged</div>
   </header>
   <main>
     <div class="grid">
@@ -60,7 +60,7 @@
             <li>Open the native agent picker and select <code>opencode-adw</code>.</li>
             <li>Use a command below. Include the target repository, requested change, and acceptance criteria.</li>
           </ol>
-          <p class="note">Native configuration currently points to an isolated worktree. Stable-path delivery awaits the parent update.</p>
+          <p class="note">Installed runtime: <code>~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py</code>. The installer manifest connects the native agent and desk to this same copy.</p>
         </section>
         <section aria-labelledby="commands">
           <h2 id="commands">Native commands</h2>
@@ -87,7 +87,7 @@
       <div>
         <section aria-labelledby="desk">
           <h2 id="desk">Use the live desk</h2>
-          <p>Open <a href="http://127.0.0.1:4610">127.0.0.1:4610</a>. Choose <strong>OpenCode ADW</strong>, fill <strong>Target repository (required)</strong> with the explicit repository path, then describe the change in <strong>Prompt</strong>.</p>
+          <p>Open the <a href="http://127.0.0.1:4617">OpenCode desk at 127.0.0.1:4617</a>. Choose <strong>OpenCode ADW</strong>, fill <strong>Target repository (required)</strong> with the explicit repository path, then describe the change in <strong>Prompt</strong>.</p>
           <p class="note">Desk launches are build-only. Use the native commands or CLI for review and explicit checks.</p>
         </section>
         <section aria-labelledby="execution">
@@ -96,16 +96,16 @@
           <p>Checks run only when supplied; omitted checks are <code>SKIPPED</code>. A failed check or review fails the run.</p>
           <p>The recorded default is <code>openai/gpt-6.1-sol</code>. Worker and reviewer use independent sessions on the same model, not cross-model review.</p>
           <p>Native commands request bounded result capture through the existing vault. CLI capture is a separate step; verify its receipt.</p>
-          <p class="note">The runner never auto-commits or pushes. This installation’s PR was authorized separately; publication remains pending.</p>
+          <p class="note">The runner leaves code uncommitted. This installation was separately authorized and merged: <a href="https://github.com/evanmotovich1-web/fusion-harness/pull/28">toolkit #28</a> and <a href="https://github.com/evanmotovich1-web/sssf/pull/32">desk #32</a>.</p>
         </section>
       </div>
     </div>
     <section aria-labelledby="proof">
       <h2 id="proof">Inspect the proof</h2>
       <p>One real synthetic smoke run (<strong>n=1</strong>) passed all three arithmetic tests and received reviewer <code>PASS</code>. This is narrow integration evidence, not a broad quality or speed result.</p>
-      <p><a href="file:///Users/evanmotovich/.local/share/opencode-adw/runs/ocadw-live-20261014/report.json">Open the local smoke report</a>. Runtime capture output is not yet verified; no successful vault write is claimed here.</p>
-      <p class="note">After parent delivery to the planned stable path, inspect this run in a terminal:</p>
-      <div class="terminal"><code id="report-command">python3 ~/fusion-harness/adws/built/opencode-adw/runtime.py status --adw-id ocadw-live-20261014</code><button type="button" data-copy="report-command" aria-label="Copy report status command">Copy command</button></div>
+      <p><a href="file:///Users/evanmotovich/.local/share/opencode-adw/runs/ocadw-live-20261014/report.json">Open the smoke report</a>. Its vault capture returned <code>CAPTURED</code>. Takeover review and browser launch <code>ffb90df8</code> also passed; browser-launch checks were explicitly <code>SKIPPED</code>.</p>
+      <p class="note">Inspect recorded state in a terminal:</p>
+      <div class="terminal"><code id="report-command">python3 ~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py status --adw-id ocadw-live-20261014</code><button type="button" data-copy="report-command" aria-label="Copy report status command">Copy command</button></div>
     </section>
   </main>
   <footer>Local reference · <a href="README.md">CLI, installation, and boundaries</a> · Report files are the source of run state.</footer>
