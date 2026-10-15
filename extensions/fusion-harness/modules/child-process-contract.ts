@@ -4,8 +4,20 @@
  */
 
 import * as fs from "node:fs";
+import * as os from "node:os";
 import * as path from "node:path";
 import { runOk, type AgentRun } from "./runtime.ts";
+
+/** Explicit provider-only exceptions to --no-extensions, shared by catalogue and children. */
+export function childProviderArgs(models: readonly string[]): string[] {
+	const selected = models.find((model) => /^(google-gemini-cli|gemini-login)\//.test(model));
+	if (!selected) return [];
+	const extension = path.join(os.homedir(), ".pi", "agent", "extensions", "gemini-login", "index.ts");
+	try {
+		if (fs.statSync(extension).isFile()) return ["-e", extension];
+	} catch { /* fail closed below; never turn on extension discovery */ }
+	throw new Error(`Gemini clean-room provider is missing: ${extension} (required by ${selected}). Install the gemini-login extension before selecting this model.`);
+}
 
 /** Stop Pi's option parser before passing the user's prompt as a positional message. */
 export function promptArgs(prompt: string): ["--", string] {

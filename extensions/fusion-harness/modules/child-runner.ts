@@ -11,7 +11,7 @@ import { spawn } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { performance } from "node:perf_hooks";
-import { persistFailureStderr, promptArgs } from "./child-process-contract.ts";
+import { childProviderArgs, persistFailureStderr, promptArgs } from "./child-process-contract.ts";
 import { retryOnQuota } from "./quota-wait.ts";
 import { briefArg, runError, runOk, type AgentRun } from "./runtime.ts";
 
@@ -71,7 +71,7 @@ function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 	const run = opts.run;
 	run.thinking = opts.thinking;
 	// Clean-room spawn: children never auto-discover skills, extensions (recursion guard),
-	// or context files. Only stack-declared skills are added explicitly below.
+	// or context files. Only the selected provider and stack-declared skills enter explicitly.
 	const args: string[] = [
 		"--mode",
 		"json",
@@ -231,6 +231,17 @@ function runChildOnce(opts: RunChildOptions): Promise<AgentRun> {
 			run.streamThinking = "";
 		};
 
+		// Resolve only after the abort check. A missing provider is a failed run, not
+		// a rejected orchestration promise or permission to enable broad discovery.
+		try {
+			args.unshift(...childProviderArgs([run.model]));
+		} catch (error) {
+			run.errorMessage = error instanceof Error ? error.message : String(error);
+			run.exitCode = 1;
+			settle();
+			resolve(run);
+			return;
+		}
 		const invocation = piInvocation(args);
 		const proc = spawn(invocation.command, invocation.args, {
 			cwd: opts.cwd,
