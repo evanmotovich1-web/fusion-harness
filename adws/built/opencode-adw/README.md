@@ -1,6 +1,6 @@
 # OpenCode ADW
 
-Open [guide.html](guide.html) for the native commands and desk workflow. Publication verification is in progress. Native configuration currently references an isolated worktree; the parent will deliver the stable runtime path separately.
+Open [guide.html](guide.html) for the native commands and desk workflow. Toolkit [PR #28](https://github.com/evanmotovich1-web/fusion-harness/pull/28) and desk [PR #32](https://github.com/evanmotovich1-web/sssf/pull/32) are merged. The installed manifest records `~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py` as the executing copy on this Mac. Keep that source checkout available, or reinstall from the new location after moving it.
 
 ## Dependencies and installation
 
@@ -38,7 +38,7 @@ Capture is an explicit publication step to the existing semantic vault, separate
 python3 runtime.py capture --adw-id YOUR_RUN_ID
 ```
 
-It records bounded metadata and a capture receipt, with repeat-success protection. Native command assets request this step after a run. Successful capture for the recorded smoke has not yet been verified here.
+It records bounded metadata and a capture receipt, with repeat-success protection. Native command assets request this step after a run. Capture of `ocadw-live-20261014` returned `CAPTURED` in the recorded smoke report.
 
 ## Tests and evidence
 
@@ -52,7 +52,7 @@ Recorded live evidence: [smoke report](file:///Users/evanmotovich/.local/share/o
 
 ## Boundaries
 
-The runner never auto-commits, pushes, merges, or deploys. This installation’s PR has separate user authorization; publication remains pending parent verification. Shell permissions are not an OS sandbox. Preserve unrelated work and read target-repository instructions. The desk at <http://127.0.0.1:4610> requires an explicit target repository and supports build launches only. Recorded status covers this runner’s runs, not a fleet.
+The runner never auto-commits, pushes, merges, or deploys. This installation’s source publication had separate user authorization. Shell permissions are not an OS sandbox. Preserve unrelated work and read target-repository instructions. The OpenCode desk at <http://127.0.0.1:4617> requires an explicit target repository and supports build launches only. It runs alongside existing desks, with its own SSSF trace data; existing desks were not restarted or replaced. Recorded status covers this runner’s runs, not a fleet.
 
 ---
 Governed by AGENTS.md — see the repository’s AGENTS.md and the target project’s instructions.
