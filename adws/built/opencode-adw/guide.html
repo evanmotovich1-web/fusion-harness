@@ -48,7 +48,7 @@
     <p class="eyebrow">Local workflow · quick guide</p>
     <h1>OpenCode ADW</h1>
     <p>A deterministic runner for a scoped build, explicit checks, a fresh read-only review, and a recorded handoff.</p>
-    <div id="publication-status" role="status">Installed · live-tested · source merged</div>
+    <div id="publication-status" role="status">Installed locally · workflow and per-agent model pickers</div>
   </header>
   <main>
     <div class="grid">
@@ -87,16 +87,18 @@
       <div>
         <section aria-labelledby="desk">
           <h2 id="desk">Use the live desk</h2>
-          <p>Open the <a href="http://127.0.0.1:4617">OpenCode desk at 127.0.0.1:4617</a>. Choose <strong>OpenCode ADW</strong>, fill <strong>Target repository (required)</strong> with the explicit repository path, then describe the change in <strong>Prompt</strong>.</p>
-          <p class="note">Desk launches are build-only. Use the native commands or CLI for review and explicit checks.</p>
+          <p>Open the <a href="http://127.0.0.1:4617/opencode">simple OpenCode workspace</a>. Pick a repository, choose <strong>Build &amp; review</strong>, <strong>Review only</strong>, or <strong>Continue previous work</strong>, and enter your task. Choose a model on each agent card, then press <strong>Run</strong>.</p>
+          <p class="note">The list covers discovered local checkouts, not every remote GitHub repository. Expand discovery coverage to see scanned roots and limits.</p>
+          <p class="note">Test commands and diagnostics are under Advanced. Review only shows one Reviewer card; the other workflows show Builder and Reviewer.</p>
         </section>
         <section aria-labelledby="execution">
           <h2 id="execution">What executes</h2>
           <ol class="flow"><li>Build</li><li>Checks</li><li>Fresh review</li><li>Report / handoff</li></ol>
           <p>Checks run only when supplied; omitted checks are <code>SKIPPED</code>. A failed check or review fails the run.</p>
-          <p>The recorded default is <code>openai/gpt-6.1-sol</code>. Worker and reviewer use independent sessions on the same model, not cross-model review.</p>
+          <p>Each agent has its own model dropdown, grouped by OpenAI, DeepSeek, GLM, Grok and Gemini. Existing keys/logins are reused. The recorded default remains <code>openai/gpt-6.1-sol</code> until you choose another model.</p>
+          <p>Builder edits files; checks are code; Reviewer inspects read-only in a separate session. Recorded activity shows the models and state of the selected repository's actual runs.</p>
           <p>Native commands request bounded result capture through the existing vault. CLI capture is a separate step; verify its receipt.</p>
-          <p class="note">The runner leaves code uncommitted. This installation was separately authorized and merged: <a href="https://github.com/evanmotovich1-web/fusion-harness/pull/28">toolkit #28</a> and <a href="https://github.com/evanmotovich1-web/sssf/pull/32">desk #32</a>.</p>
+          <p class="note">The runner leaves code uncommitted. Initial release: <a href="https://github.com/evanmotovich1-web/fusion-harness/pull/28">toolkit #28</a> and <a href="https://github.com/evanmotovich1-web/sssf/pull/32">desk #32</a>. The repository-picker correction is installed locally.</p>
         </section>
       </div>
     </div>
