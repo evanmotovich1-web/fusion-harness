@@ -82,7 +82,7 @@ import {
 } from "./modules/model-stack.ts";
 import { deleteGroup, groupLabel, saveGroup, setGroupReason, sortedGroups, stackSignature } from "./modules/model-groups.ts";
 import { catalogByProvider, loginHint, modelLabel, providerLabel, searchModels, type CatalogModel } from "./modules/model-browser.ts";
-import { buildFusionStack, parseFusionArgs, resolveModelToken, type FusionPick } from "./modules/fusion-size.ts";
+import { appendSpots, buildFusionStack, parseFusionArgs, resolveModelToken, SPOT_MODELS, spotsToAdd, type FusionPick } from "./modules/fusion-size.ts";
 import {
 	ANSWER_MAX_BYTES,
 	BOOT_TYPE,
@@ -1237,6 +1237,8 @@ export default function (pi: ExtensionAPI) {
 		["/fh-only [slot] [prompt]", "route one prompt to one agent"],
 		["/fh-model", "pick slot, model, thinking"],
 		["/fusion [N] [model…]", "how many agents, then each model"],
+		["/5", "turn on the 5th agent"],
+		["/6", "turn on the 6th agent"],
 		["/fh-auto-validate [--max-validations N] <prompt>", "gate written first, build until green"],
 		["/fh-system-prompt", "every slot's effective system prompt"],
 		["/find-workflow <task>", "route to a saved task harness"],
@@ -1678,6 +1680,56 @@ export default function (pi: ExtensionAPI) {
 			}
 			ctx.ui.notify([`fusion-harness: ${next.slots.length} agents (session-only)`, ...slotChoices(next).map((line) => `  ${line}`)].join("\n"), "info");
 		},
+	});
+
+	// /5 and /6 turn extra seats on without replacing the architect or Main.
+	const turnOnSpot = async (count: 5 | 6, ctx: any): Promise<void> => {
+		noteHost(ctx);
+		const stack = modelStack();
+		const seated = orderedSlots(stack).map((slot) => slot.model);
+		if (seated.length >= count) {
+			ctx.ui.notify(`fusion-harness: spot ${count} is already on (${seated.length} agents)`, "info");
+			return;
+		}
+		const all = ctx.modelRegistry.getAll() as CatalogModel[];
+		const usable = usableModel(ctx);
+		const loggedIn = all.filter(usable).map((model) => `${model.provider}/${model.id}`);
+		const preferred = SPOT_MODELS.filter((model) => loggedIn.includes(model));
+		let visible = preferred;
+		try {
+			const catalogue = await childVisibleModels(preferred);
+			const preferredVisible = preferred.filter((model) => catalogue.has(model));
+			const need = count - seated.length;
+			visible = preferredVisible.filter((model) => !seated.includes(model)).length >= need
+				? preferredVisible
+				: loggedIn.filter((model) => catalogue.has(model));
+		} catch (error) {
+			ctx.ui.notify(`fusion-harness: /${count} could not read the child model list — stack unchanged\n${error instanceof Error ? error.message : String(error)}`, "error");
+			return;
+		}
+		let extras: string[];
+		try {
+			extras = spotsToAdd(seated, count, visible);
+		} catch (error) {
+			ctx.ui.notify(`fusion-harness: /${count} ${error instanceof Error ? error.message : String(error)}`, "warning");
+			return;
+		}
+		const next = appendSpots(stack, extras);
+		try {
+			await applyStack(next, ctx, `/${count}`, `spot ${count}: ${extras.join(", ")}`);
+		} catch (error) {
+			ctx.ui.notify(`fusion-harness: /${count} could not apply — stack unchanged\n${error instanceof Error ? error.message : String(error)}`, "error");
+			return;
+		}
+		ctx.ui.notify([`fusion-harness: spot ${count} on · ${next.slots.length} agents (session-only)`, ...slotChoices(next).map((line) => `  ${line}`)].join("\n"), "info");
+	};
+	pi.registerCommand("5", {
+		description: "Turn on the 5th Fusion Pi agent. Keeps the current architect and Main. Session-only.",
+		handler: async (_args, ctx) => turnOnSpot(5, ctx),
+	});
+	pi.registerCommand("6", {
+		description: "Turn on the 6th Fusion Pi agent. Keeps the current architect and Main. Session-only.",
+		handler: async (_args, ctx) => turnOnSpot(6, ctx),
 	});
 
 	// ── Saved model groups: /fh-groups and alt+m pick any combo you have run ──
