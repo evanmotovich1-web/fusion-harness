@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Private, deterministic OpenCode build/check/review runs (Python stdlib only).
 
-Model defaults to openai/gpt-6.1-sol; --model explicitly overrides it. No silent
+Model defaults to openai/gpt-6.1-sol; --model sets the shared default and
+--worker-model / --reviewer-model override each role. No silent
 model fallback. Agent assets/permissions are installed separately. Checks are
 explicit user-provided shell programs. No commit/push is performed by this CLI.
 """
@@ -22,10 +23,17 @@ import uuid
 
 DEFAULT_ROOT = Path.home() / '.local/share/opencode-adw/runs'
 DEFAULT_BRIDGE = Path.home() / 'fusion-harness/tools/session-build/session_build.py'
+DEFAULT_MODEL = 'openai/gpt-6.1-sol'
 
 
 class Failure(Exception):
     pass
+
+
+def model_id(value):
+    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9][A-Za-z0-9_.:@+-]*(?:/[A-Za-z0-9][A-Za-z0-9_.:@+-]*)*', value):
+        raise argparse.ArgumentTypeError('model must be a provider/model ID without whitespace or shell syntax')
+    return value
 
 
 def private_dir(path):
@@ -116,10 +124,11 @@ def review_envelope(text):
 
 def agent(args, report, folder, role, prompt):
     prefix = folder / role
+    model = report['models'][role]
     argv = ['opencode', 'run', '--format', 'json', '--dir', str(args.repo),
-            '--agent', 'opencode-' + role, '--model', args.model, prompt]
+            '--agent', 'opencode-' + role, '--model', model, prompt]
     receipt = execute(argv, args.repo, args.timeout, prefix)
-    stage = {'role': role, 'process': receipt, 'session_ids': [], 'tools': []}
+    stage = {'role': role, 'model': model, 'process': receipt, 'session_ids': [], 'tools': []}
     report['agents'].append(stage)
     raw = Path(receipt['stdout']).read_text(errors='replace')
     (folder / (role + '.events.jsonl')).write_text(raw)
@@ -214,9 +223,15 @@ def run(args):
     folder.mkdir(mode=0o700)  # Never overwrite a previous run.
     report = {'schema_version': 1, 'adw_id': identity, 'repo': str(args.repo),
               'request': args.request, 'mode': args.mode, 'model': args.model,
+              'workflow': 'takeover' if args.command == 'takeover' else args.mode,
+              'models': {'worker': args.worker_model if args.worker_model is not None else args.model,
+                         'reviewer': args.reviewer_model if args.reviewer_model is not None else args.model},
               'state': 'STARTING', 'history': [], 'agents': [], 'checks': [],
               'checks_executed': 0, 'checks_state': 'NOT_RUN' if args.check else 'SKIPPED',
               'started_at': time.time(), 'output_dir': str(folder)}
+    report['review_independence'] = ('fresh_session_same_model'
+                                     if report['models']['worker'] == report['models']['reviewer']
+                                     else 'fresh_session_cross_model')
     lock = None
     def state(value):
         report['state'] = value
@@ -342,7 +357,9 @@ def main(argv=None):
         cmd.add_argument('--repo', type=Path, required=True)
         cmd.add_argument('--request', required=True)
         cmd.add_argument('--mode', choices=('build', 'review'), default='build')
-        cmd.add_argument('--model', default='openai/gpt-6.1-sol')
+        cmd.add_argument('--model', type=model_id, default=DEFAULT_MODEL)
+        cmd.add_argument('--worker-model', type=model_id)
+        cmd.add_argument('--reviewer-model', type=model_id)
         cmd.add_argument('--check', action='append', default=[])
         cmd.add_argument('--timeout', type=float, default=180)
         cmd.add_argument('--adw-id')
@@ -354,8 +371,29 @@ def main(argv=None):
     cmd = sub.add_parser('capture', help='Publish recorded run metadata through vault-semantic note')
     cmd.add_argument('--adw-id', required=True)
     cmd.add_argument('--output-root', type=Path, default=DEFAULT_ROOT)
+    sub.add_parser('describe', help='Describe the actual workflow configuration for the desk')
     args = parser.parse_args(argv)
     try:
+        if args.command == 'describe':
+            print(json.dumps({
+                'workflow': 'opencode-adw', 'default_model': DEFAULT_MODEL,
+                'workflows': [
+                    {'id': 'build', 'name': 'Build & review', 'command': 'run', 'mode': 'build',
+                     'agents': ['opencode-worker', 'opencode-reviewer']},
+                    {'id': 'review', 'name': 'Review only', 'command': 'run', 'mode': 'review',
+                     'agents': ['opencode-reviewer']},
+                    {'id': 'takeover', 'name': 'Continue previous work', 'command': 'takeover', 'mode': 'build',
+                     'agents': ['opencode-worker', 'opencode-reviewer']},
+                ],
+                'agents': [
+                    {'id': 'opencode-worker', 'role': 'Builder', 'can_edit': True, 'default_model': DEFAULT_MODEL},
+                    {'id': 'opencode-reviewer', 'role': 'Reviewer', 'can_edit': False, 'default_model': DEFAULT_MODEL},
+                ],
+                'stages': ['BUILDING', 'CHECKING', 'REVIEWING'],
+                'review_independence': 'fresh_session_same_model',
+                'runs_root': str(DEFAULT_ROOT),
+            }))
+            return 0
         if args.command == 'capture':
             return capture(args)
         if args.command == 'status':
@@ -365,7 +403,7 @@ def main(argv=None):
                     continue
                 try:
                     item = json.loads(path.read_text())
-                    row = {key: item.get(key) for key in ('adw_id', 'state', 'repo', 'started_at', 'output_dir',
+                    row = {key: item.get(key) for key in ('adw_id', 'state', 'repo', 'started_at', 'output_dir', 'models', 'workflow', 'review_independence',
                                                          'checks_state', 'checks_executed')}
                     row['capture'] = item.get('capture', {'state': 'NOT_CAPTURED'})
                     items.append(row)

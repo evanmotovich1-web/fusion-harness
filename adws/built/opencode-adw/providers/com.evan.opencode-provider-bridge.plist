@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.evan.opencode-provider-bridge</string>
+  <key>ProgramArguments</key><array>
+    <string>/Users/evanmotovich/.local/bin/node</string>
+    <string>/Users/evanmotovich/code/fusion-opencode-adw/adws/built/opencode-adw/providers/bridge.mjs</string>
+    <string>--port</string><string>4198</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/evanmotovich/code/fusion-opencode-adw</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>/Users/evanmotovich/.local/share/opencode-adw/provider-bridge/bridge.log</string>
+  <key>StandardErrorPath</key><string>/Users/evanmotovich/.local/share/opencode-adw/provider-bridge/bridge.log</string>
+</dict></plist>

@@ -13,6 +13,8 @@ import unittest
 RUNTIME = Path(__file__).resolve().parents[1] / 'runtime.py'
 FAKE = '''#!/usr/bin/env python3
 import json, os, sys, time
+with open(os.environ['AGENT_CALLS'], 'a') as log:
+    log.write(json.dumps(sys.argv[1:]) + '\\n')
 role = sys.argv[sys.argv.index('--agent') + 1]
 mode = os.environ.get('FAKE_MODE', '')
 sid = 'ses_worker' if role.endswith('worker') else 'ses_reviewer'
@@ -65,6 +67,8 @@ class RuntimeTests(unittest.TestCase):
         self.note_calls = self.root / 'note-calls.jsonl'
         self.env = dict(os.environ, HOME=str(self.root), PATH=str(self.bin) + os.pathsep + os.environ['PATH'])
         self.env['NOTE_CALLS'] = str(self.note_calls)
+        self.agent_calls = self.root / 'agent-calls.jsonl'
+        self.env['AGENT_CALLS'] = str(self.agent_calls)
         self.runs = self.root / 'runs'
 
     def invoke(self, mode='', extra=(), command='run', identity='test'):
@@ -91,6 +95,110 @@ class RuntimeTests(unittest.TestCase):
         status = subprocess.run([sys.executable, str(RUNTIME), 'status', '--output-root', str(self.runs)],
                                 capture_output=True, text=True, check=True)
         self.assertEqual(json.loads(status.stdout)['runs'][0]['state'], 'PASSED')
+
+    def test_describe_matches_executing_model_and_agent_roles(self):
+        described = subprocess.run([sys.executable, str(RUNTIME), 'describe'],
+                                  env=self.env, capture_output=True, text=True, check=True)
+        config = json.loads(described.stdout)
+        result, report = self.invoke(identity='described')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(config['default_model'], report['model'])
+        self.assertEqual([row['id'] for row in config['agents']],
+                         ['opencode-' + row['role'] for row in report['agents']])
+        self.assertEqual([row['can_edit'] for row in config['agents']], [True, False])
+        self.assertEqual(config['review_independence'], 'fresh_session_same_model')
+        self.assertEqual([row['default_model'] for row in config['agents']],
+                         [config['default_model']] * 2)
+        self.assertEqual(config['workflows'], [
+            {'id': 'build', 'name': 'Build & review', 'command': 'run', 'mode': 'build',
+             'agents': ['opencode-worker', 'opencode-reviewer']},
+            {'id': 'review', 'name': 'Review only', 'command': 'run', 'mode': 'review',
+             'agents': ['opencode-reviewer']},
+            {'id': 'takeover', 'name': 'Continue previous work', 'command': 'takeover', 'mode': 'build',
+             'agents': ['opencode-worker', 'opencode-reviewer']},
+        ])
+        self.assert_model_bindings(report, {'worker': config['default_model'],
+                                            'reviewer': config['default_model']})
+
+    def assert_model_bindings(self, report, models):
+        self.assertEqual(report['models'], models)
+        calls = [json.loads(line) for line in self.agent_calls.read_text().splitlines()]
+        self.assertEqual(len(calls), len(report['agents']))
+        for stage, argv in zip(report['agents'], calls):
+            model = models[stage['role']]
+            self.assertEqual(stage['model'], model)
+            self.assertEqual(argv[:-1], ['run', '--format', 'json', '--dir', str(self.repo),
+                                        '--agent', 'opencode-' + stage['role'], '--model', model])
+            self.assertEqual(stage['process']['command'][1:], argv)
+
+    def test_build_role_model_overrides_bind_exact_argv_and_report(self):
+        models = {'worker': 'anthropic/claude-sonnet-4-5', 'reviewer': 'openai/gpt-6.1-sol'}
+        result, report = self.invoke(extra=['--model', 'legacy/shared',
+                                           '--worker-model', models['worker'],
+                                           '--reviewer-model', models['reviewer']])
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(report['workflow'], 'build')
+        self.assertEqual(report['model'], 'legacy/shared')
+        self.assertEqual(report['review_independence'], 'fresh_session_cross_model')
+        self.assert_model_bindings(report, models)
+
+    def test_legacy_shared_model_override(self):
+        result, report = self.invoke(extra=['--model', 'provider/shared-model'])
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(report['model'], 'provider/shared-model')
+        self.assertEqual(report['review_independence'], 'fresh_session_same_model')
+        self.assert_model_bindings(report, dict.fromkeys(('worker', 'reviewer'), 'provider/shared-model'))
+
+    def test_review_only_model_override(self):
+        result, report = self.invoke(extra=['--mode', 'review', '--model', 'provider/shared',
+                                           '--reviewer-model', 'provider/review'])
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(report['workflow'], 'review')
+        self.assertEqual([a['role'] for a in report['agents']], ['reviewer'])
+        self.assertEqual(report['model'], 'provider/shared')
+        self.assert_model_bindings(report, {'worker': 'provider/shared', 'reviewer': 'provider/review'})
+
+    def test_takeover_role_override_and_other_role_fallback(self):
+        result, report = self.invoke(command='takeover', extra=['--worker-model', 'provider/worker'])
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(report['workflow'], 'takeover')
+        self.assertEqual(report['model'], 'openai/gpt-6.1-sol')
+        self.assert_model_bindings(report, {'worker': 'provider/worker', 'reviewer': report['model']})
+
+    def test_cross_model_selection_still_requires_separate_sessions(self):
+        result, report = self.invoke('same_session', extra=['--worker-model', 'provider/worker',
+                                                          '--reviewer-model', 'provider/reviewer'])
+        self.assertEqual(result.returncode, 1)
+        self.assertIn('session is not independent', report['error'])
+        self.assert_model_bindings(report, {'worker': 'provider/worker', 'reviewer': 'provider/reviewer'})
+
+    def test_invalid_models_rejected_before_subprocess_or_run_creation(self):
+        invalid = ('', 'model-only', '/model', 'provider/', '-provider/model', 'provider/-model',
+                   'provider/model name', ' provider/model', 'provider/model\n',
+                   'provider/mo\x00del', 'provider/mo\x7fdel', 'provider/model;id',
+                   'provider/$(id)', 'provider/model|id', 'provider/`id`', 'provider/"model"')
+        for command in ('run', 'takeover'):
+            for option in ('--model', '--worker-model', '--reviewer-model'):
+                for model in invalid:
+                    # NUL cannot be passed through OS argv; exercise its parser directly below.
+                    if '\x00' in model:
+                        continue
+                    with self.subTest(command=command, option=option, model=model):
+                        result = subprocess.run([sys.executable, str(RUNTIME), command,
+                                                 '--repo', str(self.repo), '--request', 'test',
+                                                 '--output-root', str(self.runs), option + '=' + model],
+                                                env=self.env, capture_output=True, text=True, timeout=10)
+                        self.assertEqual(result.returncode, 2)
+                        self.assertIn('provider/model', result.stderr)
+        self.assertFalse(self.runs.exists())
+        self.assertFalse(self.agent_calls.exists())
+        import importlib.util
+        import argparse
+        spec = importlib.util.spec_from_file_location('runtime', RUNTIME)
+        runtime = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(runtime)
+        with self.assertRaises(argparse.ArgumentTypeError):
+            runtime.model_id('provider/mo\x00del')
 
     def test_fail_closed(self):
         for mode in ('nonzero', 'empty', 'timeout', 'error', 'tool_error', 'false_pass', 'fail', 'same_session', 'no_session', 'malformed'):
