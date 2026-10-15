@@ -11,7 +11,7 @@ afterEach(() => { for (const dir of dirs.splice(0)) fs.rmSync(dir, { recursive: 
 const moduleUrl = (file: string) => pathToFileURL(path.resolve(import.meta.dir, "..", file)).href;
 
 function childFixture(model: string, tools: string, installed = true, stopped = false) {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fh-gemini-child-"));
+  const dir = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), "fh-gemini-child-")));
   dirs.push(dir);
   const home = path.join(dir, "home");
   fs.mkdirSync(home);

@@ -1,20 +1,19 @@
-# Gemini through built-in Google Vertex AI with ADC OAuth, not GEMINI_API_KEY.
-# Evan runs: gcloud auth application-default login
-# Set GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION in .env (just loads it).
-# Vertex AI usage is billed to the Google Cloud project.
-# The xAI architect also needs configured authentication.
-- name: grok
-  model: xai/grok-4.7
-  thinking: medium
-  architect: true
-  color: "#7DD3FC"
-  append_system_prompt:
-    - ../../system_prompt_fixing_opus_5_great_communication.md
+# Gemini Antigravity Google OAuth stack (Argon 4 + 3.8 Flash)
+slots:
+  argon:
+    model: google-gemini-cli/gemini-4-argon
+    thinking: high
+    color: "#38BDF8"
+  flash:
+    model: google-gemini-cli/gemini-3.8-flash
+    thinking: high
+    color: "#34D399"
 
-- name: flux
-  model: google-vertex/gemini-3.7-flash
-  thinking: medium
-  primary: true
-  color: "#F59E0B"
-  append_system_prompt:
-    - ../../system_prompt_fixing_opus_5_great_communication.md
+architect: argon
+primary: flash
+
+critique: true
+max_Rounds: 2
+synthesis: merge
+preserve_divergence: true
+timeout_seconds: 1800
