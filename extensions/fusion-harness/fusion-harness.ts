@@ -69,6 +69,7 @@ import { resolveKnowledgeConfig, type KnowledgeConfig } from "./modules/knowledg
 import { captureVaultNote } from "./modules/knowledge-ingest.ts";
 import { withDistilledBrief, withKnowledge } from "./modules/prompt-library.ts";
 import { piInvocation, runChild } from "./modules/child-runner.ts";
+import { childProviderArgs } from "./modules/child-process-contract.ts";
 import {
 	cloneStack,
 	loadModelStack,
@@ -346,20 +347,28 @@ export default function (pi: ExtensionAPI) {
 		});
 	};
 
-	let childVisibleModelsPromise: Promise<Set<string>> | undefined;
-	const childVisibleModels = async (): Promise<Set<string>> => {
-		childVisibleModelsPromise ??= (async () => {
-			const invocation = piInvocation(["--no-extensions", "--list-models"]);
-			const result = await pi.exec(invocation.command, invocation.args, { timeout: 30_000 });
-			if (result.code !== 0) throw new Error(`child model catalogue failed: ${result.stderr || result.stdout}`);
-			const models = new Set<string>();
-			for (const line of result.stdout.split("\n").slice(1)) {
-				const [provider, model] = line.trim().split(/\s+/);
-				if (provider && model) models.add(`${provider}/${model}`);
-			}
-			return models;
-		})();
-		return childVisibleModelsPromise;
+	// Visibility depends on the explicit provider set, not just the host process:
+	// switching from a built-in stack to Gemini must not reuse a built-in-only list.
+	const childVisibleModelsPromises = new Map<string, Promise<Set<string>>>();
+	const childVisibleModels = async (models: readonly string[]): Promise<Set<string>> => {
+		const providerArgs = childProviderArgs(models);
+		const key = JSON.stringify(providerArgs);
+		let pending = childVisibleModelsPromises.get(key);
+		if (!pending) {
+			pending = (async () => {
+				const invocation = piInvocation(["--no-extensions", ...providerArgs, "--list-models"]);
+				const result = await pi.exec(invocation.command, invocation.args, { timeout: 30_000 });
+				if (result.code !== 0) throw new Error(`child model catalogue failed: ${result.stderr || result.stdout}`);
+				const models = new Set<string>();
+				for (const line of result.stdout.split("\n").slice(1)) {
+					const [provider, model] = line.trim().split(/\s+/);
+					if (provider && model) models.add(`${provider}/${model}`);
+				}
+				return models;
+			})();
+			childVisibleModelsPromises.set(key, pending);
+		}
+		return pending;
 	};
 
 	// A configured stack is a declaration that every slot is runnable. Resolve/auth-check
@@ -371,7 +380,7 @@ export default function (pi: ExtensionAPI) {
 		const resolved = new Map<string, any>();
 		let childCatalogue = new Set<string>();
 		try {
-			childCatalogue = await childVisibleModels();
+			childCatalogue = await childVisibleModels(orderedSlots(configuredStack).map((slot) => slot.model));
 		} catch (error) {
 			errors.push(error instanceof Error ? error.message : String(error));
 		}
@@ -1580,7 +1589,7 @@ export default function (pi: ExtensionAPI) {
 	const applyStack = async (next: ModelStack, ctx: any, source: string, reason?: string): Promise<void> => {
 		const errors: string[] = [];
 		let childCatalogue = new Set<string>();
-		try { childCatalogue = await childVisibleModels(); } catch (error) { errors.push(error instanceof Error ? error.message : String(error)); }
+		try { childCatalogue = await childVisibleModels(orderedSlots(next).map((slot) => slot.model)); } catch (error) { errors.push(error instanceof Error ? error.message : String(error)); }
 		const resolved = new Map<string, any>();
 		for (const slot of orderedSlots(next)) {
 			const slash = slot.model.indexOf("/");

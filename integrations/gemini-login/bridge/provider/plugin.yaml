@@ -1,0 +1,4 @@
+name: gemini-login-provider
+kind: model-provider
+version: 0.1.0
+description: Official signed-in Antigravity CLI inference with host-owned tool execution

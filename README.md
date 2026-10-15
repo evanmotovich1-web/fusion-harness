@@ -44,7 +44,7 @@ cp .env.example .env                             # then fill the provider keys y
 npm test                                         # deterministic tests, zero paid calls
 ```
 
-Note: pi reads `GEMINI_API_KEY` for the google provider (not `GOOGLE_GENERATIVE_AI_API_KEY`).
+Note: pi reads `GEMINI_API_KEY` for the google provider (not `GOOGLE_GENERATIVE_AI_API_KEY`). For an existing official-client login instead, see the optional [Gemini login integration](integrations/gemini-login/README.md); a saved login is not an API key or Vertex credential.
 
 ---
 

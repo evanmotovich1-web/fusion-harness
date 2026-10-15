@@ -1,0 +1,7 @@
+{
+  "name": "fusion-gemini-login-tests",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test protocol.test.mjs stream.test.mjs transport.test.mjs" },
+  "devDependencies": { "@earendil-works/pi-ai": "1.1.0", "jiti": "2.7.0" }
+}
