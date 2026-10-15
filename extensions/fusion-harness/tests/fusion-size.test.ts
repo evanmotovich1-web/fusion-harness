@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { buildFusionStack, parseFusionArgs, resolveModelToken, slotNameFor } from "../modules/fusion-size.ts";
+import { appendSpots, buildFusionStack, parseFusionArgs, resolveModelToken, slotNameFor, spotsToAdd } from "../modules/fusion-size.ts";
 import type { CatalogModel } from "../modules/model-browser.ts";
 import { synthesizeLegacyStack } from "../modules/model-stack.ts";
 
@@ -96,5 +96,45 @@ describe("the N-agent stack", () => {
 
 	test("fewer than two agents is refused", () => {
 		expect(() => buildFusionStack([{ model: "xai/grok-4.7" }], base)).toThrow();
+	});
+});
+
+describe("/5 and /6 spots", () => {
+	const base = synthesizeLegacyStack({
+		architectModel: "openai-codex/gpt-6.1-sol",
+		builderModel: "xai/grok-4.7",
+		architectThinking: "high",
+		builderThinking: "high",
+	});
+	const available = [
+		"xai/grok-4.7",
+		"openai-codex/gpt-6.1-sol",
+		"openai-codex/gpt-6-astra",
+		"zai-coding-cn/glm-5.3",
+		"deepseek/deepseek-v4-pro",
+		"zai-coding-cn/glm-5.3-flash",
+	];
+
+	test("/5 adds the 5th seat and /6 adds the 6th without moving architect or Main", () => {
+		expect(spotsToAdd(base.slots.map((slot) => slot.model), 5, available)).toEqual([
+			"openai-codex/gpt-6-astra",
+			"zai-coding-cn/glm-5.3",
+			"deepseek/deepseek-v4-pro",
+		]);
+		const five = appendSpots(base, spotsToAdd(base.slots.map((slot) => slot.model), 5, available));
+		expect(five.slots).toHaveLength(5);
+		expect(five.architect.model).toBe(base.architect.model);
+		expect(five.primaryBuilder.model).toBe(base.primaryBuilder.model);
+		const six = appendSpots(five, spotsToAdd(five.slots.map((slot) => slot.model), 6, available));
+		expect(six.slots).toHaveLength(6);
+		expect(six.slots[5]?.model).toBe("zai-coding-cn/glm-5.3-flash");
+		expect(six.architect.id).toBe(base.architect.id);
+		expect(six.primaryBuilder.id).toBe(base.primaryBuilder.id);
+		expect(new Set(six.slots.map((slot) => slot.model)).size).toBe(6);
+	});
+
+	test("a spot that is already on adds nothing, and a short list refuses", () => {
+		expect(spotsToAdd(["a", "b", "c", "d", "e", "f"], 6, available)).toEqual([]);
+		expect(() => spotsToAdd(["a", "b"], 6, ["a", "b", "c"])).toThrow(/need 4 more/);
 	});
 });

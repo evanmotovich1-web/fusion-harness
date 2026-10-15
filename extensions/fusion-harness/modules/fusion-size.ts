@@ -117,3 +117,66 @@ export function buildFusionStack(picks: readonly FusionPick[], base: ModelStack,
 	const primaryBuilder = slots[1]!;
 	return { codename: `fusion-${slots.length}`, slots, architect, primaryBuilder, builders: slots.filter((slot) => !slot.architect) };
 }
+
+/** Models added by /5 and /6, in the order that keeps the room on different providers. */
+export const SPOT_MODELS = [
+	"xai/grok-4.7",
+	"openai-codex/gpt-6.1-sol",
+	"openai-codex/gpt-6-astra",
+	"zai-coding-cn/glm-5.3",
+	"deepseek/deepseek-v4-pro",
+	"zai-coding-cn/glm-5.3-flash",
+] as const;
+
+/**
+ * Models to append so the live stack reaches `count`. Already-seated models are skipped.
+ * Preferred models come first; any other logged-in model fills a gap. Empty means the spot is already on.
+ */
+export function spotsToAdd(seated: readonly string[], count: number, available: readonly string[]): string[] {
+	if (count < MIN_AGENTS || count > MAX_AGENTS) throw new Error(`choose ${MIN_AGENTS}-${MAX_AGENTS} agents; got ${count}`);
+	if (seated.length >= count) return [];
+	const taken = new Set(seated);
+	const preferred = SPOT_MODELS.filter((model) => available.includes(model) && !taken.has(model));
+	const rest = available.filter((model) => !taken.has(model) && !preferred.includes(model));
+	const pool = [...preferred, ...rest];
+	const need = count - seated.length;
+	if (pool.length < need) throw new Error(`need ${need} more logged-in models to turn on spot ${count}; found ${pool.length}`);
+	return pool.slice(0, need);
+}
+
+/** Append builder seats. Architect and Main stay where they are. Prompts carry over from Main. */
+export function appendSpots(stack: ModelStack, models: readonly string[]): ModelStack {
+	if (!models.length) return stack;
+	const slots = stack.slots.map((slot) => ({ ...slot, appendSystemPrompts: [...slot.appendSystemPrompts], skills: [...slot.skills] }));
+	const taken = new Set(slots.map((slot) => slot.name.toLowerCase()));
+	const used = new Set(slots.map((slot) => slot.color));
+	const from = slots.find((slot) => slot.id === stack.primaryBuilder.id) ?? slots[1] ?? slots[0]!;
+	for (const model of models) {
+		const name = slotNameFor(model, taken);
+		const color = (SLOT_COLOR_PALETTE.find((candidate) => candidate !== "#A78BFA" && !used.has(candidate)) ?? SLOT_COLOR_PALETTE[slots.length % SLOT_COLOR_PALETTE.length]) as HexColor;
+		used.add(color);
+		slots.push({
+			id: slotId(name),
+			name,
+			model,
+			thinking: "high",
+			color,
+			architect: false,
+			primary: false,
+			systemPrompt: from.systemPrompt,
+			systemPromptSource: from.systemPromptSource,
+			appendSystemPrompts: [...from.appendSystemPrompts],
+			skills: [...from.skills],
+		});
+	}
+	const architect = slots.find((slot) => slot.id === stack.architect.id)!;
+	const primaryBuilder = slots.find((slot) => slot.id === stack.primaryBuilder.id)!;
+	return {
+		codename: `${stack.codename}-spot${slots.length}`,
+		configPath: stack.configPath,
+		slots,
+		architect,
+		primaryBuilder,
+		builders: slots.filter((slot) => !slot.architect),
+	};
+}

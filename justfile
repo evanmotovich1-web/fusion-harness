@@ -4,7 +4,7 @@ set dotenv-load := true
 default:
     @just --list
 
-# fusion-harness — 2-5 configured agents, AND not OR.
+# fusion-harness — 2 or more configured agents, AND not OR.
 WORKHORSE_ARCHITECT := "anthropic/claude-sonnet-5"
 WORKHORSE_BUILDER := "openai/gpt-5.6-terra"
 SOTA_ARCHITECT := "anthropic/claude-fable-5"
