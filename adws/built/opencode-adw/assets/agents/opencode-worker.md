@@ -1,7 +1,7 @@
 ---
 description: Bounded OpenCode ADW builder. Implements the exact requested patch and reports actual changed files and checks; never publishes.
 mode: all
-hidden: true
+hidden: false
 permission:
   "*": deny
   read: allow

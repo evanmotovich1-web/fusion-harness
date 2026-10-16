@@ -48,7 +48,7 @@
     <p class="eyebrow">Local workflow · quick guide</p>
     <h1>OpenCode ADW</h1>
     <p>A deterministic runner for a scoped build, explicit checks, a fresh read-only review, and a recorded handoff.</p>
-    <div id="publication-status" role="status">Installed locally · workflow and per-agent model pickers</div>
+    <div id="publication-status" role="status">Native Team · Auto repository routing · Deep build with Jev</div>
   </header>
   <main>
     <div class="grid">
@@ -57,13 +57,17 @@
           <h2 id="start">Start in OpenCode</h2>
           <ol>
             <li>Restart OpenCode to load the installed native configuration.</li>
-            <li>Open the native agent picker and select <code>opencode-adw</code>.</li>
-            <li>Use a command below. Include the target repository, requested change, and acceptance criteria.</li>
+            <li>Open the native agent picker and select <code>opencode-team</code>, or run <code>/oc-team</code>.</li>
+            <li>Describe the change and acceptance criteria. Router resolves the target or asks one question. Team members appear under <code>@opencode-</code>.</li>
           </ol>
-          <p class="note">Installed runtime: <code>~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py</code>. The installer manifest connects the native agent and desk to this same copy.</p>
+          <p class="note">The manifest at <code>~/.config/opencode/opencode-adw-install.json</code> records the installed runtime and workspace paths.</p>
         </section>
         <section aria-labelledby="commands">
           <h2 id="commands">Native commands</h2>
+          <div class="command">
+            <div class="command-line"><code id="team">/oc-team</code><button type="button" data-copy="team" aria-label="Copy /oc-team">Copy</button></div>
+            <p>Resolve the repository, then run the Deep pipeline with real native child sessions attached to this conversation.</p>
+          </div>
           <div class="command">
             <div class="command-line"><code id="build">/oc-build</code><button type="button" data-copy="build" aria-label="Copy /oc-build">Copy</button></div>
             <p>Implement the request, run focused checks, then review.</p>
@@ -77,6 +81,10 @@
             <p>Inspect against requirements without repairs. Checks need an explicit, side-effect-free request.</p>
           </div>
           <div class="command">
+            <div class="command-line"><code id="deep">/oc-deep</code><button type="button" data-copy="deep" aria-label="Copy /oc-deep">Copy</button></div>
+            <p>Plan, freeze edge-case tests, build, review and use Jev-advised bounded repairs.</p>
+          </div>
+          <div class="command">
             <div class="command-line"><code id="status">/oc-status</code><button type="button" data-copy="status" aria-label="Copy /oc-status">Copy</button></div>
             <p>Read recorded run and capture states; optionally append a run ID.</p>
           </div>
@@ -87,27 +95,27 @@
       <div>
         <section aria-labelledby="desk">
           <h2 id="desk">Use the live desk</h2>
-          <p>Open the <a href="http://127.0.0.1:4617/opencode">simple OpenCode workspace</a>. Pick a repository, choose <strong>Build &amp; review</strong>, <strong>Review only</strong>, or <strong>Continue previous work</strong>, and enter your task. Choose a model on each agent card, then press <strong>Run</strong>.</p>
+          <p>Open the <a href="http://127.0.0.1:4617/opencode">OpenCode workspace</a> and enter your task. <strong>Native Team</strong> and <strong>Auto</strong> repository routing are the defaults. Choose a model on each agent card, then press <strong>Run</strong>. Manual repository selection is under Advanced.</p>
           <p class="note">The list covers discovered local checkouts, not every remote GitHub repository. Expand discovery coverage to see scanned roots and limits.</p>
-          <p class="note">Test commands and diagnostics are under Advanced. Review only shows one Reviewer card; the other workflows show Builder and Reviewer.</p>
+          <p class="note">Deep build · Jev adds Planner and Test designer cards. It freezes executable tests before the builder; uncertain Jev advice requests one extra independent check. Test commands, repair limits and diagnostics are under Advanced.</p>
         </section>
         <section aria-labelledby="execution">
           <h2 id="execution">What executes</h2>
-          <ol class="flow"><li>Build</li><li>Checks</li><li>Fresh review</li><li>Report / handoff</li></ol>
+          <ol class="flow"><li>Router</li><li>Plan</li><li>Frozen tests</li><li>Build</li><li>Checks</li><li>Fresh review</li><li>Report / handoff</li></ol>
           <p>Checks run only when supplied; omitted checks are <code>SKIPPED</code>. A failed check or review fails the run.</p>
           <p>Each agent has its own model dropdown, grouped by OpenAI, DeepSeek, GLM, Grok and Gemini. Existing keys/logins are reused. The recorded default remains <code>openai/gpt-6.1-sol</code> until you choose another model.</p>
           <p>Builder edits files; checks are code; Reviewer inspects read-only in a separate session. Recorded activity shows the models and state of the selected repository's actual runs.</p>
           <p>Native commands request bounded result capture through the existing vault. CLI capture is a separate step; verify its receipt.</p>
-          <p class="note">The runner leaves code uncommitted. Initial release: <a href="https://github.com/evanmotovich1-web/fusion-harness/pull/28">toolkit #28</a> and <a href="https://github.com/evanmotovich1-web/sssf/pull/32">desk #32</a>. The repository-picker correction is installed locally.</p>
+          <p class="note">The runner leaves code uncommitted. Router records code or Jev routing honestly; only the four chat roles perform model inference. Ambiguous repository selection stops before source edits.</p>
         </section>
       </div>
     </div>
     <section aria-labelledby="proof">
       <h2 id="proof">Inspect the proof</h2>
-      <p>One real synthetic smoke run (<strong>n=1</strong>) passed all three arithmetic tests and received reviewer <code>PASS</code>. This is narrow integration evidence, not a broad quality or speed result.</p>
-      <p><a href="file:///Users/evanmotovich/.local/share/opencode-adw/runs/ocadw-live-20261014/report.json">Open the smoke report</a>. Its vault capture returned <code>CAPTURED</code>. Takeover review and browser launch <code>ffb90df8</code> also passed; browser-launch checks were explicitly <code>SKIPPED</code>.</p>
+      <p>One native Team synthetic run (<strong>n=1; confidence=high for this recorded run</strong>) resolved the Sundial project semantically, attached five real children to its invoking conversation, passed 14 generated tests plus three project checks, and received reviewer <code>PASS</code>. This is integration evidence, not a broad quality or speed result.</p>
+      <p><a href="file:///Users/evanmotovich/.local/share/opencode-adw/runs/20261015-215933-6d4c2213/report.json">Open the native Team report</a>. Earlier failed probes remain in private run history.</p>
       <p class="note">Inspect recorded state in a terminal:</p>
-      <div class="terminal"><code id="report-command">python3 ~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py status --adw-id ocadw-live-20261014</code><button type="button" data-copy="report-command" aria-label="Copy report status command">Copy command</button></div>
+      <div class="terminal"><code id="report-command">python3 ~/code/fusion-opencode-deep-jev/adws/built/opencode-adw/runtime.py status --adw-id 20261015-215933-6d4c2213</code><button type="button" data-copy="report-command" aria-label="Copy report status command">Copy command</button></div>
     </section>
   </main>
   <footer>Local reference · <a href="README.md">CLI, installation, and boundaries</a> · Report files are the source of run state.</footer>
