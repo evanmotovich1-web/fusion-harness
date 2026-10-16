@@ -8,7 +8,9 @@ import subprocess
 import sys
 import tempfile
 import time
+import types
 import unittest
+from unittest import mock
 
 RUNTIME = Path(__file__).resolve().parents[1] / 'runtime.py'
 FAKE = '''#!/usr/bin/env python3
@@ -70,6 +72,25 @@ class RuntimeTests(unittest.TestCase):
         self.agent_calls = self.root / 'agent-calls.jsonl'
         self.env['AGENT_CALLS'] = str(self.agent_calls)
         self.runs = self.root / 'runs'
+        # In-process Deep tests mock Jev's decision API, not repository discovery.
+        # Keep that boundary explicit rather than letting repo_router cache a fake
+        # Jev module that intentionally only implements Deep's public API.
+        def resolve(request, *, context_directory=None, explicit_repo=None, receipt_dir,
+                    workspace_root=None):
+            repo = Path(explicit_repo or self.repo).resolve()
+            top = subprocess.run(['git', '-C', str(repo), 'rev-parse', '--show-toplevel'],
+                                 capture_output=True, text=True, check=True)
+            receipt_dir.mkdir(parents=True, exist_ok=True)
+            receipt = receipt_dir / 'route.json'
+            value = {'status': 'resolved', 'selected_repo': str(Path(top.stdout.strip()).resolve()),
+                     'method': 'explicit' if explicit_repo else 'context', 'candidates': [], 'question': None,
+                     'receipt_path': str(receipt)}
+            receipt.write_text(json.dumps(value))
+            return value
+        patcher = mock.patch.dict(sys.modules, {'repo_router': types.SimpleNamespace(
+            resolve=resolve, status=lambda: {'configured': True})})
+        patcher.start()
+        self.addCleanup(patcher.stop)
 
     def invoke(self, mode='', extra=(), command='run', identity='test'):
         result = subprocess.run([sys.executable, str(RUNTIME), command, '--repo', str(self.repo),
@@ -103,13 +124,13 @@ class RuntimeTests(unittest.TestCase):
         result, report = self.invoke(identity='described')
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(config['default_model'], report['model'])
-        self.assertEqual([row['id'] for row in config['agents']],
+        self.assertEqual([row['id'] for row in config['agents'][:2]],
                          ['opencode-' + row['role'] for row in report['agents']])
-        self.assertEqual([row['can_edit'] for row in config['agents']], [True, False])
+        self.assertEqual([row['can_edit'] for row in config['agents']], [True, False, False, False])
         self.assertEqual(config['review_independence'], 'fresh_session_same_model')
         self.assertEqual([row['default_model'] for row in config['agents']],
-                         [config['default_model']] * 2)
-        self.assertEqual(config['workflows'], [
+                         [config['default_model']] * 4)
+        self.assertEqual(config['workflows'][:3], [
             {'id': 'build', 'name': 'Build & review', 'command': 'run', 'mode': 'build',
              'agents': ['opencode-worker', 'opencode-reviewer']},
             {'id': 'review', 'name': 'Review only', 'command': 'run', 'mode': 'review',

@@ -1,6 +1,6 @@
 # OpenCode ADW
 
-Open [guide.html](guide.html) for the native commands and desk workflow. Toolkit [PR #28](https://github.com/evanmotovich1-web/fusion-harness/pull/28) and desk [PR #32](https://github.com/evanmotovich1-web/sssf/pull/32) are merged. The installed manifest records `~/code/fusion-opencode-adw/adws/built/opencode-adw/runtime.py` as the executing copy on this Mac. Keep that source checkout available, or reinstall from the new location after moving it.
+Open [guide.html](guide.html) for the native commands and workspace workflow. The installed manifest at `~/.config/opencode/opencode-adw-install.json` records the executing runtime and workspace paths. Keep those source checkouts available, or reinstall after moving them.
 
 ## Dependencies and installation
 
@@ -9,12 +9,48 @@ Python 3 (standard library only), Git, and an authenticated `opencode` CLI with 
 From this directory:
 
 ```sh
-python3 install.py
+python3 install.py --workspace-root /absolute/path/to/sssf
 ```
 
-The installer writes only its native agent/command assets and manifest under `~/.config/opencode`; it preserves unrelated configuration and refuses to overwrite modified/unowned assets. It records this directory’s runtime path. For an explicitly selected runtime, use `--runtime /absolute/path/runtime.py`. Restart OpenCode, open its native agent picker, and select `opencode-adw`.
+The installer writes its native agents, commands, plugin and manifest under `~/.config/opencode`; it preserves unrelated configuration and refuses to overwrite modified/unowned assets. It records this directory’s runtime path. For an explicitly selected runtime, use `--runtime /absolute/path/runtime.py`. Restart OpenCode, open its native agent picker, and select `opencode-team`.
 
 ## CLI
+
+### Native Team and Auto repository routing
+
+Choose `opencode-team` in OpenCode or run `/oc-team`, then describe the task and
+acceptance criteria. The plugin attaches Router, Planner, Test designer, Builder
+and Reviewer children to the invoking conversation. Visible members use the
+`@opencode-` prefix. Only Builder edits the target repository.
+
+The workspace at <http://127.0.0.1:4617/opencode> defaults to Native Team and Auto
+repository selection. Manual repository selection is under Advanced. Routing uses
+an explicit target, exact project name/path, genuine native context, or bounded
+Jev semantic selection; ambiguity returns one question before building. Web tasks
+do not inherit the workspace server's repository. Router displays its actual
+code/Jev execution, not a fabricated chat-model call.
+
+CLI equivalent: `python3 runtime.py run --mode team --repo auto --request 'TASK'`.
+Supply `--check` for project checks and role-model flags for model selection.
+See [TEAM-BUILD.md](TEAM-BUILD.md) for session ownership and routing evidence.
+
+### Deep build with Jev
+
+Choose **Deep build · Jev** at <http://127.0.0.1:4617/opencode>, or use `/oc-deep`.
+The runner adds a read-only Planner and independent Test designer before Builder.
+It writes executable acceptance tests outside the target repository and freezes
+their hashes, then runs those tests, operator checks and a fresh Reviewer.
+Jev recommends focus and repair steps through the existing TypeSafe client.
+Uncertain valid advice requests one additional independent review per decision
+point; it never fabricates higher confidence or overrides failing checks.
+
+`--planner-model` and `--testdesigner-model` select the extra role models.
+`--max-repairs` defaults to one and is bounded to zero through two. Generated
+tests, all attempts, Jev receipts and consultations stay in the private run folder.
+See [DEEP-BUILD.md](DEEP-BUILD.md) for the contract. Extra tokens are spent on
+observable plans, tests and bounded corrections; increased token count alone is
+not an improvement claim. This mode is installed locally; it requires the current
+workspace and a configured TypeSafe connection.
 
 Replace `/absolute/path/to/repo` and the request/check with the intended target and criteria:
 
@@ -52,7 +88,7 @@ Recorded live evidence: [smoke report](file:///Users/evanmotovich/.local/share/o
 
 ## Boundaries
 
-The runner never auto-commits, pushes, merges, or deploys. This installation’s source publication had separate user authorization. Shell permissions are not an OS sandbox. Preserve unrelated work and read target-repository instructions. The OpenCode desk at <http://127.0.0.1:4617> requires an explicit target repository and supports build launches only. It runs alongside existing desks, with its own SSSF trace data; existing desks were not restarted or replaced. Recorded status covers this runner’s runs, not a fleet.
+The runner never auto-commits, pushes, merges, or deploys. Source publication needs separate user authorization. Shell permissions are not an OS sandbox. Preserve unrelated work and read target-repository instructions. The OpenCode workspace supports Auto routing and manual targets, Team, Deep, build, review and takeover workflows. Recorded status covers this runner’s runs, not a fleet.
 
 ---
 Governed by AGENTS.md — see the repository’s AGENTS.md and the target project’s instructions.

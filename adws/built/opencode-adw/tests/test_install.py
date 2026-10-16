@@ -20,7 +20,7 @@ class InstallTests(unittest.TestCase):
             existing.write_text('{"mcp":{"existing":{"enabled":true}}}')
             before = existing.read_bytes()
             first = installer.install(config)
-            self.assertEqual(len(first['installed']), 7)
+            self.assertEqual(len(first['installed']), 14)
             self.assertTrue(first['restart_required'])
             self.assertEqual(existing.read_bytes(), before)
             self.assertIn('mode: primary', (config / 'agents/opencode-adw.md').read_text())
