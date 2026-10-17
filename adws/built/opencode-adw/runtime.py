@@ -49,7 +49,7 @@ def write_json(path, value):
     temporary.replace(path)
 
 
-def execute(argv, cwd, timeout, prefix, shell=False):
+def execute(argv, cwd, timeout, prefix, shell=False, env=None):
     """Persist both streams, kill the whole child group on timeout/interruption."""
     receipt = {'command': argv, 'cwd': str(cwd), 'shell': shell, 'timeout': timeout}
     start = time.monotonic()
@@ -57,7 +57,7 @@ def execute(argv, cwd, timeout, prefix, shell=False):
     with prefix.with_suffix('.stdout').open('wb') as out, prefix.with_suffix('.stderr').open('wb') as err:
         try:
             process = subprocess.Popen(argv, cwd=cwd, shell=shell, stdout=out,
-                                       stderr=err, start_new_session=True)
+                                       stderr=err, start_new_session=True, env=env)
             try:
                 receipt['exit_code'] = process.wait(timeout=timeout)
             except (subprocess.TimeoutExpired, KeyboardInterrupt) as exc:
@@ -177,14 +177,18 @@ def _agent(args, report, folder, role, prompt, *, allow_review_failure=False, lo
     label = loglabel or role
     prefix = folder / label
     model = report['models'][role]
-    argv = ['opencode', 'run', '--format', 'json', '--dir', str(args.repo),
+    # Both CLI generations accept the process cwd. V2 removed run --dir.
+    # Keep the repository in execute(cwd=...), not in a PATH transport wrapper.
+    argv = [os.environ.get('OPENCODE_ADW_OPENCODE', str(Path.home() / '.opencode/bin/opencode')),
+            'run', '--format', 'json',
             '--agent', 'opencode-' + role, '--model', model, prompt]
     team = getattr(args, '_native_team', None)
     if team:
         argv = team.command(role, label, model, prompt, args.timeout)
         report['team'] = team.snapshot()
         write_json(folder / 'report.json', report)
-    receipt = execute(argv, args.repo, args.timeout, prefix)
+    receipt = (execute(argv, args.repo, args.timeout, prefix, env=team.environment())
+               if team else execute(argv, args.repo, args.timeout, prefix))
     stage = {'role': role, 'label': label, 'model': model, 'process': receipt,
              'session_ids': [], 'tools': [], 'usage': []}
     report['agents'].append(stage)
@@ -203,20 +207,40 @@ def _agent(args, report, folder, role, prompt, *, allow_review_failure=False, lo
         sid = event.get('sessionID')
         if isinstance(sid, str) and sid and sid not in stage['session_ids']:
             stage['session_ids'].append(sid)
-        part = event.get('part') or {}
-        if not isinstance(part, dict):
-            errors.append('Invalid event part')
+        kind = event.get('type')
+        # CLI lifecycle envelopes (V2 start/finish) have no required part.
+        # step_* are the legacy CLI / native transport's normalized events.
+        if kind not in ('start', 'finish', 'step_start', 'step_finish', 'text', 'reasoning', 'tool_use', 'error'):
+            errors.append({'error': 'Unsupported event type', 'event': event})
             continue
-        if event.get('type') == 'error' or event.get('error'):
+        if kind == 'error' or event.get('error'):
             errors.append(event)
-        if event.get('type') == 'text' and isinstance(part.get('text'), str):
-            texts.append(part['text'])
-        if event.get('type') == 'step_finish' and isinstance(part.get('tokens'), dict):
-            stage['usage'].append({'tokens': part['tokens'], 'cost': part.get('cost')})
-        if event.get('type') == 'tool_use' or part.get('type') == 'tool':
+        if kind != 'error' and (not isinstance(sid, str) or not sid.strip()):
+            errors.append({'error': 'Invalid event session ID', 'event': event})
+        part = event.get('part', {}) if kind in ('start', 'finish', 'error') else event.get('part')
+        if not isinstance(part, dict):
+            errors.append({'error': 'Invalid event part', 'event': event})
+            continue
+        if kind == 'text':
+            if isinstance(part.get('text'), str):
+                texts.append(part['text'])
+            else:
+                errors.append({'error': 'Invalid text event', 'event': event})
+        if kind == 'reasoning':
+            # V2 reasoning uses part.text too, but is evidence only: never add
+            # it to answer text, reviewer JSON, or a human-facing summary.
+            if not isinstance(part.get('text'), str):
+                errors.append({'error': 'Invalid reasoning event', 'event': event})
+        if kind == 'step_finish':
+            if isinstance(part.get('tokens'), dict):
+                stage['usage'].append({'tokens': part['tokens'], 'cost': part.get('cost')})
+            else:
+                errors.append({'error': 'Invalid usage event', 'event': event})
+        if kind == 'tool_use' or part.get('type') == 'tool':
             stage['tools'].append(part)
-            state = part.get('state', {})
-            if isinstance(state, dict) and (state.get('status') == 'error' or state.get('error')):
+            state = part.get('state')
+            if (not isinstance(state, dict) or state.get('status') != 'completed'
+                    or state.get('error')):
                 errors.append(part)
     stage['errors'] = errors
     stage['text'] = '\n'.join(texts)

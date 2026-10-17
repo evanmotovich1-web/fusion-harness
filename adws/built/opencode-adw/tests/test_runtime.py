@@ -67,7 +67,8 @@ class RuntimeTests(unittest.TestCase):
         note.write_text(FAKE_NOTE)
         note.chmod(0o700)
         self.note_calls = self.root / 'note-calls.jsonl'
-        self.env = dict(os.environ, HOME=str(self.root), PATH=str(self.bin) + os.pathsep + os.environ['PATH'])
+        self.env = dict(os.environ, HOME=str(self.root), PATH=str(self.bin) + os.pathsep + os.environ['PATH'],
+                        OPENCODE_ADW_OPENCODE=str(executable))
         self.env['NOTE_CALLS'] = str(self.note_calls)
         self.agent_calls = self.root / 'agent-calls.jsonl'
         self.env['AGENT_CALLS'] = str(self.agent_calls)
@@ -148,7 +149,7 @@ class RuntimeTests(unittest.TestCase):
         for stage, argv in zip(report['agents'], calls):
             model = models[stage['role']]
             self.assertEqual(stage['model'], model)
-            self.assertEqual(argv[:-1], ['run', '--format', 'json', '--dir', str(self.repo),
+            self.assertEqual(argv[:-1], ['run', '--format', 'json',
                                         '--agent', 'opencode-' + stage['role'], '--model', model])
             self.assertEqual(stage['process']['command'][1:], argv)
 

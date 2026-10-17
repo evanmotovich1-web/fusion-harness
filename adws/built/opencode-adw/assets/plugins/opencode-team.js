@@ -1,9 +1,10 @@
-import { tool } from '@opencode-ai/plugin';
+import { Plugin } from '@opencode/plugin';
 import { spawn } from 'node:child_process';
 
 // Rendered as JSON strings by the source installer.
 const runtime = @RUNTIME_JSON@;
 const python = @PYTHON_JSON@;
+const opencode = @OPENCODE_JSON@;
 const OUTPUT_LIMIT = 1024 * 1024;
 
 const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -69,7 +70,13 @@ function compactRun(value) {
 
 function compactReceipt(value, action, runID, sessionID) {
   if (!isObject(value)) return null;
-  if (action !== 'status' || !Array.isArray(value.runs)) return compactRun(value);
+  if (action !== 'status') {
+    if (typeof value.state !== 'string' ||
+        !(typeof value.adw_id === 'string' || typeof value.run_id === 'string')) return null;
+    return compactRun(value);
+  }
+  if (!Array.isArray(value.runs) || value.runs.some((row) => !isObject(row) ||
+      typeof row.state !== 'string' || typeof (row.adw_id ?? row.run_id) !== 'string')) return null;
   const rows = value.runs.filter(isObject);
   let selected = rows;
   let scope = 'run';
@@ -89,52 +96,49 @@ function compactReceipt(value, action, runID, sessionID) {
   return result;
 }
 
-export default async function ({ serverUrl }) {
-  return {
-    tool: {
-      opencode_team: tool({
+export default Plugin.define({
+  id: 'opencode-team',
+  async setup(plugin) {
+    await plugin.tool.transform((editor) => {
+      editor.add({
+        name: 'opencode_team',
         description: 'Run a native OpenCode team, resolve a repository, or inspect actual run status.',
-        args: {
-          action: tool.schema.enum(['run', 'route', 'status']).default('run'),
-          task: tool.schema.string().optional(),
-          repo: tool.schema.string().optional(),
-          workflow: tool.schema.enum(['team', 'deep', 'build', 'review', 'takeover']).default('team'),
-          model: tool.schema.string().optional(),
-          models: tool.schema.object({
-            worker: tool.schema.string().optional(),
-            reviewer: tool.schema.string().optional(),
-            planner: tool.schema.string().optional(),
-            testdesigner: tool.schema.string().optional(),
-          }).optional(),
-          checks: tool.schema.array(tool.schema.string()).optional(),
-          max_repairs: tool.schema.number().int().min(0).max(2).optional(),
-          run_id: tool.schema.string().optional(),
+        input: {
+          type: 'object', additionalProperties: false,
+          properties: {
+            action: { type: 'string', enum: ['run', 'route', 'status'], default: 'run' },
+            task: { type: 'string' }, repo: { type: 'string' },
+            workflow: { type: 'string', enum: ['team', 'deep', 'build', 'review', 'takeover'], default: 'team' },
+            model: { type: 'string' },
+            models: { type: 'object', additionalProperties: false, properties: Object.fromEntries(
+              ['worker', 'reviewer', 'planner', 'testdesigner'].map((role) => [role, { type: 'string' }])) },
+            checks: { type: 'array', items: { type: 'string' } },
+            max_repairs: { type: 'integer', minimum: 0, maximum: 2 },
+            run_id: { type: 'string' },
+          },
         },
         async execute(args, ctx) {
+          if (!ctx.sessionID || !ctx.signal) throw new Error('Native OpenCode tool context is required.');
+          const response = await plugin.session.get({ sessionID: ctx.sessionID });
+          const parent = response?.data ?? response;
+          const directory = parent?.location?.directory;
+          if (parent?.id !== ctx.sessionID || typeof directory !== 'string' || !directory.startsWith('/')) {
+            throw new Error('Native parent session location is required.');
+          }
           const action = args.action ?? 'run';
-          if (ctx.agent === 'opencode-router' && action === 'run') {
+          if (parent.agent === 'opencode-router' && action === 'run') {
             throw new Error('Router may only route or inspect status.');
           }
           if (action !== 'status' && !args.task?.trim()) {
             throw new Error('task is required for run and route.');
-          }
-          if (!ctx.sessionID || !ctx.directory || !serverUrl) {
-            throw new Error('Native OpenCode tool context is required.');
-          }
-          const nativeURL = new URL(String(serverUrl));
-          if (!['http:', 'https:'].includes(nativeURL.protocol) || nativeURL.username || nativeURL.password ||
-              nativeURL.search || nativeURL.hash || nativeURL.pathname !== '/' ||
-              !(nativeURL.hostname === 'localhost' || nativeURL.hostname === '[::1]' ||
-                /^127(?:\.\d{1,3}){3}$/.test(nativeURL.hostname))) {
-            throw new Error('Native OpenCode server must be a loopback URL without credentials.');
           }
           const workflow = args.workflow ?? 'team';
           const argv = [runtime, action === 'run' && workflow === 'takeover' ? 'takeover' : action];
           if (action === 'status') {
             if (args.run_id) argv.push('--adw-id', args.run_id);
           } else {
-            argv.push('--native-server-url', String(serverUrl), '--parent-session', ctx.sessionID,
-              '--parent-directory', ctx.directory, '--routing-context', ctx.directory);
+            argv.push('--parent-session', ctx.sessionID,
+              '--parent-directory', directory, '--routing-context', directory);
             argv.push('--request', args.task, '--repo', args.repo ?? 'auto');
             if (action === 'run') {
               argv.push('--mode', workflow === 'takeover' ? 'build' : workflow);
@@ -146,9 +150,10 @@ export default async function ({ serverUrl }) {
               if (args.max_repairs !== undefined) argv.push('--max-repairs', String(args.max_repairs));
             }
           }
-          if (ctx.abort.aborted) return { title: 'OpenCode team cancelled', output: 'Cancelled before start.' };
+          if (ctx.signal.aborted) return { content: 'Cancelled before start.' };
           return await new Promise((resolve) => {
-            const child = spawn(python, argv, { shell: false, stdio: ['ignore', 'pipe', 'pipe'] });
+            const child = spawn(python, argv, { shell: false, stdio: ['ignore', 'pipe', 'pipe'],
+              env: { ...process.env, OPENCODE_ADW_OPENCODE: opencode } });
             const chunks = [];
             let bytes = 0;
             let overflow = false;
@@ -162,8 +167,8 @@ export default async function ({ serverUrl }) {
               killTimer.unref?.();
             };
             const abort = () => { cancelled = true; stop(); };
-            ctx.abort.addEventListener('abort', abort, { once: true });
-            if (ctx.abort.aborted) abort();
+            ctx.signal.addEventListener('abort', abort, { once: true });
+            if (ctx.signal.aborted) abort();
             child.stdout.on('data', (data) => {
               const buffer = Buffer.from(data);
               if (bytes + buffer.length > OUTPUT_LIMIT) {
@@ -180,7 +185,7 @@ export default async function ({ serverUrl }) {
             child.on('error', () => { spawnFailed = true; });
             child.on('close', (code) => {
               clearTimeout(killTimer);
-              ctx.abort.removeEventListener('abort', abort);
+              ctx.signal.removeEventListener('abort', abort);
               const stdout = Buffer.concat(chunks).toString('utf8');
               let receipt;
               try {
@@ -196,7 +201,7 @@ export default async function ({ serverUrl }) {
                 }
               }
               receipt = overflow ? null : compactReceipt(receipt, action, args.run_id, ctx.sessionID);
-              const failed = cancelled || overflow || spawnFailed || code !== 0;
+              const failed = cancelled || overflow || spawnFailed || code !== 0 || !receipt;
               const runID = receipt?.adw_id ?? receipt?.run_id ?? null;
               const team = receipt?.team ?? receipt?.report?.team ?? null;
               const output = {
@@ -205,12 +210,11 @@ export default async function ({ serverUrl }) {
                 exit_code: code, run_id: runID, team,
                 receipt: overflow ? null : receipt ?? null,
               };
-              resolve({ title: `OpenCode ${action}: ${output.state}`,
-                output: JSON.stringify(output), metadata: { runID, team, exitCode: code } });
+              resolve({ content: JSON.stringify(output) });
             });
           });
         },
-      }),
-    },
-  };
-}
+      });
+    });
+  },
+});

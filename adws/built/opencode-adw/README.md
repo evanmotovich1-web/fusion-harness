@@ -12,7 +12,7 @@ From this directory:
 python3 install.py --workspace-root /absolute/path/to/sssf
 ```
 
-The installer writes its native agents, commands, plugin and manifest under `~/.config/opencode`; it preserves unrelated configuration and refuses to overwrite modified/unowned assets. It records this directory’s runtime path. For an explicitly selected runtime, use `--runtime /absolute/path/runtime.py`. Restart OpenCode, open its native agent picker, and select `opencode-team`.
+The installer stages its native agents, commands, plugin and manifest under `~/.config/opencode`; it preserves unrelated configuration and refuses to overwrite modified/unowned assets. It records this directory’s runtime path. For an explicitly selected runtime, use `--runtime /absolute/path/runtime.py`. The operator reports successful V2 installation and a native status tool call on 2.0.32 (see verification limits below); copying assets alone is not proof of tool availability. Do not restart a shared service as part of staging.
 
 ## CLI
 
@@ -77,6 +77,99 @@ python3 runtime.py capture --adw-id YOUR_RUN_ID
 It records bounded metadata and a capture receipt, with repeat-success protection. Native command assets request this step after a run. Capture of `ocadw-live-20261014` returned `CAPTURED` in the recorded smoke report.
 
 ## Tests and evidence
+
+### V2 compatibility repair state (2026-10-17)
+
+The operator reports the earlier V2 repair installed globally under explicit authorization;
+the model-identity correction below is source-only, pending operator reinstall and retry.
+The source plugin uses
+`@opencode/plugin` / `Plugin.define`, JSON Schema tool registration, `signal`,
+and the invoking session's API location (never the plugin's location). The source
+native transport uses V2 data envelopes, `/api/session`, asynchronous prompt
+admission and context/idle polling, model/agent selection, and interrupt. Linked
+children are created at their parent's location, then explicitly moved to the
+routed repo and rechecked without changing parentID or permissions. Non-building
+isolated 2.0.32 API probes verified this ancestry and movement in both directions.
+
+`runtime.py` uses process cwd instead of removed `run --dir`. Both installer and
+runtime select the real executable explicitly (default `~/.opencode/bin/opencode`;
+installer `--opencode`, runtime `OPENCODE_ADW_OPENCODE`), never the bootstrap PATH
+wrapper. Native persisted V2 message handling has offline regression coverage.
+The operator reports successful real worker/reviewer execution in run
+`20261017-001112-053bbd3a`, using separate CLI worker/reviewer sessions on
+`openai/gpt-6.1-sol`, validating actual CLI/model use, with 241 tests passing.
+This does not establish native Team transport build acceptance.
+
+The CLI parser explicitly supports V2 `start` / `finish` lifecycle envelopes
+(no `part` required), `text` and `reasoning` (string `part.text`), `tool_use` (completed tool
+state without an error), and `error` (always fatal). It also supports the
+`step_start` / `step_finish` envelopes used by existing legacy CLI fixtures and
+the native transport normalization; these require object parts, with object
+`tokens` on `step_finish`. Non-error events require a nonblank `sessionID`;
+lifecycle events do not replace required text or relax session independence.
+Reasoning is validated and retained in raw events only, never used as answer text,
+reviewer JSON, or short human summaries.
+Unknown types and malformed supported envelopes fail even alongside valid text.
+The raw event stream is retained in `.events.jsonl`, and rejected object
+envelopes remain in stage errors. `tests/test_cli_events.py` covers this source
+contract, including harmless V2 start/finish envelopes; the tests themselves are
+not live CLI receipts. Doctor supports exactly 2.0.32; later versions block.
+
+Real isolated validation passed on 2.0.32: the global staged plugin became active
+in both project locations after asynchronous loader initialization. The real V2
+SDK catalog exposed `opencode_team`, and its registered executor returned status
+with exit code 0 from native sessions in both projects, without model inference.
+That isolated evidence alone is not a model-selected tool call or global activation.
+Only installer-managed assets and a separate local diagnostic plugin were needed;
+no speculative configuration documents remain. No denied SDK/config/vault paths
+were reread. The supplied SDK guide and local public OpenAPI were used.
+The operator subsequently installed with the existing installer and reports an
+actual native `opencode_team` status call for run `20261017-001112-053bbd3a`
+returning exit 0, plus live doctor `PROBES_PASSED` in the repository and vault
+project locations on 2.0.32. No restart was performed. These operator-supplied
+results were not rerun during publication cleanup. The subsequent native Team build
+`20261017-002219-e0a6ea34` failed `NATIVE_AGENT_MODEL_MISMATCH` after worker execution.
+The operator's metadata-only probe found persisted `openai/gpt-6.1-sol` with an
+extra `variant: default`. The source validator now compares provider and model ID
+exactly, and variant exactly when present in the internal expected reference,
+ignoring unrelated metadata. Public model selection remains `provider/model`;
+no per-role variant flags were added. Native Team build acceptance remains unmet
+until an operator retry succeeds.
+
+Compatibility tests use `tests/fixtures/opencode-2.0.32-contract.json`, a small
+sanitized excerpt of the public API schema observed on 2026-10-16. It retains
+the properties and success responses required by `doctor.v2_contract`, with
+public schema references, not the complete OpenAPI document. No machine paths,
+secrets or raw run receipts are included. Local `compatibility-runs/` diagnostic
+artifacts are excluded from publication and are not required distribution files.
+
+Read-only health check after an **operator-performed** OpenCode update:
+
+```sh
+python3 doctor.py --opencode "$HOME/.opencode/bin/opencode" \
+  --project /absolute/path/to/project-one --project /absolute/path/to/project-two
+python3 install.py --check
+```
+
+The installer does not select health-check projects: the manifest records
+`health_check: null`, an incomplete `health_check_template`, and
+`health_check_required_arguments`. Replace both project placeholders with distinct
+existing directories before running the template; `--project` is required twice.
+Neither `--workspace-root` nor installation implies a runnable or passed check.
+
+Doctor has evidence only for 2.0.32; all other versions require investigation.
+It checks CLI flags, required public V2 API shapes and project-scoped loader state, not real native tool
+discovery or execution. `PROBES_PASSED` is not end-to-end acceptance. Failed probes
+exit nonzero without writes, retries, upgrades, permission changes, reloads, or
+service restarts. No update hook was exposed by the inspected `upgrade --help`;
+none was installed. Use this manual check after updates rather than assuming an
+automatic hook exists. Recovery is deliberately limited to a read-only ownership
+preflight. The operator-reported installation and native status call above do
+not establish compatibility with arbitrary future updates.
+
+Locally modified or unowned installed assets block installation; never force
+overwrite them. Activation is not performed by doctor, and requires no promise
+of compatibility with arbitrary future versions.
 
 From this directory, run the controlled runtime tests:
 

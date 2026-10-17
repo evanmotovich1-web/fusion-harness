@@ -10,6 +10,7 @@ import math
 import os
 from pathlib import Path
 import re
+import secrets
 import signal
 import socket
 import subprocess
@@ -56,7 +57,7 @@ def model_parts(value):
     provider, model = value.split('/', 1)
     if not provider or not model or any(c.isspace() or ord(c) < 32 for c in value):
         raise Failure('NATIVE_INVALID_MODEL')
-    return {'providerID': provider, 'modelID': model}
+    return {'providerID': provider, 'id': model}
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -65,21 +66,24 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 
 class API:
-    def __init__(self, server_url):
+    def __init__(self, server_url, password=None):
         self.url = server_address(server_url)
+        self.password = password
         # Ignore HTTP proxy environment and never forward Basic auth on redirects.
         self.opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
 
     def request(self, method, path, directory, body=None, timeout=10):
         headers = {'Content-Type': 'application/json'}
-        password = os.environ.get('OPENCODE_SERVER_PASSWORD')
+        password = self.password or os.environ.get('OPENCODE_SERVER_PASSWORD')
         if password:
-            username = os.environ.get('OPENCODE_SERVER_USERNAME', 'opencode')
+            username = 'opencode' if self.password else os.environ.get('OPENCODE_SERVER_USERNAME', 'opencode')
             token = base64.b64encode((username + ':' + password).encode()).decode()
             headers['Authorization'] = 'Basic ' + token
         data = None if body is None else json.dumps(body).encode()
-        req = urllib.request.Request(self.url + path + '?' + urllib.parse.urlencode(
-            {'directory': str(directory)}), data=data, headers=headers, method=method)
+        # V2 session operations are scoped by session identity, not a directory
+        # query. Location is supplied only when creating a root session.
+        req = urllib.request.Request(self.url + path,
+                                     data=data, headers=headers, method=method)
         try:
             deadline = time.monotonic() + timeout
             with self.opener.open(req, timeout=max(0.001, timeout)) as response:
@@ -95,7 +99,21 @@ class API:
                         raise Failure('NATIVE_RESPONSE_LIMIT')
                     chunks.append(chunk)
                 raw = b''.join(chunks)
-            return json.loads(raw) if raw else None
+                no_content = response.status == 204
+            if method == 'POST' and path.endswith(('/move', '/agent', '/model')):
+                if not no_content or raw:
+                    raise Failure('NATIVE_INVALID_RESPONSE')
+                return None
+            value = json.loads(raw) if raw else None
+            if path == '/api/info':
+                return value
+            if path.endswith('/interrupt'):
+                if not isinstance(value, dict) or not isinstance(value.get('interrupted'), bool):
+                    raise Failure('NATIVE_INVALID_RESPONSE')
+                return value['interrupted']
+            if not isinstance(value, dict) or 'data' not in value:
+                raise Failure('NATIVE_INVALID_RESPONSE')
+            return value['data']
         except Failure:
             raise
         except (TimeoutError, socket.timeout):
@@ -138,12 +156,20 @@ class NativeTeam:
         self.process = None
         self.api = None
         self.closed = False
+        self.password = None
+
+    def environment(self):
+        env = os.environ.copy()
+        if self.password:
+            env['OPENCODE_SERVER_PASSWORD'] = self.password
+            env['OPENCODE_SERVER_USERNAME'] = 'opencode'
+        return env
 
     def __enter__(self):
         try:
             if self.server_url is None:
                 self._start_server()
-            self.api = API(self.server_url)
+            self.api = API(self.server_url, self.password)
             if self.parent_session_id:
                 try:
                     self._verify_parent()
@@ -155,11 +181,12 @@ class NativeTeam:
                     # Use the same global DB through an owned transport, never a new parent.
                     self.fallback_reason = str(exc)
                     self._start_server()
-                    self.api = API(self.server_url)
+                    self.api = API(self.server_url, self.password)
                     self._verify_parent()
             else:
-                parent = self.api.request('POST', '/session', self.parent_directory,
-                                          {'title': 'OpenCode Team · ' + self.folder.name})
+                parent = self.api.request('POST', '/api/session', self.parent_directory,
+                                          {'title': 'OpenCode Team · ' + self.folder.name,
+                                           'location': {'directory': self.parent_directory}})
                 self.parent_session_id = identity(parent.get('id') if isinstance(parent, dict) else None)
             return self
         except BaseException:
@@ -167,12 +194,17 @@ class NativeTeam:
             raise
 
     def _verify_parent(self):
-        parent = self.api.request('GET', '/session/' + self.parent_session_id,
+        parent = self.api.request('GET', '/api/session/' + self.parent_session_id,
                                   self.parent_directory)
         if not isinstance(parent, dict) or parent.get('id') != self.parent_session_id:
             raise Failure('NATIVE_PARENT_MISMATCH')
+        if parent.get('location', {}).get('directory') != self.parent_directory:
+            raise Failure('NATIVE_PARENT_LOCATION_MISMATCH')
 
     def _start_server(self):
+        # Ephemeral authentication for this owned process only. Never persist it
+        # in argv, receipts, logs, config, or the caller's environment.
+        self.password = secrets.token_urlsafe(32)
         for _ in range(3):
             with socket.socket() as sock:
                 sock.bind(('127.0.0.1', 0))
@@ -180,18 +212,19 @@ class NativeTeam:
             self.server_url = f'http://127.0.0.1:{port}'
             try:
                 self.process = subprocess.Popen(
-                    ['opencode', 'serve', '--hostname', '127.0.0.1', '--port', str(port)],
-                    cwd=self.repo, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                    start_new_session=True)
+                    [os.environ.get('OPENCODE_ADW_OPENCODE', str(Path.home() / '.opencode/bin/opencode')),
+                     'serve', '--hostname', '127.0.0.1', '--port', str(port)],
+                     cwd=self.repo, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    start_new_session=True, env=self.environment())
                 self.owns_server = True
             except OSError:
                 raise Failure('NATIVE_SERVER_START_FAILED') from None
             deadline = time.monotonic() + 8
-            api = API(self.server_url)
+            api = API(self.server_url, self.password)
             while time.monotonic() < deadline and self.process.poll() is None:
                 try:
-                    health = api.request('GET', '/global/health', self.repo, timeout=0.4)
-                    if isinstance(health, dict) and health.get('healthy') is True:
+                    health = api.request('GET', '/api/info', self.repo, timeout=0.4)
+                    if isinstance(health, dict):
                         return
                 except Failure:
                     pass
@@ -213,7 +246,7 @@ class NativeTeam:
     def _child(self, role, label, model):
         if self.closed or self.api is None or not self.parent_session_id:
             raise Failure('NATIVE_TEAM_NOT_OPEN')
-        value = self.api.request('POST', '/session', self.repo,
+        value = self.api.request('POST', '/api/session', self.repo,
                                  {'parentID': self.parent_session_id,
                                   'title': f'{role.title()} · {label}'})
         sid = identity(value.get('id') if isinstance(value, dict) else None)
@@ -225,12 +258,27 @@ class NativeTeam:
         try:
             if value.get('parentID') != self.parent_session_id:
                 raise Failure('NATIVE_PARENT_MISMATCH')
-            children = self.api.request('GET', '/session/' + self.parent_session_id + '/children',
-                                        self.parent_directory)
-            if not isinstance(children, list) or not any(
-                    c.get('id') == sid and c.get('parentID') == self.parent_session_id
-                    for c in children if isinstance(c, dict)):
+            persisted = self.api.request('GET', '/api/session/' + sid, self.parent_directory)
+            if (not isinstance(persisted, dict) or persisted.get('id') != sid or
+                    persisted.get('parentID') != self.parent_session_id or
+                    persisted.get('location', {}).get('directory') != self.parent_directory):
                 raise Failure('NATIVE_CHILD_NOT_ASSOCIATED')
+            # V2 linked children inherit the caller's location. Route execution
+            # explicitly without detaching the child from its native parent.
+            if self.repo != str(Path(self.parent_directory).resolve()):
+                self.api.request('POST', '/api/session/' + sid + '/move', self.repo,
+                                         {'directory': self.repo})
+                deadline = time.monotonic() + 10
+                while True:
+                    persisted = self.api.request('GET', '/api/session/' + sid, self.repo)
+                    if (persisted.get('id') != sid or
+                            persisted.get('parentID') != self.parent_session_id):
+                        raise Failure('NATIVE_PARENT_MISMATCH')
+                    if persisted.get('location', {}).get('directory') == self.repo:
+                        break
+                    if time.monotonic() >= deadline:
+                        raise Failure('NATIVE_CHILD_MOVE_FAILED')
+                    time.sleep(0.1)
         except BaseException:
             self._abort(child)
             raise
@@ -283,10 +331,10 @@ class NativeTeam:
                                          'output_tokens', 'elapsed_ms')
                    if k in routing and (k != 'model' or used_jev)}
         try:
-            self.api.request('POST', '/session/' + child['session_id'] + '/message', self.repo,
-                             {'noReply': True, 'parts': [{'type': 'text', 'text':
+            self.api.request('POST', '/api/session/' + child['session_id'] + '/prompt', self.repo,
+                             {'resume': False, 'text':
                               'Router routing receipt (code-owned; no chat inference):\n' +
-                              json.dumps(receipt, ensure_ascii=False)}]})
+                               json.dumps(receipt, ensure_ascii=False)})
             child['state'] = 'completed'
         except BaseException:
             self._abort(child)
@@ -296,7 +344,7 @@ class NativeTeam:
 
     def _abort(self, child):
         try:
-            result = self.api.request('POST', '/session/' + child['session_id'] + '/abort',
+            result = self.api.request('POST', '/api/session/' + child['session_id'] + '/interrupt',
                                       self.repo, timeout=2)
             child['abort_sent'] = result is True
         except Failure:
@@ -333,6 +381,10 @@ def message_events(messages, session, agent, model):
     if not isinstance(messages, list):
         raise Failure('NATIVE_INVALID_MESSAGES')
     expected = model_parts(model)
+    if messages and isinstance(messages[0], dict) and 'type' in messages[0]:
+        return v2_message_events(messages, session, agent, expected)
+    # Legacy persisted fixtures remain readable, but are not a V2 transport.
+    expected = {'providerID': expected['providerID'], 'modelID': expected['id']}
     events, seen, assistants = [], set(), 0
     kinds = {'text': 'text', 'tool': 'tool_use', 'step-start': 'step_start',
              'step-finish': 'step_finish'}
@@ -379,6 +431,53 @@ def message_events(messages, session, agent, model):
     return events
 
 
+def v2_message_events(messages, session, agent, expected):
+    events, seen = [], set()
+    for message in messages:
+        if not isinstance(message, dict) or not message.get('id') or message['id'] in seen:
+            raise Failure('NATIVE_INVALID_MESSAGES')
+        seen.add(message['id'])
+        if message.get('error'):
+            raise Failure('NATIVE_PROVIDER_ERROR')
+        if message.get('type') == 'idle':
+            if message.get('outcome') != 'succeeded':
+                raise Failure('NATIVE_PROVIDER_ERROR')
+            continue
+        if message.get('type') != 'assistant':
+            continue
+        # Persisted Model.Ref may add default variant/display metadata. Identity
+        # is provider + model ID, plus variant only when explicitly requested.
+        actual = message.get('model')
+        keys = ('providerID', 'id', 'variant') if 'variant' in expected else ('providerID', 'id')
+        if (message.get('agent') != agent or not isinstance(actual, dict) or
+                any(key not in actual or actual[key] != expected[key] for key in keys)):
+            raise Failure('NATIVE_AGENT_MODEL_MISMATCH')
+        if not message.get('time', {}).get('completed'):
+            raise Failure('NATIVE_INCOMPLETE_MESSAGE')
+        if message.get('finish') not in ('stop', 'tool-calls'):
+            raise Failure('NATIVE_PROVIDER_ERROR')
+        content = message.get('content')
+        if not isinstance(content, list):
+            raise Failure('NATIVE_INVALID_MESSAGES')
+        for part in content:
+            if not isinstance(part, dict):
+                raise Failure('NATIVE_INVALID_MESSAGES')
+            kind = part.get('type')
+            if kind == 'tool' and part.get('state', {}).get('status') != 'completed':
+                raise Failure('NATIVE_TOOL_ERROR')
+            if kind in ('text', 'tool'):
+                events.append({'type': 'text' if kind == 'text' else 'tool_use',
+                               'sessionID': session, 'part': part})
+        # V2 usage is per persisted assistant message, emitted exactly once.
+        if isinstance(message.get('tokens'), dict):
+            events.append({'type': 'step_finish', 'sessionID': session,
+                           'part': {'tokens': message['tokens'], 'cost': message.get('cost')}})
+    if not any(e['type'] == 'text' and isinstance(e['part'].get('text'), str) and
+               e['part']['text'].strip() for e in events):
+        raise Failure('NATIVE_EMPTY_RESPONSE')
+    return events
+
+
 def invoke(args):
     api = API(args.server_url)
     sid = identity(args.session)
@@ -398,19 +497,27 @@ def invoke(args):
             raw = stream.read(MAX_PROMPT + 1)
         if len(raw) > MAX_PROMPT:
             raise Failure('NATIVE_PROMPT_LIMIT')
-        response = api.request('POST', '/session/' + sid + '/message', args.repo,
-                               {'agent': args.agent, 'model': model_parts(args.model),
-                                'parts': [{'type': 'text', 'text': raw.decode()}]}, remaining())
-        if isinstance(response, dict) and (response.get('error') or
-                isinstance(response.get('info'), dict) and response['info'].get('error')):
-            raise Failure('NATIVE_PROVIDER_ERROR')
-        messages = api.request('GET', '/session/' + sid + '/message', args.repo,
-                               timeout=remaining())
+        base = '/api/session/' + sid
+        api.request('POST', base + '/agent', args.repo, {'agent': args.agent}, remaining())
+        api.request('POST', base + '/model', args.repo, {'model': model_parts(args.model)}, remaining())
+        before = api.request('GET', base + '/context', args.repo, timeout=remaining())
+        if not isinstance(before, list):
+            raise Failure('NATIVE_INVALID_MESSAGES')
+        prior_ids = {m.get('id') for m in before if isinstance(m, dict)}
+        api.request('POST', base + '/prompt', args.repo, {'text': raw.decode()}, remaining())
+        while True:
+            messages = api.request('GET', base + '/context', args.repo, timeout=remaining())
+            if not isinstance(messages, list):
+                raise Failure('NATIVE_INVALID_MESSAGES')
+            messages = [m for m in messages if isinstance(m, dict) and m.get('id') not in prior_ids]
+            if messages and messages[-1].get('type') == 'idle':
+                break
+            time.sleep(min(0.1, remaining()))
         for event in message_events(messages, sid, args.agent, args.model):
             print(json.dumps(event, ensure_ascii=False), flush=True)
     except BaseException:
         try:
-            api.request('POST', '/session/' + sid + '/abort', args.repo, timeout=2)
+            api.request('POST', '/api/session/' + sid + '/interrupt', args.repo, timeout=2)
         except Failure:
             pass
         raise
