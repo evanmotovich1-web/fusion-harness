@@ -1,0 +1,87 @@
+{
+  "_provenance": {
+    "product": "OpenCode",
+    "version": "2.0.32",
+    "source": "Public API schema returned by api get /openapi.json, observed 2026-10-16",
+    "scope": "Only properties and success responses required by doctor.v2_contract; public schema references retained, not a standalone complete OpenAPI document. No runtime values or receipts."
+  },
+  "paths": {
+    "/api/session": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "parentID": {"anyOf": [{"$ref": "#/components/schemas/Session.ID"}, {"type": "null"}]},
+                  "location": {"anyOf": [{"$ref": "#/components/schemas/Location.PublicRef"}, {"type": "null"}]},
+                  "agent": {"anyOf": [{"$ref": "#/components/schemas/Agent.ID"}, {"type": "null"}]},
+                  "model": {"anyOf": [{"$ref": "#/components/schemas/Model.Ref"}, {"type": "null"}]}
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/session/{sessionID}/prompt": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {"type": "string"},
+                  "resume": {"anyOf": [{"type": "boolean"}, {"type": "null"}]}
+                },
+                "required": ["text"],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/session/{sessionID}/move": {
+      "post": {"responses": {"204": {"description": "<No Content>"}}}
+    },
+    "/api/session/{sessionID}/agent": {
+      "post": {"responses": {"204": {"description": "<No Content>"}}}
+    },
+    "/api/session/{sessionID}/model": {
+      "post": {"responses": {"204": {"description": "<No Content>"}}}
+    },
+    "/api/session/{sessionID}/interrupt": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "SessionInterruptResponse",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SessionInterruptResponse"}}}
+          }
+        }
+      }
+    },
+    "/api/session/{sessionID}/context": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {"data": {"type": "array", "items": {"$ref": "#/components/schemas/Session.Message.Info"}}},
+                  "required": ["data"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

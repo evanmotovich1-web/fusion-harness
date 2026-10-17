@@ -127,6 +127,8 @@ class TeamRuntimeTests(unittest.TestCase):
                 instances.append(self)
             def __enter__(self):
                 return self
+            def environment(self):
+                return dict(os.environ)
             def router_note(self, routing):
                 self.routing = routing
             def command(self, role, label, model, prompt, timeout):
@@ -267,15 +269,20 @@ class TeamRuntimeTests(unittest.TestCase):
         children, requests = [], []
         def request(method, path, directory, body=None, **kwargs):
             requests.append((method, path, directory))
-            if method == 'GET' and path == '/session/ses_interactive':
-                return {'id': 'ses_interactive'}
-            if method == 'POST' and path == '/session':
-                child = {'id': 'ses_child' + str(len(children)), 'parentID': body['parentID']}
+            if method == 'GET' and path == '/api/session/ses_interactive':
+                return {'id': 'ses_interactive', 'location': {'directory': str(self.root)}}
+            if method == 'POST' and path == '/api/session':
+                child = {'id': 'ses_child' + str(len(children)), 'parentID': body['parentID'],
+                         'location': {'directory': str(self.root)}}
                 children.append(child)
                 return child
-            if method == 'GET' and path == '/session/ses_interactive/children':
-                return list(children)
-            if method == 'POST' and (path.endswith('/message') or path.endswith('/abort')):
+            if method == 'GET':
+                return next(c for c in children if path == '/api/session/' + c['id'])
+            if method == 'POST' and path.endswith('/move'):
+                child = next(c for c in children if path == '/api/session/' + c['id'] + '/move')
+                child['location'] = {'directory': body['directory']}
+                return None
+            if method == 'POST' and (path.endswith('/prompt') or path.endswith('/interrupt')):
                 return True
             raise AssertionError((method, path))
         execute = runtime.execute
@@ -311,9 +318,9 @@ class TeamRuntimeTests(unittest.TestCase):
         child = next(c for c in report['team']['children'] if c['role'] == 'planner')
         self.assertEqual(child['state'], 'failed')
         self.assertTrue(child['abort_sent'])
-        aborts = [path for method, path, _ in requests if path.endswith('/abort')]
-        self.assertEqual(aborts, ['/session/' + child['session_id'] + '/abort'])
-        self.assertFalse(any(path == '/session/ses_interactive/abort' for _, path, _ in requests))
+        aborts = [path for method, path, _ in requests if path.endswith('/interrupt')]
+        self.assertEqual(aborts, ['/api/session/' + child['session_id'] + '/interrupt'])
+        self.assertFalse(any(path == '/api/session/ses_interactive/interrupt' for _, path, _ in requests))
         self.assertTrue(Path(stage['process']['stdout']).is_file())
         return stage
 
