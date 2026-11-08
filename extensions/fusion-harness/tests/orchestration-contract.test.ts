@@ -12,6 +12,7 @@ const sourceFiles = [
     .map((file) => join(root, "modules", file)),
 ];
 const source = sourceFiles.map((file) => readFileSync(file, "utf8")).join("\n");
+const collaborationRun = readFileSync(join(root, "modules", "collaboration-run.ts"), "utf8");
 const prompt = (name: string) => readFileSync(join(root, "prompts", name), "utf8");
 
 describe("orchestration contracts", () => {
@@ -68,13 +69,13 @@ describe("orchestration contracts", () => {
   });
 
   test("collaborate serializes write-enabled children", () => {
-    expect(source).toContain("activeWriters++");
-    expect(source).toContain("maxConcurrentWriteEnabledChildren");
+    expect(collaborationRun).toContain("activeWriters++");
+    expect(collaborationRun).toContain("maxConcurrentWriteEnabledChildren");
     // Queued, not refused: a second writer waits for the lease (waitForWriterLease).
-    expect(source).toContain("waitForWriterLease(ctx.cwd, `/fh-collaborate");
-    expect(source).toContain("parseStrictJsonObject(architectRun.text");
+    expect(collaborationRun).toContain("waitForWriterLease(ctx.cwd, `/fh-collaborate");
+    expect(collaborationRun).toContain("parseStrictJsonObject(architectRun.text");
     expect(source).toContain("tools: READONLY_TOOLS");
-    expect(source).toContain("worktreeCommandsObserved");
+    expect(collaborationRun).toContain("worktreeCommandsObserved");
     expect(prompt("USER_PROMPT_COLLAB_EXECUTE.md")).toContain("one shared working directory");
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("at most one write-enabled child");
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("Never launch detached/background processes");
@@ -85,8 +86,7 @@ describe("orchestration contracts", () => {
     const delegate = prompt("USER_PROMPT_COLLAB_DELEGATE.md");
     expect(delegate).toContain("Read executors get read/grep/find/ls ONLY — no command execution: they cannot run tests, validation, builds, or linters.");
     expect(delegate).toContain("Any task that must execute anything is mode write");
-    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
-    expect(cmdBuild).toContain("tools: write ? FULL_TOOLS : READONLY_TOOLS");
+    expect(collaborationRun).toContain("tools: write ? FULL_TOOLS : READONLY_TOOLS");
   });
 
   test("lanes: builders write in parallel worktrees, only the architect writes the checkout", () => {
@@ -158,14 +158,13 @@ describe("orchestration contracts", () => {
 
   test("measured repo-state cards ride existing child prompts as harness fact", () => {
     expect(source).toContain('HARNESS_REPO_STATE_HEADER = "----- BEGIN HARNESS REPO STATE (measured; not agent-authored) -----"');
-    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
     // The card wraps the four existing spawn prompts (proposals, delegation, execution,
     // final coordination) — no new agent is introduced to carry it.
-    expect(cmdBuild).toContain("withHarnessRepoState(withKnowledge(collabProposePrompt");
-    expect(cmdBuild).toContain("withHarnessRepoState(collabDelegatePrompt");
-    expect(cmdBuild).toContain("withHarnessRepoState(executePrompt");
-    expect(cmdBuild).toContain("withHarnessRepoState(collabCoordinatePrompt");
-    expect(cmdBuild).toContain('h.save(collabDir, "repo-state.json"');
+    expect(collaborationRun).toContain("withHarnessRepoState(withKnowledge(collabProposePrompt");
+    expect(collaborationRun).toContain("withHarnessRepoState(collabDelegatePrompt");
+    expect(collaborationRun).toContain("withHarnessRepoState(executePrompt");
+    expect(collaborationRun).toContain("withHarnessRepoState(collabCoordinatePrompt");
+    expect(collaborationRun).toContain('h.save(collabDir, "repo-state.json"');
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("parent-owned");
     expect(prompt("SYSTEM_PROMPT_COLLAB_COORDINATOR.md")).toContain("exact-SHA receipt");
     expect(prompt("USER_PROMPT_COLLAB_EXECUTE.md")).toContain("parent-owned");
@@ -173,27 +172,25 @@ describe("orchestration contracts", () => {
   });
 
   test("publication short-circuits and agent accounting stay agent-neutral", () => {
-    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
     // Deterministic short-circuits stop before any spawn and report zero agents.
-    expect(cmdBuild).toContain("if (gate.stop) {");
-    expect(cmdBuild).toContain("shortCircuit: gate.kind");
-    expect(cmdBuild).toContain("agents: []");
+    expect(collaborationRun).toContain("if (gate.stop) {");
+    expect(collaborationRun).toContain("shortCircuit: gate.kind");
+    expect(collaborationRun).toContain("agents: []");
     // In normal runs the agent roster comes only from measured child runs.
-    expect(cmdBuild).toContain("agents: runs.map(toStat)");
+    expect(collaborationRun).toContain("agents: runs.map(toStat)");
     // Repo-state capture is in-process, never a spawned child.
-    expect(cmdBuild).toContain("collectRepoState(");
+    expect(collaborationRun).toContain("collectRepoState(");
   });
 
   test("publication is parent-owned: receipt, refresh, reauthorize, non-force exact-SHA push", () => {
-    const cmdBuild = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
-    expect(cmdBuild).toContain("mintRepoActionReceipt({");
-    expect(cmdBuild).toContain("authorizeRepoAction({ receipt, facts, consumedDigests");
-    expect(cmdBuild).toContain("opts.consumed.add(receipt.digest)"); // single-use receipts
-    expect(cmdBuild).toContain('"publication-receipt.json"'); // evidence persisted
-    expect(cmdBuild).toContain("decision.nonForceFastForward");
-    expect(cmdBuild).toContain("${decision.candidateSha}:refs/heads/${parsed.branch}");
-    expect(cmdBuild).toContain('["push", "--no-force", parsed.remote, refspec]');
-    expect(cmdBuild).toContain('refspec.startsWith("+")'); // force refspecs refused twice
+    expect(collaborationRun).toContain("mintRepoActionReceipt({");
+    expect(collaborationRun).toContain("authorizeRepoAction({ receipt, facts, consumedDigests");
+    expect(collaborationRun).toContain("opts.consumed.add(receipt.digest)"); // single-use receipts
+    expect(collaborationRun).toContain('"publication-receipt.json"'); // evidence persisted
+    expect(collaborationRun).toContain("decision.nonForceFastForward");
+    expect(collaborationRun).toContain("${decision.candidateSha}:refs/heads/${parsed.branch}");
+    expect(collaborationRun).toContain('["push", "--no-force", parsed.remote, refspec]');
+    expect(collaborationRun).toContain('refspec.startsWith("+")'); // force refspecs refused twice
   });
 
   test("session-build: registered, indexed, sanitized, and outside the workflow registry", () => {

@@ -13,6 +13,7 @@ const source = sourceFiles.map((file) => readFileSync(file, "utf8")).join("\n");
 const readonly = readFileSync(join(root, "modules", "cmd-readonly.ts"), "utf8");
 const fusion = readFileSync(join(root, "modules", "cmd-fusion.ts"), "utf8");
 const build = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+const collaborationRun = readFileSync(join(root, "modules", "collaboration-run.ts"), "utf8");
 const lanes = readFileSync(join(root, "modules", "cmd-lanes.ts"), "utf8");
 const factory = readFileSync(join(root, "fusion-harness.ts"), "utf8");
 const runner = readFileSync(join(root, "modules", "child-runner.ts"), "utf8");
@@ -28,7 +29,7 @@ describe("knowledge orchestration contracts", () => {
 		expect(fusion).toContain("const packet = await h.prepareKnowledge(prompt, ctx.cwd, artifactsDir)");
 		expect(fusion).toContain("withKnowledge(workerPrompt(slot, stack, prompt), packet)");
 		expect(fusion).toContain("withKnowledge(fuserPrompt(fusionInstruction, prompt, runs, fuser.model, stack.architect.thinking, artifactsDir), packet, { writeCapable: true })");
-		expect(build).toContain("withKnowledge(collabProposePrompt(slot, stack, prompt), packet)");
+		expect(collaborationRun).toContain("withKnowledge(collabProposePrompt(slot, stack, prompt), packet)");
 		expect(build).toContain("withKnowledge(validatorPrompt(prompt, ctx.cwd, scriptPath), packet)");
 		expect(build).toContain("withKnowledge(builderPrompt(prompt, script), packet, { writeCapable: true })");
 		expect(lanes).toContain("withKnowledge(laneWorkerPrompt(slot, stack, prompt, lane, ctx.cwd), packet, { writeCapable: true })");
@@ -51,6 +52,7 @@ describe("knowledge orchestration contracts", () => {
 		expect(fusion).toContain("knowledgeHash: packet.hash");
 		expect(lanes).toContain("knowledgeHash: packet.hash");
 		expect(build).toContain("knowledgeHash: packet.hash");
+		expect(collaborationRun).toContain("knowledgeHash: packet.hash");
 	});
 
 	test("read-only workers keep READONLY_TOOLS; children stay clean-room; no MCP advertised as built-in", () => {
