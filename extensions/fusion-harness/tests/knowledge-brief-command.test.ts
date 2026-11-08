@@ -10,6 +10,7 @@ const factory = readFileSync(join(root, "fusion-harness.ts"), "utf8");
 const readonly = readFileSync(join(root, "modules", "cmd-readonly.ts"), "utf8");
 const fusion = readFileSync(join(root, "modules", "cmd-fusion.ts"), "utf8");
 const build = readFileSync(join(root, "modules", "cmd-build.ts"), "utf8");
+const collaborationRun = readFileSync(join(root, "modules", "collaboration-run.ts"), "utf8");
 
 function packet(over: Partial<KnowledgePacket> = {}): KnowledgePacket {
 	return {
@@ -77,5 +78,6 @@ describe("/fh-knowledge brief", () => {
 		expect(fusion).toContain("prompt: ackSpec.prompt");
 		expect(build).not.toContain("withKnowledge(correctionPrompt");
 		expect(build).toContain("knowledgeHash: packet.hash");
+		expect(collaborationRun).toContain("knowledgeHash: packet.hash");
 	});
 });
